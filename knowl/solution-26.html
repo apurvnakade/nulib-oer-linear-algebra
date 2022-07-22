@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-07T16:15:53Z       *-->
+<!--*       on 2022-07-22T11:48:29-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,25 +16,23 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.4.7.16.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.1.6.4.1</span><span class="period">.</span>
 </h4>
-<ol class="lower-alpha"><li>
-<p>False. The matrices</p>
-<div class="displaymath process-math">
+<p>I'll just describe the row method here.</p>
+<p>Note that the rows of <span class="process-math">\(A\)</span> are all identical, and equal to <span class="process-math">\(\begin{bmatrix}1 \amp -1 \amp 1 \amp -1 \amp 1 \end{bmatrix}\text{.}\)</span> From the row method it follows that each row of <span class="process-math">\(AB\)</span> is given by</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-E_1=\begin{amatrix}[rr]1\amp 2\\ 0\amp 1  \end{amatrix},
-E_2=\begin{amatrix}[rr]1\amp 0\\ 3\amp 1  \end{amatrix}
+\begin{bmatrix}1 \amp -1 \amp 1 \amp -1 \amp 1 \end{bmatrix} B\text{.}
 \end{equation*}
 </div>
-<p class="continuation">are both elementary, but</p>
-<div class="displaymath process-math">
+<p>Thus the rows of <span class="process-math">\(AB\)</span> are all identical, and the row method computes the product above by taking the corresponding alternating sum of the rows of <span class="process-math">\(B\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-E_1E_2=\begin{amatrix}[rr]7\amp 2\\ 3\amp 1  \end{amatrix}
+\begin{bmatrix}1 \amp -1 \amp 1 \amp -1 \amp 1 \end{bmatrix} B=\begin{bmatrix}2\amp 2\amp -1\amp 4 \end{bmatrix}\text{.}
 \end{equation*}
 </div>
-<p class="continuation">is not elementary.</p>
-</li></ol>
+<p>Thus <span class="process-math">\(AB\)</span> is the the <span class="process-math">\(5\times 4\)</span> matrix, all of whose rows are <span class="process-math">\(\begin{bmatrix}2\amp 2\amp -1\amp 4 \end{bmatrix}\text{.}\)</span></p>
 </div>
-<span class="incontext"><a href="s_invertibility_theorem.html#solution-26">in-context</a></span>
+<span class="incontext"><a href="s_matrix.html#solution-26" class="internal">in-context</a></span>
 </body>
 </html>

@@ -1,0 +1,431 @@
+<?xml version='1.0' encoding='utf-8'?>
+<webwork-representations>
+  <webwork-reps version="2" xml:id="extracted-webwork-1" ww-id="webwork-1">
+    <static seed="1" source="Library/SDSU/Discrete/Sets/unionB3.pg">
+      <statement><p>Let <m>S = \lbrace a,b,c\rbrace</m>, <m>T = \lbrace a,c,d,e\rbrace</m></p>
+<p>Determine <m>S\cup T</m>
+<var form="buttons">
+<li>
+<p><m>\lbrace a,b,c,d,e\rbrace</m></p>
+</li>
+<li>
+<p><m>\lbrace b,e\rbrace</m></p>
+</li>
+<li>
+<p><m>\lbrace a,a,b,c,c,d,e\rbrace</m></p>
+</li>
+<li>
+<p><m>\lbrace a,c\rbrace</m></p>
+</li>
+<li>
+<p><m>\lbrace\rbrace</m></p>
+</li>
+</var></p>
+</statement>
+      <solution><m>S = \lbrace a,b,c\rbrace</m> 
+
+
+<m>T = \lbrace a,c,d,e\rbrace</m>
+
+
+
+<m>S\cup T</m>, or <m>S\text{ "union" } T</m>, is defined as the set of elements that are contained in either <m>S</m> or <m>T</m>. 
+
+
+In this case, the answer is 
+
+
+<m>\lbrace a,b,c,d,e\rbrace</m> 
+
+
+Remember that even if an element is in both sets, it is only counted once. 
+
+
+
+
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/SDSU/Discrete/Sets/unionB3.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/SDSU/Discrete/Sets/unionB3.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-2" ww-id="webwork-2">
+    <static seed="2" source="Library/SDSU/Discrete/Sets/intersectA2.pg">
+      <statement><p>Let <m>A = \lbrace 1,2,3\rbrace</m>, <m>B = \lbrace 4,5,6\rbrace</m></p>
+<p>Determine <m>A\cap B</m>
+<var form="buttons">
+<li>
+<p><m>\lbrace 1,2,3\rbrace</m></p>
+</li>
+<li>
+<p><m>\lbrace 3,4\rbrace</m></p>
+</li>
+<li>
+<p><m>\lbrace 4,5,6\rbrace</m></p>
+</li>
+<li>
+<p><m>\lbrace\rbrace</m></p>
+</li>
+<li>
+<p><m>\lbrace 1,2,3,4,5,6\rbrace</m></p>
+</li>
+</var></p>
+</statement>
+      <solution><m>A = \lbrace 1,2,3\rbrace</m> 
+
+
+<m>B = \lbrace 4,5,6\rbrace</m>
+
+
+
+<m>A\cap B</m>, or <m>A\text{ "intersect" } B</m>, is defined as the set of elements that are contained in both <m>A</m> and <m>B</m>. 
+
+
+In this case, the answer is 
+
+
+<m>\lbrace \rbrace</m> 
+
+
+
+
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/SDSU/Discrete/Sets/intersectA2.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/SDSU/Discrete/Sets/intersectA2.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-3" ww-id="webwork-3">
+    <static seed="3" source="Library/SDSU/Discrete/Sets/differenceB4.pg">
+      <statement><p>Let <m>W = \lbrace a,b,c,d,e\rbrace</m>, <m>X = \lbrace a,c,f\rbrace</m></p>
+<p>Determine <m>W-X</m>
+<var form="buttons">
+<li>
+<p><m>\lbrace 1,2,3</m></p>
+</li>
+<li>
+<p><m>\lbrace 0,0,0,4,5\rbrace</m></p>
+</li>
+<li>
+<p><m>\lbrace\rbrace</m></p>
+</li>
+<li>
+<p><m>\lbrace b,d,e\rbrace</m></p>
+</li>
+<li>
+<p><m>\lbrace 1,2,3,4,5\rbrace</m></p>
+</li>
+</var></p>
+<p>Determine <m>X-W</m>
+<var form="buttons">
+<li>
+<p><m>\lbrace 0,0,0\rbrace</m></p>
+</li>
+<li>
+<p><m>\lbrace 1,2,3\rbrace</m></p>
+</li>
+<li>
+<p><m>\lbrace 1,2,3,4,5\rbrace</m></p>
+</li>
+<li>
+<p><m>\lbrace f\rbrace</m></p>
+</li>
+<li>
+<p><m>\lbrace 4,5\rbrace</m></p>
+</li>
+</var></p>
+</statement>
+      <solution><m>W = \lbrace a,b,c,d,e\rbrace</m> 
+
+
+<m>X = \lbrace a,c,f\rbrace</m>
+
+
+
+<m>W-X</m> is defined as the set of elements that are in <m>W</m>, but not in <m>X</m>. 
+
+ 
+
+
+For <m>W-X</m>, the answer is 
+
+
+<m>\lbrace b,d,e\rbrace</m> 
+
+ 
+
+
+For <m>X-W</m>, the answer is 
+
+
+<m>\lbrace f\rbrace</m> 
+
+
+
+
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/SDSU/Discrete/Sets/differenceB4.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/SDSU/Discrete/Sets/differenceB4.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-4" ww-id="webwork-4">
+    <static seed="4" source="Library/Rochester/setSetTheory1/ur_st_1_7.pg">
+      <statement><p><m>A = \lbrace 5, 7, 9 \rbrace, B = \lbrace 6,7 \rbrace</m></p>
+<p>Check ALL of the following Cartesian products to which the following
+elements belong:</p>
+<p>(d) <m>(7,7)</m></p>
+<p><var form="checkboxes">
+<li>
+<p><m>B \times A</m></p>
+</li>
+<li>
+<p><m>A \times B</m></p>
+</li>
+<li>
+<p><m>A \times A</m></p>
+</li>
+<li>
+<p><m>B \times B</m></p>
+</li>
+</var></p>
+<p>(a) <m>(5, 6)</m></p>
+<p><var form="checkboxes">
+<li>
+<p><m>A \times A</m></p>
+</li>
+<li>
+<p><m>B \times B</m></p>
+</li>
+<li>
+<p><m>B \times A</m></p>
+</li>
+<li>
+<p><m>A \times B</m></p>
+</li>
+</var></p>
+<p>(c) <m>(5,5)</m></p>
+<p><var form="checkboxes">
+<li>
+<p><m>A \times A</m></p>
+</li>
+<li>
+<p><m>B \times A</m></p>
+</li>
+<li>
+<p><m>B \times B</m></p>
+</li>
+<li>
+<p><m>A \times B</m></p>
+</li>
+</var></p>
+<p>(b) <m>(7,5)</m></p>
+<p><var form="checkboxes">
+<li>
+<p><m>B \times A</m></p>
+</li>
+<li>
+<p><m>A \times A</m></p>
+</li>
+<li>
+<p><m>B \times B</m></p>
+</li>
+<li>
+<p><m>A \times B</m></p>
+</li>
+</var></p>
+</statement>
+    </static>
+    <server-data sourceFilePath="Library/Rochester/setSetTheory1/ur_st_1_7.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Rochester/setSetTheory1/ur_st_1_7.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-5" ww-id="webwork-5">
+    <static seed="5" source="Library/SDSU/Discrete/Sets/subsetB3.pg">
+      <statement><p>Let <m>R = \lbrace\text{numbers divisible by 2}\rbrace</m></p>
+<p>Determine which of the following sets are subsets of <m>R</m>
+<var form="checkboxes">
+<li>
+<p><m>\lbrace 0\rbrace</m></p>
+</li>
+<li>
+<p><m>\lbrace 44,221,90\rbrace</m></p>
+</li>
+<li>
+<p><m>\lbrace integers\rbrace</m></p>
+</li>
+<li>
+<p><m>\lbrace 1\rbrace</m></p>
+</li>
+<li>
+<p><m>\lbrace -82,104,16\rbrace</m></p>
+</li>
+</var></p>
+</statement>
+      <solution><m>R = \lbrace\text{numbers divisible by 2}\rbrace</m>
+
+
+
+Subsets of <m>R</m> include: 
+
+
+<m>\lbrace 0\rbrace</m> 
+
+
+<m>\lbrace -82,104,16\rbrace</m> 
+
+ 
+
+
+Remember that the order of a set does not matter.
+
+
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/SDSU/Discrete/Sets/subsetB3.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/SDSU/Discrete/Sets/subsetB3.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-6" ww-id="webwork-6">
+    <static seed="6" source="Library/MontanaState/Sets/5.2A13Sets1.pg">
+      <statement><p>Let <m>f(x) = x^{2}</m>.  Find each set.</p>
+<p><m>f ([1, 6)) =</m> <fillin name="AnSwEr0001" characters="12"/></p>
+<p><m>f ((-3, 6)) =</m> <fillin name="AnSwEr0002" characters="12"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\left[1,36\right)</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>\left[0,36\right)</m>
+        </p>
+      </answer>
+      <solution><m>x^{2}</m> is not one-to-one, you can not simply plug the endpoints of the  interval into the function to get the endpoints of the answer.  Instead, try graphing the function and shading on the <m>x</m>-axis the input set.  Then use the graph to see which <m>y</m>-values you get out when you put those <m>x</m>'s in. For instance, notice that <m>0 \in (-3, 6)</m>.  Because <m>f(0) = 0</m>, you should have <m>0 \in f( (-3, 6))</m>.  Do you? 
+
+
+
+
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/MontanaState/Sets/5.2A13Sets1.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/MontanaState/Sets/5.2A13Sets1.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-7" ww-id="webwork-7">
+    <static seed="7" source="Library/SUNYSB/oneToOneOnto1.pg">
+      <statement><p>For each of the following functions, 
+    <m>f:\textbf{R}\longrightarrow\textbf{R}</m> state whether they are one-to-one,
+    onto, both or neither. 
+    Use the following key:</p>
+<p><ol>
+<li>
+<p><m>f(x)=x(x-6)(x+6)</m></p>
+</li>
+<li>
+<p><m>f(x)=\left|x\right|</m></p>
+</li>
+<li>
+<p><m>f(x)=x^2+7</m></p>
+</li>
+<li>
+<p><m>f(x)=x + 6\left|x\right|</m></p>
+</li>
+<li>
+<p><m>f(x)=x^3+6</m></p>
+</li>
+<li>
+<p><m>f(x)=\sin(x)</m></p>
+</li>
+<li>
+<p><m>f(x)=e^x</m></p>
+</li>
+</ol></p>
+</statement>
+    </static>
+    <server-data sourceFilePath="Library/SUNYSB/oneToOneOnto1.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/SUNYSB/oneToOneOnto1.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-8" ww-id="webwork-8">
+    <static seed="8" source="Library/LoyolaChicago/Precalc/Chap8Sec2/Q08.pg">
+      <statement><p>Consider the functions
+<m>f(x) = \sqrt[7]{\frac{x}{4}} - 1</m>,
+<m>g(x) = \sqrt[7]{\frac{x}{4}} + 1</m>,
+<m>h(x) = 1 + 4 x^{7}</m>,
+<m>p(x) = \sqrt[7]{\frac{x + 1}{4}}</m>,
+<m>q(x) = -1 + 4 x^{7}</m>, and
+<m>r(x) = \sqrt[7]{\frac{x - 1}{4}}</m>.</p>
+<p>Which of these functions are inverses of each other?</p>
+<p><var form="checkboxes">
+<li>
+<p><m>h(x)</m> and <m>r(x)</m></p>
+</li>
+<li>
+<p><m>p(x)</m> and <m>q(x)</m></p>
+</li>
+<li>
+<p><m>g(x)</m> and <m>h(x)</m></p>
+</li>
+<li>
+<p><m>f(x)</m> and <m>h(x)</m></p>
+</li>
+<li>
+<p><m>f(x)</m> and <m>q(x)</m></p>
+</li>
+<li>
+<p><m>h(x)</m> and <m>p(x)</m></p>
+</li>
+<li>
+<p><m>g(x)</m> and <m>q(x)</m></p>
+</li>
+<li>
+<p><m>q(x)</m> and <m>r(x)</m></p>
+</li>
+<li>
+<p>No pairs of these functions are inverses of each other.</p>
+</li>
+</var></p>
+</statement>
+      <solution><alert>  SOLUTION </alert>
+
+
+
+One way we can check which functions are inverses is to make
+sure they satisfy the identities <m>f \left( f^{-1}(x) \right)=x</m> and
+<m>f^{-1} \left( f(x) \right)=x</m>.  This will show that
+<m>h(x)</m> and <m>r(x)</m> and
+<m>p(x)</m> and <m>q(x)</m> are inverses of each other,
+while the other pairs of functions are not.
+
+
+
+Let's consider <m>h(x)</m> and <m>r(x)</m>.  The composition
+<me>\begin{aligned}
+ h\left(r(x)\right)
+\amp = 1 +  4 \left(\sqrt[7]{ \frac{x - 1}{4}}\right)^{7} \\
+\amp = 1 + 4 \left( \frac{x - 1}{4} \right) \\
+\amp = 1 + (x-1) = x.
+\end{aligned}</me>
+Also,
+<me>\begin{aligned}
+ r\left(h(x)\right)
+\amp = \sqrt[7]{\frac{\left( 1+4 x^{7} \right)-1}{4}} \\
+\amp = \sqrt[7]{x^{7}} = x.
+\end{aligned}</me>
+Thus these are inverses of one another.  We can similarly show that
+<m>p(x)</m> and <m>q(x)</m> are inverses of each other.
+
+
+
+However, the remaining pairs are not inverses.  For example, if we
+consider <m>h(x)</m> and <m>p(x)</m>, we have
+<me>\begin{aligned}
+  h\left(p(x)\right)
+\amp = 1 +  4 \left( \sqrt[7]{ \frac{x + 1}{4}} \right)^{7}\\
+\amp = 1 + (x+1) = x + 2 \ne x.
+\end{aligned}</me>
+Thus these functions are not inverses of each other.
+
+
+
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/LoyolaChicago/Precalc/Chap8Sec2/Q08.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/LoyolaChicago/Precalc/Chap8Sec2/Q08.pg"/>
+  </webwork-reps>
+</webwork-representations>

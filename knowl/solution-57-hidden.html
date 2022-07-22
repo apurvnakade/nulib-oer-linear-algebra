@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-07T16:16:23Z       *-->
+<!--*       on 2022-07-22T11:48:36-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,17 +14,28 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<p>Let <span class="process-math">\(p(x)=x^2-1\text{,}\)</span> <span class="process-math">\(q(x)=x^2+2x+1\text{.}\)</span> We have</p>
-<div class="displaymath process-math">
-\begin{equation*}
-\langle p(x), q(x)  \rangle=p(-1)q(-1)+p(0)q(0)+p(1)q(1)=0+(-1)1+0=-1
-\end{equation*}
+<p>We have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+A \amp = \begin{amatrix}[ccc]\vert\amp \vert\amp \vert\\
+T((1,0,0))\amp T((0,1,0))\amp T((0,0,1)) \\
+\vert\amp \vert\amp vert  \end{amatrix} \\
+\amp =
+\begin{amatrix}[rrr]
+1 \amp 1 \amp 1 \\ 2\amp 3 \amp -4 \end{amatrix} \text{.}
+\end{align*}
 </div>
-<p class="continuation">and</p>
-<div class="displaymath process-math">
-\begin{equation*}
-\langle p(x), p(x) \rangle =p(-1)^2+p(0)^2+p(1)^2=0+(-1)^2+0=1\text{.}
-\end{equation*}
+<p class="continuation">Let <span class="process-math">\(\boldx=(-2,3,4)\text{.}\)</span> Since <span class="process-math">\(A\)</span> provides a “matrix formula” for <span class="process-math">\(T\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+T(\boldx) \amp = A\boldx \\
+\amp =
+\begin{amatrix}[rrr]
+1 \amp 1 \amp 1 \\ 2\amp 3 \amp -4 \end{amatrix}
+\colvec{-2\\ 3\\ 4}\\
+\amp = \colvec{5\\ -9} \text{.}
+\end{align*}
 </div>
+<p class="continuation">Thus <span class="process-math">\(T((-2,3,4))=(5,-9)\text{,}\)</span> as you can confirm.</p>
 </div></body>
 </html>

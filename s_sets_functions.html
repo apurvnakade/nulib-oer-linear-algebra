@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-07T16:14:55Z       *-->
+<!--*       on 2022-07-22T11:48:12-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -21,7 +21,6 @@
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
-    useLabelIds: true,
     tagSide: "right",
     tagIndent: ".8em",
     packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
@@ -29,6 +28,19 @@
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.88,
@@ -39,7 +51,8 @@
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://pretextbook.org/js/0.13/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
@@ -48,9 +61,40 @@
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX Course: Title Here';
+eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.runestone_version = '5.0.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand{\Z}{{\mathbb Z}}
@@ -146,6 +190,7 @@
 \newcommand{\ceiling}[1]{\left\lceil#1\right\rceil}
 \newcommand{\mclass}[2][m]{[#2]_{#1}}
 \newcommand{\val}[2][]{\left\lvert #2\right\rvert_{#1}}
+\newcommand{\abs}[2][]{\left\lvert #2\right\rvert_{#1}}
 \newcommand{\valuation}[2][]{\left\lvert #2\right\rvert_{#1}}
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 \newcommand{\anpoly}{a_nx^n+a_{n-1}x^{n-1}\cdots +a_1x+a_0}
@@ -243,7 +288,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 #1_{#3,1} \amp #1_{#3,2} \amp \ldots  \amp #1_{#3,#2}
 \end{array}
 \right)  }
-\newcommand{\colvec}[2][c]{\begin{bmatrix}[#1] #2 \end{bmatrix}}
+\newcommand{\colvec}[2][c]{\begin{amatrix}[#1] #2 \end{amatrix}}
 \DeclareMathOperator{\size}{size}
 \DeclareMathOperator{\adjoint}{adj}
 \DeclareMathOperator{\sgn}{sgn}
@@ -251,9 +296,13 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 \renewcommand{\emptyset}{\varnothing}
 
 \newcommand{\proj}[2]{\mbox{proj}_{#2}({#1}) }
+\renewcommand{\Re}{\operatorname{Re}}
+ \renewcommand{\Im}{\operatorname{Im}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="http://linear-algebra.northwestern.pub/" target="_blank"><img src="external/images/im_holycomm.svg" alt="Logo image"></a><div class="title-container">
@@ -273,23 +322,30 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a></li>
-<li class="link">
-<a href="c_foundations.html" data-scroll="c_foundations" class="internal"><span class="codenumber">1</span> <span class="title">Foundations</span></a><ul>
-<li><a href="s_sets_functions.html" data-scroll="s_sets_functions" class="active">Sets and functions</a></li>
-<li><a href="s_logic.html" data-scroll="s_logic" class="internal">Logic</a></li>
-<li><a href="s_proof_technique.html" data-scroll="s_proof_technique" class="internal">Proof techniques</a></li>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="c_linear_systems.html" data-scroll="c_linear_systems" class="internal"><span class="codenumber">2</span> <span class="title">Systems of linear equations</span></a><ul>
+<a href="c_foundations.html" data-scroll="c_foundations" class="internal"><span class="codenumber">0</span> <span class="title">Foundations</span></a><ul>
+<li><a href="s_sets_functions.html" data-scroll="s_sets_functions" class="active">Sets and functions</a></li>
+<li><a href="s_logic.html" data-scroll="s_logic" class="internal">Logic</a></li>
+<li><a href="s_proof_technique.html" data-scroll="s_proof_technique" class="internal">Proof techniques</a></li>
+<li><a href="s_complex_numbers.html" data-scroll="s_complex_numbers" class="internal">Complex numbers</a></li>
+<li><a href="s_polynomials.html" data-scroll="s_polynomials" class="internal">Polynomials</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="c_linear_systems.html" data-scroll="c_linear_systems" class="internal"><span class="codenumber">1</span> <span class="title">Systems of linear equations</span></a><ul>
 <li><a href="s_systems.html" data-scroll="s_systems" class="internal">Systems of linear equations</a></li>
 <li><a href="s_ge.html" data-scroll="s_ge" class="internal">Gaussian elimination</a></li>
 <li><a href="s_solving.html" data-scroll="s_solving" class="internal">Solving linear systems</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="c_matrices.html" data-scroll="c_matrices" class="internal"><span class="codenumber">3</span> <span class="title">Matrices, their arithmetic, and their algebra</span></a><ul>
+<a href="c_matrices.html" data-scroll="c_matrices" class="internal"><span class="codenumber">2</span> <span class="title">Matrices, their arithmetic, and their algebra</span></a><ul>
 <li><a href="s_matrix.html" data-scroll="s_matrix" class="internal">Matrices and their arithmetic</a></li>
 <li><a href="s_algebraic.html" data-scroll="s_algebraic" class="internal">Algebra of matrices</a></li>
 <li><a href="s_invertible_matrices.html" data-scroll="s_invertible_matrices" class="internal">Invertible matrices</a></li>
@@ -298,29 +354,33 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </ul>
 </li>
 <li class="link">
-<a href="c_vectorspace.html" data-scroll="c_vectorspace" class="internal"><span class="codenumber">4</span> <span class="title">Vector spaces and linear transformations</span></a><ul>
+<a href="c_vectorspace.html" data-scroll="c_vectorspace" class="internal"><span class="codenumber">3</span> <span class="title">Vector spaces and linear transformations</span></a><ul>
 <li><a href="s_vectorspace.html" data-scroll="s_vectorspace" class="internal">Real vector spaces</a></li>
 <li><a href="s_transformation.html" data-scroll="s_transformation" class="internal">Linear transformations</a></li>
 <li><a href="s_subspace.html" data-scroll="s_subspace" class="internal">Subspaces</a></li>
+<li><a href="s_nullspace_image.html" data-scroll="s_nullspace_image" class="internal">Null space and image</a></li>
 <li><a href="s_span_independence.html" data-scroll="s_span_independence" class="internal">Span and linear independence</a></li>
-<li><a href="s_basis_dimension.html" data-scroll="s_basis_dimension" class="internal">Bases and dimension</a></li>
+<li><a href="s_basis.html" data-scroll="s_basis" class="internal">Bases</a></li>
+<li><a href="s_dimension.html" data-scroll="s_dimension" class="internal">Dimension</a></li>
 <li><a href="s_rank_nullity.html" data-scroll="s_rank_nullity" class="internal">Rank-nullity theorem and fundamental spaces</a></li>
 <li><a href="s_isom.html" data-scroll="s_isom" class="internal">Isomorphisms</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="c_innerproductspaces.html" data-scroll="c_innerproductspaces" class="internal"><span class="codenumber">5</span> <span class="title">Inner product spaces</span></a><ul>
+<a href="c_innerproductspaces.html" data-scroll="c_innerproductspaces" class="internal"><span class="codenumber">4</span> <span class="title">Inner product spaces</span></a><ul>
 <li><a href="s_innerproducts.html" data-scroll="s_innerproducts" class="internal">Inner product spaces</a></li>
-<li><a href="s_orthogonality.html" data-scroll="s_orthogonality" class="internal">Orthogonal bases and orthogonal projection</a></li>
+<li><a href="s_orthogonality.html" data-scroll="s_orthogonality" class="internal">Orthogonal bases</a></li>
+<li><a href="s_orthogonal_projection.html" data-scroll="s_orthogonal_projection" class="internal">Orthogonal projection</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="c_transbasis.html" data-scroll="c_transbasis" class="internal"><span class="codenumber">6</span> <span class="title">Eigenvectors and diagonalization</span></a><ul>
-<li><a href="s_coordinatevectors_isomorphisms.html" data-scroll="s_coordinatevectors_isomorphisms" class="internal">Coordinate vectors and isomorphisms</a></li>
+<a href="c_transbasis.html" data-scroll="c_transbasis" class="internal"><span class="codenumber">5</span> <span class="title">Eigenvectors and diagonalization</span></a><ul>
+<li><a href="s_coordinatevectors.html" data-scroll="s_coordinatevectors" class="internal">Coordinate vectors</a></li>
 <li><a href="s_matrixreps.html" data-scroll="s_matrixreps" class="internal">Matrix representations of linear transformations</a></li>
 <li><a href="s_changeofbasis.html" data-scroll="s_changeofbasis" class="internal">Change of basis</a></li>
-<li><a href="ss_eigenvectors.html" data-scroll="ss_eigenvectors" class="internal">Eigenvectors and eigenvalues</a></li>
-<li><a href="ss_diagonalization.html" data-scroll="ss_diagonalization" class="internal">Diagonalization</a></li>
+<li><a href="s_eigenvectors.html" data-scroll="s_eigenvectors" class="internal">Eigenvectors and eigenvalues</a></li>
+<li><a href="s_diagonalization.html" data-scroll="s_diagonalization" class="internal">Diagonalization</a></li>
+<li><a href="s_spectral_theorem.html" data-scroll="s_spectral_theorem" class="internal">The spectral theorem</a></li>
 </ul>
 </li>
 <li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
@@ -328,248 +388,440 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <li class="link"><a href="appendix-defs.html" data-scroll="appendix-defs" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></li>
 <li class="link"><a href="appendix-thms.html" data-scroll="appendix-thms" class="internal"><span class="codenumber">C</span> <span class="title">Theory and procedures</span></a></li>
 <li class="link"><a href="appendix-egs.html" data-scroll="appendix-egs" class="internal"><span class="codenumber">D</span> <span class="title">Examples</span></a></li>
-<li class="link"><a href="appendix-vids.html" data-scroll="appendix-vids" class="internal"><span class="codenumber">E</span> <span class="title">Video examples and figures</span></a></li>
+<li class="link"><a href="appendix-mantras.html" data-scroll="appendix-mantras" class="internal"><span class="codenumber">E</span> <span class="title">Video examples and figures</span></a></li>
+<li class="link"><a href="appendix-vids.html" data-scroll="appendix-vids" class="internal"><span class="codenumber">F</span> <span class="title">Mantras and fiats</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="s_sets_functions"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Sets and functions</span>
+<span class="type">Section</span> <span class="codenumber">0.1</span> <span class="title">Sets and functions</span>
 </h2>
-<section class="introduction" id="introduction-1"><p id="p-1">We will gradually make our way to definitions of the vector spaces and linear transformations mentioned in this text's title. For now it will suffice to observe that a vector space is a certain kind of <em class="emphasis">set</em>, and a linear transformation is a special type of <em class="emphasis">function</em>. Accordingly we gather here some notions about sets and functions that will come in handy once we meet the two main players of linear algebra.</p></section><section class="subsection" id="ss_sets"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.1.1</span> <span class="title">Sets</span>
+<section class="introduction" id="introduction-1"><p id="p-2">We will gradually make our way to definitions of the vector spaces and linear transformations mentioned in this text's title. For now it will suffice to observe that a vector space is a certain kind of <em class="emphasis">set</em>, and a linear transformation is a special type of <em class="emphasis">function</em>. Accordingly we gather here some notions about sets and functions that will come in handy once we meet the two main players of linear algebra.</p></section><section class="subsection" id="ss_sets"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">0.1.1</span> <span class="title">Sets</span>
 </h3>
 <article class="definition definition-like" id="d_sets"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Sets.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Sets.</span>
 </h4>
-<p id="p-2">A <dfn class="terminology">set</dfn> is a collection of objects. An object <span class="process-math">\(x\)</span> is a  <dfn class="terminology">member</dfn> (or <dfn class="terminology">element</dfn>) of a set <span class="process-math">\(A\)</span> if <span class="process-math">\(A\)</span> contains <span class="process-math">\(x\text{.}\)</span> In this case, we write <span class="process-math">\(x \in A\text{.}\)</span> If <span class="process-math">\(x\)</span> is not a member of <span class="process-math">\(A\text{,}\)</span> we write <span class="process-math">\(x \notin A\text{.}\)</span></p></article><p id="p-3">We use curly braces to describe the contents of a set. For example, <span class="process-math">\(A=\{1,2,3\}\)</span> is the set containing the first three positive integers, and <span class="process-math">\(B=\{1,2,3,\dots\}\)</span> is the set of all positive integers. The defining property of sets is that they are completely determined by their members, and nothing more. In particular, when describing sets as above, it does not matter in what order the elements are listed, nor if they are repeated: e.g., <span class="process-math">\(\{1,2,3\}\text{,}\)</span> <span class="process-math">\(\{2,1,3\}\text{,}\)</span> and <span class="process-math">\(\{2,1,1,3,2\}\)</span> are three descriptions of the same set. This somewhat slippery notion is made perfectly clear by specifying exactly what it means for two sets to be equal, as we do below.</p>
+<p id="p-3">A <dfn class="terminology">set</dfn> is a collection of objects. An object <span class="process-math">\(x\)</span> is a  <dfn class="terminology">member</dfn> (or <dfn class="terminology">element</dfn>) of a set <span class="process-math">\(A\)</span> if <span class="process-math">\(A\)</span> contains <span class="process-math">\(x\text{.}\)</span> In this case, we write <span class="process-math">\(x \in A\text{.}\)</span> If <span class="process-math">\(x\)</span> is not a member of <span class="process-math">\(A\text{,}\)</span> we write <span class="process-math">\(x \notin A\text{.}\)</span></p></article><p id="p-4">We use curly braces to describe the contents of a set. For example, <span class="process-math">\(A=\{1,2,3\}\)</span> is the set containing the first three positive integers, and <span class="process-math">\(B=\{1,2,3,\dots\}\)</span> is the set of all positive integers. The defining property of sets is that they are completely determined by their members, and nothing more. In particular, when describing sets as above, it does not matter in what order the elements are listed, nor if they are repeated: e.g., <span class="process-math">\(\{1,2,3\}\text{,}\)</span> <span class="process-math">\(\{2,1,3\}\text{,}\)</span> and <span class="process-math">\(\{2,1,1,3,2\}\)</span> are three descriptions of the same set. This somewhat slippery notion is made perfectly clear by specifying exactly what it means for two sets to be equal, as we do below.</p>
 <article class="definition definition-like" id="d_set_equality"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Set equality.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Set equality.</span>
 </h4>
-<p id="p-4">Sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are <dfn class="terminology">equal</dfn>, denoted <span class="process-math">\(A=B\text{,}\)</span> if they have precisely the same elements:  i.e., if for any object <span class="process-math">\(x\text{,}\)</span> we have <span class="process-math">\(x\in A\)</span> if and only if <span class="process-math">\(x\in B\text{.}\)</span></p></article><p id="p-5">Set membership naturally extends to a notion of one set “lying” within another.</p>
+<p id="p-5">Sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are <dfn class="terminology">equal</dfn>, denoted <span class="process-math">\(A=B\text{,}\)</span> if they have precisely the same elements:  i.e., if for any object <span class="process-math">\(x\text{,}\)</span> we have <span class="process-math">\(x\in A\)</span> if and only if <span class="process-math">\(x\in B\text{.}\)</span></p></article><p id="p-6">Set membership naturally extends to a notion of one set “lying” within another.</p>
 <article class="definition definition-like" id="d_set_inclusion"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Set inclusion (subsets).</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Set inclusion (subsets).</span>
 </h4>
-<p id="p-6">A set <span class="process-math">\(A\)</span> is a <dfn class="terminology">subset</dfn> of a set <span class="process-math">\(B\text{,}\)</span> denoted <span class="process-math">\(A \subseteq B\text{,}\)</span> if every member of <span class="process-math">\(A\)</span> is a member of <span class="process-math">\(B\text{:}\)</span>  i.e., <span class="process-math">\(x\in A\)</span> implies <span class="process-math">\(x\in B\)</span> for any object <span class="process-math">\(x\text{.}\)</span> The relation <span class="process-math">\(A\subseteq B\)</span> is called <dfn class="terminology">set inclusion</dfn>.</p></article><article class="remark remark-like" id="rm_equal_subset_logic"><h4 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span>
+<p id="p-7">A set <span class="process-math">\(A\)</span> is a <dfn class="terminology">subset</dfn> of a set <span class="process-math">\(B\text{,}\)</span> denoted <span class="process-math">\(A \subseteq B\text{,}\)</span> if every member of <span class="process-math">\(A\)</span> is a member of <span class="process-math">\(B\text{:}\)</span>  i.e., <span class="process-math">\(x\in A\)</span> implies <span class="process-math">\(x\in B\)</span> for any object <span class="process-math">\(x\text{.}\)</span> The relation <span class="process-math">\(A\subseteq B\)</span> is called <dfn class="terminology">set inclusion</dfn>.</p></article><article class="remark remark-like" id="rm_equal_subset_logic"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">0.1.4</span><span class="period">.</span>
 </h4>
-<p id="p-7">The definitions of set equality and the subset relation make use of two important logical operations: namely, the “if and only if” (or “iff” for short) and “if-then” operations. We describe these notions in more detail in <a href="s_logic.html" class="internal" title="Section 1.2: Logic">Logic</a>, and we outline techniques for proving “if and only if” and “if-then” statements, including statements about set equality and the subset relation, in <a href="s_proof_technique.html" class="internal" title="Section 1.3: Proof techniques">Proof techniques</a>.</p></article><p id="p-8">With the fundamental notions of membership, equality, and subset in place, we now introduce means of building new sets from existing ones. The first is a manner of carving out a subset of a given set using a specified property.</p>
+<p id="p-8">The definitions of set equality and the subset relation make use of two important logical operations: namely, the “if and only if” (or “iff” for short) and “if-then” operations. We describe these notions in more detail in <a href="s_logic.html" class="internal" title="Section 0.2: Logic">Logic</a>, and we outline techniques for proving “if and only if” and “if-then” statements, including statements about set equality and the subset relation, in <a href="s_proof_technique.html" class="internal" title="Section 0.3: Proof techniques">Proof techniques</a>.</p></article><p id="p-9">With the fundamental notions of membership, equality, and subset in place, we now introduce means of building new sets from existing ones. The first is a manner of carving out a subset of a given set using a specified property.</p>
 <article class="definition definition-like" id="d_set_builder_notation"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Set-builder notation.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Set-builder notation.</span>
 </h4>
-<p id="p-9">Let <span class="process-math">\(A\)</span> be a set, and let <span class="process-math">\(P\)</span> be a property that elements of <span class="process-math">\(A\)</span> either satisfy or do not satisfy. For an element <span class="process-math">\(x\in A\text{,}\)</span> let <span class="process-math">\(P(x)\)</span> denote the statement that <span class="process-math">\(x\)</span> satisfies <span class="process-math">\(P\text{.}\)</span>  The set of all elements of <span class="process-math">\(A\)</span> satisfying <span class="process-math">\(P\)</span> is denoted</p>
-<div class="displaymath process-math">
+<p id="p-10">Let <span class="process-math">\(A\)</span> be a set, and let <span class="process-math">\(P\)</span> be a property that elements of <span class="process-math">\(A\)</span> either satisfy or do not satisfy. For an element <span class="process-math">\(x\in A\text{,}\)</span> let <span class="process-math">\(P(x)\)</span> denote the statement that <span class="process-math">\(x\)</span> satisfies <span class="process-math">\(P\text{.}\)</span>  The set of all elements of <span class="process-math">\(A\)</span> satisfying <span class="process-math">\(P\)</span> is denoted</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \{x \in A \colon P(x) \}\text{.}
 \end{equation*}
 </div></article><article class="remark remark-like" id="rm_set_builder"><h4 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.1.6</span><span class="period">.</span>
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">0.1.6</span><span class="period">.</span>
 </h4>
-<p id="p-10">Set builder notation ‘<span class="process-math">\(\{x \in A\colon P(x)\}\)</span>’ is parsed from left to right as follows:</p>
+<p id="p-11">Set builder notation ‘<span class="process-math">\(\{x \in A\colon P(x)\}\)</span>’ is parsed from left to right as follows:</p>
 <ul class="disc">
-<li id="li-1"><p id="p-11">‘\{’ is read as “the set of”</p></li>
-<li id="li-2"><p id="p-12">‘<span class="process-math">\(x\in A\)</span>’ is read as “elements of <span class="process-math">\(A\)</span>”</p></li>
-<li id="li-3"><p id="p-13">‘<span class="process-math">\(\colon\)</span>’ is read as “such that”</p></li>
-<li id="li-4"><p id="p-14">‘<span class="process-math">\(P(x)\)</span>’ is read as “<span class="process-math">\(P(x)\)</span> is true”.</p></li>
+<li id="li-1"><p id="p-12">‘<span class="process-math">\(\{\)</span>’ is read as “the set of”</p></li>
+<li id="li-2"><p id="p-13">‘<span class="process-math">\(x\in A\)</span>’ is read as “elements of <span class="process-math">\(A\)</span>”</p></li>
+<li id="li-3"><p id="p-14">‘<span class="process-math">\(\colon\)</span>’ is read as “such that”</p></li>
+<li id="li-4"><p id="p-15">‘<span class="process-math">\(P(x)\)</span>’ is read as “<span class="process-math">\(P(x)\)</span> is true”.</p></li>
 </ul>
-<p class="continuation">Taken altogether we get: “The set of elements of <span class="process-math">\(A\)</span> such that <span class="process-math">\(P(x)\)</span> is true”.</p></article><article class="example example-like" id="ex_set_builder"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex_set_builder"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.7</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex_set_builder"><article class="example example-like"><p id="p-15">Let <span class="process-math">\(A=\{0,1,2,\dots \}\)</span> be the set of nonnegative integers. The subset <span class="process-math">\(B=\{0,2,4,\dots\}\)</span> of <em class="emphasis">even</em> positive integers can be described using set-builder notation as</p>
-<div class="displaymath process-math">
+<p class="continuation">Taken altogether we get: “The set of elements of <span class="process-math">\(A\)</span> such that <span class="process-math">\(P(x)\)</span> is true”.</p></article><article class="example example-like" id="ex_set_builder"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">0.1.7</span><span class="period">.</span>
+</h4>
+<p id="p-16">Let <span class="process-math">\(A=\{0,1,2,\dots \}\)</span> be the set of nonnegative integers. The subset <span class="process-math">\(B=\{0,2,4,\dots\}\)</span> of <em class="emphasis">even</em> positive integers can be described using set-builder notation as</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 B=\{x\in A\colon x \text{ is even}\}\text{,}
 \end{equation*}
 </div>
 <p class="continuation">or alternatively,</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 B=\{x\in A\colon x=2k \text{ for some integer} k\}\text{.}
 \end{equation*}
-</div></article></div>
-<p id="p-16">Next we use set builder notation, the set membership relation, and some basic logic to define the union, intersection, and difference of sets.</p>
+</div></article><p id="p-17">Next we use set builder notation, the set membership relation, and some basic logic to define the union, intersection, and difference of sets.</p>
 <article class="definition definition-like" id="d_set_operations"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Basic set operations.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Basic set operations.</span>
 </h4>
-<p id="p-17">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be subsets of a common set <span class="process-math">\(X\text{.}\)</span></p>
+<p id="p-18">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be subsets of a common set <span class="process-math">\(X\text{.}\)</span></p>
 <ul class="disc">
 <li id="li-5">
-<span class="heading"><span class="title">Set union.</span></span><p id="p-18">The <dfn class="terminology">union</dfn> <span class="process-math">\(A \cup B\)</span> of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> is defined as</p>
-<div class="displaymath process-math">
+<span class="heading"><span class="title">Set union.</span></span><p id="p-19">The <dfn class="terminology">union</dfn> <span class="process-math">\(A \cup B\)</span> of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> is defined as</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 A\cup B=\{x\in X\colon x\in A\text{ or } x\in B\}\text{.}
 \end{equation*}
 </div>
 <p class="continuation">More generally, the union <span class="process-math">\(A_1\cup A_2\dots \cup A_n\)</span> of a collection of subsets of <span class="process-math">\(A_i\subseteq X\)</span> is defined as</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 A_1\cup A_2\dots \cup A_n=\{x\in X\colon x\in A_i \text{ for some } 1\leq i\leq n\}.
 \end{equation*}
 </div>
 </li>
 <li id="li-6">
-<span class="heading"><span class="title">Set intersection.</span></span><p id="p-19">The <dfn class="terminology">intersection</dfn> <span class="process-math">\(A \cap B\)</span> of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> is defined as</p>
-<div class="displaymath process-math">
+<span class="heading"><span class="title">Set intersection.</span></span><p id="p-20">The <dfn class="terminology">intersection</dfn> <span class="process-math">\(A \cap B\)</span> of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> is defined as</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 A\cap B=\{x\in X\colon x\in A\text{ and } x\in B\}\text{.}
 \end{equation*}
 </div>
 <p class="continuation">More generally, the intersection <span class="process-math">\(A_1\cap A_2\dots \cap A_n\)</span> of a collection of subsets of <span class="process-math">\(A_i\subseteq X\)</span> is defined as</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 A_1\cap A_2\dots \cap A_n=\{x\in X\colon x\in A_i \text{ for all } 1\leq i\leq n\}.
 \end{equation*}
 </div>
 </li>
 <li id="li-7">
-<span class="heading"><span class="title">Set difference.</span></span><p id="p-20">The <dfn class="terminology">difference</dfn> <span class="process-math">\(A-B\)</span> is defined as</p>
-<div class="displaymath process-math">
+<span class="heading"><span class="title">Set difference.</span></span><p id="p-21">The <dfn class="terminology">difference</dfn> <span class="process-math">\(A-B\)</span> is defined as</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 A-B=\{x\in X\colon x\in A\text{ and } x\notin B\}\text{.}
 \end{equation*}
 </div>
 </li>
-</ul></article><p id="p-21">With the help of these set operations, we can now describe some common sets used in mathematics.</p>
+</ul></article><p id="p-22">With the help of these set operations, we can now describe some common sets used in mathematics.</p>
 <article class="definition definition-like" id="d_common_sets"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Common mathematical sets.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Common mathematical sets.</span>
 </h4>
-<p id="p-22">We denote by <span class="process-math">\(\mathbb{R}\)</span> the set of all real numbers. The <dfn class="terminology">integers</dfn> <span class="process-math">\(\Z\)</span> and <dfn class="terminology">rational numbers</dfn> <span class="process-math">\(\mathbb{Q}\)</span> are the subsets of <span class="process-math">\(\R\)</span> defined as</p>
-<div class="displaymath process-math">
+<p id="p-23">We denote by <span class="process-math">\(\mathbb{R}\)</span> the set of all real numbers. The <dfn class="terminology">integers</dfn> <span class="process-math">\(\Z\)</span> and <dfn class="terminology">rational numbers</dfn> <span class="process-math">\(\mathbb{Q}\)</span> are the subsets of <span class="process-math">\(\R\)</span> defined as</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-1">
 \begin{align*}
 \mathbb{Z} \amp =\{0,1,2,3,\dots\}\cup \{-1,-2,-3,\dots\} \\
 \mathbb{Q} \amp = \{x\in\mathbb{R}\colon x=\tfrac{m}{n} \text{ for some } m,n\in\Z\}  \text{.}
 \end{align*}
 </div>
-<p class="continuation">The <dfn class="terminology">complex numbers</dfn> <span class="process-math">\(\mathbb{C}\)</span> are defined as the set of all formal expressions of the form <span class="process-math">\(a+bi\text{,}\)</span> where <span class="process-math">\(a,b\in\mathbb{R}\text{.}\)</span> Identifying a real number <span class="process-math">\(a\)</span> with the complex number <span class="process-math">\(a+0i\text{,}\)</span> we have the following chain of subsets:</p>
-<div class="displaymath process-math">
-\begin{equation*}
-\mathbb{Z}\subseteq\mathbb{Q}\subseteq\mathbb{R}\subseteq\mathbb{C}\text{.}
-\end{equation*}
+<p class="continuation">This yields the following chain of subsets:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="eq_chain_numbersystems">
+\begin{equation}
+\mathbb{Z}\subseteq\mathbb{Q}\subseteq\mathbb{R}\text{.}\tag{0.1.1}
+\end{equation}
 </div>
-<p class="continuation">The <dfn class="terminology">empty set</dfn> is the set containing no objects, denoted <span class="process-math">\(\{\ \}\)</span> or <span class="process-math">\(\emptyset\text{.}\)</span></p></article><p id="p-23">Lastly, we define the <em class="emphasis">cartesian product</em> of sets, which is a formal description of an ordered collection of objects.</p>
+<p class="continuation">The <dfn class="terminology">empty set</dfn> is the set containing no objects, denoted <span class="process-math">\(\{\ \}\)</span> or <span class="process-math">\(\emptyset\text{.}\)</span></p></article><p id="p-24">Lastly, we define the <em class="emphasis">cartesian product</em> of sets, which is a formal description of an ordered collection of objects.</p>
 <article class="definition definition-like" id="d_cartesian_product"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Cartesian product.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Cartesian product.</span>
 </h4>
-<p id="p-24">An <dfn class="terminology"><span class="process-math">\(n\)</span>-tuple</dfn> (or <dfn class="terminology">sequence</dfn>) of the sets <span class="process-math">\(A_1, A_2,\dots, A_n\)</span> is an ordered list <span class="process-math">\((a_1,a_2,\dots, a_n)\)</span> such that <span class="process-math">\(a_i\in A_i\)</span> for all <span class="process-math">\(1\leq i\leq n\text{.}\)</span> We define two <span class="process-math">\(n\)</span>-tuples <span class="process-math">\((a_1,a_2,\dots, a_n)\text{,}\)</span> and <span class="process-math">\((a_1',a_2',\dots, a_n')\)</span> to be equal, denoted <span class="process-math">\((a_1,a_2,\dots, a_n)=(a_1',a_2',\dots, a_n')\text{,}\)</span> if <span class="process-math">\(a_i=a_i'\)</span> for all <span class="process-math">\(1\leq i\leq n\text{.}\)</span> We call <span class="process-math">\(n\)</span> the <dfn class="terminology">length</dfn> of the sequence <span class="process-math">\((a_1,a_2,\dots, a_n)\text{,}\)</span> and we call <span class="process-math">\(a_i\)</span> its <dfn class="terminology"><span class="process-math">\(i\)</span>-th entry</dfn> for all <span class="process-math">\(1\leq i\leq n\text{.}\)</span></p>
-<p id="p-25">The <dfn class="terminology">(Cartesian) product</dfn> of the sets <span class="process-math">\(A_1, A_2,\dots, A_n\text{,}\)</span> denoted <span class="process-math">\(A_1\times A_2\times\cdots \times A_n\)</span> or <span class="process-math">\(\displaystyle\prod_{i=1}^nA_i\text{,}\)</span> is the set of all <span class="process-math">\(n\)</span>-tuples: i.e.,</p>
-<div class="displaymath process-math">
+<p id="p-25">An <dfn class="terminology"><span class="process-math">\(n\)</span>-tuple</dfn> (or <dfn class="terminology">sequence</dfn>) of the sets <span class="process-math">\(A_1, A_2,\dots, A_n\)</span> is an ordered list <span class="process-math">\((a_1,a_2,\dots, a_n)\)</span> such that <span class="process-math">\(a_i\in A_i\)</span> for all <span class="process-math">\(1\leq i\leq n\text{.}\)</span> We define two <span class="process-math">\(n\)</span>-tuples <span class="process-math">\((a_1,a_2,\dots, a_n)\text{,}\)</span> and <span class="process-math">\((a_1',a_2',\dots, a_n')\)</span> to be equal, denoted <span class="process-math">\((a_1,a_2,\dots, a_n)=(a_1',a_2',\dots, a_n')\text{,}\)</span> if <span class="process-math">\(a_i=a_i'\)</span> for all <span class="process-math">\(1\leq i\leq n\text{.}\)</span> We call <span class="process-math">\(n\)</span> the <dfn class="terminology">length</dfn> of the sequence <span class="process-math">\((a_1,a_2,\dots, a_n)\text{,}\)</span> and we call <span class="process-math">\(a_i\)</span> its <dfn class="terminology"><span class="process-math">\(i\)</span>-th entry</dfn> for all <span class="process-math">\(1\leq i\leq n\text{.}\)</span></p>
+<p id="p-26">The <dfn class="terminology">(Cartesian) product</dfn> of the sets <span class="process-math">\(A_1, A_2,\dots, A_n\text{,}\)</span> denoted <span class="process-math">\(A_1\times A_2\times\cdots \times A_n\)</span> or <span class="process-math">\(\displaystyle\prod_{i=1}^nA_i\text{,}\)</span> is the set of all <span class="process-math">\(n\)</span>-tuples: i.e.,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \prod_{i=1}^nA_i=A_1\times A_2\times\cdots \times A_n=\{(a_1,a_2,\dots, a_n)\colon a_i\in A_i \text{ for all } 1\leq i\leq n\}\text{.}
 \end{equation*}
 </div>
-<p id="p-26">Given a set <span class="process-math">\(A\text{,}\)</span> its <dfn class="terminology"><span class="process-math">\(n\)</span>-ary Cartesian product</dfn> <span class="process-math">\(A^n\)</span> is defined as</p>
-<div class="displaymath process-math">
+<p id="p-27">Given a set <span class="process-math">\(A\text{,}\)</span> its <dfn class="terminology"><span class="process-math">\(n\)</span>-ary Cartesian product</dfn> <span class="process-math">\(A^n\)</span> is defined as</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 A^n=\prod_{i=1}^n A=\underset{n\text{ times}}{\underbrace{A\times A\times\cdots \times A}}\text{.}
 \end{equation*}
 </div></article><article class="remark remark-like" id="rm_pairs_triples"><h4 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.1.11</span><span class="period">.</span>
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">0.1.11</span><span class="period">.</span>
 </h4>
-<p id="p-27">We have more suggestive names for <span class="process-math">\(n\)</span>-tuples when <span class="process-math">\(n\)</span> is small: a 2-tuple <span class="process-math">\((a,b)\)</span> is called a pair, a 3-tuple <span class="process-math">\((a,b,c)\)</span> is called a triple, a 4-tuple <span class="process-math">\((a,b,c,d)\)</span> is called a quadruple, etc.. We will use the generic term “tuple” to designate a <span class="process-math">\(n\)</span>-tuple of unspecified length.</p></article><article class="remark remark-like" id="rm_tuple_ordered"><h4 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.1.12</span><span class="period">.</span>
+<p id="p-28">We have more suggestive names for <span class="process-math">\(n\)</span>-tuples when <span class="process-math">\(n\)</span> is small: a 2-tuple <span class="process-math">\((a,b)\)</span> is called a pair, a 3-tuple <span class="process-math">\((a,b,c)\)</span> is called a triple, a 4-tuple <span class="process-math">\((a,b,c,d)\)</span> is called a quadruple, etc.. We will use the generic term “tuple” to designate a <span class="process-math">\(n\)</span>-tuple of unspecified length.</p></article><article class="remark remark-like" id="rm_tuple_ordered"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">0.1.12</span><span class="period">.</span>
 </h4>
-<p id="p-28">Observe how tuples capture the notion of an <em class="emphasis">ordered</em> collection of object. For example, whereas the sets <span class="process-math">\(\{1, 1, 2, 3\}\)</span> and <span class="process-math">\(\{1,2,2,3\}\)</span> are all equal to one another, the 4-tuples <span class="process-math">\((1,1,2,3)\)</span> and <span class="process-math">\((1,2,2,3)\)</span> are not: they differ in their second entries.</p>
-<p id="p-29">What about the tuples <span class="process-math">\((1,1,1)\)</span> and <span class="process-math">\((1,1,1,1)\text{?}\)</span> Are these equal? Technically our definition of equality only applies to tuples living in the same fixed Cartesian product. In particular, for the question of equality to make sense, the tuples must have the same length. As such we will officially avoid writing things like <span class="process-math">\((1,1,1)\ne (1,1,1,1)\text{,}\)</span> although unofficially we consider these two objects as completely different. You should think of <span class="process-math">\((1,1,1)\)</span> and <span class="process-math">\((1,1,1,1)\)</span> as creatures living on two different planets in the universe of tuples.</p></article></section><section class="subsection" id="ss_functions"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.1.2</span> <span class="title">Functions</span>
+<p id="p-29">Observe how tuples capture the notion of an <em class="emphasis">ordered</em> collection of object. For example, whereas the sets <span class="process-math">\(\{1, 1, 2, 3\}\)</span> and <span class="process-math">\(\{1,2,2,3\}\)</span> are all equal to one another, the 4-tuples <span class="process-math">\((1,1,2,3)\)</span> and <span class="process-math">\((1,2,2,3)\)</span> are not: they differ in their second entries.</p>
+<p id="p-30">What about the tuples <span class="process-math">\((1,1,1)\)</span> and <span class="process-math">\((1,1,1,1)\text{?}\)</span> Are these equal? Technically our definition of equality only applies to tuples living in the same fixed Cartesian product. In particular, for the question of equality to make sense, the tuples must have the same length. As such we will officially avoid writing things like <span class="process-math">\((1,1,1)\ne (1,1,1,1)\text{,}\)</span> although unofficially we consider these two objects as completely different. You should think of <span class="process-math">\((1,1,1)\)</span> and <span class="process-math">\((1,1,1,1)\)</span> as creatures living on two different planets in the universe of tuples.</p></article></section><section class="subsection" id="ss_functions"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">0.1.2</span> <span class="title">Functions</span>
 </h3>
 <article class="definition definition-like" id="d_function"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Functions.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Functions.</span>
 </h4>
-<p id="p-30">Let <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> be two sets. A <dfn class="terminology">function from <span class="process-math">\(X\)</span> to <span class="process-math">\(Y\)</span></dfn>, denoted <span class="process-math">\(f\colon X\rightarrow Y\text{,}\)</span> is a rule which, given any <dfn class="terminology">input</dfn> <span class="process-math">\(x\in X\text{,}\)</span> returns an <dfn class="terminology">output</dfn> <span class="process-math">\(y\in Y\text{.}\)</span> In this case we write <span class="process-math">\(y=f(x)\)</span> and call <span class="process-math">\(y\)</span> the <dfn class="terminology">image of <span class="process-math">\(x\)</span> under <span class="process-math">\(f\)</span></dfn>, or the <dfn class="terminology">value of <span class="process-math">\(f\)</span> at <span class="process-math">\(x\)</span></dfn>. Similarly, we say <span class="process-math">\(f\)</span> <dfn class="terminology">maps</dfn> (or <dfn class="terminology">sends</dfn>) the input <span class="process-math">\(x\)</span> to the output <span class="process-math">\(y\text{.}\)</span></p>
-<p id="p-31">The set <span class="process-math">\(X\)</span> is called the <dfn class="terminology">domain</dfn> of <span class="process-math">\(f\text{;}\)</span> the set <span class="process-math">\(Y\)</span> is called the <dfn class="terminology">codomain</dfn> of <span class="process-math">\(f\text{.}\)</span></p>
-<p id="p-32">When we wish to indicate what rule defines the function, we use the elaborated notation</p>
-<div class="displaymath process-math">
+<p id="p-31">Let <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> be two sets. A <dfn class="terminology">function from <span class="process-math">\(X\)</span> to <span class="process-math">\(Y\)</span></dfn>, denoted <span class="process-math">\(f\colon X\rightarrow Y\text{,}\)</span> is a rule which, given any <dfn class="terminology">input</dfn> <span class="process-math">\(x\in X\text{,}\)</span> returns an <dfn class="terminology">output</dfn> <span class="process-math">\(y\in Y\text{.}\)</span> In this case we write <span class="process-math">\(y=f(x)\)</span> and call <span class="process-math">\(y\)</span> the <dfn class="terminology">image of <span class="process-math">\(x\)</span> under <span class="process-math">\(f\)</span></dfn>, or the <dfn class="terminology">value of <span class="process-math">\(f\)</span> at <span class="process-math">\(x\)</span></dfn>. Similarly, we say <span class="process-math">\(f\)</span> <dfn class="terminology">maps</dfn> (or <dfn class="terminology">sends</dfn>) the input <span class="process-math">\(x\)</span> to the output <span class="process-math">\(y\text{.}\)</span></p>
+<p id="p-32">The set <span class="process-math">\(X\)</span> is called the <dfn class="terminology">domain</dfn> of <span class="process-math">\(f\text{;}\)</span> the set <span class="process-math">\(Y\)</span> is called the <dfn class="terminology">codomain</dfn> of <span class="process-math">\(f\text{.}\)</span></p>
+<p id="p-33">When we wish to indicate what rule defines the function, we use the elaborated notation</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-2">
 \begin{align*}
 f\colon X \amp\rightarrow Y\\
 x \amp\mapsto f(x)\text{.}
 \end{align*}
 </div>
-<p class="continuation">This is read as “The function <span class="process-math">\(f\)</span> with domain <span class="process-math">\(X\)</span> and codomain <span class="process-math">\(Y\)</span> maps an input <span class="process-math">\(x\)</span> to the output <span class="process-math">\(f(x)\)</span>”.</p></article><article class="example example-like" id="example-2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-2"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.14</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-2"><article class="example example-like"><p id="p-33">Consider the function</p>
-<div class="displaymath process-math">
+<p class="continuation">This is read as “The function <span class="process-math">\(f\)</span> with domain <span class="process-math">\(X\)</span> and codomain <span class="process-math">\(Y\)</span> maps an input <span class="process-math">\(x\)</span> to the output <span class="process-math">\(f(x)\)</span>”.</p></article><article class="example example-like" id="example-2"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">0.1.14</span><span class="period">.</span>
+</h4>
+<p id="p-34">Consider the function</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-3">
 \begin{align*}
 f\colon \mathbb{Z}\amp \rightarrow \mathbb{Z}\\
 x\amp\mapsto x^2 \text{.}
 \end{align*}
 </div>
-<p class="continuation">This function has domain and codomain equal to <span class="process-math">\(\mathbb{Z}\)</span> and maps an integer to its square.</p></article></div>
-<article class="example example-like" id="example-3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-3"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Arithmetic operations as functions.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-3"><article class="example example-like"><p id="p-34">Our familiar arithmetic operations can be expressed as functions whose inputs are pairs of numbers: addition is the function</p>
-<div class="displaymath process-math">
+<p class="continuation">This function has domain and codomain equal to <span class="process-math">\(\mathbb{Z}\)</span> and maps an integer to its square.</p></article><article class="example example-like" id="example-3"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">0.1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Arithmetic operations as functions.</span>
+</h4>
+<p id="p-35">Our familiar arithmetic operations can be expressed as functions whose inputs are pairs of numbers: addition is the function</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-4">
 \begin{align*}
 a\colon \R\times \R \amp\rightarrow \R \\
 (x,y) \amp\mapsto x+y 
 \end{align*}
 </div>
 <p class="continuation">and multiplication is the function</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-5">
 \begin{align*}
 m\colon\mathbb{R}\times \mathbb{R} \amp \rightarrow \mathbb{R}\\
 (x,y)\amp\mapsto  xy 
 \end{align*}
-</div></article></div>
-<article class="remark remark-like" id="rm_function_as_relation"><h4 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.1.16</span><span class="period">.</span>
+</div></article><article class="remark remark-like" id="rm_function_as_relation"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">0.1.16</span><span class="period">.</span>
 </h4>
-<p id="p-35">Invoking the notion of a rule in the definition of a function is admittedly somewhat vague. A more precise definition can be given using the Cartesian product. Namely, given sets <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\text{,}\)</span> we define a function <span class="process-math">\(f\colon X\rightarrow Y\)</span> to be a subset <span class="process-math">\(f\subseteq X\times Y\)</span> satisfying the following property: for all <span class="process-math">\(x\in X\)</span> there is a unique element <span class="process-math">\((x,y)\in f\text{.}\)</span> The uniqueness of the pair <span class="process-math">\((x,y)\)</span> then allows us to define the value <span class="process-math">\(f(x)\)</span> of <span class="process-math">\(f\)</span> at <span class="process-math">\(x\)</span> as <span class="process-math">\(y\text{,}\)</span> denoted <span class="process-math">\(f(x)=y\text{.}\)</span></p></article><p id="p-36">As with sets and tuples, we are obliged to specify what we mean for two functions to be equal. The definition below makes clear how the the domain and codomain, as well as the rule that takes inputs to outputs, are all essential ingredients of a function.</p>
+<p id="p-36">Invoking the notion of a rule in the definition of a function is admittedly somewhat vague. A more precise definition can be given using the Cartesian product. Namely, given sets <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\text{,}\)</span> we define a function <span class="process-math">\(f\colon X\rightarrow Y\)</span> to be a subset <span class="process-math">\(f\subseteq X\times Y\)</span> satisfying the following property: for all <span class="process-math">\(x\in X\)</span> there is a unique element <span class="process-math">\((x,y)\in f\text{.}\)</span> The uniqueness of the pair <span class="process-math">\((x,y)\)</span> then allows us to define the value <span class="process-math">\(f(x)\)</span> of <span class="process-math">\(f\)</span> at <span class="process-math">\(x\)</span> as <span class="process-math">\(y\text{,}\)</span> denoted <span class="process-math">\(f(x)=y\text{.}\)</span></p></article><p id="p-37">As with sets and tuples, we are obliged to specify what we mean for two functions to be equal. The definition below makes clear how the the domain and codomain, as well as the rule that takes inputs to outputs, are all essential ingredients of a function.</p>
 <article class="definition definition-like" id="d_function_equality"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.17</span><span class="period">.</span><span class="space"> </span><span class="title">Function equality.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.17</span><span class="period">.</span><span class="space"> </span><span class="title">Function equality.</span>
 </h4>
-<p id="p-37">Functions <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are <dfn class="terminology">equal</dfn> if</p>
+<p id="p-38">Functions <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are <dfn class="terminology">equal</dfn> if</p>
 <ol class="lower-roman">
-<li id="li-8"><p id="p-38">they have the same domain <span class="process-math">\(X\)</span> and codomain <span class="process-math">\(Y\text{,}\)</span> and</p></li>
-<li id="li-9"><p id="p-39">for all <span class="process-math">\(x\in X\text{,}\)</span> we have <span class="process-math">\(f(x)=g(x)\text{.}\)</span></p></li>
+<li id="li-8"><p id="p-39">they have the same domain <span class="process-math">\(X\)</span> and codomain <span class="process-math">\(Y\text{,}\)</span> and</p></li>
+<li id="li-9"><p id="p-40">for all <span class="process-math">\(x\in X\text{,}\)</span> we have <span class="process-math">\(f(x)=g(x)\text{.}\)</span></p></li>
 </ol></article><article class="definition definition-like" id="d_image"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.18</span><span class="period">.</span><span class="space"> </span><span class="title">Image of a set.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.18</span><span class="period">.</span><span class="space"> </span><span class="title">Image of a set.</span>
 </h4>
-<p id="p-40">Given a function <span class="process-math">\(f\colon X\rightarrow Y\)</span> and a subset <span class="process-math">\(A \subseteq X\text{,}\)</span> the <dfn class="terminology">image of <span class="process-math">\(A\)</span> under <span class="process-math">\(f\)</span></dfn>, denoted <span class="process-math">\(f(A)\text{,}\)</span> is defined as</p>
-<div class="displaymath process-math">
+<p id="p-41">Given a function <span class="process-math">\(f\colon X\rightarrow Y\)</span> and a subset <span class="process-math">\(A \subseteq X\text{,}\)</span> the <dfn class="terminology">image of <span class="process-math">\(A\)</span> under <span class="process-math">\(f\)</span></dfn>, denoted <span class="process-math">\(f(A)\text{,}\)</span> is defined as</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 f(A)=\left\{ y \in Y \colon f(a)=y \text{ for some } a \in A \right\}\text{.}
 \end{equation*}
 </div>
 <p class="continuation">In other words, <span class="process-math">\(f(A)\)</span> is the set of all outputs <span class="process-math">\(f(a)\text{,}\)</span>  where <span class="process-math">\(a\in X\text{.}\)</span></p>
-<p id="p-41">The <dfn class="terminology">image of <span class="process-math">\(f\)</span></dfn>, denoted <span class="process-math">\(\operatorname{im} f\text{,}\)</span> is the set of <em class="emphasis">all</em> outputs of <span class="process-math">\(f\text{:}\)</span> i.e.,</p>
-<div class="displaymath process-math">
+<p id="p-42">The <dfn class="terminology">image of <span class="process-math">\(f\)</span></dfn>, denoted <span class="process-math">\(\operatorname{im} f\text{,}\)</span> is the set of <em class="emphasis">all</em> outputs of <span class="process-math">\(f\text{:}\)</span> i.e.,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \operatorname{im} f=f(X)=\left\{ y \in Y \colon f(x)=y \text{ for some } x \in X \right\}\text{.}
 \end{equation*}
 </div></article><article class="definition definition-like" id="d_injective_surjective_bijective"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.19</span><span class="period">.</span><span class="space"> </span><span class="title">Injective, surjective, bijective.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.19</span><span class="period">.</span><span class="space"> </span><span class="title">Injective, surjective, bijective.</span>
 </h4>
-<p id="p-42">Let <span class="process-math">\(f\colon X\rightarrow Y\)</span> be a function.</p>
+<p id="p-43">Let <span class="process-math">\(f\colon X\rightarrow Y\)</span> be a function.</p>
 <ul class="disc">
-<li id="li-10"><p id="p-43">The function <span class="process-math">\(f\)</span> is <dfn class="terminology">injective</dfn> (or <dfn class="terminology">one-to-one</dfn>) if for all <span class="process-math">\(x,x'\in X\text{,}\)</span> if <span class="process-math">\(f(x)=f(x')\text{,}\)</span> then <span class="process-math">\(x=x'\text{:}\)</span> equivalently, if <span class="process-math">\(x\ne x'\text{,}\)</span> then <span class="process-math">\(f(x)\ne f(x')\text{.}\)</span></p></li>
-<li id="li-11"><p id="p-44">The function <span class="process-math">\(f\)</span> is <dfn class="terminology">surjective</dfn> (or <dfn class="terminology">onto</dfn>) if for all <span class="process-math">\(y\in Y\text{,}\)</span> there is an <span class="process-math">\(x\in X\)</span> such that <span class="process-math">\(f(x)=y\text{:}\)</span> equivalently, <span class="process-math">\(\im f=Y\text{.}\)</span></p></li>
-<li id="li-12"><p id="p-45">The function <span class="process-math">\(f\)</span> is <dfn class="terminology">bijective</dfn> (or a <dfn class="terminology">one-to-one correspondence</dfn>) if it is injective and surjective.</p></li>
-</ul></article><article class="example example-like" id="example-4"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-4"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.20</span><span class="period">.</span><span class="space"> </span><span class="title">Role of domain and codomain in injectivity and surjectivity.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-4"><article class="example example-like"><p id="p-46">Consider the following three functions</p>
-<div class="displaymath process-math">
+<li id="li-10"><p id="p-44">The function <span class="process-math">\(f\)</span> is <dfn class="terminology">injective</dfn> (or <dfn class="terminology">one-to-one</dfn>) if for all <span class="process-math">\(x,x'\in X\text{,}\)</span> if <span class="process-math">\(f(x)=f(x')\text{,}\)</span> then <span class="process-math">\(x=x'\text{:}\)</span> equivalently, if <span class="process-math">\(x\ne x'\text{,}\)</span> then <span class="process-math">\(f(x)\ne f(x')\text{.}\)</span></p></li>
+<li id="li-11"><p id="p-45">The function <span class="process-math">\(f\)</span> is <dfn class="terminology">surjective</dfn> (or <dfn class="terminology">onto</dfn>) if for all <span class="process-math">\(y\in Y\text{,}\)</span> there is an <span class="process-math">\(x\in X\)</span> such that <span class="process-math">\(f(x)=y\text{:}\)</span> equivalently, <span class="process-math">\(\im f=Y\text{.}\)</span></p></li>
+<li id="li-12"><p id="p-46">The function <span class="process-math">\(f\)</span> is <dfn class="terminology">bijective</dfn> (or a <dfn class="terminology">one-to-one correspondence</dfn>) if it is injective and surjective.</p></li>
+</ul></article><article class="example example-like" id="example-4"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">0.1.20</span><span class="period">.</span><span class="space"> </span><span class="title">Role of domain and codomain in injectivity and surjectivity.</span>
+</h4>
+<p id="p-47">Consider the following three functions</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-6">
 \begin{align*}
 f\colon \R \amp\rightarrow \R \amp g\colon [0,\infty)\amp\rightarrow \R \amp h\colon [0,\infty)\amp \rightarrow [0,\infty) \\
 x \amp\mapsto x^2 \amp x \amp\mapsto x^2 \amp x \amp\mapsto x^2 \amp \text{.}
 \end{align*}
 </div>
-<p class="continuation">Although all three functions are defined using the same rule (<span class="process-math">\(x\mapsto x^2\)</span>), they are not equal thanks to their differing domains and/or codomains. The choice of domain and codomain in these examples also plays a crucial role in determining whether the function is injective and/or surjective. The function <span class="process-math">\(f\)</span> is neither injective (<span class="process-math">\(f(-2)=f(2)=4\)</span>) nor surjective (<span class="process-math">\(f(X)=[0,\infty)\ne \R\)</span>); the function <span class="process-math">\(g\)</span> is injective but not surjective; the function <span class="process-math">\(h\)</span> is both injective and surjective, hence bijective.</p></article></div>
-<article class="definition definition-like" id="d_function_composition"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.21</span><span class="period">.</span><span class="space"> </span><span class="title">Function composition.</span>
+<p class="continuation">Although all three functions are defined using the same rule (<span class="process-math">\(x\mapsto x^2\)</span>), they are not equal thanks to their differing domains and/or codomains. The choice of domain and codomain in these examples also plays a crucial role in determining whether the function is injective and/or surjective. The function <span class="process-math">\(f\)</span> is neither injective (<span class="process-math">\(f(-2)=f(2)=4\)</span>) nor surjective (<span class="process-math">\(f(X)=[0,\infty)\ne \R\)</span>); the function <span class="process-math">\(g\)</span> is injective but not surjective; the function <span class="process-math">\(h\)</span> is both injective and surjective, hence bijective.</p></article><article class="definition definition-like" id="d_function_composition"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.21</span><span class="period">.</span><span class="space"> </span><span class="title">Function composition.</span>
 </h4>
-<p id="p-47">Suppose <span class="process-math">\(f\colon Z\rightarrow W\)</span> and <span class="process-math">\(g\colon X\rightarrow Y\)</span> are functions satisfying <span class="process-math">\(Y\subseteq Z\text{.}\)</span>  The <dfn class="terminology">composition of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span></dfn> is the function <span class="process-math">\(f\circ g\colon X\rightarrow W\)</span> defined as <span class="process-math">\(f\circ g\, (x)=f(g(x))
+<p id="p-48">Suppose <span class="process-math">\(f\colon Z\rightarrow W\)</span> and <span class="process-math">\(g\colon X\rightarrow Y\)</span> are functions satisfying <span class="process-math">\(Y\subseteq Z\text{.}\)</span>  The <dfn class="terminology">composition of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span></dfn> is the function <span class="process-math">\(f\circ g\colon X\rightarrow W\)</span> defined as <span class="process-math">\(f\circ g\, (x)=f(g(x))
 \text{,}\)</span> for all <span class="process-math">\(x\in X\text{.}\)</span></p></article><article class="definition definition-like" id="d_invertible_function"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.22</span><span class="period">.</span><span class="space"> </span><span class="title">Identity and inverse functions.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.22</span><span class="period">.</span><span class="space"> </span><span class="title">Identity and inverse functions.</span>
 </h4>
-<p id="p-48">For any set <span class="process-math">\(X\)</span> the <dfn class="terminology">identity function</dfn> on <span class="process-math">\(X\)</span> is the function <span class="process-math">\(\id_X\colon X\rightarrow X\)</span> defined as <span class="process-math">\(\id_X(x)=x\)</span> for all <span class="process-math">\(x\in X\text{.}\)</span></p>
-<p id="p-49">A function <span class="process-math">\(f\colon X\rightarrow Y\)</span> is <dfn class="terminology">invertible</dfn> if there is a function <span class="process-math">\(g\colon Y\rightarrow X\)</span> satisfying <span class="process-math">\(g\circ f=\id_X\)</span> and <span class="process-math">\(f\circ g=\id_Y\text{:}\)</span> i.e.,</p>
-<div class="displaymath process-math">
+<p id="p-49">For any set <span class="process-math">\(X\)</span> the <dfn class="terminology">identity function</dfn> on <span class="process-math">\(X\)</span> is the function <span class="process-math">\(\id_X\colon X\rightarrow X\)</span> defined as <span class="process-math">\(\id_X(x)=x\)</span> for all <span class="process-math">\(x\in X\text{.}\)</span></p>
+<p id="p-50">A function <span class="process-math">\(f\colon X\rightarrow Y\)</span> is <dfn class="terminology">invertible</dfn> if there is a function <span class="process-math">\(g\colon Y\rightarrow X\)</span> satisfying <span class="process-math">\(g\circ f=\id_X\)</span> and <span class="process-math">\(f\circ g=\id_Y\text{:}\)</span> i.e.,</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-7">
 \begin{align*}
 g(f(x))\amp =x  \text{ for all } x\in X, \\
 f(g(y))\amp=y  \text{ for all } y\in Y \text{.}
 \end{align*}
 </div> The function <span class="process-math">\(g\)</span> in this case is called the <dfn class="terminology">inverse</dfn> of <span class="process-math">\(f\text{,}\)</span> denoted <span class="process-math">\(g=f^{-1}\text{.}\)</span></article><article class="theorem theorem-like" id="th_invertible_bijective"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.23</span><span class="period">.</span><span class="space"> </span><span class="title">Invertible is equivalent to bijective.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">0.1.23</span><span class="period">.</span><span class="space"> </span><span class="title">Invertible is equivalent to bijective.</span>
 </h4>
-<p id="p-50">A function <span class="process-math">\(f\colon X\rightarrow Y\)</span> is invertible if and only if it is bijective.</p></article><article class="hiddenproof" id="proof-1"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><p id="p-51">The proof of this theorem is left as an example of proving “if and only if” statements. See <a href="" class="xref" data-knowl="./knowl/ex_invertible_bijective.html" title="Example 1.3.3: Proof: invertible is equivalent to bijective">Example 1.3.3</a>.</p></article></div></section></section></div></main>
+<p id="p-51">A function <span class="process-math">\(f\colon X\rightarrow Y\)</span> is invertible if and only if it is bijective.</p></article><article class="hiddenproof" id="proof-1"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><p id="p-52">The proof of this theorem is left as an example of proving “if and only if” statements. See <a href="" class="xref" data-knowl="./knowl/ex_invertible_bijective.html" title="Example 0.3.3: Proof: invertible is equivalent to bijective">Example 0.3.3</a>.</p></article></div></section><section class="exercises" id="s_sets_functions_ex"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">0.1.3</span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div id="webwork-1" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="1" data-sourceFilePath="Library/SDSU/Discrete/Sets/unionB3.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-53">Let <span class="process-math">\(S = \lbrace a,b,c\rbrace\text{,}\)</span> <span class="process-math">\(T = \lbrace a,c,d,e\rbrace\)</span></p>
+<p id="p-54">Determine <span class="process-math">\(S\cup T\)</span> <ul style="list-style:circle;">
+<li id="li-13"><p id="p-55"><span class="process-math">\(\displaystyle \lbrace a,b,c,d,e\rbrace\)</span></p></li>
+<li id="li-14"><p id="p-56"><span class="process-math">\(\displaystyle \lbrace b,e\rbrace\)</span></p></li>
+<li id="li-15"><p id="p-57"><span class="process-math">\(\displaystyle \lbrace a,a,b,c,c,d,e\rbrace\)</span></p></li>
+<li id="li-16"><p id="p-58"><span class="process-math">\(\displaystyle \lbrace a,c\rbrace\)</span></p></li>
+<li id="li-17"><p id="p-59"><span class="process-math">\(\displaystyle \lbrace\rbrace\)</span></p></li>
+</ul></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
+<span class="process-math">\(S = \lbrace a,b,c\rbrace\)</span><span class="process-math">\(T = \lbrace a,c,d,e\rbrace\)</span><span class="process-math">\(S\cup T\text{,}\)</span> or <span class="process-math">\(S\text{ "union" } T\text{,}\)</span> is defined as the set of elements that are contained in either <span class="process-math">\(S\)</span> or <span class="process-math">\(T\text{.}\)</span> In this case, the answer is <span class="process-math">\(\lbrace a,b,c,d,e\rbrace\)</span> Remember that even if an element is in both sets, it is only counted once.</div></div>
+</div>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-1')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="exercise-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div id="webwork-2" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="2" data-sourceFilePath="Library/SDSU/Discrete/Sets/intersectA2.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-60">Let <span class="process-math">\(A = \lbrace 1,2,3\rbrace\text{,}\)</span> <span class="process-math">\(B = \lbrace 4,5,6\rbrace\)</span></p>
+<p id="p-61">Determine <span class="process-math">\(A\cap B\)</span> <ul style="list-style:circle;">
+<li id="li-18"><p id="p-62"><span class="process-math">\(\displaystyle \lbrace 1,2,3\rbrace\)</span></p></li>
+<li id="li-19"><p id="p-63"><span class="process-math">\(\displaystyle \lbrace 3,4\rbrace\)</span></p></li>
+<li id="li-20"><p id="p-64"><span class="process-math">\(\displaystyle \lbrace 4,5,6\rbrace\)</span></p></li>
+<li id="li-21"><p id="p-65"><span class="process-math">\(\displaystyle \lbrace\rbrace\)</span></p></li>
+<li id="li-22"><p id="p-66"><span class="process-math">\(\displaystyle \lbrace 1,2,3,4,5,6\rbrace\)</span></p></li>
+</ul></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
+<span class="process-math">\(A = \lbrace 1,2,3\rbrace\)</span><span class="process-math">\(B = \lbrace 4,5,6\rbrace\)</span><span class="process-math">\(A\cap B\text{,}\)</span> or <span class="process-math">\(A\text{ "intersect" } B\text{,}\)</span> is defined as the set of elements that are contained in both <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> In this case, the answer is <span class="process-math">\(\lbrace \rbrace\)</span>
+</div></div>
+</div>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-2')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="exercise-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div id="webwork-3" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="3" data-sourceFilePath="Library/SDSU/Discrete/Sets/differenceB4.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-67">Let <span class="process-math">\(W = \lbrace a,b,c,d,e\rbrace\text{,}\)</span> <span class="process-math">\(X = \lbrace a,c,f\rbrace\)</span></p>
+<p id="p-68">Determine <span class="process-math">\(W-X\)</span> <ul style="list-style:circle;">
+<li id="li-23"><p id="p-69"><span class="process-math">\(\displaystyle \lbrace 1,2,3\)</span></p></li>
+<li id="li-24"><p id="p-70"><span class="process-math">\(\displaystyle \lbrace 0,0,0,4,5\rbrace\)</span></p></li>
+<li id="li-25"><p id="p-71"><span class="process-math">\(\displaystyle \lbrace\rbrace\)</span></p></li>
+<li id="li-26"><p id="p-72"><span class="process-math">\(\displaystyle \lbrace b,d,e\rbrace\)</span></p></li>
+<li id="li-27"><p id="p-73"><span class="process-math">\(\displaystyle \lbrace 1,2,3,4,5\rbrace\)</span></p></li>
+</ul></p>
+<p id="p-74">Determine <span class="process-math">\(X-W\)</span> <ul style="list-style:circle;">
+<li id="li-28"><p id="p-75"><span class="process-math">\(\displaystyle \lbrace 0,0,0\rbrace\)</span></p></li>
+<li id="li-29"><p id="p-76"><span class="process-math">\(\displaystyle \lbrace 1,2,3\rbrace\)</span></p></li>
+<li id="li-30"><p id="p-77"><span class="process-math">\(\displaystyle \lbrace 1,2,3,4,5\rbrace\)</span></p></li>
+<li id="li-31"><p id="p-78"><span class="process-math">\(\displaystyle \lbrace f\rbrace\)</span></p></li>
+<li id="li-32"><p id="p-79"><span class="process-math">\(\displaystyle \lbrace 4,5\rbrace\)</span></p></li>
+</ul></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
+<span class="process-math">\(W = \lbrace a,b,c,d,e\rbrace\)</span><span class="process-math">\(X = \lbrace a,c,f\rbrace\)</span><span class="process-math">\(W-X\)</span> is defined as the set of elements that are in <span class="process-math">\(W\text{,}\)</span> but not in <span class="process-math">\(X\text{.}\)</span> For <span class="process-math">\(W-X\text{,}\)</span> the answer is <span class="process-math">\(\lbrace b,d,e\rbrace\)</span> For <span class="process-math">\(X-W\text{,}\)</span> the answer is <span class="process-math">\(\lbrace f\rbrace\)</span>
+</div></div>
+</div>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-3')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="exercise-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div id="webwork-4" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="4" data-sourceFilePath="Library/Rochester/setSetTheory1/ur_st_1_7.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-80"><span class="process-math">\(A = \lbrace 5, 7, 9 \rbrace, B = \lbrace 6,7 \rbrace\)</span></p>
+<p id="p-81">Check ALL of the following Cartesian products to which the following elements belong:</p>
+<p id="p-82">(d) <span class="process-math">\((7,7)\)</span></p>
+<p id="p-83"><ul style="list-style:circle;">
+<li id="li-33"><p id="p-84"><span class="process-math">\(\displaystyle B \times A\)</span></p></li>
+<li id="li-34"><p id="p-85"><span class="process-math">\(\displaystyle A \times B\)</span></p></li>
+<li id="li-35"><p id="p-86"><span class="process-math">\(\displaystyle A \times A\)</span></p></li>
+<li id="li-36"><p id="p-87"><span class="process-math">\(\displaystyle B \times B\)</span></p></li>
+</ul></p>
+<p id="p-88">(a) <span class="process-math">\((5, 6)\)</span></p>
+<p id="p-89"><ul style="list-style:circle;">
+<li id="li-37"><p id="p-90"><span class="process-math">\(\displaystyle A \times A\)</span></p></li>
+<li id="li-38"><p id="p-91"><span class="process-math">\(\displaystyle B \times B\)</span></p></li>
+<li id="li-39"><p id="p-92"><span class="process-math">\(\displaystyle B \times A\)</span></p></li>
+<li id="li-40"><p id="p-93"><span class="process-math">\(\displaystyle A \times B\)</span></p></li>
+</ul></p>
+<p id="p-94">(c) <span class="process-math">\((5,5)\)</span></p>
+<p id="p-95"><ul style="list-style:circle;">
+<li id="li-41"><p id="p-96"><span class="process-math">\(\displaystyle A \times A\)</span></p></li>
+<li id="li-42"><p id="p-97"><span class="process-math">\(\displaystyle B \times A\)</span></p></li>
+<li id="li-43"><p id="p-98"><span class="process-math">\(\displaystyle B \times B\)</span></p></li>
+<li id="li-44"><p id="p-99"><span class="process-math">\(\displaystyle A \times B\)</span></p></li>
+</ul></p>
+<p id="p-100">(b) <span class="process-math">\((7,5)\)</span></p>
+<p id="p-101"><ul style="list-style:circle;">
+<li id="li-45"><p id="p-102"><span class="process-math">\(\displaystyle B \times A\)</span></p></li>
+<li id="li-46"><p id="p-103"><span class="process-math">\(\displaystyle A \times A\)</span></p></li>
+<li id="li-47"><p id="p-104"><span class="process-math">\(\displaystyle B \times B\)</span></p></li>
+<li id="li-48"><p id="p-105"><span class="process-math">\(\displaystyle A \times B\)</span></p></li>
+</ul></p>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-4')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="exercise-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div id="webwork-5" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="5" data-sourceFilePath="Library/SDSU/Discrete/Sets/subsetB3.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-106">Let <span class="process-math">\(R = \lbrace\text{numbers divisible by 2}\rbrace\)</span></p>
+<p id="p-107">Determine which of the following sets are subsets of <span class="process-math">\(R\)</span> <ul style="list-style:circle;">
+<li id="li-49"><p id="p-108"><span class="process-math">\(\displaystyle \lbrace 0\rbrace\)</span></p></li>
+<li id="li-50"><p id="p-109"><span class="process-math">\(\displaystyle \lbrace 44,221,90\rbrace\)</span></p></li>
+<li id="li-51"><p id="p-110"><span class="process-math">\(\displaystyle \lbrace integers\rbrace\)</span></p></li>
+<li id="li-52"><p id="p-111"><span class="process-math">\(\displaystyle \lbrace 1\rbrace\)</span></p></li>
+<li id="li-53"><p id="p-112"><span class="process-math">\(\displaystyle \lbrace -82,104,16\rbrace\)</span></p></li>
+</ul></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
+<span class="process-math">\(R = \lbrace\text{numbers divisible by 2}\rbrace\)</span> Subsets of <span class="process-math">\(R\)</span> include: <span class="process-math">\(\lbrace 0\rbrace\)</span><span class="process-math">\(\lbrace -82,104,16\rbrace\)</span> Remember that the order of a set does not matter.</div></div>
+</div>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-5')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="exercise-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div id="webwork-6" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="6" data-sourceFilePath="Library/MontanaState/Sets/5.2A13Sets1.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-113">Let <span class="process-math">\(f(x) = x^{2}\text{.}\)</span>  Find each set.</p>
+<p id="p-114"><span class="process-math">\(f ([1, 6)) =\)</span> <span class="fillin underline" role="img" aria-label="12-character blank" style="width: 5.454545454545454em;"></span></p>
+<p id="p-115"><span class="process-math">\(f ((-3, 6)) =\)</span> <span class="fillin underline" role="img" aria-label="12-character blank" style="width: 5.454545454545454em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-116"><span class="process-math">\(\left[1,36\right)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-117"><span class="process-math">\(\left[0,36\right)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
+<span class="process-math">\(x^{2}\)</span> is not one-to-one, you can not simply plug the endpoints of the  interval into the function to get the endpoints of the answer.  Instead, try graphing the function and shading on the <span class="process-math">\(x\)</span>-axis the input set.  Then use the graph to see which <span class="process-math">\(y\)</span>-values you get out when you put those <span class="process-math">\(x\)</span>'s in. For instance, notice that <span class="process-math">\(0 \in (-3, 6)\text{.}\)</span>  Because <span class="process-math">\(f(0) = 0\text{,}\)</span> you should have <span class="process-math">\(0 \in f( (-3, 6))\text{.}\)</span>  Do you?</div></div>
+</div>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-6')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="exercise-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div id="webwork-7" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="7" data-sourceFilePath="Library/SUNYSB/oneToOneOnto1.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-118">For each of the following functions, <span class="process-math">\(f:\textbf{R}\longrightarrow\textbf{R}\)</span> state whether they are one-to-one, onto, both or neither. Use the following key:</p>
+<ol id="p-119" class="lower-alpha">
+<li id="li-54"><p id="p-120"><span class="process-math">\(\displaystyle f(x)=x(x-6)(x+6)\)</span></p></li>
+<li id="li-55"><p id="p-121"><span class="process-math">\(\displaystyle f(x)=\left|x\right|\)</span></p></li>
+<li id="li-56"><p id="p-122"><span class="process-math">\(\displaystyle f(x)=x^2+7\)</span></p></li>
+<li id="li-57"><p id="p-123"><span class="process-math">\(\displaystyle f(x)=x + 6\left|x\right|\)</span></p></li>
+<li id="li-58"><p id="p-124"><span class="process-math">\(\displaystyle f(x)=x^3+6\)</span></p></li>
+<li id="li-59"><p id="p-125"><span class="process-math">\(\displaystyle f(x)=\sin(x)\)</span></p></li>
+<li id="li-60"><p id="p-126"><span class="process-math">\(\displaystyle f(x)=e^x\)</span></p></li>
+</ol>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-7')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="exercise-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div id="webwork-8" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="8" data-sourceFilePath="Library/LoyolaChicago/Precalc/Chap8Sec2/Q08.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-127">Consider the functions <span class="process-math">\(f(x) = \sqrt[7]{\frac{x}{4}} - 1\text{,}\)</span> <span class="process-math">\(g(x) = \sqrt[7]{\frac{x}{4}} + 1\text{,}\)</span> <span class="process-math">\(h(x) = 1 + 4 x^{7}\text{,}\)</span> <span class="process-math">\(p(x) = \sqrt[7]{\frac{x + 1}{4}}\text{,}\)</span> <span class="process-math">\(q(x) = -1 + 4 x^{7}\text{,}\)</span> and <span class="process-math">\(r(x) = \sqrt[7]{\frac{x - 1}{4}}\text{.}\)</span></p>
+<p id="p-128">Which of these functions are inverses of each other?</p>
+<p id="p-129"><ul style="list-style:circle;">
+<li id="li-61"><p id="p-130"><span class="process-math">\(h(x)\)</span> and <span class="process-math">\(r(x)\)</span></p></li>
+<li id="li-62"><p id="p-131"><span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\)</span></p></li>
+<li id="li-63"><p id="p-132"><span class="process-math">\(g(x)\)</span> and <span class="process-math">\(h(x)\)</span></p></li>
+<li id="li-64"><p id="p-133"><span class="process-math">\(f(x)\)</span> and <span class="process-math">\(h(x)\)</span></p></li>
+<li id="li-65"><p id="p-134"><span class="process-math">\(f(x)\)</span> and <span class="process-math">\(q(x)\)</span></p></li>
+<li id="li-66"><p id="p-135"><span class="process-math">\(h(x)\)</span> and <span class="process-math">\(p(x)\)</span></p></li>
+<li id="li-67"><p id="p-136"><span class="process-math">\(g(x)\)</span> and <span class="process-math">\(q(x)\)</span></p></li>
+<li id="li-68"><p id="p-137"><span class="process-math">\(q(x)\)</span> and <span class="process-math">\(r(x)\)</span></p></li>
+<li id="li-69"><p id="p-138">No pairs of these functions are inverses of each other.</p></li>
+</ul></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
+<em class="alert">SOLUTION</em> One way we can check which functions are inverses is to make sure they satisfy the identities <span class="process-math">\(f \left( f^{-1}(x) \right)=x\)</span> and <span class="process-math">\(f^{-1} \left( f(x) \right)=x\text{.}\)</span>  This will show that <span class="process-math">\(h(x)\)</span> and <span class="process-math">\(r(x)\)</span> and <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\)</span> are inverses of each other, while the other pairs of functions are not. Let's consider <span class="process-math">\(h(x)\)</span> and <span class="process-math">\(r(x)\text{.}\)</span>  The composition<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+h\left(r(x)\right)
+\amp = 1 +  4 \left(\sqrt[7]{ \frac{x - 1}{4}}\right)^{7} \\
+\amp = 1 + 4 \left( \frac{x - 1}{4} \right) \\
+\amp = 1 + (x-1) = x.
+\end{aligned}
+\end{equation*}
+</div>Also,<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+r\left(h(x)\right)
+\amp = \sqrt[7]{\frac{\left( 1+4 x^{7} \right)-1}{4}} \\
+\amp = \sqrt[7]{x^{7}} = x.
+\end{aligned}
+\end{equation*}
+</div>Thus these are inverses of one another.  We can similarly show that <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\)</span> are inverses of each other. However, the remaining pairs are not inverses.  For example, if we consider <span class="process-math">\(h(x)\)</span> and <span class="process-math">\(p(x)\text{,}\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+h\left(p(x)\right)
+\amp = 1 +  4 \left( \sqrt[7]{ \frac{x + 1}{4}} \right)^{7}\\
+\amp = 1 + (x+1) = x + 2 \ne x.
+\end{aligned}
+\end{equation*}
+</div>Thus these functions are not inverses of each other.</div></div>
+</div>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-8')">Make Interactive</button></div>
+</div></article></section></section></div></main>
 </div>
 </body>
 </html>

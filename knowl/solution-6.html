@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-07T16:15:37Z       *-->
+<!--*       on 2022-07-22T11:48:27-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,53 +15,35 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h5 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">1.3.8.1</span><span class="period">.</span>
-</h5>
-<p>We prove the proposition by induction.</p>
-<article class="case"><h6 class="heading">Step 0: preparation.</h6>
-<p>The proposition is modeled logically as <span class="process-math">\(\forall n\geq 1 \, P(n)\text{,}\)</span> where <span class="process-math">\(P(n)\)</span> is the proposition that</p>
-<div class="displaymath process-math">
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">0.1.3.8.1</span><span class="period">.</span>
+</h4>
+<em class="alert">SOLUTION</em> One way we can check which functions are inverses is to make sure they satisfy the identities <span class="process-math">\(f \left( f^{-1}(x) \right)=x\)</span> and <span class="process-math">\(f^{-1} \left( f(x) \right)=x\text{.}\)</span>  This will show that <span class="process-math">\(h(x)\)</span> and <span class="process-math">\(r(x)\)</span> and <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\)</span> are inverses of each other, while the other pairs of functions are not. Let's consider <span class="process-math">\(h(x)\)</span> and <span class="process-math">\(r(x)\text{.}\)</span>  The composition<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-\sum_{k=1}^n k=\frac{n(n+1)}{2}\text{.}
+\begin{aligned}
+h\left(r(x)\right)
+\amp = 1 +  4 \left(\sqrt[7]{ \frac{x - 1}{4}}\right)^{7} \\
+\amp = 1 + 4 \left( \frac{x - 1}{4} \right) \\
+\amp = 1 + (x-1) = x.
+\end{aligned}
 \end{equation*}
-</div></article><article class="case"><h6 class="heading">Base step: <span class="process-math">\(n=1\)</span>.</h6>
-<p>The proposition <span class="process-math">\(P(1)\)</span> is the statement that</p>
-<div class="displaymath process-math">
+</div>Also,<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-1=\frac{1(1+1)}{2}\text{,}
+\begin{aligned}
+r\left(h(x)\right)
+\amp = \sqrt[7]{\frac{\left( 1+4 x^{7} \right)-1}{4}} \\
+\amp = \sqrt[7]{x^{7}} = x.
+\end{aligned}
 \end{equation*}
-</div>
-<p class="continuation">which is clearly true.</p></article><article class="case"><h6 class="heading">Induction step.</h6>
-<p>We must show the universal implication</p>
-<div class="displaymath process-math">
+</div>Thus these are inverses of one another.  We can similarly show that <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\)</span> are inverses of each other. However, the remaining pairs are not inverses.  For example, if we consider <span class="process-math">\(h(x)\)</span> and <span class="process-math">\(p(x)\text{,}\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-\forall n\geq 1\, P(n)\implies P(n+1)\text{.}
+\begin{aligned}
+h\left(p(x)\right)
+\amp = 1 +  4 \left( \sqrt[7]{ \frac{x + 1}{4}} \right)^{7}\\
+\amp = 1 + (x+1) = x + 2 \ne x.
+\end{aligned}
 \end{equation*}
-</div>
-<p class="continuation">Let <span class="process-math">\(n\geq 1\text{,}\)</span> and assume <span class="process-math">\(P(n)\)</span> is true: i.e.,</p>
-<div class="displaymath process-math">
-\begin{equation*}
-\sum_{k=1}^n k=\frac{n(n+1)}{2}
-\end{equation*}
-</div>
-<p class="continuation">The proposition <span class="process-math">\(P(n+1)\)</span> states that</p>
-<div class="displaymath process-math">
-\begin{equation*}
-\sum_{k=1}^{n+1} k=\frac{(n+1)(n+2)}{2}\text{.}
-\end{equation*}
-</div>
-<p class="continuation">We prove this, assuming <span class="process-math">\(P(n)\text{,}\)</span> via a chain of equalities:</p>
-<div class="displaymath process-math">
-\begin{align*}
-\sum_{k=1}^{n+1} k\amp= \sum_{k=1}^{n} k+(n+1) \\
-\amp=\frac{n(n+1)}{2}+n+1\amp (\text{induction hyp.}) \\
-\amp =\frac{n(n+1)+2(n+1)}{2}\\
-\amp =\frac{(n+1)(n+2)}{2}\text{,}
-\end{align*}
-</div>
-<p class="continuation">as desired.</p></article><p>Having completed our base and induction steps, our proof is now finished.</p>
-</div>
-<span class="incontext"><a href="s_proof_technique.html#solution-6">in-context</a></span>
+</div>Thus these functions are not inverses of each other.</div>
+<span class="incontext"><a href="s_sets_functions.html#solution-6" class="internal">in-context</a></span>
 </body>
 </html>

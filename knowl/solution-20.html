@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-07T16:15:45Z       *-->
+<!--*       on 2022-07-22T11:48:28-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,24 +15,33 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.1.6.4.1</span><span class="period">.</span>
-</h4>
-<p>I'll just describe the row method here.</p>
-<p>Note that the rows of <span class="process-math">\(A\)</span> are all identical, and equal to <span class="process-math">\(\begin{bmatrix}1 \amp -1 \amp 1 \amp -1 \amp 1 \end{bmatrix}\text{.}\)</span> From the row method it follows that each row of <span class="process-math">\(AB\)</span> is given by</p>
-<div class="displaymath process-math">
+<h5 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">1.2.3.4.1</span><span class="period">.</span>
+</h5>
+<p>First bring the system into standard form:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-\begin{bmatrix}1 \amp -1 \amp 1 \amp -1 \amp 1 \end{bmatrix} B\text{.}
+L\colon \
+\begin{linsys}{4} x_1\amp +\amp 2x_2\amp -\amp x_3\amp-\amp x_4\amp=\amp 3\\ 3x_1\amp +\amp 6x_2\amp - \amp 2x_3\amp + \amp 4x_4\amp =\amp 8\\ -x_1\amp - \amp 2x_2 \amp +\amp 2x_3\amp + \amp x_4\amp = \amp -1 \end{linsys}\text{.}
 \end{equation*}
 </div>
-<p>Thus the rows of <span class="process-math">\(AB\)</span> are all identical, and the row method computes the product above by taking the corresponding alternating sum of the rows of <span class="process-math">\(B\text{:}\)</span></p>
-<div class="displaymath process-math">
+<p class="continuation">Then perform Gaussian elimination on the associated augmented matrix:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\begin{bmatrix}1\amp 2\amp -1\amp -1\amp 3\\ 3\amp 6\amp -2\amp 4\amp 8\\ -1\amp -2\amp 2\amp 1\amp -1 \end{bmatrix} \amp \xrightarrow[\hspace{35pt}]{r_2-3r_1}\amp \begin{bmatrix}1\amp 2\amp -1\amp -1\amp 3\\ 0\amp 0\amp 1\amp 7\amp -1\\ -1\amp -2\amp 2\amp 1\amp -1 \end{bmatrix}\\
+\amp \xrightarrow[\hspace{35pt}]{r_3+r_1 }\amp \begin{bmatrix}1\amp 2\amp -1\amp -1\amp 3\\ 0\amp 0\amp 1\amp 7\amp -1\\ 0\amp 0\amp 1\amp 0\amp 2 \end{bmatrix}\\
+\amp \xrightarrow[\hspace{35pt}]{r_3-r_2 }\amp \begin{bmatrix}1\amp 2\amp -1\amp -1\amp 3\\ 0\amp 0\amp 1\amp 7\amp -1\\ 0\amp 0\amp 0\amp -7\amp 3 \end{bmatrix}\\
+\amp \xrightarrow[\hspace{35pt}]{-\frac{1}{7}r_3}\amp \begin{bmatrix}1\amp 2\amp -1\amp -1\amp 3\\ 0\amp 0\amp 1\amp 7\amp -1\\ 0\amp 0\amp 0\amp 1\amp -\frac{3}{7} \end{bmatrix}\text{.}
+\end{align*}
+</div>
+<p class="continuation">The corresponding equivalent system is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-\begin{bmatrix}1 \amp -1 \amp 1 \amp -1 \amp 1 \end{bmatrix} B=\begin{bmatrix}2\amp 2\amp -1\amp 4 \end{bmatrix}\text{.}
+L'\colon \
+\begin{linsys}{4} x_1\amp +\amp 2x_2\amp -\amp x_3\amp-\amp x_4\amp=\amp 3\\  \amp \amp \amp \amp x_3\amp + \amp 7x_4\amp =\amp -1\\ \amp \amp \amp \amp \amp  \amp x_4\amp = \amp -\frac{3}{7} \end{linsys}\text{.}
 \end{equation*}
 </div>
-<p>Thus <span class="process-math">\(AB\)</span> is the the <span class="process-math">\(5\times 4\)</span> matrix, all of whose rows are <span class="process-math">\(\begin{bmatrix}2\amp 2\amp -1\amp 4 \end{bmatrix}\text{.}\)</span></p>
 </div>
-<span class="incontext"><a href="s_matrix.html#solution-20">in-context</a></span>
+<span class="incontext"><a href="s_ge.html#solution-20" class="internal">in-context</a></span>
 </body>
 </html>

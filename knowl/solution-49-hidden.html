@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-07T16:16:12Z       *-->
+<!--*       on 2022-07-22T11:48:35-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,11 +13,58 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like">
-<article class="case"><h5 class="heading">
-<span class="process-math">\((a=1\implies S \text{ not a basis})\)</span>.</h5>
-<p>Suppose <span class="process-math">\(a=1\text{.}\)</span> Since <span class="process-math">\(1=\boldzero\in V\text{,}\)</span> we have <span class="process-math">\(S=\{\boldzero\}\text{.}\)</span> Any set containing the zero vector is linearly dependent (<a href="" class="xref" data-knowl="./knowl/rm_linear_independence.html" title="Remark 4.4.9">Remark 4.4.9</a>). Thus <span class="process-math">\(S\)</span> is not a basis.</p></article><article class="case"><h5 class="heading">
-<span class="process-math">\((a\ne 1 \implies S \text{ is a basis})\)</span>.</h5>
-<p>Since <span class="process-math">\(S=\{\boldv\}\)</span> consists of one nonzero element, it is linearly independent (<a href="" class="xref" data-knowl="./knowl/rm_linear_independence.html" title="Remark 4.4.9">Remark 4.4.9</a>). It remains only to show that <span class="process-math">\(S\)</span> spans <span class="process-math">\(\R_{&gt;0}\text{,}\)</span> which amounts to showing that every <span class="process-math">\(b\in \R_{&gt;0}\)</span> is a scalar multiple of <span class="process-math">\(\boldv=a\text{.}\)</span> Since by definition scalar multiplication in <span class="process-math">\(\R_{&gt;0}\)</span> is defined as <span class="process-math">\(c\boldv=a^c\text{,}\)</span> this is equivalent to showing that every <span class="process-math">\(b\in \R_{&gt;0}\)</span> can be written in the form <span class="process-math">\(b=a^c\text{.}\)</span> This fact is a familiar result from calculus, where you learn that the range (or image) of any exponential function <span class="process-math">\(f(x)=a^x\)</span> is the set of all positive real numbers.</p></article>
-</div></body>
+<body class="ignore-math"><div class="solution solution-like"><ol class="decimal">
+<li>
+<p>We have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a(1,1,2)+b(1,0,1)+c(-2,1,-1)=(0,0,0)
+\end{equation*}
+</div>
+<p class="continuation">if and only if</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{linsys}{3}
+a \amp +\amp b\amp -\amp 2c\amp =0\\
+a \amp \amp \amp +\amp c\amp =0\\
+2a \amp +\amp b\amp -\amp c\amp =0\\
+\end{linsys}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">After a little Gaussian elimination we see that <span class="process-math">\((a,b,c)=(1,-3,-1)\)</span> is a nonzero solution to this system, and thus that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(1,1,2)-3(1,0,1)-(-2,1,-1)=(0,0,0)
+\end{equation*}
+</div>
+<p class="continuation">Since there is a nontrivial linear combination of elements of <span class="process-math">\(S\)</span> yielding the zero vector, we conclude <span class="process-math">\(S\)</span> is linearly dependent.</p>
+</li>
+<li>
+<p>Recall that the zero vector of <span class="process-math">\(P_2\)</span> is the zero polynomial <span class="process-math">\(\boldzero=0x^2+0x+0\text{.}\)</span> We have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/rm_polynomial_equality.html">
+\begin{align*}
+a(x^2+x-2)+b(2x^2+1)+c(x^2-x)=\boldzero \amp \iff
+(a+2b+c)x^2+(a-c)x+(-2a+b)=0x^2+0x+0 \\
+\amp \\
+\amp \iff
+\begin{linsys}{3} a\amp +\amp 2b\amp +\amp c\amp =\amp 0\\ a\amp \amp \amp -\amp c\amp =\amp 0\\ -2a\amp +\amp b \amp \amp  \amp =\amp 0 \end{linsys}
+\amp (\knowl{./knowl/rm_polynomial_equality.html}{\text{Remark 3.3.22}})\text{.}
+\end{align*}
+</div>
+<p class="continuation">Gaussian elimination shows that <span class="process-math">\((a,b,c)=(0,0,0)\)</span> is the unique solution to this last system. We conclude that <span class="process-math">\(S\)</span> is linearly independent.</p>
+</li>
+<li>
+<p>We have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+a\begin{bmatrix}3\amp 1\\ 2\amp -3 \end{bmatrix} +b\begin{bmatrix}0\amp 4\\ 2\amp 0 \end{bmatrix} +c\begin{bmatrix}-2\amp -2\\ -2\amp 2 \end{bmatrix}= \begin{bmatrix}0\amp 0\\0\amp 0 \end{bmatrix}
+\amp \iff
+\begin{bmatrix}3a-2c\amp a+4b-2c\\ 2a+2b-2c\amp -3a+2c \end{bmatrix}=\begin{bmatrix}0\amp 0\\0\amp 0 \end{bmatrix}\\
+\amp \\
+\amp \iff \begin{linsys}{3} 3a\amp \amp \amp -\amp 2c\amp =\amp 0\\ a\amp +\amp 4b\amp -\amp 2c\amp =\amp 0\\ 2a\amp +\amp 2b \amp -\amp 2c \amp =\amp 0\\ -3a\amp \amp \amp +\amp 2c\amp =\amp 0 \end{linsys} \text{.}
+\end{align*}
+</div>
+<p class="continuation">Row reduction reveals that this last linear system has a free variable, and hence that there are infinitely many solutions to this system: e.g., <span class="process-math">\((a,b,c)=(2,1,3)\text{.}\)</span> We conclude that <span class="process-math">\(S\)</span> is linearly dependent.</p>
+</li>
+</ol></div></body>
 </html>

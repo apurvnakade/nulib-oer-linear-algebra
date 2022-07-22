@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-07T16:15:55Z       *-->
+<!--*       on 2022-07-22T11:48:30-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,18 +15,25 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(n\times n\)</span> matrix. Using the notation from <a href="" class="xref" data-knowl="./knowl/d_elementary_matrix.html" title="Definition 3.4.1">Definition 3.4.1</a> we have:</p>
-<ol class="decimal">
-<li><p><span class="process-math">\(\displaystyle \det(\underset{c\cdot r_i}{E}\, A)=c\det(A)\)</span></p></li>
-<li><p><span class="process-math">\(\displaystyle \det(\underset{r_i\leftrightarrow r_j}{E}\, A)=-\det(A)\)</span></p></li>
-<li><p><span class="process-math">\(\det(\underset{r_i+cr_j}{E}\, A)=\det(A)\text{.}\)</span></p></li>
-</ol>
-<p class="continuation">In particular, taking <span class="process-math">\(A=I\text{,}\)</span> we have</p>
-<div class="displaymath process-math">
-\begin{align*}
-\det\underset{c\cdot r_i}{E}\amp =c \amp \det\underset{r_i\leftrightarrow r_j}{E}\amp =-1 \amp \det \underset{r_i+cr_j}{E}\amp =1  \text{.}
-\end{align*}
+<p>From the proof of <a href="" class="xref" data-knowl="./knowl/th_invertibility.html" title="Theorem 2.4.5: Invertibility theorem">Theorem 2.4.5</a> we know <span class="process-math">\(A\)</span> is invertible if and only if <span class="process-math">\(U\)</span> has <span class="process-math">\(n\)</span> leading ones. The question remains as to why reducing the augmented matrix <span class="process-math">\(\begin{amatrix}[c|c]A\amp I\end{amatrix}\)</span>  to <span class="process-math">\(\begin{amatrix}[c|c]I\amp C\end{amatrix}\)</span> tells us that <span class="process-math">\(A^{-1}=C\text{.}\)</span> Let <span class="process-math">\(E_1, E_2, \dots, E_r\)</span> be the elementary matrices representing the row operations involved in this process. Then we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_invertibility.html">
+\begin{equation*}
+E_rE_{r-1}\cdots E_1A=I_n\text{.}
+\end{equation*}
 </div>
-<span class="incontext"><a href="s_det.html#p-839">in-context</a></span>
+<p class="continuation">After a little algebra, we see that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_invertibility.html">
+\begin{equation*}
+A^{-1}=E_rE_{r-1}\cdots E_1\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since <span class="process-math">\(C\)</span> is the result of applying same row operations to <span class="process-math">\(I_n\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_invertibility.html">
+\begin{equation*}
+C=E_rE_{r-1}\cdots E_1I=E_rE_{r-1}\cdots E_1=A^{-1}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">as claimed.</p>
+<span class="incontext"><a href="s_invertibility_theorem.html#p-839" class="internal">in-context</a></span>
 </body>
 </html>

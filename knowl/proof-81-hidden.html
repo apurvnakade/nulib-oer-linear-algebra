@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-07T16:16:26Z       *-->
+<!--*       on 2022-07-22T11:48:41-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,6 +13,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><p>(i) Using the dot product method of matrix multiplication, we see that a vector <span class="process-math">\(\boldv\in\NS(A)\)</span> if and only if <span class="process-math">\(\boldv\cdot\boldr_i=0\)</span> for each row <span class="process-math">\(\boldr_i\)</span> of <span class="process-math">\(A\text{.}\)</span> Since the <span class="process-math">\(\boldr_i\)</span> span <span class="process-math">\(\RS(A)\text{,}\)</span> the linear properties of the dot product imply that <span class="process-math">\(\boldv\cdot\boldr_i=0\)</span> for each row <span class="process-math">\(\boldr_i\)</span> of <span class="process-math">\(A\)</span> if and only if <span class="process-math">\(\boldv\cdot\boldw=0\)</span> for <em class="emphasis">all</em> <span class="process-math">\(\boldw\in\RS(A)\)</span> if and only if <span class="process-math">\(\boldv\in \RS(A)^\perp\text{.}\)</span></p>
-<p>(ii) This follows from (i) and the fact that <span class="process-math">\(\CS(A)=\RS(A^T)\text{.}\)</span></p></article></body>
+<body class="ignore-math"><article class="hiddenproof"><ol class="decimal">
+<li>
+<p>Using the dot product method of matrix multiplication, we see that a vector <span class="process-math">\(\boldx\in\NS(A)\)</span> if and only if <span class="process-math">\(\boldx\cdot\boldr_i=0\)</span> for each row <span class="process-math">\(\boldr_i\)</span> of <span class="process-math">\(A\text{,}\)</span> if and only if <span class="process-math">\(\boldx\cdot \boldw=0\)</span> for all <span class="process-math">\(\boldw\in \Span \{\boldr_1, \boldr_2, \dots, \boldr_m\}=\RS A\)</span> (see <a href="" class="xref" data-knowl="./knowl/rm_computing_ortho_comp.html" title="Remark 4.3.2: Computing W^\perp">Remark 4.3.2</a>), if and only if <span class="process-math">\(\boldx\in (\RS A)^\perp\text{.}\)</span> This shows <span class="process-math">\(\NS A=(\RS A)^\perp\text{.}\)</span></p>
+<p>We can use <a href="" class="xref" data-knowl="./knowl/cor_orthocomp_selfdual.html" title="Corollary 4.3.13">Corollary 4.3.13</a> to conclude <span class="process-math">\(\RS A=(\NS A)^\perp\text{.}\)</span> Alternatively, and more directly, the argument above shows that <span class="process-math">\(\boldw\in \RS A\implies \boldw\in (\NS A)^\perp\text{,}\)</span> proving <span class="process-math">\(\RS A\subseteq (\NS A)^\perp\text{.}\)</span> Next, by the rank-nullity theorem we have <span class="process-math">\(\dim \RS A=n-\dim\NS A\text{;}\)</span> and by <a href="" class="xref" data-knowl="./knowl/th_orthogonal_complement.html" title="Theorem 4.3.5: Orthogonal complement">Theorem 4.3.5</a> we have <span class="process-math">\(\dim (\NS A)^\perp=n-\dim\NS A\text{.}\)</span> It follows that <span class="process-math">\(\dim\RS A=\dim (\NS A)^\perp\text{.}\)</span> Since <span class="process-math">\(\RS A\subseteq (\NS A)^\perp\)</span> and <span class="process-math">\(\dim \RS A=\dim (\NS A)^\perp\text{,}\)</span> we conclude by <a href="" class="xref" data-knowl="./knowl/cor_dimension_subspace.html" title="Corollary 3.7.10: Dimension of subspaces">Corollary 3.7.10</a> that <span class="process-math">\(\RS A=(\NS A)^\perp\text{.}\)</span></p>
+</li>
+<li><p>This follows from (1) and the fact that <span class="process-math">\(\CS(A)=\RS(A^T)\text{.}\)</span></p></li>
+</ol></article></body>
 </html>

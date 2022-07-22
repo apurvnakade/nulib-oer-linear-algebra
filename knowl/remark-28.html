@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-07T16:15:48Z       *-->
+<!--*       on 2022-07-22T11:48:29-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,18 +14,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="remark remark-like"><h4 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.3.8</span><span class="period">.</span>
-</h4>
-<p>Whenever confronted with a logical implication of the form <span class="process-math">\(\mathcal{P}\implies\mathcal{Q}\text{,}\)</span> where <span class="process-math">\(\mathcal{P}\)</span> and <span class="process-math">\(\mathcal{Q}\)</span> denote arbitrary propositions, you should always ask whether the implication “goes the other way”. In other words, does the reverse implication  <span class="process-math">\(\mathcal{Q}\implies \mathcal{P} \)</span> also hold?</p>
-<p>The answer with regard to the implication <a href="" class="xref" data-knowl="./knowl/eq_inv_implies_prod.html" title="Equation 3.3.1">(3.3.1)</a> is yes, though the proof of this is more difficult then you think. (See <a href="" class="xref" data-knowl="./knowl/cor_inv_prod_eq.html" title="Corollary 3.4.12: Invertibility of product equivalence">Corollary 3.4.12</a>.)</p>
-<p>The following argument is a common <em class="emphasis">invalid</em> proof of the reverse implication:</p>
-<ol class="decimal">
-<li><p>Assume <span class="process-math">\(AB\)</span> is invertible.</p></li>
-<li><p>Then <span class="process-math">\(AB\)</span> is invertible.</p></li>
-<li><p>Then the inverse of <span class="process-math">\(AB\)</span> is <span class="process-math">\(B^{-1}A^{-1}\text{.}\)</span></p></li>
-<li><p>Then <span class="process-math">\(A^{-1}\)</span> and <span class="process-math">\(B^{-1}\)</span> exist. Hence <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are invertible.</p></li>
-</ol>
-<p class="continuation">Where is the flaw in our logic here? The second statement only allows us to conclude that there is some mystery matrix <span class="process-math">\(C\)</span> satisfying <span class="process-math">\((AB)C=C(AB)=I\text{.}\)</span> We cannot yet say that <span class="process-math">\(C=B^{-1}A^{-1}\text{,}\)</span> as this formula from <a href="" class="xref" data-knowl="./knowl/th_invertible_prod.html" title="Theorem 3.3.6: Invertibility of products">Theorem 3.3.6</a> only applies when we already know that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are both invertible. But this is exactly what we are trying to prove! As such we are guilty here of “begging the question”, or <i class="foreign">petitio principii</i> in Latin.</p></article><span class="incontext"><a href="s_invertible_matrices.html#remark-28">in-context</a></span>
+<article class="remark remark-like"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span>
+</h3>
+<p>The algebraic importance of <a href="" class="xref" data-knowl="./knowl/c_matrix_additive_canc.html" title="Corollary 2.2.5: Additive cancellation of matrices">Corollary 2.2.5</a> is that we can perform <em class="emphasis">additive cancellation</em>  in matrix equations just as we do in real number algebra. For example, we can solve the matrix equation <span class="process-math">\(A+B=3A\)</span> for <span class="process-math">\(B\)</span> as follows:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/c_matrix_additive_canc.html ./knowl/c_matrix_additive_canc.html">
+\begin{align*}
+A+B\amp = 3A\\
+A+B\amp = (1+2)A\\
+A+B\amp = A+2A\\
+B\amp = 2A \amp (\knowl{./knowl/c_matrix_additive_canc.html}{\text{Corollary 2.2.5}})\text{.}
+\end{align*}
+</div></article><span class="incontext"><a href="s_algebraic.html#remark-28" class="internal">in-context</a></span>
 </body>
 </html>

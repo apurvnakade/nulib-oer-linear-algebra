@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-07T16:16:33Z       *-->
+<!--*       on 2022-07-22T11:48:42-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,32 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>Compute the distinct real eigenvalues <span class="process-math">\(\lambda_1, \lambda_2, \dots, \lambda_r\)</span> of <span class="process-math">\(A\)</span> as well as bases for their corresponding eigenspaces.</p>
-<span class="incontext"><a href="ss_diagonalization.html#p-2154">in-context</a></span>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>Any plane <span class="process-math">\(W\subseteq\R^3\)</span> passing through the origin can be described as <span class="process-math">\(W=\{(x,y,z)\in \R^3\colon ax+by+cz=0\}\text{.}\)</span> Equivalently, <span class="process-math">\(W\)</span> is the set of all <span class="process-math">\(\boldx\in \R^3\)</span> satisfying <span class="process-math">\(\boldx\cdot (a,b,c)=0\text{:}\)</span> i.e., <span class="process-math">\(W=\ell^\perp\text{,}\)</span> where <span class="process-math">\(\ell=\Span\{(a,b,c)\text{.}\)</span> Consider the orthogonal decomposition with respect to <span class="process-math">\(\ell\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_projection_line.html">
+\begin{equation*}
+\boldx=\proj{\boldx}{\ell}+(\boldx-\proj{\boldx}{\ell})\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since <span class="process-math">\(\boldx-\proj{\boldx}{\ell}\in \ell^\perp=W\)</span> and <span class="process-math">\(\proj{\boldx}{\ell}\in \ell=W^\perp\text{,}\)</span> we see that this is also an orthogonal decomposition with respect to <span class="process-math">\(W\text{!}\)</span> Using the matrix formula for <span class="process-math">\(\operatorname{proj}_\ell\)</span> from <a href="" class="xref" data-knowl="./knowl/eg_projection_line.html" title="Example 4.3.15: Projection onto a line \ell\subseteq \R^3">Example 4.3.15</a>, we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_projection_line.html">
+\begin{align*}
+\proj{\boldx}{W} \amp =\boldx-\proj{\boldx}{\ell} \\
+\amp = I\boldx -  A\boldx\amp \left(A=\frac{1}{a^2+b^2+c}\begin{bmatrix}
+a^2\amp ab\amp ac\\
+ab\amp b^2\amp bc\\
+ac\amp bc\amp c^2
+\end{bmatrix}\right)\\
+\amp = (I-A)\boldx\\
+\amp = \frac{1}{a^2+b^2+c^2}\begin{bmatrix}b^2+c^2\amp -ab\amp -ac\\ -ab\amp a^2+c^2\amp -bc\\ -ac\amp -bc\amp a^2+b^2 \end{bmatrix}\text{.}
+\end{align*}
+</div>
+<p class="continuation">We conclude that <span class="process-math">\(\operatorname{proj}_W=T_B\text{,}\)</span> where</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_projection_line.html">
+\begin{equation*}
+B=\frac{1}{a^2+b^2+c^2}\begin{bmatrix}b^2+c^2\amp -ab\amp -ac\\ -ab\amp a^2+c^2\amp -bc\\ -ac\amp -bc\amp a^2+b^2 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="s_orthogonal_projection.html#p-2154" class="internal">in-context</a></span>
 </body>
 </html>

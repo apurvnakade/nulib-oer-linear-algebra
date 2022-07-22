@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-07T16:16:00Z       *-->
+<!--*       on 2022-07-22T11:48:32-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,23 +15,15 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<p>We prove (1), leaving (2)-(4) as an exercise.</p>
-<p>First observe that <span class="process-math">\(0\boldv=(0+0)\boldv\text{,}\)</span> since <span class="process-math">\(0=0+0\text{.}\)</span></p>
-<p>By Axiom (vi) we have <span class="process-math">\((0+0)\boldv=0\boldv+0\boldv\text{.}\)</span> Thus <span class="process-math">\(0\boldv=0\boldv+0\boldv\text{.}\)</span></p>
-<p>Now add <span class="process-math">\(-0\boldv\text{,}\)</span> the vector inverse of <span class="process-math">\(0\boldv\text{,}\)</span> to both sides of the last equation:</p>
-<div class="displaymath process-math">
-\begin{equation*}
--0\boldv+0\boldv=-0\boldv+(0\boldv+0\boldv)\text{.}
-\end{equation*}
-</div>
-<p>Now simplify this equation step by step using the axioms:</p>
-<div class="displaymath process-math">
+<p>We use the one-step technique. For any <span class="process-math">\(c,d\in \R\)</span> and <span class="process-math">\(\boldx_1, \boldx_2\in \R^n\text{,}\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_matrix_alg_props.html ./knowl/th_matrix_alg_props.html">
 \begin{align*}
--0\boldv+0\boldv=-0\boldv+(0\boldv+0\boldv)\amp\implies
-\boldzero=(-0\boldv+0\boldv)+0\boldv \amp (\text{Axiom (iv) and Axiom (ii)}) \\
-\amp\implies \boldzero=\boldzero+0\boldv \amp (\text{(Axiom (iv))})\\
-\amp\implies \boldzero=0\boldv \text{.}
+T_A(c\boldx_1+d\boldx_2) \amp =A(c\boldx_1+d\boldx_2)\\
+\amp =A(c\boldx_1)+A(d\boldx_2) \amp (\knowl{./knowl/th_matrix_alg_props.html}{\text{Theorem 2.2.1}}) \\
+\amp =cA\boldx_1+dA\boldx_2 \amp (\knowl{./knowl/th_matrix_alg_props.html}{\text{Theorem 2.2.1}})\\
+\amp =cT_A(\boldx_1)+dT_A(\boldx_2)\text{.}
 \end{align*}
-</div></article><span class="incontext"><a href="s_vectorspace.html#proof-43">in-context</a></span>
+</div>
+<p class="continuation">This proves <span class="process-math">\(T_A\)</span> is a linear transformation.</p></article><span class="incontext"><a href="s_transformation.html#proof-43" class="internal">in-context</a></span>
 </body>
 </html>

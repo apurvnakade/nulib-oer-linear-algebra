@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-07T16:16:12Z       *-->
+<!--*       on 2022-07-22T11:48:35-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,46 +13,62 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><ol class="decimal"><li>
-<p>Take an arbitrary element <span class="process-math">\(ax+b\in P_1\)</span> and consider the polynomial equation</p>
-<div class="displaymath process-math">
+<body class="ignore-math"><div class="solution solution-like"><ol class="decimal">
+<li>
+<p>We claim <span class="process-math">\(S\)</span> is linearly independent. If</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-c_1p(x)+c_2q(x)=ax+b
+c_1f+c_2g+c_3h=\boldzero\text{,}
 \end{equation*}
 </div>
-<p class="continuation">The usual remark about polynomial equality implies that this is equivalent to the matrix equation</p>
-<div class="displaymath process-math">
+<p class="continuation">then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-\begin{bmatrix}
-2\amp 1\\ 1\amp 1
-\end{bmatrix}
-\begin{bmatrix}
-c_1 \\ c_2
-\end{bmatrix}
-=
-\begin{bmatrix}
-a\\ b
-\end{bmatrix}
-=\boldy\text{.}
+c_1x+c_2\cos x+c_3\sin x=0\text{,}
 \end{equation*}
 </div>
-<p class="continuation">The matrix on the left is invertible, allowing us to solve</p>
-<div class="displaymath process-math">
+<p class="continuation">for all <span class="process-math">\(x\in (-2\pi, 2\pi)\text{.}\)</span> In particular, the equality is true when evaluated at <span class="process-math">\(x=0, \pi/2, \pi\text{,}\)</span> yielding the following linear system:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-\begin{bmatrix}
-c_1 \\ c_2
-\end{bmatrix}
-=\begin{bmatrix}
-1\amp -1\\ -1\amp 2
-\end{bmatrix}
-\begin{bmatrix}
-a\\ b
-\end{bmatrix}
-=\begin{bmatrix}
-a-b\\ -a+2b
-\end{bmatrix}\text{.}
+\begin{linsys}{4}
+x=0 \colon \amp \amp 0c_1\amp +\amp \cos(0)c_2\amp +\amp \sin(0) c_3\amp= \amp 0\\
+x=\pi/2 \colon \amp \amp (\pi/2)c_1\amp +\amp \cos(\pi/2)c_2\amp +\amp \sin(\pi/2)c_3 \amp = \amp 0\\
+x=\pi \colon \amp  \amp \pi c_1\amp +\amp \cos(\pi)c_2\amp +\amp \sin(\pi)c_3 \amp= \amp 0
+\end{linsys}\text{,}
 \end{equation*}
 </div>
-<p class="continuation">We conclude that any <span class="process-math">\(ax+b\in P_1\)</span> can be written as <span class="process-math">\(c_1p+c_2q\)</span> in a unique way: namely, with <span class="process-math">\(c_1=a-b\)</span> and <span class="process-math">\(c_2=-a+2b\text{.}\)</span> Thus <span class="process-math">\(S\)</span> is a basis.</p>
-</li></ol></div></body>
+<p class="continuation">or</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{linsys}{4}
+x=0 \colon  \amp \amp \amp \amp c_2\amp \amp \amp = \amp 0\\
+x=\pi/2 \colon \amp  \amp (\pi/2)c_1\amp +\amp \amp +\amp c_3 \amp = \amp 0\\
+x=\pi \colon \amp  \amp \pi c_1\amp - \amp c_2 \amp \amp  \amp= \amp 0
+\end{linsys}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This system can be now be solved essentially by inspection: the first equation implies <span class="process-math">\(c_2=0\text{;}\)</span> setting <span class="process-math">\(c_2=0\text{,}\)</span> in the third equation, we conclude <span class="process-math">\(c_1=0\text{;}\)</span> the second equation now implies <span class="process-math">\(c_3=0\text{.}\)</span> We conclude that <span class="process-math">\(c_1=c_2=c_3=0\text{.}\)</span> Thus the only linear combination of <span class="process-math">\(f, g, h\)</span> yielding the zero function is the trivial one, showing that <span class="process-math">\(S\)</span> is linearly independent.</p>
+</li>
+<li>
+<p>We claim <span class="process-math">\(S\)</span> is linearly dependent. As discussed in <a href="" class="xref" data-knowl="./knowl/proc_linear_independence_functions.html" title="Procedure 3.5.16: Investigating linear independence of functions">Procedure 3.5.16</a>, to prove this we have to produce an identity involving these functions. The double-angle formula from trigonometry tells us that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_linear_independence_functions.html">
+\begin{equation*}
+\cos 2x=\cos^2 x-\sin^2x=2\cos^2x+1
+\end{equation*}
+</div>
+<p class="continuation">for all <span class="process-math">\(x\in (-2\pi, 2\pi)\)</span> (in fact for all <span class="process-math">\(x\in \R\)</span>). It follows that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_linear_independence_functions.html">
+\begin{equation*}
+1-\cos 2x+2\cos^2x=0
+\end{equation*}
+</div>
+<p class="continuation">for all <span class="process-math">\(x\in (-2\pi, 2\pi)\text{,}\)</span> or</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_linear_independence_functions.html">
+\begin{equation*}
+f-g+2h=\boldzero\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since we have found a nontrivial linear combination of elements of <span class="process-math">\(S\)</span> yielding the zero vector, we conclude that <span class="process-math">\(S\)</span> is linearly dependent.</p>
+</li>
+</ol></div></body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-07T16:16:30Z       *-->
+<!--*       on 2022-07-22T11:48:43-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,59 +13,67 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><p>We must prove two things: (1) the matrix <span class="process-math">\(A=[T]_{B}^{B'}\)</span> satisfies <a href="" class="xref" data-knowl="./knowl/eq_matrixrep_prop.html" title="Equation 6.2.1">(6.2.1)</a>; (2) if <span class="process-math">\(A\)</span> satisfies <span class="process-math">\(A[\boldv]_B=[T(\boldv)]_{B}\)</span> for all <span class="process-math">\(\boldv\in V\text{,}\)</span> then <span class="process-math">\(A=[T]_{B}^{B'}\text{.}\)</span></p>
-<p>Assume we have <span class="process-math">\(B=(\boldv_1, \boldv_2, \dots, \boldv_n)\text{.}\)</span></p>
-<ol class="decimal">
+<body class="ignore-math"><article class="hiddenproof"><ol class="decimal">
 <li>
-<p>By definition we have</p>
-<div class="displaymath process-math">
-\begin{equation*}
-[T]_B^{B'}=\begin{amatrix}[cccc]\vert \amp \vert \amp \amp \vert \\
-\left[T(\boldv_1)\right]_{B'}\amp [T(\boldv_2)]_{B'}\amp \dots \amp [T(\boldv_n)]_{B'} \\
-\vert \amp \vert \amp  \amp \vert
-\end{amatrix}\text{.}
-\end{equation*}
-</div>
-<p class="continuation">Given any <span class="process-math">\(\boldv\in V\text{,}\)</span> we can write</p>
-<div class="displaymath process-math">
-\begin{equation*}
-\boldv=c_1\boldv_1+c_2\boldv_2+\dots +c_n\boldv_n
-\end{equation*}
-</div>
-<p class="continuation">for some <span class="process-math">\(c_i\in \R\text{.}\)</span> Then</p>
-<div class="displaymath process-math">
+<p>Suppose <span class="process-math">\(T(\boldv)=[\boldv]_B=(a_1,a_2,\dots, a_n), T(\boldw)=[\boldw]_B=(b_1, b_2, \dots, b_n)\text{.}\)</span> By definition this means</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
-[T]_{B}^{B'}[\boldv] \amp= [T]_{B}^{B'} \begin{bmatrix}
-c_1\\ c_2\\ \vdots \\ v_n
-\end{bmatrix} \\
-\amp=c_1[T(\boldv_1)]_{B'}+c_n[T(\boldv_n)]_{B'}+\cdots +c_n[T(\boldv_n)]_{B'} \amp (\text{column method})\\
-\amp = [c_1T(\boldv_1)+c_2T(\boldv_2)+\cdots +c_nT(\boldv_n)]_{B'} \amp (\knowl{./knowl/th_coordinates.html}{\text{6.1.9}})\\
-\amp=[T(c_1\boldv_1+c_2\boldv_2+\cdots +c_n\boldv_n)]_{B'} \amp (T \text{ is linear})\\
-\amp =[T(\boldv)]_{B'}\text{,}
+\boldv \amp =\sum_{i=1}^na_i\boldv_i,  \amp \boldw\amp =\sum_{i=1}^nb_i\boldv_i\text{.}
 \end{align*}
 </div>
-<p class="continuation">as desired.</p>
+<p class="continuation">It follows that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+c\boldv+d\boldw=\sum_{i=1}^n(ca_i+db_i)\boldv_i\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and hence</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+T(c\boldv+d\boldw)\amp =[c\boldv+d\boldw]_B \amp (\text{def. of } [\phantom{\boldv}]_B) \\
+\amp =(ca_1+db_1,ca_2+db_2,\dots, ca_n+db_n) \\
+\amp =c(a_1,a_2,\dots, a_n)+d(b_1,b_2,\dots, b_n)\\
+\amp =c[\boldv]_B+d[\boldw]_B\\
+\amp =cT(\boldv)+dT(\boldw) \text{.}
+\end{align*}
+</div>
+<p class="continuation">This proves <span class="process-math">\(T\)</span> is linear.</p>
 </li>
 <li>
-<p>Assume <span class="process-math">\(A\)</span> satisfies</p>
-<div class="displaymath process-math">
+<p>Clearly, if <span class="process-math">\(\boldv=\boldw\text{,}\)</span> then <span class="process-math">\([\boldv]_B=[\boldw]_B\text{.}\)</span> If <span class="process-math">\(T(\boldv)=T(\boldw)=(c_1,c_2,\dots, c_n)\text{,}\)</span> then by definition of <span class="process-math">\([\phantom{\boldv}]_B\)</span> we must have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-A[\boldv]_B=[T(\boldv)]_{B'}
+\boldv=c_1\boldv_1+c_2\boldv_2+\cdots +c_n\boldv_n==\boldw\text{.}
 \end{equation*}
 </div>
-<p class="continuation">for all <span class="process-math">\(\boldv\in V\text{.}\)</span> Then in particular we have</p>
-<div class="displaymath process-math">
-\begin{equation}
-A[\boldv_i]_B=[T(\boldv_i)]_{B'}\tag{6.2.2}
-\end{equation}
-</div>
-<p class="continuation">for all <span class="process-math">\(1\leq i\leq n\text{.}\)</span> Since <span class="process-math">\(\boldv_i\)</span> is the <span class="process-math">\(i\)</span>-th element of <span class="process-math">\(B\text{,}\)</span> we have <span class="process-math">\([\boldv_i]_B=\bolde_i\text{,}\)</span> the <span class="process-math">\(i\)</span>-th standard basis element of <span class="process-math">\(\R^n\text{.}\)</span> Using the column method (<a href="" class="xref" data-knowl="./knowl/th_column_method.html" title="Theorem 3.1.19: Column method of matrix multiplication">3.1.19</a>), we see that</p>
-<div class="displaymath process-math">
+</li>
+<li>
+<p>Given any <span class="process-math">\(\boldb=(b_1,b_2,\dots, b_n)\in \R^n\text{,}\)</span> we have <span class="process-math">\(\boldb=T(\boldv)\text{,}\)</span> where</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-A[\boldv_i]_B=A\bolde_i=\boldc_i,
+\boldv=b_1\boldv_1+b_2\boldv_2+\cdots +b_n\boldv_n\text{.}
 \end{equation*}
 </div>
-<p class="continuation">where <span class="process-math">\(\boldc_i\)</span> is the <span class="process-math">\(i\)</span>-th column of <span class="process-math">\(A\text{.}\)</span> Thus <a href="" class="xref" data-knowl="./knowl/eq_matrixrep_proof.html" title="Equation 6.2.2">(6.2.2)</a> implies that the <span class="process-math">\(i\)</span>-th column of <span class="process-math">\(A\)</span> is equal to <span class="process-math">\([T(\boldv_i)]_{B}\text{,}\)</span> the <span class="process-math">\(i\)</span>-th column of <span class="process-math">\([T]_B^{B'}\text{,}\)</span> for all <span class="process-math">\(1\leq i\leq n\text{.}\)</span> Since <span class="process-math">\(A\)</span> and <span class="process-math">\([T]_{B}^{B'}\)</span> have identical columns, we conclude that <span class="process-math">\(A=[T]_{B}^{B'}\text{,}\)</span> as desired.</p>
+<p class="continuation">This proves <span class="process-math">\(\im T=\R^n\text{.}\)</span></p>
+</li>
+<li>
+<p>We have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\boldv\in \Span S \amp \iff \boldv=\sum_{i=1}^rc_i\boldv_i\\
+\amp\iff [\boldv]_{B}=\left[ \sum_{i=1}^rc_i\boldv_i\right] \\
+\amp \iff [\boldv]_B=\sum_{i=1}^rc_i[\boldv_i]_B\amp ([\phantom{\boldv}]_B \text{ is linear})\\
+\amp \iff [\boldv]_B\in \Span S'\text{.}
+\end{align*}
+</div>
+<p>Similarly, we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\sum_{i=1}^rc_i\boldv_i=\boldzero \amp \iff \left[\sum_{i=1}^rc_i\boldv_i\right]_B=[\boldzero]_B \amp (\boldv=\boldw\iff [\boldv]_B=[\boldw]_B) \\
+\amp\iff \sum_{i=1}^rc_i[\boldv_i]_B=(0,0,\dots, 0) \amp ([\phantom{\boldv}]_B \text{ is linear}) \text{.}
+\end{align*}
+</div>
+<p class="continuation">From this equivalence we see that there is a nontrivial linear combination of <span class="process-math">\(S\)</span> yielding <span class="process-math">\(\boldzero\in V\)</span> if and only if there is a nontrivial linear combination of <span class="process-math">\(S'\)</span> yielding <span class="process-math">\(\boldzero\in \R^n\text{.}\)</span> In other words, <span class="process-math">\(S\)</span> is linearly independent if and only if <span class="process-math">\(S'\)</span> is linearly independent.</p>
 </li>
 </ol></article></body>
 </html>

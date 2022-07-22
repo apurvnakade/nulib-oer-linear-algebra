@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-22T11:48:51-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
+<p>Statement (1) follows by taking <span class="process-math">\(Q=P^{-1}\text{.}\)</span></p>
+<p>Let <span class="process-math">\(p_A(t)\)</span> and <span class="process-math">\(p_{A'}(t)\)</span> be the characteristic polynomials of <span class="process-math">\(A\)</span> and <span class="process-math">\(A'\text{,}\)</span> repsectively. We have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_det_mult.html">
+\begin{align*}
+p_{A'}(t)\amp =\det(tI-A')\\
+\amp =\det(tI-P^{-1}AP) \amp (A'=P^{-1}AP)\\
+\amp = \det(P^{-1}tIP-P^{-1}AP) \amp (\text{algebra}) \\
+\amp = \det(P^{-1}(tI-A)P) \amp (\text{left/right dist.}) \\
+\amp = \det(P^{-1})\det(tI-A)\det(P) \amp (\knowl{./knowl/th_det_mult.html}{\text{2.5.26}}) \\
+\amp = (\det(P))^{-1}\det(P)\det(tI-A)  \\
+\amp = \det(tI-A)=p_A(t)\text{.}
+\end{align*}
+</div>
+<p class="continuation">This proves statement (2).</p>
+<p>Statement (3) follows from (2) since the eigenvalues of a matrix are the real roots of its characteristic polynomial. Furthermore, by <a href="" class="xref" data-knowl="./knowl/th_characteristic_polynomial.html" title="Theorem 5.4.25: Characteristic polynomial">Theorem 5.4.25</a> the trace and determinant of a matrix are equal to the sum and product of the roots of its characteristic polynomial. Thus (4) also follows from (2).</p>
+<p>The proofs of statements (5)-(6) are left as exercises.</p></article><span class="incontext"><a href="s_diagonalization.html#proof-115" class="internal">in-context</a></span>
+</body>
+</html>
