@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-22T11:48:51-07:00       *-->
+<!--*       on 2022-07-22T12:32:22-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,23 +14,26 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<p>The eigenvalues of <span class="process-math">\(A\)</span> are <span class="process-math">\(1\)</span> and <span class="process-math">\(-1\text{,}\)</span> and each has algebraic multiplicity <span class="process-math">\(2\text{.}\)</span> Thus <span class="process-math">\(1\leq\dim W_1, \dim W_{-1}\leq 2\text{,}\)</span> and <span class="process-math">\(A\)</span> is diagonalizable if and only if</p>
+<p>First we factor <span class="process-math">\(p(x)\text{.}\)</span> Looking at the constant term we see that the only possible integer roots of <span class="process-math">\(p(x)\)</span> are <span class="process-math">\(\pm 1\text{.}\)</span> It is easily verified that <span class="process-math">\(p(1)=0\text{,}\)</span> and  polynomial division yields the factorization <span class="process-math">\(p(x)=(x-1)(x^2+2x+1)\text{.}\)</span>  Further factorization of <span class="process-math">\(x^2+2x+1\)</span> gives us  <span class="process-math">\(p(x)=(x-1)(x+1)^2\text{.}\)</span></p>
+<p>Next we compute <em class="emphasis">orthonormal</em> bases of the eigenspaces <span class="process-math">\(W_1\)</span> and <span class="process-math">\(W_{-1}\text{,}\)</span> yielding</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+B_1\amp=\left(\frac{1}{\sqrt{3}}(1,1,1)\right) \amp B_{2}\amp =\left(\frac{1}{\sqrt{2}}(1,-1,0), \frac{1}{\sqrt{6}}(1,1,-2)\right)\text{.}
+\end{align*}
+</div>
+<p class="continuation">Assembling these bases elements into the orthogonal matrix</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-\dim W_1=\dim W_{-1}=2\text{.}
+Q=\begin{amatrix}[rrr]1/\sqrt{3}\amp 1/\sqrt{2}\amp 1/\sqrt{6}\\
+1/\sqrt{3}\amp -1/\sqrt{2}\amp 1/\sqrt{6}\\
+1/\sqrt{3}\amp 0\amp -2/\sqrt{6}\end{amatrix}\text{,}
 \end{equation*}
 </div>
-<p class="continuation">By inspection we see that <span class="process-math">\((1,0,0,0)\)</span> and <span class="process-math">\((0,1,0,0)\)</span> are <span class="process-math">\(1\)</span>-eigenvectors, and thus we must have <span class="process-math">\(\dim W_1=2\text{.}\)</span> Next we have <span class="process-math">\(W_{-1}=\NS(-I-A)\)</span> where</p>
+<p class="continuation">we conclude that <span class="process-math">\(D=Q^{-1}AQ=Q^TAQ\text{,}\)</span> where</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
--I-A=\begin{amatrix}[rrrr]
--2 \amp 0 \amp 3 \amp -1 \\
-0 \amp -2 \amp -1 \amp -1 \\
-0 \amp 0 \amp 1 \amp -1 \\
-0 \amp 0 \amp 1 \amp -1
-\end{amatrix}\text{.}
+D=\begin{amatrix}[rrr]1\amp 0\amp 0\\ 0\amp -1\amp 0\\ 0\amp 0\amp -1  \end{amatrix}\text{.}
 \end{equation*}
 </div>
-<p class="continuation">It is not difficult to see (either using Gaussian elimination or inspection) that this matrix has rank 3, and hence nullity 1. We conclude that <span class="process-math">\(\dim W_{-1}=1\lt 2\text{,}\)</span> and hence <span class="process-math">\(A\)</span> is not diagonalizable.</p>
 </div></body>
 </html>

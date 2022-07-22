@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-22T11:48:29-07:00       *-->
+<!--*       on 2022-07-22T12:31:56-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<p>We saw in <a href="" class="xref" data-knowl="./knowl/ex_invertible_matrices.html" title="Example 2.3.4">Example 2.3.4</a> that verifying directly whether a matrix is invertible, using only <a href="" class="xref" data-knowl="./knowl/d_invertible_matrix.html" title="Definition 2.3.1: Invertible matrix">Definition 2.3.1</a>, can be quite an involved task. The goal of this section is to make this invertibility less onerous by developing some equivalent methods of testing invertibility. Our work culminates in <a href="" class="xref" data-knowl="./knowl/th_invertibility.html" title="Theorem 2.4.5: Invertibility theorem">Theorem 2.4.5</a> and <a href="" class="xref" data-knowl="./knowl/th_invertibility_algorithm.html" title="Theorem 2.4.10: Inverse algorithm">Theorem 2.4.10</a>, which draw connections between invertibility, solutions to linear systems, and row echelon forms of a square matrix. Not surprisingly, our old friend Gaussian elimination emerges as the fundamental computational tool.</p>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>Row reduce <span class="process-math">\(A\)</span> to a matrix <span class="process-math">\(U\)</span> in <em class="emphasis">reduced</em> row echelon form using Gauss-Jordan elimination. (See <a href="" class="xref" data-knowl="./knowl/th_matrixforms.html" title="Theorem 1.2.10: Row equivalent matrix forms">Theorem 1.2.10</a>.) Since the set of solutions to <span class="process-math">\(A\boldx=\boldzero\)</span> is identical to the set of solutions to <span class="process-math">\(U\boldx=\boldzero\)</span> (apply <a href="" class="xref" data-knowl="./knowl/s_systems_th_rowops.html" title="Theorem 1.1.12: Row equivalence theorem">Theorem 1.1.12</a> to their corresponding linear systems), we see that <span class="process-math">\(\boldzero\)</span> is the only solution to <span class="process-math">\(U\boldx=\boldzero\text{.}\)</span> <a href="" class="xref" data-knowl="./knowl/proc_solveSystem.html" title="Procedure 1.3.5: Solving linear systems">Procedure 1.3.5</a> now implies <span class="process-math">\(U\)</span> has a leading one in each column. Since <span class="process-math">\(U\)</span> is <span class="process-math">\(n\times n\)</span> and in <em class="emphasis">reduced</em> row echelon form, it follows that <span class="process-math">\(U\)</span> must be the identity matrix. (Convince yourself of this.) Thus <span class="process-math">\(A\)</span> is row equivalent to <span class="process-math">\(U=I\text{,}\)</span> the identity matrix.</p>
 <span class="incontext"><a href="s_invertibility_theorem.html#p-770" class="internal">in-context</a></span>
 </body>
 </html>

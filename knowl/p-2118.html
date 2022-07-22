@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-22T11:48:41-07:00       *-->
+<!--*       on 2022-07-22T12:32:10-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,15 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Using the dot product method of matrix multiplication, we see that a vector <span class="process-math">\(\boldx\in\NS(A)\)</span> if and only if <span class="process-math">\(\boldx\cdot\boldr_i=0\)</span> for each row <span class="process-math">\(\boldr_i\)</span> of <span class="process-math">\(A\text{,}\)</span> if and only if <span class="process-math">\(\boldx\cdot \boldw=0\)</span> for all <span class="process-math">\(\boldw\in \Span \{\boldr_1, \boldr_2, \dots, \boldr_m\}=\RS A\)</span> (see <a href="" class="xref" data-knowl="./knowl/rm_computing_ortho_comp.html" title="Remark 4.3.2: Computing W^\perp">Remark 4.3.2</a>), if and only if <span class="process-math">\(\boldx\in (\RS A)^\perp\text{.}\)</span> This shows <span class="process-math">\(\NS A=(\RS A)^\perp\text{.}\)</span></p>
+<p>We have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+d((2,1,1), W) \amp = \norm{(2,1,1)-\proj{(2,1,1)}{W}}\\
+\amp =\norm{\frac{1}{6}(1,-2,-1)}=\frac{6}{6} \\
+d((1,1,1), W) \amp = \norm{(1,1,1)-\proj{(1,1,1)}{W}}\\
+\amp =\norm{(0,0,0)}=0 \text{.}
+\end{align*}
+</div>
 <span class="incontext"><a href="s_orthogonal_projection.html#p-2118" class="internal">in-context</a></span>
 </body>
 </html>

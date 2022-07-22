@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-22T11:48:47-07:00       *-->
+<!--*       on 2022-07-22T12:32:17-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,17 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>A similar argument to the one in <a href="" class="xref" data-knowl="./knowl/eg_eigenvector_adhoc_reflection.html" title="Example 5.4.9: Reflection">Example 5.4.9</a> shows that <span class="process-math">\(T\)</span> has no eigenvalues in this case. In more detail, a nonzero vector <span class="process-math">\(\boldx\)</span> lies in the line <span class="process-math">\(\ell=\Span\{\boldx\}\text{,}\)</span> and its rotation <span class="process-math">\(T(\boldx)\)</span> lies in the line <span class="process-math">\(\ell'=\Span\{T(\boldx)\}\text{,}\)</span> which is the result of rotating <span class="process-math">\(\ell\)</span> by the angle <span class="process-math">\(\theta\text{.}\)</span> Since <span class="process-math">\(\theta\ne \pi\text{,}\)</span> it is clear that <span class="process-math">\(\ell\ne \ell'\text{,}\)</span> and thus we cannot have <span class="process-math">\(T(\boldv)=\lambda\boldv\)</span> for some <span class="process-math">\(\lambda\in \R\text{.}\)</span></p>
+<p>First compute</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+p(t) \amp = \det (tI-A)\\
+\amp = \det \begin{amatrix}[rrr]t-2\amp 1\amp 1\\ 1\amp t-2\amp 1\\ 1\amp 1\amp t-2 \end{amatrix} \\
+\amp = t^3-6t^2+9t\\
+\amp = t(t^2-6t+9)\\
+\amp = t(t-3)^2\text{.}
+\end{align*}
+</div>
+<p class="continuation">We see that the eigenvalues of <span class="process-math">\(A\)</span> are <span class="process-math">\(\lambda=0\)</span> and <span class="process-math">\(\lambda=3\text{.}\)</span> Now compute bases for their corresponding eigenspaces.</p>
 <span class="incontext"><a href="s_eigenvectors.html#p-2510" class="internal">in-context</a></span>
 </body>
 </html>

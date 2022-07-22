@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-22T11:48:42-07:00       *-->
+<!--*       on 2022-07-22T12:32:11-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,19 +15,13 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>What is the relationship between <span class="process-math">\(f\)</span> and <span class="process-math">\(\hat{f}\text{?}\)</span> <a href="" class="xref" data-knowl="./knowl/th_orthogonal_projection.html" title="Theorem 4.3.9: Orthogonal projection theorem">Theorem 4.3.9</a> tells us that <span class="process-math">\(\hat{f}\)</span> is the “best” trigonometric polynomial approximation of <span class="process-math">\(f(x)\)</span> of degree at most <span class="process-math">\(n\)</span> in the following sense: given any any other trigonometric polynomial <span class="process-math">\(g\in W\text{,}\)</span> we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_orthogonal_projection.html">
+<p>To compute the coordinate vector of an element <span class="process-math">\(\boldv\in V\)</span> relative to a given ordered basis <span class="process-math">\(B=(\boldv_1,\boldv_2,\dots, \boldv_n)\)</span> we must <em class="emphasis">find</em> the scalars <span class="process-math">\(c_1, c_2, \dots, c_n\)</span> that satisfy the vector equation</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-\left\vert\left\vert f-\hat{f}\right\vert\right\vert\leq \norm{f-g}\text{.}
+\boldv=c_1\boldv_1+c_2\boldv_2+\cdots +c_n\boldv_n\text{.}
 \end{equation*}
 </div>
-<p class="continuation">Unpacking the definition of norm in this inner product space, we conclude that</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_orthogonal_projection.html">
-\begin{equation*}
-\int_0^{2\pi} (f-\hat{f})^2\, dx\leq \int_0^{2\pi} (f-g)^2 \, dx
-\end{equation*}
-</div>
-<p class="continuation">for all <span class="process-math">\(g\in W\text{.}\)</span></p>
-<span class="incontext"><a href="s_orthogonal_projection.html#p-2164" class="internal">in-context</a></span>
+<p class="continuation">Usually this is accomplished by reducing this vector equation to an equivalent system of linear equations in the unknowns <span class="process-math">\(c_i\)</span> and solving using the method of Gaussian elimination. However, there are some cases when we can easily produce the <span class="process-math">\(c_i\)</span> by inspection: for example when computing with standard bases as the first example below illustrates.</p>
+<span class="incontext"><a href="s_coordinatevectors.html#p-2164" class="internal">in-context</a></span>
 </body>
 </html>

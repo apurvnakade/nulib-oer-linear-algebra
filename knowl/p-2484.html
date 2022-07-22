@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-22T11:48:47-07:00       *-->
+<!--*       on 2022-07-22T12:32:16-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,19 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Let <span class="process-math">\(\boldv=(a,b)\in \R^2\)</span> be nonzero and define <span class="process-math">\(\ell=\Span\{\boldv\}\text{,}\)</span> the line passing through the origin with direction vector <span class="process-math">\(\boldv\text{.}\)</span> Let <span class="process-math">\(T\colon \R^2\rightarrow \R^2\)</span> be reflection through <span class="process-math">\(\ell\text{.}\)</span> (See <a href="" class="xref" data-knowl="./knowl/d_reflection.html" title="Definition 3.2.16: Reflection through a line">Definition 3.2.16</a>.) In this exercise we will use a change of basis argument to find a formula for the standard matrix of <span class="process-math">\(T\text{:}\)</span> i.e., the matrix <span class="process-math">\(A\)</span> satisfying <span class="process-math">\(T(\boldx)=A\boldx\)</span> for all <span class="process-math">\(\boldx\in \R^2\text{.}\)</span> Our answer will be expressed in terms  of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span></p>
-<span class="incontext"><a href="s_changeofbasis.html#p-2484" class="internal">in-context</a></span>
+<p>First observe that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_invertibility_supersized.html">
+\begin{equation*}
+A\boldx=\lambda\boldx \iff \lambda\boldx-A\boldx=\boldzero \iff (\lambda I-A)\boldx=\boldzero\text{.}
+\end{equation*}
+</div>
+<p class="continuation">From this equivalence it follows that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_invertibility_supersized.html">
+\begin{equation*}
+\NS(\lambda I-A)=\{\boldx\in \R^n\colon A\boldx=\lambda \boldx\}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since an eigenvector must be nonzero, we conclude that the <span class="process-math">\(\lambda\)</span>-eigenvectors of <span class="process-math">\(A\)</span> are precisely the nonzero elements of <span class="process-math">\(\NS(\lambda I-A)\text{.}\)</span> This proves statement (1). As a consequence, we see that <span class="process-math">\(A\)</span> has <span class="process-math">\(\lambda\)</span> as an eigenvalue if and only if <span class="process-math">\(\NS (\lambda I-A)\)</span> contains nonzero element elements: i.e., if and only if <span class="process-math">\(\NS (\lambda I-A)\ne \{\boldzero\}\text{.}\)</span> By the <a href="" class="xref" data-knowl="./knowl/th_invertibility_supersized.html" title="Theorem 3.8.12: Invertibility theorem (supersized)">invertibility theorem</a> this is true if and only if <span class="process-math">\(\lambda I-A\)</span> is not invertible.</p>
+<span class="incontext"><a href="s_eigenvectors.html#p-2484" class="internal">in-context</a></span>
 </body>
 </html>

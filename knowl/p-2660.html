@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-22T11:48:50-07:00       *-->
+<!--*       on 2022-07-22T12:32:20-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,60 +14,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Assume <span class="process-math">\(T\)</span> is diagonalizable. From <a href="" class="xref" data-knowl="./knowl/th_diagonalizability_eigenbasis.html" title="Theorem 5.5.2: Diagonalizabilty: basis of eigenvectors">Theorem 5.5.2</a>, there is an eigenbasis <span class="process-math">\(B\)</span> of <span class="process-math">\(T\text{.}\)</span> After reordering we may assume that</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_diagonalizability_eigenbasis.html ./knowl/cor_independent_eigenspaces.html">
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>For all <span class="process-math">\(A\in M_{nn}\)</span> and integers <span class="process-math">\(k\geq 0\text{,}\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-B=(\underset{W_{\lambda_1}}{\underbrace{\boldv_{\lambda_1,1},\dots, \boldv_{\lambda_1,n_1}}},\underset{W_{\lambda_2}}{\underbrace{\boldv_{\lambda_2,1},\dots, \boldv_{\lambda_2,n_2}}},\dots, \underset{W_{\lambda_r}}{\underbrace{\boldv_{\lambda_r,1},\dots, \boldv_{\lambda_r,n_r}}} )\text{,}
+(P^{-1}AP)^k=P^{-1}A^kP\text{.}
 \end{equation*}
 </div>
-<p class="continuation">where for each <span class="process-math">\(1\leq i\leq r\)</span> and each <span class="process-math">\(1\leq j\leq n_i\text{,}\)</span> the element <span class="process-math">\(\boldv_{\lambda_i,j}\)</span> is an eigenvector with eigenvalue <span class="process-math">\(\lambda_i\text{:}\)</span> i.e., <span class="process-math">\(\boldv_{\lambda_i,j}\in W_{\lambda_i}\text{.}\)</span> Observer that since <span class="process-math">\(B\)</span> is a list of <span class="process-math">\(n\)</span> vectors, we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_diagonalizability_eigenbasis.html ./knowl/cor_independent_eigenspaces.html">
-\begin{equation*}
-n=n_1+n_2+\cdots+n_r\text{.}
-\end{equation*}
-</div>
-<p class="continuation">We claim that for all <span class="process-math">\(1\leq i\leq r\)</span> the set <span class="process-math">\(S_{\lambda_i}=\{\boldv_{\lambda_i, 1}, \dots, \boldv_{\lambda_i, n_i}\}\)</span> is a basis of <span class="process-math">\(W_{\lambda_i}\text{.}\)</span> The desired result follows in this case since</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_diagonalizability_eigenbasis.html ./knowl/cor_independent_eigenspaces.html">
-\begin{align*}
-\sum_{i=1}^r\dim W_{\lambda_i} \amp=\sum_{i=1}^r\val{S_{\lambda_i}} \\
-\amp = \sum_{i=1}^r n_i \\
-\amp = n\text{.}
-\end{align*}
-</div>
-<p class="continuation">Proceeding then to the claim, observe that each set <span class="process-math">\(S_{\lambda_i}\)</span> is linearly independent, since the underlying set of <span class="process-math">\(B\)</span> is linearly independent. Thus it suffices to show that <span class="process-math">\(\Span S_{\lambda_i}=W_{\lambda_i}\)</span> for all <span class="process-math">\(1\leq i\leq r\text{.}\)</span> To this end, fix an <span class="process-math">\(i\)</span> with <span class="process-math">\(1\leq i\leq n\)</span> and take any <span class="process-math">\(\boldv\in W_{\lambda_i}\text{.}\)</span> Since <span class="process-math">\(B\)</span> is a basis we can write</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_diagonalizability_eigenbasis.html ./knowl/cor_independent_eigenspaces.html">
-\begin{align*}
-\boldv \amp=
-\underset{\boldw_{\lambda_1}}{\underbrace{\sum_{j=1}^{n_1}c_{1,j}\boldv_{\lambda_1, j}}}+\dots +\underset{\boldw_{\lambda_i}}{\underbrace{\sum_{j=1}^{n_i}c_{i,j}\boldv_{\lambda_i, j}}}+\dots \underset{\boldw_{\lambda_r}}{\underbrace{\sum_{j=1}^{n_r}c_{r,j}\boldv_{\lambda_r, j}}} \\
-\amp=\boldw_1+\boldw_2+\cdots +\boldw_r \text{,}
-\end{align*}
-</div>
-<p class="continuation">where for each <span class="process-math">\(1\leq k\leq r\)</span> we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_diagonalizability_eigenbasis.html ./knowl/cor_independent_eigenspaces.html">
-\begin{equation*}
-\boldw_k=\sum_{i=1}^{n_k}c_{k,j}\boldv_{\lambda_k, j}\in W_{\lambda_k}\text{.}
-\end{equation*}
-</div>
-<p class="continuation">Bringing <span class="process-math">\(\boldv\)</span> to the right-hand side of the equation above yields</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_diagonalizability_eigenbasis.html ./knowl/cor_independent_eigenspaces.html">
-\begin{equation*}
-\boldzero=\boldw_1+\boldw_2+\cdots +(\boldw_i-\boldv)+\cdots +\boldw_r\text{.}
-\end{equation*}
-</div>
-<p class="continuation">Recall that <span class="process-math">\(\boldv\in W_{\lambda_i}\text{,}\)</span> and thus <span class="process-math">\(\boldw_{i}-\boldv\in W){\lambda_i}\text{.}\)</span> Since <span class="process-math">\(\boldw_k\in W_{\lambda_k}\)</span> for all <span class="process-math">\(k\ne i\text{,}\)</span> it follows from <a href="" class="xref" data-knowl="./knowl/cor_independent_eigenspaces.html" title="Corollary 5.5.12">Corollary 5.5.12</a> that</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_diagonalizability_eigenbasis.html ./knowl/cor_independent_eigenspaces.html">
-\begin{equation*}
-\boldw_1=\boldw_2=\dots=(\boldw_i-\boldv)=\dots =\boldw_r=0\text{.}
-\end{equation*}
-</div>
-<p class="continuation">Thus</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_diagonalizability_eigenbasis.html ./knowl/cor_independent_eigenspaces.html">
-\begin{equation*}
-\boldv=w_i=\sum_{j=1}^{n_i}c_{i,j}\boldv_{\lambda_i, j}\text{,}
-\end{equation*}
-</div>
-<p class="continuation">showing that <span class="process-math">\(\boldv\in \Span S_{\lambda_i}\text{,}\)</span> as desired.</p>
+<p class="continuation">If <span class="process-math">\(A\)</span> is invertible, this equality holds for <em class="emphasis">all</em> integers <span class="process-math">\(n\text{.}\)</span></p>
 <span class="incontext"><a href="s_diagonalization.html#p-2660" class="internal">in-context</a></span>
 </body>
 </html>

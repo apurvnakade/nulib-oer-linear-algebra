@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-22T11:48:34-07:00       *-->
+<!--*       on 2022-07-22T12:32:02-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,67 +16,65 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.5.3.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.5.18.1</span><span class="period">.</span>
 </h4>
 <ol class="decimal">
-<li><p><span class="process-math">\(\Span S=\{\boldzero\}\text{,}\)</span> the set containing just the origin, by definition.</p></li>
-<li><p><span class="process-math">\(\Span S\)</span> is the set of all scalar multiples of <span class="process-math">\((0,0)\text{.}\)</span> Thus <span class="process-math">\(\Span S=\{\boldzero\}\text{.}\)</span></p></li>
-<li><p><span class="process-math">\(\Span S\)</span> is the set of all scalar multiples of the nonzero vector <span class="process-math">\((a,b)\text{.}\)</span> Geometrically, this is the line that passes through the the origin and the point <span class="process-math">\((a,b)\text{.}\)</span></p></li>
 <li>
-<p>By definition</p>
+<p>We claim <span class="process-math">\(S\)</span> is linearly independent. If</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-S=\{a(1,0)+b(0,1)\colon a,b\in \R\}=\{(a,b)\colon a,b\in\R\}\text{.}
+c_1f+c_2g+c_3h=\boldzero\text{,}
 \end{equation*}
 </div>
-<p class="continuation">Thus <span class="process-math">\(S=\R^2\text{,}\)</span> the entire <span class="process-math">\(xy\)</span>-plane.</p>
+<p class="continuation">then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+c_1x+c_2\cos x+c_3\sin x=0\text{,}
+\end{equation*}
+</div>
+<p class="continuation">for all <span class="process-math">\(x\in (-2\pi, 2\pi)\text{.}\)</span> In particular, the equality is true when evaluated at <span class="process-math">\(x=0, \pi/2, \pi\text{,}\)</span> yielding the following linear system:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{linsys}{4}
+x=0 \colon \amp \amp 0c_1\amp +\amp \cos(0)c_2\amp +\amp \sin(0) c_3\amp= \amp 0\\
+x=\pi/2 \colon \amp \amp (\pi/2)c_1\amp +\amp \cos(\pi/2)c_2\amp +\amp \sin(\pi/2)c_3 \amp = \amp 0\\
+x=\pi \colon \amp  \amp \pi c_1\amp +\amp \cos(\pi)c_2\amp +\amp \sin(\pi)c_3 \amp= \amp 0
+\end{linsys}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">or</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{linsys}{4}
+x=0 \colon  \amp \amp \amp \amp c_2\amp \amp \amp = \amp 0\\
+x=\pi/2 \colon \amp  \amp (\pi/2)c_1\amp +\amp \amp +\amp c_3 \amp = \amp 0\\
+x=\pi \colon \amp  \amp \pi c_1\amp - \amp c_2 \amp \amp  \amp= \amp 0
+\end{linsys}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This system can be now be solved essentially by inspection: the first equation implies <span class="process-math">\(c_2=0\text{;}\)</span> setting <span class="process-math">\(c_2=0\text{,}\)</span> in the third equation, we conclude <span class="process-math">\(c_1=0\text{;}\)</span> the second equation now implies <span class="process-math">\(c_3=0\text{.}\)</span> We conclude that <span class="process-math">\(c_1=c_2=c_3=0\text{.}\)</span> Thus the only linear combination of <span class="process-math">\(f, g, h\)</span> yielding the zero function is the trivial one, showing that <span class="process-math">\(S\)</span> is linearly independent.</p>
 </li>
 <li>
-<p>By definition</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<p>We claim <span class="process-math">\(S\)</span> is linearly dependent. As discussed in <a href="" class="xref" data-knowl="./knowl/proc_linear_independence_functions.html" title="Procedure 3.5.16: Investigating linear independence of functions">Procedure 3.5.16</a>, to prove this we have to produce an identity involving these functions. The double-angle formula from trigonometry tells us that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_linear_independence_functions.html">
 \begin{equation*}
-S=\{a(1,1)+b(2,2)\colon a,b\in \R\}=\{(a+2b,a+2b)\colon a,b\in\R\}\text{.}
+\cos 2x=\cos^2 x-\sin^2x=2\cos^2x+1
 \end{equation*}
 </div>
-<p class="continuation">It is easy to see that <span class="process-math">\(S=\{(c,c)\colon t\in \R\}\text{,}\)</span> the line with equation <span class="process-math">\(y=x\text{.}\)</span> Note that in this case we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<p class="continuation">for all <span class="process-math">\(x\in (-2\pi, 2\pi)\)</span> (in fact for all <span class="process-math">\(x\in \R\)</span>). It follows that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_linear_independence_functions.html">
 \begin{equation*}
-S=\Span\{(1,1), (2,2)\}=\Span \{(1,1)\}\text{,}
+1-\cos 2x+2\cos^2x=0
 \end{equation*}
 </div>
-<p class="continuation">and thus that the vector <span class="process-math">\((2,2)\)</span> is in some sense redundant.</p>
+<p class="continuation">for all <span class="process-math">\(x\in (-2\pi, 2\pi)\text{,}\)</span> or</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_linear_independence_functions.html">
+\begin{equation*}
+f-g+2h=\boldzero\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since we have found a nontrivial linear combination of elements of <span class="process-math">\(S\)</span> yielding the zero vector, we conclude that <span class="process-math">\(S\)</span> is linearly dependent.</p>
 </li>
-<li>
-<p>By definition</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-S=\{a(1,1)+b(1,2)\colon a,b\in \R\}=\{(a+b,a+2b)\colon a,b\in\R\}\text{.}
-\end{equation*}
-</div>
-<p class="continuation">Claim: <span class="process-math">\(\Span S=\R^2\text{.}\)</span> Proving the claim amounts to showing that for all <span class="process-math">\((c,d)\in \R^2\)</span> there exist <span class="process-math">\(a,b\in \R\)</span> such that</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\begin{array}{ccccc}
-a \amp +\amp b \amp =\amp c\\
-a \amp +\amp 2b \amp =\amp d
-\end{array}\text{.}
-\end{equation*}
-</div>
-<p class="continuation">Solving this system using Gaussian elimination, we see that the system has the unique solution</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-a\amp =2c-d \amp b\amp =d-c\text{,}
-\end{align*}
-</div>
-<p class="continuation">and thus that</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-(2c-d)(1,1)+(d-c)(1,2)=(c,d)\text{.}
-\end{equation*}
-</div>
-<p class="continuation">This proves <span class="process-math">\(\Span S=\R^2\text{,}\)</span> as claimed.</p>
-</li>
-<li><p>By <a href="" class="xref" data-knowl="./knowl/rm_span.html" title="Remark 3.5.2">Remark 3.5.2</a>, we have <span class="process-math">\(S\subseteq \Span S\text{.}\)</span> Thus <span class="process-math">\(\R^2\subseteq \Span \R^2\text{.}\)</span> Since <span class="process-math">\(\Span \R^2\subseteq \R^2\)</span> by definition, we conclude that <span class="process-math">\(\Span S=\R^2\text{.}\)</span></p></li>
 </ol>
 </div>
 <span class="incontext"><a href="s_span_independence.html#solution-47" class="internal">in-context</a></span>

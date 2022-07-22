@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-22T11:48:33-07:00       *-->
+<!--*       on 2022-07-22T12:32:01-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,46 +14,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>By definition</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_solveSystem.html ./knowl/proc_solveSystem.html">
-\begin{align*}
-\NS T_A \amp=\{\boldx=(x_1,x_2,x_3,x_4)\colon A\boldx=\boldzero\} \text{.}
-\end{align*}
-</div>
-<p class="continuation">Thus we must solve the matrix equation <span class="process-math">\(A\boldx=\boldzero\text{.}\)</span> The corresponding augmented matrix row reduces to</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_solveSystem.html ./knowl/proc_solveSystem.html">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>Let <span class="process-math">\(T\colon V\rightarrow W\)</span> be a linear transformation, and let <span class="process-math">\(\boldw\in W\text{.}\)</span> Equation <a href="" class="xref" data-knowl="./knowl/eq_nullspace_inverseimage.html" title="Equation 3.4.3">(3.4.3)</a> can be interpreted as follows: if we can find one <em class="emphasis">particular</em> input <span class="process-math">\(\boldv_p\)</span> satisfying <span class="process-math">\(T(\boldv_p)=\boldw\text{,}\)</span> then the set <span class="process-math">\(X_\boldw\)</span> of <em class="emphasis">all</em> inputs <span class="process-math">\(\boldv\)</span> satisfying <span class="process-math">\(T(\boldv)=\boldw\)</span> is given by</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_nullspace_inverseimage.html">
 \begin{equation*}
-\begin{amatrix}[rrrr|r] \boxed{1}\amp 2\amp 3\amp 4\amp 0\\ 0\amp 0\amp 0\amp 0\amp 0  \end{amatrix}\text{.}
+X_\boldw=\{\boldv_p+\boldu\colon \boldu\in \NS T\}\text{.}
 \end{equation*}
 </div>
-<p class="continuation">Following <a href="" class="xref" data-knowl="./knowl/proc_solveSystem.html" title="Procedure 1.3.5: Solving linear systems">Procedure 1.3.5</a> we conclude that</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_solveSystem.html ./knowl/proc_solveSystem.html">
-\begin{equation*}
-\NS T_A=\{(-2r-3s-4t,r,s,t)\colon r,s,t\in \R\}\text{.}
-\end{equation*}
-</div>
-<p class="continuation">Next, <span class="process-math">\(\im T_A\)</span> is the set of <span class="process-math">\(\boldy=(a,b)\)</span> for which there is an <span class="process-math">\(\boldx\in \R^4\)</span> satisfying <span class="process-math">\(A\boldx=\boldy\text{.}\)</span> Thus we are asking which choices of <span class="process-math">\(\boldy=(a,b)\)</span> make the linear system</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_solveSystem.html ./knowl/proc_solveSystem.html">
-\begin{equation*}
-\begin{linsys}{4}
-x_1\amp +\amp 2x_2\amp +\amp 3x_3\amp+\amp 4x_4\amp=\amp a\\
-2x_1\amp +\amp 4x_2\amp +\amp 6x_3\amp+\amp 8x_4\amp=\amp b
-\end{linsys}
-\end{equation*}
-</div>
-<p class="continuation">consistent. Again, Gaussian elimination gives us our answer. The corresponding augmented matrix row reduces to</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_solveSystem.html ./knowl/proc_solveSystem.html">
-\begin{equation*}
-\begin{amatrix}[rrrr|r] \boxed{1}\amp 2\amp 3\amp 4\amp a\\ 0\amp 0\amp 0\amp 0 \amp b-a \end{amatrix}\text{,}
-\end{equation*}
-</div>
-<p class="continuation">and conclude from <a href="" class="xref" data-knowl="./knowl/proc_solveSystem.html" title="Procedure 1.3.5: Solving linear systems">Procedure 1.3.5</a> that the system is consistent if and only if <span class="process-math">\(a-b=0\text{,}\)</span> or <span class="process-math">\(a=b\text{.}\)</span> Thus</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_solveSystem.html ./knowl/proc_solveSystem.html">
-\begin{equation*}
-\im T_A=\{(a,b)\in \R^2\colon a=b\}=\{(t,t)\colon t\in \R\}\text{.}
-\end{equation*}
-</div>
+<p class="continuation">This set <span class="process-math">\(X\)</span> is not necessarily a subspace. Indeed, if <span class="process-math">\(\boldw\ne \boldzero_W\text{,}\)</span> then <span class="process-math">\(\boldzero\notin X\text{,}\)</span> since <span class="process-math">\(T(\boldzero)=\boldzero_W\text{!}\)</span> Instead, <span class="process-math">\(X\)</span> is what is called the <em class="emphasis">translate</em> of the subspace <span class="process-math">\(\NS T\)</span> by the vector <span class="process-math">\(\boldv_p\text{,}\)</span> and is denoted as <span class="process-math">\(X=\boldv_p+\NS T\text{.}\)</span> The corollary below is an application to solutions to matrix equations (equivalently, linear systems) obtained by treating the special case where <span class="process-math">\(T=T_A\)</span> is a matrix transformation associated to an <span class="process-math">\(m\times n\)</span> matrix <span class="process-math">\(A\text{.}\)</span></p>
 <span class="incontext"><a href="s_nullspace_image.html#p-1366" class="internal">in-context</a></span>
 </body>
 </html>
