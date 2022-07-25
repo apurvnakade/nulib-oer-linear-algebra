@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-22T12:31:54-07:00       *-->
+<!--*       on 2022-07-25T15:04:05-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,14 +14,35 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Any polynomial <span class="process-math">\(f(x)=\anpoly\text{,}\)</span> thought of as a function from <span class="process-math">\(\C\)</span> to itself, can be factored into linear terms as</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We must show the universal implication</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-f(x)=(x-z_1)(x-z_2)\cdots (x-z_n)\text{,}
+\forall n\geq 1\, P(n)\implies P(n+1)\text{.}
 \end{equation*}
 </div>
-<p class="continuation">where the <span class="process-math">\(z_i\)</span> are (not necessarily distinct) complex numbers.</p>
-<span class="incontext"><a href="s_polynomials.html#p-235" class="internal">in-context</a></span>
+<p class="continuation">Let <span class="process-math">\(n\geq 1\text{,}\)</span> and assume <span class="process-math">\(P(n)\)</span> is true: i.e.,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{k=1}^n k=\frac{n(n+1)}{2}
+\end{equation*}
+</div>
+<p class="continuation">The proposition <span class="process-math">\(P(n+1)\)</span> states that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{k=1}^{n+1} k=\frac{(n+1)(n+2)}{2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We prove this, assuming <span class="process-math">\(P(n)\text{,}\)</span> via a chain of equalities:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\sum_{k=1}^{n+1} k\amp= \sum_{k=1}^{n} k+(n+1) \\
+\amp=\frac{n(n+1)}{2}+n+1\amp (\text{induction hyp.}) \\
+\amp =\frac{n(n+1)+2(n+1)}{2}\\
+\amp =\frac{(n+1)(n+2)}{2}\text{,}
+\end{align*}
+</div>
+<p class="continuation">as desired.</p>
+<span class="incontext"><a href="s_proof_technique.html#p-235" class="internal">in-context</a></span>
 </body>
 </html>

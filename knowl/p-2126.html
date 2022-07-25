@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-22T12:32:10-07:00       *-->
+<!--*       on 2022-07-25T15:04:23-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,13 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p><a href="" class="xref" data-knowl="./knowl/fig_leastsquares.html" title="Figure 4.3.21: Least-squares visualization">Figure 4.3.21</a> helps us give a graphical interpretation of how the line <span class="process-math">\(\ell\colon y=(5/14)x+2\)</span> best approximates the points <span class="process-math">\(P_1=(-3,1), P_2=(1,2), P_3=(2,3)\text{.}\)</span> <figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/im_leastsquares.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.3.21<span class="period">.</span></span><span class="space"> </span>Least-squares visualization</figcaption></figure> Let <span class="process-math">\(\boldy=(1,2,3)=(y_1,y_2,y_3)\)</span> be the given <span class="process-math">\(y\)</span>-values of the points, and let <span class="process-math">\(\hat{\boldy}=(y_1',y_2',y_3')\)</span> be the orthogonal projection of <span class="process-math">\(\boldy\)</span> onto <span class="process-math">\(\CS A\text{.}\)</span> In the graph the values <span class="process-math">\(\epsilon_i\)</span> denote the vertical difference <span class="process-math">\(\epsilon_i=y_i-y_i'\)</span> between the data points, and our fitting line. The projection <span class="process-math">\(\hat{\boldy}\)</span> makes the error <span class="process-math">\(\norm{\boldy-\hat{\boldy}}=\sqrt{ \epsilon_1^2+\epsilon_2^2+\epsilon_3^2}\)</span> as small as possible. This means if I draw <em class="emphasis">any other line</em> and compute the corresponding differences <span class="process-math">\(\epsilon_i'\)</span> at the <span class="process-math">\(x\)</span>-values  -3, 1 and 2, then</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig_leastsquares.html">
+<p>According to <a href="" class="xref" data-knowl="./knowl/rm_computing_ortho_comp.html" title="Remark 4.3.2: Computing W^\perp">Remark 4.3.2</a>, since <span class="process-math">\(W=\Span\{(1,1)\}\text{,}\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/rm_computing_ortho_comp.html">
 \begin{equation*}
-\epsilon_1^2+\epsilon_2^2+\epsilon_3^2\leq (\epsilon_1')^2+(\epsilon_2')^2+(\epsilon_3')^2
+\boldx\in W^\perp \iff \boldx\cdot (1,1)=0\text{.}
 \end{equation*}
 </div>
+<p class="continuation">Letting <span class="process-math">\(\boldx=(x,y)\text{,}\)</span> we see that <span class="process-math">\(\boldx\cdot (1,1)=0\)</span> if and only if <span class="process-math">\(x+y=0\text{,}\)</span> if and only if <span class="process-math">\(y=-x\text{.}\)</span> Thus <span class="process-math">\(W^\perp=\{(x,y)\colon y=-x\}\)</span> is the line <span class="process-math">\(\ell'\subseteq \R^2\)</span> with equation <span class="process-math">\(y=-x\text{.}\)</span> Observe that the lines <span class="process-math">\(\ell\)</span> and <span class="process-math">\(\ell'\)</span> are indeed perpendicular to one another. (Graph them!)</p>
 <span class="incontext"><a href="s_orthogonal_projection.html#p-2126" class="internal">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-22T12:32:08-07:00       *-->
+<!--*       on 2022-07-25T15:04:20-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,22 +15,17 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>First compute</p>
+<p>Given <span class="process-math">\(n\)</span>-tuples <span class="process-math">\(\boldx=(x_1,x_2,\dots, x_n)\)</span> and <span class="process-math">\(\boldy=(y_1,y_2,\dots, y_n)\text{,}\)</span> we have</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
-\langle f, g\rangle \amp=\int_{-\pi}^\pi \sin x\sin 2x\, dx \\
-\amp=\frac{1}{2}\int_{-\pi}^\pi\cos(x-2x)-\cos(x+2x)\, dx \amp (\text{trig. identity})\\
-\amp =\frac{1}{2}\int_{-\pi}^\pi \cos(-x)-\cos 3x\, dx\\
-\amp = 0
+\boldx\cdot \boldy \amp = \begin{bmatrix} x_1 \amp x_2\amp \dots \amp x_n\end{bmatrix}
+\begin{bmatrix}
+y_1\\ y_2\\ \vdots \\ y_n
+\end{bmatrix}  \\
+\amp=\boldx^T\boldy \text{,}
 \end{align*}
 </div>
-<p class="continuation">It follows that</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\cos \theta=\frac{\langle f, g\rangle}{\norm{f}\norm{g}}=0\text{,}
-\end{equation*}
-</div>
-<p class="continuation">and hence that <span class="process-math">\(\theta=\pi/2\text{.}\)</span></p>
+<p class="continuation">where in the last equality <span class="process-math">\(\boldx\)</span> and <span class="process-math">\(\boldy\)</span> are treated as column vectors.</p>
 <span class="incontext"><a href="s_innerproducts.html#p-1966" class="internal">in-context</a></span>
 </body>
 </html>

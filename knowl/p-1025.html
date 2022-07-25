@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-22T12:31:58-07:00       *-->
+<!--*       on 2022-07-25T15:04:10-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,13 +14,21 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>For all <span class="process-math">\(c,d\in \R\)</span> and all <span class="process-math">\(\boldv\in V\text{,}\)</span> we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-c(d\boldv)=(cd)\boldv\text{.}
-\end{equation*}
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>In this case we can write</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_invertibility.html ./knowl/cor_det_prod_elem.html ./knowl/cor_det_prod_elem.html">
+\begin{align*}
+A \amp E_1E_2\cdots E_r \amp B\amp=E'_1E'_2\cdots E'_s 
+\end{align*}
 </div>
-<span class="incontext"><a href="s_vectorspace.html#p-1025" class="internal">in-context</a></span>
+<p class="continuation">for some elementary matrices <span class="process-math">\(E_i\)</span> and <span class="process-math">\(E'_j\)</span> (<a href="" class="xref" data-knowl="./knowl/th_invertibility.html" title="Theorem 2.4.5: Invertibility theorem">Theorem 2.4.5</a>). Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_invertibility.html ./knowl/cor_det_prod_elem.html ./knowl/cor_det_prod_elem.html">
+\begin{align*}
+\det AB \amp= \det(E_1E_2\cdots E_rE'_1E'_2\cdots E'_s) \\
+\amp= \det E_1\det E_2\cdots \det E_r\det E'_1\det E'_2\cdots \det E'_s \amp (\knowl{./knowl/cor_det_prod_elem.html}{\text{Corollary 2.5.23}})\\
+\amp=\det A\, \det B \amp (\knowl{./knowl/cor_det_prod_elem.html}{\text{Corollary 2.5.23}}) \text{.}
+\end{align*}
+</div>
+<span class="incontext"><a href="s_det.html#p-1025" class="internal">in-context</a></span>
 </body>
 </html>

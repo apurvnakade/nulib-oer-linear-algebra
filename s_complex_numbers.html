@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-22T12:31:36-07:00       *-->
+<!--*       on 2022-07-25T15:03:46-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -17,7 +17,7 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Linear algebra: the theory of vector spaces and linear transformations">
 <meta property="book:author" content="Aaron Greicius">
-<script>window.MathJax = {
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -388,8 +388,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <li class="link"><a href="appendix-defs.html" data-scroll="appendix-defs" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></li>
 <li class="link"><a href="appendix-thms.html" data-scroll="appendix-thms" class="internal"><span class="codenumber">C</span> <span class="title">Theory and procedures</span></a></li>
 <li class="link"><a href="appendix-egs.html" data-scroll="appendix-egs" class="internal"><span class="codenumber">D</span> <span class="title">Examples</span></a></li>
-<li class="link"><a href="appendix-mantras.html" data-scroll="appendix-mantras" class="internal"><span class="codenumber">E</span> <span class="title">Video examples and figures</span></a></li>
-<li class="link"><a href="appendix-vids.html" data-scroll="appendix-vids" class="internal"><span class="codenumber">F</span> <span class="title">Mantras and fiats</span></a></li>
+<li class="link"><a href="appendix-sage.html" data-scroll="appendix-sage" class="internal"><span class="codenumber">E</span> <span class="title">Sage examples</span></a></li>
+<li class="link"><a href="appendix-mantras.html" data-scroll="appendix-mantras" class="internal"><span class="codenumber">F</span> <span class="title">Video examples and figures</span></a></li>
+<li class="link"><a href="appendix-vids.html" data-scroll="appendix-vids" class="internal"><span class="codenumber">G</span> <span class="title">Mantras and fiats</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
@@ -397,12 +398,12 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <span class="type">Section</span> <span class="codenumber">0.4</span> <span class="title">Complex numbers</span>
 </h2>
 <section class="introduction" id="introduction-6">In this section we begin with a brief treatment of the complex numbers <span class="process-math">\(\C\text{.}\)</span> As mentioned below, you should think of the complex numbers as an additional link in our chain of number systems <a href="" class="xref" data-knowl="./knowl/eq_chain_numbersystems.html" title="Equation 0.1.1">(0.1.1)</a>. One major advantage of working with <span class="process-math">\(\C\)</span> is that any polynomial factors as a product of linear terms over <span class="process-math">\(\C\)</span> (<a href="" class="xref" data-knowl="./knowl/th_fund_alg.html" title="Theorem 0.5.6: Fundamental theorem of algebra">Theorem 0.5.6</a>). This fact, along with a review of basic definitions and properties of polynomials, will be taken up in <a href="s_polynomials.html" class="internal" title="Section 0.5: Polynomials">Section 0.5</a>. This section is meant mainly as a reference, and as such all theorems will be stated without proof.</section><section class="subsection" id="ss_complex_definition"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">0.4.1</span> <span class="title">Definition of <span class="process-math">\(\C\)</span></span>
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Definition of <span class="process-math">\(\C\)</span></span>
 </h3>
-<section class="introduction" id="introduction-7"><p id="p-187">The complex numbers constitute a number system built by taking the set of all <em class="emphasis">pairs</em> of real numbers and defining operations on these pairs that we call <em class="emphasis">complex addition</em> and <em class="emphasis">complex multiplication</em>.</p></section><article class="definition definition-like" id="d_complex_numbers"><h4 class="heading">
+<section class="introduction" id="introduction-7"><p id="p-250">The complex numbers constitute a number system built by taking the set of all <em class="emphasis">pairs</em> of real numbers and defining operations on these pairs that we call <em class="emphasis">complex addition</em> and <em class="emphasis">complex multiplication</em>.</p></section><article class="definition definition-like" id="d_complex_numbers"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Complex numbers.</span>
 </h4>
-<p id="p-188">The set <span class="process-math">\(\C\)</span> of <dfn class="terminology">complex numbers</dfn>  is defined as the set of all pairs of real numbers: i.e.,</p>
+<p id="p-251">The set <span class="process-math">\(\C\)</span> of <dfn class="terminology">complex numbers</dfn>  is defined as the set of all pairs of real numbers: i.e.,</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \C=\{(a, b)\colon a, b\in \R\}\text{.}
@@ -411,17 +412,17 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <p class="continuation">Given a complex number <span class="process-math">\(z=(a,b)\text{,}\)</span> its first entry <span class="process-math">\(a\)</span> is called the <dfn class="terminology">real part</dfn> of <span class="process-math">\(z\text{,}\)</span> denoted <span class="process-math">\(\Re z\text{,}\)</span> and its second entry <span class="process-math">\(b\)</span> is called the <dfn class="terminology">imaginary part</dfn> of <span class="process-math">\(z\text{,}\)</span> denoted <span class="process-math">\(\Im z\text{.}\)</span></p></article><article class="convention remark-like" id="convention-1"><h4 class="heading">
 <span class="type">Notation</span><span class="space"> </span><span class="codenumber">0.4.2</span><span class="period">.</span>
 </h4>
-<p id="p-189">Henceforth we will primarily denote a complex number <span class="process-math">\(z=(a,b)\)</span> as</p>
+<p id="p-252">Henceforth we will primarily denote a complex number <span class="process-math">\(z=(a,b)\)</span> as</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_complex_notation.html ./knowl/eq_complex_equality.html" id="eq_complex_notation">
 \begin{equation}
 z=a+bi\text{.}\tag{0.4.1}
 \end{equation}
 </div>
 <p class="continuation">Since <span class="process-math">\(a=\Re z\)</span> and <span class="process-math">\(b=\Im z\text{,}\)</span> you can think of the notation <a href="" class="xref" data-knowl="./knowl/eq_complex_notation.html" title="Equation 0.4.1">(0.4.1)</a> as a decomposition of <span class="process-math">\(z\)</span> as a sum of its real and imaginary components. In what follows we give actual arithmetic meaning to the symbols ‘<span class="process-math">\(+\)</span>’ and ‘<span class="process-math">\(i\)</span>’ used in this notation, but first and foremost <a href="" class="xref" data-knowl="./knowl/eq_complex_equality.html" title="Equation 0.4.2">(0.4.2)</a> should simply be thought of as an alternative manner of denoting the pair <span class="process-math">\((a,b)\text{.}\)</span></p>
-<p id="p-190">Additionally we will adopt the following notational conventions: <span class="process-math">\(a-bi=a+(-b)i\text{,}\)</span> <span class="process-math">\(a=a+0i\text{,}\)</span> <span class="process-math">\(a+i=a+1i\text{,}\)</span> <span class="process-math">\(bi=0+bi\text{,}\)</span> and <span class="process-math">\(i=0+1i\text{.}\)</span></p></article><article class="remark remark-like" id="rm_complex_equality"><h4 class="heading">
+<p id="p-253">Additionally we will adopt the following notational conventions: <span class="process-math">\(a-bi=a+(-b)i\text{,}\)</span> <span class="process-math">\(a=a+0i\text{,}\)</span> <span class="process-math">\(a+i=a+1i\text{,}\)</span> <span class="process-math">\(bi=0+bi\text{,}\)</span> and <span class="process-math">\(i=0+1i\text{.}\)</span></p></article><article class="remark remark-like" id="rm_complex_equality"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">0.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Complex equality.</span>
 </h4>
-<p id="p-191">When moving to the notation <a href="" class="xref" data-knowl="./knowl/eq_complex_notation.html" title="Equation 0.4.1">(0.4.1)</a> do not lose sight of the essential nature of complex numbers as pairs of real numbers. This is important, for example, for understanding what it means for complex numbers <span class="process-math">\(z=(a,b)=a+bi\)</span> and <span class="process-math">\(w=(c,d)=c+di\)</span> to be equal. According to the general definition of equality for tuples (<a href="" class="xref" data-knowl="./knowl/d_cartesian_product.html" title="Definition 0.1.10: Cartesian product">0.1.10</a>), we have</p>
+<p id="p-254">When moving to the notation <a href="" class="xref" data-knowl="./knowl/eq_complex_notation.html" title="Equation 0.4.1">(0.4.1)</a> do not lose sight of the essential nature of complex numbers as pairs of real numbers. This is important, for example, for understanding what it means for complex numbers <span class="process-math">\(z=(a,b)=a+bi\)</span> and <span class="process-math">\(w=(c,d)=c+di\)</span> to be equal. According to the general definition of equality for tuples (<a href="" class="xref" data-knowl="./knowl/d_cartesian_product.html" title="Definition 0.1.10: Cartesian product">0.1.10</a>), we have</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_complex_notation.html ./knowl/d_cartesian_product.html" id="eq_complex_equality">
 \begin{equation}
 z=w\iff a=c \text{ and } b=d \iff \Re z=\Re w \text{ and } \Im z=\Im w\text{.}\tag{0.4.2}
@@ -429,18 +430,18 @@ z=w\iff a=c \text{ and } b=d \iff \Re z=\Re w \text{ and } \Im z=\Im w\text{.}\t
 </div></article><article class="definition definition-like" id="d_complex_arithmetic"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Complex addition and multiplication.</span>
 </h4>
-<p id="p-192">We define <dfn class="terminology">addition</dfn> and <dfn class="terminology">multiplication</dfn> operations on <span class="process-math">\(\C\)</span> as follows. Let <span class="process-math">\(z=a+bi\)</span> and <span class="process-math">\(w=c+di\text{,}\)</span> where <span class="process-math">\(a,b,c,d\in \R\text{.}\)</span></p>
+<p id="p-255">We define <dfn class="terminology">addition</dfn> and <dfn class="terminology">multiplication</dfn> operations on <span class="process-math">\(\C\)</span> as follows. Let <span class="process-math">\(z=a+bi\)</span> and <span class="process-math">\(w=c+di\text{,}\)</span> where <span class="process-math">\(a,b,c,d\in \R\text{.}\)</span></p>
 <ol class="decimal">
-<li id="li-38">
-<span class="heading"><span class="title">Complex addition.</span></span><p id="p-193">The <dfn class="terminology">sum</dfn> <span class="process-math">\(z+w\)</span> is the complex number defined as</p>
+<li id="li-60">
+<span class="heading"><span class="title">Complex addition.</span></span><p id="p-256">The <dfn class="terminology">sum</dfn> <span class="process-math">\(z+w\)</span> is the complex number defined as</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 z+w=(a+c)+(b+d)i\text{.}
 \end{equation*}
 </div>
 </li>
-<li id="li-39">
-<span class="heading"><span class="title">Complex multiplication.</span></span><p id="p-194">The <dfn class="terminology">product</dfn> <span class="process-math">\(zw\)</span> is the complex number defined as</p>
+<li id="li-61">
+<span class="heading"><span class="title">Complex multiplication.</span></span><p id="p-257">The <dfn class="terminology">product</dfn> <span class="process-math">\(zw\)</span> is the complex number defined as</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 z\, w=(ac-bd)+(ad+bc)i\text{.}
@@ -450,19 +451,19 @@ z\, w=(ac-bd)+(ad+bc)i\text{.}
 </ol></article><article class="example example-like" id="eg_complex_add_mult"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">0.4.5</span><span class="period">.</span>
 </h4>
-<p id="p-195">Let <span class="process-math">\(z=2+3i\)</span> and <span class="process-math">\(w=-1+2i\text{.}\)</span> We have</p>
+<p id="p-258">Let <span class="process-math">\(z=2+3i\)</span> and <span class="process-math">\(w=-1+2i\text{.}\)</span> We have</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-18">
 \begin{align*}
 z+w \amp =(2-1)+(3+2)i=1+5i\\
 zw  \amp=(-2-6)+(4-3)i=-8+i 
 \end{align*}
-</div></article><p id="p-196">Our first theorem indicates that complex addition and multiplication behave in much the same way as real addition and multiplication. A number system that satisfies the properties of <a href="" class="xref" data-knowl="./knowl/th_complex_arithmetic_basic.html" title="Theorem 0.4.6: Basic properties of complex arithmetic">Theorem 0.4.6</a> is called a <em class="emphasis">field</em>. You should think of the field properties as guaranteeing that we can perform arithmetic in the complex numbers (or any fied) essentially as we do with real numbers.</p>
+</div></article><p id="p-259">Our first theorem indicates that complex addition and multiplication behave in much the same way as real addition and multiplication. A number system that satisfies the properties of <a href="" class="xref" data-knowl="./knowl/th_complex_arithmetic_basic.html" title="Theorem 0.4.6: Basic properties of complex arithmetic">Theorem 0.4.6</a> is called a <em class="emphasis">field</em>. You should think of the field properties as guaranteeing that we can perform arithmetic in the complex numbers (or any fied) essentially as we do with real numbers.</p>
 <article class="theorem theorem-like" id="th_complex_arithmetic_basic"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">0.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Basic properties of complex arithmetic.</span>
 </h4>
 <ol class="decimal">
-<li id="li-40">
-<span class="heading"><span class="title">Commutativity.</span></span><p id="p-197">For all <span class="process-math">\(z, w\in \C\)</span> we have</p>
+<li id="li-62">
+<span class="heading"><span class="title">Commutativity.</span></span><p id="p-260">For all <span class="process-math">\(z, w\in \C\)</span> we have</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-19">
 \begin{align*}
 z+ w \amp =  w+z\\
@@ -470,8 +471,8 @@ z w  \amp= wz \text{.}
 \end{align*}
 </div>
 </li>
-<li id="li-41">
-<span class="heading"><span class="title">Associativity.</span></span><p id="p-198">For all <span class="process-math">\(z, w, u \in \C\)</span> we have</p>
+<li id="li-63">
+<span class="heading"><span class="title">Associativity.</span></span><p id="p-261">For all <span class="process-math">\(z, w, u \in \C\)</span> we have</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-20">
 \begin{align*}
 z+( w+ u) \amp = (z+ w)+ u\\
@@ -479,16 +480,16 @@ z( w u)  \amp=(z w) u \text{.}
 \end{align*}
 </div>
 </li>
-<li id="li-42">
-<span class="heading"><span class="title">Distributivity.</span></span><p id="p-199">For all <span class="process-math">\(z, w, u \in \C\)</span> we have</p>
+<li id="li-64">
+<span class="heading"><span class="title">Distributivity.</span></span><p id="p-262">For all <span class="process-math">\(z, w, u \in \C\)</span> we have</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 z( w+ u)=z w+z u\text{.}
 \end{equation*}
 </div>
 </li>
-<li id="li-43">
-<span class="heading"><span class="title">Additive identity.</span></span><p id="p-200">The complex number <span class="process-math">\(0=0+0i\in \C\)</span> satisfies</p>
+<li id="li-65">
+<span class="heading"><span class="title">Additive identity.</span></span><p id="p-263">The complex number <span class="process-math">\(0=0+0i\in \C\)</span> satisfies</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 0+z=z
@@ -496,8 +497,8 @@ z( w+ u)=z w+z u\text{.}
 </div>
 <p class="continuation">for all <span class="process-math">\(z\in \C\text{.}\)</span> We call <span class="process-math">\(0\)</span> the <dfn class="terminology">additive identity</dfn> of <span class="process-math">\(\C\text{.}\)</span></p>
 </li>
-<li id="li-44">
-<span class="heading"><span class="title">Additive inverse.</span></span><p id="p-201">For all <span class="process-math">\(z=(a,b)=a+bi\in \C\)</span> the element <span class="process-math">\(-z=(-a,-b)=-a+(-b)i\in \C\)</span> satisfies</p>
+<li id="li-66">
+<span class="heading"><span class="title">Additive inverse.</span></span><p id="p-264">For all <span class="process-math">\(z=(a,b)=a+bi\in \C\)</span> the element <span class="process-math">\(-z=(-a,-b)=-a+(-b)i\in \C\)</span> satisfies</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 z+ -z=0\text{.}
@@ -505,8 +506,8 @@ z+ -z=0\text{.}
 </div>
 <p class="continuation">We call <span class="process-math">\(-z\)</span> the <dfn class="terminology">additive inverse</dfn>of <span class="process-math">\(z\text{.}\)</span></p>
 </li>
-<li id="li-45">
-<span class="heading"><span class="title">Multiplicative identity.</span></span><p id="p-202">The complex number <span class="process-math">\(1=1+0i\)</span> satisfies</p>
+<li id="li-67">
+<span class="heading"><span class="title">Multiplicative identity.</span></span><p id="p-265">The complex number <span class="process-math">\(1=1+0i\)</span> satisfies</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 1z=z
@@ -514,8 +515,8 @@ z+ -z=0\text{.}
 </div>
 <p class="continuation">for all <span class="process-math">\(z\in \C\text{.}\)</span> We call <span class="process-math">\(1\)</span> the <dfn class="terminology">multiplicative identity</dfn> of <span class="process-math">\(\C\text{.}\)</span></p>
 </li>
-<li id="li-46">
-<span class="heading"><span class="title">Multiplicative inverse.</span></span><p id="p-203">For all <em class="emphasis">nonzero</em> complex numbers <span class="process-math">\(z=(a,b)=a+bi\in \C\)</span> (i.e., <span class="process-math">\(a\ne 0\)</span> of <span class="process-math">\(b\ne 0\)</span>), the complex number <span class="process-math">\(z^{-1}=\frac{a}{a^2+b^2}+\frac{-b}{a^2+b^2}i \in \C\)</span> satisfies</p>
+<li id="li-68">
+<span class="heading"><span class="title">Multiplicative inverse.</span></span><p id="p-266">For all <em class="emphasis">nonzero</em> complex numbers <span class="process-math">\(z=(a,b)=a+bi\in \C\)</span> (i.e., <span class="process-math">\(a\ne 0\)</span> of <span class="process-math">\(b\ne 0\)</span>), the complex number <span class="process-math">\(z^{-1}=\frac{a}{a^2+b^2}+\frac{-b}{a^2+b^2}i \in \C\)</span> satisfies</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 z\,z^{-1}=1\text{.}
@@ -526,7 +527,7 @@ z\,z^{-1}=1\text{.}
 </ol></article><article class="example example-like" id="example-13"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">0.4.7</span><span class="period">.</span>
 </h4>
-<p id="p-204">Let <span class="process-math">\(z=-2+i\text{.}\)</span> According to <a href="" class="xref" data-knowl="./knowl/th_complex_arithmetic_basic.html" title="Theorem 0.4.6: Basic properties of complex arithmetic">Theorem 0.4.6</a>, the multiplicative inverse of <span class="process-math">\(z\)</span>  is</p>
+<p id="p-267">Let <span class="process-math">\(z=-2+i\text{.}\)</span> According to <a href="" class="xref" data-knowl="./knowl/th_complex_arithmetic_basic.html" title="Theorem 0.4.6: Basic properties of complex arithmetic">Theorem 0.4.6</a>, the multiplicative inverse of <span class="process-math">\(z\)</span>  is</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/th_complex_arithmetic_basic.html">
 \begin{equation*}
 z^{-1}=\frac{-2}{4+1}+\frac{-1}{4+1}i=\frac{-2}{5}+{-1}{5}i\text{.}
@@ -542,7 +543,7 @@ zz^{-1} \amp =(-2+i)(\frac{-2}{5}+{-1}{5}i)\\
 </div></article><article class="remark remark-like" id="rm_complex_reals"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">0.4.8</span><span class="period">.</span><span class="space"> </span><span class="title">Complex numbers as extension of the reals.</span>
 </h4>
-<p id="p-205">From now on we identify the real numbers as the set of complex numbers of the form <span class="process-math">\(a=a+0i\text{,}\)</span> where <span class="process-math">\(a\in \C\text{:}\)</span> equivalently, the set of complex numbers <span class="process-math">\(z\)</span> satisfying <span class="process-math">\(\Im z=0\text{.}\)</span> Under this identification <span class="process-math">\(\R\)</span> can be thought of as a subset of <span class="process-math">\(\C\text{,}\)</span> and we may add one more link to the chain of subsets given in <a href="" class="xref" data-knowl="./knowl/eq_chain_numbersystems.html" title="Equation 0.1.1">(0.1.1)</a>:</p>
+<p id="p-268">From now on we identify the real numbers as the set of complex numbers of the form <span class="process-math">\(a=a+0i\text{,}\)</span> where <span class="process-math">\(a\in \C\text{:}\)</span> equivalently, the set of complex numbers <span class="process-math">\(z\)</span> satisfying <span class="process-math">\(\Im z=0\text{.}\)</span> Under this identification <span class="process-math">\(\R\)</span> can be thought of as a subset of <span class="process-math">\(\C\text{,}\)</span> and we may add one more link to the chain of subsets given in <a href="" class="xref" data-knowl="./knowl/eq_chain_numbersystems.html" title="Equation 0.1.1">(0.1.1)</a>:</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_chain_numbersystems.html" id="eq_chain_numbersystems_complex">
 \begin{equation}
 \Z\subseteq\Q\subseteq\R\subseteq\C\text{.}\tag{0.4.3}
@@ -558,12 +559,12 @@ zz^{-1} \amp =(-2+i)(\frac{-2}{5}+{-1}{5}i)\\
 \end{align*}
 </div>
 <p class="continuation">This allows us to think of the complex numbers as a larger number system containing the reals, whose arithmetic operations are <em class="emphasis">extensions</em> of real number operations.</p></article></section><section class="subsection" id="ss_complex_conjugation"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">0.4.2</span> <span class="title">Absolute value and complex conjugation</span>
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Absolute value and complex conjugation</span>
 </h3>
-<section class="introduction" id="introduction-8"><p id="p-206">We end our introduction to the complex numbers with two further operations: the <em class="emphasis">absolute value</em> and <em class="emphasis">complex conjugation</em>. <a href="" class="xref" data-knowl="./knowl/th_complex_conjugation_modulus.html" title="Theorem 0.4.10: Properties of conjugation and modulus">Theorem 0.4.10</a> is an indication of their usefulness, and articulates how they interact with the other operations on <span class="process-math">\(\C\text{.}\)</span></p></section><article class="definition definition-like" id="d_complex_absolute_conjugation"><h4 class="heading">
+<section class="introduction" id="introduction-8"><p id="p-269">We end our introduction to the complex numbers with two further operations: the <em class="emphasis">absolute value</em> and <em class="emphasis">complex conjugation</em>. <a href="" class="xref" data-knowl="./knowl/th_complex_conjugation_modulus.html" title="Theorem 0.4.10: Properties of conjugation and modulus">Theorem 0.4.10</a> is an indication of their usefulness, and articulates how they interact with the other operations on <span class="process-math">\(\C\text{.}\)</span></p></section><article class="definition definition-like" id="d_complex_absolute_conjugation"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.4.9</span><span class="period">.</span><span class="space"> </span><span class="title">Absolute value and complex conjugation.</span>
 </h4>
-<p id="p-207">Let <span class="process-math">\(z=(a,b)=a+bi\)</span> be a complex number. The  <dfn class="terminology">absolute value</dfn> (or <dfn class="terminology">modulus</dfn>) of <span class="process-math">\(z\text{,}\)</span> denoted <span class="process-math">\(\abs{z}\text{,}\)</span> is defined as</p>
+<p id="p-270">Let <span class="process-math">\(z=(a,b)=a+bi\)</span> be a complex number. The  <dfn class="terminology">absolute value</dfn> (or <dfn class="terminology">modulus</dfn>) of <span class="process-math">\(z\text{,}\)</span> denoted <span class="process-math">\(\abs{z}\text{,}\)</span> is defined as</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \abs{z}=\sqrt{a^2+b^2}\text{.}
@@ -577,18 +578,18 @@ zz^{-1} \amp =(-2+i)(\frac{-2}{5}+{-1}{5}i)\\
 </div></article><article class="theorem theorem-like" id="th_complex_conjugation_modulus"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">0.4.10</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of conjugation and modulus.</span>
 </h4>
-<p id="p-208">The following properties hold for all <span class="process-math">\(\boldz, \boldw\in \C\text{.}\)</span></p>
+<p id="p-271">The following properties hold for all <span class="process-math">\(\boldz, \boldw\in \C\text{.}\)</span></p>
 <ol class="decimal">
-<li id="li-47"><p id="p-derived-li-47"><span class="process-math">\(\overline{z+w} =\overline{z}+\overline{w}\text{.}\)</span></p></li>
-<li id="li-48"><p id="p-209"><span class="process-math">\(\overline{zw}=\overline{z}\overline{w}\text{.}\)</span></p></li>
-<li id="li-49"><p id="p-210"><span class="process-math">\(\abs{zw}=\abs{z}\abs{w}\text{.}\)</span></p></li>
-<li id="li-50"><p id="p-211"><span class="process-math">\(z\overline{z}=\abs{z}^2\text{.}\)</span></p></li>
-<li id="li-51"><p id="p-212"><span class="process-math">\(z^{-1}=\frac{z}{\abs{z}}\)</span> (if <span class="process-math">\(z\ne 0\)</span>).</p></li>
-<li id="li-52"><p id="p-213"><span class="process-math">\(z\in \R\iff \overline{z}=z\text{.}\)</span></p></li>
+<li id="li-69"><p id="p-derived-li-69"><span class="process-math">\(\overline{z+w} =\overline{z}+\overline{w}\text{.}\)</span></p></li>
+<li id="li-70"><p id="p-272"><span class="process-math">\(\overline{zw}=\overline{z}\overline{w}\text{.}\)</span></p></li>
+<li id="li-71"><p id="p-273"><span class="process-math">\(\abs{zw}=\abs{z}\abs{w}\text{.}\)</span></p></li>
+<li id="li-72"><p id="p-274"><span class="process-math">\(z\overline{z}=\abs{z}^2\text{.}\)</span></p></li>
+<li id="li-73"><p id="p-275"><span class="process-math">\(z^{-1}=\frac{z}{\abs{z}}\)</span> (if <span class="process-math">\(z\ne 0\)</span>).</p></li>
+<li id="li-74"><p id="p-276"><span class="process-math">\(z\in \R\iff \overline{z}=z\text{.}\)</span></p></li>
 </ol></article><article class="example example-like" id="example-14"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">0.4.11</span><span class="period">.</span>
 </h4>
-<p id="p-214">Let <span class="process-math">\(z=3-i\text{.}\)</span> Observe that</p>
+<p id="p-277">Let <span class="process-math">\(z=3-i\text{.}\)</span> Observe that</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/th_complex_conjugation_modulus.html" id="md-23">
 \begin{align*}
 z\overline{z} \amp=(3-i)(3+i) \\

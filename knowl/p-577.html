@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-22T12:31:55-07:00       *-->
+<!--*       on 2022-07-25T15:04:07-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,23 +14,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>The <dfn class="terminology"><span class="process-math">\(n\times n\)</span> identity matrix</dfn> is the square <span class="process-math">\(n\times n\)</span> matrix</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Let <span class="process-math">\(\boldb_j\)</span> be the <span class="process-math">\(j\)</span>-th column of <span class="process-math">\(B\text{,}\)</span> considered as a column vector. Then</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-I_n=\begin{bmatrix}1\amp 0\amp 0 \amp \dots\amp 0\\ 0\amp 1 \amp 0 \amp \dots \amp 0\\
-\vdots \\
-0\amp 0\amp \dots \amp 0\amp 1\end{bmatrix}
-\end{equation*}
+\begin{align*}
+AB \amp =A\begin{bmatrix}\vert \amp \vert \amp  \amp \vert \\ \boldb_1\amp \boldb_2\amp \cdots\amp \boldb_r\\ \vert \amp \vert \amp  \amp \vert \end{bmatrix}\\
+\amp=\begin{bmatrix}\vert \amp \vert \amp  \amp \vert \\ A\boldb_1\amp A\boldb_2\amp \cdots\amp A\boldb_r\\ \vert \amp  \vert \amp  \amp  \vert \end{bmatrix}\text{.}
+\end{align*}
 </div>
-<p class="continuation">with ones along the diagonal and zeros everywhere else. In other words, for all <span class="process-math">\(1\leq i\leq n\)</span> ans <span class="process-math">\(1\leq j\leq n\text{,}\)</span> we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-(I_n)_{ij}=\begin{cases} 1 \amp \text{if } i=j \\ 0\amp \text{if } i\ne j
-\end{cases}\text{.}
-\end{equation*}
-</div>
-<p class="continuation">When the size <span class="process-math">\(n\)</span> of the identity matrix is not important, we will often denote it simply as <span class="process-math">\(I\text{.}\)</span></p>
-<span class="incontext"><a href="s_algebraic.html#p-577" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_matrix.html#p-577" class="internal">in-context</a></span>
 </body>
 </html>

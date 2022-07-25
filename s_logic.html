@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-22T12:31:36-07:00       *-->
+<!--*       on 2022-07-25T15:03:46-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -17,7 +17,7 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Linear algebra: the theory of vector spaces and linear transformations">
 <meta property="book:author" content="Aaron Greicius">
-<script>window.MathJax = {
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -388,8 +388,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <li class="link"><a href="appendix-defs.html" data-scroll="appendix-defs" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></li>
 <li class="link"><a href="appendix-thms.html" data-scroll="appendix-thms" class="internal"><span class="codenumber">C</span> <span class="title">Theory and procedures</span></a></li>
 <li class="link"><a href="appendix-egs.html" data-scroll="appendix-egs" class="internal"><span class="codenumber">D</span> <span class="title">Examples</span></a></li>
-<li class="link"><a href="appendix-mantras.html" data-scroll="appendix-mantras" class="internal"><span class="codenumber">E</span> <span class="title">Video examples and figures</span></a></li>
-<li class="link"><a href="appendix-vids.html" data-scroll="appendix-vids" class="internal"><span class="codenumber">F</span> <span class="title">Mantras and fiats</span></a></li>
+<li class="link"><a href="appendix-sage.html" data-scroll="appendix-sage" class="internal"><span class="codenumber">E</span> <span class="title">Sage examples</span></a></li>
+<li class="link"><a href="appendix-mantras.html" data-scroll="appendix-mantras" class="internal"><span class="codenumber">F</span> <span class="title">Video examples and figures</span></a></li>
+<li class="link"><a href="appendix-vids.html" data-scroll="appendix-vids" class="internal"><span class="codenumber">G</span> <span class="title">Mantras and fiats</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
@@ -397,7 +398,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <span class="type">Section</span> <span class="codenumber">0.2</span> <span class="title">Logic</span>
 </h2>
 <section class="introduction" id="introduction-2"><p id="p-96">When dealing with mathematical statements and arguments, we must pay close attention to logical structure. This section addresses Different logical connectors give rise to different proof approaches. For the rest of this section, the symbols <span class="process-math">\(\mathcal{P}\)</span> and <span class="process-math">\(\mathcal{Q}\)</span> will stand for propositions.</p></section><section class="subsection" id="ss_propositional_calculus"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">0.2.1</span> <span class="title">Propositional logic</span>
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Propositional logic</span>
 </h3>
 <p id="p-97">A <em class="emphasis">proposition</em> is a sentence that is either true or false. We build <em class="emphasis">compound propositions</em> from component propositions using <em class="emphasis">logical operators</em> (or <em class="emphasis">logical connectors</em>); the truth value of the compound proposition is defined as a function of the truth values of the component propositions.</p>
 <article class="definition definition-like" id="d_logical_ops"><h4 class="heading">
@@ -463,7 +464,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <p id="p-107">Our definitions of the logical operators above are chosen to agree with their usage in a very particular type of discourse: namely, <em class="emphasis">mathematical</em> discourse. They do not always agree with their use in natural language: hence the modifier “logical” in their titles.</p>
 <p id="p-108">For example, disjunctions in natural language of the form “<span class="process-math">\(\mathcal{P}\)</span> or <span class="process-math">\(\mathcal{Q}\)</span>” are often understood to be true when <span class="process-math">\(\mathcal{P}\)</span> is true or <span class="process-math">\(\mathcal{Q}\)</span> is true, <em class="emphasis">but not both</em>. This notion of disjunction is called the <em class="emphasis">exclusive or</em> in logic, in contrast to the standard logical or.</p>
 <p id="p-109">Similarly, according to our definition, the implication “If the President of the US is a dog, then the Vice President of the US is a cat” is true, since the proposition “The President of the US is a dog” is false. (In logic we say the implication is <em class="emphasis">vacuously true</em> in this case.) However, working outside of our logical definitions of truth value, we may have been inclined to treat this implication as false, since both “The President of the US is a dog” and “The Vice President of the US is a cat” are false.</p></article></section><section class="subsection" id="ss_predicate_logic"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">0.2.2</span> <span class="title">Predicate logic</span>
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Predicate logic</span>
 </h3>
 <p id="p-110">Propositions like “All humans are mortal” and “Every positive real number has a square-root” are modeled in logic in the form “For all <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(P(x)\)</span>” and “For all <span class="process-math">\(r\text{,}\)</span> there exists an <span class="process-math">\(s\)</span> such that <span class="process-math">\(Q(r,s)\)</span>”, where <span class="process-math">\(P(x)\)</span> stands for the phrase “<span class="process-math">\(x\)</span> is mortal” and <span class="process-math">\(Q(r,s)\)</span> stands for the phrase “<span class="process-math">\(s\)</span> is a square-root of <span class="process-math">\(r\)</span>”. Observe that <span class="process-math">\(P(x)\)</span> and <span class="process-math">\(Q(r,s)\)</span> on their own are not propositions; there is no truth value to “<span class="process-math">\(x\)</span> is mortal” or “<span class="process-math">\(s\)</span> is a square-root of <span class="process-math">\(r\)</span>”. Instead, we think of <span class="process-math">\(P(x)\)</span> and <span class="process-math">\(Q(r,s)\)</span> as <em class="emphasis">functions</em> which return propositions when evaluated at a specific choice for <span class="process-math">\(x\text{,}\)</span> or for <span class="process-math">\(r\)</span> and <span class="process-math">\(s\text{.}\)</span> For example, evaluating <span class="process-math">\(P(x)\)</span> at <span class="process-math">\(x=\text{Aaron Greicius}\)</span> yields the proposition “Aaron Greicius is mortal”, which happens to be true at the time of writing. Similarly evaluating <span class="process-math">\(Q(r,s)\)</span> at  <span class="process-math">\(r=2, s=11\)</span> yields the proposition “<span class="process-math">\(11\)</span> is a square-root of 2”, which happens to be false. In logic  <span class="process-math">\(P(x)\)</span> and <span class="process-math">\(Q(r,s)\)</span> are called <em class="emphasis">propositional functions</em> (also called  <em class="emphasis">predicates</em>): functions whose outputs are propositions.</p>
 <p id="p-111">The propositions “For all <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(P(x)\)</span>” and “For all <span class="process-math">\(r\text{,}\)</span> there exists an <span class="process-math">\(s\)</span> such that <span class="process-math">\(Q(r,s)\)</span>” are obtained from <span class="process-math">\(P(x)\)</span> and <span class="process-math">\(Q(r,s)\)</span> by <em class="emphasis">bounding</em> them with a series of <em class="emphasis">quantifiers</em> (e.g., “for all <span class="process-math">\(x\)</span>”, “there exists an <span class="process-math">\(s\)</span>”). The definition below allows us to assign truth values to such propositions.</p>
@@ -544,6 +545,135 @@ x&gt;0 \implies \exists y\, Q(x,y)\text{.}
 </div>
 <p class="continuation">(The last link in our chain uses the fact that <span class="process-math">\(\neg(\mathcal{Q}\implies\mathcal{R})\)</span> is equivalent to <span class="process-math">\(\mathcal{Q}\land\neg\mathcal{R}\text{,}\)</span> as a truth table easily shows.) Translating back into English, we conclude that the limit not existing (<span class="process-math">\(\neg\mathcal{P}\)</span>) is equivalent to the following: for every <span class="process-math">\(L\in \mathbb{R}\)</span> there is an <span class="process-math">\(\epsilon\gt 0\)</span> such that for all <span class="process-math">\(\delta\gt 0\)</span> there exists an <span class="process-math">\(x\in\mathbb{R}\)</span> satisfying <span class="process-math">\(\val{x-c}\lt \delta\)</span> and <span class="process-math">\(\val{f(x)-L}\not\gt\epsilon\text{.}\)</span> Quite a mouthful!</p>
 </div></div>
+</div></article></section><section class="exercises" id="s_logic_ex"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-6"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div id="webwork-6" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="6" data-sourceFilePath="Library/NAU/setFoundations/MAT320_0201.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-129">Assign truth values to the propositions <span class="process-math">\(P, Q,\)</span> and <span class="process-math">\(R\)</span> so that the given proposition is false. Use T for true and F for false.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-130">
+\begin{equation*}
+\left[ P \implies (Q\wedge R) \right] \implies \left[ (P\wedge Q) \vee R\right]
+\end{equation*}
+</div>
+<p id="p-131">Answer: P: <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> Q: <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> R: <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-132">F</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-133">No correct answer specified</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><p id="p-134">F</p></div></div>
+</div>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-6')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="exercise-7"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div id="webwork-7" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="7" data-sourceFilePath="Library/ASU-topics/setDiscrete/katie1.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-135">Determine the truth value of the following statements if the universe of discourse is the set of real numbers.</p>
+<ol id="p-136" class="lower-alpha">
+<li id="li-36"><p id="p-137"><span class="process-math">\(\displaystyle \exists x  (x^2 &gt; x)\)</span></p></li>
+<li id="li-37"><p id="p-138"><span class="process-math">\(\displaystyle \exists x (x^2+2 &gt; 1)\)</span></p></li>
+<li id="li-38"><p id="p-139"><span class="process-math">\(\displaystyle \forall x  (x^2 \neq x )\)</span></p></li>
+<li id="li-39"><p id="p-140"><span class="process-math">\(\displaystyle \exists x (x^2=2)\)</span></p></li>
+<li id="li-40"><p id="p-141"><span class="process-math">\(\displaystyle \exists x \forall y (xy=0)\)</span></p></li>
+<li id="li-41"><p id="p-142"><span class="process-math">\(\displaystyle \exists x (x^2= -1)\)</span></p></li>
+</ol>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-7')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="exercise-8"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div id="webwork-8" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="8" data-sourceFilePath="Library/ASU-topics/setDiscrete/katie6.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-143">Let <span class="process-math">\(C(x)\)</span> be the statement "<span class="process-math">\(x\)</span>  has a cat", let <span class="process-math">\(D(x)\)</span> be the statement "<span class="process-math">\(x\)</span> has a dog" and let <span class="process-math">\(F(x)\)</span> be the statement "<span class="process-math">\(x\)</span>has a ferret". Express each of the following statements in terms of  <span class="process-math">\(C(x)\text{,}\)</span> <span class="process-math">\(D(x)\text{,}\)</span> and <span class="process-math">\(F(x)\text{,}\)</span> quantifiers, and logical connectives. Let the universe of discourse consist of all students in your class. Put the appropriate letter next to the corresponding symbolic form.</p>
+<ol id="p-144" class="lower-alpha">
+<li id="li-42"><p id="p-145"><span class="process-math">\(\displaystyle \exists x (C(x)) \wedge (\exists x D(x)) \wedge (\exists x F(x))\)</span></p></li>
+<li id="li-43"><p id="p-146"><span class="process-math">\(\displaystyle \exists x (C(x) \wedge F(x) \wedge \lnot D(x))\)</span></p></li>
+<li id="li-44"><p id="p-147"><span class="process-math">\(\displaystyle \exists x (C(x) \wedge D(x) \wedge F(x))\)</span></p></li>
+<li id="li-45"><p id="p-148"><span class="process-math">\(\displaystyle \lnot \exists x (C(x) \wedge D(x) \wedge F(x))\)</span></p></li>
+<li id="li-46"><p id="p-149"><span class="process-math">\(\displaystyle \forall x (C(x) \vee D(x) \vee F(x))\)</span></p></li>
+</ol>
+<p id="p-150">a)  A student in your class has a cat, a dog, and a ferret.</p>
+<p id="p-151">b)  All students in your class have a cat, a dog, or a ferret.</p>
+<p id="p-152">c)  Some student in your class has a cat and a ferret but not a dog.</p>
+<p id="p-153">d)  No student in this class has a cat, a dog, and a ferret.</p>
+<p id="p-154">e)  For each of the three animals, cats, dogs, and ferrets, there is a student in your class who has one of these animals.</p>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-8')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="exercise-9"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div id="webwork-9" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="9" data-sourceFilePath="Library/ASU-topics/setDiscrete/katie1.4_2.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-155">Let  P(x) be the statement "x  is a duck", let  Q(x) be the statement "x  is one of my poultry", let  R(x) be the statement "x  is an officer", and let S(x) be the statement "x  is willing to waltz". Express each of the following statements in terms of  P(x), Q(x), R(x) and S(x), quantifiers, and logical connectives. Let the universe of discourse consist of all living creatures. Put the appropriate letter next to the corresponding symbolic form.</p>
+<ol id="p-156" class="lower-alpha">
+<li id="li-47"><p id="p-157"><span class="process-math">\(\displaystyle \forall x (Q(x) \rightarrow \lnot R(x))\)</span></p></li>
+<li id="li-48"><p id="p-158"><span class="process-math">\(\displaystyle \forall x (R(x) \rightarrow S(x))\)</span></p></li>
+<li id="li-49"><p id="p-159"><span class="process-math">\(\displaystyle \exists x ( P(x) \wedge \lnot S(x))\)</span></p></li>
+<li id="li-50"><p id="p-160"><span class="process-math">\(\displaystyle \forall x (Q(x) \rightarrow P(x))\)</span></p></li>
+<li id="li-51"><p id="p-161"><span class="process-math">\(\displaystyle \forall x (P(x) \rightarrow \lnot S(x))\)</span></p></li>
+</ol>
+<p id="p-162">a)  Some ducks are not willing to waltz.</p>
+<p id="p-163">b)  No ducks are willing to waltz.</p>
+<p id="p-164">c)  No officers ever decline to waltz.</p>
+<p id="p-165">d)  All my poultry are ducks.</p>
+<p id="p-166">e)  My poultry are not officers.</p>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-9')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="exercise-10"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div id="webwork-10" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="10" data-sourceFilePath="Library/NAU/setFoundations/MAT320_0202.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-167">Determine whether the given proposition is true or false, for the universe of all real numbers. Use T for true and F for false.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-168">
+\begin{equation*}
+(\forall x)(\exists y)(x^2+y=0)
+\end{equation*}
+</div>
+<p id="p-169">Answer: <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-170">
+\begin{equation*}
+(\exists x)(\forall y)(x^2+y=0)
+\end{equation*}
+</div>
+<p id="p-171">Answer: <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-172">
+\begin{equation*}
+(\exists x)(\exists y)(x^2+y=0)
+\end{equation*}
+</div>
+<p id="p-173">Answer: <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-174">
+\begin{equation*}
+(\forall y)(\exists x)(y=x^2)
+\end{equation*}
+</div>
+<p id="p-175">Answer: <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-176">
+\begin{equation*}
+(\forall y)[y\geq 0 \implies (\exists x)(y=x^2)]
+\end{equation*}
+</div>
+<p id="p-177">Answer: <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><p id="p-178">T</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-179">F</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><p id="p-180">T</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-15" id="answer-15"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><p id="p-181">F</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-16" id="answer-16"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-16"><div class="answer solution-like"><p id="p-182">T</p></div></div>
+</div>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-10')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="exercise-11"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div id="webwork-11" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="11" data-sourceFilePath="Library/NAU/setFoundations/MAT320_0401.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-183">Suppose <span class="process-math">\({ A_i  \ | \ i\in I }\)</span> is an indexed family of sets. For each statement below, write the letter of the equivalent symbolic form.</p>
+<ol id="p-184" class="lower-alpha">
+<li id="li-52"><p id="p-185"><span class="process-math">\(B\cap A_i \not = \emptyset\)</span> for every <span class="process-math">\(i\)</span></p></li>
+<li id="li-53"><p id="p-186"><span class="process-math">\(\displaystyle B \subseteq (\bigcup_{i \in I} A_i)\)</span></p></li>
+<li id="li-54"><p id="p-187"><span class="process-math">\(B\subseteq A_i\)</span> for some <span class="process-math">\(i\)</span></p></li>
+</ol>
+<ol id="p-188" class="upper-alpha">
+<li id="li-55"><p id="p-189"><span class="process-math">\(\displaystyle (\forall i \in I) (\exists x \in B)(x \in A_i)\)</span></p></li>
+<li id="li-56"><p id="p-190"><span class="process-math">\(\displaystyle (\exists i \in I)(\forall x \in B)(x \in A_i)\)</span></p></li>
+<li id="li-57"><p id="p-191"><span class="process-math">\(\displaystyle (\forall x \in B)(\exists i \in I)(x \in A_i)\)</span></p></li>
+</ol>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-11')">Make Interactive</button></div>
 </div></article></section></section></div></main>
 </div>
 </body>

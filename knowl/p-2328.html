@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-22T12:32:14-07:00       *-->
+<!--*       on 2022-07-25T15:04:26-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,20 +14,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Let <span class="process-math">\(B=(x^n, x^{n-1}, \dots, x, 1)\)</span> be the standard basis of <span class="process-math">\(P_n\text{.}\)</span> Fix any constant <span class="process-math">\(a\in \R\text{,}\)</span> and let <span class="process-math">\(B'=((x-a)^n, (x-a)^{n-1}, \dots, (x-a), 1)\text{.}\)</span> It is easy to see that <span class="process-math">\(B'\)</span> is also an ordered basis: a simple degree argument shows that the polynomials <span class="process-math">\(p_k(x)=(x-a)^k\)</span> are linearly independent. It follows from Taylor's theorem (from single-variable calculus) that given any polynomial <span class="process-math">\(p\in P_n\)</span> we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-p(x)=p(a)+p'(a)(x-a)+\frac{p''(x)}{2}(x-a)^2+\cdots \frac{p^{(n)}(a)}{n!}(x-a)^n\text{.}
-\end{equation*}
-</div>
-<p class="continuation">We call this expression the expansion of <span class="process-math">\(p(x)\)</span> about <span class="process-math">\(x=a\text{.}\)</span> In terms of coordinate vectors, this means that</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation}
-[p]_{B'}=\left(\frac{p^{(n)}(a)}{n!}, \frac{p^{(n-1)}(a)}{(n-1)!}, \dots, p'(a), p(a)\right)\text{.}\tag{5.3.2}
-\end{equation}
-</div>
-<p class="continuation">In other words, Taylor's theorem provides a simple derivative formula for computing coordinate vectors with respect to the basis <span class="process-math">\(B'\text{.}\)</span></p>
-<span class="incontext"><a href="s_changeofbasis.html#p-2328" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>The diagram being commutative here means that starting with an element <span class="process-math">\(\boldv\in V\)</span> in the top left of the diagram, whether we travel to the bottom right of the diagram either by first applying <span class="process-math">\(T\)</span> and then applying <span class="process-math">\([\hspace{5pt}]_{B'}\)</span> (“go right, then down”), or else by first applying <span class="process-math">\([\hspace{5pt}]_B\)</span> and then applying <span class="process-math">\([T]_B^{B'}\)</span> (“go down, then right”), we get the same result! (The bottom map should technically be labeled <span class="process-math">\(T_A\text{,}\)</span> where <span class="process-math">\(A=[T]_B^{B'}\text{,}\)</span> but this would detract from the elegance of the diagram.)</p>
+<span class="incontext"><a href="s_matrixreps.html#p-2328" class="internal">in-context</a></span>
 </body>
 </html>

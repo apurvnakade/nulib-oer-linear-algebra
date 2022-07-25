@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-22T12:32:08-07:00       *-->
+<!--*       on 2022-07-25T15:04:20-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,12 +15,19 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Let <span class="process-math">\(q(x)=x\text{.}\)</span> Give a parametric description of the set</p>
+<p>Axioms (i)-(ii) follow directly from the definition and various properties of the integral. This is left as an exercise. As for (iii), we have</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-W=\{p(x)\in P_2\colon \langle p(x), q(x)\rangle =0\}\text{.}
+\langle f, f   \rangle=\int_{a}^b f^2(x) \ dx \geq 0\text{,}
 \end{equation*}
 </div>
+<p class="continuation">since <span class="process-math">\(f^2(x)\geq 0\)</span> for all <span class="process-math">\(x\in [a,b]\text{.}\)</span> (This is a property of integration.) Furthermore, since <span class="process-math">\(f^2\)</span> is continuous and <span class="process-math">\(f^2(x)\geq 0\text{,}\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\langle f, f \rangle=\int_a^b f^2(x) \ dx=0 
+\end{equation*}
+</div>
+<p class="continuation">if and only if <span class="process-math">\(f^2(x)=0\)</span> for all <span class="process-math">\(x\in [a,b]\)</span> (a property of integrals of <em class="emphasis">continuous</em> functions) if and only if <span class="process-math">\(f(x)=0\)</span> for all <span class="process-math">\(x\in [a,b]\)</span> if and only if <span class="process-math">\(f=\boldzero\text{,}\)</span> the zero function.</p>
 <span class="incontext"><a href="s_innerproducts.html#p-1978" class="internal">in-context</a></span>
 </body>
 </html>

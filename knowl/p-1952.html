@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-22T12:32:08-07:00       *-->
+<!--*       on 2022-07-25T15:04:20-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>The same reasoning shows that the Cauchy-Schwarz inequality is an actual equality if and only if  <span class="process-math">\(p(t)=0\)</span> for some <span class="process-math">\(t\)</span> if and only if <span class="process-math">\(0=\langle t\boldv-\boldw,t\boldv-\boldw\rangle\)</span> if and only if  <span class="process-math">\(\boldv=t\boldw\)</span> for some <span class="process-math">\(t\)</span> (by positivity).</p>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>We will have many opportunities to “expand out” an inner product of two linear combinations of vectors. Using axioms (i) and (ii) in series, this process resembles the procedure for multiplying two polynomials. For example, we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_innerproduct.html ./knowl/d_innerproduct.html ./knowl/d_innerproduct.html">
+\begin{align*}
+\langle c\boldv+d\boldw, e\boldv+f\boldw\rangle
+\amp = c \langle \boldv,  e\boldv+f\boldw \rangle +d \langle \boldw, e\boldv+f\boldw \rangle \amp (\knowl{./knowl/d_innerproduct.html}{\text{4.1.1}}, \text{(ii)})\\
+\amp=ce \langle \boldv, \boldv\rangle+cf\langle \boldv,\boldw \rangle +de \langle \boldw, \boldv\rangle+df\langle \boldw, \boldw\rangle \amp (\knowl{./knowl/d_innerproduct.html}{\text{4.1.1}}, \text{(ii)}) \\
+\amp = ce\langle \boldv, \boldv\rangle +(cf+de)\langle \boldv, \boldw\rangle +df\langle \boldw, \boldw\rangle
+\amp (\knowl{./knowl/d_innerproduct.html}{\text{4.1.1}}, \text{(i)})\text{.}
+\end{align*}
+</div>
+<p class="continuation">Note how in the last step we are able to group the “cross terms”, <span class="process-math">\(\langle \boldv, \boldw\rangle=\langle \boldw, \boldv\rangle\)</span> using the symmetry axiom.</p>
 <span class="incontext"><a href="s_innerproducts.html#p-1952" class="internal">in-context</a></span>
 </body>
 </html>

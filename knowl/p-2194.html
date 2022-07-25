@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-22T12:32:11-07:00       *-->
+<!--*       on 2022-07-25T15:04:24-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,15 +14,21 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>Similarly, we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>Consider again the matrix equation <span class="process-math">\(A\boldx=\boldy\)</span> from <a href="" class="xref" data-knowl="./knowl/eg_least-squares.html" title="Example 4.3.19: Best fitting line">Example 4.3.19</a>. According to <a href="" class="xref" data-knowl="./knowl/th_leastsquares.html" title="Theorem 4.3.22: Least-squares matrix formula">Theorem 4.3.22</a> the least-squares solution can be found by solving the equation <span class="process-math">\(A^TA\boldx=A^T\boldy\)</span> for <span class="process-math">\(\boldx\text{.}\)</span> We compute</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_least-squares.html ./knowl/th_leastsquares.html">
 \begin{align*}
-\sum_{i=1}^rc_i\boldv_i=\boldzero \amp \iff \left[\sum_{i=1}^rc_i\boldv_i\right]_B=[\boldzero]_B \amp (\boldv=\boldw\iff [\boldv]_B=[\boldw]_B) \\
-\amp\iff \sum_{i=1}^rc_i[\boldv_i]_B=(0,0,\dots, 0) \amp ([\phantom{\boldv}]_B \text{ is linear}) \text{.}
+A^TA\amp=\begin{amatrix}[rr]14\amp 0\\ 0\amp 3  \end{amatrix} \amp A^T\boldy\amp =\begin{amatrix}[r] 5\\ 6 \end{amatrix}
 \end{align*}
 </div>
-<p class="continuation">From this equivalence we see that there is a nontrivial linear combination of <span class="process-math">\(S\)</span> yielding <span class="process-math">\(\boldzero\in V\)</span> if and only if there is a nontrivial linear combination of <span class="process-math">\(S'\)</span> yielding <span class="process-math">\(\boldzero\in \R^n\text{.}\)</span> In other words, <span class="process-math">\(S\)</span> is linearly independent if and only if <span class="process-math">\(S'\)</span> is linearly independent.</p>
-<span class="incontext"><a href="s_coordinatevectors.html#p-2194" class="internal">in-context</a></span>
+<p class="continuation">and solve</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_least-squares.html ./knowl/th_leastsquares.html">
+\begin{equation*}
+\begin{amatrix}[rr]14\amp 0\\ 0\amp 3  \end{amatrix}\boldx=\begin{amatrix}[r] 5\\ 6 \end{amatrix}\iff
+\boldx=(5/14, 2),
+\end{equation*}
+</div>
+<p class="continuation">just as before.</p>
+<span class="incontext"><a href="s_orthogonal_projection.html#p-2194" class="internal">in-context</a></span>
 </body>
 </html>

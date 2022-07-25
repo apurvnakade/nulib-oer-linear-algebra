@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-22T12:31:55-07:00       *-->
+<!--*       on 2022-07-25T15:04:07-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,14 +15,12 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>We  need both <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> to be <span class="process-math">\(m\times n \)</span> for the expression to make sense. It is easy to see that <span class="process-math">\(A+B\)</span> and <span class="process-math">\(B+A\)</span> are both <span class="process-math">\(m\times n\)</span> matrices. We must show <span class="process-math">\((A+B)_{ij}=(B+A)_{ij}\)</span> for all <span class="process-math">\(1\leq i\leq m\text{,}\)</span> <span class="process-math">\(1\leq j\leq n\text{.}\)</span> We have</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_matrix_add_subtract.html ./knowl/d_matrix_add_subtract.html">
-\begin{align*}
-(A+B)_{ij} \amp =(A)_{ij}+(B)_{ij}\amp (\knowl{./knowl/d_matrix_add_subtract.html}{\text{Definition 2.1.9}}) \\
-\amp =(B)_{ij}+(A)_{ij}\amp \text{(real addition is comm.)} \\
-\amp =(B+A)_{ij} \amp (\knowl{./knowl/d_matrix_add_subtract.html}{\text{Definition 2.1.9}} \text{.}
-\end{align*}
+<p>Thus the rows of <span class="process-math">\(AB\)</span> are all identical, and the row method computes the product above by taking the corresponding alternating sum of the rows of <span class="process-math">\(B\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{bmatrix}1 \amp -1 \amp 1 \amp -1 \amp 1 \end{bmatrix} B=\begin{bmatrix}2\amp 2\amp -1\amp 4 \end{bmatrix}\text{.}
+\end{equation*}
 </div>
-<span class="incontext"><a href="s_algebraic.html#p-618" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_matrix.html#p-618" class="internal">in-context</a></span>
 </body>
 </html>
