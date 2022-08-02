@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-25T15:04:24-07:00       *-->
+<!--*       on 2022-08-02T15:02:43-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,12 +15,13 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Let <span class="process-math">\(V=\R^3\)</span> and <span class="process-math">\(B=(\bolde_2, \bolde_1, \bolde_3)\text{.}\)</span> Given <span class="process-math">\(\boldv=(a,b,c)\in \R^3\)</span> we have <span class="process-math">\([\boldv]_B=(b,a,c)\text{,}\)</span> since</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<p><a href="" class="xref" data-knowl="./knowl/fig_leastsquares.html" title="Figure 4.3.21: Least-squares visualization">Figure 4.3.21</a> helps us give a graphical interpretation of how the line <span class="process-math">\(\ell\colon y=(5/14)x+2\)</span> best approximates the points <span class="process-math">\(P_1=(-3,1), P_2=(1,2), P_3=(2,3)\text{.}\)</span> <figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/im_leastsquares.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.3.21<span class="period">.</span></span><span class="space"> </span>Least-squares visualization</figcaption></figure> Let <span class="process-math">\(\boldy=(1,2,3)=(y_1,y_2,y_3)\)</span> be the given <span class="process-math">\(y\)</span>-values of the points, and let <span class="process-math">\(\hat{\boldy}=(y_1',y_2',y_3')\)</span> be the orthogonal projection of <span class="process-math">\(\boldy\)</span> onto <span class="process-math">\(\CS A\text{.}\)</span> In the graph the values <span class="process-math">\(\epsilon_i\)</span> denote the vertical difference <span class="process-math">\(\epsilon_i=y_i-y_i'\)</span> between the data points, and our fitting line. The projection <span class="process-math">\(\hat{\boldy}\)</span> makes the error <span class="process-math">\(\norm{\boldy-\hat{\boldy}}=\sqrt{ \epsilon_1^2+\epsilon_2^2+\epsilon_3^2}\)</span> as small as possible. This means if I draw <em class="emphasis">any other line</em> and compute the corresponding differences <span class="process-math">\(\epsilon_i'\)</span> at the <span class="process-math">\(x\)</span>-values  -3, 1 and 2, then</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig_leastsquares.html">
 \begin{equation*}
-\boldv=b\bolde_2+a\bolde_1+c\bolde_3\text{.}
+\epsilon_1^2+\epsilon_2^2+\epsilon_3^2\leq (\epsilon_1')^2+(\epsilon_2')^2+(\epsilon_3')^2
 \end{equation*}
 </div>
-<span class="incontext"><a href="s_coordinatevectors.html#p-2234" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_orthogonal_projection.html#p-2234" class="internal">in-context</a></span>
 </body>
 </html>

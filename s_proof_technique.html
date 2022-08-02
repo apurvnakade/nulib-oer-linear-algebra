@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-25T15:03:46-07:00       *-->
+<!--*       on 2022-08-02T15:02:08-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -398,7 +398,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <span class="type">Section</span> <span class="codenumber">0.3</span> <span class="title">Proof techniques</span>
 </h2>
 <section class="introduction" id="introduction-3">Proof writing is an art, a technical skill you will hone and refine throughout your career; and like any art, proof writing has many tricks of the trade. We gather a few here in the form of a collection of general proof techniques. Part of mastering these techniques involves understanding the circumstances where they can be of use. When selecting a technique, we are guided in part by the logical structure and particular mathematical content of the proposition under consideration. The proof techniques below are organized under this guiding principle.</section><section class="subsection" id="ss_logical_structure"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Logical structure</span>
+<span class="type">Subsection</span> <span class="codenumber">0.3.1</span> <span class="title">Logical structure</span>
 </h3>
 <section class="subsubsection" id="sss_implication"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Implication</span>
@@ -493,7 +493,7 @@ f(x) \amp = f(f^{-1}(y))\\
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">0.3.5</span><span class="period">.</span>
 </h5>
 <p id="p-211">Proof by contradiction resembles, but is not quite the same  thing as proving an implication via its contrapositive. Letting <span class="process-math">\(F\)</span> denote an arbitrary falsehood (the <span class="process-math">\(\mathcal{Q}\)</span> described above) what we do in a proof by contradiction is show that the implication <span class="process-math">\(\neg \mathcal{P}\implies F\)</span> is true. Since <span class="process-math">\(F\)</span> is false, and the implication is true, <span class="process-math">\(\neg \mathcal{P}\)</span> must be false: equivalently, <span class="process-math">\(\mathcal{P}\)</span> must be true.</p></article></section></section><section class="subsection" id="ss_Equalities"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Equalities</span>
+<span class="type">Subsection</span> <span class="codenumber">0.3.2</span> <span class="title">Equalities</span>
 </h3>
 <section class="introduction" id="introduction-4"><p id="p-212">Equality is not as simple as it may seem. In general an equality is a mathematical statement of the form</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/ss_set_properties.html ./knowl/ss_function_properties.html" id="eq_equality">
@@ -501,7 +501,7 @@ f(x) \amp = f(f^{-1}(y))\\
 \text{LHS}=\text{RHS}\text{.}\tag{0.3.1}
 \end{equation}
 </div>
-<p class="continuation">Here “LHS” and “RHS” stand for left- and right-hand side, respectively. What exactly such an equality means depends very much on what kind of mathematical objects the two sides of the equation are: e.g., numbers, sets, functions, etc. Below we discuss equality for objects of a particular type in detail. (See <a href="s_proof_technique.html#ss_set_properties" class="internal" title="Subsection: Basic set properties">Subsection </a> and <a href="s_proof_technique.html#ss_function_properties" class="internal" title="Subsection: Basic function properties">Subsection </a>.) In all settings, the notion of equality will be <em class="emphasis">transitive</em>: i.e., if <span class="process-math">\(x=y\)</span> and <span class="process-math">\(y=z\text{,}\)</span> then <span class="process-math">\(x=z\text{.}\)</span> We use transitivity implicitly when proving an equality via a <em class="emphasis">chain of equalities</em> as described below.</p></section><section class="subsubsection" id="sss_chain_equalities"><h4 class="heading hide-type">
+<p class="continuation">Here “LHS” and “RHS” stand for left- and right-hand side, respectively. What exactly such an equality means depends very much on what kind of mathematical objects the two sides of the equation are: e.g., numbers, sets, functions, etc. Below we discuss equality for objects of a particular type in detail. (See <a href="s_proof_technique.html#ss_set_properties" class="internal" title="Subsection 0.3.3: Basic set properties">Subsection 0.3.3</a> and <a href="s_proof_technique.html#ss_function_properties" class="internal" title="Subsection 0.3.4: Basic function properties">Subsection 0.3.4</a>.) In all settings, the notion of equality will be <em class="emphasis">transitive</em>: i.e., if <span class="process-math">\(x=y\)</span> and <span class="process-math">\(y=z\text{,}\)</span> then <span class="process-math">\(x=z\text{.}\)</span> We use transitivity implicitly when proving an equality via a <em class="emphasis">chain of equalities</em> as described below.</p></section><section class="subsubsection" id="sss_chain_equalities"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Chain of equalities</span>
 </h4>
 <a href="" class="xref" data-knowl="./knowl/eq_equality.html" title="Equation 0.3.1">(0.3.1)</a><div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_equality.html" id="md-14">
@@ -525,7 +525,7 @@ f(x) \amp = f(f^{-1}(y))\\
 \end{align*}
 </div>
 <p class="continuation">What this suggests is that you are in fact proving an implication: namely, <em class="emphasis">if</em> the desired equality is true, <em class="emphasis">then</em> <span class="process-math">\(0=0\text{.}\)</span> Clearly this is not what we set out to prove! This type of fallacious argument is called “begging the question” (<em class="emphasis">petitio princippii</em> in Latin), as we assume that which was to be proven.</p></article></section></section><section class="subsection" id="ss_set_properties"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Basic set properties</span>
+<span class="type">Subsection</span> <span class="codenumber">0.3.3</span> <span class="title">Basic set properties</span>
 </h3>
 <section class="subsubsection" id="sss_set_inclusion"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Set inclusion</span>
@@ -547,7 +547,7 @@ x\in A \iff x\in B\text{.}
 </div>
 <p class="continuation">To prove this universal equivalence, we must give an argument for the equivalence that holds for a general element <span class="process-math">\(x\text{.}\)</span></p>
 <p id="p-216">Alternatively, you can prove <span class="process-math">\(A=B\)</span> by proving the two set inclusions <span class="process-math">\(A\subseteq B\)</span> and <span class="process-math">\(B\subseteq A\)</span> separately. This is equivalent to proving the two implications <span class="process-math">\(x\in A\implies x\in B\)</span> and <span class="process-math">\(x\in B\implies x\in A\)</span> separately.</p></section></section><section class="subsection" id="ss_function_properties"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Basic function properties</span>
+<span class="type">Subsection</span> <span class="codenumber">0.3.4</span> <span class="title">Basic function properties</span>
 </h3>
 <section class="subsubsection" id="sss_function_equality"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Function equality</span>
@@ -585,7 +585,7 @@ x\ne x'\implies f(x)\ne f(x')
 <p class="continuation">To prove <span class="process-math">\(f\)</span> is <em class="emphasis">not</em> surjective, we must prove the negation of this proposition (<a href="" class="xref" data-knowl="./knowl/rm_negating_quantifiers.html" title="Remark 0.2.9: Negating quantifiers">Remark 0.2.9</a>): i.e., there exists a <span class="process-math">\(y\in Y\)</span> for which there is no <span class="process-math">\(x\in X\)</span> with <span class="process-math">\(f(x)=y\text{.}\)</span></p></article><article class="case" id="case-9"><h5 class="heading">Bijectivity.</h5>
 <p id="p-224">To show <span class="process-math">\(f\)</span> is bijective directly using <a href="" class="xref" data-knowl="./knowl/d_injective_surjective_bijective.html" title="Definition 0.1.19: Injective, surjective, bijective">Definition 0.1.19</a>, we must show that <span class="process-math">\(f\)</span> is injective and surjective. This is equivalent to showing that for <span class="process-math">\(y\in Y\)</span> there exists a <em class="emphasis">unique</em> element <span class="process-math">\(x\in X\)</span> such that <span class="process-math">\(f(x)=y\text{.}\)</span></p>
 <p id="p-225">Alternatively, using <a href="" class="xref" data-knowl="./knowl/th_invertible_bijective.html" title="Theorem 0.1.23: Invertible is equivalent to bijective">Theorem 0.1.23</a> we can show that <span class="process-math">\(f\)</span> is bijective by providing an inverse function <span class="process-math">\(f^{-1}\colon Y\rightarrow X\text{.}\)</span></p></article></section></section><section class="subsection" id="ss_mathematical_induction"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Mathematical induction</span>
+<span class="type">Subsection</span> <span class="codenumber">0.3.5</span> <span class="title">Mathematical induction</span>
 </h3>
 <section class="introduction" id="introduction-5"><p id="p-226"><em class="emphasis">Mathematical induction</em> is a technique for proving universal quantifications of the form</p>
 <div class="displaymath process-math" data-contains-math-knowls="">

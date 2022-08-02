@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-25T15:04:31-07:00       *-->
+<!--*       on 2022-08-02T15:02:52-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,56 +16,37 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.4.24.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.4.21.1</span><span class="period">.</span>
 </h4>
-<p>Let <span class="process-math">\(B=(E_{11}, E_{12}, E_{21}, E_{22})\text{,}\)</span> the standard ordered basis of <span class="process-math">\(M_{22}\text{.}\)</span> Compute <span class="process-math">\(A=[S]_B\text{:}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_eigenspaces_matrix.html ./knowl/eg_eigenvector_adhoc_transposition.html">
+<p>First compute</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
-A=[S]_B \amp =\begin{bmatrix}
-\vert \amp \vert\amp \vert\amp \vert \\
-[S(E_{11})]_B\amp [S(E_{12})]_B \amp [S(E_{21})]_B \amp [S(E_{22})]_B\\
-\vert \amp \vert \amp \vert\amp \vert
-\end{bmatrix} \\
-\amp = =\begin{bmatrix}
-\vert \amp \vert\amp \vert\amp \vert \\
-[E_{11}]_B\amp [E_{21}]_B \amp [E_{12}]_B \amp [E_{22}]_B \\
-\vert \amp \vert \amp \vert\amp \vert
-\end{bmatrix}
-\amp (E_{11}^T=E_{11}, E_{12}^T=E_{21}, \text{etc.})\\
-\amp =\begin{bmatrix}
-1\amp 0\amp 0\amp 0\\
-0\amp 0\amp 1\amp 0\\
-0\amp 1\amp 0\amp 0\\
-0\amp 0\amp 0\amp 1
-\end{bmatrix} \text{.}
+p(t) \amp = \det (tI-A)\\
+\amp = \det \begin{amatrix}[rrr]t-2\amp 1\amp 1\\ 1\amp t-2\amp 1\\ 1\amp 1\amp t-2 \end{amatrix} \\
+\amp = t^3-6t^2+9t\\
+\amp = t(t^2-6t+9)\\
+\amp = t(t-3)^2\text{.}
 \end{align*}
 </div>
-<p class="continuation">Now apply <a href="" class="xref" data-knowl="./knowl/proc_eigenspaces_matrix.html" title="Procedure 5.4.19: Computing eigenspaces of a matrix">Procedure 5.4.19</a> to <span class="process-math">\(A\text{.}\)</span> From <span class="process-math">\(p(t)=\det(tI-A)=(t-1)^2(t^2-1)=(t-1)^3(t+1)\)</span> we conclude that <span class="process-math">\(\lambda=1\)</span> and <span class="process-math">\(\lambda=-1\)</span> are the only eigenvalues of <span class="process-math">\(A\)</span> (and hence also <span class="process-math">\(S\)</span>). Bases for the corresponding eigenspaces of <span class="process-math">\(A\)</span> are easily computed as</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_eigenspaces_matrix.html ./knowl/eg_eigenvector_adhoc_transposition.html">
+<p class="continuation">We see that the eigenvalues of <span class="process-math">\(A\)</span> are <span class="process-math">\(\lambda=0\)</span> and <span class="process-math">\(\lambda=3\text{.}\)</span> Now compute bases for their corresponding eigenspaces.</p>
+<article class="case"><h5 class="heading">Basis of <span class="process-math">\(W_0\)</span>.</h5>
+<p>We have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
-\NS(I-A) \amp= \Span\{(1,0,0,0), (0,1,1,0), (0,0,0,1)\} \\
-\NS(-I-A) \amp =\Span\{(0,1,-1,0)\} \text{.}
+W_0 \amp = \NS(0I-A)\\
+\amp = \NS \begin{amatrix}[rrr]-2\amp 1\amp 1\\ 1\amp -2\amp 1\\ 1\amp 1\amp -2 \end{amatrix}  \\
+\amp = \Span\{(1,1,1)\text{.}
 \end{align*}
 </div>
-<p class="continuation">Now lift these up to bases of the eigenspaces <span class="process-math">\(W_1\)</span> and <span class="process-math">\(W_{-1}\)</span> of <span class="process-math">\(S\text{:}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_eigenspaces_matrix.html ./knowl/eg_eigenvector_adhoc_transposition.html">
+<p class="continuation">(We have skipped the Gaussian elimination steps involved in computing a basis for <span class="process-math">\(\NS(-A)\text{.}\)</span>)</p></article><article class="case"><h5 class="heading">Basis of <span class="process-math">\(W_3\)</span>.</h5>
+<p>We have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
-W_1 \amp=\Span\left\{ A_1=\begin{bmatrix}
-1\amp 0\\ 0 \amp 0
-\end{bmatrix},
-A_2=\begin{bmatrix}
-0\amp 1\\ 1 \amp 0
-\end{bmatrix},
-A_3=\begin{bmatrix}
-0\amp 0\\ 0 \amp 1
-\end{bmatrix} \right\} \\
-W_{-1} \amp= \Span\left\{A_4=
-\begin{amatrix}[rr]
-0\amp 1\\ -1 \amp 0
-\end{amatrix} \right\} \text{.}
+W_3 \amp = \NS(3I-A)\\
+\amp= \NS \begin{amatrix}[rrr]1\amp 1\amp 1\\ 1\amp 1\amp 1\\ 1\amp 1\amp 1 \end{amatrix} \\
+\amp = \Span\{ (1,-1,0),(1,0,-1)\}\text{.}
 \end{align*}
-</div>
-<p class="continuation">It is easy to see that <span class="process-math">\(W_1\)</span> and <span class="process-math">\(W_2\)</span> are the subspaces of symmetric and skew-symmetric matrices, respectively. This is consistent with our analysis in <a href="" class="xref" data-knowl="./knowl/eg_eigenvector_adhoc_transposition.html" title="Example 5.4.11: Transposition">Example 5.4.11</a>.</p>
+</div></article> We conclude that the <span class="process-math">\(0\)</span>-eigenvectors of <span class="process-math">\(A\)</span> are the nonzero scalar multiples of <span class="process-math">\((1,1,1)\text{,}\)</span> and that the <span class="process-math">\(3\)</span>-eigenvectors are all nonzero vectors of the form <span class="process-math">\(\boldx=c_1(1,-1,0)+c_2(1,0,-1)\text{.}\)</span>
 </div>
 <span class="incontext"><a href="s_eigenvectors.html#solution-95" class="internal">in-context</a></span>
 </body>

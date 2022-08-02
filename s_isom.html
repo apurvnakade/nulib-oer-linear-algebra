@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-25T15:03:53-07:00       *-->
+<!--*       on 2022-08-02T15:02:14-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -398,37 +398,37 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <span class="type">Section</span> <span class="codenumber">3.9</span> <span class="title">Isomorphisms</span>
 </h2>
 <section class="introduction" id="introduction-60">In this section we utilize bases, dimension, and the <a href="" class="xref" data-knowl="./knowl/th_rank-nullity.html" title="Theorem 3.8.2: Rank-nullity">rank-nullity theorem</a> to investigate properties of linear transformations. The main focus will be the notion of an <em class="emphasis">isomorphism</em>, which is simply a linear transformation that is invertible when considered as a function. We begin, however, with an enlightening discussion relating linear transformations and bases.</section><section class="subsection" id="ss_isomorphisms"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Isomorphisms</span>
+<span class="type">Subsection</span> <span class="codenumber">3.9.1</span> <span class="title">Isomorphisms</span>
 </h3>
-<p id="p-1912">The word “isomorphism” is derived from the Greek terms <i class="foreign">iso</i>, meaning “same”, and <i class="foreign">morphe</i>, meaning “form”. As we will see, isomorphic vector spaces <span class="process-math">\(V\)</span> and <span class="process-math">\(W\)</span> are essentially the same creature, at least as far as linear algebraic properties are concerned. Furthermore, an isomorphism <span class="process-math">\(T\colon V\rightarrow W\)</span> provides a one-to-one correspondence between them: a dictionary that allows us to translate statements about <span class="process-math">\(V\)</span> to statements about <span class="process-math">\(W\text{,}\)</span> and vice versa.</p>
-<p id="p-1913">Before getting to the definition, recall that by definition a function <span class="process-math">\(f\colon X\rightarrow Y\)</span> is <em class="emphasis">bijective</em> if it is injective and surjective (<a href="" class="xref" data-knowl="./knowl/d_injective_surjective_bijective.html" title="Definition 0.1.19: Injective, surjective, bijective">0.1.19</a>)</p>
+<p id="p-1956">The word “isomorphism” is derived from the Greek terms <i class="foreign">iso</i>, meaning “same”, and <i class="foreign">morphe</i>, meaning “form”. As we will see, isomorphic vector spaces <span class="process-math">\(V\)</span> and <span class="process-math">\(W\)</span> are essentially the same creature, at least as far as linear algebraic properties are concerned. Furthermore, an isomorphism <span class="process-math">\(T\colon V\rightarrow W\)</span> provides a one-to-one correspondence between them: a dictionary that allows us to translate statements about <span class="process-math">\(V\)</span> to statements about <span class="process-math">\(W\text{,}\)</span> and vice versa.</p>
+<p id="p-1957">Before getting to the definition, recall that by definition a function <span class="process-math">\(f\colon X\rightarrow Y\)</span> is <em class="emphasis">bijective</em> if it is injective and surjective (<a href="" class="xref" data-knowl="./knowl/d_injective_surjective_bijective.html" title="Definition 0.1.19: Injective, surjective, bijective">0.1.19</a>)</p>
 <article class="definition definition-like" id="d_isomorphism"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.9.1</span><span class="period">.</span><span class="space"> </span><span class="title">Isomorphism.</span>
 </h4>
-<p id="p-1914">Let <span class="process-math">\(V\)</span> and <span class="process-math">\(W\)</span> be vector spaces. An <dfn class="terminology">isomorphism</dfn> from <span class="process-math">\(V\)</span> to <span class="process-math">\(W\)</span> is a bijective linear transformation <span class="process-math">\(T\colon V\rightarrow W\text{.}\)</span> Vector spaces <span class="process-math">\(V\)</span> and <span class="process-math">\(W\)</span> are <dfn class="terminology">isomorphic</dfn> if there is an isomorphism from <span class="process-math">\(V\)</span> to <span class="process-math">\(W\text{.}\)</span></p></article><article class="remark remark-like" id="remark-68"><h4 class="heading">
+<p id="p-1958">Let <span class="process-math">\(V\)</span> and <span class="process-math">\(W\)</span> be vector spaces. An <dfn class="terminology">isomorphism</dfn> from <span class="process-math">\(V\)</span> to <span class="process-math">\(W\)</span> is a bijective linear transformation <span class="process-math">\(T\colon V\rightarrow W\text{.}\)</span> Vector spaces <span class="process-math">\(V\)</span> and <span class="process-math">\(W\)</span> are <dfn class="terminology">isomorphic</dfn> if there is an isomorphism from <span class="process-math">\(V\)</span> to <span class="process-math">\(W\text{.}\)</span></p></article><article class="remark remark-like" id="remark-68"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.9.2</span><span class="period">.</span><span class="space"> </span><span class="title">Proving <span class="process-math">\(T\)</span> is an isomorphism.</span>
 </h4>
-<p id="p-1915">According to <a href="" class="xref" data-knowl="./knowl/d_isomorphism.html" title="Definition 3.9.1: Isomorphism">Definition 3.9.1</a>, to prove a function <span class="process-math">\(T\colon V\rightarrow W\)</span> is an isomorphism, we must show that</p>
+<p id="p-1959">According to <a href="" class="xref" data-knowl="./knowl/d_isomorphism.html" title="Definition 3.9.1: Isomorphism">Definition 3.9.1</a>, to prove a function <span class="process-math">\(T\colon V\rightarrow W\)</span> is an isomorphism, we must show that</p>
 <ol class="lower-roman">
-<li id="li-657"><p id="p-1916"><span class="process-math">\(T\)</span> is linear, and</p></li>
-<li id="li-658"><p id="p-1917"><span class="process-math">\(T\)</span> is invertible.</p></li>
+<li id="li-657"><p id="p-1960"><span class="process-math">\(T\)</span> is linear, and</p></li>
+<li id="li-658"><p id="p-1961"><span class="process-math">\(T\)</span> is invertible.</p></li>
 </ol>
 <p class="continuation">Since being invertible is equivalent to being bijective, there are two main approaches to proving that (ii) holds for a linear transformation <span class="process-math">\(T\colon V\rightarrow W\text{:}\)</span></p>
 <ol class="lower-alpha">
-<li id="li-659"><p id="p-1918">we can show directly that <span class="process-math">\(T\)</span> is invertible by providing an inverse <span class="process-math">\(T^{-1}\colon W\rightarrow V\text{;}\)</span></p></li>
-<li id="li-660"><p id="p-1919">we can show that <span class="process-math">\(T\)</span> is bijective (i.e., injective and surjective).</p></li>
+<li id="li-659"><p id="p-1962">we can show directly that <span class="process-math">\(T\)</span> is invertible by providing an inverse <span class="process-math">\(T^{-1}\colon W\rightarrow V\text{;}\)</span></p></li>
+<li id="li-660"><p id="p-1963">we can show that <span class="process-math">\(T\)</span> is bijective (i.e., injective and surjective).</p></li>
 </ol>
 <p class="continuation">Which approach, (a) or (b), is more convenient depends on the linear transformation <span class="process-math">\(T\)</span> in question.</p></article><article class="remark remark-like" id="rm_isomorphism_inverse"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.9.3</span><span class="period">.</span><span class="space"> </span><span class="title">Inverse of isomorphism is an isomorphism.</span>
 </h4>
-<p id="p-1920">Let <span class="process-math">\(T\colon V\rightarrow W\)</span> be an isomorphism. Since <span class="process-math">\(T\)</span> is invertible, there is an inverse function <span class="process-math">\(T^{-1}\colon W\rightarrow V\text{.}\)</span> Not surprisingly, <span class="process-math">\(T^{-1}\)</span> is itself a linear transformation, though of course this requires proof. (See <code class="code-inline tex2jax_ignore">[provisional cross-reference: ex_isomorphism_inverse]</code>.) Since <span class="process-math">\(T^{-1}\)</span> is also invertible (<span class="process-math">\(T\)</span> is its inverse), it follows that <span class="process-math">\(T^{-1}\)</span> is itself an isomorphism.</p></article><article class="theorem theorem-like" id="th_bijective_transformation"><h4 class="heading">
+<p id="p-1964">Let <span class="process-math">\(T\colon V\rightarrow W\)</span> be an isomorphism. Since <span class="process-math">\(T\)</span> is invertible, there is an inverse function <span class="process-math">\(T^{-1}\colon W\rightarrow V\text{.}\)</span> Not surprisingly, <span class="process-math">\(T^{-1}\)</span> is itself a linear transformation, though of course this requires proof. (See <code class="code-inline tex2jax_ignore">[provisional cross-reference: ex_isomorphism_inverse]</code>.) Since <span class="process-math">\(T^{-1}\)</span> is also invertible (<span class="process-math">\(T\)</span> is its inverse), it follows that <span class="process-math">\(T^{-1}\)</span> is itself an isomorphism.</p></article><article class="theorem theorem-like" id="th_bijective_transformation"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.9.4</span><span class="period">.</span><span class="space"> </span><span class="title">Isomorphism equivalence.</span>
 </h4>
-<p id="p-1921">Let <span class="process-math">\(T\colon V\rightarrow W\)</span> be a linear transformation. The following are equivalent.</p>
+<p id="p-1965">Let <span class="process-math">\(T\colon V\rightarrow W\)</span> be a linear transformation. The following are equivalent.</p>
 <ol class="decimal">
-<li id="li-661"><p id="p-1922"><span class="process-math">\(T\)</span> is an isomorphism;</p></li>
-<li id="li-662"><p id="p-1923"><span class="process-math">\(\NS T=\{\boldzero_V\}\)</span> and <span class="process-math">\(\im T=W\text{.}\)</span></p></li>
-</ol></article><p id="p-1924">We mentioned in the introduction that two isomorphic vector spaces are, for all linear algebraic intents and purposes, essentially the same thing. The next theorem provides some evidence for this claim. It also illustrates how a given isomorphism <span class="process-math">\(T\colon V\rightarrow W\)</span> can translate back and forth between two isomorphic vector spaces. Recall (<a href="" class="xref" data-knowl="./knowl/d_image.html" title="Definition 0.1.18: Image of a set">Definition 0.1.18</a>) that for a subset <span class="process-math">\(S\subseteq V\text{,}\)</span> the image <span class="process-math">\(T(S)\)</span> of <span class="process-math">\(S\)</span> under <span class="process-math">\(T\)</span> is the set</p>
+<li id="li-661"><p id="p-1966"><span class="process-math">\(T\)</span> is an isomorphism;</p></li>
+<li id="li-662"><p id="p-1967"><span class="process-math">\(\NS T=\{\boldzero_V\}\)</span> and <span class="process-math">\(\im T=W\text{.}\)</span></p></li>
+</ol></article><p id="p-1968">We mentioned in the introduction that two isomorphic vector spaces are, for all linear algebraic intents and purposes, essentially the same thing. The next theorem provides some evidence for this claim. It also illustrates how a given isomorphism <span class="process-math">\(T\colon V\rightarrow W\)</span> can translate back and forth between two isomorphic vector spaces. Recall (<a href="" class="xref" data-knowl="./knowl/d_image.html" title="Definition 0.1.18: Image of a set">Definition 0.1.18</a>) that for a subset <span class="process-math">\(S\subseteq V\text{,}\)</span> the image <span class="process-math">\(T(S)\)</span> of <span class="process-math">\(S\)</span> under <span class="process-math">\(T\)</span> is the set</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/d_image.html">
 \begin{equation*}
 T(S)=\{\boldw\in W\colon \boldw=T(\boldv) \text{ for some } \boldv\in S\}=\{T(\boldv)\colon \boldv\in S\}\text{.}
@@ -437,37 +437,37 @@ T(S)=\{\boldw\in W\colon \boldw=T(\boldv) \text{ for some } \boldv\in S\}=\{T(\b
 <article class="theorem theorem-like" id="th_isomorphism_preserves"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.9.5</span><span class="period">.</span><span class="space"> </span><span class="title">Properties preserved by isomorphisms.</span>
 </h4>
-<p id="p-1925">Let <span class="process-math">\(T\colon V\rightarrow W\)</span> be an isomorphism. The following properties hold:</p>
+<p id="p-1969">Let <span class="process-math">\(T\colon V\rightarrow W\)</span> be an isomorphism. The following properties hold:</p>
 <ol class="lower-roman">
-<li id="li-663"><p id="p-1926"><span class="process-math">\(S\subseteq V\)</span> is linearly independent if and only if <span class="process-math">\(T(S)\subseteq W\)</span> is linearly independent;</p></li>
-<li id="li-664"><p id="p-1927"><span class="process-math">\(S\subseteq V\)</span> spans <span class="process-math">\(V\)</span> if and only if <span class="process-math">\(T(S)\subseteq W\)</span> spans <span class="process-math">\(W\text{;}\)</span></p></li>
-<li id="li-665"><p id="p-1928"><span class="process-math">\(S\subseteq V\)</span> is a basis of <span class="process-math">\(V\)</span> if and only if <span class="process-math">\(T(S)\subseteq W\)</span> is a basis of <span class="process-math">\(W\)</span></p></li>
-<li id="li-666"><p id="p-1929"><span class="process-math">\(\dim V=\dim W\text{.}\)</span></p></li>
-</ol></article><p id="p-1930">The following omnibus result is useful for deciding whether a linear transformation is an isomorphism, and lists a few of the properties of a vector space that are preserved by isomorphisms: namely, dimension, span, and linear independence.</p>
+<li id="li-663"><p id="p-1970"><span class="process-math">\(S\subseteq V\)</span> is linearly independent if and only if <span class="process-math">\(T(S)\subseteq W\)</span> is linearly independent;</p></li>
+<li id="li-664"><p id="p-1971"><span class="process-math">\(S\subseteq V\)</span> spans <span class="process-math">\(V\)</span> if and only if <span class="process-math">\(T(S)\subseteq W\)</span> spans <span class="process-math">\(W\text{;}\)</span></p></li>
+<li id="li-665"><p id="p-1972"><span class="process-math">\(S\subseteq V\)</span> is a basis of <span class="process-math">\(V\)</span> if and only if <span class="process-math">\(T(S)\subseteq W\)</span> is a basis of <span class="process-math">\(W\)</span></p></li>
+<li id="li-666"><p id="p-1973"><span class="process-math">\(\dim V=\dim W\text{.}\)</span></p></li>
+</ol></article><p id="p-1974">The following omnibus result is useful for deciding whether a linear transformation is an isomorphism, and lists a few of the properties of a vector space that are preserved by isomorphisms: namely, dimension, span, and linear independence.</p>
 <article class="theorem theorem-like" id="th_isomorphisms"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.9.6</span><span class="period">.</span><span class="space"> </span><span class="title">Isomorphism compendium.</span>
 </h4>
-<p id="p-1931">Let <span class="process-math">\(T\colon V\rightarrow W\)</span> be a linear transformation.</p>
+<p id="p-1975">Let <span class="process-math">\(T\colon V\rightarrow W\)</span> be a linear transformation.</p>
 <ol class="decimal">
-<li id="li-667"><p id="p-1932"><span class="process-math">\(T\)</span> is injective if and only if <span class="process-math">\(\NS T=\{\boldzero\}.\)</span></p></li>
+<li id="li-667"><p id="p-1976"><span class="process-math">\(T\)</span> is injective if and only if <span class="process-math">\(\NS T=\{\boldzero\}.\)</span></p></li>
 <li id="li-668">
-<p id="p-1933">Assume <span class="process-math">\(T\)</span> is an isomorphism, let <span class="process-math">\(S\subseteq V\text{,}\)</span> and let <span class="process-math">\(T(S)=\{T(\boldv)\colon \boldv\in S\}\text{,}\)</span> the set of images of <span class="process-math">\(S\)</span> under <span class="process-math">\(T\text{.}\)</span></p>
+<p id="p-1977">Assume <span class="process-math">\(T\)</span> is an isomorphism, let <span class="process-math">\(S\subseteq V\text{,}\)</span> and let <span class="process-math">\(T(S)=\{T(\boldv)\colon \boldv\in S\}\text{,}\)</span> the set of images of <span class="process-math">\(S\)</span> under <span class="process-math">\(T\text{.}\)</span></p>
 <ol class="lower-alpha">
-<li id="li-669"><p id="p-1934">The inverse function <span class="process-math">\(T^{-1}\colon W\rightarrow V\)</span> is a linear transformation.</p></li>
-<li id="li-670"><p id="p-1935">The set <span class="process-math">\(S\)</span> spans <span class="process-math">\(V\)</span> if and only if <span class="process-math">\(T(S)\)</span> spans <span class="process-math">\(W\text{.}\)</span></p></li>
-<li id="li-671"><p id="p-1936">The set <span class="process-math">\(S\)</span> is linearly independent if and only if <span class="process-math">\(T(S)\)</span> is linearly independent.</p></li>
+<li id="li-669"><p id="p-1978">The inverse function <span class="process-math">\(T^{-1}\colon W\rightarrow V\)</span> is a linear transformation.</p></li>
+<li id="li-670"><p id="p-1979">The set <span class="process-math">\(S\)</span> spans <span class="process-math">\(V\)</span> if and only if <span class="process-math">\(T(S)\)</span> spans <span class="process-math">\(W\text{.}\)</span></p></li>
+<li id="li-671"><p id="p-1980">The set <span class="process-math">\(S\)</span> is linearly independent if and only if <span class="process-math">\(T(S)\)</span> is linearly independent.</p></li>
 </ol>
 </li>
 <li id="li-672">
-<p id="p-1937">Assume <span class="process-math">\(\dim V=n\text{.}\)</span> Then the following are equivalent:</p>
+<p id="p-1981">Assume <span class="process-math">\(\dim V=n\text{.}\)</span> Then the following are equivalent:</p>
 <ol class="lower-roman">
-<li id="li-673"><p id="p-1938"><span class="process-math">\(T\)</span> is an isomorphism;</p></li>
-<li id="li-674"><p id="p-1939"><span class="process-math">\(\dim W=n\)</span> and <span class="process-math">\(\NS T=\{\boldzero\}\text{;}\)</span></p></li>
-<li id="li-675"><p id="p-1940"><span class="process-math">\(\dim W=n\)</span> and <span class="process-math">\(\im T=W\text{.}\)</span></p></li>
+<li id="li-673"><p id="p-1982"><span class="process-math">\(T\)</span> is an isomorphism;</p></li>
+<li id="li-674"><p id="p-1983"><span class="process-math">\(\dim W=n\)</span> and <span class="process-math">\(\NS T=\{\boldzero\}\text{;}\)</span></p></li>
+<li id="li-675"><p id="p-1984"><span class="process-math">\(\dim W=n\)</span> and <span class="process-math">\(\im T=W\text{.}\)</span></p></li>
 </ol>
 </li>
 </ol></article><article class="hiddenproof" id="proof-70"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-70"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-70"><article class="hiddenproof"><ol class="decimal"><li id="li-676">
-<p id="p-1941">Assume <span class="process-math">\(T\)</span> is injective. Then</p>
+<p id="p-1985">Assume <span class="process-math">\(T\)</span> is injective. Then</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-167">
 \begin{align*}
 T(\boldv)=\boldzero_W\amp \implies T(\boldv)=T(\boldzero_V) \\
@@ -475,7 +475,7 @@ T(\boldv)=\boldzero_W\amp \implies T(\boldv)=T(\boldzero_V) \\
 \end{align*}
 </div>
 <p class="continuation">It follows that <span class="process-math">\(\NS T=\{\boldzero_V\}\text{.}\)</span></p>
-<p id="p-1942">Now assume <span class="process-math">\(\NS T=\{\boldzero_V\}\text{.}\)</span> Then</p>
+<p id="p-1986">Now assume <span class="process-math">\(\NS T=\{\boldzero_V\}\text{.}\)</span> Then</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-168">
 \begin{align*}
 T(\boldv)=T(\boldv') \amp\implies T(\boldv)-T(\boldv')=\boldzero_W \\

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-25T15:04:15-07:00       *-->
+<!--*       on 2022-08-02T15:02:34-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,12 +15,39 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>A subset <span class="process-math">\(B\)</span> of a vector space <span class="process-math">\(V\)</span> is called a <dfn class="terminology">basis</dfn> if</p>
-<ol class="lower-roman">
-<li><p><span class="process-math">\(B\)</span> spans <span class="process-math">\(V\text{,}\)</span> and</p></li>
-<li><p><span class="process-math">\(B\)</span> is linearly independent.</p></li>
-</ol>
-<p class="continuation">If the basis <span class="process-math">\(B\)</span> comes equipped with an ordering (i.e., <span class="process-math">\(B\)</span> is an ordered set), then we call <span class="process-math">\(B\)</span> and <dfn class="terminology">ordered basis</dfn></p>
-<span class="incontext"><a href="s_basis.html#p-1597" class="internal">in-context</a></span>
+<p>We claim <span class="process-math">\(S\)</span> is linearly independent. If</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+c_1f+c_2g+c_3h=\boldzero\text{,}
+\end{equation*}
+</div>
+<p class="continuation">then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+c_1x+c_2\cos x+c_3\sin x=0\text{,}
+\end{equation*}
+</div>
+<p class="continuation">for all <span class="process-math">\(x\in (-2\pi, 2\pi)\text{.}\)</span> In particular, the equality is true when evaluated at <span class="process-math">\(x=0, \pi/2, \pi\text{,}\)</span> yielding the following linear system:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{linsys}{4}
+x=0 \colon \amp \amp 0c_1\amp +\amp \cos(0)c_2\amp +\amp \sin(0) c_3\amp= \amp 0\\
+x=\pi/2 \colon \amp \amp (\pi/2)c_1\amp +\amp \cos(\pi/2)c_2\amp +\amp \sin(\pi/2)c_3 \amp = \amp 0\\
+x=\pi \colon \amp  \amp \pi c_1\amp +\amp \cos(\pi)c_2\amp +\amp \sin(\pi)c_3 \amp= \amp 0
+\end{linsys}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">or</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{linsys}{4}
+x=0 \colon  \amp \amp \amp \amp c_2\amp \amp \amp = \amp 0\\
+x=\pi/2 \colon \amp  \amp (\pi/2)c_1\amp +\amp \amp +\amp c_3 \amp = \amp 0\\
+x=\pi \colon \amp  \amp \pi c_1\amp - \amp c_2 \amp \amp  \amp= \amp 0
+\end{linsys}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This system can be now be solved essentially by inspection: the first equation implies <span class="process-math">\(c_2=0\text{;}\)</span> setting <span class="process-math">\(c_2=0\text{,}\)</span> in the third equation, we conclude <span class="process-math">\(c_1=0\text{;}\)</span> the second equation now implies <span class="process-math">\(c_3=0\text{.}\)</span> We conclude that <span class="process-math">\(c_1=c_2=c_3=0\text{.}\)</span> Thus the only linear combination of <span class="process-math">\(f, g, h\)</span> yielding the zero function is the trivial one, showing that <span class="process-math">\(S\)</span> is linearly independent.</p>
+<span class="incontext"><a href="s_span_independence.html#p-1597" class="internal">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-25T15:04:24-07:00       *-->
+<!--*       on 2022-08-02T15:02:42-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,20 +15,7 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Consider again the matrix equation <span class="process-math">\(A\boldx=\boldy\)</span> from <a href="" class="xref" data-knowl="./knowl/eg_least-squares.html" title="Example 4.3.19: Best fitting line">Example 4.3.19</a>. According to <a href="" class="xref" data-knowl="./knowl/th_leastsquares.html" title="Theorem 4.3.22: Least-squares matrix formula">Theorem 4.3.22</a> the least-squares solution can be found by solving the equation <span class="process-math">\(A^TA\boldx=A^T\boldy\)</span> for <span class="process-math">\(\boldx\text{.}\)</span> We compute</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_least-squares.html ./knowl/th_leastsquares.html">
-\begin{align*}
-A^TA\amp=\begin{amatrix}[rr]14\amp 0\\ 0\amp 3  \end{amatrix} \amp A^T\boldy\amp =\begin{amatrix}[r] 5\\ 6 \end{amatrix}
-\end{align*}
-</div>
-<p class="continuation">and solve</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_least-squares.html ./knowl/th_leastsquares.html">
-\begin{equation*}
-\begin{amatrix}[rr]14\amp 0\\ 0\amp 3  \end{amatrix}\boldx=\begin{amatrix}[r] 5\\ 6 \end{amatrix}\iff
-\boldx=(5/14, 2),
-\end{equation*}
-</div>
-<p class="continuation">just as before.</p>
+<p>The formula <a href="" class="xref" data-knowl="./knowl/eq_ortho_proj_formula.html" title="Equation 4.3.2">(4.3.2)</a> is very convenient for computing an orthogonal projection <span class="process-math">\(\proj{\boldv}{W}\text{,}\)</span> but mark well this important detail: to apply the formula we must first provide an <em class="emphasis">orthogonal</em> basis of <span class="process-math">\(W\text{.}\)</span> Thus unless one is provided, our first step in an orthogonal projection computation is to produce an orthogonal basis of <span class="process-math">\(W\text{.}\)</span> In some simple cases (e.g., when <span class="process-math">\(W\)</span> is 1- or 2-dimensional) this can be done by inspection. Otherwise, we use the Gram-Schmidt procedure.</p>
 <span class="incontext"><a href="s_orthogonal_projection.html#p-2194" class="internal">in-context</a></span>
 </body>
 </html>

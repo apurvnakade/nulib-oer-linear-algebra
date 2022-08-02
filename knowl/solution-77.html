@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-25T15:04:24-07:00       *-->
+<!--*       on 2022-08-02T15:02:43-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,77 +16,57 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.1.7.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.3.18.1</span><span class="period">.</span>
 </h4>
 <ol class="decimal">
 <li>
-<p>To compute <span class="process-math">\([(3,3)]_B\)</span> we must find the unique pair <span class="process-math">\((c_1, c_2)\)</span> satisfying</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<p>Using the general formula described in <a href="" class="xref" data-knowl="./knowl/eg_projection_plane.html" title="Example 4.3.17: Projection onto planes in \R^3">Example 4.3.17</a>, we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_projection_plane.html">
 \begin{equation*}
-(3,3)=c_1(1,2)+c_2(1,1)\text{.}
+A=\frac{1}{6}\begin{amatrix}[rrr]
+5\amp 2\amp -1\\ 2\amp 2\amp 2\\ -1\amp 2\amp 5
+\end{amatrix}\text{.}
 \end{equation*}
 </div>
-<p class="continuation">By inspection, we see that</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-(3,3)=3(1,1)=0(1,2)+3(1,1)\text{.}
-\end{equation*}
-</div>
-<p class="continuation">We conclude that</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-[\boldv]_{B}=(0,3)\text{.}
-\end{equation*}
-</div>
-<p class="continuation">More generally, to compute <span class="process-math">\([\boldv]_B\)</span> for an arbitrary <span class="process-math">\(\boldv=(a,b)\in \R^2\text{,}\)</span> we must find the pair <span class="process-math">\((c_1,c_2)\)</span> satisfying <span class="process-math">\((a,b)=c_1(1,2)+c_2(1,1)\text{,}\)</span> or equivalently</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\begin{linsys}{2}
-c_1\amp +\amp c_2 \amp =\amp a\\
-2c_1\amp +\amp c_2\amp =\amp b
-\end{linsys}\text{.}
-\end{equation*}
-</div>
-<p class="continuation">The usual techniques yield the unique solution <span class="process-math">\((c_1,c_2)=(-a+b,2a-b)\text{,}\)</span> and thus</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-[\boldv]_B=(-a+b, 2a-b)
-\end{equation*}
-</div>
-<p class="continuation">for <span class="process-math">\(\boldv=(a,b)\text{.}\)</span></p>
 </li>
 <li>
-<p>To compute <span class="process-math">\([x^2]_B\)</span> we must find the unique triple <span class="process-math">\((c_1,c_2,c_3)\)</span> satisfying</p>
+<p>Now compute</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-x^2=c_1(x^2+x+1)+c_2(x^2-x)+c_3(x^2-1)\text{.}
-\end{equation*}
+\begin{align*}
+\proj{(2,1,1)}{\ell}\amp= \frac{1}{6}\begin{amatrix}[rrr]
+5\amp 2\amp -1\\ 2\amp 2\amp 2\\ -1\amp 2\amp 5
+\end{amatrix}
+\begin{amatrix}[r]
+2 \\ 1\\ 1
+\end{amatrix}=
+\frac{1}{6}\begin{amatrix}[r]
+11\\ 8\\ 5
+\end{amatrix}\\
+\proj{(1,1,1)}{\ell}\amp= \frac{1}{6}\begin{amatrix}[rrr]
+5\amp 2\amp -1\\ 2\amp 2\amp 2\\ -1\amp 2\amp 5
+\end{amatrix}
+\begin{amatrix}[r]
+1 \\ 1\\ 1
+\end{amatrix}=
+\frac{1}{6}\begin{amatrix}[r]
+0\\ 0\\ 0
+\end{amatrix}\text{.}
+\end{align*}
 </div>
-<p class="continuation">The equivalent linear system once we combine like terms and equate coefficients is</p>
+</li>
+<li>
+<p>We have</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\begin{linsys}{3}
-c_1\amp +\amp c_2\amp +\amp c_3\amp =\amp 1\\
-c_1\amp -\amp c_2\amp \amp \amp =\amp 0\\
-c_1\amp \amp \amp -\amp c_3\amp =\amp 0\\
-\end{linsys}\text{.}
-\end{equation*}
-</div>
-<p class="continuation">The unique solution to this system is <span class="process-math">\((c_1,c_2,c_3)=(1/3, 1/3, 1/3)\text{.}\)</span> We conclude</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-[x^2]_B=\frac{1}{3}(1, 1, 1)\text{.}
-\end{equation*}
-</div>
-<p class="continuation">The same reasoning shows that more generally, given polynomial <span class="process-math">\(p(x)=ax^2+bx+c\text{,}\)</span> we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-[p(x)]_B=\frac{1}{3}(a+b+c, a-2b+c, a+b-2)\text{.}
-\end{equation*}
+\begin{align*}
+d((2,1,1), W) \amp = \norm{(2,1,1)-\proj{(2,1,1)}{W}}\\
+\amp =\norm{\frac{1}{6}(1,-2,-1)}=\frac{6}{6} \\
+d((1,1,1), W) \amp = \norm{(1,1,1)-\proj{(1,1,1)}{W}}\\
+\amp =\norm{(0,0,0)}=0 \text{.}
+\end{align*}
 </div>
 </li>
 </ol>
 </div>
-<span class="incontext"><a href="s_coordinatevectors.html#solution-77" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_orthogonal_projection.html#solution-77" class="internal">in-context</a></span>
 </body>
 </html>

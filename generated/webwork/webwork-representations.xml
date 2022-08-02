@@ -100,6 +100,191 @@ write them separated by commas.</p>
     <server-data sourceFilePath="Library/NAU/setFoundations/MAT320_0401.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
     <pg source="Library/NAU/setFoundations/MAT320_0401.pg"/>
   </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-12" ww-id="webwork-12">
+    <static seed="12" source="Library/PCC/BasicAlgebra/ComplexNumber/complexNumberOperations100.pg">
+      <statement><p>Rewrite the following expression into the form of a+b<m>i</m>:</p>
+<p><m>\displaystyle{ \frac{{-6+2i}}{{1-i}} = }</m><fillin name="AnSwEr0001" characters="11"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>-4-2i</m>
+        </p>
+      </answer>
+      <solution><p>By definition, <m>i=\sqrt{-1}</m>, so we have <m>i^{2}=-1</m>.</p>
+<p>To get rid of <alert><m>i</m></alert> in the denominator, we use the difference of squares formula:</p>
+<p><m>\displaystyle{ 
+ \begin{aligned}
+   \amp \phantom{{}=}(1+{-i})(1-{-i}) \\
+   \amp = (1)^{2}-({-i})^{2} \\
+   \amp = (1)-(-1) \\
+   \amp = 2
+ \end{aligned}
+    }</m></p>
+<p>The full solution is:</p>
+<p><m>\displaystyle{ 
+\begin{aligned}
+   \amp \phantom{{}=} \frac{{-6+2i}}{{1-i}} \\
+   \amp = \frac{({-6+2i})(1-{-i})}{({1-i})(1-{-i})}  \\
+   \amp = \frac{(-6)(1)+(-6)(-{-i})+({2i})(1)+({2i})(-{-i})}{2}  \\
+   \amp = \frac{(-6)+(-6i)+(2i)+(2)(i^{2})}{2}  \\
+   \amp = \frac{(-6)+(-4i)+(2)(-1)}{2}  \\
+   \amp = \frac{(-6)+(-4i)+(-2)}{2}  \\
+   \amp = \frac{(-8)+(-4i)}{2}  \\
+   \amp = \frac{-8}{2}+\frac{-4i}{2}  \\
+   \amp = {-4-2i}
+\end{aligned}
+    }</m></p>
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/PCC/BasicAlgebra/ComplexNumber/complexNumberOperations100.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/PCC/BasicAlgebra/ComplexNumber/complexNumberOperations100.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-13" ww-id="webwork-13">
+    <static seed="13" source="Library/Rochester/setAlgebra11ComplexNumbers/ur_cn_1_14.pg">
+      <statement><p>Let <m>z\ =\ -1+i</m>. Calculate the following:</p>
+<p>(a) <m>z^2\ +\ 2z+ 1\ =</m> <fillin name="AnSwEr0001" characters="10"/> <m>+</m> <fillin name="AnSwEr0002" characters="10"/> <m>i</m>,</p>
+<p>(b) <m>z^2\ +\ iz\ -\ (-3\ +\ i)\ =</m> <fillin name="AnSwEr0003" characters="10"/> <m>+</m> <fillin name="AnSwEr0004" characters="10"/> <m>i</m>,</p>
+<p>(c) <m>\displaystyle \frac{(z\ -\ 3)^2}{z\ +\ i}\ =</m> <fillin name="AnSwEr0005" characters="10"/> <m>+</m> <fillin name="AnSwEr0006" characters="10"/> <m>i</m>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>-1</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>2</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-4</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-6.2</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-4.4</m>
+        </p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="Library/Rochester/setAlgebra11ComplexNumbers/ur_cn_1_14.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Rochester/setAlgebra11ComplexNumbers/ur_cn_1_14.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-14" ww-id="webwork-14">
+    <static seed="14" source="Library/Hope/Multi1/05-03-Complex-numbers/Complex_arithmetic_04.pg">
+      <statement><p>Evaluate the following expressions and write them in the form <m>a + b i</m>.</p>
+<p><m>(1+2i)(-5-4i) =</m> <fillin name="AnSwEr0001" characters="20"/>.</p>
+<p><m>(1+2i)\overline{(-5-4i)} =</m> <fillin name="AnSwEr0002" characters="20"/>.</p>
+<p><m>\overline{(1+2i)(-5-4i)} =</m> <fillin name="AnSwEr0003" characters="20"/>.</p>
+<p><m>(1+2i)\overline{(1+2i)} =</m> <fillin name="AnSwEr0004" characters="20"/>.</p>
+<p><m>| 1+2i | =</m> <fillin name="AnSwEr0005" characters="20"/>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>3-14i</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-13-6i</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>3+14i</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>5</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>2.23607</m>
+        </p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="Library/Hope/Multi1/05-03-Complex-numbers/Complex_arithmetic_04.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Hope/Multi1/05-03-Complex-numbers/Complex_arithmetic_04.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-15" ww-id="webwork-15">
+    <static seed="15" source="Library/Rochester/setComplexNumbers/ur_cn_1_16.pg">
+      <statement><p>Calculate:</p>
+<p>(a) <m>\displaystyle \Big| \frac{3+4i}{-4-4i} \Big|\ =</m> <fillin name="AnSwEr0001" characters="20"/>,</p>
+<p>(b) <m>\displaystyle \Big| \overline{(1\ +\ i)}(3-3i)(3-2i)\Big|\ =</m> <fillin name="AnSwEr0002" characters="20"/>,</p>
+<p>(c) <m>\displaystyle \Big|\frac{i(2+4i)^3}{(1-i)^2}\Big|\ =</m> <fillin name="AnSwEr0003" characters="20"/>,</p>
+<p>(d) <m>\displaystyle \Big| \frac{(\pi\ + i) ^{100}}{(\pi\ -\ i)^{100}}\Big|\ =</m> <fillin name="AnSwEr0004" characters="20"/>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>0.883883476483184</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>21.6333076527839</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>44.7213595499958</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>1</m>
+        </p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="Library/Rochester/setComplexNumbers/ur_cn_1_16.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Rochester/setComplexNumbers/ur_cn_1_16.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-16" ww-id="webwork-16">
+    <static seed="16" source="Library/ASU-topics/setPolynomials/srw3_5_31.pg">
+      <statement><p>Find a degree 3 polynomial whose coefficient of <m>x^3</m> equal to 1.  The zeros of
+this polynomial are
+<m>3</m>, <m>-4 i</m>, and <m>4 i</m>.
+Simplify your answer so that it has only real numbers
+as coefficients.</p>
+<p>Your answer is <fillin name="AnSwEr0001" characters="20"/>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>\left(x-3\right)\!\left(x^{2}+16\right)</m>
+        </p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="Library/ASU-topics/setPolynomials/srw3_5_31.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/ASU-topics/setPolynomials/srw3_5_31.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-17" ww-id="webwork-17">
+    <static seed="17" source="Library/ASU-topics/setPolynomials/jj1.pg">
+      <statement><p>The polynomial
+<me>f(x) = 7 x^3 - 2 x^2+ 567 x - 162</me>
+has <m>9 i</m> as a root.  Give <em> all</em> of the roots of <m>f</m> in a
+comma-separated list, including the given one.</p>
+<p>Roots:  <fillin name="AnSwEr0001" characters="40"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>9i, -9i, 0.285714285714286</m>
+        </p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="Library/ASU-topics/setPolynomials/jj1.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/ASU-topics/setPolynomials/jj1.pg"/>
+  </webwork-reps>
   <webwork-reps version="2" xml:id="extracted-webwork-2" ww-id="webwork-2">
     <static seed="2" source="Library/SDSU/Discrete/Sets/cartesianprodB4.pg">
       <statement><p>Let <m>S = \lbrace w,x,y,z\rbrace</m>, <m>T = \lbrace 0\rbrace</m></p>

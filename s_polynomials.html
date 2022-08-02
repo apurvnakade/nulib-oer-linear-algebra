@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-25T15:03:46-07:00       *-->
+<!--*       on 2022-08-02T15:02:08-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -398,25 +398,25 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <span class="type">Section</span> <span class="codenumber">0.5</span> <span class="title">Polynomials</span>
 </h2>
 <section class="introduction" id="introduction-9">Polynomials will play an important role in our treatment of linear algebra both in terms of building examples of vector spaces (<a href="" class="xref" data-knowl="./knowl/d_subspace_functions.html" title="Definition 3.3.20">3.3.20</a>) and as tools for studying linear operators (<a href="" class="xref" data-knowl="./knowl/d_char_poly_transform.html" title="Definition 5.5.27: Characteristic polynomial of a transformation">5.5.27</a>). We gather here some basic definitions and properties of polynomials. Although we will primarily be concerned with polynomials with real coefficients in this course, it is convenient to develop the theory over the complex numbers. As with <a href="s_complex_numbers.html" class="internal" title="Section 0.4: Complex numbers">Section 0.4</a>, all theorems will be stated without proof.</section><section class="subsection" id="ss_poly_def"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Basic definitions</span>
+<span class="type">Subsection</span> <span class="codenumber">0.5.1</span> <span class="title">Basic definitions</span>
 </h3>
 <article class="definition definition-like" id="d_polynomials"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Polynomials.</span>
 </h4>
-<p id="p-278">Assume <span class="process-math">\(X\subseteq \C\)</span> and that <span class="process-math">\(Y=\R\)</span> or <span class="process-math">\(Y=\C\text{.}\)</span> A function <span class="process-math">\(f\colon X\rightarrow Y\)</span> is called a <dfn class="terminology">polynomial</dfn> if there is a nonnegative integer <span class="process-math">\(n\)</span> and elements <span class="process-math">\(a_i\in \C\)</span> such that</p>
+<p id="p-316">Assume <span class="process-math">\(X\subseteq \C\)</span> and that <span class="process-math">\(Y=\R\)</span> or <span class="process-math">\(Y=\C\text{.}\)</span> A function <span class="process-math">\(f\colon X\rightarrow Y\)</span> is called a <dfn class="terminology">polynomial</dfn> if there is a nonnegative integer <span class="process-math">\(n\)</span> and elements <span class="process-math">\(a_i\in \C\)</span> such that</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_poly.html ./knowl/eq_poly.html" id="eq_poly">
 \begin{equation}
 f(x)=\anpoly\tag{0.5.1}
 \end{equation}
 </div>
 <p class="continuation">for all <span class="process-math">\(x\in X\text{.}\)</span> We call the right-hand side of <a href="" class="xref" data-knowl="./knowl/eq_poly.html" title="Equation 0.5.1">(0.5.1)</a> a <dfn class="terminology">polynomial expression</dfn> of <span class="process-math">\(f\text{.}\)</span> For each <span class="process-math">\(1\leq i\leq n\)</span> we call <span class="process-math">\(a_ix^i\)</span> the <span class="process-math">\(i\)</span>-th <dfn class="terminology">term</dfn> of this polynomial expression, and <span class="process-math">\(a_i\)</span> its <span class="process-math">\(i\)</span>-th coefficient; we call <span class="process-math">\(a_0\)</span> the <dfn class="terminology">constant term</dfn>. Furthermore, if <span class="process-math">\(a_n\ne 0\text{,}\)</span> then <span class="process-math">\(a_nx^{n}\)</span> is called the <dfn class="terminology">leading term</dfn> of the polynomial expression in <a href="" class="xref" data-knowl="./knowl/eq_poly.html" title="Equation 0.5.1">(0.5.1)</a>, and <span class="process-math">\(a_{n}\)</span> its <dfn class="terminology">leading coefficient</dfn>.</p>
-<p id="p-279">A <dfn class="terminology">root</dfn> of a polynomial <span class="process-math">\(f\colon X\rightarrow Y\)</span> is an element <span class="process-math">\(c\in X\)</span> satisfying <span class="process-math">\(f(c)=0\text{.}\)</span></p>
-<p id="p-280">A function <span class="process-math">\(f\colon X\rightarrow Y\)</span> is called a <dfn class="terminology">real</dfn> (resp. <dfn class="terminology">rational</dfn>, resp. <dfn class="terminology">integer</dfn>) polynomial if it has a polynomial expression as in <a href="" class="xref" data-knowl="./knowl/eq_poly.html" title="Equation 0.5.1">(0.5.1)</a> for which each coefficient <span class="process-math">\(a_i\)</span> is real (resp. rational, resp. an integer).</p></article><article class="theorem theorem-like" id="th_poly_basic"><h4 class="heading">
+<p id="p-317">A <dfn class="terminology">root</dfn> of a polynomial <span class="process-math">\(f\colon X\rightarrow Y\)</span> is an element <span class="process-math">\(c\in X\)</span> satisfying <span class="process-math">\(f(c)=0\text{.}\)</span></p>
+<p id="p-318">A function <span class="process-math">\(f\colon X\rightarrow Y\)</span> is called a <dfn class="terminology">real</dfn> (resp. <dfn class="terminology">rational</dfn>, resp. <dfn class="terminology">integer</dfn>) polynomial if it has a polynomial expression as in <a href="" class="xref" data-knowl="./knowl/eq_poly.html" title="Equation 0.5.1">(0.5.1)</a> for which each coefficient <span class="process-math">\(a_i\)</span> is real (resp. rational, resp. an integer).</p></article><article class="theorem theorem-like" id="th_poly_basic"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">0.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Basic properties of polynomials.</span>
 </h4>Assume <span class="process-math">\(X\subseteq \C\)</span> and that <span class="process-math">\(Y=\R\)</span> or <span class="process-math">\(Y=\C\text{.}\)</span> <ol class="decimal">
-<li id="li-75"><p id="p-281">If <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are polynomials from <span class="process-math">\(X\)</span> to <span class="process-math">\(Y\text{,}\)</span> then so are <span class="process-math">\(f+g\text{,}\)</span> <span class="process-math">\(fg\text{,}\)</span> and <span class="process-math">\(cf\text{,}\)</span> where <span class="process-math">\(c\)</span> is any element of <span class="process-math">\(Y\text{.}\)</span></p></li>
+<li id="li-75"><p id="p-319">If <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are polynomials from <span class="process-math">\(X\)</span> to <span class="process-math">\(Y\text{,}\)</span> then so are <span class="process-math">\(f+g\text{,}\)</span> <span class="process-math">\(fg\text{,}\)</span> and <span class="process-math">\(cf\text{,}\)</span> where <span class="process-math">\(c\)</span> is any element of <span class="process-math">\(Y\text{.}\)</span></p></li>
 <li id="li-76">
-<p id="p-282">If <span class="process-math">\(f\colon X\rightarrow Y\)</span> is a polynomial and <span class="process-math">\(c\in X\)</span> is a root of <span class="process-math">\(f(x)\text{,}\)</span> then there is a polynomial <span class="process-math">\(g\colon X\rightarrow Y\)</span> such that</p>
+<p id="p-320">If <span class="process-math">\(f\colon X\rightarrow Y\)</span> is a polynomial and <span class="process-math">\(c\in X\)</span> is a root of <span class="process-math">\(f(x)\text{,}\)</span> then there is a polynomial <span class="process-math">\(g\colon X\rightarrow Y\)</span> such that</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="eq_poly_factor">
 \begin{equation}
 f(x)=(x-c)g(x)\tag{0.5.2}
@@ -424,17 +424,17 @@ f(x)=(x-c)g(x)\tag{0.5.2}
 </div>
 <p class="continuation">for all <span class="process-math">\(x\in X\text{.}\)</span></p>
 </li>
-<li id="li-77"><p id="p-283">If <span class="process-math">\(f\colon X\rightarrow Y\)</span> has a polynomial expression <span class="process-math">\(f(x)=\anpoly\)</span> where <span class="process-math">\(a_n\ne 0\text{,}\)</span> then <span class="process-math">\(f\)</span> has at most <span class="process-math">\(n\)</span> distinct roots in <span class="process-math">\(X\text{.}\)</span></p></li>
+<li id="li-77"><p id="p-321">If <span class="process-math">\(f\colon X\rightarrow Y\)</span> has a polynomial expression <span class="process-math">\(f(x)=\anpoly\)</span> where <span class="process-math">\(a_n\ne 0\text{,}\)</span> then <span class="process-math">\(f\)</span> has at most <span class="process-math">\(n\)</span> distinct roots in <span class="process-math">\(X\text{.}\)</span></p></li>
 </ol>
-<p id="p-284"></p></article><p id="p-285">As a result of the last property of <a href="" class="xref" data-knowl="./knowl/th_poly_basic.html" title="Theorem 0.5.2: Basic properties of polynomials">Theorem 0.5.2</a> the expression <a href="" class="xref" data-knowl="./knowl/eq_poly.html" title="Equation 0.5.1">(0.5.1)</a> of a polynomial <span class="process-math">\(f\colon X\rightarrow Y\)</span> is <em class="emphasis">unique</em>, as long as the domain <span class="process-math">\(X\)</span> is <em class="emphasis">infinite</em>. This is made precise in the following corollary.</p>
+<p id="p-322"></p></article><p id="p-323">As a result of the last property of <a href="" class="xref" data-knowl="./knowl/th_poly_basic.html" title="Theorem 0.5.2: Basic properties of polynomials">Theorem 0.5.2</a> the expression <a href="" class="xref" data-knowl="./knowl/eq_poly.html" title="Equation 0.5.1">(0.5.1)</a> of a polynomial <span class="process-math">\(f\colon X\rightarrow Y\)</span> is <em class="emphasis">unique</em>, as long as the domain <span class="process-math">\(X\)</span> is <em class="emphasis">infinite</em>. This is made precise in the following corollary.</p>
 <article class="corollary theorem-like" id="cor_poly_equality"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">0.5.3</span><span class="period">.</span>
 </h4>
-<p id="p-286">Assume <span class="process-math">\(X\)</span> is an infinite subset of <span class="process-math">\(\C\)</span> and that <span class="process-math">\(Y=\R\)</span> or <span class="process-math">\(Y=\C\text{.}\)</span> If <span class="process-math">\(f\colon X\rightarrow Y\)</span> is a polynomial and <span class="process-math">\(X\)</span> is infinite, then the expression <span class="process-math">\(f(x)=\anpoly\)</span> is unique. More precisely:</p>
+<p id="p-324">Assume <span class="process-math">\(X\)</span> is an infinite subset of <span class="process-math">\(\C\)</span> and that <span class="process-math">\(Y=\R\)</span> or <span class="process-math">\(Y=\C\text{.}\)</span> If <span class="process-math">\(f\colon X\rightarrow Y\)</span> is a polynomial and <span class="process-math">\(X\)</span> is infinite, then the expression <span class="process-math">\(f(x)=\anpoly\)</span> is unique. More precisely:</p>
 <ul class="disc">
-<li id="li-78"><p id="p-287">If <span class="process-math">\(f\)</span> is the zero function, then <span class="process-math">\(a_i=0\)</span> for all <span class="process-math">\(1\leq i\leq n\text{.}\)</span></p></li>
+<li id="li-78"><p id="p-325">If <span class="process-math">\(f\)</span> is the zero function, then <span class="process-math">\(a_i=0\)</span> for all <span class="process-math">\(1\leq i\leq n\text{.}\)</span></p></li>
 <li id="li-79">
-<p id="p-288">If <span class="process-math">\(f\)</span> is not the zero function and we have two polynomial expressions</p>
+<p id="p-326">If <span class="process-math">\(f\)</span> is not the zero function and we have two polynomial expressions</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 f(x)=\anpoly=\bmpoly\text{,}
@@ -443,37 +443,66 @@ f(x)=\anpoly=\bmpoly\text{,}
 <p class="continuation">where <span class="process-math">\(a_n, b_m\ne 0\text{,}\)</span> then <span class="process-math">\(n=m\)</span> and <span class="process-math">\(a_i=b_i\)</span> for all <span class="process-math">\(1\leq i\leq n\text{.}\)</span></p>
 </li>
 </ul></article></section><section class="subsection" id="ss_degree"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Degree of a polynomial</span>
+<span class="type">Subsection</span> <span class="codenumber">0.5.2</span> <span class="title">Degree of a polynomial</span>
 </h3>
-<section class="introduction" id="introduction-10"><p id="p-289">Once we know that the expression <span class="process-math">\(f(x)=\anpoly\)</span> is unique, the various attributes of the polynomial expression (e.g., leading term, leading coefficient, etc.) can now be understood as properties of the function <span class="process-math">\(f\)</span> itself. The following definition introduces once more such property, the <em class="emphasis">degree</em> of a polynomial. Note that the definition assumes we are in the setting stipulated in <a href="" class="xref" data-knowl="./knowl/cor_poly_equality.html" title="Corollary 0.5.3">Corollary 0.5.3</a> to ensure uniqueness of the polynomial expression.</p></section><article class="definition definition-like" id="d_poly_degree"><h4 class="heading">
+<section class="introduction" id="introduction-10"><p id="p-327">Once we know that the expression <span class="process-math">\(f(x)=\anpoly\)</span> is unique, the various attributes of the polynomial expression (e.g., leading term, leading coefficient, etc.) can now be understood as properties of the function <span class="process-math">\(f\)</span> itself. The following definition introduces once more such property, the <em class="emphasis">degree</em> of a polynomial. Note that the definition assumes we are in the setting stipulated in <a href="" class="xref" data-knowl="./knowl/cor_poly_equality.html" title="Corollary 0.5.3">Corollary 0.5.3</a> to ensure uniqueness of the polynomial expression.</p></section><article class="definition definition-like" id="d_poly_degree"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Degree of a polynomial.</span>
 </h4>
-<p id="p-290">Assume <span class="process-math">\(X\)</span> is an infinite subset of <span class="process-math">\(\C\)</span> and that <span class="process-math">\(Y=\R\)</span> or <span class="process-math">\(Y=\C\text{.}\)</span> Let <span class="process-math">\(f\colon X\rightarrow Y\)</span> be a nonzero polynomial function, and let <span class="process-math">\(f(x)=\anpoly\)</span> be its unique polynomial expression with <span class="process-math">\(a_n\ne 0\text{.}\)</span> The integer <span class="process-math">\(n\)</span> is called the <dfn class="terminology">degree</dfn> of <span class="process-math">\(f\text{,}\)</span> denoted <span class="process-math">\(\deg f\text{.}\)</span>  is defined as follows:</p>
+<p id="p-328">Assume <span class="process-math">\(X\)</span> is an infinite subset of <span class="process-math">\(\C\)</span> and that <span class="process-math">\(Y=\R\)</span> or <span class="process-math">\(Y=\C\text{.}\)</span> Let <span class="process-math">\(f\colon X\rightarrow Y\)</span> be a nonzero polynomial function, and let <span class="process-math">\(f(x)=\anpoly\)</span> be its unique polynomial expression with <span class="process-math">\(a_n\ne 0\text{.}\)</span> The integer <span class="process-math">\(n\)</span> is called the <dfn class="terminology">degree</dfn> of <span class="process-math">\(f\text{,}\)</span> denoted <span class="process-math">\(\deg f\text{.}\)</span>  is defined as follows:</p>
 <ul class="disc">
-<li id="li-80"><p id="p-291">if <span class="process-math">\(f\)</span> is the zero function, then we define <span class="process-math">\(\deg f=-\infty\text{.}\)</span></p></li>
-<li id="li-81"><p id="p-292">otherwise, we can write <span class="process-math">\(f(x)=\anpoly\)</span> where <span class="process-math">\(a_n\ne 0\text{,}\)</span> and we define <span class="process-math">\(\deg f=n\text{.}\)</span></p></li>
+<li id="li-80"><p id="p-329">if <span class="process-math">\(f\)</span> is the zero function, then we define <span class="process-math">\(\deg f=-\infty\text{.}\)</span></p></li>
+<li id="li-81"><p id="p-330">otherwise, we can write <span class="process-math">\(f(x)=\anpoly\)</span> where <span class="process-math">\(a_n\ne 0\text{,}\)</span> and we define <span class="process-math">\(\deg f=n\text{.}\)</span></p></li>
 </ul>
-<p class="continuation">We call the polynomial <span class="process-math">\(f\)</span> <dfn class="terminology">linear</dfn> if <span class="process-math">\(\deg f=1\text{,}\)</span> <dfn class="terminology">quadratic</dfn> if <span class="process-math">\(\deg f=2\text{,}\)</span> and <dfn class="terminology">cubic</dfn> if <span class="process-math">\(\deg f=3\text{.}\)</span></p></article><p id="p-293">Defining the degree of the zero function to be <span class="process-math">\(-\infty\)</span> may seem a little peculiar. Do not be disturbed! You can think of this as a convention that allows for clean statements of theorems like the following.</p>
+<p class="continuation">We call the polynomial <span class="process-math">\(f\)</span> <dfn class="terminology">linear</dfn> if <span class="process-math">\(\deg f=1\text{,}\)</span> <dfn class="terminology">quadratic</dfn> if <span class="process-math">\(\deg f=2\text{,}\)</span> and <dfn class="terminology">cubic</dfn> if <span class="process-math">\(\deg f=3\text{.}\)</span></p></article><p id="p-331">Defining the degree of the zero function to be <span class="process-math">\(-\infty\)</span> may seem a little peculiar. Do not be disturbed! You can think of this as a convention that allows for clean statements of theorems like the following.</p>
 <article class="theorem theorem-like" id="th_poly_degree"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">0.5.5</span><span class="period">.</span><span class="space"> </span><span class="title">Basic properties of degree.</span>
 </h4>
-<p id="p-294">Assume <span class="process-math">\(X\)</span> is an infinite subset of <span class="process-math">\(\C\)</span> and that <span class="process-math">\(Y=\R\)</span> or <span class="process-math">\(Y=\C\text{.}\)</span> Let <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> be polynomial functions from <span class="process-math">\(X\)</span> to <span class="process-math">\(Y\text{.}\)</span></p>
+<p id="p-332">Assume <span class="process-math">\(X\)</span> is an infinite subset of <span class="process-math">\(\C\)</span> and that <span class="process-math">\(Y=\R\)</span> or <span class="process-math">\(Y=\C\text{.}\)</span> Let <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> be polynomial functions from <span class="process-math">\(X\)</span> to <span class="process-math">\(Y\text{.}\)</span></p>
 <ol class="decimal">
-<li id="li-82"><p id="p-295"><span class="process-math">\(\deg fg=\deg f+\deg g\text{.}\)</span></p></li>
-<li id="li-83"><p id="p-296"><span class="process-math">\(\deg f+g\leq \max\{\deg f, \deg g\}\text{.}\)</span></p></li>
+<li id="li-82"><p id="p-333"><span class="process-math">\(\deg fg=\deg f+\deg g\text{.}\)</span></p></li>
+<li id="li-83"><p id="p-334"><span class="process-math">\(\deg f+g\leq \max\{\deg f, \deg g\}\text{.}\)</span></p></li>
 </ol></article></section><section class="subsection" id="ss_poly_factoring"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Factoring polynomials</span>
+<span class="type">Subsection</span> <span class="codenumber">0.5.3</span> <span class="title">Factoring polynomials</span>
 </h3>
-<section class="introduction" id="introduction-11"><p id="p-297">Statement (2) of <a href="" class="xref" data-knowl="./knowl/th_poly_basic.html" title="Theorem 0.5.2: Basic properties of polynomials">Theorem 0.5.2</a> makes a connection between roots of a polynomial and factorization; and the expression <a href="" class="xref" data-knowl="./knowl/eq_poly_factor.html" title="Equation 0.5.2">(0.5.2)</a> can be thought of as a first step in writing the polynomial <span class="process-math">\(f\)</span> as a product of linear polynomials. The existence of roots depends on the given domain of the function. Indeed,  there are plenty of polynomials <span class="process-math">\(f\colon \R\rightarrow \R\)</span> that have no roots whatsoever: for example, from the quadratic formula we know that any quadratic polynomial <span class="process-math">\(f(x)=ax^2+bx+c\)</span> satisfying <span class="process-math">\(b^2-4ac\lt 0\)</span> has no real roots. According to the <a href="" class="xref" data-knowl="./knowl/th_fund_alg.html" title="Theorem 0.5.6: Fundamental theorem of algebra">fundamental theorem of algebra</a>, the situation over <span class="process-math">\(\C\)</span> is vastly different: not only does every polymonial have a root in <span class="process-math">\(\C\text{,}\)</span> we can factor it completely as a product of linear polynomials. This is one of the main incentives for introducing the complex numbers as a number system.</p></section><article class="theorem theorem-like" id="th_fund_alg"><h4 class="heading">
+<section class="introduction" id="introduction-11"><p id="p-335">Statement (2) of <a href="" class="xref" data-knowl="./knowl/th_poly_basic.html" title="Theorem 0.5.2: Basic properties of polynomials">Theorem 0.5.2</a> makes a connection between roots of a polynomial and factorization; and the expression <a href="" class="xref" data-knowl="./knowl/eq_poly_factor.html" title="Equation 0.5.2">(0.5.2)</a> can be thought of as a first step in writing the polynomial <span class="process-math">\(f\)</span> as a product of linear polynomials. The existence of roots depends on the given domain of the function. Indeed,  there are plenty of polynomials <span class="process-math">\(f\colon \R\rightarrow \R\)</span> that have no roots whatsoever: for example, from the quadratic formula we know that any quadratic polynomial <span class="process-math">\(f(x)=ax^2+bx+c\)</span> satisfying <span class="process-math">\(b^2-4ac\lt 0\)</span> has no real roots. According to the <a href="" class="xref" data-knowl="./knowl/th_fund_alg.html" title="Theorem 0.5.6: Fundamental theorem of algebra">fundamental theorem of algebra</a>, the situation over <span class="process-math">\(\C\)</span> is vastly different: not only does every polymonial have a root in <span class="process-math">\(\C\text{,}\)</span> we can factor it completely as a product of linear polynomials. This is one of the main incentives for introducing the complex numbers as a number system.</p></section><article class="theorem theorem-like" id="th_fund_alg"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">0.5.6</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental theorem of algebra.</span>
 </h4>
-<p id="p-298">Any polynomial <span class="process-math">\(f(x)=\anpoly\text{,}\)</span> thought of as a function from <span class="process-math">\(\C\)</span> to itself, can be factored into linear terms as</p>
+<p id="p-336">Any polynomial <span class="process-math">\(f(x)=\anpoly\text{,}\)</span> thought of as a function from <span class="process-math">\(\C\)</span> to itself, can be factored into linear terms as</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 f(x)=(x-z_1)(x-z_2)\cdots (x-z_n)\text{,}
 \end{equation*}
 </div>
-<p class="continuation">where the <span class="process-math">\(z_i\)</span> are (not necessarily distinct) complex numbers.</p></article></section></section></div></main>
+<p class="continuation">where the <span class="process-math">\(z_i\)</span> are (not necessarily distinct) complex numbers.</p></article></section><section class="exercises" id="s_polynomials_ex"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">0.5.4</span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-16"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div id="webwork-16" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="16" data-sourceFilePath="Library/ASU-topics/setPolynomials/srw3_5_31.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-337">Find a degree 3 polynomial whose coefficient of <span class="process-math">\(x^3\)</span> equal to 1.  The zeros of this polynomial are <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(-4 i\text{,}\)</span> and <span class="process-math">\(4 i\text{.}\)</span> Simplify your answer so that it has only real numbers as coefficients.</p>
+<p id="p-338">Your answer is <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-33" id="answer-33"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-33"><div class="answer solution-like"><p id="p-339"><span class="process-math">\(\left(x-3\right)\!\left(x^{2}+16\right)\)</span></p></div></div>
+</div>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-16')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="exercise-17"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div id="webwork-17" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="17" data-sourceFilePath="Library/ASU-topics/setPolynomials/jj1.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-340">The polynomial</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x) = 7 x^3 - 2 x^2+ 567 x - 162
+\end{equation*}
+</div>
+<p class="continuation">has <span class="process-math">\(9 i\)</span> as a root.  Give <em class="emphasis">all</em> of the roots of <span class="process-math">\(f\)</span> in a comma-separated list, including the given one.</p>
+<p id="p-341">Roots:  <span class="fillin underline" role="img" aria-label="40-character blank" style="width: 18.1818181818182em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-34" id="answer-34"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-34"><div class="answer solution-like"><p id="p-342"><span class="process-math">\(9i, -9i, 0.285714285714286\)</span></p></div></div>
+</div>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-17')">Make Interactive</button></div>
+</div></article></section></section></div></main>
 </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-25T15:04:22-07:00       *-->
+<!--*       on 2022-08-02T15:02:41-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,32 +13,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like">
-<p>First observe that</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-\angvec{1,1} \amp = \int_0^{2\pi} 1\, dx=2\pi \\
-\angvec{1, \cos n x} \amp= \int_0^{2\pi}\cos n x\, dx=0 \\
-\angvec{1, \sin n x} \amp= \int_0^{2\pi}\sin n x\, dx=0 
-\end{align*}
-</div>
-<p class="continuation">for all <span class="process-math">\(n\text{.}\)</span> (Note: since <span class="process-math">\(\angvec{1,1}=2\pi\ne 1\text{,}\)</span> the set <span class="process-math">\(S\)</span> is not orthonormal. ) Next, using the trigonometric identities</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-\cos\alpha\cos\beta \amp =\frac{1}{2}(\cos(\alpha-\beta)+\cos(\alpha+\beta))\\
-\sin\alpha\sin\beta  \amp=\frac{1}{2}(\cos(\alpha-\beta)-\cos(\alpha+\beta)) \\
-\sin\alpha\cos\beta \amp =\frac{1}{2}(\sin(\alpha-\beta)+\sin(\alpha+\beta)) 
-\end{align*}
-</div>
-<p class="continuation">it follows that</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-\langle \cos(nx),\cos(mx)\rangle=\int_0^{2\pi}\cos(nx)\cos(mx)\, dx\amp =\begin{cases} 0\amp  \text{ if \(n\ne m\) }\\
-\pi\amp  \text{ if \(n=m\) }  \end{cases}\\
-\langle \sin(nx),\sin(mx)\rangle=\int_0^{2\pi}\sin(nx)\sin(mx)\, dx\amp =\begin{cases} 0\amp  \text{ if \(n\ne m\) }\\
-\pi\amp  \text{ if \(n=m\) }  \end{cases}\\
-\langle \cos(nx),\sin(mx)\rangle=\int_0^{2\pi}\cos(nx)\sin(mx)\, dx\amp =0 \text{ for any \(n,m\) }\text{.}
-\end{align*}
-</div>
-</div></body>
+<body class="ignore-math"><div class="solution solution-like"><p>A simple computation shows <span class="process-math">\(\boldx_i\cdot \boldx_j=0\)</span> for all <span class="process-math">\(1\leq i\ne j\leq 3\text{,}\)</span> showing that <span class="process-math">\(S\)</span> is orthogonal. <a href="" class="xref" data-knowl="./knowl/th_orthogonal.html" title="Theorem 4.2.2: Orthogonal implies linearly independent">Theorem 4.2.2</a> implies <span class="process-math">\(S\)</span> is linearly independent. Since <span class="process-math">\(\val{S}=\dim \R^3=3\text{,}\)</span> it follows from <a href="" class="xref" data-knowl="./knowl/cor_street_smarts.html" title="Corollary 3.7.9: Street smarts">Corollary 3.7.9</a> that <span class="process-math">\(S\)</span> is a basis.</p></div></body>
 </html>
