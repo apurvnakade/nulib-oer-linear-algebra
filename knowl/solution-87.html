@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-02T15:02:49-07:00       *-->
+<!--*       on 2022-08-07T11:41:41-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,36 +16,45 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.3.18.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.3.10.1</span><span class="period">.</span>
 </h4>
-<p>Since <span class="process-math">\(B'\)</span> is orthonormal, we use  <a href="" class="xref" data-knowl="./knowl/th_coordinates_orthogonal.html" title="Theorem 5.1.9: Coordinate vectors for orthogonal bases">Theorem 5.1.9</a> to compute</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_coordinates_orthogonal.html ./knowl/th_changebasis_orthonormal.html">
+<p>We have</p>
+<div class="displaymath process-math">
 \begin{align*}
-[p_1(x)]_{B'} \amp = \left(\langle p_1(x),q_1(x)\rangle, \langle p_1(x),q_2(x)\rangle\right)\\
-\amp =(p_1(-1)q_1(-1)+p_1(1)q_2(1),p_1(1)q_1(1)+p_1(1)q_2(1))=\frac{1}{\sqrt{2}}(1,1)\\
-[p_2(x)]_{B'} \amp = \left(\langle p_2(x),q_1(x)\rangle, \langle p_1(x),q_2(x)\rangle\right)\\
-\amp =(p_2(-1)q_1(-1)+p_2(1)q_2(1),p_2(1)q_1(1)+p_2(1)q_2(1))=\frac{1}{\sqrt{2}}(-1,1)\text{.}
+\underset{B'\rightarrow B}{P}\amp = \begin{bmatrix}
+\vert\amp \vert\amp \vert\amp \vert\\
+[A_1]_{B}\amp [A_2]_B\amp [A_3]_B\amp [A_4]_B\\
+\vert\amp \vert\amp \vert\amp \vert
+\end{bmatrix}\\
+\amp = \begin{amatrix}[rrrr]
+1\amp 1\amp 1\amp -1\\
+1\amp -1\amp 1\amp 1\\
+1\amp 1\amp -1\amp 1\\
+1\amp -1\amp -1\amp -1
+\end{amatrix} \text{.}
 \end{align*}
 </div>
-<p class="continuation">Thus</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_coordinates_orthogonal.html ./knowl/th_changebasis_orthonormal.html">
+<p class="continuation">Here the coordinate vectors <span class="process-math">\([A_i]_B\)</span> are easily computed by inspection since <span class="process-math">\(B\)</span> is the standard basis.</p>
+<p>It turns out that <span class="process-math">\(\underset{B\rightarrow B'}{P}=(\underset{B'\rightarrow B}{P})^{-1}\)</span> is not so difficult to compute in this case since the columns <span class="process-math">\(\boldc_j\)</span> of <span class="process-math">\(\underset{B'\rightarrow B}{P}\)</span> satisfy</p>
+<div class="displaymath process-math">
 \begin{equation*}
-\underset{B\rightarrow B'}{P}=\frac{1}{\sqrt{2}}\begin{amatrix}[rr]
-1\amp -1\\
-1\amp 1
-\end{amatrix}
+\boldc_i\cdot\boldc_j=\begin{cases} 4\amp \text{if } i=j\\ 0\amp \text{if } i\ne j
+\end{cases}\text{.}
 \end{equation*}
 </div>
-<p class="continuation">and by <a href="" class="xref" data-knowl="./knowl/th_changebasis_orthonormal.html" title="Theorem 5.3.17: Orthonormal change of basis">Theorem 5.3.17</a></p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_coordinates_orthogonal.html ./knowl/th_changebasis_orthonormal.html">
+<p class="continuation">From this observation and <a href="" class="xref" data-knowl="./knowl/th_dotproduct_method.html" title="Theorem 4.1.9: Dot product and matrix multiplication">Theorem 4.1.9</a> it is easy to see that</p>
+<div class="displaymath process-math">
 \begin{equation*}
-\underset{B'\rightarrow B}{P}=(\underset{B\rightarrow B'}{P})^T=\frac{1}{\sqrt{2}}\begin{amatrix}[rr]
-1\amp 1\\
--1\amp 1
+\underset{B\rightarrow B'}{P}=(\underset{B'\rightarrow B}{P})^{-1}=\frac{1}{4}
+\begin{amatrix}[rrrr]
+1\amp 1\amp 1\amp 1\\
+1\amp -1\amp 1\amp -1\\
+1\amp 1\amp -1\amp -1\\
+-1\amp -1\amp 1\amp -1
 \end{amatrix}\text{.}
 \end{equation*}
 </div>
 </div>
-<span class="incontext"><a href="s_changeofbasis.html#solution-87" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_changeofbasis.html#solution-87">in-context</a></span>
 </body>
 </html>

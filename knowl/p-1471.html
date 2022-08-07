@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-02T15:02:33-07:00       *-->
+<!--*       on 2022-08-07T11:41:09-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,15 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>If <span class="process-math">\(\NS T=\{\boldzero_V\}\text{,}\)</span> then <span class="process-math">\(T(\boldv)=T(\boldv')\)</span> implies <span class="process-math">\(\boldv'=\boldv+\boldzero=\boldv\text{.}\)</span> Thus <span class="process-math">\(T\)</span> is injective in this case.</p>
-<span class="incontext"><a href="s_nullspace_image.html#p-1471" class="internal">in-context</a></span>
+<p>Linearity is an easy consequence of transpose properties. For any <span class="process-math">\(A_1, A_2\in M_{nn}\)</span> and <span class="process-math">\(c_1,c_2\in \R\text{,}\)</span> we have</p>
+<div class="displaymath process-math">
+\begin{align*}
+S(c_1A_1+c_2A_2)  \amp= (c_1A_1+c_2A_2)^T-(c_1A_1+c_2A_2)  \\
+\amp = c_1A_1^T+c_2A_2^T-c_1A_1-c_2A_2\amp (\knowl{./knowl/eg_transform_transpose.html}{\text{3.2.19}}) \\
+\amp =c_1(A_1^T-A_1)+c_2(A_2^T-A_2)\\
+\amp =c_1S(A_1)+c_2S(A_2)\text{.}
+\end{align*}
+</div>
+<span class="incontext"><a href="s_nullspace_image.html#p-1471">in-context</a></span>
 </body>
 </html>

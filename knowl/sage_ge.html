@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-02T15:02:26-07:00       *-->
+<!--*       on 2022-08-07T11:40:44-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -12,12 +12,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
-<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
-// Their results will be linked, only within language type
-sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
-                       linked: true,
-                       languages: ['sage'],
-                       evalButtonText: 'Evaluate (Sage)'});
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
 </script>
 </head>
 <body class="ignore-math">
@@ -25,7 +27,7 @@ sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
 <span class="type">Sage example</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span><span class="space"> </span><span class="title">Gaussian elimination.</span>
 </h4>
 <p>Below you find a recursive implementation of Gaussian elimination in Sage.</p>
-<pre class="ptx-sagecell sagecell-sage" id="sage-1"><script type="text/x-sage">def row_echelon_form(A):
+<div class="sagecell-sage" id="sage-1"><script type="text/x-sage">def row_echelon_form(A):
   m,n=A.dimensions()
   R=A.base_ring()
   K=R.fraction_field()
@@ -48,6 +50,6 @@ sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
       return A
 A=matrix([[0,0,3],[0,2,5],[0,3,3]])
 row_echelon_form(A)
-</script></pre></article><span class="incontext"><a href="s_ge.html#sage_ge" class="internal">in-context</a></span>
+</script></div></article><span class="incontext"><a href="s_ge.html#sage_ge">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-02T15:02:28-07:00       *-->
+<!--*       on 2022-08-07T11:40:52-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,27 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>This proves the special case that <span class="process-math">\(A^nq(A)=q(A)A^n\)</span> for all <span class="process-math">\(n\geq 0\text{.}\)</span></p>
-<span class="incontext"><a href="s_invertible_matrices.html#p-831" class="internal">in-context</a></span>
+<p>Suppose <span class="process-math">\(A\)</span> is invertible with inverse <span class="process-math">\(A^{-1}\text{.}\)</span> The theorem claims <span class="process-math">\(A^T\)</span> is invertible, and that in fact <span class="process-math">\((A^T)^{-1}=(A^{-1})^T\text{.}\)</span> To prove this, we need only show that</p>
+<div class="displaymath process-math">
+\begin{equation*}
+A^T(A^{-1})^T)=(A^{-1})^T)A^T=I\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We verify the two equalities separately:</p>
+<div class="displaymath process-math">
+\begin{align*}
+A^T(A^{-1})^T\amp =\left(A^{-1}A\right)^T \amp (\knowl{./knowl/th_trans_props.html}{\text{Theorem 2.2.11}})\\
+\amp =I_n^T \\
+\amp =I_n  \checkmark
+\end{align*}
+</div>
+<div class="displaymath process-math">
+\begin{align*}
+(A^{-1})^TA^T \amp =(AA^{-1})^T \amp (\knowl{./knowl/th_trans_props.html}{\text{Theorem 2.2.11}})\\
+\amp =I_n^T=I_n \ \checkmark\text{.}
+\end{align*}
+</div>
+<p class="continuation">In both chains of equality we make use of the obvious claim <span class="process-math">\(I^T=I\text{.}\)</span></p>
+<span class="incontext"><a href="s_invertible_matrices.html#p-831">in-context</a></span>
 </body>
 </html>

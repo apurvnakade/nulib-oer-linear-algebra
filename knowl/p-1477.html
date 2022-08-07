@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-02T15:02:33-07:00       *-->
+<!--*       on 2022-08-07T11:41:09-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,19 +15,26 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Let <span class="process-math">\(\ell\colon ax+by=c\)</span> be a line in <span class="process-math">\(\R^2\text{.}\)</span> This line does not necessarily pass through the origin, but the line <span class="process-math">\(\ell_0\colon ax+by=0\)</span> does. Using linear algebra we recognize <span class="process-math">\(\ell\)</span> and <span class="process-math">\(\ell_0\)</span> as the solutions to the matrix equations <span class="process-math">\(A\boldx=c\)</span> and <span class="process-math">\(A\boldx=0\text{,}\)</span> respectively, where</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_matrix_equations.html">
+<p>The null space of <span class="process-math">\(T\)</span> is the set of all differentiable functions whose derivative is the zero function:</p>
+<div class="displaymath process-math">
 \begin{equation*}
-A=\begin{amatrix}[]a\amp b \end{amatrix}\text{.}
+\NS T=\{f\in C^1(\R)\colon f'(x)=0 \text{ for all } x\in \R\}\text{.}
 \end{equation*}
 </div>
-<p class="continuation">Furthermore we see that <em class="emphasis">\ell_0</em> is none other than <span class="process-math">\(\NS A\text{.}\)</span> Now, fix a particular point <span class="process-math">\(P=(x_0,y_0)\in \ell\text{.}\)</span> Since <span class="process-math">\((x_0, y_0)\)</span> is a solution to <span class="process-math">\(A\boldx=c\text{,}\)</span> according to <a href="" class="xref" data-knowl="./knowl/cor_matrix_equations.html" title="Corollary 3.4.15: Solutions to matrix equations">Corollary 3.4.15</a> we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_matrix_equations.html">
+<p class="continuation">From calculus we know that this is precisely the set of all <em class="emphasis">constant</em> functions. Thus</p>
+<div class="displaymath process-math">
 \begin{equation*}
-\ell=\{P+Q\colon Q=(x,y)\in \NS A\}=\{P+Q\colon Q\in \ell_0\}\text{.}
+\NS T=\{f\in C^1(\R)\colon f \text{ a constant function}\}\text{.}
 \end{equation*}
 </div>
-<p class="continuation">In other words we see that <span class="process-math">\(\ell\)</span> is just the translate of the line <span class="process-math">\(\ell_0\)</span> by the vector <span class="process-math">\(\vec{OP}=(x_0,y_0)\text{.}\)</span> Since <span class="process-math">\(\ell_0=\NS A\)</span> is a subspace, we conclude that all lines in <span class="process-math">\(\R^2\)</span> are translates of a subspace.</p>
-<span class="incontext"><a href="s_nullspace_image.html#p-1477" class="internal">in-context</a></span>
+<p class="continuation">The image of <span class="process-math">\(T\)</span> is defined as</p>
+<div class="displaymath process-math">
+\begin{align*}
+\im T\amp =\{g\in C(\R)\colon g=T(f) \text{ for some } f\in C^1(\R)\}\\
+\amp= \{g\in C(\R)\colon g=f' \text{ for some } f\in C^1(\R)\}\text{.}
+\end{align*}
+</div>
+<p class="continuation">In other words, <span class="process-math">\(\im T\)</span> is the set of continuous functions that are the derivative of some other function: i.e., the set of continuous functions that have an antiderivative. The fundamental theorem of calculus implies that in fact every continuous function <span class="process-math">\(g\)</span> has an antiderivative! Indeed, we may take <span class="process-math">\(f(x)=\int_0^xg(t)\, dt\text{.}\)</span> We conclude that <span class="process-math">\(\im T=C(\R)\text{.}\)</span></p>
+<span class="incontext"><a href="s_nullspace_image.html#p-1477">in-context</a></span>
 </body>
 </html>

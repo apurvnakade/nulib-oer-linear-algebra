@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-02T15:02:31-07:00       *-->
+<!--*       on 2022-08-07T11:41:04-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,17 +15,26 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Let <span class="process-math">\(B\)</span> be an <span class="process-math">\(r\times m\)</span> matrix, and let <span class="process-math">\(C\)</span> be an <span class="process-math">\(n\times s\)</span> matrix. Define the functions <span class="process-math">\(T\)</span> and <span class="process-math">\(S\)</span> as follows:</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<p>If the point <span class="process-math">\(P=(x,y)\)</span> has polar coordinates <span class="process-math">\((r,\theta)\)</span> (so that <span class="process-math">\(x=r\cos\theta\)</span> and <span class="process-math">\(y=r\sin\theta\)</span>), then its image <span class="process-math">\(P'=\rho_{\alpha}(P)\)</span> under our rotation has polar coordinates <span class="process-math">\((r,\theta+\alpha)\text{.}\)</span> Translating back to rectangular coordinates, we see that</p>
+<div class="displaymath process-math">
 \begin{align*}
-T\colon M_{mn} \amp\rightarrow M_{rn} \\
-A \amp\mapsto T(A)=BA \\
-\amp \\
-S\colon M_{mn} \amp\rightarrow M_{ms} \\
-A\amp\mapsto S(A)=AC  \text{.}
+\rho_\alpha(P)\amp= P' \\
+\amp =\left(r\cos(\theta+\alpha),r\sin(\theta+\alpha)\right)\\
+\amp =(r\cos\theta\cos\alpha-r\sin\theta\sin\alpha, r\sin\theta\cos\alpha+r\cos\theta\sin\alpha)
+\amp (\text{trig. identities}) \\
+\amp=(\cos\alpha\, x-\sin\alpha\, y, \sin\alpha\, x+\cos\alpha\, y)
+\amp (\text{since } x=r\cos\theta, y=r\sin\theta) \text{.}
 \end{align*}
 </div>
-<p class="continuation">In other words, <span class="process-math">\(T\)</span> is the “multiply on the left by <span class="process-math">\(B\)</span>” operation, and <span class="process-math">\(S\)</span> is the  “multiply on the right by C” operation Show that <span class="process-math">\(T\)</span> and <span class="process-math">\(S\)</span> are linear transformations.</p>
-<span class="incontext"><a href="s_transformation.html#p-1300" class="internal">in-context</a></span>
+<p class="continuation">It follows that <span class="process-math">\(\rho_{\alpha}=T_A\text{,}\)</span> where</p>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\begin{amatrix}[rr]
+\cos\alpha\amp -\sin\alpha\\ \sin\alpha \amp \cos\alpha
+\end{amatrix}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">as claimed.</p>
+<span class="incontext"><a href="s_transformation.html#p-1300">in-context</a></span>
 </body>
 </html>

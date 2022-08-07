@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-02T15:02:08-07:00       *-->
+<!--*       on 2022-08-07T11:39:43-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -17,10 +17,11 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Linear algebra: the theory of vector spaces and linear transformations">
 <meta property="book:author" content="Aaron Greicius">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
+    useLabelIds: true,
     tagSide: "right",
     tagIndent: ".8em",
     packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
@@ -52,12 +53,14 @@
   },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
-<script src="https://pretextbook.org/js/0.13/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
-// Their results will be linked, only within language type
-sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
-                       linked: true,
-                       languages: ['sage'],
-                       evalButtonText: 'Evaluate (Sage)'});
+<script src="https://pretextbook.org/js/0.13/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
 </script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -69,38 +72,7 @@ sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
 <link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
-<!--** Runestone components to run locally in reader's browser **-->
-<!--** No external communication:                              **-->
-<!--**     log level is 0, Runestone Services are disabled     **-->
-<script type="text/javascript">
-eBookConfig = {};
-eBookConfig.useRunestoneServices = false;
-eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX Course: Title Here';
-eBookConfig.basecourse = 'PTX Base Course';
-eBookConfig.isLoggedIn = false;
-eBookConfig.email = '';
-eBookConfig.isInstructor = false;
-eBookConfig.logLevel = 0;
-eBookConfig.username = '';
-eBookConfig.readings = null;
-eBookConfig.activities = null;
-eBookConfig.downloadsEnabled = false;
-eBookConfig.allow_pairs = false;
-eBookConfig.enableScratchAC = false;
-eBookConfig.build_info = "";
-eBookConfig.python3 = null;
-eBookConfig.acDefaultLanguage = 'python';
-eBookConfig.runestone_version = '5.0.1';
-eBookConfig.jobehost = '';
-eBookConfig.proxyuri_runs = '';
-eBookConfig.proxyuri_files = '';
-eBookConfig.enable_chatcodes =  false;
-</script>
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand{\Z}{{\mathbb Z}}
@@ -307,8 +279,6 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\definecolor{fillinmathshade}{gray}{0.9}
-\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="http://linear-algebra.northwestern.pub/" target="_blank"><img src="external/images/im_holycomm.svg" alt="Logo image"></a><div class="title-container">
@@ -404,65 +374,65 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <section class="section" id="s_ge"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Gaussian elimination</span>
 </h2>
-<section class="introduction" id="introduction-13"><p id="p-438">In <a href="s_systems.html" class="internal" title="Section 1.1: Systems of linear equations">Section 1.1</a> we sketched a procedure for solving a linear system <span class="process-math">\(L\text{.}\)</span> That procedure involved applying a sequence of row operations to <span class="process-math">\(L\)</span> to obtain a “simpler” system <span class="process-math">\(L'\text{.}\)</span></p>
-<p id="p-439">We will fill out this sketch in the next two sections. Specifically, we will</p>
+<section class="introduction" id="introduction-13"><p id="p-470">In <a href="s_systems.html" class="internal" title="Section 1.1: Systems of linear equations">Section 1.1</a> we sketched a procedure for solving a linear system <span class="process-math">\(L\text{.}\)</span> That procedure involved applying a sequence of row operations to <span class="process-math">\(L\)</span> to obtain a “simpler” system <span class="process-math">\(L'\text{.}\)</span></p>
+<p id="p-471">We will fill out this sketch in the next two sections. Specifically, we will</p>
 <ol class="decimal">
-<li id="li-124"><p id="p-440">describe precisely what we mean by a “simpler” system,</p></li>
-<li id="li-125"><p id="p-441">provide an algorithm (or recipe) that decides exactly what sequence of row operations to apply to obtain this simpler system,</p></li>
-<li id="li-126"><p id="p-442">explain how to find <em class="emphasis">all</em> solutions of the resulting simpler system.</p></li>
+<li id="li-137"><p id="p-472">describe precisely what we mean by a “simpler” system,</p></li>
+<li id="li-138"><p id="p-473">provide an algorithm (or recipe) that decides exactly what sequence of row operations to apply to obtain this simpler system,</p></li>
+<li id="li-139"><p id="p-474">explain how to find <em class="emphasis">all</em> solutions of the resulting simpler system.</p></li>
 </ol>
-<p id="p-443">Before we embark on these steps, we introduce a useful bit of notation. As you may have noticed, when performing row operations on a system of equations, we essentially treat the unknowns, as well as the plus and equals symbols, as placeholders; the only things that actually change in a given step are the coefficients in the equations. The <em class="emphasis">augmented matrix associated to a linear system</em> is a formal way of extracting just the information of the coefficients from a linear system.</p></section><article class="definition definition-like" id="d_augmented_matrix"><h3 class="heading">
+<p id="p-475">Before we embark on these steps, we introduce a useful bit of notation. As you may have noticed, when performing row operations on a system of equations, we essentially treat the unknowns, as well as the plus and equals symbols, as placeholders; the only things that actually change in a given step are the coefficients in the equations. The <em class="emphasis">augmented matrix associated to a linear system</em> is a formal way of extracting just the information of the coefficients from a linear system.</p></section><article class="definition definition-like" id="d_augmented_matrix"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Augmented matrix.</span>
 </h3>
-<p id="p-444">Let <span class="process-math">\(L\)</span> be the linear system</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<p id="p-476">Let <span class="process-math">\(L\)</span> be the linear system</p>
+<div class="displaymath process-math">
 \begin{equation*}
 \eqsys\text{.}
 \end{equation*}
 </div>
 <p class="continuation">The <dfn class="terminology">augmented matrix associated to</dfn> <span class="process-math">\(L\)</span> is the matrix</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 \augmatrix\text{.}
 \end{equation*}
 </div></article><article class="remark remark-like" id="s_ge_rm_see_def"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
 </h3>
-<p id="p-445">As defined more thoroughly in <a href="" class="xref" data-knowl="./knowl/d_matrix.html" title="Definition 2.1.2: Matrix">Definition 2.1.2</a>, a matrix is just a rectangular array of numbers.</p></article><section class="subsection" id="ss_ge_row_echelon"><h3 class="heading hide-type">
+<p id="p-477">As defined more thoroughly in <a href="" class="xref" data-knowl="./knowl/d_matrix.html" title="Definition 2.1.2: Matrix">Definition 2.1.2</a>, a matrix is just a rectangular array of numbers.</p></article><section class="subsection" id="ss_ge_row_echelon"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.1</span> <span class="title">Row echelon matrices</span>
 </h3>
-<p id="p-446">Here is our precise formulation of a “simple” linear system; it is a system whose associated augmented matrix is in <em class="emphasis">row echelon form</em>, as described below.</p>
+<p id="p-478">Here is our precise formulation of a “simple” linear system; it is a system whose associated augmented matrix is in <em class="emphasis">row echelon form</em>, as described below.</p>
 <article class="definition definition-like" id="d_row_echelon"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Row echelon form.</span>
 </h4>
-<p id="p-447">A <dfn class="terminology">zero row</dfn> of a matrix, is a row whose entries are all equal to zero; a <dfn class="terminology">nonzero row</dfn> is a row that contains at least one nonzero entry.</p>
-<p id="p-448">A matrix is in <dfn class="terminology">row echelon form</dfn> if the following conditions hold.</p>
+<p id="p-479">A <dfn class="terminology">zero row</dfn> of a matrix, is a row whose entries are all equal to zero; a <dfn class="terminology">nonzero row</dfn> is a row that contains at least one nonzero entry.</p>
+<p id="p-480">A matrix is in <dfn class="terminology">row echelon form</dfn> if the following conditions hold.</p>
 <dl class="description-list">
-<dt id="li-127">(i)</dt>
-<dd><p id="p-449">In any nonzero row the first (i.e., leftmost) nonzero entry is equal to one. A <dfn class="terminology">leading one</dfn> of a matrix is such an entry: i.e., an entry of a row that is equal to one, and that is also the first nonzero entry of that row.</p></dd>
-<dt id="li-128">(ii)</dt>
-<dd><p id="p-450">All zero rows are grouped together at the bottom of the matrix.</p></dd>
-<dt id="li-129">(iii)</dt>
-<dd><p id="p-451">Given any two nonzero rows in the matrix, the leading one of the lower row occurs strictly to the right of the leading one of the row above it.</p></dd>
+<dt id="li-140">(i)</dt>
+<dd><p id="p-481">In any nonzero row the first (i.e., leftmost) nonzero entry is equal to one. A <dfn class="terminology">leading one</dfn> of a matrix is such an entry: i.e., an entry of a row that is equal to one, and that is also the first nonzero entry of that row.</p></dd>
+<dt id="li-141">(ii)</dt>
+<dd><p id="p-482">All zero rows are grouped together at the bottom of the matrix.</p></dd>
+<dt id="li-142">(iii)</dt>
+<dd><p id="p-483">Given any two nonzero rows in the matrix, the leading one of the lower row occurs strictly to the right of the leading one of the row above it.</p></dd>
 </dl>
-<p id="p-452">A matrix is in <dfn class="terminology">reduced row echelon form</dfn> if in addition to conditions (i)-(iii) it also satisfies the following condition.</p>
+<p id="p-484">A matrix is in <dfn class="terminology">reduced row echelon form</dfn> if in addition to conditions (i)-(iii) it also satisfies the following condition.</p>
 <dl class="description-list">
-<dt id="li-130">(iv)</dt>
+<dt id="li-143">(iv)</dt>
 <dd> Any column of the matrix that contains a leading one has zeros elsewhere. In other words, if a column contains a leading one, then that is the only nonzero entry of that column.</dd>
 </dl>
-<p id="p-453">A linear system <span class="process-math">\(L\)</span> is in <dfn class="terminology">row echelon form</dfn> (resp. <dfn class="terminology">reduced row echelon form</dfn>) if its augmented matrix is in row echelon form (resp. reduced row echelon form).</p></article><p id="p-454">In practice to decide whether a matrix is in in (reduced) row echelon form, follow these steps:</p>
+<p id="p-485">A linear system <span class="process-math">\(L\)</span> is in <dfn class="terminology">row echelon form</dfn> (resp. <dfn class="terminology">reduced row echelon form</dfn>) if its augmented matrix is in row echelon form (resp. reduced row echelon form).</p></article><p id="p-486">In practice to decide whether a matrix is in in (reduced) row echelon form, follow these steps:</p>
 <ol class="decimal">
-<li id="li-131"><p id="p-455">First verify whether all zero rows are at the bottom.</p></li>
-<li id="li-132"><p id="p-456">For each nonzero row, determine whether the first nonzero entry is a 1, and put a box around it.</p></li>
-<li id="li-133"><p id="p-457">Make sure your boxes make a staircase pattern.</p></li>
-<li id="li-134"><p id="p-458">(For reduced row echelon form only.) Decide whether each column with a box has 0's everywhere else.</p></li>
+<li id="li-144"><p id="p-487">First verify whether all zero rows are at the bottom.</p></li>
+<li id="li-145"><p id="p-488">For each nonzero row, determine whether the first nonzero entry is a 1, and put a box around it.</p></li>
+<li id="li-146"><p id="p-489">Make sure your boxes make a staircase pattern.</p></li>
+<li id="li-147"><p id="p-490">(For reduced row echelon form only.) Decide whether each column with a box has 0's everywhere else.</p></li>
 </ol>
 <article class="example example-like" id="example-17"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Row echelon versus reduced row echelon form.</span>
 </h4>
-<p id="p-459">For each matrix decide (a) whether it is in row echelon form, and (b) whether it is in reduced row echelon form.</p>
+<p id="p-491">For each matrix decide (a) whether it is in row echelon form, and (b) whether it is in reduced row echelon form.</p>
 <ol class="decimal">
-<li id="li-135"><div class="displaymath process-math" data-contains-math-knowls="" id="p-460">
+<li id="li-148"><div class="displaymath process-math" id="p-492">
 \begin{equation*}
 \begin{bmatrix}0\amp 2\amp 1\amp 0\amp 0\\
 0\amp 0\amp 0\amp 0\amp 0\\
@@ -472,7 +442,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 \end{bmatrix}
 \end{equation*}
 </div></li>
-<li id="li-136"><div class="displaymath process-math" data-contains-math-knowls="" id="p-461">
+<li id="li-149"><div class="displaymath process-math" id="p-493">
 \begin{equation*}
 \begin{bmatrix}1\amp 0\amp 0\amp -3\amp -7\\
 0\amp 0\amp 1\amp 2\amp 0\\
@@ -484,10 +454,10 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </div></li>
 </ol>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like"><ol class="decimal">
-<li id="li-137">
-<p id="p-462">Below you find the matrix with leading ones boxed. This matrix fails to be in row echelon form (and hence also reduced row echelon form) for a variety of reasons: the zero rows are not all grouped at the bottom; the first row is nonzero, but does not have a leading one; the leading one of the fourth row is to the left of the leading one of the leading one in the row above it.</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like"><ol class="decimal">
+<li id="li-150">
+<p id="p-494">Below you find the matrix with leading ones boxed. This matrix fails to be in row echelon form (and hence also reduced row echelon form) for a variety of reasons: the zero rows are not all grouped at the bottom; the first row is nonzero, but does not have a leading one; the leading one of the fourth row is to the left of the leading one of the leading one in the row above it.</p>
+<div class="displaymath process-math">
 \begin{equation*}
 \begin{bmatrix}0\amp 2\amp 1\amp 0\amp 0\\
 0\amp 0\amp 0\amp 0\amp 0\\
@@ -498,9 +468,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 \end{equation*}
 </div>
 </li>
-<li id="li-138">
-<p id="p-463">Below you find the matrix with leading ones boxed. This matrix is in row echelon form: the zero rows (rows 4 and 5) are grouped at the bottom; each nonzero row has a leading one (boxed in the matrix below); the leading ones step strictly to the right as we move down the rows.</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<li id="li-151">
+<p id="p-495">Below you find the matrix with leading ones boxed. This matrix is in row echelon form: the zero rows (rows 4 and 5) are grouped at the bottom; each nonzero row has a leading one (boxed in the matrix below); the leading ones step strictly to the right as we move down the rows.</p>
+<div class="displaymath process-math">
 \begin{equation*}
 \begin{bmatrix}\boxed{1}\amp 0\amp 0\amp -3\amp -7\\
 0\amp 0\amp \boxed{1}\amp 2\amp 0\\
@@ -516,48 +486,48 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </div></article></section><section class="subsection" id="ss_gaussian_elimination"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.2</span> <span class="title">Gaussian elimination</span>
 </h3>
-<p id="p-464">We will now describe a systematic procedure, called <em class="emphasis">Gaussian elimination</em>, that allows us to reduce a given linear system <span class="process-math">\(L\)</span> to a system <span class="process-math">\(L'\)</span>in row echelon form. In keeping with the foregoing discussion, we will identify a system <span class="process-math">\(L\)</span> with its augmented matrix <span class="process-math">\(A\text{.}\)</span> Furthermore, reducing a linear system using elementary operations on equations is now cast as performing <em class="emphasis">elementary row operations</em> on matrices. At the risk of redundancy we now officially translate a number of our former notions regarding reduction of linear systems to the setting of matrices.</p>
+<p id="p-496">We will now describe a systematic procedure, called <em class="emphasis">Gaussian elimination</em>, that allows us to reduce a given linear system <span class="process-math">\(L\)</span> to a system <span class="process-math">\(L'\)</span>in row echelon form. In keeping with the foregoing discussion, we will identify a system <span class="process-math">\(L\)</span> with its augmented matrix <span class="process-math">\(A\text{.}\)</span> Furthermore, reducing a linear system using elementary operations on equations is now cast as performing <em class="emphasis">elementary row operations</em> on matrices. At the risk of redundancy we now officially translate a number of our former notions regarding reduction of linear systems to the setting of matrices.</p>
 <article class="definition definition-like" id="d_rowops"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Elementary row operations on matrices.</span>
 </h4>
-<p id="p-465">An <dfn class="terminology">elementary row operation</dfn> is one of the three following types of matrix operations. Let <span class="process-math">\(A\)</span> be a given <span class="process-math">\(m\times n\)</span> matrix, and denote by <span class="process-math">\(r_i\)</span> the <span class="process-math">\(i\)</span>-th row of <span class="process-math">\(A\text{.}\)</span></p>
+<p id="p-497">An <dfn class="terminology">elementary row operation</dfn> is one of the three following types of matrix operations. Let <span class="process-math">\(A\)</span> be a given <span class="process-math">\(m\times n\)</span> matrix, and denote by <span class="process-math">\(r_i\)</span> the <span class="process-math">\(i\)</span>-th row of <span class="process-math">\(A\text{.}\)</span></p>
 <dl class="description-list">
 <dt id="d_row_scale">Scalar multplication</dt>
-<dd><p id="p-466">Multiply a row by a <em class="emphasis">nonzero</em> number <span class="process-math">\(c\ne 0\text{:}\)</span> i.e., replace <span class="process-math">\(r_i\)</span> with <span class="process-math">\(c\,r_i\text{,}\)</span> the result of multiplying all entries of the row by <span class="process-math">\(c\text{.}\)</span></p></dd>
+<dd><p id="p-498">Multiply a row by a <em class="emphasis">nonzero</em> number <span class="process-math">\(c\ne 0\text{:}\)</span> i.e., replace <span class="process-math">\(r_i\)</span> with <span class="process-math">\(c\,r_i\text{,}\)</span> the result of multiplying all entries of the row by <span class="process-math">\(c\text{.}\)</span></p></dd>
 <dt id="d_row_swap">Row swap</dt>
-<dd><p id="p-467">Swap two rows of <span class="process-math">\(A\text{.}\)</span></p></dd>
+<dd><p id="p-499">Swap two rows of <span class="process-math">\(A\text{.}\)</span></p></dd>
 <dt id="d_row_add">Row addition</dt>
-<dd><p id="p-468">Add a multiple of one row to another: i.e., replace <span class="process-math">\(r_i\)</span> with <span class="process-math">\(r_i+cr_j\)</span> for some <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(i\text{,}\)</span> and <span class="process-math">\(j\text{.}\)</span></p></dd>
+<dd><p id="p-500">Add a multiple of one row to another: i.e., replace <span class="process-math">\(r_i\)</span> with <span class="process-math">\(r_i+cr_j\)</span> for some <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(i\text{,}\)</span> and <span class="process-math">\(j\text{.}\)</span></p></dd>
 </dl>
-<p id="p-469">The act of transforming a matrix using elementary row operations is called <dfn class="terminology">row reduction</dfn></p>
-<p id="p-470">Two matrices are <dfn class="terminology">row equivalent</dfn> if the one can be obtained from the other by performing a finite sequence of elementary row operations.</p></article><article class="remark remark-like" id="s_ge_notation"><h4 class="heading">
+<p id="p-501">The act of transforming a matrix using elementary row operations is called <dfn class="terminology">row reduction</dfn></p>
+<p id="p-502">Two matrices are <dfn class="terminology">row equivalent</dfn> if the one can be obtained from the other by performing a finite sequence of elementary row operations.</p></article><article class="remark remark-like" id="s_ge_notation"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Notation.</span>
-</h4> Our former elementary operation notation easily transfers to row operations on matrices. The expressions<div class="displaymath process-math" data-contains-math-knowls="" id="md-29">
+</h4> Our former elementary operation notation easily transfers to row operations on matrices. The expressions<div class="displaymath process-math">
 \begin{align*}
 A\amp \xrightarrow{c\,r_i} B \amp A\amp \xrightarrow{r_i\leftrightarrow r_j} B\amp A\amp\xrightarrow{r_i+c\,r_j} B
 \end{align*}
-</div>denote the operations that replace row <span class="process-math">\(r_i\)</span> in <span class="process-math">\(A\)</span> with <span class="process-math">\(c\, r_i\text{,}\)</span> swap rows <span class="process-math">\(r_i\)</span> and <span class="process-math">\(r_j\)</span> in <span class="process-math">\(A\text{,}\)</span> and replace <span class="process-math">\(r_i\)</span> in <span class="process-math">\(A\)</span> with <span class="process-math">\(r_i+c\, r_j\text{,}\)</span> respectively.</article><p id="p-471">At last we are ready to define Gaussian elimination. In its essence this is simply a procedure, or <em class="emphasis">algorithm</em>, that takes an input matrix <span class="process-math">\(A\)</span> and row reduces it to a matrix <span class="process-math">\(B\)</span> in row echelon form. It is important to note that although we employ Gaussian elimination in this chapter primarily to the end of simplifying and solving linear systems, this is not its only application. Indeed, we will come back to the procedure again and again, in a great variety of contexts and to greatly diverse ends. Gaussian elimination is one of linear algebra's most important tools. We memorialize this here as an official principle.</p>
+</div>denote the operations that replace row <span class="process-math">\(r_i\)</span> in <span class="process-math">\(A\)</span> with <span class="process-math">\(c\, r_i\text{,}\)</span> swap rows <span class="process-math">\(r_i\)</span> and <span class="process-math">\(r_j\)</span> in <span class="process-math">\(A\text{,}\)</span> and replace <span class="process-math">\(r_i\)</span> in <span class="process-math">\(A\)</span> with <span class="process-math">\(r_i+c\, r_j\text{,}\)</span> respectively.</article><p id="p-503">At last we are ready to define Gaussian elimination. In its essence this is simply a procedure, or <em class="emphasis">algorithm</em>, that takes an input matrix <span class="process-math">\(A\)</span> and row reduces it to a matrix <span class="process-math">\(B\)</span> in row echelon form. It is important to note that although we employ Gaussian elimination in this chapter primarily to the end of simplifying and solving linear systems, this is not its only application. Indeed, we will come back to the procedure again and again, in a great variety of contexts and to greatly diverse ends. Gaussian elimination is one of linear algebra's most important tools. We memorialize this here as an official principle.</p>
 <article class="principle theorem-like" id="princ_GE"><h4 class="heading">
 <span class="type">Mantra</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Gaussian elimination mantra.</span>
 </h4>
-<p id="p-472">Gaussian elimination is the workhorse of linear algebra.</p></article><article class="definition definition-like" id="d_GE"><h4 class="heading">
+<p id="p-504">Gaussian elimination is the workhorse of linear algebra.</p></article><article class="definition definition-like" id="d_GE"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Gaussian elimination.</span>
 </h4>
-<p id="p-473"><dfn class="terminology">Gaussian elimination</dfn> is the algorithm described below. It takes as an input a matrix <span class="process-math">\(A\)</span> and returns as an output a row equivalent matrix <span class="process-math">\(B\)</span> in row echelon form.</p>
+<p id="p-505"><dfn class="terminology">Gaussian elimination</dfn> is the algorithm described below. It takes as an input a matrix <span class="process-math">\(A\)</span> and returns as an output a row equivalent matrix <span class="process-math">\(B\)</span> in row echelon form.</p>
 <dl class="description-list">
-<dt id="li-142">Step 1</dt>
-<dd><p id="p-474">Find the leftmost nonzero column and perform a row swap to move the row with this nonzero entry to the top of the matrix.</p></dd>
-<dt id="li-143">Step 2</dt>
-<dd><p id="p-475">Scale the new top row to produce a leading one in the row. Call this new row <span class="process-math">\(r\text{.}\)</span></p></dd>
-<dt id="li-144">Step 3</dt>
-<dd><p id="p-476">For each row <span class="process-math">\(r_i\)</span> below <span class="process-math">\(r\)</span> perform a row operation of the form <span class="process-math">\(r_i+c\,r\)</span> to replace all entries below the leading one of <span class="process-math">\(r\)</span> with zeros.</p></dd>
-<dt id="li-145">Step 4</dt>
-<dd><p id="p-477">Begin again with Step 1 applied to the matrix consisting of all rows below <span class="process-math">\(r\text{.}\)</span> Continue until the matrix is in row echelon form.</p></dd>
+<dt id="li-155">Step 1</dt>
+<dd><p id="p-506">Find the leftmost nonzero column and perform a row swap to move the row with this nonzero entry to the top of the matrix.</p></dd>
+<dt id="li-156">Step 2</dt>
+<dd><p id="p-507">Scale the new top row to produce a leading one in the row. Call this new row <span class="process-math">\(r\text{.}\)</span></p></dd>
+<dt id="li-157">Step 3</dt>
+<dd><p id="p-508">For each row <span class="process-math">\(r_i\)</span> below <span class="process-math">\(r\)</span> perform a row operation of the form <span class="process-math">\(r_i+c\,r\)</span> to replace all entries below the leading one of <span class="process-math">\(r\)</span> with zeros.</p></dd>
+<dt id="li-158">Step 4</dt>
+<dd><p id="p-509">Begin again with Step 1 applied to the matrix consisting of all rows below <span class="process-math">\(r\text{.}\)</span> Continue until the matrix is in row echelon form.</p></dd>
 </dl></article><section class="subsection" id="subsection-17"><h4 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Model example</span>
 </h4>
-<p id="p-478">Use the following example as a model of how to both perform and annotate the steps in Gaussian elimination. When first learning this procedure, make sure to follow it <em class="emphasis">to the letter</em>. In particular, in the spirit of the mandate issued in <a href="" class="xref" data-knowl="./knowl/s_systems_rm_oneoperation.html" title="Remark 1.1.10: Mandate">Remark 1.1.10</a>, you should only perform one row operation at a time, and only in the sequence prescribed in Steps 1-4 of <a href="" class="xref" data-knowl="./knowl/d_GE.html" title="Definition 1.2.8: Gaussian elimination">Definition 1.2.8</a>.</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/s_systems_rm_oneoperation.html ./knowl/d_GE.html" id="md-30">
+<p id="p-510">Use the following example as a model of how to both perform and annotate the steps in Gaussian elimination. When first learning this procedure, make sure to follow it <em class="emphasis">to the letter</em>. In particular, in the spirit of the mandate issued in <a href="" class="xref" data-knowl="./knowl/s_systems_rm_oneoperation.html" title="Remark 1.1.10: Mandate">Remark 1.1.10</a>, you should only perform one row operation at a time, and only in the sequence prescribed in Steps 1-4 of <a href="" class="xref" data-knowl="./knowl/d_GE.html" title="Definition 1.2.8: Gaussian elimination">Definition 1.2.8</a>.</p>
+<div class="displaymath process-math">
 \begin{align*}
 \begin{bmatrix}0\amp 0\amp -2\amp 0\amp 7\amp 12\\
 2\amp 4\amp -10\amp 6\amp 12\amp 28\\
@@ -597,50 +567,50 @@ A\amp \xrightarrow{c\,r_i} B \amp A\amp \xrightarrow{r_i\leftrightarrow r_j} B\a
 \end{bmatrix}
 \end{align*}
 </div>
-<p id="p-479">The matrix outputted by Gaussian elimination is guaranteed to be in row echelon form, but it may not be in <em class="emphasis">reduced</em> row echelon form. <em class="emphasis">Gauss-Jordan elimination</em> describes a systematic way to continue reducing to this even simpler state.</p></section><article class="definition definition-like" id="d_GaussJordan"><h4 class="heading">
+<p id="p-511">The matrix outputted by Gaussian elimination is guaranteed to be in row echelon form, but it may not be in <em class="emphasis">reduced</em> row echelon form. <em class="emphasis">Gauss-Jordan elimination</em> describes a systematic way to continue reducing to this even simpler state.</p></section><article class="definition definition-like" id="d_GaussJordan"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Gauss-Jordan elimination.</span>
 </h4>
-<p id="p-480"><dfn class="terminology">Gauss-Jordan elimination</dfn> is the algorithm described below. It takes as an input a matrix <span class="process-math">\(A\)</span> and returns a row equivalent matrix <span class="process-math">\(B\)</span> in reduced row echelon form.</p>
+<p id="p-512"><dfn class="terminology">Gauss-Jordan elimination</dfn> is the algorithm described below. It takes as an input a matrix <span class="process-math">\(A\)</span> and returns a row equivalent matrix <span class="process-math">\(B\)</span> in reduced row echelon form.</p>
 <dl class="description-list">
-<dt id="li-146">Steps 1-4</dt>
-<dd><p id="p-481">Apply Gaussian elimination to transform <span class="process-math">\(A\)</span> to a matrix in row echelon form.</p></dd>
-<dt id="li-147">Step 5</dt>
-<dd><p id="p-482">Find the rightmost column of the matrix containing a leading one. Let <span class="process-math">\(r_i\)</span> be the row containing this leading one. For each row <span class="process-math">\(r_j\)</span> above <span class="process-math">\(r_i\)</span> perform a row operation of the form <span class="process-math">\(r_i+c\,r_j\)</span> to replace all entries above the leading one with zeros.</p></dd>
-<dt id="li-148">Step 6</dt>
-<dd><p id="p-483">Begin again with Step 5 applied to the next column to the left that contains a leading one. Continue until the matrix is in reduced row echelon form.</p></dd>
-</dl></article><p id="p-484">Continuing our previous example:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-31">
+<dt id="li-159">Steps 1-4</dt>
+<dd><p id="p-513">Apply Gaussian elimination to transform <span class="process-math">\(A\)</span> to a matrix in row echelon form.</p></dd>
+<dt id="li-160">Step 5</dt>
+<dd><p id="p-514">Find the rightmost column of the matrix containing a leading one. Let <span class="process-math">\(r_i\)</span> be the row containing this leading one. For each row <span class="process-math">\(r_j\)</span> above <span class="process-math">\(r_i\)</span> perform a row operation of the form <span class="process-math">\(r_i+c\,r_j\)</span> to replace all entries above the leading one with zeros.</p></dd>
+<dt id="li-161">Step 6</dt>
+<dd><p id="p-515">Begin again with Step 5 applied to the next column to the left that contains a leading one. Continue until the matrix is in reduced row echelon form.</p></dd>
+</dl></article><p id="p-516">Continuing our previous example:</p>
+<div class="displaymath process-math">
 \begin{align*}
 \begin{bmatrix}1\amp 2\amp -5\amp 3\amp 6\amp 14\\ 0\amp 0\amp 1\amp 0\amp -7/2\amp -6\\ 0\amp 0\amp 0\amp 0\amp 1\amp 2 \end{bmatrix} .  \amp \xrightarrow[\hspace{35pt}]{r_2+7/2r_3}\amp \begin{bmatrix}1\amp 2\amp -5\amp 3\amp 6\amp 14\\ 0\amp 0\amp 1\amp 0\amp 0\amp 1\\ 0\amp 0\amp 0\amp 0\amp 1\amp 2 \end{bmatrix} .\\
 \amp \xrightarrow[\hspace{35pt}]{r_1-6r_3}\amp \begin{bmatrix}1\amp 2\amp -5\amp 3\amp 0\amp 2\\ 0\amp 0\amp 1\amp 0\amp 0\amp 1\\ 0\amp 0\amp 0\amp 0\amp 1\amp 2 \end{bmatrix} .\\
 \amp \xrightarrow[\hspace{35pt}]{r_1+5r_2}\amp \begin{bmatrix}1\amp 2\amp 0\amp 3\amp 0\amp 7\\ 0\amp 0\amp 1\amp 0\amp 0\amp 1\\ 0\amp 0\amp 0\amp 0\amp 1\amp 2 \end{bmatrix} \text{.}
 \end{align*}
 </div>
-<p id="p-485"><a href="" class="xref" data-knowl="./knowl/d_GE.html" title="Definition 1.2.8: Gaussian elimination">Definition 1.2.8</a> and <a href="" class="xref" data-knowl="./knowl/d_GaussJordan.html" title="Definition 1.2.9: Gauss-Jordan elimination">Definition 1.2.9</a> are really theorems in disguise, and we make this official in <a href="" class="xref" data-knowl="./knowl/th_matrixforms.html" title="Theorem 1.2.10: Row equivalent matrix forms">Theorem 1.2.10</a>.</p>
+<p id="p-517"><a href="" class="xref" data-knowl="./knowl/d_GE.html" title="Definition 1.2.8: Gaussian elimination">Definition 1.2.8</a> and <a href="" class="xref" data-knowl="./knowl/d_GaussJordan.html" title="Definition 1.2.9: Gauss-Jordan elimination">Definition 1.2.9</a> are really theorems in disguise, and we make this official in <a href="" class="xref" data-knowl="./knowl/th_matrixforms.html" title="Theorem 1.2.10: Row equivalent matrix forms">Theorem 1.2.10</a>.</p>
 <article class="theorem theorem-like" id="th_matrixforms"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Row equivalent matrix forms.</span>
 </h4>
 <dl class="description-list">
 <dt id="th_REexistence">Row echelon forms exist</dt>
-<dd><p id="p-486">Any matrix <span class="process-math">\(A\)</span> is row equivalent to a matrix in row echelon form. Indeed, Gaussian elimination row reduces any matrix to a matrix in row echelon form.</p></dd>
+<dd><p id="p-518">Any matrix <span class="process-math">\(A\)</span> is row equivalent to a matrix in row echelon form. Indeed, Gaussian elimination row reduces any matrix to a matrix in row echelon form.</p></dd>
 <dt id="th_RREexistence">Reduced row echelon forms exist</dt>
-<dd><p id="p-487">Any matrix <span class="process-math">\(A\)</span> is row equivalent to a matrix in reduced row echelon form. Indeed, Gauss-Jordan elimination row reduces any matrix to a matrix in reduced row echelon form.</p></dd>
+<dd><p id="p-519">Any matrix <span class="process-math">\(A\)</span> is row equivalent to a matrix in reduced row echelon form. Indeed, Gauss-Jordan elimination row reduces any matrix to a matrix in reduced row echelon form.</p></dd>
 <dt id="th_RREuniqueness">Reduced row echelon forms are unique</dt>
-<dd><p id="p-488">Any matrix <span class="process-math">\(A\)</span> is row equivalent to a <em class="emphasis">unique</em> matrix in reduced row echelon form.</p></dd>
-</dl></article><p id="p-489">We will make heavy use of the first two results of <a href="" class="xref" data-knowl="./knowl/th_matrixforms.html" title="Theorem 1.2.10: Row equivalent matrix forms">Theorem 1.2.10</a>. The proofs of these statements are not difficult, but not especially illuminating. Accordingly we omit them here, and point the interested reader to Robert Beezer's <a class="external" href="http://linear.ups.edu/fcla" target="_blank"><em class="emphasis">A First Course in Linear Algebra</em></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a>. (See <a class="external" href="http://linear.ups.edu/fcla/section-RREF.html#theorem-REMEF" target="_blank">Theorem REMEF</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a>.)</p>
-<p id="p-490">The third statement of <a href="" class="xref" data-knowl="./knowl/th_matrixforms.html" title="Theorem 1.2.10: Row equivalent matrix forms">Theorem 1.2.10</a>, that every matrix is row equivalent to a <em class="emphasis">unique</em> matrix in reduced row echelon form, does in fact have an enlightening proof. We will postpone this proof, however, until we have a little more theory at our disposal. (See <a href="" class="xref" data-knowl="./knowl/cor_RRE_uniqueness.html" title="Corollary 2.4.17: Uniqueness of reduced row echelon form">Corollary 2.4.17</a>.) Until then we will conscientiously <em class="emphasis">not</em> make use of this fact when developing any of our further theory.</p>
+<dd><p id="p-520">Any matrix <span class="process-math">\(A\)</span> is row equivalent to a <em class="emphasis">unique</em> matrix in reduced row echelon form.</p></dd>
+</dl></article><p id="p-521">We will make heavy use of the first two results of <a href="" class="xref" data-knowl="./knowl/th_matrixforms.html" title="Theorem 1.2.10: Row equivalent matrix forms">Theorem 1.2.10</a>. The proofs of these statements are not difficult, but not especially illuminating. Accordingly we omit them here, and point the interested reader to Robert Beezer's <a class="external" href="http://linear.ups.edu/fcla" target="_blank"><em class="emphasis">A First Course in Linear Algebra</em></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a>. (See <a class="external" href="http://linear.ups.edu/fcla/section-RREF.html#theorem-REMEF" target="_blank">Theorem REMEF</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a>.)</p>
+<p id="p-522">The third statement of <a href="" class="xref" data-knowl="./knowl/th_matrixforms.html" title="Theorem 1.2.10: Row equivalent matrix forms">Theorem 1.2.10</a>, that every matrix is row equivalent to a <em class="emphasis">unique</em> matrix in reduced row echelon form, does in fact have an enlightening proof. We will postpone this proof, however, until we have a little more theory at our disposal. (See <a href="" class="xref" data-knowl="./knowl/cor_RRE_uniqueness.html" title="Corollary 2.4.17: Uniqueness of reduced row echelon form">Corollary 2.4.17</a>.) Until then we will conscientiously <em class="emphasis">not</em> make use of this fact when developing any of our further theory.</p>
 <article class="example example-like" id="s_ge_ex_REFnotunique"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.11</span><span class="period">.</span><span class="space"> </span><span class="title">Row echelon form is not unique.</span>
 </h4>
-<p id="p-491">Show that a matrix <span class="process-math">\(A\)</span> may be row equivalent to two or more matrices in row echelon form.</p>
+<p id="p-523">Show that a matrix <span class="process-math">\(A\)</span> may be row equivalent to two or more matrices in row echelon form.</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like"><p id="p-492">Take <span class="process-math">\(A=\begin{bmatrix} 1 \amp 1 \\
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like"><p id="p-524">Take <span class="process-math">\(A=\begin{bmatrix} 1 \amp 1 \\
 1 \amp 2  \end{bmatrix}\text{.}\)</span> This row reduces to <span class="process-math">\(B=\begin{bmatrix} 1 \amp 1  \\
 0 \amp 1  \end{bmatrix}\)</span> using Gaussian elimination; and it row reduces further to <span class="process-math">\(C=\begin{bmatrix}1\amp 0\\ 0\amp 1\end{bmatrix}\)</span> using Gauss-Jordan elimination. Thus we see that <span class="process-math">\(A\)</span> is row equivalent to two different matrices in row echelon form. (According to <a href="" class="xref" data-knowl="./knowl/th_matrixforms.html" title="Theorem 1.2.10: Row equivalent matrix forms">Theorem 1.2.10</a>, the matrix <span class="process-math">\(C\)</span> is the only matrix in <em class="emphasis">reduced</em> row echelon that is row equivalent to <span class="process-math">\(A\text{.}\)</span>)</p></div></div>
 </div></article><article class="project project-like" id="sage_ge"><a href="" data-knowl="" class="id-ref project-knowl original" data-refid="hk-sage_ge"><h4 class="heading">
 <span class="type">Sage example</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span><span class="space"> </span><span class="title">Gaussian elimination.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-sage_ge"><article class="project project-like"><p id="p-493">Below you find a recursive implementation of Gaussian elimination in Sage.</p>
-<pre class="ptx-sagecell hidden-sagecell-sage" id="sage-1"><script type="text/x-sage">def row_echelon_form(A):
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-sage_ge"><article class="project project-like"><p id="p-525">Below you find a recursive implementation of Gaussian elimination in Sage.</p>
+<div class="hidden-sagecell-sage" id="sage-1"><script type="text/x-sage">def row_echelon_form(A):
   m,n=A.dimensions()
   R=A.base_ring()
   K=R.fraction_field()
@@ -663,28 +633,28 @@ A\amp \xrightarrow{c\,r_i} B \amp A\amp \xrightarrow{r_i\leftrightarrow r_j} B\a
       return A
 A=matrix([[0,0,3],[0,2,5],[0,3,3]])
 row_echelon_form(A)
-</script></pre></article></div></section><section class="exercises" id="s_ge_ex"><h3 class="heading hide-type">
+</script></div></article></div></section><section class="exercises" id="s_ge_ex"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">1.2.3</span> <span class="title">Exercises</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-1">
 <h4 class="heading"><span class="title">Exercise Group.</span></h4>
 <div class="introduction" id="introduction-14">Explain why each of the following matrices fails to be in row echelon form.</div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-22"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<p id="p-494"><span class="process-math">\(A=\begin{bmatrix}
+<article class="exercise exercise-like" id="exercise-28"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<p id="p-526"><span class="process-math">\(A=\begin{bmatrix}
 1 \amp 2\amp 2\amp -3\\
 0\amp -3\amp 4\amp 0\\
 0\amp 0\amp 0\amp 1
 \end{bmatrix}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like"><p id="p-495">The first nonzero term in the second row is not a one.</p></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-23"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<p id="p-496"><span class="process-math">\(A=\begin{bmatrix}
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like"><p id="p-527">The first nonzero term in the second row is not a one.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-29"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<p id="p-528"><span class="process-math">\(A=\begin{bmatrix}
 0\amp 1\amp 2\amp -3\\
 0\amp 1\amp 4\amp 0\\
 0\amp 0\amp 0\amp 1
-\end{bmatrix}\)</span></p></article><article class="exercise exercise-like" id="exercise-24"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<p id="p-497"><span class="process-math">\(A=\begin{bmatrix}
+\end{bmatrix}\)</span></p></article><article class="exercise exercise-like" id="exercise-30"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<p id="p-529"><span class="process-math">\(A=\begin{bmatrix}
 1\amp 1\amp 2\amp -3\\
 0\amp 0\amp 0\amp 0\\
 0\amp 1\amp 1\amp 1
@@ -696,22 +666,22 @@ row_echelon_form(A)
 <div class="introduction" id="introduction-15">For each of the given linear systems, find an equivalent system in row echelon form. Use augmented matrices and follow the Gaussian elimination algorithm to the letter.</div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="s_ge_equivsys"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-498">
+<div class="displaymath process-math" id="p-530">
 \begin{equation*}
 \begin{linsys}{4} x_1\amp +\amp 2x_2\amp =\amp x_3\amp +\amp x_4\amp +\amp 3\\ 3x_1\amp +\amp 6x_2\amp =\amp 2x_3\amp -\amp 4x_4\amp +\amp 8\\ -x_1\amp +\amp 2x_3\amp =\amp 2x_2\amp -\amp x_4\amp -\amp 1 \end{linsys}
 \end{equation*}
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like">
-<p id="p-499">First bring the system into standard form:</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-19" id="solution-19"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like">
+<p id="p-531">First bring the system into standard form:</p>
+<div class="displaymath process-math">
 \begin{equation*}
 L\colon \
 \begin{linsys}{4} x_1\amp +\amp 2x_2\amp -\amp x_3\amp-\amp x_4\amp=\amp 3\\ 3x_1\amp +\amp 6x_2\amp - \amp 2x_3\amp + \amp 4x_4\amp =\amp 8\\ -x_1\amp - \amp 2x_2 \amp +\amp 2x_3\amp + \amp x_4\amp = \amp -1 \end{linsys}\text{.}
 \end{equation*}
 </div>
 <p class="continuation">Then perform Gaussian elimination on the associated augmented matrix:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-32">
+<div class="displaymath process-math">
 \begin{align*}
 \begin{bmatrix}1\amp 2\amp -1\amp -1\amp 3\\ 3\amp 6\amp -2\amp 4\amp 8\\ -1\amp -2\amp 2\amp 1\amp -1 \end{bmatrix} \amp \xrightarrow[\hspace{35pt}]{r_2-3r_1}\amp \begin{bmatrix}1\amp 2\amp -1\amp -1\amp 3\\ 0\amp 0\amp 1\amp 7\amp -1\\ -1\amp -2\amp 2\amp 1\amp -1 \end{bmatrix}\\
 \amp \xrightarrow[\hspace{35pt}]{r_3+r_1 }\amp \begin{bmatrix}1\amp 2\amp -1\amp -1\amp 3\\ 0\amp 0\amp 1\amp 7\amp -1\\ 0\amp 0\amp 1\amp 0\amp 2 \end{bmatrix}\\
@@ -720,30 +690,30 @@ L\colon \
 \end{align*}
 </div>
 <p class="continuation">The corresponding equivalent system is</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 L'\colon \
 \begin{linsys}{4} x_1\amp +\amp 2x_2\amp -\amp x_3\amp-\amp x_4\amp=\amp 3\\  \amp \amp \amp \amp x_3\amp + \amp 7x_4\amp =\amp -1\\ \amp \amp \amp \amp \amp  \amp x_4\amp = \amp -\frac{3}{7} \end{linsys}\text{.}
 \end{equation*}
 </div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-26"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-500">
+</div></article><article class="exercise exercise-like" id="exercise-32"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<div class="displaymath process-math" id="p-532">
 \begin{equation*}
 \begin{linsys}{4} x_1\amp +\amp x_2\amp -\amp x_3\amp +\amp x_4\amp =\amp 1\\ -2x_1\amp -\amp 2x_2\amp +\amp 2x_3\amp -\amp 2x_4\amp =\amp -2\\ x_1\amp +\amp x_2\amp +\amp x_3\amp +\amp 2x_4\amp =\amp 3 \end{linsys}
 \end{equation*}
-</div></article><article class="exercise exercise-like" id="exercise-27"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-501">
+</div></article><article class="exercise exercise-like" id="exercise-33"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<div class="displaymath process-math" id="p-533">
 \begin{equation*}
 \begin{linsys}{3} 2x_1 \amp +\amp  2x_2  \amp +\amp 2x_3\amp =\amp 0\\ -2x_1 \amp +\amp  5x_2 \amp +\amp 2x_3\amp =\amp 1\\ 8x_1 \amp +\amp   x_2   \amp +\amp 4x_3\amp =\amp -1 \end{linsys}
 \end{equation*}
-</div></article><article class="exercise exercise-like" id="exercise-28"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-502">
+</div></article><article class="exercise exercise-like" id="exercise-34"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<div class="displaymath process-math" id="p-534">
 \begin{equation*}
 \begin{linsys}{3} \amp \amp -2b  \amp +\amp 3c\amp =\amp 1\\ 3a \amp +\amp  6b \amp -\amp 3c\amp =\amp -2\\ 6a \amp +\amp   6b   \amp +\amp 3c\amp =\amp 5 \end{linsys}
 \end{equation*}
-</div></article><article class="exercise exercise-like" id="exercise-29"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-503">
+</div></article><article class="exercise exercise-like" id="exercise-35"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<div class="displaymath process-math" id="p-535">
 \begin{equation*}
 \begin{linsys}{5} \amp  \amp  \amp \amp  T_3\amp +\amp T_4\amp +\amp T_5 \amp =\amp 0\\ -T_1\amp -\amp T_2 \amp +\amp 2T_3 \amp -\amp 3T_4\amp +\amp T_5 \amp =\amp 0\\ T_1\amp + \amp T_2 \amp -\amp 2T_3 \amp \amp \amp -\amp T_5 \amp =\amp 0\\ 2T_1\amp + \amp 2T_2 \amp -\amp T_3 \amp \amp \amp +\amp T_5 \amp =\amp 0 \end{linsys}
 \end{equation*}

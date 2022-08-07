@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-02T15:02:07-07:00       *-->
+<!--*       on 2022-08-07T11:39:37-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -17,10 +17,11 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Linear algebra: the theory of vector spaces and linear transformations">
 <meta property="book:author" content="Aaron Greicius">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
+    useLabelIds: true,
     tagSide: "right",
     tagIndent: ".8em",
     packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
@@ -63,38 +64,7 @@
 <link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
-<!--** Runestone components to run locally in reader's browser **-->
-<!--** No external communication:                              **-->
-<!--**     log level is 0, Runestone Services are disabled     **-->
-<script type="text/javascript">
-eBookConfig = {};
-eBookConfig.useRunestoneServices = false;
-eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX Course: Title Here';
-eBookConfig.basecourse = 'PTX Base Course';
-eBookConfig.isLoggedIn = false;
-eBookConfig.email = '';
-eBookConfig.isInstructor = false;
-eBookConfig.logLevel = 0;
-eBookConfig.username = '';
-eBookConfig.readings = null;
-eBookConfig.activities = null;
-eBookConfig.downloadsEnabled = false;
-eBookConfig.allow_pairs = false;
-eBookConfig.enableScratchAC = false;
-eBookConfig.build_info = "";
-eBookConfig.python3 = null;
-eBookConfig.acDefaultLanguage = 'python';
-eBookConfig.runestone_version = '5.0.1';
-eBookConfig.jobehost = '';
-eBookConfig.proxyuri_runs = '';
-eBookConfig.proxyuri_files = '';
-eBookConfig.enable_chatcodes =  false;
-</script>
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand{\Z}{{\mathbb Z}}
@@ -301,8 +271,6 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\definecolor{fillinmathshade}{gray}{0.9}
-\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="http://linear-algebra.northwestern.pub/" target="_blank"><img src="external/images/im_holycomm.svg" alt="Logo image"></a><div class="title-container">
@@ -419,7 +387,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Set-builder notation.</span>
 </h4>
 <p id="p-10">Let <span class="process-math">\(A\)</span> be a set, and let <span class="process-math">\(P\)</span> be a property that elements of <span class="process-math">\(A\)</span> either satisfy or do not satisfy. For an element <span class="process-math">\(x\in A\text{,}\)</span> let <span class="process-math">\(P(x)\)</span> denote the statement that <span class="process-math">\(x\)</span> satisfies <span class="process-math">\(P\text{.}\)</span>  The set of all elements of <span class="process-math">\(A\)</span> satisfying <span class="process-math">\(P\)</span> is denoted</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 \{x \in A \colon P(x) \}\text{.}
 \end{equation*}
@@ -437,13 +405,13 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">0.1.7</span><span class="period">.</span>
 </h4>
 <p id="p-16">Let <span class="process-math">\(A=\{0,1,2,\dots \}\)</span> be the set of nonnegative integers. The subset <span class="process-math">\(B=\{0,2,4,\dots\}\)</span> of <em class="emphasis">even</em> positive integers can be described using set-builder notation as</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 B=\{x\in A\colon x \text{ is even}\}\text{,}
 \end{equation*}
 </div>
 <p class="continuation">or alternatively,</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 B=\{x\in A\colon x=2k \text{ for some integer} k\}\text{.}
 \end{equation*}
@@ -455,13 +423,13 @@ B=\{x\in A\colon x=2k \text{ for some integer} k\}\text{.}
 <ul class="disc">
 <li id="li-5">
 <span class="heading"><span class="title">Set union.</span></span><p id="p-19">The <dfn class="terminology">union</dfn> <span class="process-math">\(A \cup B\)</span> of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> is defined as</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 A\cup B=\{x\in X\colon x\in A\text{ or } x\in B\}\text{.}
 \end{equation*}
 </div>
 <p class="continuation">More generally, the union <span class="process-math">\(A_1\cup A_2\dots \cup A_n\)</span> of a collection of subsets of <span class="process-math">\(A_i\subseteq X\)</span> is defined as</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 A_1\cup A_2\dots \cup A_n=\{x\in X\colon x\in A_i \text{ for some } 1\leq i\leq n\}.
 \end{equation*}
@@ -469,13 +437,13 @@ A_1\cup A_2\dots \cup A_n=\{x\in X\colon x\in A_i \text{ for some } 1\leq i\leq 
 </li>
 <li id="li-6">
 <span class="heading"><span class="title">Set intersection.</span></span><p id="p-20">The <dfn class="terminology">intersection</dfn> <span class="process-math">\(A \cap B\)</span> of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> is defined as</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 A\cap B=\{x\in X\colon x\in A\text{ and } x\in B\}\text{.}
 \end{equation*}
 </div>
 <p class="continuation">More generally, the intersection <span class="process-math">\(A_1\cap A_2\dots \cap A_n\)</span> of a collection of subsets of <span class="process-math">\(A_i\subseteq X\)</span> is defined as</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 A_1\cap A_2\dots \cap A_n=\{x\in X\colon x\in A_i \text{ for all } 1\leq i\leq n\}.
 \end{equation*}
@@ -483,7 +451,7 @@ A_1\cap A_2\dots \cap A_n=\{x\in X\colon x\in A_i \text{ for all } 1\leq i\leq n
 </li>
 <li id="li-7">
 <span class="heading"><span class="title">Set difference.</span></span><p id="p-21">The <dfn class="terminology">difference</dfn> <span class="process-math">\(A-B\)</span> is defined as</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 A-B=\{x\in X\colon x\in A\text{ and } x\notin B\}\text{.}
 \end{equation*}
@@ -494,16 +462,16 @@ A-B=\{x\in X\colon x\in A\text{ and } x\notin B\}\text{.}
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Common mathematical sets.</span>
 </h4>
 <p id="p-23">We denote by <span class="process-math">\(\mathbb{R}\)</span> the set of all real numbers. The <dfn class="terminology">integers</dfn> <span class="process-math">\(\Z\)</span> and <dfn class="terminology">rational numbers</dfn> <span class="process-math">\(\mathbb{Q}\)</span> are the subsets of <span class="process-math">\(\R\)</span> defined as</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-1">
+<div class="displaymath process-math">
 \begin{align*}
 \mathbb{Z} \amp =\{0,1,2,3,\dots\}\cup \{-1,-2,-3,\dots\} \\
 \mathbb{Q} \amp = \{x\in\mathbb{R}\colon x=\tfrac{m}{n} \text{ for some } m,n\in\Z\}  \text{.}
 \end{align*}
 </div>
 <p class="continuation">This yields the following chain of subsets:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="eq_chain_numbersystems">
+<div class="displaymath process-math">
 \begin{equation}
-\mathbb{Z}\subseteq\mathbb{Q}\subseteq\mathbb{R}\text{.}\tag{0.1.1}
+\mathbb{Z}\subseteq\mathbb{Q}\subseteq\mathbb{R}\text{.}\label{eq_chain_numbersystems}\tag{0.1.1}
 \end{equation}
 </div>
 <p class="continuation">The <dfn class="terminology">empty set</dfn> is the set containing no objects, denoted <span class="process-math">\(\{\ \}\)</span> or <span class="process-math">\(\emptyset\text{.}\)</span></p></article><p id="p-24">Lastly, we define the <em class="emphasis">cartesian product</em> of sets, which is a formal description of an ordered collection of objects.</p>
@@ -512,13 +480,13 @@ A-B=\{x\in X\colon x\in A\text{ and } x\notin B\}\text{.}
 </h4>
 <p id="p-25">An <dfn class="terminology"><span class="process-math">\(n\)</span>-tuple</dfn> (or <dfn class="terminology">sequence</dfn>) of the sets <span class="process-math">\(A_1, A_2,\dots, A_n\)</span> is an ordered list <span class="process-math">\((a_1,a_2,\dots, a_n)\)</span> such that <span class="process-math">\(a_i\in A_i\)</span> for all <span class="process-math">\(1\leq i\leq n\text{.}\)</span> We define two <span class="process-math">\(n\)</span>-tuples <span class="process-math">\((a_1,a_2,\dots, a_n)\text{,}\)</span> and <span class="process-math">\((a_1',a_2',\dots, a_n')\)</span> to be equal, denoted <span class="process-math">\((a_1,a_2,\dots, a_n)=(a_1',a_2',\dots, a_n')\text{,}\)</span> if <span class="process-math">\(a_i=a_i'\)</span> for all <span class="process-math">\(1\leq i\leq n\text{.}\)</span> We call <span class="process-math">\(n\)</span> the <dfn class="terminology">length</dfn> of the sequence <span class="process-math">\((a_1,a_2,\dots, a_n)\text{,}\)</span> and we call <span class="process-math">\(a_i\)</span> its <dfn class="terminology"><span class="process-math">\(i\)</span>-th entry</dfn> for all <span class="process-math">\(1\leq i\leq n\text{.}\)</span></p>
 <p id="p-26">The <dfn class="terminology">(Cartesian) product</dfn> of the sets <span class="process-math">\(A_1, A_2,\dots, A_n\text{,}\)</span> denoted <span class="process-math">\(A_1\times A_2\times\cdots \times A_n\)</span> or <span class="process-math">\(\displaystyle\prod_{i=1}^nA_i\text{,}\)</span> is the set of all <span class="process-math">\(n\)</span>-tuples: i.e.,</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 \prod_{i=1}^nA_i=A_1\times A_2\times\cdots \times A_n=\{(a_1,a_2,\dots, a_n)\colon a_i\in A_i \text{ for all } 1\leq i\leq n\}\text{.}
 \end{equation*}
 </div>
 <p id="p-27">Given a set <span class="process-math">\(A\text{,}\)</span> its <dfn class="terminology"><span class="process-math">\(n\)</span>-ary Cartesian product</dfn> <span class="process-math">\(A^n\)</span> is defined as</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 A^n=\prod_{i=1}^n A=\underset{n\text{ times}}{\underbrace{A\times A\times\cdots \times A}}\text{.}
 \end{equation*}
@@ -538,7 +506,7 @@ A^n=\prod_{i=1}^n A=\underset{n\text{ times}}{\underbrace{A\times A\times\cdots 
 <p id="p-31">Let <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> be two sets. A <dfn class="terminology">function from <span class="process-math">\(X\)</span> to <span class="process-math">\(Y\)</span></dfn>, denoted <span class="process-math">\(f\colon X\rightarrow Y\text{,}\)</span> is a rule which, given any <dfn class="terminology">input</dfn> <span class="process-math">\(x\in X\text{,}\)</span> returns an <dfn class="terminology">output</dfn> <span class="process-math">\(y\in Y\text{.}\)</span> In this case we write <span class="process-math">\(y=f(x)\)</span> and call <span class="process-math">\(y\)</span> the <dfn class="terminology">image of <span class="process-math">\(x\)</span> under <span class="process-math">\(f\)</span></dfn>, or the <dfn class="terminology">value of <span class="process-math">\(f\)</span> at <span class="process-math">\(x\)</span></dfn>. Similarly, we say <span class="process-math">\(f\)</span> <dfn class="terminology">maps</dfn> (or <dfn class="terminology">sends</dfn>) the input <span class="process-math">\(x\)</span> to the output <span class="process-math">\(y\text{.}\)</span></p>
 <p id="p-32">The set <span class="process-math">\(X\)</span> is called the <dfn class="terminology">domain</dfn> of <span class="process-math">\(f\text{;}\)</span> the set <span class="process-math">\(Y\)</span> is called the <dfn class="terminology">codomain</dfn> of <span class="process-math">\(f\text{.}\)</span></p>
 <p id="p-33">When we wish to indicate what rule defines the function, we use the elaborated notation</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-2">
+<div class="displaymath process-math">
 \begin{align*}
 f\colon X \amp\rightarrow Y\\
 x \amp\mapsto f(x)\text{.}
@@ -548,7 +516,7 @@ x \amp\mapsto f(x)\text{.}
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">0.1.14</span><span class="period">.</span>
 </h4>
 <p id="p-34">Consider the function</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-3">
+<div class="displaymath process-math">
 \begin{align*}
 f\colon \mathbb{Z}\amp \rightarrow \mathbb{Z}\\
 x\amp\mapsto x^2 \text{.}
@@ -558,14 +526,14 @@ x\amp\mapsto x^2 \text{.}
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">0.1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Arithmetic operations as functions.</span>
 </h4>
 <p id="p-35">Our familiar arithmetic operations can be expressed as functions whose inputs are pairs of numbers: addition is the function</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-4">
+<div class="displaymath process-math">
 \begin{align*}
 a\colon \R\times \R \amp\rightarrow \R \\
 (x,y) \amp\mapsto x+y 
 \end{align*}
 </div>
 <p class="continuation">and multiplication is the function</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-5">
+<div class="displaymath process-math">
 \begin{align*}
 m\colon\mathbb{R}\times \mathbb{R} \amp \rightarrow \mathbb{R}\\
 (x,y)\amp\mapsto  xy 
@@ -578,21 +546,21 @@ m\colon\mathbb{R}\times \mathbb{R} \amp \rightarrow \mathbb{R}\\
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.17</span><span class="period">.</span><span class="space"> </span><span class="title">Function equality.</span>
 </h4>
 <p id="p-38">Functions <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are <dfn class="terminology">equal</dfn> if</p>
-<ol class="lower-roman">
+<ol class="decimal">
 <li id="li-8"><p id="p-39">they have the same domain <span class="process-math">\(X\)</span> and codomain <span class="process-math">\(Y\text{,}\)</span> and</p></li>
 <li id="li-9"><p id="p-40">for all <span class="process-math">\(x\in X\text{,}\)</span> we have <span class="process-math">\(f(x)=g(x)\text{.}\)</span></p></li>
 </ol></article><article class="definition definition-like" id="d_image"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1.18</span><span class="period">.</span><span class="space"> </span><span class="title">Image of a set.</span>
 </h4>
 <p id="p-41">Given a function <span class="process-math">\(f\colon X\rightarrow Y\)</span> and a subset <span class="process-math">\(A \subseteq X\text{,}\)</span> the <dfn class="terminology">image of <span class="process-math">\(A\)</span> under <span class="process-math">\(f\)</span></dfn>, denoted <span class="process-math">\(f(A)\text{,}\)</span> is defined as</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 f(A)=\left\{ y \in Y \colon f(a)=y \text{ for some } a \in A \right\}\text{.}
 \end{equation*}
 </div>
 <p class="continuation">In other words, <span class="process-math">\(f(A)\)</span> is the set of all outputs <span class="process-math">\(f(a)\text{,}\)</span>  where <span class="process-math">\(a\in X\text{.}\)</span></p>
 <p id="p-42">The <dfn class="terminology">image of <span class="process-math">\(f\)</span></dfn>, denoted <span class="process-math">\(\operatorname{im} f\text{,}\)</span> is the set of <em class="emphasis">all</em> outputs of <span class="process-math">\(f\text{:}\)</span> i.e.,</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 \operatorname{im} f=f(X)=\left\{ y \in Y \colon f(x)=y \text{ for some } x \in X \right\}\text{.}
 \end{equation*}
@@ -608,7 +576,7 @@ f(A)=\left\{ y \in Y \colon f(a)=y \text{ for some } a \in A \right\}\text{.}
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">0.1.20</span><span class="period">.</span><span class="space"> </span><span class="title">Role of domain and codomain in injectivity and surjectivity.</span>
 </h4>
 <p id="p-47">Consider the following three functions</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-6">
+<div class="displaymath process-math">
 \begin{align*}
 f\colon \R \amp\rightarrow \R \amp g\colon [0,\infty)\amp\rightarrow \R \amp h\colon [0,\infty)\amp \rightarrow [0,\infty) \\
 x \amp\mapsto x^2 \amp x \amp\mapsto x^2 \amp x \amp\mapsto x^2 \amp \text{.}
@@ -623,7 +591,7 @@ x \amp\mapsto x^2 \amp x \amp\mapsto x^2 \amp x \amp\mapsto x^2 \amp \text{.}
 </h4>
 <p id="p-49">For any set <span class="process-math">\(X\)</span> the <dfn class="terminology">identity function</dfn> on <span class="process-math">\(X\)</span> is the function <span class="process-math">\(\id_X\colon X\rightarrow X\)</span> defined as <span class="process-math">\(\id_X(x)=x\)</span> for all <span class="process-math">\(x\in X\text{.}\)</span></p>
 <p id="p-50">A function <span class="process-math">\(f\colon X\rightarrow Y\)</span> is <dfn class="terminology">invertible</dfn> if there is a function <span class="process-math">\(g\colon Y\rightarrow X\)</span> satisfying <span class="process-math">\(g\circ f=\id_X\)</span> and <span class="process-math">\(f\circ g=\id_Y\text{:}\)</span> i.e.,</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-7">
+<div class="displaymath process-math">
 \begin{align*}
 g(f(x))\amp =x  \text{ for all } x\in X, \\
 f(g(y))\amp=y  \text{ for all } y\in Y \text{.}
@@ -639,10 +607,10 @@ f(g(y))\amp=y  \text{ for all } y\in Y \text{.}
 <div class="problem-contents">
 <p id="p-53">Let <span class="process-math">\(A= \{ 2,  3, 6, 7,  8 \}\)</span> , <span class="process-math">\(B= \{ 2,  4,  7,  8  \}\)</span> , <span class="process-math">\(C= \{ 0,  1,  4, 5, 6, 7 \}\text{.}\)</span></p>
 <p id="p-54">List the elements of the following sets. If there is more than one element write them separated by commas.</p>
-<p id="p-55"><span class="process-math">\(A \cap B = \{\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> <span class="process-math">\(\}\)</span></p>
-<p id="p-56"><span class="process-math">\(A \cup B = \{\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> <span class="process-math">\(\}\)</span></p>
-<p id="p-57"><span class="process-math">\((B \cup C) \cap A = \{\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> <span class="process-math">\(\}\)</span></p>
-<p id="p-58"><span class="process-math">\(B \cup (C \cap A) = \{\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> <span class="process-math">\(\}\)</span></p>
+<p id="p-55"><span class="process-math">\(A \cap B = \{\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> <span class="process-math">\(\}\)</span></p>
+<p id="p-56"><span class="process-math">\(A \cup B = \{\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> <span class="process-math">\(\}\)</span></p>
+<p id="p-57"><span class="process-math">\((B \cup C) \cap A = \{\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> <span class="process-math">\(\}\)</span></p>
+<p id="p-58"><span class="process-math">\(B \cup (C \cap A) = \{\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> <span class="process-math">\(\}\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-59"><span class="process-math">\(2, 7, 8\)</span></p></div></div>
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-60"><span class="process-math">\(2, 3, 4, 6, 7, 8\)</span></p></div></div>
@@ -655,10 +623,10 @@ f(g(y))\amp=y  \text{ for all } y\in Y \text{.}
 <div id="webwork-2" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="2" data-sourceFilePath="Library/SDSU/Discrete/Sets/cartesianprodB4.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
 <div class="problem-contents">
 <p id="p-63">Let <span class="process-math">\(S = \lbrace w,x,y,z\rbrace\text{,}\)</span> <span class="process-math">\(T = \lbrace 0\rbrace\)</span></p>
-<p id="p-64">How many elements are in <span class="process-math">\(S\times T\text{?}\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></p>
+<p id="p-64">How many elements are in <span class="process-math">\(S\times T\text{?}\)</span> <span class="fillin" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></p>
 <p id="p-65">Determine <span class="process-math">\(S\times T\)</span></p>
 <p id="p-66">[Note: Enter your answer as a comma-separated list. Pairs should be denoted with parentheses.]</p>
-<p id="p-67"><span class="process-math">\(\lbrace\)</span><span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span><span class="process-math">\(\rbrace\)</span></p>
+<p id="p-67"><span class="process-math">\(\lbrace\)</span><span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span><span class="process-math">\(\rbrace\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><p id="p-68"><span class="process-math">\(4\)</span></p></div></div>
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><p id="p-69"><span class="process-math">\(\left(\text{w}, 0\right), \left(\text{x}, 0\right), \left(\text{y}, 0\right), \left(\text{z}, 0\right)\)</span></p></div></div>
@@ -672,8 +640,8 @@ f(g(y))\amp=y  \text{ for all } y\in Y \text{.}
 <div id="webwork-3" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="3" data-sourceFilePath="Library/MontanaState/Sets/5.2A13Sets1.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
 <div class="problem-contents">
 <p id="p-70">Let <span class="process-math">\(f(x) = x^{2}\text{.}\)</span>  Find each set.</p>
-<p id="p-71"><span class="process-math">\(f ([1, 5)) =\)</span> <span class="fillin underline" role="img" aria-label="12-character blank" style="width: 5.454545454545454em;"></span></p>
-<p id="p-72"><span class="process-math">\(f ((-4, 5)) =\)</span> <span class="fillin underline" role="img" aria-label="12-character blank" style="width: 5.454545454545454em;"></span></p>
+<p id="p-71"><span class="process-math">\(f ([1, 5)) =\)</span> <span class="fillin" role="img" aria-label="12-character blank" style="width: 5.454545454545454em;"></span></p>
+<p id="p-72"><span class="process-math">\(f ((-4, 5)) =\)</span> <span class="fillin" role="img" aria-label="12-character blank" style="width: 5.454545454545454em;"></span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><p id="p-73"><span class="process-math">\(\left[1,25\right)\)</span></p></div></div>
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><p id="p-74"><span class="process-math">\(\left[0,25\right)\)</span></p></div></div>
@@ -715,7 +683,7 @@ f(g(y))\amp=y  \text{ for all } y\in Y \text{.}
 </ul></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
-<em class="alert">SOLUTION</em> One way we can check which functions are inverses is to make sure they satisfy the identities <span class="process-math">\(f \left( f^{-1}(x) \right)=x\)</span> and <span class="process-math">\(f^{-1} \left( f(x) \right)=x\text{.}\)</span>  This will show that <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\)</span> and <span class="process-math">\(g(x)\)</span> and <span class="process-math">\(r(x)\)</span> are inverses of each other, while the other pairs of functions are not. Let's consider <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\text{.}\)</span>  The composition<div class="displaymath process-math" data-contains-math-knowls="">
+<em class="alert">SOLUTION</em> One way we can check which functions are inverses is to make sure they satisfy the identities <span class="process-math">\(f \left( f^{-1}(x) \right)=x\)</span> and <span class="process-math">\(f^{-1} \left( f(x) \right)=x\text{.}\)</span>  This will show that <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\)</span> and <span class="process-math">\(g(x)\)</span> and <span class="process-math">\(r(x)\)</span> are inverses of each other, while the other pairs of functions are not. Let's consider <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\text{.}\)</span>  The composition<div class="displaymath process-math">
 \begin{equation*}
 \begin{aligned}
 p\left(q(x)\right)
@@ -724,7 +692,7 @@ p\left(q(x)\right)
 \amp = 8 + (x-8) = x.
 \end{aligned}
 \end{equation*}
-</div>Also,<div class="displaymath process-math" data-contains-math-knowls="">
+</div>Also,<div class="displaymath process-math">
 \begin{equation*}
 \begin{aligned}
 q\left(p(x)\right)
@@ -732,7 +700,7 @@ q\left(p(x)\right)
 \amp = \sqrt[7]{x^{7}} = x.
 \end{aligned}
 \end{equation*}
-</div>Thus these are inverses of one another.  We can similarly show that <span class="process-math">\(g(x)\)</span> and <span class="process-math">\(r(x)\)</span> are inverses of each other. However, the remaining pairs are not inverses.  For example, if we consider <span class="process-math">\(q(x)\)</span> and <span class="process-math">\(r(x)\text{,}\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="">
+</div>Thus these are inverses of one another.  We can similarly show that <span class="process-math">\(g(x)\)</span> and <span class="process-math">\(r(x)\)</span> are inverses of each other. However, the remaining pairs are not inverses.  For example, if we consider <span class="process-math">\(q(x)\)</span> and <span class="process-math">\(r(x)\text{,}\)</span> we have<div class="displaymath process-math">
 \begin{equation*}
 \begin{aligned}
 q\left(r(x)\right)

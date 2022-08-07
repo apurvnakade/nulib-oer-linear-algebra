@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-02T15:02:29-07:00       *-->
+<!--*       on 2022-08-07T11:40:57-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -18,26 +18,26 @@
 <p>The proof is by induction on the size <span class="process-math">\(n\)</span> of the matrix.</p>
 <article class="case"><h5 class="heading">Base step: <span class="process-math">\(n=1, 2\)</span>.</h5>
 <p>For <span class="process-math">\(n=1\)</span> there is nothing to prove. Given</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 A=\begin{bmatrix}a\amp b\\ c\amp d\end{bmatrix}
 \end{equation*}
 </div>
 <p class="continuation">expanding along either row yields <span class="process-math">\(ad-bc\text{,}\)</span> as one easily verifies.</p></article><article class="case"><h5 class="heading">Induction step.</h5>
 <p>Assume the claim is true of any <span class="process-math">\((n-1)\times (n-1)\)</span> matrix.  Given <span class="process-math">\(A=[a_{ij}]_{n\times n}\)</span> we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_det_def.html ./knowl/eq_det_submatrix.html ./knowl/eq_entry_formula_1.html ./knowl/eq_iterated_submatrix.html">
+<div class="displaymath process-math">
 \begin{equation}
 \det A=\sum_{j=1}^n (-1)^{1+j}a_{1 j}\det  A_{1j}\text{.}\tag{2.5.1}
 \end{equation}
 </div>
 <p class="continuation">Expanding along the <span class="process-math">\(i\)</span>-th row of <span class="process-math">\(A\)</span> for any <span class="process-math">\(2\leq i\leq n\text{,}\)</span> on the other hand, we get</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_det_def.html ./knowl/eq_det_submatrix.html ./knowl/eq_entry_formula_1.html ./knowl/eq_iterated_submatrix.html">
+<div class="displaymath process-math">
 \begin{equation}
 \sum_{k=1}^n (-1)^{i+k}a_{ik}\det A_{i  k}\text{.}\tag{2.5.2}
 \end{equation}
 </div>
 <p class="continuation">To show these two expressions are equal we use the induction hypothesis to compute each <span class="process-math">\(\det  A_{1  j}\)</span> by expanding along its <span class="process-math">\((i-1)\)</span>-th row:</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_det_def.html ./knowl/eq_det_submatrix.html ./knowl/eq_entry_formula_1.html ./knowl/eq_iterated_submatrix.html">
+<div class="displaymath process-math">
 \begin{equation}
 \det  A_{1j}=\sum_{k=1}^{n-1}(-1)^{i-1+k}[ A_{1j}]_{(i-1) k}\det {( A_{1j})}_{(i-1) k}\text{.}\tag{2.5.3}
 \end{equation}
@@ -49,7 +49,7 @@ A=\begin{bmatrix}a\amp b\\ c\amp d\end{bmatrix}
 <li><p>If <span class="process-math">\(j\lt k\text{,}\)</span> then the <span class="process-math">\(j\)</span>-th column of <span class="process-math">\(A_{ik}\)</span> corresponds to the <span class="process-math">\(j\)</span>-th column of <span class="process-math">\(A\text{;}\)</span> if <span class="process-math">\(j\geq k\text{,}\)</span> then the <span class="process-math">\(j\)</span>-th column of <span class="process-math">\(A_{ik}\)</span> corresponds to the <span class="process-math">\((j+1)\)</span>-th column of <span class="process-math">\(A\text{.}\)</span></p></li>
 </ul>
 <p class="continuation">From these observations we derive the following table of formulas:</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_det_def.html ./knowl/eq_det_submatrix.html ./knowl/eq_entry_formula_1.html ./knowl/eq_iterated_submatrix.html">
+<div class="displaymath process-math">
 \begin{align}
 [ A_{1j}]_{(i-1)  k} \amp =\begin{cases}
 a_{i  k} \amp \text{if } k\lt j\\
@@ -66,7 +66,7 @@ a_{1  (j+1)} \amp \text{if } k\leq j
 \end{align}
 </div>
 <p class="continuation">We now begin to unpack <a href="" class="xref" data-knowl="./knowl/eq_det_def.html" title="Equation 2.5.1">(2.5.1)</a>:</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_det_def.html ./knowl/eq_det_submatrix.html ./knowl/eq_entry_formula_1.html ./knowl/eq_iterated_submatrix.html">
+<div class="displaymath process-math">
 \begin{align*}
 \det A \amp= \sum_{j=1}^n (-1)^{1+j}a_{1 j}\det  A_{1j}\\
 \amp = \sum_{j=1}^n (-1)^{1+j}a_{1 j}\sum_{k=1}^{n-1}(-1)^{i-1+k}[ A_{1j}]_{(i-1)k}\det {( A_{1j})}_{(i-1)k} \amp \knowl{./knowl/eq_det_submatrix.html}{\text{(2.5.3)}}\\
@@ -82,6 +82,6 @@ a_{1  (j+1)} \amp \text{if } k\leq j
 \amp =\sum_{k=1}^{n}(-1)^{i+k}a_{ik}\det A_{ik} \text{.}
 \end{align*}
 </div>
-<p class="continuation">This completes the induction step, and thus the proof is finished.</p></article></article><span class="incontext"><a href="s_det.html#proof-32" class="internal">in-context</a></span>
+<p class="continuation">This completes the induction step, and thus the proof is finished.</p></article></article><span class="incontext"><a href="s_det.html#proof-32">in-context</a></span>
 </body>
 </html>

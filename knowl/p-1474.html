@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-02T15:02:33-07:00       *-->
+<!--*       on 2022-08-07T11:41:09-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,14 +14,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>Let <span class="process-math">\(T\colon V\rightarrow W\)</span> be a linear transformation, and let <span class="process-math">\(\boldw\in W\text{.}\)</span> Equation <a href="" class="xref" data-knowl="./knowl/eq_nullspace_inverseimage.html" title="Equation 3.4.3">(3.4.3)</a> can be interpreted as follows: if we can find one <em class="emphasis">particular</em> input <span class="process-math">\(\boldv_p\)</span> satisfying <span class="process-math">\(T(\boldv_p)=\boldw\text{,}\)</span> then the set <span class="process-math">\(X_\boldw\)</span> of <em class="emphasis">all</em> inputs <span class="process-math">\(\boldv\)</span> satisfying <span class="process-math">\(T(\boldv)=\boldw\)</span> is given by</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_nullspace_inverseimage.html">
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>The inclusion <span class="process-math">\(\im S\subseteq W\)</span> is the easier of the two. If <span class="process-math">\(B\in \im S\text{,}\)</span> then <span class="process-math">\(B=S(A)=A^T-A\)</span> for some <span class="process-math">\(A\in M_{nn}\text{.}\)</span> Using various properties of transposition, we have</p>
+<div class="displaymath process-math">
 \begin{equation*}
-X_\boldw=\{\boldv_p+\boldu\colon \boldu\in \NS T\}\text{.}
+B^T=(A^T-A)^T=(A^T)^T-A^T=-(A^T-A)=-B\text{,}
 \end{equation*}
 </div>
-<p class="continuation">This set <span class="process-math">\(X\)</span> is not necessarily a subspace. Indeed, if <span class="process-math">\(\boldw\ne \boldzero_W\text{,}\)</span> then <span class="process-math">\(\boldzero\notin X\text{,}\)</span> since <span class="process-math">\(T(\boldzero)=\boldzero_W\text{!}\)</span> Instead, <span class="process-math">\(X\)</span> is what is called the <em class="emphasis">translate</em> of the subspace <span class="process-math">\(\NS T\)</span> by the vector <span class="process-math">\(\boldv_p\text{,}\)</span> and is denoted as <span class="process-math">\(X=\boldv_p+\NS T\text{.}\)</span> The corollary below is an application to solutions to matrix equations (equivalently, linear systems) obtained by treating the special case where <span class="process-math">\(T=T_A\)</span> is a matrix transformation associated to an <span class="process-math">\(m\times n\)</span> matrix <span class="process-math">\(A\text{.}\)</span></p>
-<span class="incontext"><a href="s_nullspace_image.html#p-1474" class="internal">in-context</a></span>
+<p class="continuation">showing that <span class="process-math">\(B\)</span> is skew-symmetric, and thus <span class="process-math">\(B\in W\text{,}\)</span> as desired.</p>
+<span class="incontext"><a href="s_nullspace_image.html#p-1474">in-context</a></span>
 </body>
 </html>

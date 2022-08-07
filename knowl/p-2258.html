@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-02T15:02:43-07:00       *-->
+<!--*       on 2022-08-07T11:41:34-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,15 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Show, using linear algebra, that if we are given any three points <span class="process-math">\((x,y)=(r_1,s_1), (r_2,s_2), (r_3,s_3)\text{,}\)</span> where the <span class="process-math">\(x\)</span>-coordinates <span class="process-math">\(r_i\)</span> are all distinct, then there is a <em class="emphasis">unique</em> choice of <span class="process-math">\(a,b,c\)</span> such that the corresponding quadratic function agrees <em class="emphasis">precisely</em> with the data. In other words, given just about any three points in the plane, there is a unique quadratic curve connecting them.</p>
-<span class="incontext"><a href="s_orthogonal_projection.html#p-2258" class="internal">in-context</a></span>
+<p>We have</p>
+<div class="displaymath process-math">
+\begin{align*}
+d((2,1,1), W) \amp = \norm{(2,1,1)-\proj{(2,1,1)}{W}}\\
+\amp =\norm{\frac{1}{6}(1,-2,-1)}=\frac{6}{6} \\
+d((1,1,1), W) \amp = \norm{(1,1,1)-\proj{(1,1,1)}{W}}\\
+\amp =\norm{(0,0,0)}=0 \text{.}
+\end{align*}
+</div>
+<span class="incontext"><a href="s_orthogonal_projection.html#p-2258">in-context</a></span>
 </body>
 </html>

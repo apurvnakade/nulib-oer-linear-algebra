@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-02T15:02:27-07:00       *-->
+<!--*       on 2022-08-07T11:40:50-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,14 +14,24 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(n\times n\)</span> matrix, and let <span class="process-math">\(r\in\Z\)</span> be an integer. We define the power matrix <span class="process-math">\(A^r\)</span> as follows:</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-A^r=\begin{cases} I\amp \text{if } r=0;\\[2ex] \underset{r \text{ times}}{\underbrace{AA\cdots A}}\amp \text{if } r&gt;0; \\[2ex] (A^{-1})^s \amp \text{if } r=-s &lt; 0 \text{ and } A \text{ is invertible}.
-\end{cases}\text{.}
-\end{equation*}
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>Suppose matrices <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> both satisfy the properties of the multiplicative inverse: i.e.,</p>
+<div class="displaymath process-math">
+\begin{align*}
+AB\amp =BA=I  \\
+AC\amp=CA=I \text{.}
+\end{align*}
 </div>
-<span class="incontext"><a href="s_invertible_matrices.html#p-781" class="internal">in-context</a></span>
+<p class="continuation">Then</p>
+<div class="displaymath process-math">
+\begin{align*}
+AB=I\text{ and } AC=I \amp\implies  AB=AC\\
+\amp \implies BAB=BAC\\
+\amp \implies I\,B=I\,C \\
+\amp \implies B=C\text{.}
+\end{align*}
+</div>
+<p class="continuation">Thus we see that <span class="process-math">\(B=C\text{,}\)</span> showing that the inverse of <span class="process-math">\(A\text{,}\)</span> if it exists, is unique.</p>
+<span class="incontext"><a href="s_invertible_matrices.html#p-781">in-context</a></span>
 </body>
 </html>

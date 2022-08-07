@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-02T15:02:44-07:00       *-->
+<!--*       on 2022-08-07T11:41:35-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,18 +14,20 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Lastly the space <span class="process-math">\(W\)</span> of all trace-zero matrices is easily seen to have basis</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>When <span class="process-math">\(B=(\boldv_1, \boldv_2, \dots, \boldv_n)\)</span> is an orthogonal basis with respect to some inner product <span class="process-math">\(\langle , \rangle \text{,}\)</span> then by <a href="" class="xref" data-knowl="./knowl/th_orthogonal_basis_formula.html" title="Theorem 4.2.7: Calculating with orthogonal bases">Theorem 4.2.7</a> we have</p>
+<div class="displaymath process-math">
 \begin{equation*}
-\left\{
-\begin{amatrix}[rr]1\amp 0\\ 0 \amp -1  \end{amatrix},
-\begin{amatrix}[rr]0\amp 1\\ 0\amp 0  \end{amatrix},
-\begin{amatrix}[rr]0 \amp 0\\ 1\amp 0  \end{amatrix}
-\right\}\text{,}
+\boldv=\frac{\langle \boldv,\boldv_1  \rangle }{\langle \boldv_1, \boldv_1\rangle }\boldv_1+\frac{\langle \boldv,\boldv_1  \rangle }{\langle \boldv_1, \boldv_1\rangle }\boldv_1+\cdots +\frac{\langle \boldv,\boldv_n  \rangle }{\langle \boldv_n, \boldv_n\rangle }\boldv_n\text{,}
 \end{equation*}
 </div>
-<p class="continuation">and hence <span class="process-math">\(\dim W=3\text{.}\)</span> Since <span class="process-math">\(\dim W'\lt\dim W\text{,}\)</span> we conclude that <span class="process-math">\(W'\ne W\text{.}\)</span></p>
-<span class="incontext"><a href="s_coordinatevectors.html#p-2317" class="internal">in-context</a></span>
+<p class="continuation">and thus</p>
+<div class="displaymath process-math">
+\begin{equation*}
+[\boldv]_B=\left(\frac{\langle \boldv,\boldv_1  \rangle }{\langle \boldv_1, \boldv_1\rangle }, \frac{\langle \boldv,\boldv_2  \rangle }{\langle \boldv_2, \boldv_2\rangle },\dots, \frac{\langle \boldv,\boldv_n  \rangle }{\langle \boldv_n, \boldv_n\rangle }\right)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We have thus proved the following theorem.</p>
+<span class="incontext"><a href="s_coordinatevectors.html#p-2317">in-context</a></span>
 </body>
 </html>

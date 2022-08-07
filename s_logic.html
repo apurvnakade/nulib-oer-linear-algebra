@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-02T15:02:07-07:00       *-->
+<!--*       on 2022-08-07T11:39:38-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -17,10 +17,11 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Linear algebra: the theory of vector spaces and linear transformations">
 <meta property="book:author" content="Aaron Greicius">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
+    useLabelIds: true,
     tagSide: "right",
     tagIndent: ".8em",
     packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
@@ -63,38 +64,7 @@
 <link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
-<!--** Runestone components to run locally in reader's browser **-->
-<!--** No external communication:                              **-->
-<!--**     log level is 0, Runestone Services are disabled     **-->
-<script type="text/javascript">
-eBookConfig = {};
-eBookConfig.useRunestoneServices = false;
-eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX Course: Title Here';
-eBookConfig.basecourse = 'PTX Base Course';
-eBookConfig.isLoggedIn = false;
-eBookConfig.email = '';
-eBookConfig.isInstructor = false;
-eBookConfig.logLevel = 0;
-eBookConfig.username = '';
-eBookConfig.readings = null;
-eBookConfig.activities = null;
-eBookConfig.downloadsEnabled = false;
-eBookConfig.allow_pairs = false;
-eBookConfig.enableScratchAC = false;
-eBookConfig.build_info = "";
-eBookConfig.python3 = null;
-eBookConfig.acDefaultLanguage = 'python';
-eBookConfig.runestone_version = '5.0.1';
-eBookConfig.jobehost = '';
-eBookConfig.proxyuri_runs = '';
-eBookConfig.proxyuri_files = '';
-eBookConfig.enable_chatcodes =  false;
-</script>
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand{\Z}{{\mathbb Z}}
@@ -301,8 +271,6 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\definecolor{fillinmathshade}{gray}{0.9}
-\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="http://linear-algebra.northwestern.pub/" target="_blank"><img src="external/images/im_holycomm.svg" alt="Logo image"></a><div class="title-container">
@@ -424,7 +392,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">0.2.2</span><span class="period">.</span>
 </h4>
 <p id="p-104">A <em class="emphasis">truth table</em> of a compound proposition <span class="process-math">\(\mathcal{P}\)</span> is a concise way of displaying how the truth value of <span class="process-math">\(\mathcal{P}\)</span> depends on the truth values of its component propositions. It contains one row for each possible truth assignment of the component propositions.  As illustration, we give the truth tables for the logical operators defined above:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-8">
+<div class="displaymath process-math">
 \begin{align*}
 \amp\begin{array}{c||c}\mathcal{P}\amp\neg\mathcal{P} \\
 \hline T\amp F\\F\amp T\end{array} \amp \amp \begin{array}{c|c||c}\mathcal{P}\amp\mathcal{Q}\amp\mathcal{P}\land\mathcal{Q} \\
@@ -441,7 +409,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">0.2.3</span><span class="period">.</span>
 </h4>
 <p id="p-105">Use a truth table to find all truth value assignments of <span class="process-math">\(\mathcal{P}\)</span> and <span class="process-math">\(\mathcal{Q}\)</span> making the compound proposition</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 \neg\mathcal{P}\implies (\mathcal{Q}\implies P)
 \end{equation*}
@@ -450,7 +418,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
 <p id="p-106">We construct a truth table with columns for <span class="process-math">\(\mathcal{P}\text{,}\)</span> <span class="process-math">\(\mathcal{Q}\text{,}\)</span> <span class="process-math">\(\neg\mathcal{P}\text{,}\)</span> <span class="process-math">\(\mathcal{Q\implies P}\text{,}\)</span> and <span class="process-math">\(\neg\mathcal{P}\implies (\mathcal{Q}\implies P)\text{:}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{c|c|c|c||c}\mathcal{P}\amp\mathcal{Q}\amp\neg\mathcal{P}\amp \mathcal{Q}\implies \mathcal{P}\amp \neg\mathcal{P}\implies(\mathcal{Q}\implies \mathcal{P}) \\
 \hline T\amp T\amp F\amp T\amp T\\T\amp F\amp F\amp T\amp T\\ F\amp T\amp T\amp F\amp F\\ F\amp F\amp T\amp T\amp T\end{array}\text{.}
@@ -491,7 +459,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
 <p id="p-119">Fix our domain of discourse to be <span class="process-math">\(D=\R\text{.}\)</span> For any <span class="process-math">\(r,s\in \R\text{,}\)</span> let <span class="process-math">\(Q(r,s)\)</span> be the proposition that <span class="process-math">\(s\)</span> is a square-root of <span class="process-math">\(r\text{.}\)</span> Define <span class="process-math">\(P(x)\)</span> to be the propositional function</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 x&gt;0 \implies \exists y\, Q(x,y)\text{.}
 \end{equation*}
@@ -508,13 +476,13 @@ x&gt;0 \implies \exists y\, Q(x,y)\text{.}
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">0.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Negating quantifiers.</span>
 </h4>
 <p id="p-124">Let <span class="process-math">\(P(x)\)</span> be a propositional function with domain of discourse <span class="process-math">\(D\text{.}\)</span> According to <a href="" class="xref" data-knowl="./knowl/d_quantifiers.html" title="Definition 0.2.5">Definition 0.2.5</a> a universal quantification <span class="process-math">\(\forall x\, P(x)\)</span> is false if it is <em class="emphasis">not the case</em> that <span class="process-math">\(P(d)\)</span> is true for all for all <span class="process-math">\(d\in D\text{;}\)</span> that is, if there is some <span class="process-math">\(d\in D\)</span> such that <span class="process-math">\(P(d)\)</span> is false. Letting <span class="process-math">\(\neg P(x)\)</span> be the propositional function defined as <span class="process-math">\(\neg P(d)\)</span> for all <span class="process-math">\(d\in D\text{,}\)</span> we see that <span class="process-math">\(\forall x\,  P(x) \)</span> is false if and only if <span class="process-math">\(\exists x\, \neg P(x)\)</span> is true. This proves the equivalence</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_quantifiers.html">
+<div class="displaymath process-math">
 \begin{equation*}
 \neg\forall x\, P(x)\iff \exists x\, \neg P(x)\text{.}
 \end{equation*}
 </div>
 <p class="continuation">Similarly, we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/d_quantifiers.html">
+<div class="displaymath process-math">
 \begin{equation*}
 \neg\exists x\, P(x)\iff \forall x\, \neg P(x)\text{.}
 \end{equation*}
@@ -524,9 +492,9 @@ x&gt;0 \implies \exists y\, Q(x,y)\text{.}
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">0.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">The limit does not exist.</span>
 </h4>
 <p id="p-126">Let <span class="process-math">\(f(x)\)</span> be a function with domain <span class="process-math">\(\R\text{,}\)</span> and let <span class="process-math">\(c\in \R\)</span> be a point of this domain. By definition, the proposition that <span class="process-math">\(\lim\limits_{x\to c}f(x)\)</span> exists is equivalent to the following proposition:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="eq_proposition">
+<div class="displaymath process-math">
 \begin{equation}
-\exists L\in\R\,  \forall \epsilon \gt 0\, \exists \delta \gt0\,  \forall x\in\mathbb{R}\ (\val{x-c}\lt\delta\implies \val{f(x)-L}\lt\epsilon)\text{.}\tag{0.2.1}
+\exists L\in\R\,  \forall \epsilon \gt 0\, \exists \delta \gt0\,  \forall x\in\mathbb{R}\ (\val{x-c}\lt\delta\implies \val{f(x)-L}\lt\epsilon)\text{.}\label{eq_proposition}\tag{0.2.1}
 \end{equation}
 </div>
 <p class="continuation">(We made a number of shortcuts in our logical notation above (e.g. <span class="process-math">\(\forall \epsilon\gt 0\text{,}\)</span> <span class="process-math">\(\exists\delta\gt 0\)</span>) in order to simplify the expression somewhat; the intended meaning should still be clear. )</p>
@@ -534,7 +502,7 @@ x&gt;0 \implies \exists y\, Q(x,y)\text{.}
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
 <p id="p-128">Let <span class="process-math">\(\mathcal{P}\)</span> be the proposition in <a href="" class="xref" data-knowl="./knowl/eq_proposition.html" title="Equation 0.2.1">(0.2.1)</a>. Using the negation rules in series, we derive the <em class="emphasis">chain of equivalences</em>  below (see <a href="s_proof_technique.html#sss_logical_chains" class="internal" title="Subsubsection: Chains of implications/equivalences">Chains of implications/equivalences</a>). We've added parentheses to emphasize what is being negated at each step. Note how a quantifiers are “swapped” each time we pass the negation to the right.</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_proposition.html ./knowl/sss_logical_chains.html" id="md-9">
+<div class="displaymath process-math">
 \begin{align*}
 \neg\mathcal{P}\amp\iff \forall L\in\R\,  \neg\left(\forall \epsilon \gt 0\, \exists \delta \gt0\,  \forall x\in\mathbb{R}\ (\val{x-c}\lt\delta\implies \val{f(x)-L}\lt\epsilon) \right)\\
 \amp\iff  \forall L\in\R\,  \exists \epsilon \gt 0\, \neg\left( \exists \delta \gt0\,  \forall x\in\mathbb{R}\ (\val{x-c}\lt\delta\implies \val{f(x)-L}\lt\epsilon) \right)\\
@@ -552,12 +520,12 @@ x&gt;0 \implies \exists y\, Q(x,y)\text{.}
 <div id="webwork-6" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="6" data-sourceFilePath="Library/NAU/setFoundations/MAT320_0201.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
 <div class="problem-contents">
 <p id="p-129">Assign truth values to the propositions <span class="process-math">\(P, Q,\)</span> and <span class="process-math">\(R\)</span> so that the given proposition is false. Use T for true and F for false.</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-130">
+<div class="displaymath process-math" id="p-130">
 \begin{equation*}
 \left[ P \implies (Q\wedge R) \right] \implies \left[ (P\wedge Q) \vee R\right]
 \end{equation*}
 </div>
-<p id="p-131">Answer: P: <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> Q: <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> R: <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<p id="p-131">Answer: P: <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> Q: <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> R: <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><p id="p-132">F</p></div></div>
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><p id="p-133">No correct answer specified</p></div></div>
@@ -619,36 +587,36 @@ x&gt;0 \implies \exists y\, Q(x,y)\text{.}
 <div id="webwork-10" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="10" data-sourceFilePath="Library/NAU/setFoundations/MAT320_0202.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
 <div class="problem-contents">
 <p id="p-167">Determine whether the given proposition is true or false, for the universe of all real numbers. Use T for true and F for false.</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-168">
+<div class="displaymath process-math" id="p-168">
 \begin{equation*}
 (\forall x)(\exists y)(x^2+y=0)
 \end{equation*}
 </div>
-<p id="p-169">Answer: <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-170">
+<p id="p-169">Answer: <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<div class="displaymath process-math" id="p-170">
 \begin{equation*}
 (\exists x)(\forall y)(x^2+y=0)
 \end{equation*}
 </div>
-<p id="p-171">Answer: <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-172">
+<p id="p-171">Answer: <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<div class="displaymath process-math" id="p-172">
 \begin{equation*}
 (\exists x)(\exists y)(x^2+y=0)
 \end{equation*}
 </div>
-<p id="p-173">Answer: <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-174">
+<p id="p-173">Answer: <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<div class="displaymath process-math" id="p-174">
 \begin{equation*}
 (\forall y)(\exists x)(y=x^2)
 \end{equation*}
 </div>
-<p id="p-175">Answer: <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-176">
+<p id="p-175">Answer: <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<div class="displaymath process-math" id="p-176">
 \begin{equation*}
 (\forall y)[y\geq 0 \implies (\exists x)(y=x^2)]
 \end{equation*}
 </div>
-<p id="p-177">Answer: <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
+<p id="p-177">Answer: <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><p id="p-178">T</p></div></div>
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-179">F</p></div></div>

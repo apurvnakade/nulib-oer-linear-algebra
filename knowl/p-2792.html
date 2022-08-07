@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-02T15:02:56-07:00       *-->
+<!--*       on 2022-08-07T11:41:52-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,24 +15,19 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>The eigenvalues of <span class="process-math">\(A\)</span> are <span class="process-math">\(1\)</span> and <span class="process-math">\(-1\text{,}\)</span> and each has algebraic multiplicity <span class="process-math">\(2\text{.}\)</span> Thus <span class="process-math">\(1\leq\dim W_1, \dim W_{-1}\leq 2\text{,}\)</span> and <span class="process-math">\(A\)</span> is diagonalizable if and only if</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\dim W_1=\dim W_{-1}=2\text{.}
-\end{equation*}
+<p>Let <span class="process-math">\(p_A(t)\)</span> and <span class="process-math">\(p_{A'}(t)\)</span> be the characteristic polynomials of <span class="process-math">\(A\)</span> and <span class="process-math">\(A'\text{,}\)</span> repsectively. We have</p>
+<div class="displaymath process-math">
+\begin{align*}
+p_{A'}(t)\amp =\det(tI-A')\\
+\amp =\det(tI-P^{-1}AP) \amp (A'=P^{-1}AP)\\
+\amp = \det(P^{-1}tIP-P^{-1}AP) \amp (\text{algebra}) \\
+\amp = \det(P^{-1}(tI-A)P) \amp (\text{left/right dist.}) \\
+\amp = \det(P^{-1})\det(tI-A)\det(P) \amp (\knowl{./knowl/th_det_mult.html}{\text{2.5.26}}) \\
+\amp = (\det(P))^{-1}\det(P)\det(tI-A)  \\
+\amp = \det(tI-A)=p_A(t)\text{.}
+\end{align*}
 </div>
-<p class="continuation">By inspection we see that <span class="process-math">\((1,0,0,0)\)</span> and <span class="process-math">\((0,1,0,0)\)</span> are <span class="process-math">\(1\)</span>-eigenvectors, and thus we must have <span class="process-math">\(\dim W_1=2\text{.}\)</span> Next we have <span class="process-math">\(W_{-1}=\NS(-I-A)\)</span> where</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
--I-A=\begin{amatrix}[rrrr]
--2 \amp 0 \amp 3 \amp -1 \\
-0 \amp -2 \amp -1 \amp -1 \\
-0 \amp 0 \amp 1 \amp -1 \\
-0 \amp 0 \amp 1 \amp -1
-\end{amatrix}\text{.}
-\end{equation*}
-</div>
-<p class="continuation">It is not difficult to see (either using Gaussian elimination or inspection) that this matrix has rank 3, and hence nullity 1. We conclude that <span class="process-math">\(\dim W_{-1}=1\lt 2\text{,}\)</span> and hence <span class="process-math">\(A\)</span> is not diagonalizable.</p>
-<span class="incontext"><a href="s_diagonalization.html#p-2792" class="internal">in-context</a></span>
+<p class="continuation">This proves statement (2).</p>
+<span class="incontext"><a href="s_diagonalization.html#p-2792">in-context</a></span>
 </body>
 </html>

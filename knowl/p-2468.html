@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-02T15:02:49-07:00       *-->
+<!--*       on 2022-08-07T11:41:41-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,33 +15,19 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Since <span class="process-math">\(B'\)</span> is orthonormal, we use  <a href="" class="xref" data-knowl="./knowl/th_coordinates_orthogonal.html" title="Theorem 5.1.9: Coordinate vectors for orthogonal bases">Theorem 5.1.9</a> to compute</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_coordinates_orthogonal.html ./knowl/th_changebasis_orthonormal.html">
-\begin{align*}
-[p_1(x)]_{B'} \amp = \left(\langle p_1(x),q_1(x)\rangle, \langle p_1(x),q_2(x)\rangle\right)\\
-\amp =(p_1(-1)q_1(-1)+p_1(1)q_2(1),p_1(1)q_1(1)+p_1(1)q_2(1))=\frac{1}{\sqrt{2}}(1,1)\\
-[p_2(x)]_{B'} \amp = \left(\langle p_2(x),q_1(x)\rangle, \langle p_1(x),q_2(x)\rangle\right)\\
-\amp =(p_2(-1)q_1(-1)+p_2(1)q_2(1),p_2(1)q_1(1)+p_2(1)q_2(1))=\frac{1}{\sqrt{2}}(-1,1)\text{.}
-\end{align*}
-</div>
-<p class="continuation">Thus</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_coordinates_orthogonal.html ./knowl/th_changebasis_orthonormal.html">
+<p>Let <span class="process-math">\(B=(x^n, x^{n-1}, \dots, x, 1)\)</span> be the standard basis of <span class="process-math">\(P_n\text{.}\)</span> Fix any constant <span class="process-math">\(a\in \R\text{,}\)</span> and let <span class="process-math">\(B'=((x-a)^n, (x-a)^{n-1}, \dots, (x-a), 1)\text{.}\)</span> It is easy to see that <span class="process-math">\(B'\)</span> is also an ordered basis: a simple degree argument shows that the polynomials <span class="process-math">\(p_k(x)=(x-a)^k\)</span> are linearly independent. It follows from Taylor's theorem (from single-variable calculus) that given any polynomial <span class="process-math">\(p\in P_n\)</span> we have</p>
+<div class="displaymath process-math">
 \begin{equation*}
-\underset{B\rightarrow B'}{P}=\frac{1}{\sqrt{2}}\begin{amatrix}[rr]
-1\amp -1\\
-1\amp 1
-\end{amatrix}
+p(x)=p(a)+p'(a)(x-a)+\frac{p''(x)}{2}(x-a)^2+\cdots \frac{p^{(n)}(a)}{n!}(x-a)^n\text{.}
 \end{equation*}
 </div>
-<p class="continuation">and by <a href="" class="xref" data-knowl="./knowl/th_changebasis_orthonormal.html" title="Theorem 5.3.17: Orthonormal change of basis">Theorem 5.3.17</a></p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_coordinates_orthogonal.html ./knowl/th_changebasis_orthonormal.html">
-\begin{equation*}
-\underset{B'\rightarrow B}{P}=(\underset{B\rightarrow B'}{P})^T=\frac{1}{\sqrt{2}}\begin{amatrix}[rr]
-1\amp 1\\
--1\amp 1
-\end{amatrix}\text{.}
-\end{equation*}
+<p class="continuation">We call this expression the expansion of <span class="process-math">\(p(x)\)</span> about <span class="process-math">\(x=a\text{.}\)</span> In terms of coordinate vectors, this means that</p>
+<div class="displaymath process-math">
+\begin{equation}
+[p]_{B'}=\left(\frac{p^{(n)}(a)}{n!}, \frac{p^{(n-1)}(a)}{(n-1)!}, \dots, p'(a), p(a)\right)\text{.}\tag{5.3.2}
+\end{equation}
 </div>
-<span class="incontext"><a href="s_changeofbasis.html#p-2468" class="internal">in-context</a></span>
+<p class="continuation">In other words, Taylor's theorem provides a simple derivative formula for computing coordinate vectors with respect to the basis <span class="process-math">\(B'\text{.}\)</span></p>
+<span class="incontext"><a href="s_changeofbasis.html#p-2468">in-context</a></span>
 </body>
 </html>

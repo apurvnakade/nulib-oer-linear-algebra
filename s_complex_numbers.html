@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-02T15:02:08-07:00       *-->
+<!--*       on 2022-08-07T11:39:40-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -17,10 +17,11 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Linear algebra: the theory of vector spaces and linear transformations">
 <meta property="book:author" content="Aaron Greicius">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
+    useLabelIds: true,
     tagSide: "right",
     tagIndent: ".8em",
     packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
@@ -63,38 +64,7 @@
 <link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
-<!--** Runestone components to run locally in reader's browser **-->
-<!--** No external communication:                              **-->
-<!--**     log level is 0, Runestone Services are disabled     **-->
-<script type="text/javascript">
-eBookConfig = {};
-eBookConfig.useRunestoneServices = false;
-eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX Course: Title Here';
-eBookConfig.basecourse = 'PTX Base Course';
-eBookConfig.isLoggedIn = false;
-eBookConfig.email = '';
-eBookConfig.isInstructor = false;
-eBookConfig.logLevel = 0;
-eBookConfig.username = '';
-eBookConfig.readings = null;
-eBookConfig.activities = null;
-eBookConfig.downloadsEnabled = false;
-eBookConfig.allow_pairs = false;
-eBookConfig.enableScratchAC = false;
-eBookConfig.build_info = "";
-eBookConfig.python3 = null;
-eBookConfig.acDefaultLanguage = 'python';
-eBookConfig.runestone_version = '5.0.1';
-eBookConfig.jobehost = '';
-eBookConfig.proxyuri_runs = '';
-eBookConfig.proxyuri_files = '';
-eBookConfig.enable_chatcodes =  false;
-</script>
-<!--*** Runestone Services ***-->
-<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
-<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand{\Z}{{\mathbb Z}}
@@ -301,8 +271,6 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\definecolor{fillinmathshade}{gray}{0.9}
-\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="http://linear-algebra.northwestern.pub/" target="_blank"><img src="external/images/im_holycomm.svg" alt="Logo image"></a><div class="title-container">
@@ -404,7 +372,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Complex numbers.</span>
 </h4>
 <p id="p-251">The set <span class="process-math">\(\C\)</span> of <dfn class="terminology">complex numbers</dfn>  is defined as the set of all pairs of real numbers: i.e.,</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 \C=\{(a, b)\colon a, b\in \R\}\text{.}
 \end{equation*}
@@ -413,9 +381,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <span class="type">Notation</span><span class="space"> </span><span class="codenumber">0.4.2</span><span class="period">.</span>
 </h4>
 <p id="p-252">Henceforth we will primarily denote a complex number <span class="process-math">\(z=(a,b)\)</span> as</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_complex_notation.html ./knowl/eq_complex_equality.html" id="eq_complex_notation">
+<div class="displaymath process-math">
 \begin{equation}
-z=a+bi\text{.}\tag{0.4.1}
+z=a+bi\text{.}\label{eq_complex_notation}\tag{0.4.1}
 \end{equation}
 </div>
 <p class="continuation">Since <span class="process-math">\(a=\Re z\)</span> and <span class="process-math">\(b=\Im z\text{,}\)</span> you can think of the notation <a href="" class="xref" data-knowl="./knowl/eq_complex_notation.html" title="Equation 0.4.1">(0.4.1)</a> as a decomposition of <span class="process-math">\(z\)</span> as a sum of its real and imaginary components. In what follows we give actual arithmetic meaning to the symbols ‘<span class="process-math">\(+\)</span>’ and ‘<span class="process-math">\(i\)</span>’ used in this notation, but first and foremost <a href="" class="xref" data-knowl="./knowl/eq_complex_equality.html" title="Equation 0.4.2">(0.4.2)</a> should simply be thought of as an alternative manner of denoting the pair <span class="process-math">\((a,b)\text{.}\)</span></p>
@@ -423,9 +391,9 @@ z=a+bi\text{.}\tag{0.4.1}
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">0.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Complex equality.</span>
 </h4>
 <p id="p-254">When moving to the notation <a href="" class="xref" data-knowl="./knowl/eq_complex_notation.html" title="Equation 0.4.1">(0.4.1)</a> do not lose sight of the essential nature of complex numbers as pairs of real numbers. This is important, for example, for understanding what it means for complex numbers <span class="process-math">\(z=(a,b)=a+bi\)</span> and <span class="process-math">\(w=(c,d)=c+di\)</span> to be equal. According to the general definition of equality for tuples (<a href="" class="xref" data-knowl="./knowl/d_cartesian_product.html" title="Definition 0.1.10: Cartesian product">0.1.10</a>), we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_complex_notation.html ./knowl/d_cartesian_product.html" id="eq_complex_equality">
+<div class="displaymath process-math">
 \begin{equation}
-z=w\iff a=c \text{ and } b=d \iff \Re z=\Re w \text{ and } \Im z=\Im w\text{.}\tag{0.4.2}
+z=w\iff a=c \text{ and } b=d \iff \Re z=\Re w \text{ and } \Im z=\Im w\text{.}\label{eq_complex_equality}\tag{0.4.2}
 \end{equation}
 </div></article><article class="definition definition-like" id="d_complex_arithmetic"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Complex addition and multiplication.</span>
@@ -434,7 +402,7 @@ z=w\iff a=c \text{ and } b=d \iff \Re z=\Re w \text{ and } \Im z=\Im w\text{.}\t
 <ol class="decimal">
 <li id="li-60">
 <span class="heading"><span class="title">Complex addition.</span></span><p id="p-256">The <dfn class="terminology">sum</dfn> <span class="process-math">\(z+w\)</span> is the complex number defined as</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 z+w=(a+c)+(b+d)i\text{.}
 \end{equation*}
@@ -442,7 +410,7 @@ z+w=(a+c)+(b+d)i\text{.}
 </li>
 <li id="li-61">
 <span class="heading"><span class="title">Complex multiplication.</span></span><p id="p-257">The <dfn class="terminology">product</dfn> <span class="process-math">\(zw\)</span> is the complex number defined as</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 z\, w=(ac-bd)+(ad+bc)i\text{.}
 \end{equation*}
@@ -452,7 +420,7 @@ z\, w=(ac-bd)+(ad+bc)i\text{.}
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">0.4.5</span><span class="period">.</span>
 </h4>
 <p id="p-258">Let <span class="process-math">\(z=2+3i\)</span> and <span class="process-math">\(w=-1+2i\text{.}\)</span> We have</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-18">
+<div class="displaymath process-math">
 \begin{align*}
 z+w \amp =(2-1)+(3+2)i=1+5i\\
 zw  \amp=(-2-6)+(4-3)i=-8+i 
@@ -464,7 +432,7 @@ zw  \amp=(-2-6)+(4-3)i=-8+i
 <ol class="decimal">
 <li id="li-62">
 <span class="heading"><span class="title">Commutativity.</span></span><p id="p-260">For all <span class="process-math">\(z, w\in \C\)</span> we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-19">
+<div class="displaymath process-math">
 \begin{align*}
 z+ w \amp =  w+z\\
 z w  \amp= wz \text{.}
@@ -473,7 +441,7 @@ z w  \amp= wz \text{.}
 </li>
 <li id="li-63">
 <span class="heading"><span class="title">Associativity.</span></span><p id="p-261">For all <span class="process-math">\(z, w, u \in \C\)</span> we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-20">
+<div class="displaymath process-math">
 \begin{align*}
 z+( w+ u) \amp = (z+ w)+ u\\
 z( w u)  \amp=(z w) u \text{.}
@@ -482,7 +450,7 @@ z( w u)  \amp=(z w) u \text{.}
 </li>
 <li id="li-64">
 <span class="heading"><span class="title">Distributivity.</span></span><p id="p-262">For all <span class="process-math">\(z, w, u \in \C\)</span> we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 z( w+ u)=z w+z u\text{.}
 \end{equation*}
@@ -490,7 +458,7 @@ z( w+ u)=z w+z u\text{.}
 </li>
 <li id="li-65">
 <span class="heading"><span class="title">Additive identity.</span></span><p id="p-263">The complex number <span class="process-math">\(0=0+0i\in \C\)</span> satisfies</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 0+z=z
 \end{equation*}
@@ -499,7 +467,7 @@ z( w+ u)=z w+z u\text{.}
 </li>
 <li id="li-66">
 <span class="heading"><span class="title">Additive inverse.</span></span><p id="p-264">For all <span class="process-math">\(z=(a,b)=a+bi\in \C\)</span> the element <span class="process-math">\(-z=(-a,-b)=-a+(-b)i\in \C\)</span> satisfies</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 z+ -z=0\text{.}
 \end{equation*}
@@ -508,7 +476,7 @@ z+ -z=0\text{.}
 </li>
 <li id="li-67">
 <span class="heading"><span class="title">Multiplicative identity.</span></span><p id="p-265">The complex number <span class="process-math">\(1=1+0i\)</span> satisfies</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 1z=z
 \end{equation*}
@@ -517,7 +485,7 @@ z+ -z=0\text{.}
 </li>
 <li id="li-68">
 <span class="heading"><span class="title">Multiplicative inverse.</span></span><p id="p-266">For all <em class="emphasis">nonzero</em> complex numbers <span class="process-math">\(z=(a,b)=a+bi\in \C\)</span> (i.e., <span class="process-math">\(a\ne 0\)</span> of <span class="process-math">\(b\ne 0\)</span>), the complex number <span class="process-math">\(z^{-1}=\frac{a}{a^2+b^2}+\frac{-b}{a^2+b^2}i \in \C\)</span> satisfies</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 z\,z^{-1}=1\text{.}
 \end{equation*}
@@ -528,13 +496,13 @@ z\,z^{-1}=1\text{.}
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">0.4.7</span><span class="period">.</span>
 </h4>
 <p id="p-267">Let <span class="process-math">\(z=-2+i\text{.}\)</span> According to <a href="" class="xref" data-knowl="./knowl/th_complex_arithmetic_basic.html" title="Theorem 0.4.6: Basic properties of complex arithmetic">Theorem 0.4.6</a>, the multiplicative inverse of <span class="process-math">\(z\)</span>  is</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_complex_arithmetic_basic.html">
+<div class="displaymath process-math">
 \begin{equation*}
 z^{-1}=\frac{-2}{4+1}+\frac{-1}{4+1}i=\frac{-2}{5}+{-1}{5}i\text{.}
 \end{equation*}
 </div>
 <p class="continuation">Let's check that <span class="process-math">\(zz^{-1}=1\text{:}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_complex_arithmetic_basic.html" id="md-21">
+<div class="displaymath process-math">
 \begin{align*}
 zz^{-1} \amp =(-2+i)(\frac{-2}{5}+{-1}{5}i)\\
 \amp = (\frac{4}{5}+\frac{1}{5})+(\frac{2}{5}+\frac{-2}{5})i \\
@@ -544,13 +512,13 @@ zz^{-1} \amp =(-2+i)(\frac{-2}{5}+{-1}{5}i)\\
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">0.4.8</span><span class="period">.</span><span class="space"> </span><span class="title">Complex numbers as extension of the reals.</span>
 </h4>
 <p id="p-268">From now on we identify the real numbers as the set of complex numbers of the form <span class="process-math">\(a=a+0i\text{,}\)</span> where <span class="process-math">\(a\in \C\text{:}\)</span> equivalently, the set of complex numbers <span class="process-math">\(z\)</span> satisfying <span class="process-math">\(\Im z=0\text{.}\)</span> Under this identification <span class="process-math">\(\R\)</span> can be thought of as a subset of <span class="process-math">\(\C\text{,}\)</span> and we may add one more link to the chain of subsets given in <a href="" class="xref" data-knowl="./knowl/eq_chain_numbersystems.html" title="Equation 0.1.1">(0.1.1)</a>:</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_chain_numbersystems.html" id="eq_chain_numbersystems_complex">
+<div class="displaymath process-math">
 \begin{equation}
-\Z\subseteq\Q\subseteq\R\subseteq\C\text{.}\tag{0.4.3}
+\Z\subseteq\Q\subseteq\R\subseteq\C\text{.}\label{eq_chain_numbersystems_complex}\tag{0.4.3}
 \end{equation}
 </div>
 <p class="continuation">Furthermore, it is easy to verify that the various operations on <span class="process-math">\(\C\)</span> agree with their real counterparts when restricting to <span class="process-math">\(\R\text{:}\)</span> e.g.,</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_chain_numbersystems.html" id="md-22">
+<div class="displaymath process-math">
 \begin{align*}
 (a+0i)+(b+0i) \amp = (a+b)+0i\\
 (a+0i)(b+0i)\amp=ab+0i \\
@@ -565,13 +533,13 @@ zz^{-1} \amp =(-2+i)(\frac{-2}{5}+{-1}{5}i)\\
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.4.9</span><span class="period">.</span><span class="space"> </span><span class="title">Absolute value and complex conjugation.</span>
 </h4>
 <p id="p-270">Let <span class="process-math">\(z=(a,b)=a+bi\)</span> be a complex number. The  <dfn class="terminology">absolute value</dfn> (or <dfn class="terminology">modulus</dfn>) of <span class="process-math">\(z\text{,}\)</span> denoted <span class="process-math">\(\abs{z}\text{,}\)</span> is defined as</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 \abs{z}=\sqrt{a^2+b^2}\text{.}
 \end{equation*}
 </div>
 <p class="continuation">The <dfn class="terminology">complex conjugate</dfn> of <span class="process-math">\(z\text{,}\)</span> denoted <span class="process-math">\(\overline{z}\text{,}\)</span> is defined as</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 \overline{z}=a-bi\text{.}
 \end{equation*}
@@ -590,7 +558,7 @@ zz^{-1} \amp =(-2+i)(\frac{-2}{5}+{-1}{5}i)\\
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">0.4.11</span><span class="period">.</span>
 </h4>
 <p id="p-277">Let <span class="process-math">\(z=3-i\text{.}\)</span> Observe that</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_complex_conjugation_modulus.html" id="md-23">
+<div class="displaymath process-math">
 \begin{align*}
 z\overline{z} \amp=(3-i)(3+i) \\
 \amp=(9+1)+0i \\
@@ -598,7 +566,7 @@ z\overline{z} \amp=(3-i)(3+i) \\
 \end{align*}
 </div>
 <p class="continuation">and</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_complex_conjugation_modulus.html" id="md-24">
+<div class="displaymath process-math">
 \begin{align*}
 z^{-1} \amp =\frac{3}{10}+\frac{1}{10}i\\
 \amp=\frac{3+i}{10} \\
@@ -612,7 +580,7 @@ z^{-1} \amp =\frac{3}{10}+\frac{1}{10}i\\
 <div id="webwork-12" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="12" data-sourceFilePath="Library/PCC/BasicAlgebra/ComplexNumber/complexNumberOperations100.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
 <div class="problem-contents">
 <p id="p-278">Rewrite the following expression into the form of a+b<span class="process-math">\(i\text{:}\)</span></p>
-<p id="p-279"><span class="process-math">\(\displaystyle{ \frac{{-6+2i}}{{1-i}} = }\)</span><span class="fillin underline" role="img" aria-label="11-character blank" style="width: 5em;"></span></p>
+<p id="p-279"><span class="process-math">\(\displaystyle{ \frac{{-6+2i}}{{1-i}} = }\)</span><span class="fillin" role="img" aria-label="11-character blank" style="width: 5em;"></span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-17" id="answer-17"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-17"><div class="answer solution-like"><p id="p-280"><span class="process-math">\(-4-2i\)</span></p></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
@@ -648,9 +616,9 @@ z^{-1} \amp =\frac{3}{10}+\frac{1}{10}i\\
 <div id="webwork-13" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="13" data-sourceFilePath="Library/Rochester/setAlgebra11ComplexNumbers/ur_cn_1_14.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
 <div class="problem-contents">
 <p id="p-286">Let <span class="process-math">\(z\ =\ -1+i\text{.}\)</span> Calculate the following:</p>
-<p id="p-287">(a) <span class="process-math">\(z^2\ +\ 2z+ 1\ =\)</span> <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> <span class="process-math">\(+\)</span> <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> <span class="process-math">\(i\text{,}\)</span></p>
-<p id="p-288">(b) <span class="process-math">\(z^2\ +\ iz\ -\ (-3\ +\ i)\ =\)</span> <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> <span class="process-math">\(+\)</span> <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> <span class="process-math">\(i\text{,}\)</span></p>
-<p id="p-289">(c) <span class="process-math">\(\displaystyle \frac{(z\ -\ 3)^2}{z\ +\ i}\ =\)</span> <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> <span class="process-math">\(+\)</span> <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> <span class="process-math">\(i\text{.}\)</span></p>
+<p id="p-287">(a) <span class="process-math">\(z^2\ +\ 2z+ 1\ =\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> <span class="process-math">\(+\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> <span class="process-math">\(i\text{,}\)</span></p>
+<p id="p-288">(b) <span class="process-math">\(z^2\ +\ iz\ -\ (-3\ +\ i)\ =\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> <span class="process-math">\(+\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> <span class="process-math">\(i\text{,}\)</span></p>
+<p id="p-289">(c) <span class="process-math">\(\displaystyle \frac{(z\ -\ 3)^2}{z\ +\ i}\ =\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> <span class="process-math">\(+\)</span> <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> <span class="process-math">\(i\text{.}\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-18" id="answer-18"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-18"><div class="answer solution-like"><p id="p-290"><span class="process-math">\(-1\)</span></p></div></div>
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-19" id="answer-19"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-19"><div class="answer solution-like"><p id="p-291"><span class="process-math">\(0\)</span></p></div></div>
@@ -665,11 +633,11 @@ z^{-1} \amp =\frac{3}{10}+\frac{1}{10}i\\
 <div id="webwork-14" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="14" data-sourceFilePath="Library/Hope/Multi1/05-03-Complex-numbers/Complex_arithmetic_04.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
 <div class="problem-contents">
 <p id="p-296">Evaluate the following expressions and write them in the form <span class="process-math">\(a + b i\text{.}\)</span></p>
-<p id="p-297"><span class="process-math">\((1+2i)(-5-4i) =\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>.</p>
-<p id="p-298"><span class="process-math">\((1+2i)\overline{(-5-4i)} =\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>.</p>
-<p id="p-299"><span class="process-math">\(\overline{(1+2i)(-5-4i)} =\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>.</p>
-<p id="p-300"><span class="process-math">\((1+2i)\overline{(1+2i)} =\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>.</p>
-<p id="p-301"><span class="process-math">\(| 1+2i | =\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>.</p>
+<p id="p-297"><span class="process-math">\((1+2i)(-5-4i) =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>.</p>
+<p id="p-298"><span class="process-math">\((1+2i)\overline{(-5-4i)} =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>.</p>
+<p id="p-299"><span class="process-math">\(\overline{(1+2i)(-5-4i)} =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>.</p>
+<p id="p-300"><span class="process-math">\((1+2i)\overline{(1+2i)} =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>.</p>
+<p id="p-301"><span class="process-math">\(| 1+2i | =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>.</p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-24" id="answer-24"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-24"><div class="answer solution-like"><p id="p-302"><span class="process-math">\(3-14i\)</span></p></div></div>
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-25" id="answer-25"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-25"><div class="answer solution-like"><p id="p-303"><span class="process-math">\(-13-6i\)</span></p></div></div>
@@ -683,10 +651,10 @@ z^{-1} \amp =\frac{3}{10}+\frac{1}{10}i\\
 <div id="webwork-15" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="15" data-sourceFilePath="Library/Rochester/setComplexNumbers/ur_cn_1_16.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
 <div class="problem-contents">
 <p id="p-307">Calculate:</p>
-<p id="p-308">(a) <span class="process-math">\(\displaystyle \Big| \frac{3+4i}{-4-4i} \Big|\ =\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>,</p>
-<p id="p-309">(b) <span class="process-math">\(\displaystyle \Big| \overline{(1\ +\ i)}(3-3i)(3-2i)\Big|\ =\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>,</p>
-<p id="p-310">(c) <span class="process-math">\(\displaystyle \Big|\frac{i(2+4i)^3}{(1-i)^2}\Big|\ =\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>,</p>
-<p id="p-311">(d) <span class="process-math">\(\displaystyle \Big| \frac{(\pi\ + i) ^{100}}{(\pi\ -\ i)^{100}}\Big|\ =\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>.</p>
+<p id="p-308">(a) <span class="process-math">\(\displaystyle \Big| \frac{3+4i}{-4-4i} \Big|\ =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>,</p>
+<p id="p-309">(b) <span class="process-math">\(\displaystyle \Big| \overline{(1\ +\ i)}(3-3i)(3-2i)\Big|\ =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>,</p>
+<p id="p-310">(c) <span class="process-math">\(\displaystyle \Big|\frac{i(2+4i)^3}{(1-i)^2}\Big|\ =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>,</p>
+<p id="p-311">(d) <span class="process-math">\(\displaystyle \Big| \frac{(\pi\ + i) ^{100}}{(\pi\ -\ i)^{100}}\Big|\ =\)</span> <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>.</p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-29" id="answer-29"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-29"><div class="answer solution-like"><p id="p-312"><span class="process-math">\(0.883883476483184\)</span></p></div></div>
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-30" id="answer-30"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-30"><div class="answer solution-like"><p id="p-313"><span class="process-math">\(21.6333076527839\)</span></p></div></div>
