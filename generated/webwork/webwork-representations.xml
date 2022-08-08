@@ -413,39 +413,17 @@ Equation 3 <m>\Rightarrow x_3 = 3</m>. Substitute into equation 2, <m>-x_2  - 4(
     <pg source="Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/holt_01_01_024.pg"/>
   </webwork-reps>
   <webwork-reps version="2" xml:id="extracted-webwork-21" ww-id="webwork-21">
-    <static seed="21" source="Library/TCNJ/TCNJ_LinearSystems/problem17.pg">
-      <statement><p>Determine whether the following system has no solution, an infinite number of solutions or a unique solution.</p>
-<p><ol>
-<li>
-<p><m>\left\lbrace\begin{array}{rrrrrrrr}\amp  2 \,x\amp +\amp  10 \, y\amp - \amp 4 \,z\amp =\amp 8\\\amp  -5 \, x\amp - \amp 25 \,y\amp +\amp  10 \, z\amp =\amp -20\\\amp  7 \,x\amp +\amp  35 \, y\amp - \amp 14 \,z\amp =\amp 28\\ \end{array}\right.</m></p>
-</li>
-<li>
-<p><m>\left\lbrace\begin{array}{rrrrrrrr}\amp  -3 \, x\amp - \amp 9 \,y\amp - \amp 26 \,z\amp =\amp 7\\\amp  -5 \, x\amp - \amp 16 \,y\amp - \amp 47 \,z\amp =\amp 3\\\amp  3 \,x\amp +\amp  9 \, y\amp +\amp  27 \, z\amp =\amp 2\\ \end{array}\right.</m></p>
-</li>
-<li>
-<p><m>\left\lbrace\begin{array}{rrrrrrrr}\amp  3 \,x\amp - \amp 5 \,y\amp - \amp 5 \,z\amp =\amp -3\\\amp  2 \,x\amp +\amp  5 \, y\amp - \amp 5 \,z\amp =\amp -5\\\amp  - \, x\amp +\amp  35 \, y\amp - \amp 5 \,z\amp =\amp -14\\ \end{array}\right.</m></p>
-</li>
-<li>
-<p><m>\left\lbrace\begin{array}{rrrrrrrr}\amp  3 \,x\amp - \amp 5 \,y\amp - \amp 5 \,z\amp =\amp -3\\\amp  2 \,x\amp +\amp  5 \, y\amp - \amp 5 \,z\amp =\amp -5\\\amp  - \, x\amp +\amp  35 \, y\amp - \amp 5 \,z\amp =\amp -11\\ \end{array}\right.</m></p>
-</li>
-</ol></p>
-</statement>
-    </static>
-    <server-data sourceFilePath="Library/TCNJ/TCNJ_LinearSystems/problem17.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
-    <pg source="Library/TCNJ/TCNJ_LinearSystems/problem17.pg"/>
-  </webwork-reps>
-  <webwork-reps version="2" xml:id="extracted-webwork-22" ww-id="webwork-22">
-    <static seed="22" source="Library/TCNJ/TCNJ_LinearSystems/problem3.pg">
+    <static seed="21" source="Library/TCNJ/TCNJ_LinearSystems/problem3.pg">
       <statement><p>Give a geometric description of the following systems of equations</p>
 <p><ol>
 <li>
-<p><m>\left\lbrace\begin{array}{rrrrrr}\amp  7 \,x\amp - \amp  \,y\amp =\amp 5\\\amp  -2 \, x\amp +\amp  5 \, y\amp =\amp 7\\\amp  -13 \, x\amp - \amp 17 \,y\amp =\amp -43\\ \end{array}\right.</m></p>
+<p><m>\left\lbrace\begin{array}{rrrrrr}\amp  7 \,x\amp +\amp   \, y\amp =\amp 9\\\amp  4 \,x\amp +\amp  3 \, y\amp =\amp 2\\\amp  -23 \, x\amp - \amp 13 \,y\amp =\amp -15\\ \end{array}\right.</m></p>
 </li>
 <li>
-<p><m>\left\lbrace\begin{array}{rrrrrr}\amp  15 \,x\amp +\amp  25 \, y\amp =\amp -5\\\amp  -6 \, x\amp - \amp 10 \,y\amp =\amp 2\\\amp  -18 \, x\amp - \amp 30 \,y\amp =\amp 6\\ \end{array}\right.</m></p>
+<p><m>\left\lbrace\begin{array}{rrrrrr}\amp  -8 \, x\amp +\amp  12 \, y\amp =\amp -4\\\amp  -4 \, x\amp +\amp  6 \, y\amp =\amp -2\\\amp  14 \,x\amp - \amp 21 \,y\amp =\amp 7\\ \end{array}\right.</m></p>
 </li>
 <li>
-<p><m>\left\lbrace\begin{array}{rrrrrr}\amp  7 \,x\amp - \amp  \,y\amp =\amp 5\\\amp  -2 \, x\amp +\amp  5 \, y\amp =\amp 7\\\amp  -13 \, x\amp - \amp 17 \,y\amp =\amp -46\\ \end{array}\right.</m></p>
+<p><m>\left\lbrace\begin{array}{rrrrrr}\amp  7 \,x\amp +\amp   \, y\amp =\amp 9\\\amp  4 \,x\amp +\amp  3 \, y\amp =\amp 2\\\amp  -23 \, x\amp - \amp 13 \,y\amp =\amp -17\\ \end{array}\right.</m></p>
 </li>
 </ol></p>
 </statement>
@@ -453,8 +431,8 @@ Equation 3 <m>\Rightarrow x_3 = 3</m>. Substitute into equation 2, <m>-x_2  - 4(
     <server-data sourceFilePath="Library/TCNJ/TCNJ_LinearSystems/problem3.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
     <pg source="Library/TCNJ/TCNJ_LinearSystems/problem3.pg"/>
   </webwork-reps>
-  <webwork-reps version="2" xml:id="extracted-webwork-23" ww-id="webwork-23">
-    <static seed="23" source="Library/TCNJ/TCNJ_LinearSystems/problem4.pg">
+  <webwork-reps version="2" xml:id="extracted-webwork-22" ww-id="webwork-22">
+    <static seed="22" source="Library/TCNJ/TCNJ_LinearSystems/problem4.pg">
       <statement><p>Give a geometric description of the following system of equations</p>
 <p><ol>
 <li>
@@ -480,6 +458,66 @@ Equation 3 <m>\Rightarrow x_3 = 3</m>. Substitute into equation 2, <m>-x_2  - 4(
     </static>
     <server-data sourceFilePath="Library/TCNJ/TCNJ_LinearSystems/problem4.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
     <pg source="Library/TCNJ/TCNJ_LinearSystems/problem4.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-23" ww-id="webwork-23">
+    <static seed="23" source="Library/Utah/Business_Algebra/set11_Inequalities_and_Linear_Programming/p02.pg">
+      <statement><p>Solve
+<me>\begin{array}{rcrcrcrcr}
+    x \amp  - \amp   y \amp  + \amp   z \amp  - \amp   w \amp  = \amp  3 \\ 
+      \amp    \amp   y \amp  + \amp  2z \amp  + \amp   w \amp  = \amp  1 \\
+      \amp    \amp     \amp    \amp  -z \amp  + \amp   w \amp  = \amp  2 \\
+   -x \amp  + \amp  2y \amp  - \amp  3z \amp  + \amp  5w \amp  = \amp  4
+\end{array}</me></p>
+<p><m>x</m> = <fillin name="AnSwEr0001" characters="10"/>,            
+<m>y</m> = <fillin name="AnSwEr0002" characters="10"/>, 
+<m>z</m> = <fillin name="AnSwEr0003" characters="10"/>,  
+<m>w</m> = <fillin name="AnSwEr0004" characters="10"/>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>4</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-1</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>2</m>
+        </p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="Library/Utah/Business_Algebra/set11_Inequalities_and_Linear_Programming/p02.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Utah/Business_Algebra/set11_Inequalities_and_Linear_Programming/p02.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-24" ww-id="webwork-24">
+    <static seed="24" source="Library/TCNJ/TCNJ_LinearSystems/problem17.pg">
+      <statement><p>Determine whether the following system has no solution, an infinite number of solutions or a unique solution.</p>
+<p><ol>
+<li>
+<p><m>\left\lbrace\begin{array}{rrrrrrrr}\amp  -3 \, x\amp - \amp 9 \,y\amp - \amp 3 \,z\amp =\amp -9\\\amp  -5 \, x\amp - \amp 15 \,y\amp - \amp 5 \,z\amp =\amp -15\\\amp  6 \,x\amp +\amp  18 \, y\amp +\amp  6 \, z\amp =\amp 18\\ \end{array}\right.</m></p>
+</li>
+<li>
+<p><m>\left\lbrace\begin{array}{rrrrrrrr}\amp  -3 \, x\amp - \amp 12 \,y\amp - \amp 19 \,z\amp =\amp 1\\\amp  - \, x\amp - \amp 5 \,y\amp - \amp 7 \,z\amp =\amp 3\\\amp  3 \,x\amp +\amp  12 \, y\amp +\amp  18 \, z\amp =\amp 5\\ \end{array}\right.</m></p>
+</li>
+<li>
+<p><m>\left\lbrace\begin{array}{rrrrrrrr}\amp  5 \,x\amp +\amp  7 \, y\amp +\amp  5 \, z\amp =\amp -5\\\amp  - \, x\amp +\amp  4 \, y\amp - \amp 3 \,z\amp =\amp -4\\\amp  -7 \, x\amp +\amp   \, y\amp - \amp 11 \,z\amp =\amp -2\\ \end{array}\right.</m></p>
+</li>
+<li>
+<p><m>\left\lbrace\begin{array}{rrrrrrrr}\amp  5 \,x\amp +\amp  7 \, y\amp +\amp  5 \, z\amp =\amp -5\\\amp  - \, x\amp +\amp  4 \, y\amp - \amp 3 \,z\amp =\amp -4\\\amp  -7 \, x\amp +\amp   \, y\amp - \amp 11 \,z\amp =\amp -3\\ \end{array}\right.</m></p>
+</li>
+</ol></p>
+</statement>
+    </static>
+    <server-data sourceFilePath="Library/TCNJ/TCNJ_LinearSystems/problem17.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/TCNJ/TCNJ_LinearSystems/problem17.pg"/>
   </webwork-reps>
   <webwork-reps version="2" xml:id="extracted-webwork-3" ww-id="webwork-3">
     <static seed="3" source="Library/MontanaState/Sets/5.2A13Sets1.pg">

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-07T11:41:41-05:00       *-->
+<!--*       on 2022-08-08T10:31:23-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,19 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Let <span class="process-math">\(B=(\boldv_1, \boldv_2, \dots, \boldv_n)\text{.}\)</span> By definition, the <span class="process-math">\(j\)</span>-th column of <span class="process-math">\(\underset{B\rightarrow B'}{P}\)</span> is <span class="process-math">\([\boldv_j]_B\text{.}\)</span> Since <span class="process-math">\(\boldv_j=0\boldv_1+0\boldv_2+\cdots +1\boldv_j+\cdots\text{,}\)</span> we see that <span class="process-math">\([\boldv_j]_B=\bolde_j\text{,}\)</span> and hence that <span class="process-math">\(\underset{B\rightarrow B'}{P}=I\text{,}\)</span> as claimed.</p>
+<p>Let <span class="process-math">\(B=(x^n, x^{n-1}, \dots, x, 1)\)</span> be the standard basis of <span class="process-math">\(P_n\text{.}\)</span> Fix any constant <span class="process-math">\(a\in \R\text{,}\)</span> and let <span class="process-math">\(B'=((x-a)^n, (x-a)^{n-1}, \dots, (x-a), 1)\text{.}\)</span> It is easy to see that <span class="process-math">\(B'\)</span> is also an ordered basis: a simple degree argument shows that the polynomials <span class="process-math">\(p_k(x)=(x-a)^k\)</span> are linearly independent. It follows from Taylor's theorem (from single-variable calculus) that given any polynomial <span class="process-math">\(p\in P_n\)</span> we have</p>
+<div class="displaymath process-math">
+\begin{equation*}
+p(x)=p(a)+p'(a)(x-a)+\frac{p''(x)}{2}(x-a)^2+\cdots \frac{p^{(n)}(a)}{n!}(x-a)^n\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We call this expression the expansion of <span class="process-math">\(p(x)\)</span> about <span class="process-math">\(x=a\text{.}\)</span> In terms of coordinate vectors, this means that</p>
+<div class="displaymath process-math">
+\begin{equation}
+[p]_{B'}=\left(\frac{p^{(n)}(a)}{n!}, \frac{p^{(n-1)}(a)}{(n-1)!}, \dots, p'(a), p(a)\right)\text{.}\tag{5.3.2}
+\end{equation}
+</div>
+<p class="continuation">In other words, Taylor's theorem provides a simple derivative formula for computing coordinate vectors with respect to the basis <span class="process-math">\(B'\text{.}\)</span></p>
 <span class="incontext"><a href="s_changeofbasis.html#p-2474">in-context</a></span>
 </body>
 </html>

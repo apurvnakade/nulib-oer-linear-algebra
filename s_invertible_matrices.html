@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-07T11:39:48-05:00       *-->
+<!--*       on 2022-08-08T10:29:30-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -365,25 +365,25 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="s_invertible_matrices"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Invertible matrices</span>
 </h2>
-<section class="introduction" id="introduction-20"><p id="p-775">Picking up the thread of <a href="" class="xref" data-knowl="./knowl/rm_cancel_failure.html" title="Remark 2.2.10">Remark 2.2.10</a>, we observe that the cancellation property enjoyed in real number algebra is a consequence of the fact that every nonzero real number <span class="process-math">\(a\ne 0\)</span> has a <em class="emphasis">multiplicative inverse</em>, denoted <span class="process-math">\(a^{-1}\)</span> or <span class="process-math">\(1/a\text{,}\)</span> that satisfies <span class="process-math">\(aa^{-1}=1\text{.}\)</span> Indeed, “canceling” the <span class="process-math">\(a\)</span> in the equation <span class="process-math">\(ab=ac\)</span> (assuming <span class="process-math">\(a\ne 0\)</span>) is really the act of multiplying both sides of this equation by the multiplicative inverse <span class="process-math">\(a^{-1}\text{.}\)</span></p>
-<p id="p-776">Ever on the lookout for connections between real number and matrix algebra, we ask whether there is a sensible analogue of multiplicative inverses for matrices. We have seen already that identity matrices <span class="process-math">\(I_n\)</span> play the role of multiplicative identities for <span class="process-math">\(n\times n\)</span> matrices, just as the number <span class="process-math">\(1\)</span> does for real numbers. This suggests we should restrict our attention to <span class="process-math">\(n\times n\)</span> matrices. The following definition is then the desired analogue of the multiplicative inverse of a nonzero real number.</p></section><section class="subsection" id="subsec-"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-20"><p id="p-781">Picking up the thread of <a href="" class="xref" data-knowl="./knowl/rm_cancel_failure.html" title="Remark 2.2.10">Remark 2.2.10</a>, we observe that the cancellation property enjoyed in real number algebra is a consequence of the fact that every nonzero real number <span class="process-math">\(a\ne 0\)</span> has a <em class="emphasis">multiplicative inverse</em>, denoted <span class="process-math">\(a^{-1}\)</span> or <span class="process-math">\(1/a\text{,}\)</span> that satisfies <span class="process-math">\(aa^{-1}=1\text{.}\)</span> Indeed, “canceling” the <span class="process-math">\(a\)</span> in the equation <span class="process-math">\(ab=ac\)</span> (assuming <span class="process-math">\(a\ne 0\)</span>) is really the act of multiplying both sides of this equation by the multiplicative inverse <span class="process-math">\(a^{-1}\text{.}\)</span></p>
+<p id="p-782">Ever on the lookout for connections between real number and matrix algebra, we ask whether there is a sensible analogue of multiplicative inverses for matrices. We have seen already that identity matrices <span class="process-math">\(I_n\)</span> play the role of multiplicative identities for <span class="process-math">\(n\times n\)</span> matrices, just as the number <span class="process-math">\(1\)</span> does for real numbers. This suggests we should restrict our attention to <span class="process-math">\(n\times n\)</span> matrices. The following definition is then the desired analogue of the multiplicative inverse of a nonzero real number.</p></section><section class="subsection" id="subsec-"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.3.1</span> <span class="title">Invertible matrices</span>
 </h3>
 <article class="definition definition-like" id="d_invertible_matrix"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Invertible matrix.</span>
 </h4>
-<p id="p-777">An <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(A\)</span>  is <dfn class="terminology">invertible</dfn> (or <dfn class="terminology">nonsingular</dfn>) if there is a <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(B\)</span> satisfying</p>
+<p id="p-783">An <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(A\)</span>  is <dfn class="terminology">invertible</dfn> (or <dfn class="terminology">nonsingular</dfn>) if there is a <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(B\)</span> satisfying</p>
 <div class="displaymath process-math">
 \begin{equation*}
 AB=BA=I_n\text{.}
 \end{equation*}
 </div>
 <p class="continuation">When this is the case we call <span class="process-math">\(B\)</span> an <dfn class="terminology">inverse</dfn> of <span class="process-math">\(A\text{,}\)</span> and we say that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are <dfn class="terminology">inverses</dfn> of one another.</p>
-<p id="p-778">A square matrix that is not invertible is called <dfn class="terminology">singular</dfn>.</p>
-<p id="p-779">According to <a href="" class="xref" data-knowl="./knowl/th_inverse_unique.html" title="Theorem 2.3.2: Inverses are unique">Theorem 2.3.2</a> the inverse of a matrix <span class="process-math">\(A\text{,}\)</span> if it exists, is unique. We denote this unique inverse <span class="process-math">\(A^{-1}\text{.}\)</span></p></article><article class="theorem theorem-like" id="th_inverse_unique"><h4 class="heading">
+<p id="p-784">A square matrix that is not invertible is called <dfn class="terminology">singular</dfn>.</p>
+<p id="p-785">According to <a href="" class="xref" data-knowl="./knowl/th_inverse_unique.html" title="Theorem 2.3.2: Inverses are unique">Theorem 2.3.2</a> the inverse of a matrix <span class="process-math">\(A\text{,}\)</span> if it exists, is unique. We denote this unique inverse <span class="process-math">\(A^{-1}\text{.}\)</span></p></article><article class="theorem theorem-like" id="th_inverse_unique"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Inverses are unique.</span>
 </h4>
-<p id="p-780">If <span class="process-math">\(A\)</span> is an invertible matrix, then its inverse is unique: that is, there is only one matrix <span class="process-math">\(B\)</span> satisfying <span class="process-math">\(AB=BA=I\text{.}\)</span></p></article><article class="hiddenproof" id="proof-13"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-13"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-13"><article class="hiddenproof"><p id="p-781">Suppose matrices <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> both satisfy the properties of the multiplicative inverse: i.e.,</p>
+<p id="p-786">If <span class="process-math">\(A\)</span> is an invertible matrix, then its inverse is unique: that is, there is only one matrix <span class="process-math">\(B\)</span> satisfying <span class="process-math">\(AB=BA=I\text{.}\)</span></p></article><article class="hiddenproof" id="proof-13"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-13"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-13"><article class="hiddenproof"><p id="p-787">Suppose matrices <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> both satisfy the properties of the multiplicative inverse: i.e.,</p>
 <div class="displaymath process-math">
 \begin{align*}
 AB\amp =BA=I  \\
@@ -400,11 +400,11 @@ AB=I\text{ and } AC=I \amp\implies  AB=AC\\
 \end{align*}
 </div>
 <p class="continuation">Thus we see that <span class="process-math">\(B=C\text{,}\)</span> showing that the inverse of <span class="process-math">\(A\text{,}\)</span> if it exists, is unique.</p></article></div>
-<p id="p-782">The next theorem tells us that we can multiplicatively “cancel” a matrix if it is <em class="emphasis">invertible</em>.</p>
+<p id="p-788">The next theorem tells us that we can multiplicatively “cancel” a matrix if it is <em class="emphasis">invertible</em>.</p>
 <article class="theorem theorem-like" id="th_inverse_cancel"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Solving with invertible matrices.</span>
 </h4>
-<p id="p-783">Suppose <span class="process-math">\(A\)</span> is an invertible <span class="process-math">\(n\times n\)</span> matrix. Then</p>
+<p id="p-789">Suppose <span class="process-math">\(A\)</span> is an invertible <span class="process-math">\(n\times n\)</span> matrix. Then</p>
 <div class="displaymath process-math">
 \begin{equation*}
 AX=Y \iff X=A^{-1}Y
@@ -417,7 +417,7 @@ ZA=W \iff Z=WA^{-1}
 \end{equation*}
 </div>
 <p class="continuation">for any <span class="process-math">\(r\times n\)</span> matrices <span class="process-math">\(Z\)</span> and <span class="process-math">\(W\text{.}\)</span></p>
-<p id="p-784">In other words, matrix equations of this sort have <em class="emphasis">unique</em> solutions obtained by multiplying on the left or right by <span class="process-math">\(A^{-1}\text{.}\)</span></p></article><article class="hiddenproof" id="proof-14"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-14"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof"><p id="p-785">We give a proof only for the the first equation: <span class="process-math">\(AX=Y\text{.}\)</span> To show the equivalence we must show the two implications <span class="process-math">\(AX=Y\implies X=A^{-1}Y\)</span> and <span class="process-math">\(X=A^{-1}Y\implies AX=Y\text{.}\)</span> To this end, we have</p>
+<p id="p-790">In other words, matrix equations of this sort have <em class="emphasis">unique</em> solutions obtained by multiplying on the left or right by <span class="process-math">\(A^{-1}\text{.}\)</span></p></article><article class="hiddenproof" id="proof-14"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-14"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof"><p id="p-791">We give a proof only for the the first equation: <span class="process-math">\(AX=Y\text{.}\)</span> To show the equivalence we must show the two implications <span class="process-math">\(AX=Y\implies X=A^{-1}Y\)</span> and <span class="process-math">\(X=A^{-1}Y\implies AX=Y\text{.}\)</span> To this end, we have</p>
 <div class="displaymath process-math">
 \begin{align*}
 AX=Y  \amp\implies A^{-1}AX=A^{-1}Y \\
@@ -433,15 +433,15 @@ X=A^{-1}Y \amp\implies AX=AA^{-1}Y \\
 \amp\implies AX=Y \text{.}
 \end{align*}
 </div></article></div>
-<p id="p-786">Without any additional theory at our disposal, to show a matrix <span class="process-math">\(A\)</span> is invertible we must exhibit an inverse. The onus is on us to find a matrix <span class="process-math">\(B\)</span> satisfying both <span class="process-math">\(AB=I\)</span> and <span class="process-math">\(BA=I\text{.}\)</span> (Remember: since we cannot assume <span class="process-math">\(BA=AB\text{,}\)</span> we really need to show both equations hold.)</p>
-<p id="p-787">By the same token, to show <span class="process-math">\(A\)</span> is <em class="emphasis">not</em> invertible we must show that an inverse does not exist: that is, we must prove that there is no <span class="process-math">\(B\)</span> satisfying <span class="process-math">\(AB=BA=I\text{.}\)</span> The next example illustrates this technique for a variety of matrices.</p>
+<p id="p-792">Without any additional theory at our disposal, to show a matrix <span class="process-math">\(A\)</span> is invertible we must exhibit an inverse. The onus is on us to find a matrix <span class="process-math">\(B\)</span> satisfying both <span class="process-math">\(AB=I\)</span> and <span class="process-math">\(BA=I\text{.}\)</span> (Remember: since we cannot assume <span class="process-math">\(BA=AB\text{,}\)</span> we really need to show both equations hold.)</p>
+<p id="p-793">By the same token, to show <span class="process-math">\(A\)</span> is <em class="emphasis">not</em> invertible we must show that an inverse does not exist: that is, we must prove that there is no <span class="process-math">\(B\)</span> satisfying <span class="process-math">\(AB=BA=I\text{.}\)</span> The next example illustrates this technique for a variety of matrices.</p>
 <article class="example example-like" id="ex_invertible_matrices"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span>
 </h4>
-<ol id="p-788" class="decimal">
-<li id="li-253"><p id="p-789">Identity matrices are invertible, and in fact we have <span class="process-math">\(I^{-1}=I\text{,}\)</span> as witnessed by the fact that <span class="process-math">\(II=I\text{.}\)</span></p></li>
+<ol id="p-794" class="decimal">
+<li id="li-253"><p id="p-795">Identity matrices are invertible, and in fact we have <span class="process-math">\(I^{-1}=I\text{,}\)</span> as witnessed by the fact that <span class="process-math">\(II=I\text{.}\)</span></p></li>
 <li id="li-254">
-<p id="p-790">Square zero matrices <span class="process-math">\(\boldzero\)</span> are never invertible, since for any square matrix <span class="process-math">\(B\)</span> of the same dimension we have</p>
+<p id="p-796">Square zero matrices <span class="process-math">\(\boldzero\)</span> are never invertible, since for any square matrix <span class="process-math">\(B\)</span> of the same dimension we have</p>
 <div class="displaymath process-math">
 \begin{equation*}
 B\,\boldzero=\boldzero B=\boldzero\ne I\text{.}
@@ -450,7 +450,7 @@ B\,\boldzero=\boldzero B=\boldzero\ne I\text{.}
 <p class="continuation">Thus there is no matrix satisfying the inverse property for <span class="process-math">\(\boldzero\text{.}\)</span></p>
 </li>
 <li id="li-255">
-<p id="p-791">Claim: <span class="process-math">\(\begin{amatrix}[rr]2\amp 1\\ 3\amp 2
+<p id="p-797">Claim: <span class="process-math">\(\begin{amatrix}[rr]2\amp 1\\ 3\amp 2
 \end{amatrix}^{-1}=\begin{amatrix}
 2\amp -1\\ -3\amp 2
 \end{amatrix}
@@ -469,27 +469,27 @@ B\,\boldzero=\boldzero B=\boldzero\ne I\text{.}
 <p class="continuation">as you can easily verify.</p>
 </li>
 <li id="li-256">
-<p id="p-792">The matrix <span class="process-math">\(A= \begin{amatrix}[rrr]
+<p id="p-798">The matrix <span class="process-math">\(A= \begin{amatrix}[rrr]
 1\amp 1 \amp 1\\
 1\amp 1 \amp 1\\
 1\amp 1\amp 1
 \end{amatrix}\)</span> is not invertible. To see why we make use of the <a href="" class="xref" data-knowl="./knowl/th_row_method.html" title="Theorem 2.1.21: Row method of matrix multiplication">row method of matrix multiplication</a>.</p>
-<p id="p-793">Indeed, given any matrix <span class="process-math">\(B\text{,}\)</span> each row of <span class="process-math">\(AB\)</span> is given by <span class="process-math">\(\begin{amatrix}1\amp 1\amp 1
+<p id="p-799">Indeed, given any matrix <span class="process-math">\(B\text{,}\)</span> each row of <span class="process-math">\(AB\)</span> is given by <span class="process-math">\(\begin{amatrix}1\amp 1\amp 1
 \end{amatrix}\,B \text{.}\)</span> It follows that all the rows of <span class="process-math">\(AB\)</span> are identical, and hence that we cannot have <span class="process-math">\(AB=I_3\text{,}\)</span> since the rows of <span class="process-math">\(I_3\)</span> are not identical.</p>
 </li>
-</ol></article><p id="p-794">As the preceding example illustrates, deciding whether a matrix is invertible is not so straightforward, especially if the matrix is large. For the <span class="process-math">\(2\times 2\)</span> case, however, we have a relatively simple test for invertibility. (We will generalize this to the <span class="process-math">\(n\times n\)</span> case in <a href="s_det.html" class="internal" title="Section 2.5: The determinant">Section 2.5</a>.)</p>
+</ol></article><p id="p-800">As the preceding example illustrates, deciding whether a matrix is invertible is not so straightforward, especially if the matrix is large. For the <span class="process-math">\(2\times 2\)</span> case, however, we have a relatively simple test for invertibility. (We will generalize this to the <span class="process-math">\(n\times n\)</span> case in <a href="s_det.html" class="internal" title="Section 2.5: The determinant">Section 2.5</a>.)</p>
 <article class="theorem theorem-like" id="th_2by2_inverse"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Inverses of <span class="process-math">\(2\times 2\)</span> matrices.</span>
 </h4>
-<p id="p-795">A matrix <span class="process-math">\(A=\abcdmatrix{a}{b}{c}{d}\)</span> is invertible if and only if <span class="process-math">\(ad-bc\ne 0\text{.}\)</span></p>
-<p id="p-796">When this is the case, we have</p>
+<p id="p-801">A matrix <span class="process-math">\(A=\abcdmatrix{a}{b}{c}{d}\)</span> is invertible if and only if <span class="process-math">\(ad-bc\ne 0\text{.}\)</span></p>
+<p id="p-802">When this is the case, we have</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \abcdmatrix{a}{b}{c}{d}^{-1}=\frac{1}{ad-bc}\begin{amatrix}[rr]d\amp -b \\ -c\amp a
 \end{amatrix}\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-15"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-15"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-15"><article class="hiddenproof"><p id="p-797">If <span class="process-math">\(ad-bc\ne 0\text{,}\)</span> the proposed matrix is indeed an inverse of <span class="process-math">\(A\text{,}\)</span> as one readily verifies.</p>
-<p id="p-798">Assume <span class="process-math">\(ad-bc=0\text{.}\)</span> If <span class="process-math">\(A=\boldzero\text{,}\)</span> then <span class="process-math">\(A\)</span> is not invertible, as we saw in the example above. Thus we can assume <span class="process-math">\(A\)</span> is nonzero, in which case <span class="process-math">\(B=\begin{amatrix}[rr]d\amp -b\\ -c\amp a
+</div></article><article class="hiddenproof" id="proof-15"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-15"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-15"><article class="hiddenproof"><p id="p-803">If <span class="process-math">\(ad-bc\ne 0\text{,}\)</span> the proposed matrix is indeed an inverse of <span class="process-math">\(A\text{,}\)</span> as one readily verifies.</p>
+<p id="p-804">Assume <span class="process-math">\(ad-bc=0\text{.}\)</span> If <span class="process-math">\(A=\boldzero\text{,}\)</span> then <span class="process-math">\(A\)</span> is not invertible, as we saw in the example above. Thus we can assume <span class="process-math">\(A\)</span> is nonzero, in which case <span class="process-math">\(B=\begin{amatrix}[rr]d\amp -b\\ -c\amp a
 \end{amatrix}\)</span> is also nonzero. An easy computation shows</p>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -508,7 +508,7 @@ AB=\boldzero \amp\implies A^{-1}AB=\boldzero \\
 <article class="theorem theorem-like" id="th_invertible_prod"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Invertibility of products.</span>
 </h4>
-<p id="p-799">Let <span class="process-math">\(A,B\)</span> be <span class="process-math">\(n\times n\)</span> matrices. If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are both invertible, then so is their product <span class="process-math">\(AB\text{.}\)</span> Using logical notation:</p>
+<p id="p-805">Let <span class="process-math">\(A,B\)</span> be <span class="process-math">\(n\times n\)</span> matrices. If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are both invertible, then so is their product <span class="process-math">\(AB\text{.}\)</span> Using logical notation:</p>
 <div class="displaymath process-math">
 \begin{equation}
 A \text{ and }  B  \text{ invertible } \implies AB \text{ invertible }\text{.}\label{eq_inv_implies_prod}\tag{2.3.1}
@@ -519,7 +519,7 @@ A \text{ and }  B  \text{ invertible } \implies AB \text{ invertible }\text{.}\l
 \begin{equation}
 (AB)^{-1}=B^{-1}A^{-1}\text{.}\label{eq_inv_prod_form}\tag{2.3.2}
 \end{equation}
-</div></article><article class="hiddenproof" id="proof-16"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-16"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-16"><article class="hiddenproof"><p id="p-800">Assume <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are invertible. The statment of the theorem proposes a candidate for the inverse of <span class="process-math">\(AB\text{:}\)</span> namely, <span class="process-math">\(C=B^{-1}A^{-1}\text{.}\)</span> We need only show that <span class="process-math">\(C\)</span> satisfies <span class="process-math">\(C(AB)=(AB)C=I\text{.}\)</span> Here goes:</p>
+</div></article><article class="hiddenproof" id="proof-16"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-16"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-16"><article class="hiddenproof"><p id="p-806">Assume <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are invertible. The statment of the theorem proposes a candidate for the inverse of <span class="process-math">\(AB\text{:}\)</span> namely, <span class="process-math">\(C=B^{-1}A^{-1}\text{.}\)</span> We need only show that <span class="process-math">\(C\)</span> satisfies <span class="process-math">\(C(AB)=(AB)C=I\text{.}\)</span> Here goes:</p>
 <div class="displaymath process-math">
 \begin{align*}
 C(AB)\amp =\amp (B^{-1}A^{-1})AB=B^{-1}A^{-1}AB=B^{-1}IB=B^{-1}B=I\\
@@ -529,14 +529,14 @@ C(AB)\amp =\amp (B^{-1}A^{-1})AB=B^{-1}A^{-1}AB=B^{-1}IB=B^{-1}B=I\\
 <article class="corollary theorem-like" id="c_invertible_prod"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span>
 </h4>
-<p id="p-801">More generally, if <span class="process-math">\(A_1,A_2,\dots A_r\)</span> are invertible <span class="process-math">\(n\times n\)</span> matrices, then their product <span class="process-math">\(A_1A_2\cdots A_r\)</span> is invertible. Furthermore, we have in this case</p>
+<p id="p-807">More generally, if <span class="process-math">\(A_1,A_2,\dots A_r\)</span> are invertible <span class="process-math">\(n\times n\)</span> matrices, then their product <span class="process-math">\(A_1A_2\cdots A_r\)</span> is invertible. Furthermore, we have in this case</p>
 <div class="displaymath process-math">
 \begin{equation}
 (A_1A_2\cdots A_r)^{-1}=A_r^{-1}A_{r-1}^{-1}\cdots A_1^{-1}\text{.}\label{eq_inv_prod_arb_form}\tag{2.3.3}
 \end{equation}
-</div></article><article class="hiddenproof" id="proof-17"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-17"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-17"><article class="hiddenproof"><p id="p-802">We prove by induction on the number <span class="process-math">\(r\)</span> of matrices, <span class="process-math">\(r\geq 1\text{,}\)</span> that if the <span class="process-math">\(A_i\)</span> are invertible, then the proposed inverse formula is valid. <article class="case" id="case-33"><h4 class="heading">Base step: <span class="process-math">\(r=1\)</span>.</h4>
-<p id="p-803">For <span class="process-math">\(r=1\text{,}\)</span> the inverse formula reads <span class="process-math">\(A_1^{-1}=A_1^{-1}\text{,}\)</span> which is clearly true.</p></article> <article class="case" id="case-34"><h4 class="heading">Induction step.</h4>
-<p id="p-804">For the induction step we assume that the inverse formula is valid for any collection of <span class="process-math">\(r-1\)</span> invertible matrices, and then show it is valid for any collection of <span class="process-math">\(r\)</span> invertible matrices. Let <span class="process-math">\(A_1,A_2,\dots, A_r\)</span> be invertible <span class="process-math">\(n\times n\)</span> matrices. Define <span class="process-math">\(A=A_1A_2\cdots A_{r-1}\text{.}\)</span> Then</p>
+</div></article><article class="hiddenproof" id="proof-17"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-17"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-17"><article class="hiddenproof"><p id="p-808">We prove by induction on the number <span class="process-math">\(r\)</span> of matrices, <span class="process-math">\(r\geq 1\text{,}\)</span> that if the <span class="process-math">\(A_i\)</span> are invertible, then the proposed inverse formula is valid. <article class="case" id="case-33"><h4 class="heading">Base step: <span class="process-math">\(r=1\)</span>.</h4>
+<p id="p-809">For <span class="process-math">\(r=1\text{,}\)</span> the inverse formula reads <span class="process-math">\(A_1^{-1}=A_1^{-1}\text{,}\)</span> which is clearly true.</p></article> <article class="case" id="case-34"><h4 class="heading">Induction step.</h4>
+<p id="p-810">For the induction step we assume that the inverse formula is valid for any collection of <span class="process-math">\(r-1\)</span> invertible matrices, and then show it is valid for any collection of <span class="process-math">\(r\)</span> invertible matrices. Let <span class="process-math">\(A_1,A_2,\dots, A_r\)</span> be invertible <span class="process-math">\(n\times n\)</span> matrices. Define <span class="process-math">\(A=A_1A_2\cdots A_{r-1}\text{.}\)</span> Then</p>
 <div class="displaymath process-math">
 \begin{align*}
 (A_1A_2\cdots A_{r-1})^{-1} \amp=\left((A_1A_2\cdots A_{r-1})A_r\right)^{-1} \\
@@ -549,33 +549,33 @@ C(AB)\amp =\amp (B^{-1}A^{-1})AB=B^{-1}A^{-1}AB=B^{-1}IB=B^{-1}B=I\\
 <article class="remark remark-like" id="remark-30"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.3.8</span><span class="period">.</span>
 </h4>
-<p id="p-805">Whenever confronted with a logical implication of the form <span class="process-math">\(\mathcal{P}\implies\mathcal{Q}\text{,}\)</span> where <span class="process-math">\(\mathcal{P}\)</span> and <span class="process-math">\(\mathcal{Q}\)</span> denote arbitrary propositions, you should always ask whether the implication “goes the other way”. In other words, does the reverse implication  <span class="process-math">\(\mathcal{Q}\implies \mathcal{P} \)</span> also hold?</p>
-<p id="p-806">The answer with regard to the implication <a href="" class="xref" data-knowl="./knowl/eq_inv_implies_prod.html" title="Equation 2.3.1">(2.3.1)</a> is yes, though the proof of this is more difficult then you think. (See <a href="" class="xref" data-knowl="./knowl/cor_inv_prod_eq.html" title="Corollary 2.4.14: Invertibility of product equivalence">Corollary 2.4.14</a>.)</p>
-<p id="p-807">The following argument is a common <em class="emphasis">invalid</em> proof of the reverse implication:</p>
+<p id="p-811">Whenever confronted with a logical implication of the form <span class="process-math">\(\mathcal{P}\implies\mathcal{Q}\text{,}\)</span> where <span class="process-math">\(\mathcal{P}\)</span> and <span class="process-math">\(\mathcal{Q}\)</span> denote arbitrary propositions, you should always ask whether the implication “goes the other way”. In other words, does the reverse implication  <span class="process-math">\(\mathcal{Q}\implies \mathcal{P} \)</span> also hold?</p>
+<p id="p-812">The answer with regard to the implication <a href="" class="xref" data-knowl="./knowl/eq_inv_implies_prod.html" title="Equation 2.3.1">(2.3.1)</a> is yes, though the proof of this is more difficult then you think. (See <a href="" class="xref" data-knowl="./knowl/cor_inv_prod_eq.html" title="Corollary 2.4.14: Invertibility of product equivalence">Corollary 2.4.14</a>.)</p>
+<p id="p-813">The following argument is a common <em class="emphasis">invalid</em> proof of the reverse implication:</p>
 <ol class="decimal">
-<li id="li-257"><p id="p-808">Assume <span class="process-math">\(AB\)</span> is invertible.</p></li>
-<li id="li-258"><p id="p-809">Then <span class="process-math">\(AB\)</span> is invertible.</p></li>
-<li id="li-259"><p id="p-810">Then the inverse of <span class="process-math">\(AB\)</span> is <span class="process-math">\(B^{-1}A^{-1}\text{.}\)</span></p></li>
-<li id="li-260"><p id="p-811">Then <span class="process-math">\(A^{-1}\)</span> and <span class="process-math">\(B^{-1}\)</span> exist. Hence <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are invertible.</p></li>
+<li id="li-257"><p id="p-814">Assume <span class="process-math">\(AB\)</span> is invertible.</p></li>
+<li id="li-258"><p id="p-815">Then <span class="process-math">\(AB\)</span> is invertible.</p></li>
+<li id="li-259"><p id="p-816">Then the inverse of <span class="process-math">\(AB\)</span> is <span class="process-math">\(B^{-1}A^{-1}\text{.}\)</span></p></li>
+<li id="li-260"><p id="p-817">Then <span class="process-math">\(A^{-1}\)</span> and <span class="process-math">\(B^{-1}\)</span> exist. Hence <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are invertible.</p></li>
 </ol>
 <p class="continuation">Where is the flaw in our logic here? The second statement only allows us to conclude that there is some mystery matrix <span class="process-math">\(C\)</span> satisfying <span class="process-math">\((AB)C=C(AB)=I\text{.}\)</span> We cannot yet say that <span class="process-math">\(C=B^{-1}A^{-1}\text{,}\)</span> as this formula from <a href="" class="xref" data-knowl="./knowl/th_invertible_prod.html" title="Theorem 2.3.6: Invertibility of products">Theorem 2.3.6</a> only applies when we already know that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are both invertible. But this is exactly what we are trying to prove! As such we are guilty here of “begging the question”, or <i class="foreign">petitio principii</i> in Latin.</p></article></section><section class="subsection" id="subsection-26"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.3.2</span> <span class="title">Powers of matrices, matrix polynomials</span>
 </h3>
-<p id="p-812">We end this section by exploring how the matrix inverse operation fits into our matrix algebra. First, we can now use the inverse operation to define matrix powers of the form <span class="process-math">\(A^r\text{,}\)</span> where <span class="process-math">\(A\)</span> is a square matrix and <span class="process-math">\(r\)</span> is an arbitrary integer.</p>
+<p id="p-818">We end this section by exploring how the matrix inverse operation fits into our matrix algebra. First, we can now use the inverse operation to define matrix powers of the form <span class="process-math">\(A^r\text{,}\)</span> where <span class="process-math">\(A\)</span> is a square matrix and <span class="process-math">\(r\)</span> is an arbitrary integer.</p>
 <article class="definition definition-like" id="d_matrix_powers"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix powers.</span>
 </h4>
-<p id="p-813">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(n\times n\)</span> matrix, and let <span class="process-math">\(r\in\Z\)</span> be an integer. We define the power matrix <span class="process-math">\(A^r\)</span> as follows:</p>
+<p id="p-819">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(n\times n\)</span> matrix, and let <span class="process-math">\(r\in\Z\)</span> be an integer. We define the power matrix <span class="process-math">\(A^r\)</span> as follows:</p>
 <div class="displaymath process-math">
 \begin{equation*}
 A^r=\begin{cases} I\amp \text{if } r=0;\\[2ex] \underset{r \text{ times}}{\underbrace{AA\cdots A}}\amp \text{if } r&gt;0; \\[2ex] (A^{-1})^s \amp \text{if } r=-s &lt; 0 \text{ and } A \text{ is invertible}.
 \end{cases}\text{.}
 \end{equation*}
-</div></article><p id="p-814">Equipped with a notion of matrix powers, we can further define matrix polynomials for square matrices.</p>
+</div></article><p id="p-820">Equipped with a notion of matrix powers, we can further define matrix polynomials for square matrices.</p>
 <article class="definition definition-like" id="d_matrix_polynomials"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.10</span><span class="period">.</span>
 </h4>
-<p id="p-815">Let <span class="process-math">\(f(x)=\anpoly\)</span> be a polynomial with real coefficients. For any square matrix <span class="process-math">\(A\)</span> of size <span class="process-math">\(n\times n\text{,}\)</span> we define the matrix <span class="process-math">\(f(A)\)</span> as</p>
+<p id="p-821">Let <span class="process-math">\(f(x)=\anpoly\)</span> be a polynomial with real coefficients. For any square matrix <span class="process-math">\(A\)</span> of size <span class="process-math">\(n\times n\text{,}\)</span> we define the matrix <span class="process-math">\(f(A)\)</span> as</p>
 <div class="displaymath process-math">
 \begin{equation*}
 f(A)=a_nA^n+a_{n-1}A^{n-1}+\cdots +a_1A+a_0I_n\text{.}
@@ -586,7 +586,7 @@ f(A)=a_nA^n+a_{n-1}A^{n-1}+\cdots +a_1A+a_0I_n\text{.}
 </h4>It is easy, and perilous, to forget the identity matrix in the term <span class="process-math">\(a_0I_n\text{.}\)</span> Take caution not to make this mistake; without an identity matrix of appropriate size, the expression <span class="process-math">\(f(A)\)</span> simply does not make sense.</article><article class="example example-like" id="example-26"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.12</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix polynomials.</span>
 </h4>
-<p id="p-816">Let <span class="process-math">\(f(x)=x^2-2x+1\text{.}\)</span> Evaluate <span class="process-math">\(f\)</span> at  the matrices</p>
+<p id="p-822">Let <span class="process-math">\(f(x)=x^2-2x+1\text{.}\)</span> Evaluate <span class="process-math">\(f\)</span> at  the matrices</p>
 <div class="displaymath process-math">
 \begin{equation*}
 A=\begin{bmatrix}
@@ -607,7 +607,7 @@ B=\begin{bmatrix}
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-26" id="solution-26"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-26"><div class="solution solution-like">
-<p id="p-817">We have</p>
+<p id="p-823">We have</p>
 <div class="displaymath process-math">
 \begin{align*}
 f(A) \amp =A^2-2A+I_2\\
@@ -647,19 +647,19 @@ f(B) \amp=B^2-2B+I_3 \\
 </div></article><article class="theorem theorem-like" id="th_power_rules"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.13</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of matrix powers.</span>
 </h4>
-<p id="p-818">The following properties hold for all matrices <span class="process-math">\(A, B\text{,}\)</span> all scalars <span class="process-math">\(c\in \R\text{,}\)</span> and all integers <span class="process-math">\(r,s\in\Z\)</span> for which the given expression makes sense.</p>
+<p id="p-824">The following properties hold for all matrices <span class="process-math">\(A, B\text{,}\)</span> all scalars <span class="process-math">\(c\in \R\text{,}\)</span> and all integers <span class="process-math">\(r,s\in\Z\)</span> for which the given expression makes sense.</p>
 <ol class="decimal">
-<li id="li-261"><p id="p-819"><span class="process-math">\(\displaystyle A^{r+s}=A^rA^s\)</span></p></li>
-<li id="li-262"><p id="p-820"><span class="process-math">\(\displaystyle (A^r)^s=A^{rs}\)</span></p></li>
-<li id="li-263"><p id="p-821"><span class="process-math">\(\displaystyle (cA)^r=c^rA^r\)</span></p></li>
-<li id="li-264"><p id="p-822"><span class="process-math">\(\displaystyle (A^{-1})^{-1}=A\)</span></p></li>
-<li id="li-265"><p id="p-823"><span class="process-math">\(A^{-r}=(A^{-1})^r\text{.}\)</span></p></li>
-</ol></article><article class="hiddenproof" id="proof-18"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-18"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-18"><article class="hiddenproof"><p id="p-824">The proofs of the first three statements are elementary, and closely resemble proofs of similar results in real number algebra. We leave these as an (unassigned) exercise.</p>
-<p id="p-825">For the fourth statement to make sense, we must assume that <span class="process-math">\(A\)</span> is invertible. The claim here is that <span class="process-math">\(A^{-1}\)</span> is invertible, and that its inverse is <span class="process-math">\(A\)</span> itself. To prove this we need only show <span class="process-math">\(A^{-1}A=AA^{-1}=I\text{,}\)</span> which follows from the definition of the inverse.</p>
-<p id="p-826">The fifth statement also tacitly assumes <span class="process-math">\(A\)</span> is invertible. To prove it, we consider the three cases <span class="process-math">\(r=0\text{,}\)</span> <span class="process-math">\(r&gt;0\)</span> and <span class="process-math">\(r &lt; 0\text{.}\)</span></p>
-<p id="p-827">If <span class="process-math">\(r=0\text{,}\)</span> then by definition  <span class="process-math">\(A^{-r}=A^0=I=(A^{-1})^0=(A^{-1})^r\text{.}\)</span></p>
-<p id="p-828">If <span class="process-math">\(r&gt;0\text{,}\)</span> then by definition <span class="process-math">\(A^{-r}=(A^{-1})^r\text{.}\)</span></p>
-<p id="p-829">Suppose <span class="process-math">\(r=-s &lt; 0\text{.}\)</span> Then</p>
+<li id="li-261"><p id="p-825"><span class="process-math">\(\displaystyle A^{r+s}=A^rA^s\)</span></p></li>
+<li id="li-262"><p id="p-826"><span class="process-math">\(\displaystyle (A^r)^s=A^{rs}\)</span></p></li>
+<li id="li-263"><p id="p-827"><span class="process-math">\(\displaystyle (cA)^r=c^rA^r\)</span></p></li>
+<li id="li-264"><p id="p-828"><span class="process-math">\(\displaystyle (A^{-1})^{-1}=A\)</span></p></li>
+<li id="li-265"><p id="p-829"><span class="process-math">\(A^{-r}=(A^{-1})^r\text{.}\)</span></p></li>
+</ol></article><article class="hiddenproof" id="proof-18"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-18"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-18"><article class="hiddenproof"><p id="p-830">The proofs of the first three statements are elementary, and closely resemble proofs of similar results in real number algebra. We leave these as an (unassigned) exercise.</p>
+<p id="p-831">For the fourth statement to make sense, we must assume that <span class="process-math">\(A\)</span> is invertible. The claim here is that <span class="process-math">\(A^{-1}\)</span> is invertible, and that its inverse is <span class="process-math">\(A\)</span> itself. To prove this we need only show <span class="process-math">\(A^{-1}A=AA^{-1}=I\text{,}\)</span> which follows from the definition of the inverse.</p>
+<p id="p-832">The fifth statement also tacitly assumes <span class="process-math">\(A\)</span> is invertible. To prove it, we consider the three cases <span class="process-math">\(r=0\text{,}\)</span> <span class="process-math">\(r&gt;0\)</span> and <span class="process-math">\(r &lt; 0\text{.}\)</span></p>
+<p id="p-833">If <span class="process-math">\(r=0\text{,}\)</span> then by definition  <span class="process-math">\(A^{-r}=A^0=I=(A^{-1})^0=(A^{-1})^r\text{.}\)</span></p>
+<p id="p-834">If <span class="process-math">\(r&gt;0\text{,}\)</span> then by definition <span class="process-math">\(A^{-r}=(A^{-1})^r\text{.}\)</span></p>
+<p id="p-835">Suppose <span class="process-math">\(r=-s &lt; 0\text{.}\)</span> Then</p>
 <div class="displaymath process-math">
 \begin{align*}
 (A^{-1})^{r} \amp = ((A^{-1})^{-1})^s \amp (\knowl{./knowl/d_matrix_powers.html}{\text{Definition 2.3.9}}) \\
@@ -670,7 +670,7 @@ f(B) \amp=B^2-2B+I_3 \\
 <article class="theorem theorem-like" id="th_inverse_trans"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.14</span><span class="period">.</span><span class="space"> </span><span class="title">Inverse and transpose.</span>
 </h4>
-<p id="p-830">Let <span class="process-math">\(A\)</span> be invertible. Then <span class="process-math">\(A^T\)</span> is invertible and <span class="process-math">\(\left(A^T\right)^{-1}=\left(A^{-1}\right)^T\text{.}\)</span></p></article><article class="hiddenproof" id="proof-19"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-19"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-19"><article class="hiddenproof"><p id="p-831">Suppose <span class="process-math">\(A\)</span> is invertible with inverse <span class="process-math">\(A^{-1}\text{.}\)</span> The theorem claims <span class="process-math">\(A^T\)</span> is invertible, and that in fact <span class="process-math">\((A^T)^{-1}=(A^{-1})^T\text{.}\)</span> To prove this, we need only show that</p>
+<p id="p-836">Let <span class="process-math">\(A\)</span> be invertible. Then <span class="process-math">\(A^T\)</span> is invertible and <span class="process-math">\(\left(A^T\right)^{-1}=\left(A^{-1}\right)^T\text{.}\)</span></p></article><article class="hiddenproof" id="proof-19"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-19"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-19"><article class="hiddenproof"><p id="p-837">Suppose <span class="process-math">\(A\)</span> is invertible with inverse <span class="process-math">\(A^{-1}\text{.}\)</span> The theorem claims <span class="process-math">\(A^T\)</span> is invertible, and that in fact <span class="process-math">\((A^T)^{-1}=(A^{-1})^T\text{.}\)</span> To prove this, we need only show that</p>
 <div class="displaymath process-math">
 \begin{equation*}
 A^T(A^{-1})^T)=(A^{-1})^T)A^T=I\text{.}
@@ -693,73 +693,73 @@ A^T(A^{-1})^T\amp =\left(A^{-1}A\right)^T \amp (\knowl{./knowl/th_trans_props.ht
 <p class="continuation">In both chains of equality we make use of the obvious claim <span class="process-math">\(I^T=I\text{.}\)</span></p></article></div></section><section class="exercises" id="s_invertible_matrices_ex"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">2.3.3</span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-61"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-832">For each matrix either provide an inverse or show the matrix is not invertible. Justify your answer.</p>
+<article class="exercise exercise-like" id="exercise-62"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-838">For each matrix either provide an inverse or show the matrix is not invertible. Justify your answer.</p>
 <ol class="lower-alpha">
-<li id="li-266"><p id="p-833"><span class="process-math">\(\displaystyle A=\begin{amatrix}[rr]1\amp 4\\ -2\amp -7  \end{amatrix}\)</span></p></li>
-<li id="li-267"><p id="p-834"><span class="process-math">\(\displaystyle A=\begin{amatrix}[rr] 2\amp -1 \\ 1/2 \amp -1/4  \end{amatrix}\)</span></p></li>
-<li id="li-268"><p id="p-835"><span class="process-math">\(A=p\left( \begin{amatrix}[rr] 1\amp -2 \\ -2 \amp 0  \end{amatrix}\right)\text{,}\)</span> where <span class="process-math">\(p(x)=x^2+x+1\text{.}\)</span></p></li>
-</ol></article><article class="exercise exercise-like" id="exercise-62"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-836">Each <span class="process-math">\(A\)</span> below is invertible. Find <span class="process-math">\(A^{-1}\)</span> by guess and check. You may want to use the row or column method of matrix multiplication to justify your answer.</p>
+<li id="li-266"><p id="p-839"><span class="process-math">\(\displaystyle A=\begin{amatrix}[rr]1\amp 4\\ -2\amp -7  \end{amatrix}\)</span></p></li>
+<li id="li-267"><p id="p-840"><span class="process-math">\(\displaystyle A=\begin{amatrix}[rr] 2\amp -1 \\ 1/2 \amp -1/4  \end{amatrix}\)</span></p></li>
+<li id="li-268"><p id="p-841"><span class="process-math">\(A=p\left( \begin{amatrix}[rr] 1\amp -2 \\ -2 \amp 0  \end{amatrix}\right)\text{,}\)</span> where <span class="process-math">\(p(x)=x^2+x+1\text{.}\)</span></p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-63"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-842">Each <span class="process-math">\(A\)</span> below is invertible. Find <span class="process-math">\(A^{-1}\)</span> by guess and check. You may want to use the row or column method of matrix multiplication to justify your answer.</p>
 <ol class="lower-alpha">
-<li id="li-269"><p id="p-837"><span class="process-math">\(\displaystyle A=\begin{amatrix}[ccc]1\amp 0\amp 0\\ 0\amp 0\amp 1\\ 0\amp 1\amp 0  \end{amatrix}\)</span></p></li>
-<li id="li-270"><p id="p-838"><span class="process-math">\(\displaystyle A=\begin{amatrix}[rrr]0\amp 0\amp 1 \\0 \amp -1 \amp 0 \\ -1 \amp 0 \amp 0   \end{amatrix}\)</span></p></li>
-<li id="li-271"><p id="p-839"><span class="process-math">\(\displaystyle A=\begin{amatrix}[rrr] 1 \amp 0\amp 0\\ 0\amp 1\amp 2 \\ 0\amp 0\amp 1  \end{amatrix}\)</span></p></li>
-</ol></article><article class="exercise exercise-like" id="exercise-63"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<p id="p-840">Suppose <span class="process-math">\(A\)</span> is an invertible matrix. Prove: for any <em class="emphasis">nonzero</em> <span class="process-math">\(c\in\R\)</span> the matrix <span class="process-math">\(cA\)</span> is invertible.</p></article><article class="exercise exercise-like" id="exercise-64"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<p id="p-841">Assume <span class="process-math">\(A\)</span> is a square <span class="process-math">\(n\times n\)</span> matrix with <span class="process-math">\(n\geq 2\text{.}\)</span></p>
+<li id="li-269"><p id="p-843"><span class="process-math">\(\displaystyle A=\begin{amatrix}[ccc]1\amp 0\amp 0\\ 0\amp 0\amp 1\\ 0\amp 1\amp 0  \end{amatrix}\)</span></p></li>
+<li id="li-270"><p id="p-844"><span class="process-math">\(\displaystyle A=\begin{amatrix}[rrr]0\amp 0\amp 1 \\0 \amp -1 \amp 0 \\ -1 \amp 0 \amp 0   \end{amatrix}\)</span></p></li>
+<li id="li-271"><p id="p-845"><span class="process-math">\(\displaystyle A=\begin{amatrix}[rrr] 1 \amp 0\amp 0\\ 0\amp 1\amp 2 \\ 0\amp 0\amp 1  \end{amatrix}\)</span></p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-64"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-846">Suppose <span class="process-math">\(A\)</span> is an invertible matrix. Prove: for any <em class="emphasis">nonzero</em> <span class="process-math">\(c\in\R\)</span> the matrix <span class="process-math">\(cA\)</span> is invertible.</p></article><article class="exercise exercise-like" id="exercise-65"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<p id="p-847">Assume <span class="process-math">\(A\)</span> is a square <span class="process-math">\(n\times n\)</span> matrix with <span class="process-math">\(n\geq 2\text{.}\)</span></p>
 <ol class="lower-alpha">
-<li id="li-272"><p id="p-842">Prove: if <span class="process-math">\(A\)</span> has two identical columns, then <span class="process-math">\(A\)</span> is not invertible.</p></li>
-<li id="li-273"><p id="p-843">Prove: if <span class="process-math">\(A\)</span> has a row that is a scalar multiple of another row, then <span class="process-math">\(A\)</span> is not invertible.</p></li>
+<li id="li-272"><p id="p-848">Prove: if <span class="process-math">\(A\)</span> has two identical columns, then <span class="process-math">\(A\)</span> is not invertible.</p></li>
+<li id="li-273"><p id="p-849">Prove: if <span class="process-math">\(A\)</span> has a row that is a scalar multiple of another row, then <span class="process-math">\(A\)</span> is not invertible.</p></li>
 </ol>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-844">Use the column and/or row method of matrix multiplication to show directly that <span class="process-math">\(A\)</span> cannot have an inverse matrix.</p></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-65"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<p id="p-845">Find all <em class="emphasis">invertible</em> matrices <span class="process-math">\(A\)</span> satisfying the given equation, or show there is no such <span class="process-math">\(A\text{.}\)</span> Justify your answer.</p>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-850">Use the column and/or row method of matrix multiplication to show directly that <span class="process-math">\(A\)</span> cannot have an inverse matrix.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-66"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<p id="p-851">Find all <em class="emphasis">invertible</em> matrices <span class="process-math">\(A\)</span> satisfying the given equation, or show there is no such <span class="process-math">\(A\text{.}\)</span> Justify your answer.</p>
 <ol class="lower-alpha">
-<li id="li-274"><p id="p-846"><span class="process-math">\(A^5=\boldzero_{n\times n}\text{.}\)</span></p></li>
-<li id="li-275"><p id="p-847"><span class="process-math">\(A^{-3}=A^{-4}\text{.}\)</span></p></li>
-<li id="li-276"><p id="p-848"><span class="process-math">\(\displaystyle A^2-3A=\boldzero_{n\times n}\)</span></p></li>
-<li id="li-277"><p id="p-849"><span class="process-math">\(\displaystyle ((A^T)^2A)^T-(A^{-1}(A^{-1})^T)^{-1}=\boldzero_{n\times n}\)</span></p></li>
-</ol></article><article class="exercise exercise-like" id="exercise-66"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<p id="p-850">Let <span class="process-math">\(A=\begin{bmatrix}
+<li id="li-274"><p id="p-852"><span class="process-math">\(A^5=\boldzero_{n\times n}\text{.}\)</span></p></li>
+<li id="li-275"><p id="p-853"><span class="process-math">\(A^{-3}=A^{-4}\text{.}\)</span></p></li>
+<li id="li-276"><p id="p-854"><span class="process-math">\(\displaystyle A^2-3A=\boldzero_{n\times n}\)</span></p></li>
+<li id="li-277"><p id="p-855"><span class="process-math">\(\displaystyle ((A^T)^2A)^T-(A^{-1}(A^{-1})^T)^{-1}=\boldzero_{n\times n}\)</span></p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-67"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<p id="p-856">Let <span class="process-math">\(A=\begin{bmatrix}
 1\amp 1\\ 0\amp 1
-\end{bmatrix}\text{.}\)</span> Find a formula for <span class="process-math">\(A^r\text{,}\)</span> where <span class="process-math">\(r\geq 1\)</span> is an integer. Justify your answer using a proof by induction.</p></article><article class="exercise exercise-like" id="exercise-67"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<p id="p-851">Let <span class="process-math">\(A=[1]_{n\times n}\text{,}\)</span> the <span class="process-math">\(n\times n\)</span> matrix consisting of all ones. Find a formula for <span class="process-math">\(A^r\text{,}\)</span> where <span class="process-math">\(r\geq 1\)</span> is an integer. Justify your answer using a proof by induction.</p></article><article class="exercise exercise-like" id="exercise-68"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<p id="p-852">Let <span class="process-math">\(p(x)=x^2-5x+c\text{,}\)</span> where <span class="process-math">\(c\in \R\)</span> is some fixed scalar. Suppose <span class="process-math">\(A\)</span> is an <span class="process-math">\(n\times n\)</span> matrix satisfying <span class="process-math">\(p(A)=\boldzero_{n\times n}\text{.}\)</span></p>
+\end{bmatrix}\text{.}\)</span> Find a formula for <span class="process-math">\(A^r\text{,}\)</span> where <span class="process-math">\(r\geq 1\)</span> is an integer. Justify your answer using a proof by induction.</p></article><article class="exercise exercise-like" id="exercise-68"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<p id="p-857">Let <span class="process-math">\(A=[1]_{n\times n}\text{,}\)</span> the <span class="process-math">\(n\times n\)</span> matrix consisting of all ones. Find a formula for <span class="process-math">\(A^r\text{,}\)</span> where <span class="process-math">\(r\geq 1\)</span> is an integer. Justify your answer using a proof by induction.</p></article><article class="exercise exercise-like" id="exercise-69"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<p id="p-858">Let <span class="process-math">\(p(x)=x^2-5x+c\text{,}\)</span> where <span class="process-math">\(c\in \R\)</span> is some fixed scalar. Suppose <span class="process-math">\(A\)</span> is an <span class="process-math">\(n\times n\)</span> matrix satisfying <span class="process-math">\(p(A)=\boldzero_{n\times n}\text{.}\)</span></p>
 <ol class="lower-alpha"><li id="li-278">
-<p id="p-853">Prove: if <span class="process-math">\(c\ne 0\text{,}\)</span> then <span class="process-math">\(A\)</span> is invertible.</p>
-<p id="p-854">Suppose further that <span class="process-math">\(A\)</span> is not a scalar multiple of <span class="process-math">\(I_n\text{.}\)</span></p>
-<p id="p-855">Prove: if <span class="process-math">\(c=0\text{,}\)</span> then <span class="process-math">\(A\)</span> is singular.</p>
+<p id="p-859">Prove: if <span class="process-math">\(c\ne 0\text{,}\)</span> then <span class="process-math">\(A\)</span> is invertible.</p>
+<p id="p-860">Suppose further that <span class="process-math">\(A\)</span> is not a scalar multiple of <span class="process-math">\(I_n\text{.}\)</span></p>
+<p id="p-861">Prove: if <span class="process-math">\(c=0\text{,}\)</span> then <span class="process-math">\(A\)</span> is singular.</p>
 </li></ol></article><article class="exercise exercise-like" id="ex_poly_inA_commute"><h4 class="heading">
 <span class="codenumber">9<span class="period">.</span></span><span class="space"> </span><span class="title">Polynomial expressions of <span class="process-math">\(A\)</span> commute.</span>
 </h4>
-<p id="p-856">Let <span class="process-math">\(p(x)=\anpoly\text{,}\)</span> <span class="process-math">\(a_n\ne 0\text{,}\)</span> and <span class="process-math">\(q(x)=\bmpoly\text{,}\)</span> <span class="process-math">\(b_m\ne 0\)</span> be polynomials with real coefficients.</p>
-<p id="p-857">For any square matrix <span class="process-math">\(A\text{,}\)</span> show that the matrices <span class="process-math">\(p(A)\)</span> and <span class="process-math">\(q(A)\)</span> commute: i.e.,</p>
+<p id="p-862">Let <span class="process-math">\(p(x)=\anpoly\text{,}\)</span> <span class="process-math">\(a_n\ne 0\text{,}\)</span> and <span class="process-math">\(q(x)=\bmpoly\text{,}\)</span> <span class="process-math">\(b_m\ne 0\)</span> be polynomials with real coefficients.</p>
+<p id="p-863">For any square matrix <span class="process-math">\(A\text{,}\)</span> show that the matrices <span class="process-math">\(p(A)\)</span> and <span class="process-math">\(q(A)\)</span> commute: i.e.,</p>
 <div class="displaymath process-math">
 \begin{equation*}
 p(A)q(A)=q(A)p(A)\text{.}
 \end{equation*}
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><p id="p-858">First show by induction that <span class="process-math">\(A^nq(A)=q(A)A^n\)</span> for any <span class="process-math">\(n\geq 0\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><p id="p-864">First show by induction that <span class="process-math">\(A^nq(A)=q(A)A^n\)</span> for any <span class="process-math">\(n\geq 0\text{.}\)</span></p></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-27" id="solution-27"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-27"><div class="solution solution-like">
-<p id="p-859">We prove by induction that <span class="process-math">\(A^nq(A)=q(A)A^n\)</span> for any <span class="process-math">\(n\geq 0\text{,}\)</span> a special case of the result.</p>
+<p id="p-865">We prove by induction that <span class="process-math">\(A^nq(A)=q(A)A^n\)</span> for any <span class="process-math">\(n\geq 0\text{,}\)</span> a special case of the result.</p>
 <article class="case" id="case-35"><h5 class="heading">Base step: <span class="process-math">\(n=0\)</span>.</h5>
-<p id="p-860">In this case we have <span class="process-math">\(A^n=A^0=I\text{,}\)</span> and thus</p>
+<p id="p-866">In this case we have <span class="process-math">\(A^n=A^0=I\text{,}\)</span> and thus</p>
 <div class="displaymath process-math">
 \begin{equation*}
 A^nq(A)=Iq(A)=q(A)=q(A)I=q(A)A^n\text{,}
 \end{equation*}
 </div>
 <p class="continuation">as desired.</p></article><article class="case" id="case-36"><h5 class="heading">Case: <span class="process-math">\(n=1\)</span>.</h5>
-<p id="p-861">In this case we have <span class="process-math">\(A^n=A\text{,}\)</span> and it is easy to see that</p>
+<p id="p-867">In this case we have <span class="process-math">\(A^n=A\text{,}\)</span> and it is easy to see that</p>
 <div class="displaymath process-math">
 \begin{equation*}
 Aq(A)=q(A)A=b_mA^{m+1}+b_{m-1}A^{m-1}+\cdots +b_1A^2+b_0A\text{.}
 \end{equation*}
 </div></article><article class="case" id="case-37"><h5 class="heading">Induction step.</h5>
-<p id="p-862">Assume that <span class="process-math">\(A^nq(A)=q(A)A^n\text{.}\)</span> Then</p>
+<p id="p-868">Assume that <span class="process-math">\(A^nq(A)=q(A)A^n\text{.}\)</span> Then</p>
 <div class="displaymath process-math">
 \begin{align*}
 A^{n+1}q(A) \amp= A^n\,A\,q(A) \\
@@ -767,8 +767,8 @@ A^{n+1}q(A) \amp= A^n\,A\,q(A) \\
 \amp= q(A)A^nA \amp (\text{induction}) \\
 \amp=q(A)A^{n+1} \text{.}
 \end{align*}
-</div></article><p id="p-863">This proves the special case that <span class="process-math">\(A^nq(A)=q(A)A^n\)</span> for all <span class="process-math">\(n\geq 0\text{.}\)</span></p>
-<p id="p-864">To show the result for an arbitrary polynomial <span class="process-math">\(p(x)=\anpoly\)</span> we use various distributive properties:</p>
+</div></article><p id="p-869">This proves the special case that <span class="process-math">\(A^nq(A)=q(A)A^n\)</span> for all <span class="process-math">\(n\geq 0\text{.}\)</span></p>
+<p id="p-870">To show the result for an arbitrary polynomial <span class="process-math">\(p(x)=\anpoly\)</span> we use various distributive properties:</p>
 <div class="displaymath process-math">
 \begin{align*}
 p(A)q(A)=(a_nA^n+a_{n-1}A^{n-1}+\cdots +a_1A+a_0I)q(A) \amp= a_nA^nq(A)+a_{n-1}A^{n-1}q(A)+\cdots +a_1Aq(A)+a_0q(A) \\
@@ -778,9 +778,9 @@ p(A)q(A)=(a_nA^n+a_{n-1}A^{n-1}+\cdots +a_1A+a_0I)q(A) \amp= a_nA^nq(A)+a_{n-1}A
 \end{align*}
 </div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-70"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<p id="p-865">Suppose <span class="process-math">\(A\)</span> is an <span class="process-math">\(n\times n\)</span> matrix satisfying <span class="process-math">\(A^r=\boldzero\)</span> for some <span class="process-math">\(r\geq 1\text{.}\)</span></p>
-<p id="p-866">Show that <span class="process-math">\((A-I)\)</span> is invertible, and that in fact</p>
+</div></article><article class="exercise exercise-like" id="exercise-71"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<p id="p-871">Suppose <span class="process-math">\(A\)</span> is an <span class="process-math">\(n\times n\)</span> matrix satisfying <span class="process-math">\(A^r=\boldzero\)</span> for some <span class="process-math">\(r\geq 1\text{.}\)</span></p>
+<p id="p-872">Show that <span class="process-math">\((A-I)\)</span> is invertible, and that in fact</p>
 <div class="displaymath process-math">
 \begin{equation*}
 (A-I)^{-1}=-(A^{r-1}+A^{r-2}+\cdots +A+I)\text{.}

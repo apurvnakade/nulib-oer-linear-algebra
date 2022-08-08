@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-07T11:41:05-05:00       *-->
+<!--*       on 2022-08-08T10:30:48-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,24 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p><span class="process-math">\(T\colon\R^3\rightarrow \R^2\text{,}\)</span> <span class="process-math">\(T(x,y,z)=(xy,yz)\)</span></p>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>Turning now to matrix multiplication, suppose <span class="process-math">\(A\)</span> is <span class="process-math">\(m\times n\)</span> and <span class="process-math">\(B\)</span> is <span class="process-math">\(n\times r\text{.}\)</span> Let <span class="process-math">\(C=AB\)</span> be their product. These matrices give rise to linear transformations</p>
+<div class="displaymath process-math">
+\begin{align*}
+T_A\colon \R^n \amp\rightarrow \R^m \amp T_B\colon \R^r \amp\rightarrow \R^n \amp T_C\colon \R^r \amp\rightarrow \R^m  \text{.}
+\end{align*}
+</div>
+<p class="continuation">According to <a href="" class="xref" data-knowl="./knowl/th_transform_composition.html" title="Theorem 3.2.23: Composition of linear transformations">Theorem 3.2.23</a> the composition <span class="process-math">\(T_A\circ T_B\)</span> is a linear transformation from <span class="process-math">\(\R^r\)</span> (the domain of <span class="process-math">\(T_B\)</span>) to <span class="process-math">\(\R^m\)</span> (the codomain of <span class="process-math">\(T_A\)</span>). We claim that <span class="process-math">\(T_A\circ T_B=T_C\text{.}\)</span> Indeed, identifying elements of <span class="process-math">\(\R^r\)</span> with column vectors, for all <span class="process-math">\(\boldx\in \R^n\)</span> we have</p>
+<div class="displaymath process-math">
+\begin{align*}
+T_A\circ T_B(\boldx) \amp = T_A(T_B(\boldx)) \amp (\knowl{./knowl/d_function_composition.html}{\text{Definition 0.1.21}}) \\
+\amp =T_A(B\boldx) \amp (\knowl{./knowl/d_matrix_transform.html}{\text{Definition 3.2.8}})\\
+\amp= A(B\boldx) \amp (\knowl{./knowl/d_matrix_transform.html}{\text{Definition 3.2.8}})\\
+\amp = (AB)\boldx \amp (\text{assoc.})\\
+\amp = T_C(\boldx) \amp (\text{since } C=AB)\text{.}
+\end{align*}
+</div>
+<p class="continuation">Thus, we can now understand the definition of matrix multiplication as being chosen precisely to encode how to compute the composition of two matrix transformations. The restriction on the dimension of the ingredient matrices is now understood as guaranteeing that the corresponding matrix transformations can be composed!</p>
 <span class="incontext"><a href="s_transformation.html#p-1328">in-context</a></span>
 </body>
 </html>

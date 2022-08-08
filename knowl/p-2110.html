@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-07T11:41:29-05:00       *-->
+<!--*       on 2022-08-08T10:31:12-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,28 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Consider <span class="process-math">\(P_n\)</span> with the evaluation inner product at a fixed choice of inputs <span class="process-math">\(x=c_0, c_1,\dots, c_n\text{.}\)</span> Given two polynomials <span class="process-math">\(p(x), q(x)\text{,}\)</span> the distance between them with respect to this inner product is</p>
+<p>First compute</p>
+<div class="displaymath process-math">
+\begin{align*}
+\langle (1,1), (1,0)\rangle \amp= 2(1)+1(0)=2 \\
+\norm{(1,1)}\amp =\sqrt{\langle (1,1),(1,1)\rangle} \\
+\amp =\sqrt{2+1}=\sqrt{3} \\
+\norm{(1,0)}\amp =\sqrt{\langle (1,0),(1,0)\rangle} \\
+\amp =\sqrt{2} 
+\end{align*}
+</div>
+<p class="continuation">By definition <span class="process-math">\(\theta\)</span> is the unique value in <span class="process-math">\([0,\pi]\)</span> satisfying</p>
 <div class="displaymath process-math">
 \begin{equation*}
-\norm{p(x)-q(x)}=\sqrt{(p(c_0)-q(c_0))^2+(p(c_1)-q(c_1))^2+\cdots +(p(c_n)-q(c_n))^2}\text{.}
+\cos\theta=\frac{\langle (1,1), (1,0)\rangle}{\norm{(1,1)}\norm{(1,0)}}=\frac{2}{\sqrt{3}\sqrt{2}}=\frac{\sqrt{6}}{3}\text{.}
 \end{equation*}
 </div>
-<p class="continuation">We see that with respect to this inner product, the distance between two polynomials is a measure of how much their values at the inputs <span class="process-math">\(x=c_0,c_1,\dots ,c_n\)</span> differ. This inner product may be useful if you are interested in how a polynomial behaves at this finite list of inputs.</p>
+<p class="continuation">We see that <span class="process-math">\(\theta\)</span> is not one of our familiar angles from the unit circle (e.g., <span class="process-math">\(\pi/6, \pi/4\text{,}\)</span> etc.) and so express <span class="process-math">\(\theta\)</span> in terms of the <span class="process-math">\(\arccos\)</span> function:</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\theta=\arccos(\sqrt{6}/3)\approx 35.3^\circ\text{.}
+\end{equation*}
+</div>
 <span class="incontext"><a href="s_innerproducts.html#p-2110">in-context</a></span>
 </body>
 </html>

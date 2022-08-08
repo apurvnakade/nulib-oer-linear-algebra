@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-07T11:41:16-05:00       *-->
+<!--*       on 2022-08-08T10:31:00-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,24 +15,38 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Let <span class="process-math">\(W\)</span> be a vector space. Any mapping</p>
-<div class="displaymath process-math">
-\begin{equation*}
-\boldu\mapsto \boldw_\boldu
-\end{equation*}
-</div>
-<p class="continuation">assigning each element of <span class="process-math">\(\boldu\in B\)</span> to a chosen element <span class="process-math">\(\boldw_\boldu\in W\)</span> extends uniquely to a linear transformation <span class="process-math">\(T\colon V\rightarrow W\)</span> satisfying</p>
-<div class="displaymath process-math">
-\begin{equation*}
-T(\boldu)=\boldw_\boldu
-\end{equation*}
-</div>
-<p class="continuation">for all <span class="process-math">\(\boldu\in B\text{.}\)</span> In more detail, given any <span class="process-math">\(\boldv\in V\text{,}\)</span> if   <span class="process-math">\(\boldv=c_1\boldu_1+c_2\boldu_2+\cdots +c_r\boldu_r\text{,}\)</span> where <span class="process-math">\(\boldu_i\in B\)</span>  and <span class="process-math">\(c_i\ne 0\)</span> for all <span class="process-math">\(1\leq i\leq r\text{,}\)</span> then</p>
+<p>We ask whether for all elements <span class="process-math">\(\boldy=(a,b,c)\in \R^3\)</span> we can write</p>
 <div class="displaymath process-math">
 \begin{equation}
-T(\boldv)=c_1T(\boldu_{1})+c_2T(\boldu_{2})+\cdots +c_rT(\boldu_{r})\text{.}\tag{3.6.2}
+\boldy=c_1\boldv_1+c_2\boldv_2+c_3\boldv_3+c_4\boldv_4\tag{3.6.1}
 \end{equation}
 </div>
+<p class="continuation">for a unique choice of <span class="process-math">\(c_1,c_2,c_3, c_4\text{.}\)</span> This is equivalent to asking whether the matrix equation</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\underset{A}{\begin{amatrix}[rrrr]
+1\amp 1\amp -1\amp 1\\
+1\amp 0\amp 1\amp 2\\
+-3\amp -1\amp -1 \amp 1
+\end{amatrix}}\, \underset{\boldx}{\colvec{c_1\\ c_2\\ c_3\\ c_4}}=\underset{\boldy}{\colvec{a\\ b\\ c}}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">has a unique solution <span class="process-math">\(\boldx=(c_1,c_2,c_3,c_4)\)</span> for any choice of <span class="process-math">\(\boldy=(a,b,c)\text{.}\)</span> Performing Gaussian elimination on the corresponding augmented matrix yields</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{amatrix}[rrrr|r]
+1\amp 1\amp -1\amp 1\amp a \\
+1\amp 0\amp 1\amp 2\amp b\\
+-3\amp -1\amp -1 \amp 1 \amp c  \end{amatrix}
+\xrightarrow{\phantom{row}}U=
+\begin{amatrix}[rrrr|r]
+\boxed{1}\amp 1\amp -1\amp 1\amp a \\
+0\amp \boxed{1}\amp -2\amp -1\amp a-b\\
+0\amp 0\amp 0\amp \boxed{1} \amp (a+2b+c)/6
+\end{amatrix}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since the third column of <span class="process-math">\(U\)</span> does not have a leading one, we conclude that the corresponding system has a free variable, and hence that for any given <span class="process-math">\((a,b,c)\in \R^3\)</span> the equation <a href="" class="xref" data-knowl="./knowl/eq_basis_onestep_R3.html" title="Equation 3.6.1">(3.6.1)</a> has <em class="emphasis">either</em> no solutions (inconsistent) <em class="emphasis">or</em> infinitely many solutions. In particular, it is not true that there is always a <em class="emphasis">unique</em> solution. Thus <span class="process-math">\(S\)</span> is not a basis according to the one-step technique.</p>
 <span class="incontext"><a href="s_basis.html#p-1714">in-context</a></span>
 </body>
 </html>

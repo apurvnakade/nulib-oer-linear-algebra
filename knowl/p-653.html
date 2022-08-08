@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-07T11:40:47-05:00       *-->
+<!--*       on 2022-08-08T10:30:30-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,14 +14,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Let <span class="process-math">\(\boldb_j\)</span> be the <span class="process-math">\(j\)</span>-th column of <span class="process-math">\(B\text{,}\)</span> considered as a column vector. Then</p>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p><dfn class="terminology">Matrix multiplication</dfn> is the operation defined as follows: given an <span class="process-math">\(m\times n\)</span> matrix <span class="process-math">\(A=[a_{ij}]_{m\times n}\)</span> and an <span class="process-math">\(n\times r\)</span> matrix <span class="process-math">\(B=[b_{ij}]_{n\times r}\text{,}\)</span> we define their <dfn class="terminology">product</dfn> to be the <span class="process-math">\(m\times r\)</span> matrix <span class="process-math">\(AB\)</span> whose <span class="process-math">\(ij\)</span>-th entry is given by the formula</p>
 <div class="displaymath process-math">
-\begin{align*}
-AB \amp =A\begin{bmatrix}\vert \amp \vert \amp  \amp \vert \\ \boldb_1\amp \boldb_2\amp \cdots\amp \boldb_r\\ \vert \amp \vert \amp  \amp \vert \end{bmatrix}\\
-\amp=\begin{bmatrix}\vert \amp \vert \amp  \amp \vert \\ A\boldb_1\amp A\boldb_2\amp \cdots\amp A\boldb_r\\ \vert \amp  \vert \amp  \amp  \vert \end{bmatrix}\text{.}
-\end{align*}
+\begin{equation*}
+[AB]_{ij}=a_{i1}b_{1j}+a_{i2}b_{2j}+\cdots a_{ir}b_{rj} =\sum_{\ell=1}^ra_{i\ell}b_{\ell j}
+\end{equation*}
 </div>
+<p class="continuation">for all <span class="process-math">\(1\leq i\leq m\)</span> and <span class="process-math">\(1\leq j\leq r\text{.}\)</span></p>
 <span class="incontext"><a href="s_matrix.html#p-653">in-context</a></span>
 </body>
 </html>

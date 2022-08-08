@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-07T11:41:52-05:00       *-->
+<!--*       on 2022-08-08T10:31:35-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,29 +15,19 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Let <span class="process-math">\(P\)</span> be an invertible <span class="process-math">\(n\times n\)</span> matrix.</p>
-<ol class="decimal">
-<li>
-<span class="heading"><span class="title">Conjugation is linear.</span></span><p>For all <span class="process-math">\(A_1,A_2\in M_{nn}\)</span> and <span class="process-math">\(c_1,c_2\in \R\text{,}\)</span> we have <span class="process-math">\(P^{-1}(c_1A_1+c_2A_2)P=c_1P^{-1}A_1P+c_2P^{-1}A_2P\text{.}\)</span></p>
-</li>
-<li>
-<span class="heading"><span class="title">Conjugation commutes with powers.</span></span><p>For all <span class="process-math">\(A\in M_{nn}\)</span> and integers <span class="process-math">\(k\geq 0\text{,}\)</span> we have</p>
+<p>Let <span class="process-math">\(p_A(t)\)</span> and <span class="process-math">\(p_{A'}(t)\)</span> be the characteristic polynomials of <span class="process-math">\(A\)</span> and <span class="process-math">\(A'\text{,}\)</span> repsectively. We have</p>
 <div class="displaymath process-math">
-\begin{equation*}
-(P^{-1}AP)^k=P^{-1}A^kP\text{.}
-\end{equation*}
+\begin{align*}
+p_{A'}(t)\amp =\det(tI-A')\\
+\amp =\det(tI-P^{-1}AP) \amp (A'=P^{-1}AP)\\
+\amp = \det(P^{-1}tIP-P^{-1}AP) \amp (\text{algebra}) \\
+\amp = \det(P^{-1}(tI-A)P) \amp (\text{left/right dist.}) \\
+\amp = \det(P^{-1})\det(tI-A)\det(P) \amp (\knowl{./knowl/th_det_mult.html}{\text{2.5.26}}) \\
+\amp = (\det(P))^{-1}\det(P)\det(tI-A)  \\
+\amp = \det(tI-A)=p_A(t)\text{.}
+\end{align*}
 </div>
-<p class="continuation">If <span class="process-math">\(A\)</span> is invertible, this equality holds for <em class="emphasis">all</em> integers <span class="process-math">\(n\text{.}\)</span></p>
-</li>
-<li>
-<span class="heading"><span class="title">Conjugation commutes with polynomials.</span></span><p>Given any polynomial <span class="process-math">\(f(x)=a_rx^r+a_{r-1}x^{r-1}+\cdots +a_1x+a_0\)</span> with real coefficients, we have</p>
-<div class="displaymath process-math">
-\begin{equation*}
-f(P^{-1}AP)=P^{-1}f(A)P\text{.}
-\end{equation*}
-</div>
-</li>
-</ol>
+<p class="continuation">This proves statement (2).</p>
 <span class="incontext"><a href="s_diagonalization.html#p-2798">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-07T11:41:48-05:00       *-->
+<!--*       on 2022-08-08T10:31:30-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,12 +15,54 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>The coefficient <span class="process-math">\(a_{n-1}\)</span> in <a href="" class="xref" data-knowl="./knowl/eq_char_poly.html" title="Equation 5.4.6">(5.4.6)</a> satisfies</p>
+<p>Let <span class="process-math">\(B=(E_{11}, E_{12}, E_{21}, E_{22})\text{,}\)</span> the standard ordered basis of <span class="process-math">\(M_{22}\text{.}\)</span> Compute <span class="process-math">\(A=[S]_B\text{:}\)</span></p>
 <div class="displaymath process-math">
-\begin{equation}
-a_{n-1}=-\tr A=-(\lambda_1+\lambda_2+\cdots +\lambda_n)\text{.}\tag{5.4.7}
-\end{equation}
+\begin{align*}
+A=[S]_B \amp =\begin{bmatrix}
+\vert \amp \vert\amp \vert\amp \vert \\
+[S(E_{11})]_B\amp [S(E_{12})]_B \amp [S(E_{21})]_B \amp [S(E_{22})]_B\\
+\vert \amp \vert \amp \vert\amp \vert
+\end{bmatrix} \\
+\amp = =\begin{bmatrix}
+\vert \amp \vert\amp \vert\amp \vert \\
+[E_{11}]_B\amp [E_{21}]_B \amp [E_{12}]_B \amp [E_{22}]_B \\
+\vert \amp \vert \amp \vert\amp \vert
+\end{bmatrix}
+\amp (E_{11}^T=E_{11}, E_{12}^T=E_{21}, \text{etc.})\\
+\amp =\begin{bmatrix}
+1\amp 0\amp 0\amp 0\\
+0\amp 0\amp 1\amp 0\\
+0\amp 1\amp 0\amp 0\\
+0\amp 0\amp 0\amp 1
+\end{bmatrix} \text{.}
+\end{align*}
 </div>
+<p class="continuation">Now apply <a href="" class="xref" data-knowl="./knowl/proc_eigenspaces_matrix.html" title="Procedure 5.4.19: Computing eigenspaces of a matrix">Procedure 5.4.19</a> to <span class="process-math">\(A\text{.}\)</span> From <span class="process-math">\(p(t)=\det(tI-A)=(t-1)^2(t^2-1)=(t-1)^3(t+1)\)</span> we conclude that <span class="process-math">\(\lambda=1\)</span> and <span class="process-math">\(\lambda=-1\)</span> are the only eigenvalues of <span class="process-math">\(A\)</span> (and hence also <span class="process-math">\(S\)</span>). Bases for the corresponding eigenspaces of <span class="process-math">\(A\)</span> are easily computed as</p>
+<div class="displaymath process-math">
+\begin{align*}
+\NS(I-A) \amp= \Span\{(1,0,0,0), (0,1,1,0), (0,0,0,1)\} \\
+\NS(-I-A) \amp =\Span\{(0,1,-1,0)\} \text{.}
+\end{align*}
+</div>
+<p class="continuation">Now lift these up to bases of the eigenspaces <span class="process-math">\(W_1\)</span> and <span class="process-math">\(W_{-1}\)</span> of <span class="process-math">\(S\text{:}\)</span></p>
+<div class="displaymath process-math">
+\begin{align*}
+W_1 \amp=\Span\left\{ A_1=\begin{bmatrix}
+1\amp 0\\ 0 \amp 0
+\end{bmatrix},
+A_2=\begin{bmatrix}
+0\amp 1\\ 1 \amp 0
+\end{bmatrix},
+A_3=\begin{bmatrix}
+0\amp 0\\ 0 \amp 1
+\end{bmatrix} \right\} \\
+W_{-1} \amp= \Span\left\{A_4=
+\begin{amatrix}[rr]
+0\amp 1\\ -1 \amp 0
+\end{amatrix} \right\} \text{.}
+\end{align*}
+</div>
+<p class="continuation">It is easy to see that <span class="process-math">\(W_1\)</span> and <span class="process-math">\(W_2\)</span> are the subspaces of symmetric and skew-symmetric matrices, respectively. This is consistent with our analysis in <a href="" class="xref" data-knowl="./knowl/eg_eigenvector_adhoc_transposition.html" title="Example 5.4.11: Transposition">Example 5.4.11</a>.</p>
 <span class="incontext"><a href="s_eigenvectors.html#p-2673">in-context</a></span>
 </body>
 </html>

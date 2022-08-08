@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-07T11:40:53-05:00       *-->
+<!--*       on 2022-08-08T10:30:37-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,23 +15,13 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>We have</p>
+<p>Fix <span class="process-math">\(n\text{.}\)</span> All elementary matrices are invertible, and their inverses are elementary matrices. In fact, we have the following formulas:</p>
 <div class="displaymath process-math">
-\begin{equation*}
-\underset{2r_3}{E}=\begin{bmatrix}1\amp 0\amp 0\\0\amp 1\amp 0\\ 0\amp 0\amp 2 \end{bmatrix}
-\end{equation*}
-</div>
-<p class="continuation">and</p>
-<div class="displaymath process-math">
-\begin{equation*}
-\underset{\frac{1}{2}r_3}{E}=\begin{bmatrix}1\amp 0\amp 0\\0\amp 1\amp 0\\ 0\amp 0\amp 1/2 \end{bmatrix}\text{.}
-\end{equation*}
-</div>
-<p class="continuation">You can verify for yourself that</p>
-<div class="displaymath process-math">
-\begin{equation*}
-\underset{2r_3}{E}\ \underset{\frac{1}{2}r_3}{E}=\underset{\frac{1}{2}r_3}{E}\ \underset{2r_3}{E}=I_3\text{.}
-\end{equation*}
+\begin{align*}
+\underset{cr_i}{E}^{-1}\amp = \underset{\frac{1}{c}r_i}{E}\\
+\underset{r_i\leftrightarrow r_j}{E}^{-1}\amp = \underset{r_i\leftrightarrow r_j}{E}\\
+\underset{r_i+c\,r_j}E^{-1}\amp = \underset{r_i-cr_j}E
+\end{align*}
 </div>
 <span class="incontext"><a href="s_invertibility_theorem.html#p-889">in-context</a></span>
 </body>

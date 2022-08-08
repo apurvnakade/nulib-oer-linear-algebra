@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-07T11:41:12-05:00       *-->
+<!--*       on 2022-08-08T10:30:56-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,21 +15,72 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>The definition of linear independence is quite a mouthful! Some clarifying remarks:</p>
 <ol class="decimal">
+<li><p>This was shown in <a href="" class="xref" data-knowl="./knowl/eg_span_2space.html" title="Example 3.5.3: Examples in \R^2">Example 3.5.3</a></p></li>
 <li>
-<p>To prove a set <span class="process-math">\(S=\{\boldv_1, \boldv_2, \dots, \boldv_n\}\)</span> of <span class="process-math">\(n\)</span> distinct vectors is linearly independent, we must prove an <em class="emphasis">implication</em>:</p>
+<p>We must show, given any <span class="process-math">\(A=\begin{amatrix}[rr]a\amp b\\ c\amp d  \end{amatrix}\text{,}\)</span> we can find <span class="process-math">\(c_1, c_2, c_3, c_4\in \R\)</span> such that</p>
 <div class="displaymath process-math">
 \begin{equation*}
-c_1\boldv_1+c_2\boldv_2+\cdots +c_n\boldv_n=\boldzero \implies c_1=c_2=\dots=c_n=0\text{.}
+c_1A_1+c_2A_2+c_3A_3+c_4A_4=\begin{amatrix}[rr]a\amp b\\ c\amp d  \end{amatrix}\text{,}
 \end{equation*}
 </div>
-<p class="continuation">More often than not you will do so in the direct manner: i.e., assume you have a linear combination equal to the zero vector, then show that all coefficients must be zero.</p>
+<p class="continuation">or</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{amatrix}[rr]c_1+c_2+c_4 \amp c_1-c_2+c_4\\
+c_1+c_3-c_4\amp c_1-c_3-c_4  \end{amatrix}
+=
+\begin{amatrix}[rr]a\amp b \\ c\amp d  \end{amatrix}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We can find such <span class="process-math">\(c_i\)</span> if and only if the system with augmented matrix</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{amatrix}[rrrr|r]
+1\amp 1\amp 0\amp 1\amp a\\
+1\amp -1\amp 0\amp 1\amp b \\
+1\amp 0\amp 1\amp -1\amp c\\
+1\amp 0\amp -1\amp -1\amp d
+\end{amatrix}
+\end{equation*}
+</div>
+<p class="continuation">is consistent. This matrix row reduces to</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{amatrix}[rrrr|r]
+\boxed{1}\amp 1\amp 0\amp 1\amp a\\
+0\amp \boxed{1}\amp 0\amp 0\amp \frac{a-b}{2} \\
+0\amp 0\amp \boxed{1}\amp -2\amp c-\frac{a+b}{2}\\
+0\amp 0\amp 0\amp \boxed{1}\amp \frac{a+b-c-d}{4}
+\end{amatrix}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since the last column will never contain a leading one, we conclude that the system is consistent for any choice of <span class="process-math">\(a,b,c,d\text{,}\)</span> and thus that <span class="process-math">\(\Span S=M_{22}\text{,}\)</span> as claimed.</p>
 </li>
-<li><p>By the same token, to show <span class="process-math">\(S\)</span> is linearly dependent, we must produce a <em class="emphasis">nontrivial</em> linear combination of distinct elements equal to the zero vector.</p></li>
 <li>
-<p>It is easy to see that <span class="process-math">\(S\)</span> is linearly dependent if and only if some element of <span class="process-math">\(S\)</span> can be written as a linear combination of other elements of <span class="process-math">\(S\text{:}\)</span> just take the nontrivial linear combination yielding the zero vector, and solve for the vector in this combination with the nonzero coefficient.</p>
-<p>This makes precise what it means for a spanning set <span class="process-math">\(S\)</span> to have redundancies or not.  If <span class="process-math">\(S\)</span> is linearly dependent, then one of its vectors can be written as a linear combination of the others, and thus can be “thrown out” when computing <span class="process-math">\(\Span S\text{,}\)</span> the set of all linear combinations of <span class="process-math">\(S\text{.}\)</span> Conversely, if <span class="process-math">\(S\)</span> is linearly independent, then no element of <span class="process-math">\(S\)</span> can be written as a linear combination of the others; throwing any element out would thus result in <span class="process-math">\(\Span S\)</span> being strictly smaller.</p>
+<p>We must show that given any <span class="process-math">\(p(x)=ax^2+bx+c\)</span> we can find <span class="process-math">\(c_1,c_2,c_3\)</span> such that</p>
+<div class="displaymath process-math">
+\begin{equation*}
+c_1(x^2+x+1)+c_2(x^2-1)+c_3(x-1)=ax^2+bx+c\text{,}
+\end{equation*}
+</div>
+<p class="continuation">or</p>
+<div class="displaymath process-math">
+\begin{equation*}
+(c_1+c_2)x^2+(c_1+c_3)x+(c_1-c_2-c_3)=ax^2+bx+c\text{.}
+\end{equation*}
+</div>
+<p class="continuation">According to <a href="" class="xref" data-knowl="./knowl/rm_polynomial_equality.html" title="Remark 3.3.22: Polynomial equality">Remark 3.3.22</a> this equality is true if and only if</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{linsys}{3}
+c_1 \amp +\amp c_2 \amp  \amp \amp = \amp a\\
+c_1 \amp \amp \amp + \amp c_3 \amp = \amp b\\
+c_1 \amp -\amp c_2 \amp - \amp c_3 \amp = \amp c
+\end{linsys}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">As in the examples above, our reasoning implies  <span class="process-math">\(\Span S=P_2\)</span> if and only if this system is consistent for <em class="emphasis">any</em> choice of <span class="process-math">\(a,b,c\text{.}\)</span> Thus usual Gaussian elimination procedure tells us that this is indeed so. We leave the details to you.</p>
 </li>
 </ol>
 <span class="incontext"><a href="s_span_independence.html#p-1589">in-context</a></span>
