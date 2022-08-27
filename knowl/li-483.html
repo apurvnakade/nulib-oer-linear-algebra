@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-08T10:30:57-05:00       *-->
+<!--*       on 2022-08-27T12:15:30+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -17,7 +17,43 @@
 <article class="li"><h5 class="heading">
 <span class="type">Item</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span>
 </h5>
-<p>If <span class="process-math">\(S=\{\boldv\}\text{,}\)</span> then <span class="process-math">\(S\)</span> is linearly independent if and only if <span class="process-math">\(\boldv\ne \boldzero\text{.}\)</span> The previous comment shows why <span class="process-math">\(\boldv\ne \boldzero\)</span> is a necessary condition. Let's see why it is sufficient.</p>
-<p>Suppose <span class="process-math">\(\boldv\ne\boldzero\text{,}\)</span> and suppose we have <span class="process-math">\(c\boldv=\boldzero\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/th_vectorspace_props.html" title="Theorem 3.1.13: Basic vector space properties">Theorem 3.1.13</a> we have <span class="process-math">\(c=0\)</span> or <span class="process-math">\(\boldv=\boldzero\)</span> (<a href="" class="xref" data-knowl="./knowl/th_vectorspace_props.html" title="Theorem 3.1.13: Basic vector space properties">Theorem 3.1.13</a>). Since <span class="process-math">\(\boldv\ne 0\text{,}\)</span> we conclude <span class="process-math">\(c=0\text{.}\)</span> This shows that the only linear combination of <span class="process-math">\(S\)</span> yielding <span class="process-math">\(\boldzero\)</span> is the trivial one.</p></article><span class="incontext"><a href="s_span_independence.html#li-483">in-context</a></span>
+<p>We must show, given any <span class="process-math">\(A=\begin{amatrix}[rr]a\amp b\\ c\amp d  \end{amatrix}\text{,}\)</span> we can find <span class="process-math">\(c_1, c_2, c_3, c_4\in \R\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+c_1A_1+c_2A_2+c_3A_3+c_4A_4=\begin{amatrix}[rr]a\amp b\\ c\amp d  \end{amatrix}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">or</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{amatrix}[rr]c_1+c_2+c_4 \amp c_1-c_2+c_4\\
+c_1+c_3-c_4\amp c_1-c_3-c_4  \end{amatrix}
+=
+\begin{amatrix}[rr]a\amp b \\ c\amp d  \end{amatrix}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We can find such <span class="process-math">\(c_i\)</span> if and only if the system with augmented matrix</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{amatrix}[rrrr|r]
+1\amp 1\amp 0\amp 1\amp a\\
+1\amp -1\amp 0\amp 1\amp b \\
+1\amp 0\amp 1\amp -1\amp c\\
+1\amp 0\amp -1\amp -1\amp d
+\end{amatrix}
+\end{equation*}
+</div>
+<p class="continuation">is consistent. This matrix row reduces to</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{amatrix}[rrrr|r]
+\boxed{1}\amp 1\amp 0\amp 1\amp a\\
+0\amp \boxed{1}\amp 0\amp 0\amp \frac{a-b}{2} \\
+0\amp 0\amp \boxed{1}\amp -2\amp c-\frac{a+b}{2}\\
+0\amp 0\amp 0\amp \boxed{1}\amp \frac{a+b-c-d}{4}
+\end{amatrix}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since the last column will never contain a leading one, we conclude that the system is consistent for any choice of <span class="process-math">\(a,b,c,d\text{,}\)</span> and thus that <span class="process-math">\(\Span S=M_{22}\text{,}\)</span> as claimed.</p></article><span class="incontext"><a href="s_span_independence.html#li-483" class="internal">in-context</a></span>
 </body>
 </html>

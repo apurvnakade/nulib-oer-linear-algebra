@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-08T10:29:23-05:00       *-->
+<!--*       on 2022-08-27T12:14:57+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -17,11 +17,10 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Linear algebra: the theory of vector spaces and linear transformations">
 <meta property="book:author" content="Aaron Greicius">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
-    useLabelIds: true,
     tagSide: "right",
     tagIndent: ".8em",
     packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
@@ -64,7 +63,38 @@
 <link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX Course: Title Here';
+eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.runestone_version = '5.0.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand{\Z}{{\mathbb Z}}
@@ -271,6 +301,8 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="http://linear-algebra.northwestern.pub/" target="_blank"><img src="external/images/im_holycomm.svg" alt="Logo image"></a><div class="title-container">
@@ -372,9 +404,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Polynomials.</span>
 </h4>
 <p id="p-316">Assume <span class="process-math">\(X\subseteq \C\)</span> and that <span class="process-math">\(Y=\R\)</span> or <span class="process-math">\(Y=\C\text{.}\)</span> A function <span class="process-math">\(f\colon X\rightarrow Y\)</span> is called a <dfn class="terminology">polynomial</dfn> if there is a nonnegative integer <span class="process-math">\(n\)</span> and elements <span class="process-math">\(a_i\in \C\)</span> such that</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_poly.html ./knowl/eq_poly.html" id="eq_poly">
 \begin{equation}
-f(x)=\anpoly\label{eq_poly}\tag{0.5.1}
+f(x)=\anpoly\tag{0.5.1}
 \end{equation}
 </div>
 <p class="continuation">for all <span class="process-math">\(x\in X\text{.}\)</span> We call the right-hand side of <a href="" class="xref" data-knowl="./knowl/eq_poly.html" title="Equation 0.5.1">(0.5.1)</a> a <dfn class="terminology">polynomial expression</dfn> of <span class="process-math">\(f\text{.}\)</span> For each <span class="process-math">\(1\leq i\leq n\)</span> we call <span class="process-math">\(a_ix^i\)</span> the <span class="process-math">\(i\)</span>-th <dfn class="terminology">term</dfn> of this polynomial expression, and <span class="process-math">\(a_i\)</span> its <span class="process-math">\(i\)</span>-th coefficient; we call <span class="process-math">\(a_0\)</span> the <dfn class="terminology">constant term</dfn>. Furthermore, if <span class="process-math">\(a_n\ne 0\text{,}\)</span> then <span class="process-math">\(a_nx^{n}\)</span> is called the <dfn class="terminology">leading term</dfn> of the polynomial expression in <a href="" class="xref" data-knowl="./knowl/eq_poly.html" title="Equation 0.5.1">(0.5.1)</a>, and <span class="process-math">\(a_{n}\)</span> its <dfn class="terminology">leading coefficient</dfn>.</p>
@@ -385,9 +417,9 @@ f(x)=\anpoly\label{eq_poly}\tag{0.5.1}
 <li id="li-75"><p id="p-319">If <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are polynomials from <span class="process-math">\(X\)</span> to <span class="process-math">\(Y\text{,}\)</span> then so are <span class="process-math">\(f+g\text{,}\)</span> <span class="process-math">\(fg\text{,}\)</span> and <span class="process-math">\(cf\text{,}\)</span> where <span class="process-math">\(c\)</span> is any element of <span class="process-math">\(Y\text{.}\)</span></p></li>
 <li id="li-76">
 <p id="p-320">If <span class="process-math">\(f\colon X\rightarrow Y\)</span> is a polynomial and <span class="process-math">\(c\in X\)</span> is a root of <span class="process-math">\(f(x)\text{,}\)</span> then there is a polynomial <span class="process-math">\(g\colon X\rightarrow Y\)</span> such that</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="" id="eq_poly_factor">
 \begin{equation}
-f(x)=(x-c)g(x)\label{eq_poly_factor}\tag{0.5.2}
+f(x)=(x-c)g(x)\tag{0.5.2}
 \end{equation}
 </div>
 <p class="continuation">for all <span class="process-math">\(x\in X\text{.}\)</span></p>
@@ -403,7 +435,7 @@ f(x)=(x-c)g(x)\label{eq_poly_factor}\tag{0.5.2}
 <li id="li-78"><p id="p-325">If <span class="process-math">\(f\)</span> is the zero function, then <span class="process-math">\(a_i=0\)</span> for all <span class="process-math">\(1\leq i\leq n\text{.}\)</span></p></li>
 <li id="li-79">
 <p id="p-326">If <span class="process-math">\(f\)</span> is not the zero function and we have two polynomial expressions</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 f(x)=\anpoly=\bmpoly\text{,}
 \end{equation*}
@@ -416,9 +448,9 @@ f(x)=\anpoly=\bmpoly\text{,}
 <section class="introduction" id="introduction-10"><p id="p-327">Once we know that the expression <span class="process-math">\(f(x)=\anpoly\)</span> is unique, the various attributes of the polynomial expression (e.g., leading term, leading coefficient, etc.) can now be understood as properties of the function <span class="process-math">\(f\)</span> itself. The following definition introduces once more such property, the <em class="emphasis">degree</em> of a polynomial. Note that the definition assumes we are in the setting stipulated in <a href="" class="xref" data-knowl="./knowl/cor_poly_equality.html" title="Corollary 0.5.3">Corollary 0.5.3</a> to ensure uniqueness of the polynomial expression.</p></section><article class="definition definition-like" id="d_poly_degree"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Degree of a polynomial.</span>
 </h4>
-<p id="p-328">Assume <span class="process-math">\(X\)</span> is an infinite subset of <span class="process-math">\(\C\)</span> and that <span class="process-math">\(Y=\R\)</span> or <span class="process-math">\(Y=\C\text{.}\)</span> Let <span class="process-math">\(f\colon X\rightarrow Y\)</span> be a nonzero polynomial function, and let <span class="process-math">\(f(x)=\anpoly\)</span> be its unique polynomial expression with <span class="process-math">\(a_n\ne 0\text{.}\)</span> The integer <span class="process-math">\(n\)</span> is called the <dfn class="terminology">degree</dfn> of <span class="process-math">\(f\text{,}\)</span> denoted <span class="process-math">\(\deg f\text{.}\)</span>  is defined as follows:</p>
+<p id="p-328">Assume <span class="process-math">\(X\)</span> is an infinite subset of <span class="process-math">\(\C\)</span> and that <span class="process-math">\(Y=\R\)</span> or <span class="process-math">\(Y=\C\text{.}\)</span> Let <span class="process-math">\(f\colon X\rightarrow Y\)</span> be a nonzero polynomial function, and let <span class="process-math">\(f(x)=\anpoly\)</span> be its unique polynomial expression with <span class="process-math">\(a_n\ne 0\text{.}\)</span> The <dfn class="terminology">degree</dfn> of <span class="process-math">\(f\text{,}\)</span> denoted <span class="process-math">\(\deg f\text{,}\)</span> is defined as follows:</p>
 <ul class="disc">
-<li id="li-80"><p id="p-329">if <span class="process-math">\(f\)</span> is the zero function, then we define <span class="process-math">\(\deg f=-\infty\text{.}\)</span></p></li>
+<li id="li-80"><p id="p-329">if <span class="process-math">\(f\)</span> is the zero function, then we define <span class="process-math">\(\deg f=-\infty\text{;}\)</span></p></li>
 <li id="li-81"><p id="p-330">otherwise, we can write <span class="process-math">\(f(x)=\anpoly\)</span> where <span class="process-math">\(a_n\ne 0\text{,}\)</span> and we define <span class="process-math">\(\deg f=n\text{.}\)</span></p></li>
 </ul>
 <p class="continuation">We call the polynomial <span class="process-math">\(f\)</span> <dfn class="terminology">linear</dfn> if <span class="process-math">\(\deg f=1\text{,}\)</span> <dfn class="terminology">quadratic</dfn> if <span class="process-math">\(\deg f=2\text{,}\)</span> and <dfn class="terminology">cubic</dfn> if <span class="process-math">\(\deg f=3\text{.}\)</span></p></article><p id="p-331">Defining the degree of the zero function to be <span class="process-math">\(-\infty\)</span> may seem a little peculiar. Do not be disturbed! You can think of this as a convention that allows for clean statements of theorems like the following.</p>
@@ -428,7 +460,7 @@ f(x)=\anpoly=\bmpoly\text{,}
 <p id="p-332">Assume <span class="process-math">\(X\)</span> is an infinite subset of <span class="process-math">\(\C\)</span> and that <span class="process-math">\(Y=\R\)</span> or <span class="process-math">\(Y=\C\text{.}\)</span> Let <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> be polynomial functions from <span class="process-math">\(X\)</span> to <span class="process-math">\(Y\text{.}\)</span></p>
 <ol class="decimal">
 <li id="li-82"><p id="p-333"><span class="process-math">\(\deg fg=\deg f+\deg g\text{.}\)</span></p></li>
-<li id="li-83"><p id="p-334"><span class="process-math">\(\deg f+g\leq \max\{\deg f, \deg g\}\text{.}\)</span></p></li>
+<li id="li-83"><p id="p-334"><span class="process-math">\(\deg (f+g)\leq \max\{\deg f, \deg g\}\text{.}\)</span></p></li>
 </ol></article></section><section class="subsection" id="ss_poly_factoring"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">0.5.3</span> <span class="title">Factoring polynomials</span>
 </h3>
@@ -436,7 +468,7 @@ f(x)=\anpoly=\bmpoly\text{,}
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">0.5.6</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental theorem of algebra.</span>
 </h4>
 <p id="p-336">Any polynomial <span class="process-math">\(f(x)=\anpoly\text{,}\)</span> thought of as a function from <span class="process-math">\(\C\)</span> to itself, can be factored into linear terms as</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 f(x)=(x-z_1)(x-z_2)\cdots (x-z_n)\text{,}
 \end{equation*}
@@ -448,7 +480,7 @@ f(x)=(x-z_1)(x-z_2)\cdots (x-z_n)\text{,}
 <div id="webwork-16" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="16" data-sourceFilePath="Library/ASU-topics/setPolynomials/srw3_5_31.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
 <div class="problem-contents">
 <p id="p-337">Find a degree 3 polynomial whose coefficient of <span class="process-math">\(x^3\)</span> equal to 1.  The zeros of this polynomial are <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(-4 i\text{,}\)</span> and <span class="process-math">\(4 i\text{.}\)</span> Simplify your answer so that it has only real numbers as coefficients.</p>
-<p id="p-338">Your answer is <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>.</p>
+<p id="p-338">Your answer is <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>.</p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-33" id="answer-33"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-33"><div class="answer solution-like"><p id="p-339"><span class="process-math">\(\left(x-3\right)\!\left(x^{2}+16\right)\)</span></p></div></div>
 </div>
@@ -458,13 +490,13 @@ f(x)=(x-z_1)(x-z_2)\cdots (x-z_n)\text{,}
 <div id="webwork-17" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="17" data-sourceFilePath="Library/ASU-topics/setPolynomials/jj1.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
 <div class="problem-contents">
 <p id="p-340">The polynomial</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 f(x) = 7 x^3 - 2 x^2+ 567 x - 162
 \end{equation*}
 </div>
 <p class="continuation">has <span class="process-math">\(9 i\)</span> as a root.  Give <em class="emphasis">all</em> of the roots of <span class="process-math">\(f\)</span> in a comma-separated list, including the given one.</p>
-<p id="p-341">Roots:  <span class="fillin" role="img" aria-label="40-character blank" style="width: 18.1818181818182em;"></span></p>
+<p id="p-341">Roots:  <span class="fillin underline" role="img" aria-label="40-character blank" style="width: 18.1818181818182em;"></span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-34" id="answer-34"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-34"><div class="answer solution-like"><p id="p-342"><span class="process-math">\(9i, -9i, 0.285714285714286\)</span></p></div></div>
 </div>

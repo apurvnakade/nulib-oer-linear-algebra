@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-08T10:30:07-05:00       *-->
+<!--*       on 2022-08-27T12:15:16+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -17,11 +17,10 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Linear algebra: the theory of vector spaces and linear transformations">
 <meta property="book:author" content="Aaron Greicius">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
-    useLabelIds: true,
     tagSide: "right",
     tagIndent: ".8em",
     packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
@@ -64,7 +63,38 @@
 <link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX Course: Title Here';
+eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.runestone_version = '5.0.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand{\Z}{{\mathbb Z}}
@@ -271,6 +301,8 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="http://linear-algebra.northwestern.pub/" target="_blank"><img src="external/images/im_holycomm.svg" alt="Logo image"></a><div class="title-container">
@@ -365,15 +397,21 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <main class="main"><div id="content" class="pretext-content"><section class="appendix" id="appendix-thms"><h2 class="heading">
 <span class="type">Appendix</span> <span class="codenumber">C</span> <span class="title">Theory and procedures</span>
 </h2>
-<h4 class="heading hide-type" title="Section 0.1: Sets and functions"><p class="assistive"><span class="codenumber">0.1</span><span class="space"> </span><span class="title">Sets and functions</span></p></h4>
+<h4 class="heading hide-type" title="Section 0.1: Sets and functions">
+<span class="codenumber">0.1</span><span class="space"> </span><span class="title">Sets and functions</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_invertible_bijective.html" title="Theorem 0.1.23: Invertible is equivalent to bijective">Theorem 0.1.23</a> Invertible is equivalent to bijective</div>
-<h4 class="heading hide-type" title="Section 0.4: Complex numbers"><p class="assistive"><span class="codenumber">0.4</span><span class="space"> </span><span class="title">Complex numbers</span></p></h4>
+<h4 class="heading hide-type" title="Section 0.4: Complex numbers">
+<span class="codenumber">0.4</span><span class="space"> </span><span class="title">Complex numbers</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_complex_arithmetic_basic.html" title="Theorem 0.4.6: Basic properties of complex arithmetic">Theorem 0.4.6</a> Basic properties of complex arithmetic</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_complex_conjugation_modulus.html" title="Theorem 0.4.10: Properties of conjugation and modulus">Theorem 0.4.10</a> Properties of conjugation and modulus</div>
-<h4 class="heading hide-type" title="Section 0.5: Polynomials"><p class="assistive"><span class="codenumber">0.5</span><span class="space"> </span><span class="title">Polynomials</span></p></h4>
+<h4 class="heading hide-type" title="Section 0.5: Polynomials">
+<span class="codenumber">0.5</span><span class="space"> </span><span class="title">Polynomials</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_poly_basic.html" title="Theorem 0.5.2: Basic properties of polynomials">Theorem 0.5.2</a> Basic properties of polynomials</div>
 <div>
@@ -382,25 +420,35 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <a href="" class="xref" data-knowl="./knowl/th_poly_degree.html" title="Theorem 0.5.5: Basic properties of degree">Theorem 0.5.5</a> Basic properties of degree</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_fund_alg.html" title="Theorem 0.5.6: Fundamental theorem of algebra">Theorem 0.5.6</a> Fundamental theorem of algebra</div>
-<h4 class="heading hide-type" title="Section 1.1: Systems of linear equations"><p class="assistive"><span class="codenumber">1.1</span><span class="space"> </span><span class="title">Systems of linear equations</span></p></h4>
+<h4 class="heading hide-type" title="Section 1.1: Systems of linear equations">
+<span class="codenumber">1.1</span><span class="space"> </span><span class="title">Systems of linear equations</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/s_systems_th_rowops.html" title="Theorem 1.1.12: Row equivalence theorem">Theorem 1.1.12</a> Row equivalence theorem</div>
-<h4 class="heading hide-type" title="Section 1.2: Gaussian elimination"><p class="assistive"><span class="codenumber">1.2</span><span class="space"> </span><span class="title">Gaussian elimination</span></p></h4>
+<h4 class="heading hide-type" title="Section 1.2: Gaussian elimination">
+<span class="codenumber">1.2</span><span class="space"> </span><span class="title">Gaussian elimination</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_matrixforms.html" title="Theorem 1.2.10: Row equivalent matrix forms">Theorem 1.2.10</a> Row equivalent matrix forms</div>
-<h4 class="heading hide-type" title="Section 1.3: Solving linear systems"><p class="assistive"><span class="codenumber">1.3</span><span class="space"> </span><span class="title">Solving linear systems</span></p></h4>
+<h4 class="heading hide-type" title="Section 1.3: Solving linear systems">
+<span class="codenumber">1.3</span><span class="space"> </span><span class="title">Solving linear systems</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/proc_solveSystem.html" title="Procedure 1.3.5: Solving linear systems">Procedure 1.3.5</a> Solving linear systems</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/c_qualitative.html" title="Corollary 1.3.6: 0 1 or \infty-many solutions">Corollary 1.3.6</a> <span class="process-math">\(0\text{,}\)</span> <span class="process-math">\(1\text{,}\)</span> or <span class="process-math">\(\infty\)</span>-many solutions</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/s_solving_homogeneous.html" title="Corollary 1.3.10: Solutions to homogeneous equations">Corollary 1.3.10</a> Solutions to homogeneous equations</div>
-<h4 class="heading hide-type" title="Section 2.1: Matrices and their arithmetic"><p class="assistive"><span class="codenumber">2.1</span><span class="space"> </span><span class="title">Matrices and their arithmetic</span></p></h4>
+<h4 class="heading hide-type" title="Section 2.1: Matrices and their arithmetic">
+<span class="codenumber">2.1</span><span class="space"> </span><span class="title">Matrices and their arithmetic</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_column_method.html" title="Theorem 2.1.19: Column method of matrix multiplication">Theorem 2.1.19</a> Column method of matrix multiplication</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_row_method.html" title="Theorem 2.1.21: Row method of matrix multiplication">Theorem 2.1.21</a> Row method of matrix multiplication</div>
-<h4 class="heading hide-type" title="Section 2.2: Algebra of matrices"><p class="assistive"><span class="codenumber">2.2</span><span class="space"> </span><span class="title">Algebra of matrices</span></p></h4>
+<h4 class="heading hide-type" title="Section 2.2: Algebra of matrices">
+<span class="codenumber">2.2</span><span class="space"> </span><span class="title">Algebra of matrices</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_matrix_alg_props.html" title="Theorem 2.2.1: Properties of matrix addition, multiplication and scalar multiplication">Theorem 2.2.1</a> Properties of matrix addition, multiplication and scalar multiplication</div>
 <div>
@@ -413,7 +461,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <a href="" class="xref" data-knowl="./knowl/th_matrix_cancel.html" title="Corollary 2.2.9: Failure of multiplicative cancellation">Corollary 2.2.9</a> Failure of multiplicative cancellation</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_trans_props.html" title="Theorem 2.2.11: Properties of matrix transposition">Theorem 2.2.11</a> Properties of matrix transposition</div>
-<h4 class="heading hide-type" title="Section 2.3: Invertible matrices"><p class="assistive"><span class="codenumber">2.3</span><span class="space"> </span><span class="title">Invertible matrices</span></p></h4>
+<h4 class="heading hide-type" title="Section 2.3: Invertible matrices">
+<span class="codenumber">2.3</span><span class="space"> </span><span class="title">Invertible matrices</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_inverse_unique.html" title="Theorem 2.3.2: Inverses are unique">Theorem 2.3.2</a> Inverses are unique</div>
 <div>
@@ -428,7 +478,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <a href="" class="xref" data-knowl="./knowl/th_power_rules.html" title="Theorem 2.3.13: Properties of matrix powers">Theorem 2.3.13</a> Properties of matrix powers</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_inverse_trans.html" title="Theorem 2.3.14: Inverse and transpose">Theorem 2.3.14</a> Inverse and transpose</div>
-<h4 class="heading hide-type" title="Section 2.4: The invertibility theorem"><p class="assistive"><span class="codenumber">2.4</span><span class="space"> </span><span class="title">The invertibility theorem</span></p></h4>
+<h4 class="heading hide-type" title="Section 2.4: The invertibility theorem">
+<span class="codenumber">2.4</span><span class="space"> </span><span class="title">The invertibility theorem</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_elementary_matrices.html" title="Theorem 2.4.2: Elementary matrix formulas">Theorem 2.4.2</a> Elementary matrix formulas</div>
 <div>
@@ -449,7 +501,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <a href="" class="xref" data-knowl="./knowl/cor_row_equivalence_invertibility.html" title="Corollary 2.4.15: Row equivalence and invertible matrices">Corollary 2.4.15</a> Row equivalence and invertible matrices</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/cor_RRE_uniqueness.html" title="Corollary 2.4.17: Uniqueness of reduced row echelon form">Corollary 2.4.17</a> Uniqueness of reduced row echelon form</div>
-<h4 class="heading hide-type" title="Section 2.5: The determinant"><p class="assistive"><span class="codenumber">2.5</span><span class="space"> </span><span class="title">The determinant</span></p></h4>
+<h4 class="heading hide-type" title="Section 2.5: The determinant">
+<span class="codenumber">2.5</span><span class="space"> </span><span class="title">The determinant</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_det_triangular.html" title="Theorem 2.5.5: Determinant of triangular matrices">Theorem 2.5.5</a> Determinant of triangular matrices</div>
 <div>
@@ -474,10 +528,14 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <a href="" class="xref" data-knowl="./knowl/th_det_mult.html" title="Theorem 2.5.26: Determinant is multiplicative">Theorem 2.5.26</a> Determinant is multiplicative</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_invertibility_expanded.html" title="Theorem 2.5.27: Invertibility theorem (extended cut)">Theorem 2.5.27</a> Invertibility theorem (extended cut)</div>
-<h4 class="heading hide-type" title="Section 3.1: Real vector spaces"><p class="assistive"><span class="codenumber">3.1</span><span class="space"> </span><span class="title">Real vector spaces</span></p></h4>
+<h4 class="heading hide-type" title="Section 3.1: Real vector spaces">
+<span class="codenumber">3.1</span><span class="space"> </span><span class="title">Real vector spaces</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_vectorspace_props.html" title="Theorem 3.1.13: Basic vector space properties">Theorem 3.1.13</a> Basic vector space properties</div>
-<h4 class="heading hide-type" title="Section 3.2: Linear transformations"><p class="assistive"><span class="codenumber">3.2</span><span class="space"> </span><span class="title">Linear transformations</span></p></h4>
+<h4 class="heading hide-type" title="Section 3.2: Linear transformations">
+<span class="codenumber">3.2</span><span class="space"> </span><span class="title">Linear transformations</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_transform_basic_props.html" title="Theorem 3.2.5: Basic properties of linear transformations">Theorem 3.2.5</a> Basic properties of linear transformations</div>
 <div>
@@ -490,7 +548,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <a href="" class="xref" data-knowl="./knowl/th_transform_reflection.html" title="Theorem 3.2.17: Reflection is a linear transformation">Theorem 3.2.17</a> Reflection is a linear transformation</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_transform_composition.html" title="Theorem 3.2.23: Composition of linear transformations">Theorem 3.2.23</a> Composition of linear transformations</div>
-<h4 class="heading hide-type" title="Section 3.3: Subspaces"><p class="assistive"><span class="codenumber">3.3</span><span class="space"> </span><span class="title">Subspaces</span></p></h4>
+<h4 class="heading hide-type" title="Section 3.3: Subspaces">
+<span class="codenumber">3.3</span><span class="space"> </span><span class="title">Subspaces</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/proc_twostep_proof.html" title="Procedure 3.3.4: Two-step proof for subspaces">Procedure 3.3.4</a> Two-step proof for subspaces</div>
 <div>
@@ -501,7 +561,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <a href="" class="xref" data-knowl="./knowl/th_matrix_subspaces.html" title="Theorem 3.3.19">Theorem 3.3.19</a> </div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_subspace_functions.html" title="Theorem 3.3.21">Theorem 3.3.21</a> </div>
-<h4 class="heading hide-type" title="Section 3.4: Null space and image"><p class="assistive"><span class="codenumber">3.4</span><span class="space"> </span><span class="title">Null space and image</span></p></h4>
+<h4 class="heading hide-type" title="Section 3.4: Null space and image">
+<span class="codenumber">3.4</span><span class="space"> </span><span class="title">Null space and image</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_nullspace_image.html" title="Theorem 3.4.7: Null space and image">Theorem 3.4.7</a> Null space and image</div>
 <div>
@@ -510,14 +572,18 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <a href="" class="xref" data-knowl="./knowl/th_nullspace_injective.html" title="Theorem 3.4.13: Null space and injectivity">Theorem 3.4.13</a> Null space and injectivity</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/cor_matrix_equations.html" title="Corollary 3.4.15: Solutions to matrix equations">Corollary 3.4.15</a> Solutions to matrix equations</div>
-<h4 class="heading hide-type" title="Section 3.5: Span and linear independence"><p class="assistive"><span class="codenumber">3.5</span><span class="space"> </span><span class="title">Span and linear independence</span></p></h4>
+<h4 class="heading hide-type" title="Section 3.5: Span and linear independence">
+<span class="codenumber">3.5</span><span class="space"> </span><span class="title">Span and linear independence</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_span.html" title="Theorem 3.5.5: Spans are subspaces">Theorem 3.5.5</a> Spans are subspaces</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/proc_linear_independence.html" title="Procedure 3.5.12: Investigating linear independence">Procedure 3.5.12</a> Investigating linear independence</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/proc_linear_independence_functions.html" title="Procedure 3.5.16: Investigating linear independence of functions">Procedure 3.5.16</a> Investigating linear independence of functions</div>
-<h4 class="heading hide-type" title="Section 3.6: Bases"><p class="assistive"><span class="codenumber">3.6</span><span class="space"> </span><span class="title">Bases</span></p></h4>
+<h4 class="heading hide-type" title="Section 3.6: Bases">
+<span class="codenumber">3.6</span><span class="space"> </span><span class="title">Bases</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_basis_equivalence.html" title="Theorem 3.6.7: Basis equivalence">Theorem 3.6.7</a> Basis equivalence</div>
 <div>
@@ -526,7 +592,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <a href="" class="xref" data-knowl="./knowl/th_bases_transformations.html" title="Theorem 3.6.13: Bases and linear transformations">Theorem 3.6.13</a> Bases and linear transformations</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/cor_matrix_transformations.html" title="Corollary 3.6.16: Matrix transformations">Corollary 3.6.16</a> Matrix transformations</div>
-<h4 class="heading hide-type" title="Section 3.7: Dimension"><p class="assistive"><span class="codenumber">3.7</span><span class="space"> </span><span class="title">Dimension</span></p></h4>
+<h4 class="heading hide-type" title="Section 3.7: Dimension">
+<span class="codenumber">3.7</span><span class="space"> </span><span class="title">Dimension</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_basis_span_bounds.html" title="Theorem 3.7.2">Theorem 3.7.2</a> </div>
 <div>
@@ -539,7 +607,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <a href="" class="xref" data-knowl="./knowl/cor_dimension_subspace.html" title="Corollary 3.7.10: Dimension of subspaces">Corollary 3.7.10</a> Dimension of subspaces</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_dimension_compendium.html" title="Theorem 3.7.11: Dimension theory compendium">Theorem 3.7.11</a> Dimension theory compendium</div>
-<h4 class="heading hide-type" title="Section 3.8: Rank-nullity theorem and fundamental spaces"><p class="assistive"><span class="codenumber">3.8</span><span class="space"> </span><span class="title">Rank-nullity theorem and fundamental spaces</span></p></h4>
+<h4 class="heading hide-type" title="Section 3.8: Rank-nullity theorem and fundamental spaces">
+<span class="codenumber">3.8</span><span class="space"> </span><span class="title">Rank-nullity theorem and fundamental spaces</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_rank-nullity.html" title="Theorem 3.8.2: Rank-nullity">Theorem 3.8.2</a> Rank-nullity</div>
 <div>
@@ -557,14 +627,18 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <div>
 <a href="" class="xref" data-knowl="./knowl/proc_contract_extend.html" title="Procedure 3.8.13: Contracting and extending to bases of \R^n">Procedure 3.8.13</a> Contracting and extending to bases of <span class="process-math">\(\R^n\)</span>
 </div>
-<h4 class="heading hide-type" title="Section 3.9: Isomorphisms"><p class="assistive"><span class="codenumber">3.9</span><span class="space"> </span><span class="title">Isomorphisms</span></p></h4>
+<h4 class="heading hide-type" title="Section 3.9: Isomorphisms">
+<span class="codenumber">3.9</span><span class="space"> </span><span class="title">Isomorphisms</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_bijective_transformation.html" title="Theorem 3.9.4: Isomorphism equivalence">Theorem 3.9.4</a> Isomorphism equivalence</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_isomorphism_preserves.html" title="Theorem 3.9.5: Properties preserved by isomorphisms">Theorem 3.9.5</a> Properties preserved by isomorphisms</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_isomorphisms.html" title="Theorem 3.9.6: Isomorphism compendium">Theorem 3.9.6</a> Isomorphism compendium</div>
-<h4 class="heading hide-type" title="Section 4.1: Inner product spaces"><p class="assistive"><span class="codenumber">4.1</span><span class="space"> </span><span class="title">Inner product spaces</span></p></h4>
+<h4 class="heading hide-type" title="Section 4.1: Inner product spaces">
+<span class="codenumber">4.1</span><span class="space"> </span><span class="title">Inner product spaces</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_weighted_dotproduct.html" title="Theorem 4.1.3: Weighted dot product">Theorem 4.1.3</a> Weighted dot product</div>
 <div>
@@ -580,7 +654,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <a href="" class="xref" data-knowl="./knowl/th_Cauchy-Schwarz.html" title="Theorem 4.1.23: Cauchy-Schwarz inequality">Theorem 4.1.23</a> Cauchy-Schwarz inequality</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_triangle_inequalities.html" title="Theorem 4.1.24: Triangle Inequalities">Theorem 4.1.24</a> Triangle Inequalities</div>
-<h4 class="heading hide-type" title="Section 4.2: Orthogonal bases"><p class="assistive"><span class="codenumber">4.2</span><span class="space"> </span><span class="title">Orthogonal bases</span></p></h4>
+<h4 class="heading hide-type" title="Section 4.2: Orthogonal bases">
+<span class="codenumber">4.2</span><span class="space"> </span><span class="title">Orthogonal bases</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_orthogonal.html" title="Theorem 4.2.2: Orthogonal implies linearly independent">Theorem 4.2.2</a> Orthogonal implies linearly independent</div>
 <div>
@@ -589,7 +665,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <a href="" class="xref" data-knowl="./knowl/proc_gram-schmidt.html" title="Procedure 4.2.9: Gram-Schmidt procedure">Procedure 4.2.9</a> Gram-Schmidt procedure</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/cor_orthonormal_existence.html" title="Corollary 4.2.10: Existence of orthonormal bases">Corollary 4.2.10</a> Existence of orthonormal bases</div>
-<h4 class="heading hide-type" title="Section 4.3: Orthogonal projection"><p class="assistive"><span class="codenumber">4.3</span><span class="space"> </span><span class="title">Orthogonal projection</span></p></h4>
+<h4 class="heading hide-type" title="Section 4.3: Orthogonal projection">
+<span class="codenumber">4.3</span><span class="space"> </span><span class="title">Orthogonal projection</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_orthogonal_complement.html" title="Theorem 4.3.5: Orthogonal complement">Theorem 4.3.5</a> Orthogonal complement</div>
 <div>
@@ -602,21 +680,27 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <a href="" class="xref" data-knowl="./knowl/cor_orthoproj_linear.html" title="Corollary 4.3.14: Orthgonal projection is linear">Corollary 4.3.14</a> Orthgonal projection is linear</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_leastsquares.html" title="Theorem 4.3.22: Least-squares matrix formula">Theorem 4.3.22</a> Least-squares matrix formula</div>
-<h4 class="heading hide-type" title="Section 5.1: Coordinate vectors"><p class="assistive"><span class="codenumber">5.1</span><span class="space"> </span><span class="title">Coordinate vectors</span></p></h4>
+<h4 class="heading hide-type" title="Section 5.1: Coordinate vectors">
+<span class="codenumber">5.1</span><span class="space"> </span><span class="title">Coordinate vectors</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_coordinates_orthogonal.html" title="Theorem 5.1.9: Coordinate vectors for orthogonal bases">Theorem 5.1.9</a> Coordinate vectors for orthogonal bases</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_coordinates.html" title="Theorem 5.1.12: Coordinate vector transformation">Theorem 5.1.12</a> Coordinate vector transformation</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/proc_contract_extend_general.html" title="Procedure 5.1.14: Contracting and extending to bases in general spaces">Procedure 5.1.14</a> Contracting and extending to bases in general spaces</div>
-<h4 class="heading hide-type" title="Section 5.2: Matrix representations of linear transformations"><p class="assistive"><span class="codenumber">5.2</span><span class="space"> </span><span class="title">Matrix representations of linear transformations</span></p></h4>
+<h4 class="heading hide-type" title="Section 5.2: Matrix representations of linear transformations">
+<span class="codenumber">5.2</span><span class="space"> </span><span class="title">Matrix representations of linear transformations</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_matrixreps_matrixtransforms.html" title="Theorem 5.2.3: Standard matrix as a matrix representation">Theorem 5.2.3</a> Standard matrix as a matrix representation</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_matrixrep.html" title="Theorem 5.2.6">Theorem 5.2.6</a> </div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_matrixreps_model.html" title="Theorem 5.2.9: Computing with matrix representations">Theorem 5.2.9</a> Computing with matrix representations</div>
-<h4 class="heading hide-type" title="Section 5.3: Change of basis"><p class="assistive"><span class="codenumber">5.3</span><span class="space"> </span><span class="title">Change of basis</span></p></h4>
+<h4 class="heading hide-type" title="Section 5.3: Change of basis">
+<span class="codenumber">5.3</span><span class="space"> </span><span class="title">Change of basis</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_change_of_basis_coordinates.html" title="Theorem 5.3.2: Change of basis for coordinate vectors">Theorem 5.3.2</a> Change of basis for coordinate vectors</div>
 <div>
@@ -633,7 +717,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <a href="" class="xref" data-knowl="./knowl/proc_standard_matrix_via_change_of_basis.html" title="Procedure 5.3.23: Computing the standard matrix using change of basis">Procedure 5.3.23</a> Computing the standard matrix using change of basis</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_similarity_matrixreps.html" title="Theorem 5.3.28: Similarity and matrix representations">Theorem 5.3.28</a> Similarity and matrix representations</div>
-<h4 class="heading hide-type" title="Section 5.4: Eigenvectors and eigenvalues"><p class="assistive"><span class="codenumber">5.4</span><span class="space"> </span><span class="title">Eigenvectors and eigenvalues</span></p></h4>
+<h4 class="heading hide-type" title="Section 5.4: Eigenvectors and eigenvalues">
+<span class="codenumber">5.4</span><span class="space"> </span><span class="title">Eigenvectors and eigenvalues</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_eigenvectors_transformation_matrixrep.html" title="Theorem 5.4.13: Eigenvectors of a linear transformation">Theorem 5.4.13</a> Eigenvectors of a linear transformation</div>
 <div>
@@ -652,7 +738,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <a href="" class="xref" data-knowl="./knowl/cor_eigenvalues_atmost_n.html" title="Corollary 5.4.27">Corollary 5.4.27</a> </div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_invertibility_penultimate.html" title="Theorem 5.4.28: Invertibility theorem (final version)">Theorem 5.4.28</a> Invertibility theorem (final version)</div>
-<h4 class="heading hide-type" title="Section 5.5: Diagonalization"><p class="assistive"><span class="codenumber">5.5</span><span class="space"> </span><span class="title">Diagonalization</span></p></h4>
+<h4 class="heading hide-type" title="Section 5.5: Diagonalization">
+<span class="codenumber">5.5</span><span class="space"> </span><span class="title">Diagonalization</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_diagonalizability_eigenbasis.html" title="Theorem 5.5.2: Diagonalizabilty: basis of eigenvectors">Theorem 5.5.2</a> Diagonalizabilty: basis of eigenvectors</div>
 <div>
@@ -677,7 +765,9 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <a href="" class="xref" data-knowl="./knowl/th_alg_geom_mult.html" title="Theorem 5.5.30: Algebraic and geometric multiplicity">Theorem 5.5.30</a> Algebraic and geometric multiplicity</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/cor_alg_geom_mult.html" title="Corollary 5.5.31">Corollary 5.5.31</a> </div>
-<h4 class="heading hide-type" title="Section 5.6: The spectral theorem"><p class="assistive"><span class="codenumber">5.6</span><span class="space"> </span><span class="title">The spectral theorem</span></p></h4>
+<h4 class="heading hide-type" title="Section 5.6: The spectral theorem">
+<span class="codenumber">5.6</span><span class="space"> </span><span class="title">The spectral theorem</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/th_self-adjoint_symmetric.html" title="Theorem 5.6.2: Self-adjoint operators and symmetry">Theorem 5.6.2</a> Self-adjoint operators and symmetry</div>
 <div>

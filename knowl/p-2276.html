@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-08T10:31:17-05:00       *-->
+<!--*       on 2022-08-27T12:15:38+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,20 +15,28 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Consider again the matrix equation <span class="process-math">\(A\boldx=\boldy\)</span> from <a href="" class="xref" data-knowl="./knowl/eg_least-squares.html" title="Example 4.3.19: Best fitting line">Example 4.3.19</a>. According to <a href="" class="xref" data-knowl="./knowl/th_leastsquares.html" title="Theorem 4.3.22: Least-squares matrix formula">Theorem 4.3.22</a> the least-squares solution can be found by solving the equation <span class="process-math">\(A^TA\boldx=A^T\boldy\)</span> for <span class="process-math">\(\boldx\text{.}\)</span> We compute</p>
-<div class="displaymath process-math">
+<p>First compute</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
-A^TA\amp=\begin{amatrix}[rr]14\amp 0\\ 0\amp 3  \end{amatrix} \amp A^T\boldy\amp =\begin{amatrix}[r] 5\\ 6 \end{amatrix}
+\langle (1,1), (1,0)\rangle \amp= 2(1)+1(0)=2 \\
+\norm{(1,1)}\amp =\sqrt{\langle (1,1),(1,1)\rangle} \\
+\amp =\sqrt{2+1}=\sqrt{3} \\
+\norm{(1,0)}\amp =\sqrt{\langle (1,0),(1,0)\rangle} \\
+\amp =\sqrt{2} 
 \end{align*}
 </div>
-<p class="continuation">and solve</p>
-<div class="displaymath process-math">
+<p class="continuation">By definition <span class="process-math">\(\theta\)</span> is the unique value in <span class="process-math">\([0,\pi]\)</span> satisfying</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-\begin{amatrix}[rr]14\amp 0\\ 0\amp 3  \end{amatrix}\boldx=\begin{amatrix}[r] 5\\ 6 \end{amatrix}\iff
-\boldx=(5/14, 2),
+\cos\theta=\frac{\langle (1,1), (1,0)\rangle}{\norm{(1,1)}\norm{(1,0)}}=\frac{2}{\sqrt{3}\sqrt{2}}=\frac{\sqrt{6}}{3}\text{.}
 \end{equation*}
 </div>
-<p class="continuation">just as before.</p>
-<span class="incontext"><a href="s_orthogonal_projection.html#p-2276">in-context</a></span>
+<p class="continuation">We see that <span class="process-math">\(\theta\)</span> is not one of our familiar angles from the unit circle (e.g., <span class="process-math">\(\pi/6, \pi/4\text{,}\)</span> etc.) and so express <span class="process-math">\(\theta\)</span> in terms of the <span class="process-math">\(\arccos\)</span> function:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\theta=\arccos(\sqrt{6}/3)\approx 35.3^\circ\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="s_innerproducts.html#p-2276" class="internal">in-context</a></span>
 </body>
 </html>

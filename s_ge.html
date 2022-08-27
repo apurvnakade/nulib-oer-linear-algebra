@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-08T10:29:25-05:00       *-->
+<!--*       on 2022-08-27T12:14:58+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -17,11 +17,10 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Linear algebra: the theory of vector spaces and linear transformations">
 <meta property="book:author" content="Aaron Greicius">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
-    useLabelIds: true,
     tagSide: "right",
     tagIndent: ".8em",
     packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
@@ -53,14 +52,12 @@
   },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
-<script src="https://pretextbook.org/js/0.13/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script>$(function () {
-    // Make *any* div with class 'sagecell-sage' an executable Sage cell
-    // Their results will be linked, only within language type
-    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
-                           linked: true,
-                           languages: ['sage'],
-                           evalButtonText: 'Evaluate (Sage)'});
-});
+<script src="https://pretextbook.org/js/0.13/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
+                       linked: true,
+                       languages: ['sage'],
+                       evalButtonText: 'Evaluate (Sage)'});
 </script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -72,7 +69,38 @@
 <link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX Course: Title Here';
+eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.runestone_version = '5.0.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand{\Z}{{\mathbb Z}}
@@ -279,6 +307,8 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="http://linear-algebra.northwestern.pub/" target="_blank"><img src="external/images/im_holycomm.svg" alt="Logo image"></a><div class="title-container">
@@ -385,13 +415,13 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Augmented matrix.</span>
 </h3>
 <p id="p-470">Let <span class="process-math">\(L\)</span> be the linear system</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \eqsys\text{.}
 \end{equation*}
 </div>
 <p class="continuation">The <dfn class="terminology">augmented matrix associated to</dfn> <span class="process-math">\(L\)</span> is the matrix</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \augmatrix\text{.}
 \end{equation*}
@@ -432,7 +462,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </h4>
 <p id="p-485">For each matrix decide (a) whether it is in row echelon form, and (b) whether it is in reduced row echelon form.</p>
 <ol class="decimal">
-<li id="li-144"><div class="displaymath process-math" id="p-486">
+<li id="li-144"><div class="displaymath process-math" data-contains-math-knowls="" id="p-486">
 \begin{equation*}
 \begin{bmatrix}0\amp 2\amp 1\amp 0\amp 0\\
 0\amp 0\amp 0\amp 0\amp 0\\
@@ -442,7 +472,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 \end{bmatrix}
 \end{equation*}
 </div></li>
-<li id="li-145"><div class="displaymath process-math" id="p-487">
+<li id="li-145"><div class="displaymath process-math" data-contains-math-knowls="" id="p-487">
 \begin{equation*}
 \begin{bmatrix}1\amp 0\amp 0\amp -3\amp -7\\
 0\amp 0\amp 1\amp 2\amp 0\\
@@ -457,7 +487,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like"><ol class="decimal">
 <li id="li-146">
 <p id="p-488">Below you find the matrix with leading ones boxed. This matrix fails to be in row echelon form (and hence also reduced row echelon form) for a variety of reasons: the zero rows are not all grouped at the bottom; the first row is nonzero, but does not have a leading one; the leading one of the fourth row is to the left of the leading one of the leading one in the row above it.</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \begin{bmatrix}0\amp 2\amp 1\amp 0\amp 0\\
 0\amp 0\amp 0\amp 0\amp 0\\
@@ -470,7 +500,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </li>
 <li id="li-147">
 <p id="p-489">Below you find the matrix with leading ones boxed. This matrix is in row echelon form: the zero rows (rows 4 and 5) are grouped at the bottom; each nonzero row has a leading one (boxed in the matrix below); the leading ones step strictly to the right as we move down the rows.</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \begin{bmatrix}\boxed{1}\amp 0\amp 0\amp -3\amp -7\\
 0\amp 0\amp \boxed{1}\amp 2\amp 0\\
@@ -502,7 +532,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <p id="p-495">The act of transforming a matrix using elementary row operations is called <dfn class="terminology">row reduction</dfn></p>
 <p id="p-496">Two matrices are <dfn class="terminology">row equivalent</dfn> if the one can be obtained from the other by performing a finite sequence of elementary row operations.</p></article><article class="remark remark-like" id="s_ge_notation"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Notation.</span>
-</h4> Our former elementary operation notation easily transfers to row operations on matrices. The expressions<div class="displaymath process-math">
+</h4> Our former elementary operation notation easily transfers to row operations on matrices. The expressions<div class="displaymath process-math" data-contains-math-knowls="" id="md-29">
 \begin{align*}
 A\amp \xrightarrow{c\,r_i} B \amp A\amp \xrightarrow{r_i\leftrightarrow r_j} B\amp A\amp\xrightarrow{r_i+c\,r_j} B
 \end{align*}
@@ -527,7 +557,7 @@ A\amp \xrightarrow{c\,r_i} B \amp A\amp \xrightarrow{r_i\leftrightarrow r_j} B\a
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Model example</span>
 </h4>
 <p id="p-504">Use the following example as a model of how to both perform and annotate the steps in Gaussian elimination. When first learning this procedure, make sure to follow it <em class="emphasis">to the letter</em>. In particular, in the spirit of the mandate issued in <a href="" class="xref" data-knowl="./knowl/s_systems_rm_oneoperation.html" title="Remark 1.1.10: Mandate">Remark 1.1.10</a>, you should only perform one row operation at a time, and only in the sequence prescribed in Steps 1-4 of <a href="" class="xref" data-knowl="./knowl/d_GE.html" title="Definition 1.2.8: Gaussian elimination">Definition 1.2.8</a>.</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/s_systems_rm_oneoperation.html ./knowl/d_GE.html" id="md-30">
 \begin{align*}
 \begin{bmatrix}0\amp 0\amp -2\amp 0\amp 7\amp 12\\
 2\amp 4\amp -10\amp 6\amp 12\amp 28\\
@@ -579,7 +609,7 @@ A\amp \xrightarrow{c\,r_i} B \amp A\amp \xrightarrow{r_i\leftrightarrow r_j} B\a
 <dt id="li-157">Step 6</dt>
 <dd><p id="p-509">Begin again with Step 5 applied to the next column to the left that contains a leading one. Continue until the matrix is in reduced row echelon form.</p></dd>
 </dl></article><p id="p-510">Continuing our previous example:</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-31">
 \begin{align*}
 \begin{bmatrix}1\amp 2\amp -5\amp 3\amp 6\amp 14\\ 0\amp 0\amp 1\amp 0\amp -7/2\amp -6\\ 0\amp 0\amp 0\amp 0\amp 1\amp 2 \end{bmatrix} .  \amp \xrightarrow[\hspace{35pt}]{r_2+7/2r_3}\amp \begin{bmatrix}1\amp 2\amp -5\amp 3\amp 6\amp 14\\ 0\amp 0\amp 1\amp 0\amp 0\amp 1\\ 0\amp 0\amp 0\amp 0\amp 1\amp 2 \end{bmatrix} .\\
 \amp \xrightarrow[\hspace{35pt}]{r_1-6r_3}\amp \begin{bmatrix}1\amp 2\amp -5\amp 3\amp 0\amp 2\\ 0\amp 0\amp 1\amp 0\amp 0\amp 1\\ 0\amp 0\amp 0\amp 0\amp 1\amp 2 \end{bmatrix} .\\
@@ -609,8 +639,8 @@ A\amp \xrightarrow{c\,r_i} B \amp A\amp \xrightarrow{r_i\leftrightarrow r_j} B\a
 0 \amp 1  \end{bmatrix}\)</span> using Gaussian elimination; and it row reduces further to <span class="process-math">\(C=\begin{bmatrix}1\amp 0\\ 0\amp 1\end{bmatrix}\)</span> using Gauss-Jordan elimination. Thus we see that <span class="process-math">\(A\)</span> is row equivalent to two different matrices in row echelon form. (According to <a href="" class="xref" data-knowl="./knowl/th_matrixforms.html" title="Theorem 1.2.10: Row equivalent matrix forms">Theorem 1.2.10</a>, the matrix <span class="process-math">\(C\)</span> is the only matrix in <em class="emphasis">reduced</em> row echelon that is row equivalent to <span class="process-math">\(A\text{.}\)</span>)</p></div></div>
 </div></article><article class="project project-like" id="sage_ge"><a href="" data-knowl="" class="id-ref project-knowl original" data-refid="hk-sage_ge"><h4 class="heading">
 <span class="type">Sage example</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span><span class="space"> </span><span class="title">Gaussian elimination.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-sage_ge"><article class="project project-like"><p id="p-519">Below you find a recursive implementation of Gaussian elimination in Sage.</p>
-<div class="hidden-sagecell-sage" id="sage-1"><script type="text/x-sage">def row_echelon_form(A):
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-sage_ge"><article class="project project-like"><p id="p-519">In the first Sage cell below you find a recursive implementation of Gaussian elimination in Sage that includes explanatory comments. Evaluate this cell in order to load the <code class="code-inline tex2jax_ignore">row_echelon_form</code> function. The second cell allows you to apply the Gaussian elimination algorithm to a matrix of your choosing. As you can see, the <code class="code-inline tex2jax_ignore">show</code> function provides a nice <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> version of the output.</p>
+<pre class="ptx-sagecell hidden-sagecell-sage" id="sage-1"><script type="text/x-sage">def row_echelon_form(A):
   m,n=A.dimensions()
   R=A.base_ring()
   K=R.fraction_field()
@@ -621,67 +651,264 @@ A\amp \xrightarrow{c\,r_i} B \amp A\amp \xrightarrow{r_i\leftrightarrow r_j} B\a
       while A.column(j).is_zero(): #Find first nonzero column of A
           j+=1
       i=0
-      while A[i,j]==0:
+      while A[i,j]==0: #Find first nonzero entry in nonzero column
           i+=1
       c=A[i,j]
-      A.swap_rows(0,i)
-      A.rescale_row(0,1/c)
-      for k in range(i+1,m):
+      A.swap_rows(0,i) #Bring nonzero entry to top
+      A.rescale_row(0,1/c) #Make nonzero entry a leading one
+      for k in range(i+1,m): #Clear entries below leading one
           A.add_multiple_of_row(k,0,-A[k,j])
-      B=A[1:,:]
-      A[1:,:]=row_echelon_form(B)
+      B=A[1:,:] #Concentrate on matrix below first row
+      A[1:,:]=row_echelon_form(B) #Apply recursion
       return A
-A=matrix([[0,0,3],[0,2,5],[0,3,3]])
-row_echelon_form(A)
-</script></div></article></div></section><section class="exercises" id="s_ge_ex"><h3 class="heading hide-type">
+</script></pre>
+<pre class="ptx-sagecell hidden-sagecell-sage" id="sage-2"><script type="text/x-sage">A=matrix([[0,0,3],[0,2,5],[0,3,3]])
+B=row_echelon_form(A)
+B
+show(B)
+</script></pre>
+<p id="p-520">Sage has its own row reduction method, <code class="code-inline tex2jax_ignore">rref</code>, which transforms a matrix to <em class="emphasis">reduced</em> row echelon form. Compare the outputs of these two algorithms.</p>
+<pre class="ptx-sagecell hidden-sagecell-sage" id="sage-3"><script type="text/x-sage">A=matrix([[0,0,3],[0,2,5],[0,3,3]])
+B=row_echelon_form(A)
+C=A.rref()
+show(B)
+show(C)
+B is C
+</script></pre>
+<p id="p-521">Some further activities:</p>
+<ul class="disc">
+<li id="li-161"><p id="p-522">Modify the <code class="code-inline tex2jax_ignore">row_echelon_form</code> code to make a non-recursive algorithm.</p></li>
+<li id="li-162"><p id="p-523">Add <code class="code-inline tex2jax_ignore">show</code> commands to your non-recursive <code class="code-inline tex2jax_ignore">row_echelon_form</code> code to show steps in the row reduction.</p></li>
+</ul></article></div></section><section class="exercises" id="s_ge_ex"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">1.2.3</span> <span class="title">Exercises</span>
 </h3>
-<div class="exercisegroup" id="exercisegroup-1">
+<article class="subexercises" id="subexercises-1"><article class="exercise exercise-like" id="exercise-27"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div id="webwork-23" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="23" data-sourceFilePath="Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/holt_01_02_010.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-524">Determine if the matrix</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-525">
+\begin{equation*}
+\left[\begin{array}{rrrrr} 1 \amp   1 \amp   0 \amp   -7 \amp   0 \\ 0 \amp   0 \amp   1 \amp   -3 \amp   0 \\ 0 \amp   0 \amp   0 \amp   0 \amp   1\end{array}\right]
+\end{equation*}
+</div>
+<p id="p-526">is in echelon form, reduced row echelon form, or neither. Choose the <em class="emphasis">most appropriate</em> answer.</p>
+<p id="p-527">Answer: <ul style="list-style:circle;">
+<li id="li-163"><p id="p-528">select</p></li>
+<li id="li-164"><p id="p-529">echelon form</p></li>
+<li id="li-165"><p id="p-530">reduced row echelon form</p></li>
+<li id="li-166"><p id="p-531">not in echelon form</p></li>
+</ul>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-39" id="answer-39"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-39"><div class="answer solution-like"><p id="p-532"><span class="process-math">\(\text{reduced row echelon form}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like"><p id="p-533"><em class="alert">SOLUTION:</em> Reduced row echelon form.</p></div></div>
+</div>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-23')">Make Interactive</button></div>
+</div></article></article><div class="exercisegroup" id="exercisegroup-1">
 <h4 class="heading"><span class="title">Exercise Group.</span></h4>
 <div class="introduction" id="introduction-14">Explain why each of the following matrices fails to be in row echelon form.</div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-27"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<p id="p-520"><span class="process-math">\(A=\begin{bmatrix}
+<article class="exercise exercise-like" id="exercise-28"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<p id="p-534"><span class="process-math">\(A=\begin{bmatrix}
 1 \amp 2\amp 2\amp -3\\
 0\amp -3\amp 4\amp 0\\
 0\amp 0\amp 0\amp 1
 \end{bmatrix}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like"><p id="p-521">The first nonzero term in the second row is not a one.</p></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-28"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<p id="p-522"><span class="process-math">\(A=\begin{bmatrix}
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-19" id="solution-19"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like"><p id="p-535">The first nonzero term in the second row is not a one.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-29"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<p id="p-536"><span class="process-math">\(A=\begin{bmatrix}
 0\amp 1\amp 2\amp -3\\
 0\amp 1\amp 4\amp 0\\
 0\amp 0\amp 0\amp 1
-\end{bmatrix}\)</span></p></article><article class="exercise exercise-like" id="exercise-29"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<p id="p-523"><span class="process-math">\(A=\begin{bmatrix}
+\end{bmatrix}\)</span></p></article><article class="exercise exercise-like" id="exercise-30"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<p id="p-537"><span class="process-math">\(A=\begin{bmatrix}
 1\amp 1\amp 2\amp -3\\
 0\amp 0\amp 0\amp 0\\
 0\amp 1\amp 1\amp 1
 \end{bmatrix}\)</span></p></article>
 </div>
 </div>
-<div class="exercisegroup" id="exercisegroup-2">
+<article class="subexercises" id="subexercises-2"><h4 class="heading"><span class="title">Webwork Exercises</span></h4>
+<article class="exercise exercise-like" id="exercise-31"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<div id="webwork-24" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="24" data-sourceFilePath="Library/Mizzou/Finite_Math/MatrixOperations/RowOp3by3e.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-538">Consider the matrix</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines">7</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">-6</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">-7</td>
+<td class="l m b0 r0 l0 t0 lines">-9</td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">5</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">-5</td>
+</tr>
+</table></div>
+<p id="p-539">(a) On the matrix above, perform the row operation <span class="process-math">\(5 R_{3} + R_{1} \to R_{1}\text{.}\)</span>  The new matrix is:</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+</tr>
+</table></div>
+<p id="p-540">(b) On the original matrix, perform the row operation <span class="process-math">\(7 R_{2} \to R_{2}\text{.}\)</span>  The new matrix is:</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+</tr>
+</table></div>
+<p id="p-541">(c) On the original matrix, perform the row operation <span class="process-math">\(R_{1} \leftrightarrow R_{3}\text{.}\)</span>  The new matrix is:</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+</tr>
+</table></div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-40" id="answer-40"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-40"><div class="answer solution-like"><p id="p-542"><span class="process-math">\(\text{}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-41" id="answer-41"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-41"><div class="answer solution-like"><p id="p-543"><span class="process-math">\(\text{}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-42" id="answer-42"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-42"><div class="answer solution-like"><p id="p-544"><span class="process-math">\(\text{}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-43" id="answer-43"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-43"><div class="answer solution-like"><p id="p-545"><span class="process-math">\(\text{}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-44" id="answer-44"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-44"><div class="answer solution-like"><p id="p-546"><span class="process-math">\(\text{}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-45" id="answer-45"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-45"><div class="answer solution-like"><p id="p-547"><span class="process-math">\(\text{}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-46" id="answer-46"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-46"><div class="answer solution-like"><p id="p-548"><span class="process-math">\(\text{}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-47" id="answer-47"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">8</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-47"><div class="answer solution-like"><p id="p-549"><span class="process-math">\(\text{}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-48" id="answer-48"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">9</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-48"><div class="answer solution-like"><p id="p-550"><span class="process-math">\(\text{}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-49" id="answer-49"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">10</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-49"><div class="answer solution-like"><p id="p-551"><span class="process-math">\(7\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-50" id="answer-50"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">11</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-50"><div class="answer solution-like"><p id="p-552"><span class="process-math">\(0\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-51" id="answer-51"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">12</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-51"><div class="answer solution-like"><p id="p-553"><span class="process-math">\(-6\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-52" id="answer-52"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">13</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-52"><div class="answer solution-like"><p id="p-554"><span class="process-math">\(-49\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-53" id="answer-53"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">14</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-53"><div class="answer solution-like"><p id="p-555"><span class="process-math">\(-63\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-54" id="answer-54"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">15</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-54"><div class="answer solution-like"><p id="p-556"><span class="process-math">\(42\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-55" id="answer-55"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">16</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-55"><div class="answer solution-like"><p id="p-557"><span class="process-math">\(5\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-56" id="answer-56"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">17</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-56"><div class="answer solution-like"><p id="p-558"><span class="process-math">\(2\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-57" id="answer-57"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">18</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-57"><div class="answer solution-like"><p id="p-559"><span class="process-math">\(-5\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-58" id="answer-58"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">19</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-58"><div class="answer solution-like"><p id="p-560"><span class="process-math">\(5\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-59" id="answer-59"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">20</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-59"><div class="answer solution-like"><p id="p-561"><span class="process-math">\(2\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-60" id="answer-60"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">21</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-60"><div class="answer solution-like"><p id="p-562"><span class="process-math">\(-5\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-61" id="answer-61"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">22</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-61"><div class="answer solution-like"><p id="p-563"><span class="process-math">\(-7\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-62" id="answer-62"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">23</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-62"><div class="answer solution-like"><p id="p-564"><span class="process-math">\(-9\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-63" id="answer-63"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">24</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-63"><div class="answer solution-like"><p id="p-565"><span class="process-math">\(6\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-64" id="answer-64"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">25</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-64"><div class="answer solution-like"><p id="p-566"><span class="process-math">\(7\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-65" id="answer-65"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">26</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-65"><div class="answer solution-like"><p id="p-567"><span class="process-math">\(0\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-66" id="answer-66"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">27</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-66"><div class="answer solution-like"><p id="p-568"><span class="process-math">\(-6\)</span></p></div></div>
+</div>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-24')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="exercise-32"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<div id="webwork-25" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="25" data-sourceFilePath="Library/ASU-topics/set119LinearSystems/p28.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-569">On the augmented matrix <span class="process-math">\(A\)</span> below , perform all three row operations in the order given, ((a) followed by (b) followed by (c)) and then write the resulting augmented matrix.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-570">
+\begin{equation*}
+A = \displaystyle\left[\begin{array}{rrr|r} 
+1 \amp -2 \amp 1 \amp -2 \cr  
+4 \amp -7 \amp 1 \amp 2 \cr  
+-2 \amp 3 \amp -1 \amp 3 \cr  
+\end{array}\right]
+\end{equation*}
+</div>
+<p id="p-571"><span class="process-math">\((a) R_2 = -4 r_1 + r_2\)</span></p>
+<p id="p-572"><span class="process-math">\((b) R_3 = 2 r_1 + r_3\)</span></p>
+<p id="p-573"><span class="process-math">\((c) R_3 = 1 r_2 + r_3\)</span></p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
+</tr>
+</table></div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-67" id="answer-67"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-67"><div class="answer solution-like"><p id="p-574"><span class="process-math">\(1\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-68" id="answer-68"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-68"><div class="answer solution-like"><p id="p-575"><span class="process-math">\(-2\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-69" id="answer-69"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-69"><div class="answer solution-like"><p id="p-576"><span class="process-math">\(1\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-70" id="answer-70"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-70"><div class="answer solution-like"><p id="p-577"><span class="process-math">\(-2\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-71" id="answer-71"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-71"><div class="answer solution-like"><p id="p-578"><span class="process-math">\(0\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-72" id="answer-72"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-72"><div class="answer solution-like"><p id="p-579"><span class="process-math">\(1\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-73" id="answer-73"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-73"><div class="answer solution-like"><p id="p-580"><span class="process-math">\(-3\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-74" id="answer-74"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">8</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-74"><div class="answer solution-like"><p id="p-581"><span class="process-math">\(10\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-75" id="answer-75"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">9</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-75"><div class="answer solution-like"><p id="p-582"><span class="process-math">\(0\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-76" id="answer-76"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">10</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-76"><div class="answer solution-like"><p id="p-583"><span class="process-math">\(0\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-77" id="answer-77"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">11</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-77"><div class="answer solution-like"><p id="p-584"><span class="process-math">\(-2\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-78" id="answer-78"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">12</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-78"><div class="answer solution-like"><p id="p-585"><span class="process-math">\(9\)</span></p></div></div>
+</div>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-25')">Make Interactive</button></div>
+</div></article></article><div class="exercisegroup" id="exercisegroup-2">
 <h4 class="heading"><span class="title">Exercise Group.</span></h4>
 <div class="introduction" id="introduction-15">For each of the given linear systems, find an equivalent system in row echelon form. Use augmented matrices and follow the Gaussian elimination algorithm to the letter.</div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="s_ge_equivsys"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<div class="displaymath process-math" id="p-524">
+<article class="exercise exercise-like" id="s_ge_equivsys"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-586">
 \begin{equation*}
 \begin{linsys}{4} x_1\amp +\amp 2x_2\amp =\amp x_3\amp +\amp x_4\amp +\amp 3\\ 3x_1\amp +\amp 6x_2\amp =\amp 2x_3\amp -\amp 4x_4\amp +\amp 8\\ -x_1\amp +\amp 2x_3\amp =\amp 2x_2\amp -\amp x_4\amp -\amp 1 \end{linsys}
 \end{equation*}
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-19" id="solution-19"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like">
-<p id="p-525">First bring the system into standard form:</p>
-<div class="displaymath process-math">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-20" id="solution-20"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like">
+<p id="p-587">First bring the system into standard form:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 L\colon \
 \begin{linsys}{4} x_1\amp +\amp 2x_2\amp -\amp x_3\amp-\amp x_4\amp=\amp 3\\ 3x_1\amp +\amp 6x_2\amp - \amp 2x_3\amp + \amp 4x_4\amp =\amp 8\\ -x_1\amp - \amp 2x_2 \amp +\amp 2x_3\amp + \amp x_4\amp = \amp -1 \end{linsys}\text{.}
 \end{equation*}
 </div>
 <p class="continuation">Then perform Gaussian elimination on the associated augmented matrix:</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-32">
 \begin{align*}
 \begin{bmatrix}1\amp 2\amp -1\amp -1\amp 3\\ 3\amp 6\amp -2\amp 4\amp 8\\ -1\amp -2\amp 2\amp 1\amp -1 \end{bmatrix} \amp \xrightarrow[\hspace{35pt}]{r_2-3r_1}\amp \begin{bmatrix}1\amp 2\amp -1\amp -1\amp 3\\ 0\amp 0\amp 1\amp 7\amp -1\\ -1\amp -2\amp 2\amp 1\amp -1 \end{bmatrix}\\
 \amp \xrightarrow[\hspace{35pt}]{r_3+r_1 }\amp \begin{bmatrix}1\amp 2\amp -1\amp -1\amp 3\\ 0\amp 0\amp 1\amp 7\amp -1\\ 0\amp 0\amp 1\amp 0\amp 2 \end{bmatrix}\\
@@ -690,30 +917,30 @@ L\colon \
 \end{align*}
 </div>
 <p class="continuation">The corresponding equivalent system is</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 L'\colon \
 \begin{linsys}{4} x_1\amp +\amp 2x_2\amp -\amp x_3\amp-\amp x_4\amp=\amp 3\\  \amp \amp \amp \amp x_3\amp + \amp 7x_4\amp =\amp -1\\ \amp \amp \amp \amp \amp  \amp x_4\amp = \amp -\frac{3}{7} \end{linsys}\text{.}
 \end{equation*}
 </div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-31"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<div class="displaymath process-math" id="p-526">
+</div></article><article class="exercise exercise-like" id="exercise-34"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-588">
 \begin{equation*}
 \begin{linsys}{4} x_1\amp +\amp x_2\amp -\amp x_3\amp +\amp x_4\amp =\amp 1\\ -2x_1\amp -\amp 2x_2\amp +\amp 2x_3\amp -\amp 2x_4\amp =\amp -2\\ x_1\amp +\amp x_2\amp +\amp x_3\amp +\amp 2x_4\amp =\amp 3 \end{linsys}
 \end{equation*}
-</div></article><article class="exercise exercise-like" id="exercise-32"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<div class="displaymath process-math" id="p-527">
+</div></article><article class="exercise exercise-like" id="exercise-35"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-589">
 \begin{equation*}
 \begin{linsys}{3} 2x_1 \amp +\amp  2x_2  \amp +\amp 2x_3\amp =\amp 0\\ -2x_1 \amp +\amp  5x_2 \amp +\amp 2x_3\amp =\amp 1\\ 8x_1 \amp +\amp   x_2   \amp +\amp 4x_3\amp =\amp -1 \end{linsys}
 \end{equation*}
-</div></article><article class="exercise exercise-like" id="exercise-33"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<div class="displaymath process-math" id="p-528">
+</div></article><article class="exercise exercise-like" id="exercise-36"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-590">
 \begin{equation*}
 \begin{linsys}{3} \amp \amp -2b  \amp +\amp 3c\amp =\amp 1\\ 3a \amp +\amp  6b \amp -\amp 3c\amp =\amp -2\\ 6a \amp +\amp   6b   \amp +\amp 3c\amp =\amp 5 \end{linsys}
 \end{equation*}
-</div></article><article class="exercise exercise-like" id="exercise-34"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
-<div class="displaymath process-math" id="p-529">
+</div></article><article class="exercise exercise-like" id="exercise-37"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-591">
 \begin{equation*}
 \begin{linsys}{5} \amp  \amp  \amp \amp  T_3\amp +\amp T_4\amp +\amp T_5 \amp =\amp 0\\ -T_1\amp -\amp T_2 \amp +\amp 2T_3 \amp -\amp 3T_4\amp +\amp T_5 \amp =\amp 0\\ T_1\amp + \amp T_2 \amp -\amp 2T_3 \amp \amp \amp -\amp T_5 \amp =\amp 0\\ 2T_1\amp + \amp 2T_2 \amp -\amp T_3 \amp \amp \amp +\amp T_5 \amp =\amp 0 \end{linsys}
 \end{equation*}

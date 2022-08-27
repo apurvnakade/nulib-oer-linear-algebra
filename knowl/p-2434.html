@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-08T10:31:22-05:00       *-->
+<!--*       on 2022-08-27T12:15:41+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Use the defining property <a href="" class="xref" data-knowl="./knowl/eq_matrixrep_prop.html" title="Equation 5.2.2">(5.2.2)</a> of <span class="process-math">\([T]_B\)</span> to compute <span class="process-math">\(T((1,0))\)</span> and <span class="process-math">\(T((0,1))\text{.}\)</span> (You will first need to compute <span class="process-math">\([(1,0)]_B\)</span> and <span class="process-math">\([(0,1)]_B\text{.}\)</span> )</p>
-<span class="incontext"><a href="s_matrixreps.html#p-2434">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>Thus, given a continuous function <span class="process-math">\(f\)</span> on <span class="process-math">\([0,2\pi]\text{,}\)</span> linear algebra shows us how to find its best trigonometric polynomial approximation of the form</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+g(x)=a_0+\sum_{k=1}^na_k\cos kx +b_k\sin kx\text{.}
+\end{equation*}
+</div>
+<p class="continuation">However, linear algebra does not tell us just how good this approximation is. This question, among others, is tackled by another mathematical theory: <em class="emphasis">Fourier analysis</em>. There we learn that the trigonometric polynomial approximations get arbitrarily close to <span class="process-math">\(f\)</span> as we let <span class="process-math">\(n\)</span> increase. More precisely, letting <span class="process-math">\(\hat{f}_n\)</span> be the orthogonal projection of <span class="process-math">\(f\)</span> onto the space of trigonometric polynomials of degree at most <span class="process-math">\(n\text{,}\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{n\to\infty}\norm{f-\hat{f}_n}=0\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="s_orthogonal_projection.html#p-2434" class="internal">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-08T10:30:37-05:00       *-->
+<!--*       on 2022-08-27T12:15:22+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,15 +14,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Fix <span class="process-math">\(n\text{.}\)</span> All elementary matrices are invertible, and their inverses are elementary matrices. In fact, we have the following formulas:</p>
-<div class="displaymath process-math">
-\begin{align*}
-\underset{cr_i}{E}^{-1}\amp = \underset{\frac{1}{c}r_i}{E}\\
-\underset{r_i\leftrightarrow r_j}{E}^{-1}\amp = \underset{r_i\leftrightarrow r_j}{E}\\
-\underset{r_i+c\,r_j}E^{-1}\amp = \underset{r_i-cr_j}E
-\end{align*}
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>The <dfn class="terminology"><span class="process-math">\(n\times n\)</span> identity matrix</dfn> is the square <span class="process-math">\(n\times n\)</span> matrix</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+I_n=\begin{bmatrix}1\amp 0\amp 0 \amp \dots\amp 0\\ 0\amp 1 \amp 0 \amp \dots \amp 0\\
+\vdots \\
+0\amp 0\amp \dots \amp 0\amp 1\end{bmatrix}
+\end{equation*}
 </div>
-<span class="incontext"><a href="s_invertibility_theorem.html#p-889">in-context</a></span>
+<p class="continuation">with ones along the diagonal and zeros everywhere else. In other words, for all <span class="process-math">\(1\leq i\leq n\)</span> ans <span class="process-math">\(1\leq j\leq n\text{,}\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(I_n)_{ij}=\begin{cases} 1 \amp \text{if } i=j \\ 0\amp \text{if } i\ne j
+\end{cases}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">When the size <span class="process-math">\(n\)</span> of the identity matrix is not important, we will often denote it simply as <span class="process-math">\(I\text{.}\)</span></p>
+<span class="incontext"><a href="s_algebraic.html#p-889" class="internal">in-context</a></span>
 </body>
 </html>

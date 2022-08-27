@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-08T10:30:42-05:00       *-->
+<!--*       on 2022-08-27T12:15:23+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,19 +14,21 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Given an <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(A\text{,}\)</span> we have</p>
-<div class="displaymath process-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>Let <span class="process-math">\(\rho_i\)</span> correspond to the elementary matrix <span class="process-math">\(E_i\text{.}\)</span> Then we represent this same sequence using matrix multiplication:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation}
-A\,(\adj A)=(\adj A)\, A=(\det A)I\text{.}\tag{2.5.7}
+\begin{array}{c} A\boldx=\boldb\\  E_1A\boldx=E_1\boldb\\  E_2E_1A\boldx=E_2E_1\boldb\\  \vdots \\ E_rE_{r-1}\cdots E_2E_1A\boldx=E_rE_{r-1}\cdots E_2E_1\boldb \\
+U\boldx=\boldb' \end{array}\text{.}\tag{2.4.3}
 \end{equation}
 </div>
-<p class="continuation">As a consequence, if <span class="process-math">\(\det A\ne 0\text{,}\)</span> then <span class="process-math">\(A\)</span> is invertible and</p>
-<div class="displaymath process-math">
+<p class="continuation">This depiction of row reduction in terms of successive left-multiplication by elementary matrices will be useful to us in many ways. In particular, it follows from this discussion that two matrices <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are row equivalent if and only if we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation}
-A^{-1}=\frac{1}{\det A}\, \adj A\text{.}\tag{2.5.8}
+B=E_rE_{r-1}\cdots E_2E_1A\tag{2.4.4}
 \end{equation}
 </div>
-<span class="incontext"><a href="s_det.html#p-1071">in-context</a></span>
+<p class="continuation">for some collection of elementary matrices <span class="process-math">\(E_i\text{.}\)</span></p>
+<span class="incontext"><a href="s_invertibility_theorem.html#p-1071" class="internal">in-context</a></span>
 </body>
 </html>

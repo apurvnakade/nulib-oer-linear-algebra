@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-08T10:30:08-05:00       *-->
+<!--*       on 2022-08-27T12:15:16+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -17,11 +17,10 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Linear algebra: the theory of vector spaces and linear transformations">
 <meta property="book:author" content="Aaron Greicius">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
-    useLabelIds: true,
     tagSide: "right",
     tagIndent: ".8em",
     packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
@@ -64,7 +63,38 @@
 <link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX Course: Title Here';
+eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.runestone_version = '5.0.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\newcommand{\Z}{{\mathbb Z}}
@@ -271,6 +301,8 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href="http://linear-algebra.northwestern.pub/" target="_blank"><img src="external/images/im_holycomm.svg" alt="Logo image"></a><div class="title-container">
@@ -365,79 +397,111 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <main class="main"><div id="content" class="pretext-content"><section class="appendix" id="appendix-mantras"><h2 class="heading">
 <span class="type">Appendix</span> <span class="codenumber">F</span> <span class="title">Video examples and figures</span>
 </h2>
-<h4 class="heading hide-type" title="Section 0.3: Proof techniques"><p class="assistive"><span class="codenumber">0.3</span><span class="space"> </span><span class="title">Proof techniques</span></p></h4>
+<h4 class="heading hide-type" title="Section 0.3: Proof techniques">
+<span class="codenumber">0.3</span><span class="space"> </span><span class="title">Proof techniques</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_proof_induction.html" title="Figure 0.3.9: Mathematical induction as ladder of propositions">Figure 0.3.9</a> Mathematical induction as ladder of propositions</div>
-<h4 class="heading hide-type" title="Section 1.3: Solving linear systems"><p class="assistive"><span class="codenumber">1.3</span><span class="space"> </span><span class="title">Solving linear systems</span></p></h4>
+<h4 class="heading hide-type" title="Section 1.3: Solving linear systems">
+<span class="codenumber">1.3</span><span class="space"> </span><span class="title">Solving linear systems</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_decision_tree.html" title="Figure 1.3.7: Decision tree for number of solutions to a system">Figure 1.3.7</a> Decision tree for number of solutions to a system</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/figure-3.html" title="Figure 1.3.8: Video: solving linear systems">Figure 1.3.8</a> Video: solving linear systems</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/figure-4.html" title="Figure 1.3.9: Video: solving linear systems 2">Figure 1.3.9</a> Video: solving linear systems 2</div>
-<h4 class="heading hide-type" title="Section 2.1: Matrices and their arithmetic"><p class="assistive"><span class="codenumber">2.1</span><span class="space"> </span><span class="title">Matrices and their arithmetic</span></p></h4>
+<h4 class="heading hide-type" title="Section 2.1: Matrices and their arithmetic">
+<span class="codenumber">2.1</span><span class="space"> </span><span class="title">Matrices and their arithmetic</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_matrix_mult.html" title="Figure 2.1.18: Visualizing matrix multiplication">Figure 2.1.18</a> Visualizing matrix multiplication</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_vid_matrix_mult_methods.html" title="Figure 2.1.23: Video: three methods of matrix multiplication">Figure 2.1.23</a> Video: three methods of matrix multiplication</div>
-<h4 class="heading hide-type" title="Section 2.2: Algebra of matrices"><p class="assistive"><span class="codenumber">2.2</span><span class="space"> </span><span class="title">Algebra of matrices</span></p></h4>
+<h4 class="heading hide-type" title="Section 2.2: Algebra of matrices">
+<span class="codenumber">2.2</span><span class="space"> </span><span class="title">Algebra of matrices</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_proof_assoc.html" title="Figure 2.2.12: Video: matrix multiplication is associative">Figure 2.2.12</a> Video: matrix multiplication is associative</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_proof_transp.html" title="Figure 2.2.13: Video: transpose property">Figure 2.2.13</a> Video: transpose property</div>
-<h4 class="heading hide-type" title="Section 2.4: The invertibility theorem"><p class="assistive"><span class="codenumber">2.4</span><span class="space"> </span><span class="title">The invertibility theorem</span></p></h4>
+<h4 class="heading hide-type" title="Section 2.4: The invertibility theorem">
+<span class="codenumber">2.4</span><span class="space"> </span><span class="title">The invertibility theorem</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_vid_inver_alg.html" title="Figure 2.4.12: Video: inverse algorithm">Figure 2.4.12</a> Video: inverse algorithm</div>
-<h4 class="heading hide-type" title="Section 2.5: The determinant"><p class="assistive"><span class="codenumber">2.5</span><span class="space"> </span><span class="title">The determinant</span></p></h4>
+<h4 class="heading hide-type" title="Section 2.5: The determinant">
+<span class="codenumber">2.5</span><span class="space"> </span><span class="title">The determinant</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_vid_det.html" title="Figure 2.5.13: Video: determinant">Figure 2.5.13</a> Video: determinant</div>
-<h4 class="heading hide-type" title="Section 3.2: Linear transformations"><p class="assistive"><span class="codenumber">3.2</span><span class="space"> </span><span class="title">Linear transformations</span></p></h4>
+<h4 class="heading hide-type" title="Section 3.2: Linear transformations">
+<span class="codenumber">3.2</span><span class="space"> </span><span class="title">Linear transformations</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_rot_refl.html" title="Figure 3.2.18: Eigenspaces of a symmetric matrix are orthogonal">Figure 3.2.18</a> Eigenspaces of a symmetric matrix are orthogonal</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/figure-12.html" title="Figure 3.2.21: Video: deciding if T is linear">Figure 3.2.21</a> Video: deciding if <span class="process-math">\(T\)</span> is linear</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/figure-13.html" title="Figure 3.2.22: Video: deciding if T is linear">Figure 3.2.22</a> Video: deciding if <span class="process-math">\(T\)</span> is linear</div>
-<h4 class="heading hide-type" title="Section 3.3: Subspaces"><p class="assistive"><span class="codenumber">3.3</span><span class="space"> </span><span class="title">Subspaces</span></p></h4>
+<h4 class="heading hide-type" title="Section 3.3: Subspaces">
+<span class="codenumber">3.3</span><span class="space"> </span><span class="title">Subspaces</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_vid_subspace1.html" title="Figure 3.3.5: Video: deciding if W\subseteq V is a subspace">Figure 3.3.5</a> Video: deciding if <span class="process-math">\(W\subseteq V\)</span> is a subspace</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_vid_subspace2.html" title="Figure 3.3.6: Video: deciding if W\subseteq V is a subspace">Figure 3.3.6</a> Video: deciding if <span class="process-math">\(W\subseteq V\)</span> is a subspace</div>
-<h4 class="heading hide-type" title="Section 3.5: Span and linear independence"><p class="assistive"><span class="codenumber">3.5</span><span class="space"> </span><span class="title">Span and linear independence</span></p></h4>
+<h4 class="heading hide-type" title="Section 3.5: Span and linear independence">
+<span class="codenumber">3.5</span><span class="space"> </span><span class="title">Span and linear independence</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_vid_span.html" title="Figure 3.5.4: Video: computing span">Figure 3.5.4</a> Video: computing span</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_vid_ind_func.html" title="Figure 3.5.19: Video: linear independence of functions">Figure 3.5.19</a> Video: linear independence of functions</div>
-<h4 class="heading hide-type" title="Section 3.6: Bases"><p class="assistive"><span class="codenumber">3.6</span><span class="space"> </span><span class="title">Bases</span></p></h4>
+<h4 class="heading hide-type" title="Section 3.6: Bases">
+<span class="codenumber">3.6</span><span class="space"> </span><span class="title">Bases</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_vid_basis.html" title="Figure 3.6.11: Video: deciding if a basis of \R^n">Figure 3.6.11</a> Video: deciding if a basis of <span class="process-math">\(\R^n\)</span>
 </div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_vid_basis_exotic.html" title="Figure 3.6.12: Video: deciding if a basis of V">Figure 3.6.12</a> Video: deciding if a basis of <span class="process-math">\(V\)</span>
 </div>
-<h4 class="heading hide-type" title="Section 3.7: Dimension"><p class="assistive"><span class="codenumber">3.7</span><span class="space"> </span><span class="title">Dimension</span></p></h4>
+<h4 class="heading hide-type" title="Section 3.7: Dimension">
+<span class="codenumber">3.7</span><span class="space"> </span><span class="title">Dimension</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_vid_computing_dim.html" title="Figure 3.7.7: Video: computing dimension">Figure 3.7.7</a> Video: computing dimension</div>
-<h4 class="heading hide-type" title="Section 3.8: Rank-nullity theorem and fundamental spaces"><p class="assistive"><span class="codenumber">3.8</span><span class="space"> </span><span class="title">Rank-nullity theorem and fundamental spaces</span></p></h4>
+<h4 class="heading hide-type" title="Section 3.8: Rank-nullity theorem and fundamental spaces">
+<span class="codenumber">3.8</span><span class="space"> </span><span class="title">Rank-nullity theorem and fundamental spaces</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_vid_fund_space.html" title="Figure 3.8.11: Video: computing fundamental spaces">Figure 3.8.11</a> Video: computing fundamental spaces</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_vid_contract_basis.html" title="Figure 3.8.14: Video: contracting to a basis">Figure 3.8.14</a> Video: contracting to a basis</div>
-<h4 class="heading hide-type" title="Section 4.3: Orthogonal projection"><p class="assistive"><span class="codenumber">4.3</span><span class="space"> </span><span class="title">Orthogonal projection</span></p></h4>
+<h4 class="heading hide-type" title="Section 4.3: Orthogonal projection">
+<span class="codenumber">4.3</span><span class="space"> </span><span class="title">Orthogonal projection</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_vid_orthoproj_functions.html" title="Figure 4.3.12: Video: orthogonal projection in function space">Figure 4.3.12</a> Video: orthogonal projection in function space</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_leastsquares.html" title="Figure 4.3.21: Least-squares visualization">Figure 4.3.21</a> Least-squares visualization</div>
-<h4 class="heading hide-type" title="Section 5.1: Coordinate vectors"><p class="assistive"><span class="codenumber">5.1</span><span class="space"> </span><span class="title">Coordinate vectors</span></p></h4>
+<h4 class="heading hide-type" title="Section 5.1: Coordinate vectors">
+<span class="codenumber">5.1</span><span class="space"> </span><span class="title">Coordinate vectors</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_vid_coordvecs.html" title="Figure 5.1.8: Video: coordinate vectors">Figure 5.1.8</a> Video: coordinate vectors</div>
-<h4 class="heading hide-type" title="Section 5.2: Matrix representations of linear transformations"><p class="assistive"><span class="codenumber">5.2</span><span class="space"> </span><span class="title">Matrix representations of linear transformations</span></p></h4>
+<h4 class="heading hide-type" title="Section 5.2: Matrix representations of linear transformations">
+<span class="codenumber">5.2</span><span class="space"> </span><span class="title">Matrix representations of linear transformations</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_comm_diag.html" title="Figure 5.2.8: Commutative diagram for [T]_B^{B'}">Figure 5.2.8</a> Commutative diagram for <span class="process-math">\([T]_B^{B'}\)</span>
 </div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_vid_matrix_reps.html" title="Figure 5.2.11: Video: matrix representations">Figure 5.2.11</a> Video: matrix representations</div>
-<h4 class="heading hide-type" title="Section 5.3: Change of basis"><p class="assistive"><span class="codenumber">5.3</span><span class="space"> </span><span class="title">Change of basis</span></p></h4>
+<h4 class="heading hide-type" title="Section 5.3: Change of basis">
+<span class="codenumber">5.3</span><span class="space"> </span><span class="title">Change of basis</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_vid_changeofbasis.html" title="Figure 5.3.11: Video: change of basis matrix">Figure 5.3.11</a> Video: change of basis matrix</div>
 <div>
@@ -446,16 +510,22 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <a href="" class="xref" data-knowl="./knowl/fig_vid_changebasis_reflection.html" title="Figure 5.3.26: Video: computing reflection via change of basis">Figure 5.3.26</a> Video: computing reflection via change of basis</div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_comm_tent.html" title="Figure 5.3.29: The holy commutative tent of linear algebra">Figure 5.3.29</a> The holy commutative tent of linear algebra</div>
-<h4 class="heading hide-type" title="Section 5.4: Eigenvectors and eigenvalues"><p class="assistive"><span class="codenumber">5.4</span><span class="space"> </span><span class="title">Eigenvectors and eigenvalues</span></p></h4>
+<h4 class="heading hide-type" title="Section 5.4: Eigenvectors and eigenvalues">
+<span class="codenumber">5.4</span><span class="space"> </span><span class="title">Eigenvectors and eigenvalues</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_reflection_eigenvectors.html" title="Figure 5.4.2: Reflection through \ell=\Span\{(1,2)\}">Figure 5.4.2</a> Reflection through <span class="process-math">\(\ell=\Span\{(1,2)\}\)</span>
 </div>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_eigenvector_visual.html" title="Figure 5.4.7: Visualizing eigenvectors">Figure 5.4.7</a> Visualizing eigenvectors</div>
-<h4 class="heading hide-type" title="Section 5.5: Diagonalization"><p class="assistive"><span class="codenumber">5.5</span><span class="space"> </span><span class="title">Diagonalization</span></p></h4>
+<h4 class="heading hide-type" title="Section 5.5: Diagonalization">
+<span class="codenumber">5.5</span><span class="space"> </span><span class="title">Diagonalization</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_vid_diag.html" title="Figure 5.5.17: Video: deciding if diagonalizable">Figure 5.5.17</a> Video: deciding if diagonalizable</div>
-<h4 class="heading hide-type" title="Section 5.6: The spectral theorem"><p class="assistive"><span class="codenumber">5.6</span><span class="space"> </span><span class="title">The spectral theorem</span></p></h4>
+<h4 class="heading hide-type" title="Section 5.6: The spectral theorem">
+<span class="codenumber">5.6</span><span class="space"> </span><span class="title">The spectral theorem</span>
+</h4>
 <div>
 <a href="" class="xref" data-knowl="./knowl/fig_ortho_diag.html" title="Figure 5.6.14: Eigenspaces of a symmetric matrix are orthogonal">Figure 5.6.14</a> Eigenspaces of a symmetric matrix are orthogonal</div></section></div></main>
 </div>

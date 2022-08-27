@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-08T10:30:53-05:00       *-->
+<!--*       on 2022-08-27T12:15:27+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,47 +15,20 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<ol class="decimal">
-<li>
-<p>Linearity is an easy consequence of transpose properties. For any <span class="process-math">\(A_1, A_2\in M_{nn}\)</span> and <span class="process-math">\(c_1,c_2\in \R\text{,}\)</span> we have</p>
-<div class="displaymath process-math">
-\begin{align*}
-S(c_1A_1+c_2A_2)  \amp= (c_1A_1+c_2A_2)^T-(c_1A_1+c_2A_2)  \\
-\amp = c_1A_1^T+c_2A_2^T-c_1A_1-c_2A_2\amp (\knowl{./knowl/eg_transform_transpose.html}{\text{3.2.19}}) \\
-\amp =c_1(A_1^T-A_1)+c_2(A_2^T-A_2)\\
-\amp =c_1S(A_1)+c_2S(A_2)\text{.}
-\end{align*}
-</div>
-</li>
-<li>
-<p>We have</p>
-<div class="displaymath process-math">
-\begin{align*}
-\NS S \amp= \{A\in M_{nn}\colon S(A)=\boldzero\} \\
-\amp=\{A\in M_{22}\colon A^T-A=\boldzero\} \\
-\amp=\{A\in M_{22}\colon A^T=A\} \text{.}
-\end{align*}
-</div>
-<p class="continuation">Thus <span class="process-math">\(\NS S\)</span> is the subspace of symmetric <span class="process-math">\(n\times n\)</span> matrices!</p>
-</li>
-<li>
-<p>Let <span class="process-math">\(W=\{B\in M_{nn}\colon B^T=-B\}\text{,}\)</span> subspace of skew-symmetric <span class="process-math">\(n\times n\)</span> matrices. We claim <span class="process-math">\(\im S=W\text{.}\)</span> As this is a set equality, we prove it by showing the two set inclusions <span class="process-math">\(\im S\subseteq W\)</span> and <span class="process-math">\(W\subseteq \im S\text{.}\)</span> (See <a href="s_proof_technique.html#ss_set_properties" class="internal" title="Subsection 0.3.3: Basic set properties">Basic set properties</a>)</p>
-<p>The inclusion <span class="process-math">\(\im S\subseteq W\)</span> is the easier of the two. If <span class="process-math">\(B\in \im S\text{,}\)</span> then <span class="process-math">\(B=S(A)=A^T-A\)</span> for some <span class="process-math">\(A\in M_{nn}\text{.}\)</span> Using various properties of transposition, we have</p>
-<div class="displaymath process-math">
+<p>The rotation matrix corresponding to <span class="process-math">\(\alpha=\pi\)</span> is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-B^T=(A^T-A)^T=(A^T)^T-A^T=-(A^T-A)=-B\text{,}
+A=\begin{amatrix}[rr]\cos\pi\amp -\sin\pi\\ \sin\pi \amp \cos\pi  \end{amatrix}=
+\begin{amatrix}[rr]-1\amp 0\\ 0 \amp -1  \end{amatrix}\text{.}
 \end{equation*}
 </div>
-<p class="continuation">showing that <span class="process-math">\(B\)</span> is skew-symmetric, and thus <span class="process-math">\(B\in W\text{,}\)</span> as desired.</p>
-<p>The inclusion <span class="process-math">\(W\subseteq \im S\)</span> is trickier: we must show that if <span class="process-math">\(B\)</span> is skew-symmetric, then there is an <span class="process-math">\(A\)</span> such that <span class="process-math">\(B=S(A)=A^T-A\text{.}\)</span> Assume we have a <span class="process-math">\(B\)</span> with <span class="process-math">\(B^T=-B\text{.}\)</span> Letting <span class="process-math">\(A=-\frac{1}{2}B\)</span> we have</p>
-<div class="displaymath process-math">
+<p class="continuation">Thus <span class="process-math">\(\rho_\pi=T_A\)</span> has formula</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-A^T-A=(-\frac{1}{2}B)^T+\frac{1}{2}B=\frac{1}{2}(-B^T+B)=\frac{1}{2}(B+B)=B\text{.}
+\rho_{\pi}(x,y)=(-x,-y)=-(x,y)\text{.}
 \end{equation*}
 </div>
-<p class="continuation">Thus we have found a matrix <span class="process-math">\(A\)</span> satisfying <span class="process-math">\(S(A)=B\text{.}\)</span> It follows that <span class="process-math">\(B\in\im T\text{.}\)</span></p>
-</li>
-</ol>
-<span class="incontext"><a href="s_nullspace_image.html#p-1476">in-context</a></span>
+<p class="continuation">Note: this is as expected! Rotating by 180 degrees produces the inverse vector.</p>
+<span class="incontext"><a href="s_transformation.html#p-1476" class="internal">in-context</a></span>
 </body>
 </html>

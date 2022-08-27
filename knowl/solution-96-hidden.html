@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-08T10:31:29-05:00       *-->
+<!--*       on 2022-08-27T12:15:49+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,34 +14,32 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<p>First compute</p>
-<div class="displaymath process-math">
+<p>We compute</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+p(t)=\det(tI-A)=\det \begin{amatrix}[rr]t-1\amp -2\\ -1\amp t-2 \end{amatrix}=t^2-3t=t(t-3)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Thus the eigenvalues of <span class="process-math">\(A\)</span> are <span class="process-math">\(\lambda=0\)</span> and <span class="process-math">\(\lambda=3\text{.}\)</span></p>
+<article class="case"><h5 class="heading">Basis for <span class="process-math">\(W_0\)</span>.</h5>
+<p>We have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
-p(t) \amp = \det (tI-A)\\
-\amp = \det \begin{amatrix}[rrr]t-2\amp 1\amp 1\\ 1\amp t-2\amp 1\\ 1\amp 1\amp t-2 \end{amatrix} \\
-\amp = t^3-6t^2+9t\\
-\amp = t(t^2-6t+9)\\
-\amp = t(t-3)^2\text{.}
+W_0 \amp =\NS(0I-A)\\
+\amp = \NS(-A) \\
+\amp =\NS\begin{amatrix}[rr]-1\amp -2\\ -1\amp -2 \end{amatrix}\\
+\amp =\Span\{(2,-1)\}\text{.}
 \end{align*}
 </div>
-<p class="continuation">We see that the eigenvalues of <span class="process-math">\(A\)</span> are <span class="process-math">\(\lambda=0\)</span> and <span class="process-math">\(\lambda=3\text{.}\)</span> Now compute bases for their corresponding eigenspaces.</p>
-<article class="case"><h5 class="heading">Basis of <span class="process-math">\(W_0\)</span>.</h5>
+<p class="continuation">Thus all <span class="process-math">\(0\)</span>-eigenvectors of <span class="process-math">\(A\)</span> are of the form <span class="process-math">\(c(2,-1)\text{,}\)</span> where <span class="process-math">\(c\ne 0\text{.}\)</span></p></article><article class="case"><h5 class="heading">Basis for <span class="process-math">\(W_3\)</span>.</h5>
 <p>We have</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
-W_0 \amp = \NS(0I-A)\\
-\amp = \NS \begin{amatrix}[rrr]-2\amp 1\amp 1\\ 1\amp -2\amp 1\\ 1\amp 1\amp -2 \end{amatrix}  \\
-\amp = \Span\{(1,1,1)\text{.}
+W_3 \amp =\NS(3I-A)\\
+\amp =\NS\begin{amatrix}[rr]2\amp -2\\ -1\amp 1 \end{amatrix}\\
+\amp =\Span\{(1,1)\}\text{.}
 \end{align*}
 </div>
-<p class="continuation">(We have skipped the Gaussian elimination steps involved in computing a basis for <span class="process-math">\(\NS(-A)\text{.}\)</span>)</p></article><article class="case"><h5 class="heading">Basis of <span class="process-math">\(W_3\)</span>.</h5>
-<p>We have</p>
-<div class="displaymath process-math">
-\begin{align*}
-W_3 \amp = \NS(3I-A)\\
-\amp= \NS \begin{amatrix}[rrr]1\amp 1\amp 1\\ 1\amp 1\amp 1\\ 1\amp 1\amp 1 \end{amatrix} \\
-\amp = \Span\{ (1,-1,0),(1,0,-1)\}\text{.}
-\end{align*}
-</div></article> We conclude that the <span class="process-math">\(0\)</span>-eigenvectors of <span class="process-math">\(A\)</span> are the nonzero scalar multiples of <span class="process-math">\((1,1,1)\text{,}\)</span> and that the <span class="process-math">\(3\)</span>-eigenvectors are all nonzero vectors of the form <span class="process-math">\(\boldx=c_1(1,-1,0)+c_2(1,0,-1)\text{.}\)</span>
+<p class="continuation">Thus all <span class="process-math">\(3\)</span>-eigenvectors of <span class="process-math">\(A\)</span> are of the form <span class="process-math">\(c(1,1)\text{,}\)</span> where <span class="process-math">\(c\ne 0\text{.}\)</span></p></article>
 </div></body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-08T10:31:06-05:00       *-->
+<!--*       on 2022-08-27T12:15:32+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,25 +16,24 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.8.3.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.6.19.1</span><span class="period">.</span>
 </h4>
-<p>To verify the rank-nullity theorem, we must compute bases for <span class="process-math">\(\NS T\)</span> and <span class="process-math">\(\im T\text{.}\)</span> Consider first <span class="process-math">\(\NS T\text{.}\)</span> We have</p>
-<div class="displaymath process-math">
+<p>Let <span class="process-math">\(B=\{\bolde_1, \bolde_2\}=\{(1,0), (0,1)\}\text{.}\)</span> According to <a href="" class="xref" data-knowl="./knowl/cor_matrix_transformations.html" title="Corollary 3.6.16: Matrix transformations">Corollary 3.6.16</a></p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_matrix_transformations.html">
 \begin{align*}
-\NS T \amp =\{(x,y,z)\colon x+y+z=0\}\\
-\amp =\{(-s-t,s,t)\colon s,t\in\R\} \text{.}
+A \amp=\begin{bmatrix}
+\vert\amp \vert \\
+\rho_\alpha(1,0)\amp \rho_\alpha(0,1) \\
+\vert \amp \vert
+\end{bmatrix} \\
+\amp=\begin{amatrix}[rr]
+\cos\alpha \amp -\sin\alpha \\
+\sin\alpha \amp \cos\alpha
+\end{amatrix} \text{,}
 \end{align*}
 </div>
-<p class="continuation">Here the parametric description is obtained using our usual technique for solving systems of equations (<a href="" class="xref" data-knowl="./knowl/proc_solveSystem.html" title="Procedure 1.3.5: Solving linear systems">Procedure 1.3.5</a>). From the parametric description, it is clear that the set <span class="process-math">\(B=\{(-1,1,0), (-1,0,1)\}\)</span> spans <span class="process-math">\(\NS T\text{.}\)</span> Since <span class="process-math">\(B\)</span> is clearly linearly independent, it is a basis for <span class="process-math">\(\NS T\text{,}\)</span> and we conclude that <span class="process-math">\(\dim \NS=\val{B}=2\text{.}\)</span> (Alternatively, the equation <span class="process-math">\(x+y+z=0\)</span> defines a plane passing through the origin in <span class="process-math">\(\R^3\text{,}\)</span> and we know such subspaces are of dimension two. )</p>
-<p>Next it is fairly clearly that <span class="process-math">\(\im T=\{(t,t)\colon t\in \R\}=\Span\{(1,1)\}\text{.}\)</span> Thus <span class="process-math">\(B'=\{(1,1)\}\)</span> is a basis for <span class="process-math">\(\im T\)</span> and <span class="process-math">\(\dim\im T=\val{B'}=1\text{.}\)</span></p>
-<p>Finally we observe that</p>
-<div class="displaymath process-math">
-\begin{equation*}
-\nullity T+\rank T=\dim\NS T+\dim\im T=2+1=3=\dim \R^3,
-\end{equation*}
+<p class="continuation">since <span class="process-math">\((1,0)\)</span> gets rotated by <span class="process-math">\(\rho_\alpha\)</span> to <span class="process-math">\((\cos\alpha, \sin\alpha)\text{,}\)</span> and <span class="process-math">\((0,1)\)</span> gets rotated to <span class="process-math">\((-\sin\alpha, \cos\alpha)\text{.}\)</span></p>
 </div>
-<p class="continuation">as predicted by the rank-nullity theorem.</p>
-</div>
-<span class="incontext"><a href="s_rank_nullity.html#solution-58">in-context</a></span>
+<span class="incontext"><a href="s_basis.html#solution-58" class="internal">in-context</a></span>
 </body>
 </html>

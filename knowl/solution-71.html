@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-08T10:31:13-05:00       *-->
+<!--*       on 2022-08-27T12:15:38+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,10 +16,25 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.2.3.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.1.29.1</span><span class="period">.</span>
 </h4>
-<p>A simple computation shows <span class="process-math">\(\boldx_i\cdot \boldx_j=0\)</span> for all <span class="process-math">\(1\leq i\ne j\leq 3\text{,}\)</span> showing that <span class="process-math">\(S\)</span> is orthogonal. <a href="" class="xref" data-knowl="./knowl/th_orthogonal.html" title="Theorem 4.2.2: Orthogonal implies linearly independent">Theorem 4.2.2</a> implies <span class="process-math">\(S\)</span> is linearly independent. Since <span class="process-math">\(\val{S}=\dim \R^3=3\text{,}\)</span> it follows from <a href="" class="xref" data-knowl="./knowl/cor_street_smarts.html" title="Corollary 3.7.9: Street smarts">Corollary 3.7.9</a> that <span class="process-math">\(S\)</span> is a basis.</p>
+<p>First compute</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\langle f, g\rangle \amp=\int_{-\pi}^\pi \sin x\sin 2x\, dx \\
+\amp=\frac{1}{2}\int_{-\pi}^\pi\cos(x-2x)-\cos(x+2x)\, dx \amp (\text{trig. identity})\\
+\amp =\frac{1}{2}\int_{-\pi}^\pi \cos(-x)-\cos 3x\, dx\\
+\amp = 0
+\end{align*}
 </div>
-<span class="incontext"><a href="s_orthogonality.html#solution-71">in-context</a></span>
+<p class="continuation">It follows that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\cos \theta=\frac{\langle f, g\rangle}{\norm{f}\norm{g}}=0\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and hence that <span class="process-math">\(\theta=\pi/2\text{.}\)</span></p>
+</div>
+<span class="incontext"><a href="s_innerproducts.html#solution-71" class="internal">in-context</a></span>
 </body>
 </html>

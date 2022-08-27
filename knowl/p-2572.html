@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-08T10:31:27-05:00       *-->
+<!--*       on 2022-08-27T12:15:44+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,34 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>In each exercise a vector space <span class="process-math">\(V\)</span> is given along with two ordered bases <span class="process-math">\(B'\)</span> and <span class="process-math">\(B''\text{.}\)</span></p>
-<span class="incontext"><a href="s_changeofbasis.html#p-2572">in-context</a></span>
+<p>By definition we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_coordinates.html">
+\begin{equation*}
+[T]_B^{B'}=\begin{amatrix}[cccc]\vert \amp \vert \amp \amp \vert \\
+\left[T(\boldv_1)\right]_{B'}\amp [T(\boldv_2)]_{B'}\amp \dots \amp [T(\boldv_n)]_{B'} \\
+\vert \amp \vert \amp  \amp \vert
+\end{amatrix}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Given any <span class="process-math">\(\boldv\in V\text{,}\)</span> we can write</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_coordinates.html">
+\begin{equation*}
+\boldv=c_1\boldv_1+c_2\boldv_2+\dots +c_n\boldv_n
+\end{equation*}
+</div>
+<p class="continuation">for some <span class="process-math">\(c_i\in \R\text{.}\)</span> Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_coordinates.html">
+\begin{align*}
+[T]_{B}^{B'}[\boldv] \amp= [T]_{B}^{B'} \begin{bmatrix}
+c_1\\ c_2\\ \vdots \\ v_n
+\end{bmatrix} \\
+\amp=c_1[T(\boldv_1)]_{B'}+c_n[T(\boldv_n)]_{B'}+\cdots +c_n[T(\boldv_n)]_{B'} \amp (\text{column method})\\
+\amp = [c_1T(\boldv_1)+c_2T(\boldv_2)+\cdots +c_nT(\boldv_n)]_{B'} \amp (\knowl{./knowl/th_coordinates.html}{\text{5.1.12}})\\
+\amp=[T(c_1\boldv_1+c_2\boldv_2+\cdots +c_n\boldv_n)]_{B'} \amp (T \text{ is linear})\\
+\amp =[T(\boldv)]_{B'}\text{,}
+\end{align*}
+</div>
+<p class="continuation">as desired.</p>
+<span class="incontext"><a href="s_matrixreps.html#p-2572" class="internal">in-context</a></span>
 </body>
 </html>

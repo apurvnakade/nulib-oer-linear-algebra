@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-08T10:31:23-05:00       *-->
+<!--*       on 2022-08-27T12:15:45+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,21 +15,19 @@
 </head>
 <body class="ignore-math">
 <article class="li"><h5 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span>
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
 </h5>
-<p>First we easily compute <span class="process-math">\([\boldx]_{B}=(1, 3)\text{,}\)</span> again using <a href="" class="xref" data-knowl="./knowl/th_coordinates_orthogonal.html" title="Theorem 5.1.9: Coordinate vectors for orthogonal bases">Theorem 5.1.9</a>. Now use <a href="" class="xref" data-knowl="./knowl/eq_changebasis_matrix_prop.html" title="Equation 5.3.1">(5.3.1)</a>:</p>
-<div class="displaymath process-math">
-\begin{align*}
-[\boldx]_{B'} \amp =\underset{B\rightarrow B'}{P}[\boldx]_B \\
-\amp = \begin{bmatrix}\frac{3}{5}\amp -\frac{1}{5}\\ \frac{1}{5}\amp \frac{3}{5} \end{bmatrix} \begin{amatrix}[c]1 \\ 3  \end{amatrix}\\
-\amp = \begin{amatrix}[r]0\\ 2   \end{amatrix}\text{.}
-\end{align*}
-</div>
-<p class="continuation">This should come as now surprise since</p>
-<div class="displaymath process-math">
+<p>Let <span class="process-math">\(I_V\colon V\rightarrow V\)</span> be the identity transformation: i.e., <span class="process-math">\(I_V(\boldv)=\boldv\)</span> for all <span class="process-math">\(\boldv\in V\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/th_matrixrep.html" title="Theorem 5.2.6">Theorem 5.2.6</a> the matrix <span class="process-math">\([I_V]_B^{B'}\)</span> is the unique matrix satisfying</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_matrixrep.html">
 \begin{equation*}
-\boldx=(4,-2)=2(2,-1)=0\boldw_1+2\boldw_2\text{.}
+[I_V]_B^{B'}[\boldv]_B=[I_V(\boldv)]_{B'}=[\boldv]_{B'}\text{.}
 \end{equation*}
-</div></article><span class="incontext"><a href="s_changeofbasis.html#li-868">in-context</a></span>
+</div>
+<p class="continuation">Comparing the formulas for <span class="process-math">\([I_V]_{B}^{B'}\)</span> and <span class="process-math">\(\)</span> we see directly that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_matrixrep.html">
+\begin{equation*}
+[I_V]_B^{B'} = \underset{B\rightarrow B'}{P}\text{.}
+\end{equation*}
+</div></article><span class="incontext"><a href="s_changeofbasis.html#li-868" class="internal">in-context</a></span>
 </body>
 </html>
