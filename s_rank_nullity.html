@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-27T12:15:05+05:30       *-->
+<!--*       on 2022-09-06T16:42:54+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -400,20 +400,20 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <section class="introduction" id="introduction-58">This section is in a sense just a long-format example of how to compute bases and dimensions of subspaces. Along the way, however we meet the <a href="" class="xref" data-knowl="./knowl/th_rank-nullity.html" title="Theorem 3.8.2: Rank-nullity">rank-nullity theorem</a> (sometimes called the “fundamental theorem of linear algebra”), and apply this theorem in the context of <em class="emphasis">fundamental spaces of matrices</em> (<a href="" class="xref" data-knowl="./knowl/d_fundamental_space.html" title="Definition 3.8.5: Fundamental spaces">Definition 3.8.5</a>).</section><section class="subsection" id="ss_rank-nullity"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.8.1</span> <span class="title">The rank-nullity theorem</span>
 </h3>
-<section class="introduction" id="introduction-59"><p id="p-2037">The <a href="" class="xref" data-knowl="./knowl/th_rank-nullity.html" title="Theorem 3.8.2: Rank-nullity">rank-nullity theorem</a> relates the the dimensions of the null space and image of a linear transformation <span class="process-math">\(T\colon V\rightarrow W\text{,}\)</span> assuming <span class="process-math">\(V\)</span> is finite dimensional. Roughly speaking, it says that the bigger the null space, the smaller the image. More precisely, it tells us that</p>
+<section class="introduction" id="introduction-59"><p id="p-2127">The <a href="" class="xref" data-knowl="./knowl/th_rank-nullity.html" title="Theorem 3.8.2: Rank-nullity">rank-nullity theorem</a> relates the the dimensions of the null space and image of a linear transformation <span class="process-math">\(T\colon V\rightarrow W\text{,}\)</span> assuming <span class="process-math">\(V\)</span> is finite dimensional. Roughly speaking, it says that the bigger the null space, the smaller the image. More precisely, it tells us that</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/th_rank-nullity.html ./knowl/th_rank-nullity.html">
 \begin{equation*}
 \dim V=\dim\NS T+\dim\im T\text{.}
 \end{equation*}
 </div>
 <p class="continuation">As we will see, this elegant result can be used to significantly simplify computations with linear transformations. For example, in a situation where we wish to compute explicitly both the null space and image of a given linear transformation, we can often get away with just computing one of the two spaces and using the rank-nullity theorem (and a dimension argument) to easily determine the other. Additionally, the rank-nullity theorem will directly imply some intuitively obvious properties of linear transformations. For example, suppose <span class="process-math">\(V\)</span> is a finite-dimensional vector space. It seems obvious that if <span class="process-math">\(\dim W&gt; \dim V\text{,}\)</span> then there is no linear transformation mapping <span class="process-math">\(V\)</span> surjectively onto <span class="process-math">\(W\text{:}\)</span> i.e., you should not be able to map a “smaller” vector space onto a “bigger” one. Similarly, if <span class="process-math">\(\dim W \lt \dim V\text{,}\)</span> then we expect that there is no injective linear transformation mapping <span class="process-math">\(V\)</span> injectively into <span class="process-math">\(W\text{.}\)</span> Both these results are easy consequences of the <a href="" class="xref" data-knowl="./knowl/th_rank-nullity.html" title="Theorem 3.8.2: Rank-nullity">rank-nullity theorem</a>.</p>
-<p id="p-2038">Before proving the theorem we give names to <span class="process-math">\(\dim \NS T\)</span> and <span class="process-math">\(\dim\im T\text{.}\)</span></p></section><article class="definition definition-like" id="d_rank_nullity"><h4 class="heading">
+<p id="p-2128">Before proving the theorem we give names to <span class="process-math">\(\dim \NS T\)</span> and <span class="process-math">\(\dim\im T\text{.}\)</span></p></section><article class="definition definition-like" id="d_rank_nullity"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.8.1</span><span class="period">.</span><span class="space"> </span><span class="title">Rank and nullity.</span>
 </h4>
-<p id="p-2039">Let <span class="process-math">\(T\colon V\rightarrow W\)</span> be a linear transformation.</p>
+<p id="p-2129">Let <span class="process-math">\(T\colon V\rightarrow W\)</span> be a linear transformation.</p>
 <ul class="disc">
 <li id="li-616">
-<p id="p-2040">The <dfn class="terminology">rank</dfn> of <span class="process-math">\(T\text{,}\)</span> denoted <span class="process-math">\(\rank T\text{,}\)</span> is the dimension of <span class="process-math">\(\im T\text{:}\)</span> i.e.,</p>
+<p id="p-2130">The <dfn class="terminology">rank</dfn> of <span class="process-math">\(T\text{,}\)</span> denoted <span class="process-math">\(\rank T\text{,}\)</span> is the dimension of <span class="process-math">\(\im T\text{:}\)</span> i.e.,</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \rank T=\dim\im T\text{.}
@@ -421,7 +421,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </div>
 </li>
 <li id="li-617">
-<p id="p-2041">The <dfn class="terminology">nullity</dfn> of <span class="process-math">\(T\text{,}\)</span> denoted <span class="process-math">\(\nullity T\text{,}\)</span> is the dimension of <span class="process-math">\(\NS T\text{:}\)</span> i.e.,</p>
+<p id="p-2131">The <dfn class="terminology">nullity</dfn> of <span class="process-math">\(T\text{,}\)</span> denoted <span class="process-math">\(\nullity T\text{,}\)</span> is the dimension of <span class="process-math">\(\NS T\text{:}\)</span> i.e.,</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \nullity T=\dim\NS T\text{.}
@@ -431,7 +431,7 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </ul></article><article class="theorem theorem-like" id="th_rank-nullity"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.8.2</span><span class="period">.</span><span class="space"> </span><span class="title">Rank-nullity.</span>
 </h4>
-<p id="p-2042">Let <span class="process-math">\(V\)</span> be a vector space of dimension <span class="process-math">\(n\text{,}\)</span> and let <span class="process-math">\(T\colon V\rightarrow W\)</span> be a linear transformation. Then</p>
+<p id="p-2132">Let <span class="process-math">\(V\)</span> be a vector space of dimension <span class="process-math">\(n\text{,}\)</span> and let <span class="process-math">\(T\colon V\rightarrow W\)</span> be a linear transformation. Then</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 n=\dim\NS T+\dim\im T\text{,}
@@ -442,11 +442,11 @@ n=\dim\NS T+\dim\im T\text{,}
 \begin{equation*}
 n=\nullity T+\rank T\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-64"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-64"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-64"><article class="hiddenproof"><p id="p-2043">Choose a basis <span class="process-math">\(B'=\{\boldv_1, \boldv_2, \dots, \boldv_k\}\)</span> of <span class="process-math">\(\NS T\)</span> and extend <span class="process-math">\(B'\)</span> to a basis <span class="process-math">\(B=\{\boldv_1, \boldv_2,\dots, \boldv_k,\boldv_{k+1},\dots, \boldv_n\}\text{,}\)</span> using <a href="" class="xref" data-knowl="./knowl/th_basis_contract_expand.html" title="Theorem 3.7.8: Contracting and expanding to bases">Theorem 3.7.8</a>. Observe that <span class="process-math">\(\dim\NS T=\nullity T=k\)</span> and <span class="process-math">\(\dim V=n\text{.}\)</span></p>
-<p id="p-2044">We claim that <span class="process-math">\(B''=\{T(\boldv_{k+1}),T(\boldv_{k+2}),\dots, T(\boldv_{n})\}\)</span> is a basis of <span class="process-math">\(\im T\text{.}\)</span></p>
+</div></article><article class="hiddenproof" id="proof-64"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-64"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-64"><article class="hiddenproof"><p id="p-2133">Choose a basis <span class="process-math">\(B'=\{\boldv_1, \boldv_2, \dots, \boldv_k\}\)</span> of <span class="process-math">\(\NS T\)</span> and extend <span class="process-math">\(B'\)</span> to a basis <span class="process-math">\(B=\{\boldv_1, \boldv_2,\dots, \boldv_k,\boldv_{k+1},\dots, \boldv_n\}\text{,}\)</span> using <a href="" class="xref" data-knowl="./knowl/th_basis_contract_expand.html" title="Theorem 3.7.8: Contracting and expanding to bases">Theorem 3.7.8</a>. Observe that <span class="process-math">\(\dim\NS T=\nullity T=k\)</span> and <span class="process-math">\(\dim V=n\text{.}\)</span></p>
+<p id="p-2134">We claim that <span class="process-math">\(B''=\{T(\boldv_{k+1}),T(\boldv_{k+2}),\dots, T(\boldv_{n})\}\)</span> is a basis of <span class="process-math">\(\im T\text{.}\)</span></p>
 <article class="hiddenproof" id="proof-65"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-65"><h5 class="heading"><span class="title">Proof of claim.</span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-65"><article class="hiddenproof"><article class="case" id="case-89"><h5 class="heading">
 <span class="process-math">\(B''\)</span> is linearly independent.</h5>
-<p id="p-2045">Suppose <span class="process-math">\(a_kT(\boldv_k)+a_{k+1}T(\boldv_{k+1})+\cdots +a_nT(\boldv_n)=\boldzero\text{.}\)</span> Then the vector <span class="process-math">\(\boldv=a_k\boldv_k+a_{k+1}\boldv_{k+1}+\cdots +a_n\boldv_n\)</span> satisfies <span class="process-math">\(T(\boldv)=\boldzero\)</span> (using linearity of <span class="process-math">\(T\)</span>), and hence <span class="process-math">\(\boldv\in \NS T\text{.}\)</span> Then, using the fact that <span class="process-math">\(B'\)</span> is a basis of <span class="process-math">\(\NS T\text{,}\)</span> we have</p>
+<p id="p-2135">Suppose <span class="process-math">\(a_kT(\boldv_k)+a_{k+1}T(\boldv_{k+1})+\cdots +a_nT(\boldv_n)=\boldzero\text{.}\)</span> Then the vector <span class="process-math">\(\boldv=a_k\boldv_k+a_{k+1}\boldv_{k+1}+\cdots +a_n\boldv_n\)</span> satisfies <span class="process-math">\(T(\boldv)=\boldzero\)</span> (using linearity of <span class="process-math">\(T\)</span>), and hence <span class="process-math">\(\boldv\in \NS T\text{.}\)</span> Then, using the fact that <span class="process-math">\(B'\)</span> is a basis of <span class="process-math">\(\NS T\text{,}\)</span> we have</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 b_1\boldv_1+b_2\boldv_2+\cdots +\boldv_k=\boldv=a_k\boldv_k+a_{k+1}\boldv_{k+1}+\cdots +a_n\boldv_n,
@@ -460,8 +460,8 @@ b_1\boldv_1+b_2\boldv_2+\cdots +\boldv_k-a_k\boldv_k-a_{k+1}\boldv_{k+1}-\cdots 
 </div>
 <p class="continuation">Since the set <span class="process-math">\(B\)</span> is linearly independent, we conclude that <span class="process-math">\(b_i=a_j=0\)</span> for all <span class="process-math">\(1\leq i\leq k\)</span> and <span class="process-math">\(k+1\leq j\leq n\text{.}\)</span> In particular, <span class="process-math">\(a_{k+1}=a_{k+2}=\cdots=a_n=0\text{,}\)</span> as desired.</p></article><article class="case" id="case-90"><h5 class="heading">
 <span class="process-math">\(B''\)</span> spans <span class="process-math">\(\im T\)</span>.</h5>
-<p id="p-2046">It is clear that <span class="process-math">\(\Span B''\subseteq \im T\)</span> since <span class="process-math">\(T(\boldv_i)\in \im T\)</span> for all <span class="process-math">\(k+1\leq i\leq n\)</span> and <span class="process-math">\(\im T\)</span> is closed under linear combinations.</p>
-<p id="p-2047">For the other direction, suppose <span class="process-math">\(\boldw\in \im T\text{.}\)</span> Then there is a <span class="process-math">\(\boldv\in V\)</span> such that <span class="process-math">\(\boldw=T(\boldv)\text{.}\)</span> Since <span class="process-math">\(B\)</span> is a basis of <span class="process-math">\(V\)</span> we may write</p>
+<p id="p-2136">It is clear that <span class="process-math">\(\Span B''\subseteq \im T\)</span> since <span class="process-math">\(T(\boldv_i)\in \im T\)</span> for all <span class="process-math">\(k+1\leq i\leq n\)</span> and <span class="process-math">\(\im T\)</span> is closed under linear combinations.</p>
+<p id="p-2137">For the other direction, suppose <span class="process-math">\(\boldw\in \im T\text{.}\)</span> Then there is a <span class="process-math">\(\boldv\in V\)</span> such that <span class="process-math">\(\boldw=T(\boldv)\text{.}\)</span> Since <span class="process-math">\(B\)</span> is a basis of <span class="process-math">\(V\)</span> we may write</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \boldv=a_1\boldv_1+a_2\boldv_2+\cdots a_k\boldv_k+a_{k+1}\boldv_{k+1}+\cdots +a_n\boldv_n\text{,}
@@ -486,10 +486,10 @@ b_1\boldv_1+b_2\boldv_2+\cdots +\boldv_k-a_k\boldv_k-a_{k+1}\boldv_{k+1}-\cdots 
 <article class="example example-like" id="eg_rank-nullity_verification"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.8.3</span><span class="period">.</span><span class="space"> </span><span class="title">Rank-nullity: verification.</span>
 </h4>
-<p id="p-2048">Verify the rank-nullity theorem for the linear transformation <span class="process-math">\(T\colon \R^3\rightarrow \R^2\)</span> defined as <span class="process-math">\(T(x,y,z)=(x+y+z,x+y+z)\text{.}\)</span></p>
+<p id="p-2138">Verify the rank-nullity theorem for the linear transformation <span class="process-math">\(T\colon \R^3\rightarrow \R^2\)</span> defined as <span class="process-math">\(T(x,y,z)=(x+y+z,x+y+z)\text{.}\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-59" id="solution-59"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-59"><div class="solution solution-like">
-<p id="p-2049">To verify the rank-nullity theorem, we must compute bases for <span class="process-math">\(\NS T\)</span> and <span class="process-math">\(\im T\text{.}\)</span> Consider first <span class="process-math">\(\NS T\text{.}\)</span> We have</p>
+<p id="p-2139">To verify the rank-nullity theorem, we must compute bases for <span class="process-math">\(\NS T\)</span> and <span class="process-math">\(\im T\text{.}\)</span> Consider first <span class="process-math">\(\NS T\text{.}\)</span> We have</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_solveSystem.html" id="md-160">
 \begin{align*}
 \NS T \amp =\{(x,y,z)\colon x+y+z=0\}\\
@@ -497,8 +497,8 @@ b_1\boldv_1+b_2\boldv_2+\cdots +\boldv_k-a_k\boldv_k-a_{k+1}\boldv_{k+1}-\cdots 
 \end{align*}
 </div>
 <p class="continuation">Here the parametric description is obtained using our usual technique for solving systems of equations (<a href="" class="xref" data-knowl="./knowl/proc_solveSystem.html" title="Procedure 1.3.5: Solving linear systems">Procedure 1.3.5</a>). From the parametric description, it is clear that the set <span class="process-math">\(B=\{(-1,1,0), (-1,0,1)\}\)</span> spans <span class="process-math">\(\NS T\text{.}\)</span> Since <span class="process-math">\(B\)</span> is clearly linearly independent, it is a basis for <span class="process-math">\(\NS T\text{,}\)</span> and we conclude that <span class="process-math">\(\dim \NS=\val{B}=2\text{.}\)</span> (Alternatively, the equation <span class="process-math">\(x+y+z=0\)</span> defines a plane passing through the origin in <span class="process-math">\(\R^3\text{,}\)</span> and we know such subspaces are of dimension two. )</p>
-<p id="p-2050">Next it is fairly clearly that <span class="process-math">\(\im T=\{(t,t)\colon t\in \R\}=\Span\{(1,1)\}\text{.}\)</span> Thus <span class="process-math">\(B'=\{(1,1)\}\)</span> is a basis for <span class="process-math">\(\im T\)</span> and <span class="process-math">\(\dim\im T=\val{B'}=1\text{.}\)</span></p>
-<p id="p-2051">Finally we observe that</p>
+<p id="p-2140">Next it is fairly clearly that <span class="process-math">\(\im T=\{(t,t)\colon t\in \R\}=\Span\{(1,1)\}\text{.}\)</span> Thus <span class="process-math">\(B'=\{(1,1)\}\)</span> is a basis for <span class="process-math">\(\im T\)</span> and <span class="process-math">\(\dim\im T=\val{B'}=1\text{.}\)</span></p>
+<p id="p-2141">Finally we observe that</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \nullity T+\rank T=\dim\NS T+\dim\im T=2+1=3=\dim \R^3,
@@ -509,7 +509,7 @@ b_1\boldv_1+b_2\boldv_2+\cdots +\boldv_k-a_k\boldv_k-a_{k+1}\boldv_{k+1}-\cdots 
 </div></article><article class="example example-like" id="eg_rank-nullity_computation"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.8.4</span><span class="period">.</span><span class="space"> </span><span class="title">Rank-nullity: application.</span>
 </h4>
-<p id="p-2052">Show that the linear transformation</p>
+<p id="p-2142">Show that the linear transformation</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-161">
 \begin{align*}
 T\colon \R^4 \amp\rightarrow \R^3 \\
@@ -519,7 +519,7 @@ T\colon \R^4 \amp\rightarrow \R^3 \\
 <p class="continuation">is surjective: i.e., <span class="process-math">\(\im T=\R^3\text{.}\)</span> Do so by first computing <span class="process-math">\(\NS T\text{.}\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-60" id="solution-60"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-60"><div class="solution solution-like">
-<p id="p-2053">We first examine <span class="process-math">\(\NS T\text{.}\)</span> We have</p>
+<p id="p-2143">We first examine <span class="process-math">\(\NS T\text{.}\)</span> We have</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/th_rank-nullity.html ./knowl/cor_dimension_subspace.html">
 \begin{equation*}
 T(x,y,z,w)=\boldzero \iff \begin{linsys}{4}
@@ -546,14 +546,14 @@ x\amp \amp \amp \amp \amp + \amp w\amp =\amp 0\\
 </div></article></section><section class="subsection" id="ss_fundamental_spaces"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.8.2</span> <span class="title">Fundamental spaces of matrices</span>
 </h3>
-<p id="p-2054">We now treat the special case of matrix transformations <span class="process-math">\(T_A\colon \R^n\rightarrow \R^m\text{.}\)</span> The <em class="emphasis">fundamenal spaces</em> of a matrix <span class="process-math">\(A\)</span> defined below are can each be connected to <span class="process-math">\(\NS T_A\)</span> and <span class="process-math">\(\im T_A\text{,}\)</span> and hence the rank-nullity theorem comes to bear in their analysis. Observe that <span class="process-math">\(\NS A\)</span> was defined previously (<a href="" class="xref" data-knowl="./knowl/d_nullspace_matrix.html" title="Definition 3.4.4: Null space of a matrix">3.4.4</a>). We include it below to gather all the fundamental spaces together under one definition.</p>
+<p id="p-2144">We now treat the special case of matrix transformations <span class="process-math">\(T_A\colon \R^n\rightarrow \R^m\text{.}\)</span> The <em class="emphasis">fundamenal spaces</em> of a matrix <span class="process-math">\(A\)</span> defined below are can each be connected to <span class="process-math">\(\NS T_A\)</span> and <span class="process-math">\(\im T_A\text{,}\)</span> and hence the rank-nullity theorem comes to bear in their analysis. Observe that <span class="process-math">\(\NS A\)</span> was defined previously (<a href="" class="xref" data-knowl="./knowl/d_nullspace_matrix.html" title="Definition 3.4.4: Null space of a matrix">3.4.4</a>). We include it below to gather all the fundamental spaces together under one definition.</p>
 <article class="definition definition-like" id="d_fundamental_space"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.8.5</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental spaces.</span>
 </h4>
-<p id="p-2055">Let <span class="process-math">\(A\)</span> be a an <span class="process-math">\(m\times n\)</span> matrix. Let <span class="process-math">\(\boldr_1,\dots, \boldr_m\)</span> be the <span class="process-math">\(m\)</span> rows of <span class="process-math">\(A\text{,}\)</span> and let <span class="process-math">\(\boldc_1,\dots \boldc_n\)</span> be its <span class="process-math">\(n\)</span> columns. The following subspaces are called the <dfn class="terminology">fundamental subspaces of <span class="process-math">\(A\)</span></dfn>.</p>
+<p id="p-2145">Let <span class="process-math">\(A\)</span> be a an <span class="process-math">\(m\times n\)</span> matrix. Let <span class="process-math">\(\boldr_1,\dots, \boldr_m\)</span> be the <span class="process-math">\(m\)</span> rows of <span class="process-math">\(A\text{,}\)</span> and let <span class="process-math">\(\boldc_1,\dots \boldc_n\)</span> be its <span class="process-math">\(n\)</span> columns. The following subspaces are called the <dfn class="terminology">fundamental subspaces of <span class="process-math">\(A\)</span></dfn>.</p>
 <ul class="disc">
 <li id="li-618">
-<p id="p-2056">The <dfn class="terminology">null space of <span class="process-math">\(A\)</span></dfn>, denoted <span class="process-math">\(\NS A\)</span> is defined as</p>
+<p id="p-2146">The <dfn class="terminology">null space of <span class="process-math">\(A\)</span></dfn>, denoted <span class="process-math">\(\NS A\)</span> is defined as</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \NS A =\{\boldx\in\R^n\colon A\boldx=\boldzero\}\subseteq \R^n.\text{.}
@@ -561,7 +561,7 @@ x\amp \amp \amp \amp \amp + \amp w\amp =\amp 0\\
 </div>
 </li>
 <li id="li-619">
-<p id="p-2057">The <dfn class="terminology">row space of <span class="process-math">\(A\)</span></dfn>, denoted <span class="process-math">\(\RS A\text{,}\)</span> is defined as</p>
+<p id="p-2147">The <dfn class="terminology">row space of <span class="process-math">\(A\)</span></dfn>, denoted <span class="process-math">\(\RS A\text{,}\)</span> is defined as</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \RS A=\Span \{\boldr_1, \boldr_2, \dots, \boldr_m\}\subseteq \R^n\text{.}
@@ -569,7 +569,7 @@ x\amp \amp \amp \amp \amp + \amp w\amp =\amp 0\\
 </div>
 </li>
 <li id="li-620">
-<p id="p-2058">The <dfn class="terminology">column space of <span class="process-math">\(A\)</span></dfn>, denoted <span class="process-math">\(\CS A\text{,}\)</span> is defined as</p>
+<p id="p-2148">The <dfn class="terminology">column space of <span class="process-math">\(A\)</span></dfn>, denoted <span class="process-math">\(\CS A\text{,}\)</span> is defined as</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \CS A=\Span \{\boldc_1, \boldc_2, \dots, \boldc_n\}\subseteq \R^m\text{.}
@@ -577,7 +577,7 @@ x\amp \amp \amp \amp \amp + \amp w\amp =\amp 0\\
 </div>
 </li>
 </ul>
-<p id="p-2059">The <dfn class="terminology">rank</dfn> and <dfn class="terminology">nullity</dfn> of <span class="process-math">\(A\text{,}\)</span> denoted <span class="process-math">\(\rank A\)</span> and <span class="process-math">\(\nullity A\text{,}\)</span> respectively, are defined as <span class="process-math">\(\rank A=\dim \CS A\)</span> and <span class="process-math">\(\nullity A=\dim\NS A\text{.}\)</span></p></article><p id="p-2060">How do the fundamental spaces of a matrix <span class="process-math">\(A\)</span> relate to its associated matrix transformation <span class="process-math">\(T_A\text{?}\)</span> It is easy to see that <span class="process-math">\(\NS T_A=\NS A\text{,}\)</span> and indeed we made this connection in <a href="s_nullspace_image.html" class="internal" title="Section 3.4: Null space and image">Section 3.4</a>. What about <span class="process-math">\(\im T_A\text{?}\)</span> We claim that <span class="process-math">\(\im T_A=\CS A\text{.}\)</span> To see why, let <span class="process-math">\(\boldc_1, \boldc_2,\dots, \boldc_n\)</span> be the columns of <span class="process-math">\(A\)</span> and consider the following chain of equivalences:</p>
+<p id="p-2149">The <dfn class="terminology">rank</dfn> and <dfn class="terminology">nullity</dfn> of <span class="process-math">\(A\text{,}\)</span> denoted <span class="process-math">\(\rank A\)</span> and <span class="process-math">\(\nullity A\text{,}\)</span> respectively, are defined as <span class="process-math">\(\rank A=\dim \CS A\)</span> and <span class="process-math">\(\nullity A=\dim\NS A\text{.}\)</span></p></article><p id="p-2150">How do the fundamental spaces of a matrix <span class="process-math">\(A\)</span> relate to its associated matrix transformation <span class="process-math">\(T_A\text{?}\)</span> It is easy to see that <span class="process-math">\(\NS T_A=\NS A\text{,}\)</span> and indeed we made this connection in <a href="s_nullspace_image.html" class="internal" title="Section 3.4: Null space and image">Section 3.4</a>. What about <span class="process-math">\(\im T_A\text{?}\)</span> We claim that <span class="process-math">\(\im T_A=\CS A\text{.}\)</span> To see why, let <span class="process-math">\(\boldc_1, \boldc_2,\dots, \boldc_n\)</span> be the columns of <span class="process-math">\(A\)</span> and consider the following chain of equivalences:</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/s_nullspace_image.html ./knowl/th_column_method.html" id="md-162">
 \begin{align*}
 \boldy\in \im T_A \amp\iff \boldy=T_A(\boldx) \text{ for some } \boldx\in \mathbb{R}^n \\
@@ -597,18 +597,18 @@ x\amp \amp \amp \amp \amp + \amp w\amp =\amp 0\\
 <article class="theorem theorem-like" id="th_fundspaces_matrixtransform"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.8.6</span><span class="period">.</span><span class="space"> </span><span class="title">Null space and image as fundamental spaces.</span>
 </h4>
-<p id="p-2061">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(m\times n\)</span> matrix, and let <span class="process-math">\(T_A\colon \R^n\rightarrow \R^m\)</span> be its corresponding matrix transformation. The following equalities hold:</p>
+<p id="p-2151">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(m\times n\)</span> matrix, and let <span class="process-math">\(T_A\colon \R^n\rightarrow \R^m\)</span> be its corresponding matrix transformation. The following equalities hold:</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="mdn-2">
 \begin{align}
 \NS A\amp=\NS T_A \tag{3.8.1}\\
 \CS A\amp=\im T_A \tag{3.8.2}\\
 \CS A \amp= \{\boldy\in \R^m\colon A\boldx=\boldy \text{ is consistent}\} \text{.}\tag{3.8.3}
 \end{align}
-</div></article><p id="p-2062">The next theorem indicates how row reduction affects fundamental spaces.</p>
+</div></article><p id="p-2152">The next theorem indicates how row reduction affects fundamental spaces.</p>
 <article class="theorem theorem-like" id="th_fundspaces_rowreduce"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.8.7</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental spaces and row equivalence.</span>
 </h4>
-<p id="p-2063">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(m\times n\)</span> matrix, and suppose <span class="process-math">\(A\)</span> is row equivalent to <span class="process-math">\(B\text{.}\)</span> The following equalities hold</p>
+<p id="p-2153">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(m\times n\)</span> matrix, and suppose <span class="process-math">\(A\)</span> is row equivalent to <span class="process-math">\(B\text{.}\)</span> The following equalities hold</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="mdn-3">
 \begin{align}
 \NS A\amp =\NS B \tag{3.8.4}\\
@@ -616,8 +616,8 @@ x\amp \amp \amp \amp \amp + \amp w\amp =\amp 0\\
 \dim\CS A \amp = \CS B \text{.}\tag{3.8.6}
 \end{align}
 </div>
-<p class="continuation">Although <span class="process-math">\(\CS A\)</span> and <span class="process-math">\(\CS B\)</span> have the same dimension, they are in general not equal as subspaces.</p></article><article class="hiddenproof" id="proof-66"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-66"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-66"><article class="hiddenproof"><p id="p-2064">First observe that <span class="process-math">\(A=\begin{bmatrix}1\amp 1\\ 1\amp 1 \end{bmatrix}\)</span> is row equivalent to <span class="process-math">\(B=\begin{bmatrix}1\amp 1\\ 0 \amp 0\end{bmatrix}\)</span> and yet <span class="process-math">\(\CS A=\Span\{(1,1)\}=\{(t,t)\colon t\in \R\}\ne \CS B=\Span\{(1,0)\}=\{(t,0)\colon t\in\R\}\text{.}\)</span> Thus we do not have <span class="process-math">\(\CS A=\CS B\)</span> in general.</p>
-<p id="p-2065">We now turn to the the equalities <a href="" class="xref" data-knowl="./knowl/eq_nullA_nullB.html" title="Equation 3.8.4">(3.8.4)–(3.8.6)</a>. Assume that <span class="process-math">\(A\)</span> is row equivalent to <span class="process-math">\(B\text{.}\)</span> Using the formulation of row reduction in terms of multiplication by elementary matrices, we see that there is an invertible matrix <span class="process-math">\(Q\)</span> such that <span class="process-math">\(B=QA\text{,}\)</span> and hence also <span class="process-math">\(A=Q^{-1}B\text{.}\)</span> Then:</p>
+<p class="continuation">Although <span class="process-math">\(\CS A\)</span> and <span class="process-math">\(\CS B\)</span> have the same dimension, they are in general not equal as subspaces.</p></article><article class="hiddenproof" id="proof-66"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-66"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-66"><article class="hiddenproof"><p id="p-2154">First observe that <span class="process-math">\(A=\begin{bmatrix}1\amp 1\\ 1\amp 1 \end{bmatrix}\)</span> is row equivalent to <span class="process-math">\(B=\begin{bmatrix}1\amp 1\\ 0 \amp 0\end{bmatrix}\)</span> and yet <span class="process-math">\(\CS A=\Span\{(1,1)\}=\{(t,t)\colon t\in \R\}\ne \CS B=\Span\{(1,0)\}=\{(t,0)\colon t\in\R\}\text{.}\)</span> Thus we do not have <span class="process-math">\(\CS A=\CS B\)</span> in general.</p>
+<p id="p-2155">We now turn to the the equalities <a href="" class="xref" data-knowl="./knowl/eq_nullA_nullB.html" title="Equation 3.8.4">(3.8.4)–(3.8.6)</a>. Assume that <span class="process-math">\(A\)</span> is row equivalent to <span class="process-math">\(B\text{.}\)</span> Using the formulation of row reduction in terms of multiplication by elementary matrices, we see that there is an invertible matrix <span class="process-math">\(Q\)</span> such that <span class="process-math">\(B=QA\text{,}\)</span> and hence also <span class="process-math">\(A=Q^{-1}B\text{.}\)</span> Then:</p>
 <div class="displaymath process-math" data-contains-math-knowls=" ./knowl/th_inverse_cancel.html" id="md-163">
 \begin{align*}
 \boldx\in\NS A\amp\iff A\boldx=\boldzero \\
@@ -627,7 +627,7 @@ x\amp \amp \amp \amp \amp + \amp w\amp =\amp 0\\
 \end{align*}
 </div>
 <p class="continuation">This proves <span class="process-math">\(\NS A=\NS B\text{.}\)</span></p>
-<p id="p-2066">Next, by <a href="" class="xref" data-knowl="./knowl/th_fundspaces_matrixtransform.html" title="Theorem 3.8.6: Null space and image as fundamental spaces">Theorem 3.8.6</a> we have <span class="process-math">\(\NS A=\NS T_A\text{,}\)</span> <span class="process-math">\(\CS A=\im T_A\)</span> and <span class="process-math">\(\NS B=\NS T_B\text{,}\)</span> <span class="process-math">\(\CS B=\im T_B\text{.}\)</span> It follows that</p>
+<p id="p-2156">Next, by <a href="" class="xref" data-knowl="./knowl/th_fundspaces_matrixtransform.html" title="Theorem 3.8.6: Null space and image as fundamental spaces">Theorem 3.8.6</a> we have <span class="process-math">\(\NS A=\NS T_A\text{,}\)</span> <span class="process-math">\(\CS A=\im T_A\)</span> and <span class="process-math">\(\NS B=\NS T_B\text{,}\)</span> <span class="process-math">\(\CS B=\im T_B\text{.}\)</span> It follows that</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/th_fundspaces_matrixtransform.html ./knowl/th_rank-nullity.html ./knowl/th_rank-nullity.html ./knowl/th_row_method.html" id="md-164">
 \begin{align*}
 \dim \CS A \amp=\dim\im T_A \\
@@ -638,24 +638,24 @@ x\amp \amp \amp \amp \amp + \amp w\amp =\amp 0\\
 \end{align*}
 </div>
 <p class="continuation">Lastly, we turn to the row spaces. We will show that each row of <span class="process-math">\(B\)</span> is an element of <span class="process-math">\(\RS A\text{,}\)</span> from whence it follows that <span class="process-math">\(\RS B\subseteq \RS A\text{.}\)</span> Let <span class="process-math">\(\boldr_i\)</span> be the <span class="process-math">\(i\)</span>-th row of <span class="process-math">\(B\text{,}\)</span> and let <span class="process-math">\(\boldq_i\)</span> be the <span class="process-math">\(i\)</span>-th column of <span class="process-math">\(Q\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/th_row_method.html" title="Theorem 2.1.21: Row method of matrix multiplication">Theorem 2.1.21</a>, we have <span class="process-math">\(\boldr_i=\boldq_i A\text{,}\)</span> and furthermore, <span class="process-math">\(\boldq_i A\)</span> is the linear combination of the rows of <span class="process-math">\(A\)</span> whose coefficients come from the entries of <span class="process-math">\(\boldq_i\text{.}\)</span> Thus <span class="process-math">\(\boldr_i\in\RS A\text{,}\)</span> as desired.</p>
-<p id="p-2067">Having shown that <span class="process-math">\(\RS B\subseteq \RS A\text{,}\)</span> we see that the same argument works <em class="emphasis">mutatis mutandis</em> (swapping the roles of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> and using <span class="process-math">\(Q^{-1}\)</span> in place of <span class="process-math">\(Q\)</span>) to show that <span class="process-math">\(\RS A\subseteq \RS B\text{.}\)</span> We conclude that <span class="process-math">\(\RS A=\RS B\text{.}\)</span></p></article></div>
-<p id="p-2068">Now that we better understand the role row reduction plays in fundamental spaces, we investigate the special case of a matrix in row echelon form.</p>
+<p id="p-2157">Having shown that <span class="process-math">\(\RS B\subseteq \RS A\text{,}\)</span> we see that the same argument works <em class="emphasis">mutatis mutandis</em> (swapping the roles of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> and using <span class="process-math">\(Q^{-1}\)</span> in place of <span class="process-math">\(Q\)</span>) to show that <span class="process-math">\(\RS A\subseteq \RS B\text{.}\)</span> We conclude that <span class="process-math">\(\RS A=\RS B\text{.}\)</span></p></article></div>
+<p id="p-2158">Now that we better understand the role row reduction plays in fundamental spaces, we investigate the special case of a matrix in row echelon form.</p>
 <article class="theorem theorem-like" id="th_fundspaces_rowechelon"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.8.8</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental spaces and row echelon forms.</span>
 </h4>
-<p id="p-2069">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(m\times n\)</span> matrix, and suppose <span class="process-math">\(A\)</span> is row equivalent to the matrix <span class="process-math">\(U\)</span> in row echelon form. Let <span class="process-math">\(r \)</span> be the number of leading ones in <span class="process-math">\(U\text{,}\)</span> and let <span class="process-math">\(s=n-r\text{;}\)</span> i.e., <span class="process-math">\(r\)</span> and <span class="process-math">\(s\)</span> are the number of leading and free variables, respectively, of the system corresponding to <span class="process-math">\(\begin{amatrix}[r|r]U\amp \boldzero\end{amatrix}\text{.}\)</span> We have</p>
+<p id="p-2159">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(m\times n\)</span> matrix, and suppose <span class="process-math">\(A\)</span> is row equivalent to the matrix <span class="process-math">\(U\)</span> in row echelon form. Let <span class="process-math">\(r \)</span> be the number of leading ones in <span class="process-math">\(U\text{,}\)</span> and let <span class="process-math">\(s=n-r\text{;}\)</span> i.e., <span class="process-math">\(r\)</span> and <span class="process-math">\(s\)</span> are the number of leading and free variables, respectively, of the system corresponding to <span class="process-math">\(\begin{amatrix}[r|r]U\amp \boldzero\end{amatrix}\text{.}\)</span> We have</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="mdn-4">
 \begin{align}
 \rank A\amp =\dim\CS A=\dim \RS A=r \tag{3.8.7}\\
 \nullity A\amp=\dim\NS A=s \text{.}\tag{3.8.8}
 \end{align}
-</div></article><article class="hiddenproof" id="proof-67"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-67"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-67"><article class="hiddenproof"><p id="p-2070">By <a href="" class="xref" data-knowl="./knowl/th_fundspaces_rowreduce.html" title="Theorem 3.8.7: Fundamental spaces and row equivalence">Theorem 3.8.7</a> we know that <span class="process-math">\(\NS A=\NS U, \RS A=\RS U\text{,}\)</span> and <span class="process-math">\(\dim\CS A=\dim\CS U\text{.}\)</span> So it is enough to show that <span class="process-math">\(\dim \NS U=\dim\RS U=r\)</span> and <span class="process-math">\(\dim \NS U=s\text{.}\)</span></p>
-<p id="p-2071">First, we will show that the <span class="process-math">\(r\)</span> nonzero rows of <span class="process-math">\(U\)</span> form a basis for <span class="process-math">\(\RS U\text{,}\)</span> proving <span class="process-math">\(\dim\RS U=r\text{.}\)</span> Clearly the nonzero rows span <span class="process-math">\(\RS U\text{,}\)</span> since any linear combination of all the rows of <span class="process-math">\(U\)</span> can be expressed as a linear combination of the nonzero rows. Furthermore, since <span class="process-math">\(U\)</span> is in row echelon form, the staircase pattern of the leading ones appearing in the nonzero rows assures that these row vectors are linearly independent.</p>
-<p id="p-2072">Next, we show that the columns of <span class="process-math">\(U\)</span> containing leading ones form a basis of <span class="process-math">\(\CS U\text{.}\)</span> Let <span class="process-math">\(\boldu_{i_1},\dots, \boldu_{i_r}\)</span> be the columns of <span class="process-math">\(U\)</span> with leading ones, and let <span class="process-math">\(\boldu_{j_1}, \boldu_{j_2}, \dots, \boldu_{j_s}\)</span> be the columns without leading ones. To prove the <span class="process-math">\(\boldu_{i_k}\)</span> form a basis for <span class="process-math">\(\CS U\text{,}\)</span> we will show that given any <span class="process-math">\(\boldy\in \CS U\)</span> there is a <em class="emphasis">unique</em> choice of scalars <span class="process-math">\(c_1, c_2,\dots,
+</div></article><article class="hiddenproof" id="proof-67"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-67"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-67"><article class="hiddenproof"><p id="p-2160">By <a href="" class="xref" data-knowl="./knowl/th_fundspaces_rowreduce.html" title="Theorem 3.8.7: Fundamental spaces and row equivalence">Theorem 3.8.7</a> we know that <span class="process-math">\(\NS A=\NS U, \RS A=\RS U\text{,}\)</span> and <span class="process-math">\(\dim\CS A=\dim\CS U\text{.}\)</span> So it is enough to show that <span class="process-math">\(\dim \NS U=\dim\RS U=r\)</span> and <span class="process-math">\(\dim \NS U=s\text{.}\)</span></p>
+<p id="p-2161">First, we will show that the <span class="process-math">\(r\)</span> nonzero rows of <span class="process-math">\(U\)</span> form a basis for <span class="process-math">\(\RS U\text{,}\)</span> proving <span class="process-math">\(\dim\RS U=r\text{.}\)</span> Clearly the nonzero rows span <span class="process-math">\(\RS U\text{,}\)</span> since any linear combination of all the rows of <span class="process-math">\(U\)</span> can be expressed as a linear combination of the nonzero rows. Furthermore, since <span class="process-math">\(U\)</span> is in row echelon form, the staircase pattern of the leading ones appearing in the nonzero rows assures that these row vectors are linearly independent.</p>
+<p id="p-2162">Next, we show that the columns of <span class="process-math">\(U\)</span> containing leading ones form a basis of <span class="process-math">\(\CS U\text{.}\)</span> Let <span class="process-math">\(\boldu_{i_1},\dots, \boldu_{i_r}\)</span> be the columns of <span class="process-math">\(U\)</span> with leading ones, and let <span class="process-math">\(\boldu_{j_1}, \boldu_{j_2}, \dots, \boldu_{j_s}\)</span> be the columns without leading ones. To prove the <span class="process-math">\(\boldu_{i_k}\)</span> form a basis for <span class="process-math">\(\CS U\text{,}\)</span> we will show that given any <span class="process-math">\(\boldy\in \CS U\)</span> there is a <em class="emphasis">unique</em> choice of scalars <span class="process-math">\(c_1, c_2,\dots,
 c_r\)</span> such that <span class="process-math">\(c_1\boldu_{i_1}+\cdots +c_r\boldu_{i_r}=\boldy\text{.}\)</span> (Recall that the uniqueness of this choice implies linear independence.) Given <span class="process-math">\(\boldy\in \CS U\text{,}\)</span> we can find <span class="process-math">\(\boldx\in\R^n\)</span> such that <span class="process-math">\(U\boldx=\boldy\)</span> (<a href="" class="xref" data-knowl="./knowl/th_fundspaces_matrixtransform.html" title="Theorem 3.8.6: Null space and image as fundamental spaces">3.8.6</a>), which means the linear system with augmented matrix <span class="process-math">\([\ U\ \vert \ \boldy]\)</span> is consistent. Using our Gaussian elimination theory (specifically, <a href="" class="xref" data-knowl="./knowl/proc_solveSystem.html" title="Procedure 1.3.5: Solving linear systems">Procedure 1.3.5</a>), we know that the solutions <span class="process-math">\(\boldx=(x_1,x_2,\dots,
 x_n)\)</span> to this system are in 1-1 correspondence with choices for the free variables <span class="process-math">\(x_{j_1}=t_{j_1}, x_{j_2}=t_{j_2}, \dots,
 x_{j_s}=t_{j_s}\text{.}\)</span> (Remember that the columns <span class="process-math">\(\boldu_{j_k}\)</span> without leading ones correspond to the free variables.) In particular, there is a unique solution to <span class="process-math">\(U\boldx=\boldy\)</span> where we set all the free variables equal to 0. By the column method (<a href="" class="xref" data-knowl="./knowl/th_column_method.html" title="Theorem 2.1.19: Column method of matrix multiplication">Theorem 2.1.19</a>), this gives us a unique linear combination of only the columns <span class="process-math">\(\boldu_{i_k}\)</span> with leading ones equal to <span class="process-math">\(\boldy\text{.}\)</span> This proves the claim, and shows that the columns with leading ones form a basis for <span class="process-math">\(\CS U\text{.}\)</span> We conclude that <span class="process-math">\(\dim\CS U=r\text{.}\)</span></p>
-<p id="p-2073">Lastly, we have</p>
+<p id="p-2163">Lastly, we have</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/th_rank-nullity.html ./knowl/th_fundspaces_matrixtransform.html" id="md-165">
 \begin{align*}
 \dim \NS U \amp =\dim \NS T_U \\
@@ -666,18 +666,18 @@ x_{j_s}=t_{j_s}\text{.}\)</span> (Remember that the columns <span class="process
 \end{align*}
 </div>
 <p class="continuation">where the last equality uses the fact that the sum of the number of columns with leading ones (<span class="process-math">\(r\)</span>) and the number of columns without leading ones (<span class="process-math">\(s\)</span>) is <span class="process-math">\(n\text{,}\)</span> the total number of columns.</p></article></div>
-<p id="p-2074"><a href="" class="xref" data-knowl="./knowl/th_rank_nullity_matrix.html" title="Theorem 3.8.9: Rank-nullity for matrices">Theorem 3.8.9</a> is now an easy consequence of the foregoing.</p>
+<p id="p-2164"><a href="" class="xref" data-knowl="./knowl/th_rank_nullity_matrix.html" title="Theorem 3.8.9: Rank-nullity for matrices">Theorem 3.8.9</a> is now an easy consequence of the foregoing.</p>
 <article class="theorem theorem-like" id="th_rank_nullity_matrix"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.8.9</span><span class="period">.</span><span class="space"> </span><span class="title">Rank-nullity for matrices.</span>
 </h4>
-<p id="p-2075">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(m\times n\)</span> matrix. We have</p>
+<p id="p-2165">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(m\times n\)</span> matrix. We have</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="mdn-5">
 \begin{align}
 n \amp= \nullity A+\rank A \tag{3.8.9}\\
 \amp =\dim\NS A+\CS A \tag{3.8.10}\\
 \amp =\dim\NS A+\RS A \text{.}\tag{3.8.11}
 \end{align}
-</div></article><article class="hiddenproof" id="proof-68"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-68"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-68"><article class="hiddenproof"><p id="p-2076">We have</p>
+</div></article><article class="hiddenproof" id="proof-68"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-68"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-68"><article class="hiddenproof"><p id="p-2166">We have</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/th_rank-nullity.html ./knowl/eq_col_image.html ./knowl/eq_rank_col_row.html ./knowl/d_fundamental_space.html" id="md-166">
 \begin{align*}
 n \amp =\dim\NS T_A+\dim\im T_A \amp (\knowl{./knowl/th_rank-nullity.html}{\text{Theorem 3.8.2}})\\
@@ -686,27 +686,27 @@ n \amp =\dim\NS T_A+\dim\im T_A \amp (\knowl{./knowl/th_rank-nullity.html}{\text
 \amp =\nullity A+\rank A \amp (\knowl{./knowl/d_fundamental_space.html}{\text{Definition 3.8.5}}) \text{.}
 \end{align*}
 </div></article></div>
-<p id="p-2077">We now gather this suite of results into one overall procedure for computing with fundamental spaces.</p>
+<p id="p-2167">We now gather this suite of results into one overall procedure for computing with fundamental spaces.</p>
 <article class="algorithm theorem-like" id="proc_fund_spaces"><h4 class="heading">
 <span class="type">Procedure</span><span class="space"> </span><span class="codenumber">3.8.10</span><span class="period">.</span><span class="space"> </span><span class="title">Computing bases of fundamental spaces.</span>
 </h4>
-<p id="p-2078">To compute bases for the fundamental spaces of an <span class="process-math">\(m\times n\)</span> matrix <span class="process-math">\(A\text{,}\)</span> proceed as follow.</p>
+<p id="p-2168">To compute bases for the fundamental spaces of an <span class="process-math">\(m\times n\)</span> matrix <span class="process-math">\(A\text{,}\)</span> proceed as follow.</p>
 <ol class="decimal">
-<li id="li-621"><p id="p-2079">Row reduce <span class="process-math">\(A\)</span> to a matrix <span class="process-math">\(U\)</span> in row echelon form.</p></li>
-<li id="li-622"><p id="p-2080">We have <span class="process-math">\(\NS A=\NS U\text{.}\)</span> Compute a parametric description of the solutions to the linear system <span class="process-math">\(U\boldx=\boldzero\)</span> following <a href="" class="xref" data-knowl="./knowl/proc_solveSystem.html" title="Procedure 1.3.5: Solving linear systems">Procedure 1.3.5</a>. If the free variables are <span class="process-math">\(t_1, t_2, \dots, t_k \text{,}\)</span> a basis <span class="process-math">\(B=\{\boldv_1, \boldv_2, \dots, \boldv_k\}\)</span> of <span class="process-math">\(\NS A\)</span> is obtained by letting <span class="process-math">\(\boldv_i\)</span> be the solution corresponding to the choice <span class="process-math">\(t_i=1\)</span> and <span class="process-math">\(t_j=0\)</span> for <span class="process-math">\(j\ne i\text{.}\)</span></p></li>
-<li id="li-623"><p id="p-2081">We have <span class="process-math">\(\RS A=\RS U\text{.}\)</span> The set of nonzero rows of <span class="process-math">\(U\)</span> is a basis for <span class="process-math">\(\RS A\text{.}\)</span></p></li>
-<li id="li-624"><p id="p-2082">In general <span class="process-math">\(\CS A\ne \CS U\text{.}\)</span> However, the columns of <span class="process-math">\(U\)</span> containing leading ones form a basis of <span class="process-math">\(\CS U\text{,}\)</span> and the <em class="emphasis">corresponding columns</em> of <span class="process-math">\(A\)</span> form a basis for <span class="process-math">\(\CS A\text{.}\)</span></p></li>
+<li id="li-621"><p id="p-2169">Row reduce <span class="process-math">\(A\)</span> to a matrix <span class="process-math">\(U\)</span> in row echelon form.</p></li>
+<li id="li-622"><p id="p-2170">We have <span class="process-math">\(\NS A=\NS U\text{.}\)</span> Compute a parametric description of the solutions to the linear system <span class="process-math">\(U\boldx=\boldzero\)</span> following <a href="" class="xref" data-knowl="./knowl/proc_solveSystem.html" title="Procedure 1.3.5: Solving linear systems">Procedure 1.3.5</a>. If the free variables are <span class="process-math">\(t_1, t_2, \dots, t_k \text{,}\)</span> a basis <span class="process-math">\(B=\{\boldv_1, \boldv_2, \dots, \boldv_k\}\)</span> of <span class="process-math">\(\NS A\)</span> is obtained by letting <span class="process-math">\(\boldv_i\)</span> be the solution corresponding to the choice <span class="process-math">\(t_i=1\)</span> and <span class="process-math">\(t_j=0\)</span> for <span class="process-math">\(j\ne i\text{.}\)</span></p></li>
+<li id="li-623"><p id="p-2171">We have <span class="process-math">\(\RS A=\RS U\text{.}\)</span> The set of nonzero rows of <span class="process-math">\(U\)</span> is a basis for <span class="process-math">\(\RS A\text{.}\)</span></p></li>
+<li id="li-624"><p id="p-2172">In general <span class="process-math">\(\CS A\ne \CS U\text{.}\)</span> However, the columns of <span class="process-math">\(U\)</span> containing leading ones form a basis of <span class="process-math">\(\CS U\text{,}\)</span> and the <em class="emphasis">corresponding columns</em> of <span class="process-math">\(A\)</span> form a basis for <span class="process-math">\(\CS A\text{.}\)</span></p></li>
 </ol></article><section class="paragraphs" id="ss_vid_eg_fund_space"><h4 class="heading"><span class="title">Video example: fundamental spaces.</span></h4>
 <figure class="figure figure-like" id="fig_vid_fund_space"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="vid_fund_space" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/Ua3RDLgVoTg?&amp;modestbranding=1&amp;rel=0"></iframe></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.8.11<span class="period">.</span></span><span class="space"> </span>Video: computing fundamental spaces</figcaption></figure></section><p id="p-2083">The results <a href="" class="xref" data-knowl="./knowl/th_fundspaces_matrixtransform.html" title="Theorem 3.8.6: Null space and image as fundamental spaces">3.8.6–3.8.9</a> allow us to add seven more equivalent statements to our invertibility theorem, bringing us to a total of fourteen!</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.8.11<span class="period">.</span></span><span class="space"> </span>Video: computing fundamental spaces</figcaption></figure></section><p id="p-2173">The results <a href="" class="xref" data-knowl="./knowl/th_fundspaces_matrixtransform.html" title="Theorem 3.8.6: Null space and image as fundamental spaces">3.8.6–3.8.9</a> allow us to add seven more equivalent statements to our invertibility theorem, bringing us to a total of fourteen!</p>
 <article class="theorem theorem-like" id="th_invertibility_supersized"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.8.12</span><span class="period">.</span><span class="space"> </span><span class="title">Invertibility theorem (supersized).</span>
 </h4>
-<p id="p-2084">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(n\times n\)</span> matrix. The following statements are equivalent.</p>
+<p id="p-2174">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(n\times n\)</span> matrix. The following statements are equivalent.</p>
 <ol class="decimal">
-<li id="li-625"><p id="p-2085"><span class="process-math">\(A\)</span> is invertible.</p></li>
+<li id="li-625"><p id="p-2175"><span class="process-math">\(A\)</span> is invertible.</p></li>
 <li id="li-626">
-<p id="p-2086">The matrix equation</p>
+<p id="p-2176">The matrix equation</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 A\underset{n\times 1}{\boldx}=\underset{n\times 1}{\boldb}
@@ -715,7 +715,7 @@ A\underset{n\times 1}{\boldx}=\underset{n\times 1}{\boldb}
 <p class="continuation">has a <em class="emphasis">unique solution</em> for <em class="emphasis">any</em> column vector  <span class="process-math">\(\boldb\text{.}\)</span></p>
 </li>
 <li id="li-627">
-<p id="p-2087">The matrix equation</p>
+<p id="p-2177">The matrix equation</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 A\underset{n\times 1}{\boldx}=\underset{n\times 1}{\boldb}
@@ -724,7 +724,7 @@ A\underset{n\times 1}{\boldx}=\underset{n\times 1}{\boldb}
 <p class="continuation">has a solution for <em class="emphasis">any</em> column vector  <span class="process-math">\(\boldb\text{.}\)</span></p>
 </li>
 <li id="li-628">
-<p id="p-2088">The matrix equation</p>
+<p id="p-2178">The matrix equation</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 A\underset{n\times 1}{\boldx}=\underset{n\times 1}{\boldzero}
@@ -732,54 +732,54 @@ A\underset{n\times 1}{\boldx}=\underset{n\times 1}{\boldzero}
 </div>
 <p class="continuation">has a <em class="emphasis">unique solution</em>: namely, <span class="process-math">\(\boldx=\boldzero_{n\times 1}\text{.}\)</span></p>
 </li>
-<li id="li-629"><p id="p-2089"><span class="process-math">\(A\)</span> is row equivalent to <span class="process-math">\(I_n\text{,}\)</span> the <span class="process-math">\(n\times n\)</span> identity matrix.</p></li>
-<li id="li-630"><p id="p-2090"><span class="process-math">\(A\)</span> is a product of elementary matrices.</p></li>
-<li id="li-631"><p id="p-2091"><span class="process-math">\(\det A\ne 0\text{.}\)</span></p></li>
-<li id="li-632"><p id="p-2092"><span class="process-math">\(\displaystyle \NS A=\{\boldzero\}\)</span></p></li>
-<li id="li-633"><p id="p-2093"><span class="process-math">\(\displaystyle \nullity A=0\)</span></p></li>
-<li id="li-634"><p id="p-2094"><span class="process-math">\(\displaystyle \rank A=0\)</span></p></li>
-<li id="li-635"><p id="p-2095"><span class="process-math">\(\displaystyle \RS A=\R^n\)</span></p></li>
-<li id="li-636"><p id="p-2096"><span class="process-math">\(\displaystyle \CS A=\R^n\)</span></p></li>
-<li id="li-637"><p id="p-2097">Any of the following equivalent conditions about the set <span class="process-math">\(S\)</span> of <em class="emphasis">columns</em> of <span class="process-math">\(A\)</span> hold: <span class="process-math">\(S\)</span> is a basis of <span class="process-math">\(\R^n\text{;}\)</span> <span class="process-math">\(S\)</span> spans <span class="process-math">\(\R^n\text{;}\)</span> <span class="process-math">\(S\)</span> is linearly independent.</p></li>
-<li id="li-638"><p id="p-2098">Any of the following equivalent conditions about the set <span class="process-math">\(S\)</span> of <em class="emphasis">rows</em> of <span class="process-math">\(A\)</span> hold: <span class="process-math">\(S\)</span> is a basis of <span class="process-math">\(\R^n\text{;}\)</span> <span class="process-math">\(S\)</span> spans <span class="process-math">\(\R^n\text{;}\)</span> <span class="process-math">\(S\)</span> is linearly independent.</p></li>
+<li id="li-629"><p id="p-2179"><span class="process-math">\(A\)</span> is row equivalent to <span class="process-math">\(I_n\text{,}\)</span> the <span class="process-math">\(n\times n\)</span> identity matrix.</p></li>
+<li id="li-630"><p id="p-2180"><span class="process-math">\(A\)</span> is a product of elementary matrices.</p></li>
+<li id="li-631"><p id="p-2181"><span class="process-math">\(\det A\ne 0\text{.}\)</span></p></li>
+<li id="li-632"><p id="p-2182"><span class="process-math">\(\displaystyle \NS A=\{\boldzero\}\)</span></p></li>
+<li id="li-633"><p id="p-2183"><span class="process-math">\(\displaystyle \nullity A=0\)</span></p></li>
+<li id="li-634"><p id="p-2184"><span class="process-math">\(\displaystyle \rank A=0\)</span></p></li>
+<li id="li-635"><p id="p-2185"><span class="process-math">\(\displaystyle \RS A=\R^n\)</span></p></li>
+<li id="li-636"><p id="p-2186"><span class="process-math">\(\displaystyle \CS A=\R^n\)</span></p></li>
+<li id="li-637"><p id="p-2187">Any of the following equivalent conditions about the set <span class="process-math">\(S\)</span> of <em class="emphasis">columns</em> of <span class="process-math">\(A\)</span> hold: <span class="process-math">\(S\)</span> is a basis of <span class="process-math">\(\R^n\text{;}\)</span> <span class="process-math">\(S\)</span> spans <span class="process-math">\(\R^n\text{;}\)</span> <span class="process-math">\(S\)</span> is linearly independent.</p></li>
+<li id="li-638"><p id="p-2188">Any of the following equivalent conditions about the set <span class="process-math">\(S\)</span> of <em class="emphasis">rows</em> of <span class="process-math">\(A\)</span> hold: <span class="process-math">\(S\)</span> is a basis of <span class="process-math">\(\R^n\text{;}\)</span> <span class="process-math">\(S\)</span> spans <span class="process-math">\(\R^n\text{;}\)</span> <span class="process-math">\(S\)</span> is linearly independent.</p></li>
 </ol></article></section><section class="subsection" id="ss_expand_contract"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.8.3</span> <span class="title">Contracting and expanding to bases</span>
 </h3>
-<p id="p-2099">Thanks to <a href="" class="xref" data-knowl="./knowl/th_basis_dimension.html" title="Theorem 3.7.3: Basis bounds">Theorem 3.7.3</a> we know that spanning sets can be contracted to bases, and linearly independent sets can be extended to bases; and we have already seen a few instances where this result has been put to good use. However, neither the theorem nor its proof provide a practical means of performing this contraction or extension. We would like a systematic way of determining which vectors to throw out (when contracting), or which vectors to chuck in (when extending). In the special case where <span class="process-math">\(V=\R^n\)</span> for some <span class="process-math">\(n\text{,}\)</span> we can adapt <a href="" class="xref" data-knowl="./knowl/proc_fund_spaces.html" title="Procedure 3.8.10: Computing bases of fundamental spaces">Procedure 3.8.10</a> to our needs.</p>
+<p id="p-2189">Thanks to <a href="" class="xref" data-knowl="./knowl/th_basis_dimension.html" title="Theorem 3.7.3: Basis bounds">Theorem 3.7.3</a> we know that spanning sets can be contracted to bases, and linearly independent sets can be extended to bases; and we have already seen a few instances where this result has been put to good use. However, neither the theorem nor its proof provide a practical means of performing this contraction or extension. We would like a systematic way of determining which vectors to throw out (when contracting), or which vectors to chuck in (when extending). In the special case where <span class="process-math">\(V=\R^n\)</span> for some <span class="process-math">\(n\text{,}\)</span> we can adapt <a href="" class="xref" data-knowl="./knowl/proc_fund_spaces.html" title="Procedure 3.8.10: Computing bases of fundamental spaces">Procedure 3.8.10</a> to our needs.</p>
 <article class="algorithm theorem-like" id="proc_contract_extend"><h4 class="heading">
 <span class="type">Procedure</span><span class="space"> </span><span class="codenumber">3.8.13</span><span class="period">.</span><span class="space"> </span><span class="title">Contracting and extending to bases of <span class="process-math">\(\R^n\)</span>.</span>
 </h4>
-<p id="p-2100">Let <span class="process-math">\(S=\{\boldv_1, \boldv_2,\dots, \boldv_r\}\subseteq \R^n\text{.}\)</span></p>
+<p id="p-2190">Let <span class="process-math">\(S=\{\boldv_1, \boldv_2,\dots, \boldv_r\}\subseteq \R^n\text{.}\)</span></p>
 <dl class="description-list">
 <dt id="li-639">Contracting to a basis</dt>
 <dd>
-<p id="p-2101">Assume <span class="process-math">\(S\)</span> spans <span class="process-math">\(\R^n\text{.}\)</span> To contract <span class="process-math">\(S\)</span> to a basis <span class="process-math">\(B\subseteq S\text{,}\)</span> proceed as follows.</p>
+<p id="p-2191">Assume <span class="process-math">\(S\)</span> spans <span class="process-math">\(\R^n\text{.}\)</span> To contract <span class="process-math">\(S\)</span> to a basis <span class="process-math">\(B\subseteq S\text{,}\)</span> proceed as follows.</p>
 <ol class="decimal">
-<li id="li-640"><p id="p-2102">Let <span class="process-math">\(A\)</span> be the <span class="process-math">\(n\times r\)</span> matrix whose <span class="process-math">\(j\)</span>-th column is given by <span class="process-math">\(\boldv_j\)</span> for all <span class="process-math">\(1\leq j\leq r\text{.}\)</span></p></li>
-<li id="li-641"><p id="p-2103">Use the column space procedure (<a href="" class="xref" data-knowl="./knowl/proc_fund_spaces.html" title="Procedure 3.8.10: Computing bases of fundamental spaces">3.8.10</a>) to compute a basis <span class="process-math">\(B\)</span> of <span class="process-math">\(\CS A\text{,}\)</span> chosen from among the original columns of <span class="process-math">\(A\text{.}\)</span></p></li>
-<li id="li-642"><p id="p-2104">The subset <span class="process-math">\(B\subseteq S\)</span> is a basis for <span class="process-math">\(\R^n\text{.}\)</span></p></li>
+<li id="li-640"><p id="p-2192">Let <span class="process-math">\(A\)</span> be the <span class="process-math">\(n\times r\)</span> matrix whose <span class="process-math">\(j\)</span>-th column is given by <span class="process-math">\(\boldv_j\)</span> for all <span class="process-math">\(1\leq j\leq r\text{.}\)</span></p></li>
+<li id="li-641"><p id="p-2193">Use the column space procedure (<a href="" class="xref" data-knowl="./knowl/proc_fund_spaces.html" title="Procedure 3.8.10: Computing bases of fundamental spaces">3.8.10</a>) to compute a basis <span class="process-math">\(B\)</span> of <span class="process-math">\(\CS A\text{,}\)</span> chosen from among the original columns of <span class="process-math">\(A\text{.}\)</span></p></li>
+<li id="li-642"><p id="p-2194">The subset <span class="process-math">\(B\subseteq S\)</span> is a basis for <span class="process-math">\(\R^n\text{.}\)</span></p></li>
 </ol>
 </dd>
 <dt id="li-643">Extending to a basis</dt>
 <dd>
-<p id="p-2105">Assume <span class="process-math">\(S\)</span> is linearly independent. To extend <span class="process-math">\(S\)</span> to a basis <span class="process-math">\(B\)</span> of <span class="process-math">\(\R^n\)</span> proceed as follows.</p>
+<p id="p-2195">Assume <span class="process-math">\(S\)</span> is linearly independent. To extend <span class="process-math">\(S\)</span> to a basis <span class="process-math">\(B\)</span> of <span class="process-math">\(\R^n\)</span> proceed as follows.</p>
 <ol class="decimal">
-<li id="li-644"><p id="p-2106">Let <span class="process-math">\(A\)</span> be the <span class="process-math">\(n\times (r+n)\)</span> matrix whose first <span class="process-math">\(r\)</span> columns are the elements of <span class="process-math">\(S\text{,}\)</span> and whose remaining <span class="process-math">\(n\)</span> columns consist of <span class="process-math">\(\bolde_1, \bolde_2, \dots, \bolde_n\text{,}\)</span> the standard basis elements of <span class="process-math">\(\R^n\text{.}\)</span></p></li>
-<li id="li-645"><p id="p-2107">Use the column space procedure (<a href="" class="xref" data-knowl="./knowl/proc_fund_spaces.html" title="Procedure 3.8.10: Computing bases of fundamental spaces">3.8.10</a>) to compute a basis <span class="process-math">\(B\)</span> of <span class="process-math">\(\CS A\text{,}\)</span> chosen from among the original columns of <span class="process-math">\(A\text{.}\)</span></p></li>
-<li id="li-646"><p id="p-2108">The set <span class="process-math">\(B\)</span> is a basis for <span class="process-math">\(\R^n\)</span> containing <span class="process-math">\(S\text{.}\)</span></p></li>
+<li id="li-644"><p id="p-2196">Let <span class="process-math">\(A\)</span> be the <span class="process-math">\(n\times (r+n)\)</span> matrix whose first <span class="process-math">\(r\)</span> columns are the elements of <span class="process-math">\(S\text{,}\)</span> and whose remaining <span class="process-math">\(n\)</span> columns consist of <span class="process-math">\(\bolde_1, \bolde_2, \dots, \bolde_n\text{,}\)</span> the standard basis elements of <span class="process-math">\(\R^n\text{.}\)</span></p></li>
+<li id="li-645"><p id="p-2197">Use the column space procedure (<a href="" class="xref" data-knowl="./knowl/proc_fund_spaces.html" title="Procedure 3.8.10: Computing bases of fundamental spaces">3.8.10</a>) to compute a basis <span class="process-math">\(B\)</span> of <span class="process-math">\(\CS A\text{,}\)</span> chosen from among the original columns of <span class="process-math">\(A\text{.}\)</span></p></li>
+<li id="li-646"><p id="p-2198">The set <span class="process-math">\(B\)</span> is a basis for <span class="process-math">\(\R^n\)</span> containing <span class="process-math">\(S\text{.}\)</span></p></li>
 </ol>
 </dd>
-</dl></article><article class="hiddenproof" id="proof-69"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-69"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-69"><article class="hiddenproof"><p id="p-2109">Let's see why in both cases the procedure produces a basis of <span class="process-math">\(\R^n\)</span> that is either a sub- or superset of <span class="process-math">\(S\text{.}\)</span></p>
+</dl></article><article class="hiddenproof" id="proof-69"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-69"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-69"><article class="hiddenproof"><p id="p-2199">Let's see why in both cases the procedure produces a basis of <span class="process-math">\(\R^n\)</span> that is either a sub- or superset of <span class="process-math">\(S\text{.}\)</span></p>
 <article class="case" id="case-91"><h5 class="heading">Contracting to a basis.</h5>
-<p id="p-2110">In this case we have <span class="process-math">\(\CS A=\Span S=\R^n\text{.}\)</span> Thus <span class="process-math">\(B\)</span> is a basis for <span class="process-math">\(\R^n\text{.}\)</span> Since the column space procedure selects columns <em class="emphasis">from among</em> the original columns of <span class="process-math">\(A\text{,}\)</span> we have <span class="process-math">\(B\subseteq S\text{,}\)</span> as desired.</p></article><article class="case" id="case-92"><h5 class="heading">Extending to a basis.</h5>
-<p id="p-2111">Since <span class="process-math">\(\CS A\)</span> contains <span class="process-math">\(\bolde_j\)</span> for all <span class="process-math">\(1\leq j\leq n\text{,}\)</span> we have <span class="process-math">\(\CS A=\R^n\text{.}\)</span> Thus <span class="process-math">\(B\)</span> is a basis for <span class="process-math">\(\R^n\text{.}\)</span> Since the first <span class="process-math">\(r\)</span> columns of <span class="process-math">\(A\)</span> are linearly independent (they are the elements of <span class="process-math">\(S\)</span>), when we row reduce <span class="process-math">\(A\)</span> to a matrix <span class="process-math">\(U\)</span> in row echelon form, the first <span class="process-math">\(r\)</span> columns of <span class="process-math">\(U\)</span> will contain leading ones. (To see this, imagine row reducing the <span class="process-math">\(n\times r\)</span> submatrix <span class="process-math">\(A'\)</span> consisting of the first <span class="process-math">\(r\)</span> columns of <span class="process-math">\(A\)</span> to a row echelon matrix <span class="process-math">\(U'\text{.}\)</span> Since these columns are linearly independent, they already form a basis for <span class="process-math">\(\CS A'\text{.}\)</span> Thus the corresponding colmns of <span class="process-math">\(U'\)</span> must all have leading ones. ) It follows that the first <span class="process-math">\(r\)</span> columns of <span class="process-math">\(A\)</span> are selected to be in the basis <span class="process-math">\(B\text{,}\)</span> and hence that <span class="process-math">\(S\subseteq B\text{,}\)</span> as desired.</p></article></article></div>
+<p id="p-2200">In this case we have <span class="process-math">\(\CS A=\Span S=\R^n\text{.}\)</span> Thus <span class="process-math">\(B\)</span> is a basis for <span class="process-math">\(\R^n\text{.}\)</span> Since the column space procedure selects columns <em class="emphasis">from among</em> the original columns of <span class="process-math">\(A\text{,}\)</span> we have <span class="process-math">\(B\subseteq S\text{,}\)</span> as desired.</p></article><article class="case" id="case-92"><h5 class="heading">Extending to a basis.</h5>
+<p id="p-2201">Since <span class="process-math">\(\CS A\)</span> contains <span class="process-math">\(\bolde_j\)</span> for all <span class="process-math">\(1\leq j\leq n\text{,}\)</span> we have <span class="process-math">\(\CS A=\R^n\text{.}\)</span> Thus <span class="process-math">\(B\)</span> is a basis for <span class="process-math">\(\R^n\text{.}\)</span> Since the first <span class="process-math">\(r\)</span> columns of <span class="process-math">\(A\)</span> are linearly independent (they are the elements of <span class="process-math">\(S\)</span>), when we row reduce <span class="process-math">\(A\)</span> to a matrix <span class="process-math">\(U\)</span> in row echelon form, the first <span class="process-math">\(r\)</span> columns of <span class="process-math">\(U\)</span> will contain leading ones. (To see this, imagine row reducing the <span class="process-math">\(n\times r\)</span> submatrix <span class="process-math">\(A'\)</span> consisting of the first <span class="process-math">\(r\)</span> columns of <span class="process-math">\(A\)</span> to a row echelon matrix <span class="process-math">\(U'\text{.}\)</span> Since these columns are linearly independent, they already form a basis for <span class="process-math">\(\CS A'\text{.}\)</span> Thus the corresponding colmns of <span class="process-math">\(U'\)</span> must all have leading ones. ) It follows that the first <span class="process-math">\(r\)</span> columns of <span class="process-math">\(A\)</span> are selected to be in the basis <span class="process-math">\(B\text{,}\)</span> and hence that <span class="process-math">\(S\subseteq B\text{,}\)</span> as desired.</p></article></article></div>
 <section class="paragraphs" id="ss_vid_eg_contract_basis"><h4 class="heading"><span class="title">Video example: contracting to a basis.</span></h4>
 <figure class="figure figure-like" id="fig_vid_contract_basis"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="vid_contract_basis" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/ZjbqE8yR7aU?&amp;modestbranding=1&amp;rel=0"></iframe></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.8.14<span class="period">.</span></span><span class="space"> </span>Video: contracting to a basis</figcaption></figure></section></section><section class="exercises" id="s_rank_nullity_ex"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">3.8.4</span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-216"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-2112">In this exercise we will show that for any <span class="process-math">\((a,b,c,d)\in \R^4\text{,}\)</span> there is a polynomial <span class="process-math">\(p(x)\in P_3\)</span> satisfying</p>
+<article class="exercise exercise-like" id="exercise-224"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-2202">In this exercise we will show that for any <span class="process-math">\((a,b,c,d)\in \R^4\text{,}\)</span> there is a polynomial <span class="process-math">\(p(x)\in P_3\)</span> satisfying</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 p(-1)=a, p(0)=b, p(1)=c, p(2)=d\text{.}
@@ -787,129 +787,129 @@ p(-1)=a, p(0)=b, p(1)=c, p(2)=d\text{.}
 </div>
 <p class="continuation">In other words given any list of values <span class="process-math">\(a, b, c, d\text{,}\)</span> we can find a polynomial that evaluates to these values at the inputs <span class="process-math">\(x=-1, 0, 1, 2\text{.}\)</span></p>
 <ol class="lower-alpha">
-<li id="li-647"><p id="p-2113">Define <span class="process-math">\(T\colon P_3\rightarrow \R^4\)</span> by <span class="process-math">\(T(p(x))=(p(-1), p(0), p(1), p(2))\text{.}\)</span> Show that <span class="process-math">\(T\)</span> is linear.</p></li>
-<li id="li-648"><p id="p-2114">Compute <span class="process-math">\(\NS T\text{.}\)</span> You may use the fact that a polynomial of degree <span class="process-math">\(n\)</span> has at most <span class="process-math">\(n\)</span> roots.</p></li>
-<li id="li-649"><p id="p-2115">Use the rank-nullity theorem to compute <span class="process-math">\(\dim \im T\text{.}\)</span> Explain why this implies <span class="process-math">\(\im T=\R^4\)</span></p></li>
-<li id="li-650"><p id="p-2116">Explain why the equality <span class="process-math">\(\im T=\R^4\)</span> is equivalent to the claim we wish to prove.</p></li>
-</ol></article><article class="exercise exercise-like" id="exercise-217"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-2117"><p id="p-2118">Use the rank-nullity theorem to compute the rank of the linear transformation <span class="process-math">\(T\)</span> described.</p></p>
+<li id="li-647"><p id="p-2203">Define <span class="process-math">\(T\colon P_3\rightarrow \R^4\)</span> by <span class="process-math">\(T(p(x))=(p(-1), p(0), p(1), p(2))\text{.}\)</span> Show that <span class="process-math">\(T\)</span> is linear.</p></li>
+<li id="li-648"><p id="p-2204">Compute <span class="process-math">\(\NS T\text{.}\)</span> You may use the fact that a polynomial of degree <span class="process-math">\(n\)</span> has at most <span class="process-math">\(n\)</span> roots.</p></li>
+<li id="li-649"><p id="p-2205">Use the rank-nullity theorem to compute <span class="process-math">\(\dim \im T\text{.}\)</span> Explain why this implies <span class="process-math">\(\im T=\R^4\)</span></p></li>
+<li id="li-650"><p id="p-2206">Explain why the equality <span class="process-math">\(\im T=\R^4\)</span> is equivalent to the claim we wish to prove.</p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-225"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-2207"><p id="p-2208">Use the rank-nullity theorem to compute the rank of the linear transformation <span class="process-math">\(T\)</span> described.</p></p>
 <ol class="lower-alpha">
-<li id="li-651"><p id="p-2119"><span class="process-math">\(T\colon\R^7\rightarrow M_{32}\text{,}\)</span> <span class="process-math">\(\nullity T=2\)</span></p></li>
-<li id="li-652"><p id="p-2120"><span class="process-math">\(T\colon P_3\rightarrow \R^5\text{,}\)</span> <span class="process-math">\(\NS T=\{\boldzero\}\)</span></p></li>
-<li id="li-653"><p id="p-2121"><span class="process-math">\(T\colon P_5 \rightarrow P_5\text{,}\)</span> <span class="process-math">\(\NS T=P_4\)</span></p></li>
-</ol></article><article class="exercise exercise-like" id="exercise-218"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<p id="p-2122">For each linear transformation <span class="process-math">\(T\colon V\rightarrow W\)</span> use the rank-nullity theorem to decide whether <span class="process-math">\(\im T=W\text{.}\)</span></p>
+<li id="li-651"><p id="p-2209"><span class="process-math">\(T\colon\R^7\rightarrow M_{32}\text{,}\)</span> <span class="process-math">\(\nullity T=2\)</span></p></li>
+<li id="li-652"><p id="p-2210"><span class="process-math">\(T\colon P_3\rightarrow \R^5\text{,}\)</span> <span class="process-math">\(\NS T=\{\boldzero\}\)</span></p></li>
+<li id="li-653"><p id="p-2211"><span class="process-math">\(T\colon P_5 \rightarrow P_5\text{,}\)</span> <span class="process-math">\(\NS T=P_4\)</span></p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-226"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-2212">For each linear transformation <span class="process-math">\(T\colon V\rightarrow W\)</span> use the rank-nullity theorem to decide whether <span class="process-math">\(\im T=W\text{.}\)</span></p>
 <ol class="lower-alpha">
-<li id="li-654"><p id="p-2123"><span class="process-math">\(\displaystyle T\colon \R^4\rightarrow \R^5\)</span></p></li>
-<li id="li-655"><p id="p-2124"><span class="process-math">\(T\colon M_{22}\rightarrow P_2\text{,}\)</span> <span class="process-math">\(\nullity T=2\)</span></p></li>
-<li id="li-656"><p id="p-2125"><span class="process-math">\(T\colon M_{23}\rightarrow M_{32}\text{,}\)</span> <span class="process-math">\(\NS T=\{\boldzero\}\)</span></p></li>
-</ol></article><article class="exercise exercise-like" id="exercise-219"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<p id="p-2126">Let <span class="process-math">\(A\)</span> be <span class="process-math">\(m\times n\)</span> with <span class="process-math">\(n\lt m\text{.}\)</span> Prove that there is a <span class="process-math">\(\boldb\in\R^m\)</span> such that the system <span class="process-math">\(A\boldx=\boldb\)</span> is inconsistent.</p>
+<li id="li-654"><p id="p-2213"><span class="process-math">\(\displaystyle T\colon \R^4\rightarrow \R^5\)</span></p></li>
+<li id="li-655"><p id="p-2214"><span class="process-math">\(T\colon M_{22}\rightarrow P_2\text{,}\)</span> <span class="process-math">\(\nullity T=2\)</span></p></li>
+<li id="li-656"><p id="p-2215"><span class="process-math">\(T\colon M_{23}\rightarrow M_{32}\text{,}\)</span> <span class="process-math">\(\NS T=\{\boldzero\}\)</span></p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-227"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<p id="p-2216">Let <span class="process-math">\(A\)</span> be <span class="process-math">\(m\times n\)</span> with <span class="process-math">\(n\lt m\text{.}\)</span> Prove that there is a <span class="process-math">\(\boldb\in\R^m\)</span> such that the system <span class="process-math">\(A\boldx=\boldb\)</span> is inconsistent.</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-23" id="hint-23"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-23"><div class="hint solution-like"><p id="p-2127">Use <a href="" class="xref" data-knowl="./knowl/th_fundspaces_matrixtransform.html" title="Theorem 3.8.6: Null space and image as fundamental spaces">Theorem 3.8.6</a> and <a href="" class="xref" data-knowl="./knowl/th_rank_nullity_matrix.html" title="Theorem 3.8.9: Rank-nullity for matrices">Theorem 3.8.9</a>.</p></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-220"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<p id="p-2128">For each matrix <span class="process-math">\(A\)</span> (i) row reduce <span class="process-math">\(A\)</span> to a matrix <span class="process-math">\(U\)</span> in row echelon form, (ii) compute bases for <span class="process-math">\(\CS A\)</span> and <span class="process-math">\(\CS U\text{,}\)</span> (iii) compute <span class="process-math">\(\dim \CS A\)</span> and <span class="process-math">\(\dim \CS U\text{,}\)</span>and (iv) decide whether <span class="process-math">\(\CS A=\CS U\text{.}\)</span></p>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-23" id="hint-23"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-23"><div class="hint solution-like"><p id="p-2217">Use <a href="" class="xref" data-knowl="./knowl/th_fundspaces_matrixtransform.html" title="Theorem 3.8.6: Null space and image as fundamental spaces">Theorem 3.8.6</a> and <a href="" class="xref" data-knowl="./knowl/th_rank_nullity_matrix.html" title="Theorem 3.8.9: Rank-nullity for matrices">Theorem 3.8.9</a>.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-228"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<p id="p-2218">For each matrix <span class="process-math">\(A\)</span> (i) row reduce <span class="process-math">\(A\)</span> to a matrix <span class="process-math">\(U\)</span> in row echelon form, (ii) compute bases for <span class="process-math">\(\CS A\)</span> and <span class="process-math">\(\CS U\text{,}\)</span> (iii) compute <span class="process-math">\(\dim \CS A\)</span> and <span class="process-math">\(\dim \CS U\text{,}\)</span>and (iv) decide whether <span class="process-math">\(\CS A=\CS U\text{.}\)</span></p>
 <ol class="lower-alpha">
-<li id="li-657"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2129">
+<li id="li-657"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2219">
 \begin{equation*}
 A=\boldzero_{n\times n}
 \end{equation*}
 </div></li>
-<li id="li-658"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2130">
+<li id="li-658"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2220">
 \begin{equation*}
 A=\begin{amatrix}[rr]-2 \amp 1\\ 1\amp 5  \end{amatrix}
 \end{equation*}
 </div></li>
-<li id="li-659"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2131">
+<li id="li-659"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2221">
 \begin{equation*}
 A=\begin{amatrix}[rrr]1 \amp 1 \amp 3 \\ 1 \amp 2 \amp 1 \\ 1 \amp 3 \amp -1  \end{amatrix}
 \end{equation*}
 </div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-221"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<p id="p-2132">Assume <span class="process-math">\(A\)</span> is invertible, and is row equivalent to the row echelon matrix <span class="process-math">\(U\text{.}\)</span> Prove: <span class="process-math">\(\CS A=\CS U\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-222"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<p id="p-2133">For each matrix below, (i) compute bases for each fundamental space, (ii) identify these spaces as familiar geometric objects in <span class="process-math">\(\R^2\)</span> or <span class="process-math">\(\R^3\text{,}\)</span> and (iii) provide sketches of each space. The sketches of <span class="process-math">\(\NS A\)</span> and <span class="process-math">\(\RS A\)</span> should be combined in the same coordinate system.</p>
+</ol></article><article class="exercise exercise-like" id="exercise-229"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<p id="p-2222">Assume <span class="process-math">\(A\)</span> is invertible, and is row equivalent to the row echelon matrix <span class="process-math">\(U\text{.}\)</span> Prove: <span class="process-math">\(\CS A=\CS U\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-230"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<p id="p-2223">For each matrix below, (i) compute bases for each fundamental space, (ii) identify these spaces as familiar geometric objects in <span class="process-math">\(\R^2\)</span> or <span class="process-math">\(\R^3\text{,}\)</span> and (iii) provide sketches of each space. The sketches of <span class="process-math">\(\NS A\)</span> and <span class="process-math">\(\RS A\)</span> should be combined in the same coordinate system.</p>
 <ol class="lower-alpha">
-<li id="li-660"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2134">
+<li id="li-660"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2224">
 \begin{equation*}
 A=\begin{amatrix}[rrr]1\amp 0\amp 0\\ 0\amp 1\amp 0  \end{amatrix}
 \end{equation*}
 </div></li>
-<li id="li-661"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2135">
+<li id="li-661"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2225">
 \begin{equation*}
 A=\begin{amatrix}[rrr]1\amp 1\amp -2\\ 3\amp -4\amp 1  \end{amatrix}
 \end{equation*}
 </div></li>
-<li id="li-662"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2136">
+<li id="li-662"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2226">
 \begin{equation*}
 A=\begin{amatrix}[rr] 1\amp 2\\ 0\amp 0 \\ -1\amp -2  \end{amatrix}
 \end{equation*}
 </div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-223"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<p id="p-2137">For each <span class="process-math">\(A\)</span> compute bases for each fundamental space. In each case, you can find bases for one of the fundamental spaces by inspection, and then use the rank-nullity theorem to reduce your workload for the other spaces. See first solution for a model example.</p>
+</ol></article><article class="exercise exercise-like" id="exercise-231"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<p id="p-2227">For each <span class="process-math">\(A\)</span> compute bases for each fundamental space. In each case, you can find bases for one of the fundamental spaces by inspection, and then use the rank-nullity theorem to reduce your workload for the other spaces. See first solution for a model example.</p>
 <ol class="lower-alpha">
-<li id="li-663"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2138">
+<li id="li-663"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2228">
 \begin{equation*}
 A=\begin{amatrix}[rrrr]1\amp 1\amp 1\amp 1\\ 1\amp 1\amp 1\amp 1\\ \end{amatrix}
 \end{equation*}
 </div></li>
-<li id="li-664"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2139">
+<li id="li-664"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2229">
 \begin{equation*}
 A=\begin{bmatrix}1\amp 1\amp 1\amp 1\\ 2\amp 1\amp 2\amp 1\\ 1\amp 1\amp 1\amp 1 \end{bmatrix}
 \end{equation*}
 </div></li>
 </ol>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-61" id="solution-61"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-61"><div class="solution solution-like"><ol class="lower-alpha"><li id="li-665"><p id="p-2140">Clearly, <span class="process-math">\(B=\{(1,1)\}\)</span> is a basis for <span class="process-math">\(\CS A\text{,}\)</span> and <span class="process-math">\(B'=\{(1,1,1,1)\}\)</span> is a basis for <span class="process-math">\(\RS A\text{.}\)</span> It follows that <span class="process-math">\(\rank A=1\)</span> and hence <span class="process-math">\(\nullity A=4-1=3\text{.}\)</span> Thus we need to find three linearly independent elements of <span class="process-math">\(\NS A\)</span> to find a basis. We can do so by inspection with the help of the column method. Namely, observe that <span class="process-math">\(\boldv_1=(1,-1,0,0), \boldv_2=(0,1,-1,0), \boldv_3=(0,0,1,-1)\)</span> are all in <span class="process-math">\(\NS A\)</span> (column method). The location of zeros in these vectors make it clear that <span class="process-math">\(B''=\{\boldv_1,\boldv_2, \bolv_3\}\)</span> are linearly independent. Since <span class="process-math">\(\dim NS A=3\text{,}\)</span> and <span class="process-math">\(\val{B''}=3\text{,}\)</span> we conclude that <span class="process-math">\(B''\)</span> is a basis of <span class="process-math">\(\NS A\)</span> (<a href="" class="xref" data-knowl="./knowl/cor_dimension_subspace.html" title="Corollary 3.7.10: Dimension of subspaces">3.7.10</a>).</p></li></ol></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-224"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<p id="p-2141">For each <span class="process-math">\(A\)</span> use <a href="" class="xref" data-knowl="./knowl/proc_fund_spaces.html" title="Procedure 3.8.10: Computing bases of fundamental spaces">Procedure 3.8.10</a> to compute bases for each fundamental space.</p>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-61" id="solution-61"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-61"><div class="solution solution-like"><ol class="lower-alpha"><li id="li-665"><p id="p-2230">Clearly, <span class="process-math">\(B=\{(1,1)\}\)</span> is a basis for <span class="process-math">\(\CS A\text{,}\)</span> and <span class="process-math">\(B'=\{(1,1,1,1)\}\)</span> is a basis for <span class="process-math">\(\RS A\text{.}\)</span> It follows that <span class="process-math">\(\rank A=1\)</span> and hence <span class="process-math">\(\nullity A=4-1=3\text{.}\)</span> Thus we need to find three linearly independent elements of <span class="process-math">\(\NS A\)</span> to find a basis. We can do so by inspection with the help of the column method. Namely, observe that <span class="process-math">\(\boldv_1=(1,-1,0,0), \boldv_2=(0,1,-1,0), \boldv_3=(0,0,1,-1)\)</span> are all in <span class="process-math">\(\NS A\)</span> (column method). The location of zeros in these vectors make it clear that <span class="process-math">\(B''=\{\boldv_1,\boldv_2, \bolv_3\}\)</span> are linearly independent. Since <span class="process-math">\(\dim NS A=3\text{,}\)</span> and <span class="process-math">\(\val{B''}=3\text{,}\)</span> we conclude that <span class="process-math">\(B''\)</span> is a basis of <span class="process-math">\(\NS A\)</span> (<a href="" class="xref" data-knowl="./knowl/cor_dimension_subspace.html" title="Corollary 3.7.10: Dimension of subspaces">3.7.10</a>).</p></li></ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-232"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<p id="p-2231">For each <span class="process-math">\(A\)</span> use <a href="" class="xref" data-knowl="./knowl/proc_fund_spaces.html" title="Procedure 3.8.10: Computing bases of fundamental spaces">Procedure 3.8.10</a> to compute bases for each fundamental space.</p>
 <ol class="lower-alpha">
-<li id="li-666"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2142">
+<li id="li-666"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2232">
 \begin{equation*}
 A= \begin{bmatrix}1\amp 2\amp 4\amp 5\\ 0\amp 1\amp -3\amp 0\\ 0\amp 0\amp 1\amp -3\\ 0\amp 0\amp 0\amp 0 \end{bmatrix}
 \end{equation*}
 </div></li>
-<li id="li-667"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2143">
+<li id="li-667"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2233">
 \begin{equation*}
 A= \begin{bmatrix}1\amp 2\amp -1\amp 5\\ 0\amp 1\amp 4\amp 3\\ 0\amp 0\amp 1\amp -7\\ 0\amp 0\amp 0\amp 1 \end{bmatrix}
 \end{equation*}
 </div></li>
-<li id="li-668"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2144">
+<li id="li-668"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2234">
 \begin{equation*}
 A = \begin{bmatrix}1\amp 4\amp 5\amp 6\amp 9\\ 3\amp -2\amp 1\amp 4\amp -1\\ -1\amp 0\amp -1\amp -2\amp -1\\ 2\amp 3\amp 5\amp 7\amp 8 \end{bmatrix}
 \end{equation*}
 </div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-225"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<p id="p-2145">Find the rank and nullity of each matrix by reducing it to row echelon form.</p>
+</ol></article><article class="exercise exercise-like" id="exercise-233"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<p id="p-2235">Find the rank and nullity of each matrix by reducing it to row echelon form.</p>
 <ol class="lower-alpha">
-<li id="li-669"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2146">
+<li id="li-669"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2236">
 \begin{equation*}
 A = \begin{amatrix}[rrrrr] 1\amp 0\amp -2\amp 1\amp 0\\ 0\amp -1\amp -3\amp 1\amp 3\\ -2\amp -1\amp 1\amp -1\amp 3\\ 0\amp 1\amp 3\amp 0\amp -4 \end{amatrix}
 \end{equation*}
 </div></li>
-<li id="li-670"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2147">
+<li id="li-670"><div class="displaymath process-math" data-contains-math-knowls="" id="p-2237">
 \begin{equation*}
 A = \begin{amatrix}[rrrr] 1\amp 3\amp 1\amp 3\\ 0\amp 1\amp 1\amp 0\\ -3\amp 0\amp 6\amp -1\\ 3\amp 4\amp -2\amp 1\\ 2\amp 0\amp -4\amp -2 \end{amatrix}
 \end{equation*}
 </div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-226"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<p id="p-2148">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(n\times n\)</span> matrix.</p>
+</ol></article><article class="exercise exercise-like" id="exercise-234"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<p id="p-2238">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(n\times n\)</span> matrix.</p>
 <ol class="lower-alpha">
-<li id="li-671"><p id="p-2149">Prove: <span class="process-math">\(A^2=\boldzero_{n\times n}\)</span> if and only if <span class="process-math">\(\CS A\subseteq \NS A\text{.}\)</span></p></li>
+<li id="li-671"><p id="p-2239">Prove: <span class="process-math">\(A^2=\boldzero_{n\times n}\)</span> if and only if <span class="process-math">\(\CS A\subseteq \NS A\text{.}\)</span></p></li>
 <li id="li-672"><p id="p-derived-li-672">Construct a <span class="process-math">\(2\times 2\)</span> matrix <span class="process-math">\(A\)</span> with <span class="process-math">\(\NS A=\CS A=\Span\{(1,2)\}\text{.}\)</span> Verify that your <span class="process-math">\(A\)</span> satisfies <span class="process-math">\(A^2=\boldzero_{2\times 2}\text{.}\)</span></p></li>
-</ol></article><article class="exercise exercise-like" id="exercise-227"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
-<p id="p-2150">Suppose <span class="process-math">\(A\)</span> is <span class="process-math">\(m\times n\)</span> with <span class="process-math">\(m\ne n\text{.}\)</span></p>
-<p id="p-2151">Prove: either the rows of <span class="process-math">\(A\)</span> are linearly dependent or the columns of <span class="process-math">\(A\)</span> are linearly dependent.</p></article><article class="exercise exercise-like" id="exercise-228"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
-<p id="p-2152">Prove: <span class="process-math">\(\nullity A=\nullity A^T\)</span> if and only if <span class="process-math">\(A\)</span> is a square matrix.</p></article><article class="exercise exercise-like" id="exercise-229"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
-<p id="p-2153">Suppose <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are row equivalent <span class="process-math">\(m\times n\)</span> matrices. For each <span class="process-math">\(1\leq j\leq n\)</span> let <span class="process-math">\(\bolda_j\)</span> and <span class="process-math">\(\boldb_j\)</span> be the <span class="process-math">\(j\)</span>-th columns of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> respectively.</p>
-<p id="p-2154">Prove: columns <span class="process-math">\(\boldb_{i_1}, \boldb_{i_2}, \dots, \boldb_{i_r}\)</span> of <span class="process-math">\(B\)</span> are linearly independent if and only if the corresponding columns <span class="process-math">\(\bolda_{i_1}, \bolda_{i_2},\dots, \bolda_{i_r}\)</span> are linearly independent.</p>
+</ol></article><article class="exercise exercise-like" id="exercise-235"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<p id="p-2240">Suppose <span class="process-math">\(A\)</span> is <span class="process-math">\(m\times n\)</span> with <span class="process-math">\(m\ne n\text{.}\)</span></p>
+<p id="p-2241">Prove: either the rows of <span class="process-math">\(A\)</span> are linearly dependent or the columns of <span class="process-math">\(A\)</span> are linearly dependent.</p></article><article class="exercise exercise-like" id="exercise-236"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<p id="p-2242">Prove: <span class="process-math">\(\nullity A=\nullity A^T\)</span> if and only if <span class="process-math">\(A\)</span> is a square matrix.</p></article><article class="exercise exercise-like" id="exercise-237"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
+<p id="p-2243">Suppose <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are row equivalent <span class="process-math">\(m\times n\)</span> matrices. For each <span class="process-math">\(1\leq j\leq n\)</span> let <span class="process-math">\(\bolda_j\)</span> and <span class="process-math">\(\boldb_j\)</span> be the <span class="process-math">\(j\)</span>-th columns of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> respectively.</p>
+<p id="p-2244">Prove: columns <span class="process-math">\(\boldb_{i_1}, \boldb_{i_2}, \dots, \boldb_{i_r}\)</span> of <span class="process-math">\(B\)</span> are linearly independent if and only if the corresponding columns <span class="process-math">\(\bolda_{i_1}, \bolda_{i_2},\dots, \bolda_{i_r}\)</span> are linearly independent.</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-24" id="hint-24"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-24"><div class="hint solution-like"><p id="p-2155">By <a href="" class="xref" data-knowl="./knowl/cor_row_equivalence_invertibility.html" title="Corollary 2.4.15: Row equivalence and invertible matrices">Corollary 2.4.15</a> there is an invertible <span class="process-math">\(Q\)</span> such that <span class="process-math">\(QA=B\text{.}\)</span> Let <span class="process-math">\(A'\)</span> and <span class="process-math">\(B'\)</span> be the submatrices of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> obtained by taking columns <span class="process-math">\(i_1, i_2, \dots, i_r\text{.}\)</span> Show that we still have <span class="process-math">\(QA'=B'\)</span> and relate linear independence of the columns to solutions of the matrix equations <span class="process-math">\(A'\boldx=\boldzero\)</span> and <span class="process-math">\(B'\boldx=\boldzero\text{.}\)</span></p></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-230"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
-<p id="p-2156">Prove <a href="" class="xref" data-knowl="./knowl/th_invertibility_supersized.html" title="Theorem 3.8.12: Invertibility theorem (supersized)">Theorem 3.8.12</a> as follows.</p>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-24" id="hint-24"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-24"><div class="hint solution-like"><p id="p-2245">By <a href="" class="xref" data-knowl="./knowl/cor_row_equivalence_invertibility.html" title="Corollary 2.4.15: Row equivalence and invertible matrices">Corollary 2.4.15</a> there is an invertible <span class="process-math">\(Q\)</span> such that <span class="process-math">\(QA=B\text{.}\)</span> Let <span class="process-math">\(A'\)</span> and <span class="process-math">\(B'\)</span> be the submatrices of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> obtained by taking columns <span class="process-math">\(i_1, i_2, \dots, i_r\text{.}\)</span> Show that we still have <span class="process-math">\(QA'=B'\)</span> and relate linear independence of the columns to solutions of the matrix equations <span class="process-math">\(A'\boldx=\boldzero\)</span> and <span class="process-math">\(B'\boldx=\boldzero\text{.}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-238"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
+<p id="p-2246">Prove <a href="" class="xref" data-knowl="./knowl/th_invertibility_supersized.html" title="Theorem 3.8.12: Invertibility theorem (supersized)">Theorem 3.8.12</a> as follows.</p>
 <ol class="lower-alpha">
-<li id="li-673"><p id="p-2157">First show that all three statements of (13) are equivalent, and that all three statements of (14) are equivalent. (Use <a href="" class="xref" data-knowl="./knowl/th_dimension_compendium.html" title="Theorem 3.7.11: Dimension theory compendium">Theorem 3.7.11</a>.)</p></li>
-<li id="li-674"><p id="p-2158">Show that statements (8)-(14) are equivalent with the help of <a href="" class="xref" data-knowl="./knowl/th_rank_nullity_matrix.html" title="Theorem 3.8.9: Rank-nullity for matrices">Theorem 3.8.9</a>.</p></li>
-<li id="li-675"><p id="p-2159">Choose a statement from (1)-(7) that can be easily shown to be equivalent to one of the statements from (8)-(14).</p></li>
+<li id="li-673"><p id="p-2247">First show that all three statements of (13) are equivalent, and that all three statements of (14) are equivalent. (Use <a href="" class="xref" data-knowl="./knowl/th_dimension_compendium.html" title="Theorem 3.7.11: Dimension theory compendium">Theorem 3.7.11</a>.)</p></li>
+<li id="li-674"><p id="p-2248">Show that statements (8)-(14) are equivalent with the help of <a href="" class="xref" data-knowl="./knowl/th_rank_nullity_matrix.html" title="Theorem 3.8.9: Rank-nullity for matrices">Theorem 3.8.9</a>.</p></li>
+<li id="li-675"><p id="p-2249">Choose a statement from (1)-(7) that can be easily shown to be equivalent to one of the statements from (8)-(14).</p></li>
 </ol></article></section></section></div></main>
 </div>
 </body>

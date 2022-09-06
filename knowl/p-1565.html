@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-27T12:15:28+05:30       *-->
+<!--*       on 2022-09-06T16:43:17+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,28 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>In <a href="s_invertibility_theorem.html" class="internal" title="Section 2.4: The invertibility theorem">The invertibility theorem</a> we met three families of square matrices: namely, the diagonal, upper triangular, and lower triangular matrices. (See <a href="" class="xref" data-knowl="./knowl/d_diagonal_triangular.html" title="Definition 2.4.7: Diagonal and triangular matrices">Definition 2.4.7</a>). We now introduce three more naturally occuring families. Before doing so, we give an official definition of the trace function. (See <a href="" class="xref" data-knowl="./knowl/ex_transformation_trace.html" title="Exercise 3.2.6.4: Trace">Exercise 3.2.6.4</a>.)</p>
-<span class="incontext"><a href="s_subspace.html#p-1565" class="internal">in-context</a></span>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>The rotation matrix corresponding to <span class="process-math">\(\alpha=2\pi/3\)</span> is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+B=\begin{amatrix}[rr]\cos(2\pi/3)\amp -\sin(2\pi/3)\\ \sin(2\pi/3) \amp \cos(2\pi/3)  \end{amatrix}=
+\begin{amatrix}[rr]-\frac{1}{2}\amp -\frac{\sqrt{3}}{2}\\ \frac{\sqrt{3}}{2} \amp -\frac{1}{2}  \end{amatrix}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Thus <span class="process-math">\(\rho_{2\pi/3}=T_B\)</span> has formula</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\rho_{2\pi/3}(x,y)=\frac{1}{2}(-x-\sqrt{3}y, \sqrt{3}x-y)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Let's check our formula for <span class="process-math">\(\rho_{2\pi/3}\)</span>for the vectors <span class="process-math">\((1,0)\)</span> and <span class="process-math">\((0,1)\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\rho_{2\pi/3}(1,0) \amp =(-1/2, \sqrt{3}/2) \\
+\rho_{2\pi/3}(0,1) \amp =(-\sqrt{3}/2, -1/2) \text{.}
+\end{align*}
+</div>
+<p class="continuation">Confirm for yourself geometrically that these are the points you get by rotating <span class="process-math">\((1,0)\)</span> and <span class="process-math">\((0,1)\)</span> by an angle of <span class="process-math">\(2\pi/3\)</span> about the origin.</p>
+<span class="incontext"><a href="s_transformation.html#p-1565" class="internal">in-context</a></span>
 </body>
 </html>

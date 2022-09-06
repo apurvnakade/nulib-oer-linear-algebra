@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-27T12:15:46+05:30       *-->
+<!--*       on 2022-09-06T16:43:35+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,25 +15,26 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>It turns out that <span class="process-math">\(\underset{B\rightarrow B'}{P}=(\underset{B'\rightarrow B}{P})^{-1}\)</span> is not so difficult to compute in this case since the columns <span class="process-math">\(\boldc_j\)</span> of <span class="process-math">\(\underset{B'\rightarrow B}{P}\)</span> satisfy</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_dotproduct_method.html">
-\begin{equation*}
-\boldc_i\cdot\boldc_j=\begin{cases} 4\amp \text{if } i=j\\ 0\amp \text{if } i\ne j
-\end{cases}\text{.}
-\end{equation*}
+<p>We have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+[T]_{B'}=[T]_{B'}^{B'} \amp = \begin{bmatrix}
+\vert\amp \vert\\
+[T((1,1))]_{B'}\amp [T(1,-1)]_{B'}\\
+\vert \amp \vert
+\end{bmatrix} \\
+\amp = \begin{bmatrix}
+\vert\amp \vert\\
+[(1,1)]_{B'}\amp [(7,3)]_{B'}\\
+\vert \amp \vert
+\end{bmatrix}\\
+\amp = \begin{amatrix}[rr]
+1\amp 5\\
+0\amp 2
+\end{amatrix}\text{,}
+\end{align*}
 </div>
-<p class="continuation">From this observation and <a href="" class="xref" data-knowl="./knowl/th_dotproduct_method.html" title="Theorem 4.1.9: Dot product and matrix multiplication">Theorem 4.1.9</a> it is easy to see that</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_dotproduct_method.html">
-\begin{equation*}
-\underset{B\rightarrow B'}{P}=(\underset{B'\rightarrow B}{P})^{-1}=\frac{1}{4}
-\begin{amatrix}[rrrr]
-1\amp 1\amp 1\amp 1\\
-1\amp -1\amp 1\amp -1\\
-1\amp 1\amp -1\amp -1\\
--1\amp -1\amp 1\amp -1
-\end{amatrix}\text{.}
-\end{equation*}
-</div>
-<span class="incontext"><a href="s_changeofbasis.html#p-2655" class="internal">in-context</a></span>
+<p class="continuation">where the last equality uses the fact that <span class="process-math">\([(1,1)]_{B'}=(1,0)\)</span> and <span class="process-math">\([(7,3)]_{B'}=(5,2)\text{,}\)</span> as you can verify yourself.</p>
+<span class="incontext"><a href="s_matrixreps.html#p-2655" class="internal">in-context</a></span>
 </body>
 </html>

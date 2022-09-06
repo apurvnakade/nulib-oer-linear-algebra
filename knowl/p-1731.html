@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-27T12:15:30+05:30       *-->
+<!--*       on 2022-09-06T16:43:19+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,34 +15,15 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>By definition</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-S=\{a(1,1)+b(1,2)\colon a,b\in \R\}=\{(a+b,a+2b)\colon a,b\in\R\}\text{.}
-\end{equation*}
-</div>
-<p class="continuation">Claim: <span class="process-math">\(\Span S=\R^2\text{.}\)</span> Proving the claim amounts to showing that for all <span class="process-math">\((c,d)\in \R^2\)</span> there exist <span class="process-math">\(a,b\in \R\)</span> such that</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\begin{array}{ccccc}
-a \amp +\amp b \amp =\amp c\\
-a \amp +\amp 2b \amp =\amp d
-\end{array}\text{.}
-\end{equation*}
-</div>
-<p class="continuation">Solving this system using Gaussian elimination, we see that the system has the unique solution</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<p>Linearity is an easy consequence of transpose properties. For any <span class="process-math">\(A_1, A_2\in M_{nn}\)</span> and <span class="process-math">\(c_1,c_2\in \R\text{,}\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_transform_transpose.html">
 \begin{align*}
-a\amp =2c-d \amp b\amp =d-c\text{,}
+S(c_1A_1+c_2A_2)  \amp= (c_1A_1+c_2A_2)^T-(c_1A_1+c_2A_2)  \\
+\amp = c_1A_1^T+c_2A_2^T-c_1A_1-c_2A_2\amp (\knowl{./knowl/eg_transform_transpose.html}{\text{3.2.19}}) \\
+\amp =c_1(A_1^T-A_1)+c_2(A_2^T-A_2)\\
+\amp =c_1S(A_1)+c_2S(A_2)\text{.}
 \end{align*}
 </div>
-<p class="continuation">and thus that</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-(2c-d)(1,1)+(d-c)(1,2)=(c,d)\text{.}
-\end{equation*}
-</div>
-<p class="continuation">This proves <span class="process-math">\(\Span S=\R^2\text{,}\)</span> as claimed.</p>
-<span class="incontext"><a href="s_span_independence.html#p-1731" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_nullspace_image.html#p-1731" class="internal">in-context</a></span>
 </body>
 </html>

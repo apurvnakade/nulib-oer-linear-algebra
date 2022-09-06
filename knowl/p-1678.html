@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-08-27T12:15:29+05:30       *-->
+<!--*       on 2022-09-06T16:43:19+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,14 +14,13 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>Let <span class="process-math">\(T\colon V\rightarrow W\)</span> be a linear transformation, and let <span class="process-math">\(\boldw\in W\text{.}\)</span> Equation <a href="" class="xref" data-knowl="./knowl/eq_nullspace_inverseimage.html" title="Equation 3.4.3">(3.4.3)</a> can be interpreted as follows: if we can find one <em class="emphasis">particular</em> input <span class="process-math">\(\boldv_p\)</span> satisfying <span class="process-math">\(T(\boldv_p)=\boldw\text{,}\)</span> then the set <span class="process-math">\(X_\boldw\)</span> of <em class="emphasis">all</em> inputs <span class="process-math">\(\boldv\)</span> satisfying <span class="process-math">\(T(\boldv)=\boldw\)</span> is given by</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_nullspace_inverseimage.html">
-\begin{equation*}
-X_\boldw=\{\boldv_p+\boldu\colon \boldu\in \NS T\}\text{.}
-\end{equation*}
-</div>
-<p class="continuation">This set <span class="process-math">\(X\)</span> is not necessarily a subspace. Indeed, if <span class="process-math">\(\boldw\ne \boldzero_W\text{,}\)</span> then <span class="process-math">\(\boldzero\notin X\text{,}\)</span> since <span class="process-math">\(T(\boldzero)=\boldzero_W\text{!}\)</span> Instead, <span class="process-math">\(X\)</span> is what is called the <em class="emphasis">translate</em> of the subspace <span class="process-math">\(\NS T\)</span> by the vector <span class="process-math">\(\boldv_p\text{,}\)</span> and is denoted as <span class="process-math">\(X=\boldv_p+\NS T\text{.}\)</span> The corollary below is an application to solutions to matrix equations (equivalently, linear systems) obtained by treating the special case where <span class="process-math">\(T=T_A\)</span> is a matrix transformation associated to an <span class="process-math">\(m\times n\)</span> matrix <span class="process-math">\(A\text{.}\)</span></p>
-<span class="incontext"><a href="s_nullspace_image.html#p-1678" class="internal">in-context</a></span>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>The proof amounts to the following observations:</p>
+<ul class="disc">
+<li><p>The zero function <span class="process-math">\(0_X\colon X\rightarrow \R\)</span> is an element of all of these sets: i.e. the zero function is continuous, <span class="process-math">\(C^n\text{,}\)</span> <span class="process-math">\(C^\infty\text{,}\)</span> a polynomial, etc..</p></li>
+<li><p>If <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> both satisfy one of these properties (continuous, <span class="process-math">\(C^n\text{,}\)</span> <span class="process-math">\(C^\infty\text{,}\)</span> polynomial, etc.), then so does <span class="process-math">\(cf+dg\)</span> for any <span class="process-math">\(c,d\in \R\text{.}\)</span></p></li>
+</ul>
+<p class="continuation">The second, “closed under linear combinations” observation is easily seen for <span class="process-math">\(P(X)\)</span> and <span class="process-math">\(P_n(X)\)</span> (i.e., the sum of two polynomials of degree at most <span class="process-math">\(n\)</span> is clearly a polynomial of degree at most <span class="process-math">\(n\)</span>); for the other spaces, this is a result of calculus properties to the effect that adding and scaling functions preserves continuity and differentiability.</p>
+<span class="incontext"><a href="s_subspace.html#p-1678" class="internal">in-context</a></span>
 </body>
 </html>

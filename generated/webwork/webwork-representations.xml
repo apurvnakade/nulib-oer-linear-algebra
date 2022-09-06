@@ -1464,6 +1464,360 @@ given,
     <server-data sourceFilePath="Library/MontanaState/Sets/5.2A13Sets1.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
     <pg source="Library/MontanaState/Sets/5.2A13Sets1.pg"/>
   </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-30" ww-id="webwork-30">
+    <static seed="30" source="Library/ASU-topics/set119MatrixAlgebra/p17.pg">
+      <statement><p>Enter T or F depending on whether the statement is true or false.
+(You must enter T or F -- True and False will not work.)</p>
+<p><ol>
+<li>
+<p>If A has dimensions <m>m \times n</m> and B has dimensions <m>n \times r</m>, 
+then AB has dimensions <m>m \times r</m>.</p>
+</li>
+<li>
+<p>If A has dimensions <m>5 \times 4</m> and B has dimensions <m>4 \times 3</m>, 
+then the 3rd row, 4th column entry of AB is obtained by multiplying the 3rd column of A 
+by the 4th row of B.</p>
+</li>
+</ol></p>
+</statement>
+    </static>
+    <server-data sourceFilePath="Library/ASU-topics/set119MatrixAlgebra/p17.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/ASU-topics/set119MatrixAlgebra/p17.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-31" ww-id="webwork-31">
+    <static seed="31" source="Library/Dartmouth/setMTWCh1S5/problem_1.pg">
+      <statement><p><alert> Matrix Products: </alert> Consider the matrices</p>
+<p><me>A = \begin{pmatrix}5\amp 4\amp 7\\6\amp 5\amp 4\end{pmatrix}, 
+B = \begin{pmatrix}2\amp 1\amp 3\amp 3\\2\amp 6\amp 9\amp 6\\
+    9\amp 7\amp 2\amp 8\end{pmatrix},\textrm{ and }
+C = \begin{pmatrix}7\amp 5\\1\amp 8\\2\amp 5\\2\amp 3\end{pmatrix}</me></p>
+<p>Of the possible matrix products <m>ABC, ACB, BAC, BCA, CAB, CBA</m>,</p>
+<p>which make sense? <fillin name="AnSwEr0001" characters="10"/></p>
+</statement>
+      <answer>
+        <p>A</p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="Library/Dartmouth/setMTWCh1S5/problem_1.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Dartmouth/setMTWCh1S5/problem_1.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-32" ww-id="webwork-32">
+    <static seed="32" source="Library/ASU-topics/set119MatrixAlgebra/p32.pg">
+      <statement><p>If A is <m>4 \times 9,</m>  B is <m>2 \times 4</m> and C is <m>9 \times 2</m> then:</p>
+<p>a) BA has dimension    <fillin name="AnSwEr0001" characters="8"/> <m>\times</m>  <fillin name="AnSwEr0002" characters="8"/></p>
+<p>b) CB has dimension    <fillin name="AnSwEr0003" characters="8"/> <m>\times</m>  <fillin name="AnSwEr0004" characters="8"/></p>
+<p>c) AC has dimension    <fillin name="AnSwEr0005" characters="8"/> <m>\times</m>  <fillin name="AnSwEr0006" characters="8"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>2</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>9</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>9</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>4</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>4</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>2</m>
+        </p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="Library/ASU-topics/set119MatrixAlgebra/p32.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/ASU-topics/set119MatrixAlgebra/p32.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-33" ww-id="webwork-33">
+    <static seed="33" source="Library/ASU-topics/set119MatrixAlgebra/p7.pg">
+      <statement><p>Determine <m>x</m> and <m>y</m> such that</p>
+<p><me>\left[\begin{array}{ccc}
+1\amp  0\amp  0 \cr
+-2\amp  4\amp  -1 
+\end{array}\right]
+ + \left[\begin{array}{ccc}
+x-y      \amp  -4 \amp  -2 \\
+3 \amp  x        \amp  0 
+\end{array} \right]
+= \left[\begin{array}{ccc}
+2 \amp  -4 \amp  -2 \\
+1 \amp  2 x +y   \amp  -1
+\end{array}\right]</me></p>
+<p><m>x =</m>    <fillin name="AnSwEr0001" characters="10"/></p>
+<p><m>y =</m>   <fillin name="AnSwEr0002" characters="10"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>2.5</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>1.5</m>
+        </p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="Library/ASU-topics/set119MatrixAlgebra/p7.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/ASU-topics/set119MatrixAlgebra/p7.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-34" ww-id="webwork-34">
+    <static seed="34" source="Library/ASU-topics/set119MatrixAlgebra/p14.pg">
+      <statement><p>Determine the value(s) of  <m>x</m>  such that</p>
+<p><m>\left[\begin{array}{ccc}
+x \amp 2 \amp 1\cr
+\end{array}\right] \left[\begin{array}{ccc}
+-3 \amp -6 \amp 3\cr
+-6 \amp 2 \amp 0\cr
+3 \amp -18 \amp 2
+\end{array}\right] \left[\begin{array}{c}
+x\cr
+-1\cr
+2\cr
+\end{array}\right] = [0]</m></p>
+<p><m>x</m> = <fillin name="AnSwEr0001" characters="30"/></p>
+<p><alert> Note: </alert>
+If there is more than one value separate them by commas.</p>
+</statement>
+      <answer>
+        <p>
+          <m>-2, 3</m>
+        </p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="Library/ASU-topics/set119MatrixAlgebra/p14.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/ASU-topics/set119MatrixAlgebra/p14.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-35" ww-id="webwork-35">
+    <static seed="35" source="Library/Utah/Business_Algebra/set10_Matrices/p17.pg">
+      <statement><p>Let <m>A</m> be a  5 by 9 matrix. Then <m>-A</m> is a <fillin name="AnSwEr0001" characters="5"/> by
+<fillin name="AnSwEr0002" characters="5"/> matrix, and <m>A^T</m> is a <fillin name="AnSwEr0003" characters="5"/> by <fillin name="AnSwEr0004" characters="5"/>
+matrix.</p>
+</statement>
+      <answer>
+        <p>
+          <m>5</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>9</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>9</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>5</m>
+        </p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="Library/Utah/Business_Algebra/set10_Matrices/p17.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Utah/Business_Algebra/set10_Matrices/p17.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-36" ww-id="webwork-36">
+    <static seed="36" source="Library/Utah/Business_Algebra/set10_Matrices/p21.pg">
+      <statement><p>Let</p>
+<p><me>A=\left(\begin{array}{cc} 
+            9 \amp  6 \cr
+	    8 \amp  3
+	   \end{array}\right)
+	   , 
+B=\left(\begin{array}{cc} 
+         -9 \amp  6 \cr
+	 -8 \amp  3
+	   \end{array}\right)
+	   , 
+C=\left(\begin{array}{cc} 
+            5 \amp  8 \cr
+	    6 \amp  2
+	   \end{array}\right).</me></p>
+<p>Then</p>
+<p><me>A + B^T=\left(\begin{array}{cc} 
+            a_{11} \amp  a_{12} \cr
+	    a_{21} \amp  a_{22} 
+	   \end{array}\right)</me></p>
+<p>where 
+<m>a_{11}=</m> <fillin name="AnSwEr0001" characters="3"/>,
+<m>a_{12}=</m> <fillin name="AnSwEr0002" characters="3"/>,
+<m>a_{21}=</m> <fillin name="AnSwEr0003" characters="3"/>,
+<m>a_{22}=</m> <fillin name="AnSwEr0004" characters="3"/>,</p>
+<p>and</p>
+<p><me>A - B + C^T=\left(\begin{array}{cc} 
+            c_{11} \amp  c_{12} \cr
+	    c_{21} \amp  c_{22}
+	   \end{array}\right)</me></p>
+<p>where
+<m>c_{11}=</m> <fillin name="AnSwEr0005" characters="3"/>,
+<m>c_{12}=</m> <fillin name="AnSwEr0006" characters="3"/>,
+<m>c_{21}=</m> <fillin name="AnSwEr0007" characters="3"/>,
+<m>c_{22}=</m> <fillin name="AnSwEr0008" characters="3"/>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-2</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>14</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>6</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>23</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>6</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>24</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>2</m>
+        </p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="Library/Utah/Business_Algebra/set10_Matrices/p21.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Utah/Business_Algebra/set10_Matrices/p21.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-37" ww-id="webwork-37">
+    <static seed="37" source="Library/Utah/Business_Algebra/set10_Matrices/p24.pg">
+      <statement><p>Let</p>
+<p><me>A=\left(\begin{array}{cc} 
+            2 \amp  3 \cr
+	    -3 \amp  4
+	   \end{array}\right), 
+B=\left(\begin{array}{cc} 
+            3 \amp  -9 \cr
+	    5 \amp  7 
+	   \end{array}\right).</me></p>
+<p>Then</p>
+<p><me>AB=\left(\begin{array}{cc} 
+            a_{11} \amp  a_{12} \cr
+	    a_{21} \amp  a_{22} 
+	    \end{array}\right)</me></p>
+<p>where 
+<m>a_{11}=</m> <fillin name="AnSwEr0001" characters="3"/>,
+<m>a_{12}=</m> <fillin name="AnSwEr0002" characters="3"/>,
+<m>a_{21}=</m> <fillin name="AnSwEr0003" characters="3"/>,
+<m>a_{22}=</m> <fillin name="AnSwEr0004" characters="3"/>,</p>
+<p><me>BA=\left(\begin{array}{cc} 
+            b_{11} \amp  b_{12} \cr
+	    b_{21} \amp  b_{22}  
+	   \end{array}\right)</me></p>
+<p>where 
+<m>b_{11}=</m> <fillin name="AnSwEr0005" characters="3"/>,
+<m>b_{12}=</m> <fillin name="AnSwEr0006" characters="3"/>,
+<m>b_{21}=</m> <fillin name="AnSwEr0007" characters="3"/>,
+<m>b_{22}=</m> <fillin name="AnSwEr0008" characters="3"/>,</p>
+<p>and</p>
+<p><me>A^T B^T=\left(\begin{array}{cc} 
+            c_{11} \amp  c_{12} \cr
+	    c_{21} \amp  c_{22} 
+	   \end{array}\right)</me></p>
+<p>where 
+<m>c_{11}=</m> <fillin name="AnSwEr0009" characters="3"/>,
+<m>c_{12}=</m> <fillin name="AnSwEr0010" characters="3"/>,
+<m>c_{21}=</m> <fillin name="AnSwEr0011" characters="3"/>,
+<m>c_{22}=</m> <fillin name="AnSwEr0012" characters="3"/>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>21</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>3</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>11</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>55</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>33</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-27</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-11</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>43</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>33</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-11</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-27</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>43</m>
+        </p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="Library/Utah/Business_Algebra/set10_Matrices/p24.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Utah/Business_Algebra/set10_Matrices/p24.pg"/>
+  </webwork-reps>
   <webwork-reps version="2" xml:id="extracted-webwork-4" ww-id="webwork-4">
     <static seed="4" source="Library/SUNYSB/oneToOneOnto1.pg">
       <statement><p>For each of the following functions, 
