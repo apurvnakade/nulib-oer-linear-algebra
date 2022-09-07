@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-07T20:19:05+05:30       *-->
+<!--*       on 2022-09-07T22:33:54+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,14 +14,27 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>In practical terms, if <span class="process-math">\(A\)</span> is diagonalizable, then we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_diagonalize_matrix_2.html">
-\begin{align}
-D\amp=P^{-1}AP \amp A\amp=PDP^{-1} \tag{5.5.8}
-\end{align}
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>Assume <span class="process-math">\(A\)</span> is diagonalizable and let <span class="process-math">\(B'=(\boldv_1, \boldv_2, \dots, \boldv_n)\)</span> be an eigenbasis of <span class="process-math">\(A\)</span> satisfying <span class="process-math">\(A\boldv_i=\lambda_i\boldv_i\)</span> for all <span class="process-math">\(1\leq i\leq n\text{.}\)</span> (We do not assume the <span class="process-math">\(\lambda_i\)</span> are distinct here.) Letting</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+P=\begin{amatrix}[rrrr]\vert\amp \vert\amp \amp \vert \\
+\boldv_1\amp \boldv_2\amp \cdots\amp \boldv_n \\
+\vert\amp \vert\amp \amp \vert
+\end{amatrix},
+D=\begin{amatrix}[rrrr]
+\lambda_1\amp 0\amp \dots \amp 0\\
+0\amp \lambda_2\amp \dots \amp 0 \\
+\vdots \amp  \amp \amp \vdots  \\
+0\amp 0 \amp \dots \amp \lambda_n \end{amatrix}\text{,}
+\end{equation*}
 </div>
-<p class="continuation">where <span class="process-math">\(D\)</span> is diagonal. This allows us to answer questions about <span class="process-math">\(A\)</span> by first answering the question for <span class="process-math">\(D\)</span> and then use the equations in <a href="" class="xref" data-knowl="./knowl/eq_diagonalize_matrix_2.html" title="Equation 5.5.8">(5.5.8)</a> to translate the results back to <span class="process-math">\(A\text{.}\)</span> What makes this method effective is that algebraic questions involving diagonal matrices are easy to answer! Before getting to some illustrative examples, we need a few results about the operation <span class="process-math">\(A\mapsto P^{-1}AP\text{,}\)</span> which is called <em class="emphasis">conjugation</em> by <span class="process-math">\(P\text{.}\)</span></p>
+<p class="continuation">we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation}
+D=P^{-1}AP\text{.}\tag{5.5.7}
+\end{equation}
+</div>
 <span class="incontext"><a href="s_diagonalization.html#p-3125" class="internal">in-context</a></span>
 </body>
 </html>

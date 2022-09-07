@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-07T20:19:05+05:30       *-->
+<!--*       on 2022-09-07T22:33:54+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,19 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Let <span class="process-math">\(T\colon V\rightarrow V\)</span> be a linear transformation, where <span class="process-math">\(dim V=n\text{,}\)</span> let <span class="process-math">\(p(t)\)</span> be the characteristic polynomial of <span class="process-math">\(T\text{,}\)</span> and suppose <span class="process-math">\(\lambda\in\R\)</span> is an eigenvalue of <span class="process-math">\(T\)</span> of algebraic multiplicity <span class="process-math">\(m\geq 1\text{:}\)</span> i.e., <span class="process-math">\(p(t)=(t-\lambda)^mq(t)\)</span> and <span class="process-math">\(q(\lambda)\ne 0\text{.}\)</span> We have</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-1\leq \dim W_\lambda\leq m\text{.}
-\end{equation*}
+<p>Let <span class="process-math">\(p_A(t)\)</span> and <span class="process-math">\(p_{A'}(t)\)</span> be the characteristic polynomials of <span class="process-math">\(A\)</span> and <span class="process-math">\(A'\text{,}\)</span> repsectively. We have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_det_mult.html">
+\begin{align*}
+p_{A'}(t)\amp =\det(tI-A')\\
+\amp =\det(tI-P^{-1}AP) \amp (A'=P^{-1}AP)\\
+\amp = \det(P^{-1}tIP-P^{-1}AP) \amp (\text{algebra}) \\
+\amp = \det(P^{-1}(tI-A)P) \amp (\text{left/right dist.}) \\
+\amp = \det(P^{-1})\det(tI-A)\det(P) \amp (\knowl{./knowl/th_det_mult.html}{\text{2.5.26}}) \\
+\amp = (\det(P))^{-1}\det(P)\det(tI-A)  \\
+\amp = \det(tI-A)=p_A(t)\text{.}
+\end{align*}
 </div>
-<p class="continuation">In other words, the geometric multiplicity of an eigenvalue is bounded above by its algebraic multiplicity.</p>
+<p class="continuation">This proves statement (2).</p>
 <span class="incontext"><a href="s_diagonalization.html#p-3141" class="internal">in-context</a></span>
 </body>
 </html>

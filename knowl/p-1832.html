@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-07T20:18:42+05:30       *-->
+<!--*       on 2022-09-07T22:33:29+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,19 +15,13 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Let's use Sage and  <a href="" class="xref" data-knowl="./knowl/cor_matrix_equations.html" title="Corollary 3.4.15: Solutions to matrix equations">Corollary 3.4.15</a> to find the set of solutions <span class="process-math">\(S\subseteq \R^5\)</span> to the matrix equation</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_matrix_equations.html ./knowl/sage_solve_system.html ./knowl/eq_sage_matrix_eqn.html">
-\begin{equation}
-\begin{amatrix}[rrrrr]
-0\amp 0\amp -2\amp 0\amp 7\\
-2\amp 4\amp -10\amp 6\amp 12\\
-2\amp 4\amp -5\amp 6\amp -5
-\end{amatrix}
-\begin{amatrix}[c] x_1\\ x_2\\ x_3\\ x_4\\ x_5   \end{amatrix}=
-\begin{amatrix}[r] 12\\ 28\\ -1  \end{amatrix}\text{.}\tag{3.4.5}
-\end{equation}
+<p>In the special case where <span class="process-math">\(T=T_A\)</span> is the matrix transformation of an <span class="process-math">\(m\times n\)</span> matrix <span class="process-math">\(A\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/th_nullspace_image.html" title="Theorem 3.4.7: Null space and image">Theorem 3.4.7</a> tells us that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_nullspace_image.html ./knowl/th_subspace_matrix_solutions.html ./knowl/th_nullspace_image.html">
+\begin{equation*}
+\NS A=\{\boldx\in \R^n\colon A\boldx=\boldzero\}
+\end{equation*}
 </div>
-<p class="continuation">This is the matrix equation form of the linear system we investigated in <a href="" class="xref" data-knowl="./knowl/sage_solve_system.html" title="Sage example 2: Solving linear systems">Sage example 2</a>. The method <code class="code-inline tex2jax_ignore">solve_right</code> can be used to find a <em class="emphasis">particular solution</em> <span class="process-math">\(\boldx_p\)</span> to <a href="" class="xref" data-knowl="./knowl/eq_sage_matrix_eqn.html" title="Equation 3.4.5">(3.4.5)</a>.</p>
+<p class="continuation">is a subspace. We knew this already from <a href="" class="xref" data-knowl="./knowl/th_subspace_matrix_solutions.html" title="Theorem 3.3.10: Solutions to A\boldx=\boldzero form a subspace">Theorem 3.3.10</a>, which we now understand as a special instance of <a href="" class="xref" data-knowl="./knowl/th_nullspace_image.html" title="Theorem 3.4.7: Null space and image">Theorem 3.4.7</a>.</p>
 <span class="incontext"><a href="s_nullspace_image.html#p-1832" class="internal">in-context</a></span>
 </body>
 </html>
