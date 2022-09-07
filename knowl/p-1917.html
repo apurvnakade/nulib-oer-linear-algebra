@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-07T19:56:48+05:30       *-->
+<!--*       on 2022-09-07T20:18:43+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,24 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraph</span></h6>
-<p><span class="process-math">\(\displaystyle \boldu=(7,1,0)\)</span></p>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>The definition of linear independence is quite a mouthful! Some clarifying remarks:</p>
+<ol class="decimal">
+<li>
+<p>To prove a set <span class="process-math">\(S=\{\boldv_1, \boldv_2, \dots, \boldv_n\}\)</span> of <span class="process-math">\(n\)</span> distinct vectors is linearly independent, we must prove an <em class="emphasis">implication</em>:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+c_1\boldv_1+c_2\boldv_2+\cdots +c_n\boldv_n=\boldzero \implies c_1=c_2=\dots=c_n=0\text{.}
+\end{equation*}
+</div>
+<p class="continuation">More often than not you will do so in the direct manner: i.e., assume you have a linear combination equal to the zero vector, then show that all coefficients must be zero.</p>
+</li>
+<li><p>By the same token, to show <span class="process-math">\(S\)</span> is linearly dependent, we must produce a <em class="emphasis">nontrivial</em> linear combination of distinct elements equal to the zero vector.</p></li>
+<li>
+<p>It is easy to see that <span class="process-math">\(S\)</span> is linearly dependent if and only if some element of <span class="process-math">\(S\)</span> can be written as a linear combination of other elements of <span class="process-math">\(S\text{:}\)</span> just take the nontrivial linear combination yielding the zero vector, and solve for the vector in this combination with the nonzero coefficient.</p>
+<p>This makes precise what it means for a spanning set <span class="process-math">\(S\)</span> to have redundancies or not.  If <span class="process-math">\(S\)</span> is linearly dependent, then one of its vectors can be written as a linear combination of the others, and thus can be “thrown out” when computing <span class="process-math">\(\Span S\text{,}\)</span> the set of all linear combinations of <span class="process-math">\(S\text{.}\)</span> Conversely, if <span class="process-math">\(S\)</span> is linearly independent, then no element of <span class="process-math">\(S\)</span> can be written as a linear combination of the others; throwing any element out would thus result in <span class="process-math">\(\Span S\)</span> being strictly smaller.</p>
+</li>
+</ol>
 <span class="incontext"><a href="s_span_independence.html#p-1917" class="internal">in-context</a></span>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-07T19:56:18+05:30       *-->
+<!--*       on 2022-09-07T20:18:12+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -931,7 +931,7 @@ Q=E_rE_{r-1}\cdots E_1
 <span class="heading"><span class="title">Transitivity.</span></span><p id="p-1243">For all matrices <span class="process-math">\(A, B, C\text{,}\)</span> if <span class="process-math">\(A\sim B\)</span> and <span class="process-math">\(B\sim C\text{,}\)</span> then <span class="process-math">\(A\sim C\text{.}\)</span></p>
 </li>
 </ol>
-<p class="continuation">The proof of these facts is left as an exercise (<a href="" class="xref" data-knowl="./knowl/ex_row_equiv_props.html" title="Exercise 2.4.7.12: Properties of row equivalence">Exercise 2.4.7.12</a>).</p></article><a href="" class="xref" data-knowl="./knowl/th_matrixforms.html" title="Theorem 1.2.10: Row equivalent matrix forms">Theorem 1.2.10</a><a href="s_ge.html" class="internal" title="Section 1.2: Gaussian elimination">Section 1.2</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 1 </sup></a><article class="corollary theorem-like" id="cor_RRE_uniqueness"><h4 class="heading">
+<p class="continuation">The proof of these facts is left as an exercise (<a href="" class="xref" data-knowl="./knowl/ex_row_equiv_props.html" title="Exercise 2.4.7.18: Properties of row equivalence">Exercise 2.4.7.18</a>).</p></article><a href="" class="xref" data-knowl="./knowl/th_matrixforms.html" title="Theorem 1.2.10: Row equivalent matrix forms">Theorem 1.2.10</a><a href="s_ge.html" class="internal" title="Section 1.2: Gaussian elimination">Section 1.2</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 1 </sup></a><article class="corollary theorem-like" id="cor_RRE_uniqueness"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.4.17</span><span class="period">.</span><span class="space"> </span><span class="title">Uniqueness of reduced row echelon form.</span>
 </h4>
 <p id="p-1244">Any matrix <span class="process-math">\(A\)</span> is row equivalent to a <em class="emphasis">unique</em> matrix in reduced row echelon form.</p></article><article class="hiddenproof" id="proof-29"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-29"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-29"><article class="hiddenproof"><p id="p-1245">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(m\times n\)</span> matrix. Using Gauss-Jordan elimination, we can row reduce <span class="process-math">\(A\)</span> to matrix <span class="process-math">\(U\)</span> in reduced row echelon form. Suppose <span class="process-math">\(A\)</span> is also row equivalent to the matrix <span class="process-math">\(U'\)</span> in reduced row echelon form. Then <span class="process-math">\(U\)</span> and <span class="process-math">\(U'\)</span> are row equivalent, since the row equivalence relation is symmetric and transitive (<a href="" class="xref" data-knowl="./knowl/rm_row_equivalence_props.html" title="Remark 2.4.16: Properties of row equivalence">Remark 2.4.16</a>). Thus it suffices to show that if <span class="process-math">\(U\)</span> and <span class="process-math">\(U'\)</span> are row equivalent matrices in reduced row echelon form, then <span class="process-math">\(U=U'\text{.}\)</span> We do so by induction on <span class="process-math">\(n\text{.}\)</span> The base step is trivial, since there is only one <span class="process-math">\(m\times 1\)</span> matrix in reduced row echelon form.</p>
@@ -959,18 +959,221 @@ U\boldx=\boldzero\implies U\boldx-U'\boldx=\boldzero\implies (U-U')\boldx=\boldz
 <p id="p-1248">To summarize, starting with row equivalent matrices  <span class="process-math">\(U\)</span> and <span class="process-math">\(U'\)</span> in reduced row echelon form, and assuming by contradiction that <span class="process-math">\(U\ne U'\text{,}\)</span> we conclude that (a) the first <span class="process-math">\(n\)</span> columns of <span class="process-math">\(U\)</span> and <span class="process-math">\(U'\)</span> are equal and form matrices in reduced row echelon form, and (b) the last columns of <span class="process-math">\(U\)</span> and <span class="process-math">\(U'\)</span> have leading ones. Since <span class="process-math">\(U\)</span> and <span class="process-math">\(U'\)</span> are in reduced row echelon form, and since the first <span class="process-math">\(n\)</span> columns of <span class="process-math">\(U\)</span> and <span class="process-math">\(U'\)</span> are equal, we see that the leading ones in the last columns of <span class="process-math">\(U\)</span> and <span class="process-math">\(U'\)</span> must occur in the same row: namely, the first zero row of <span class="process-math">\(V=V'\text{.}\)</span> It follows that <span class="process-math">\(U=U'\text{,}\)</span> a contradiction.</p></article></div></section><section class="exercises" id="s_invertibility_theorem_ex"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">2.4.7</span> <span class="title">Exercises</span>
 </h3>
-<div class="exercisegroup" id="exercisegroup-4">
+<article class="subexercises" id="subexercises-8"><h4 class="heading"><span class="title">Webwork Exercises</span></h4>
+<article class="exercise exercise-like" id="exercise-89"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div id="webwork-42" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="42" data-sourceFilePath="Contrib/MountAllison/1-3_Matrices_and_Matrix_Operations/true_false.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-1249">Determine which of the following statements are true and which are false.</p>
+<ol id="p-1250" class="lower-alpha">
+<li id="li-327"><p id="p-1251">If <span class="process-math">\(\displaystyle A\)</span> and <span class="process-math">\(\displaystyle B\)</span> are square matrices of the same size, then <span class="process-math">\(\displaystyle (AB)^T = A^TB^T\text{.}\)</span></p></li>
+<li id="li-328"><p id="p-1252">If <span class="process-math">\(\displaystyle A\)</span> and <span class="process-math">\(\displaystyle B\)</span> are matrices with sizes such that <span class="process-math">\(\displaystyle AB\)</span> is square, then <span class="process-math">\(\displaystyle BA\)</span> exists.</p></li>
+<li id="li-329"><p id="p-1253">The matrices <span class="process-math">\(\displaystyle A^TA\)</span> and <span class="process-math">\(\displaystyle AA^T\)</span> are always square, regardless of the size of <span class="process-math">\(\displaystyle A\text{.}\)</span></p></li>
+<li id="li-330"><p id="p-1254">If <span class="process-math">\(\displaystyle A\)</span> and <span class="process-math">\(\displaystyle B\)</span> are square matrices of the same size then <span class="process-math">\(\displaystyle (A+B)^2 = A^2 + 2AB + B^2\text{.}\)</span></p></li>
+<li id="li-331"><p id="p-1255">The matrices <span class="process-math">\(\displaystyle A^TA\)</span> and <span class="process-math">\(\displaystyle AA^T\)</span> are always defined, regardless of the size of <span class="process-math">\(\displaystyle A\text{.}\)</span></p></li>
+</ol>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-42')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="exercise-90"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div id="webwork-43" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="43" data-sourceFilePath="Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/3.4.67.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-1256">True or false: Suppose that <span class="process-math">\(E_1\)</span> and <span class="process-math">\(E_2\)</span> are two elementary matrices. Then <span class="process-math">\(E_1E_2 = E_2E_1\)</span><ul style="list-style:circle;">
+<li id="li-332"><p id="p-1257">.</p></li>
+<li id="li-333"><p id="p-1258">True</p></li>
+<li id="li-334"><p id="p-1259">False</p></li>
+</ul></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-200" id="answer-200"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-200"><div class="answer solution-like"><p id="p-1260"><span class="process-math">\(\text{False}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-33" id="solution-33"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-33"><div class="solution solution-like">
+<p id="p-1261"><em class="alert">SOLUTION:</em> False. If</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+E_1 = \left[\begin{array}{ccc}
+0 \amp 1 \amp 0\cr
+1 \amp 0 \amp 0\cr
+0 \amp 0 \amp 1
+\end{array}\right] \quad \mbox{and} \quad E_2 = \left[\begin{array}{ccc}
+1 \amp 0 \amp 0\cr
+0 \amp 0 \amp 1\cr
+0 \amp 1 \amp 0
+\end{array}\right],
+\end{equation*}
+</div>
+<p class="continuation">then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+E_1 E_2 = \left[\begin{array}{ccc}
+0 \amp 1 \amp 0\cr
+1 \amp 0 \amp 0\cr
+0 \amp 0 \amp 1
+\end{array}\right] \left[\begin{array}{ccc}
+1 \amp 0 \amp 0\cr
+0 \amp 0 \amp 1\cr
+0 \amp 1 \amp 0
+\end{array}\right] = \left[\begin{array}{ccc}
+0 \amp 0 \amp 1\cr
+1 \amp 0 \amp 0\cr
+0 \amp 1 \amp 0
+\end{array}\right],
+\end{equation*}
+</div>
+<p class="continuation">but</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+E_2 E_1 = \left[\begin{array}{ccc}
+1 \amp 0 \amp 0\cr
+0 \amp 0 \amp 1\cr
+0 \amp 1 \amp 0
+\end{array}\right] \left[\begin{array}{ccc}
+0 \amp 1 \amp 0\cr
+1 \amp 0 \amp 0\cr
+0 \amp 0 \amp 1
+\end{array}\right] = \left[\begin{array}{ccc}
+0 \amp 1 \amp 0\cr
+0 \amp 0 \amp 1\cr
+1 \amp 0 \amp 0
+\end{array}\right] \neq E_1 E_2.
+\end{equation*}
+</div>
+</div></div>
+</div>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-43')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="exercise-91"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div id="webwork-44" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="44" data-sourceFilePath="Library/Utah/Business_Algebra/set11_Inequalities_and_Linear_Programming/p08.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-1262">Let</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-1263">
+\begin{equation*}
+A=\left(\begin{array}{ccc} 
+1 \amp   8 \amp   0 \cr
+1 \amp   8 \amp  8 \cr
+1 \amp  -2 \amp  9
+\end{array}\right)
+\end{equation*}
+</div>
+<p class="continuation">Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-1264">
+\begin{equation*}
+A^{-1}=\left(\begin{array}{ccc} 
+a_{11} \amp  a_{12} \amp  a_{13} \cr
+a_{21} \amp  a_{22} \amp  a_{23} \cr 
+a_{31} \amp  a_{32} \amp  a_{33}
+\end{array}\right)
+\end{equation*}
+</div>
+<p id="p-1265">where <span class="process-math">\(a_{11}=\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>, <span class="process-math">\(a_{12}=\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>, <span class="process-math">\(a_{13}=\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>, <span class="process-math">\(a_{21}=\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>, <span class="process-math">\(a_{22}=\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>, <span class="process-math">\(a_{23}=\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>, <span class="process-math">\(a_{31}=\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>, <span class="process-math">\(a_{32}=\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>, <span class="process-math">\(a_{33}=\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-201" id="answer-201"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-201"><div class="answer solution-like"><p id="p-1266"><span class="process-math">\(1.1\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-202" id="answer-202"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-202"><div class="answer solution-like"><p id="p-1267"><span class="process-math">\(-0.9\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-203" id="answer-203"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-203"><div class="answer solution-like"><p id="p-1268"><span class="process-math">\(0.8\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-204" id="answer-204"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-204"><div class="answer solution-like"><p id="p-1269"><span class="process-math">\(-0.0125\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-205" id="answer-205"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-205"><div class="answer solution-like"><p id="p-1270"><span class="process-math">\(0.1125\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-206" id="answer-206"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-206"><div class="answer solution-like"><p id="p-1271"><span class="process-math">\(-0.1\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-207" id="answer-207"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-207"><div class="answer solution-like"><p id="p-1272"><span class="process-math">\(-0.125\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-208" id="answer-208"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">8</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-208"><div class="answer solution-like"><p id="p-1273"><span class="process-math">\(0.125\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-209" id="answer-209"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">9</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-209"><div class="answer solution-like"><p id="p-1274"><span class="process-math">\(0\)</span></p></div></div>
+</div>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-44')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="exercise-92"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<div id="webwork-45" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="45" data-sourceFilePath="Library/Utah/Business_Algebra/set11_Inequalities_and_Linear_Programming/p09.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-1275">Let</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-1276">
+\begin{equation*}
+A=\left(\begin{array}{cc} 
+5 \amp  -3 \cr
+4 \amp  4
+\end{array}\right)
+\end{equation*}
+</div>
+<p id="p-1277">Find <span class="process-math">\(A^{-1}\)</span> and use it to solve</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+AX=B
+\end{equation*}
+</div>
+<p class="continuation">where</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-1278">
+\begin{equation*}
+B=\left(\begin{array}{c} 
+3 \cr
+3
+\end{array}\right)
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-1279">
+\begin{equation*}
+X=\left(\begin{array}{c} 
+x_{1} \cr
+x_{2} 
+\end{array}\right)
+\end{equation*}
+</div>
+<p id="p-1280">where <span class="process-math">\(x_{1}=\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span> and <span class="process-math">\(x_{2}=\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-210" id="answer-210"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-210"><div class="answer solution-like"><p id="p-1281"><span class="process-math">\(0.65625\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-211" id="answer-211"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-211"><div class="answer solution-like"><p id="p-1282"><span class="process-math">\(0.09375\)</span></p></div></div>
+</div>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-45')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="exercise-93"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<div id="webwork-46" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="46" data-sourceFilePath="Library/Rochester/setAlgebra35SystemMatrices/sw7_5_19.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-1283">Solve the system of equations</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{array}{l}
+5x+3y = -29 \\
+3x+2y = -18 \\
+\end{array}
+\end{equation*}
+</div>
+<p class="continuation">by converting to a matrix equation and using the inverse of the coefficient matrix.</p>
+<p id="p-1284"><span class="process-math">\(x=\)</span> <span class="fillin underline" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span></p>
+<p id="p-1285"><span class="process-math">\(y=\)</span> <span class="fillin underline" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-212" id="answer-212"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-212"><div class="answer solution-like"><p id="p-1286"><span class="process-math">\(-4\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-213" id="answer-213"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-213"><div class="answer solution-like"><p id="p-1287"><span class="process-math">\(-3\)</span></p></div></div>
+</div>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-46')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="exercise-94"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<div id="webwork-47" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="47" data-sourceFilePath="Library/Rochester/setAlgebra35SystemMatrices/sw7_5_23.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-contents">
+<p id="p-1288">Solve the system of equations</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{array}{r}
+2 x  -    4 y + z = 5 \\
+-x + y  -z= 0 \\
+x   -    2 y = 3 \\
+\end{array}
+\end{equation*}
+</div>
+<p class="continuation">by converting to a matrix equation and using the inverse of the coefficient matrix.</p>
+<p id="p-1289"><span class="process-math">\(x=\)</span> <span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span></p>
+<p id="p-1290"><span class="process-math">\(y=\)</span> <span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span></p>
+<p id="p-1291"><span class="process-math">\(z=\)</span> <span class="fillin underline" role="img" aria-label="15-character blank" style="width: 6.818181818181818em;"></span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-214" id="answer-214"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-214"><div class="answer solution-like"><p id="p-1292"><span class="process-math">\(-1\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-215" id="answer-215"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-215"><div class="answer solution-like"><p id="p-1293"><span class="process-math">\(-2\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-216" id="answer-216"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-216"><div class="answer solution-like"><p id="p-1294"><span class="process-math">\(-1\)</span></p></div></div>
+</div>
+</div>
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-47')">Make Interactive</button></div>
+</div></article></article><div class="exercisegroup" id="exercisegroup-4">
 <h4 class="heading"><span class="title">Inverse algorithm.</span></h4>
 <div class="introduction" id="introduction-22">
-<p id="p-1249">Use the inverse algorithm to determine whether each matrix is invertible, and to compute its inverse if possible.</p>
-<p id="p-1250">You are not required to follow Gaussian elimination to the letter, and you may perform multiple operations at the same time, as long as they are independent of one another. For example, do not do <span class="process-math">\(r_2\rightarrow r_2-r+1\)</span> and <span class="process-math">\(r_3\rightarrow r_3+2r_2\)</span> in the same step.</p>
+<p id="p-1295">Use the inverse algorithm to determine whether each matrix is invertible, and to compute its inverse if possible.</p>
+<p id="p-1296">You are not required to follow Gaussian elimination to the letter, and you may perform multiple operations at the same time, as long as they are independent of one another. For example, do not do <span class="process-math">\(r_2\rightarrow r_2-r+1\)</span> and <span class="process-math">\(r_3\rightarrow r_3+2r_2\)</span> in the same step.</p>
 </div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-89"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<p id="p-1251"><span class="process-math">\(A=\begin{amatrix}[rrr]1/5\amp 1/5\amp -2/5\\ 1/5\amp 1/5\amp 1/10\\ 1/5\amp -4/5\amp 1/10 \end{amatrix}\)</span></p>
+<article class="exercise exercise-like" id="exercise-95"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<p id="p-1297"><span class="process-math">\(A=\begin{amatrix}[rrr]1/5\amp 1/5\amp -2/5\\ 1/5\amp 1/5\amp 1/10\\ 1/5\amp -4/5\amp 1/10 \end{amatrix}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-33" id="solution-33"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-33"><div class="solution solution-like">
-<p id="p-1252">We use the inverse algorithm:</p>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-34" id="solution-34"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-34"><div class="solution solution-like">
+<p id="p-1298">We use the inverse algorithm:</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-78">
 \begin{align*}
 \begin{amatrix}[rrr|rrr]1/5\amp 1/5\amp -2/5\amp 1\amp 0\amp 0\\ 1/5\amp 1/5\amp 1/10\amp 0\amp 1\amp 0\\ 1/5\amp -4/5\amp 1/10\amp 0\amp 0\amp 1 \end{amatrix} \amp \xrightarrow[]{r_2 - r_1} \begin{amatrix}[rrr|rrr]1/5\amp 1/5\amp -2/5\amp 1\amp 0\amp 0\\ 0\amp 0\amp 1/2\amp -1\amp 1\amp 0\\ 1/5\amp -4/5\amp 1/10\amp 0\amp 0\amp 1 \end{amatrix}\\
@@ -991,26 +1194,26 @@ A^{-1}=\begin{amatrix}[rrr] 1\amp 3\amp 1\\ 0\amp 1\amp -1\\ -2\amp 2\amp 0\end{
 \end{equation*}
 </div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-90"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<p id="p-1253"><span class="process-math">\(A=\begin{amatrix}[rrr]1\amp 1\amp -2\\ 2\amp -3\amp -3\\ 1\amp -4\amp 1 \end{amatrix}\)</span></p></article><article class="exercise exercise-like" id="exercise-91"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<p id="p-1254"><span class="process-math">\(A=\begin{amatrix}[rrrr]0\amp 0\amp 2\amp 0\\ 1\amp 0\amp 0\amp 1\\ 0\amp -1\amp 3\amp 0\\ 2\amp 1\amp 5\amp -3  \end{amatrix}\)</span></p></article><article class="exercise exercise-like" id="exercise-92"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<p id="p-1255"><span class="process-math">\(A=\begin{amatrix}[rrrr]1\amp -1\amp -1\amp 1\\ 2\amp 1\amp -3\amp 0 \\ 3\amp -1\amp -1\amp -1 \\ 5\amp 1\amp -4\amp -2\end{amatrix}\)</span></p></article><article class="exercise exercise-like" id="exercise-93"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<p id="p-1256"><span class="process-math">\(A=\begin{bmatrix}0\amp 0\amp 0\amp c_1\\ 0\amp 0\amp c_2\amp 0\\ 0\amp c_3\amp 0\amp 0\\ c_4\amp 0\amp 0\amp 0 \end{bmatrix}\text{,}\)</span> <span class="process-math">\(c_i\ne 0\)</span></p></article><article class="exercise exercise-like" id="exercise-94"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<p id="p-1257"><span class="process-math">\(A=\begin{bmatrix}c\amp 0\amp 0\amp 0\\ 1\amp c\amp 0\amp 0\\ 0\amp 1\amp c\amp 0\\ 0\amp 0\amp 1\amp c \end{bmatrix}\text{,}\)</span> <span class="process-math">\(c\ne 0\)</span></p></article>
+</div></article><article class="exercise exercise-like" id="exercise-96"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<p id="p-1299"><span class="process-math">\(A=\begin{amatrix}[rrr]1\amp 1\amp -2\\ 2\amp -3\amp -3\\ 1\amp -4\amp 1 \end{amatrix}\)</span></p></article><article class="exercise exercise-like" id="exercise-97"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<p id="p-1300"><span class="process-math">\(A=\begin{amatrix}[rrrr]0\amp 0\amp 2\amp 0\\ 1\amp 0\amp 0\amp 1\\ 0\amp -1\amp 3\amp 0\\ 2\amp 1\amp 5\amp -3  \end{amatrix}\)</span></p></article><article class="exercise exercise-like" id="exercise-98"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
+<p id="p-1301"><span class="process-math">\(A=\begin{amatrix}[rrrr]1\amp -1\amp -1\amp 1\\ 2\amp 1\amp -3\amp 0 \\ 3\amp -1\amp -1\amp -1 \\ 5\amp 1\amp -4\amp -2\end{amatrix}\)</span></p></article><article class="exercise exercise-like" id="exercise-99"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<p id="p-1302"><span class="process-math">\(A=\begin{bmatrix}0\amp 0\amp 0\amp c_1\\ 0\amp 0\amp c_2\amp 0\\ 0\amp c_3\amp 0\amp 0\\ c_4\amp 0\amp 0\amp 0 \end{bmatrix}\text{,}\)</span>          <span class="process-math">\(c_i\ne 0\)</span></p></article><article class="exercise exercise-like" id="exercise-100"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<p id="p-1303"><span class="process-math">\(A=\begin{bmatrix}c\amp 0\amp 0\amp 0\\ 1\amp c\amp 0\amp 0\\ 0\amp 1\amp c\amp 0\\ 0\amp 0\amp 1\amp c \end{bmatrix}\text{,}\)</span>          <span class="process-math">\(c\ne 0\)</span></p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-5">
 <h4 class="heading"><span class="title">Product of elementary matrices algorithm.</span></h4>
 <div class="introduction" id="introduction-23">
-<p id="p-1258">Each matrix below is invertible. Use the product of elementary matrices algorithm to write <span class="process-math">\(A\)</span> as a product of elementary matrices.</p>
-<p id="p-1259">Here you should perform Gaussian elimination to the letter, one row operation at a time.</p>
+<p id="p-1304">Each matrix below is invertible. Use the product of elementary matrices algorithm to write <span class="process-math">\(A\)</span> as a product of elementary matrices.</p>
+<p id="p-1305">Here you should perform Gaussian elimination to the letter, one row operation at a time.</p>
 </div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-95"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<p id="p-1260"><span class="process-math">\(A=\begin{amatrix}[rr]0\amp 1\\2\amp -5 \end{amatrix}\)</span></p>
+<article class="exercise exercise-like" id="exercise-101"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
+<p id="p-1306"><span class="process-math">\(A=\begin{amatrix}[rr]0\amp 1\\2\amp -5 \end{amatrix}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-34" id="solution-34"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-34"><div class="solution solution-like">
-<p id="p-1261">Row reduce <span class="process-math">\(A\)</span> to the identity matrix:</p>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-35" id="solution-35"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-35"><div class="solution solution-like">
+<p id="p-1307">Row reduce <span class="process-math">\(A\)</span> to the identity matrix:</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-79">
 \begin{align*}
 \begin{amatrix}[rr]0\amp 1\\2\amp -5 \end{amatrix} \amp \xrightarrow[]{r_1\leftrightarrow r_1} \begin{amatrix}[rr]2\amp -5 \\0\amp 1 \end{amatrix}\\
@@ -1018,7 +1221,7 @@ A^{-1}=\begin{amatrix}[rrr] 1\amp 3\amp 1\\ 0\amp 1\amp -1\\ -2\amp 2\amp 0\end{
 \amp \xrightarrow[]{r_1+\frac{5}{2}r_2} \begin{amatrix}[rr]1\amp 0\\ 0\amp 1 \end{amatrix} 
 \end{align*}
 </div>
-<p id="p-1262">The corresponding elementary matrices are</p>
+<p id="p-1308">The corresponding elementary matrices are</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 E_1 = \begin{amatrix}[rr]0\amp 1\\ 1\amp 0 \end{amatrix} , E_2 = \begin{amatrix}[rr]1/2\amp 0\\ 0\amp 1 \end{amatrix}, E_3=\begin{amatrix}[rr]1\amp 5/2\\ 0\amp 1 \end{amatrix}\text{.}
@@ -1033,26 +1236,26 @@ A=E_1^{-1}E_{2}^{-1}E_3^{-1}=\begin{amatrix}[rr]0\amp 1\\ 1\amp 0 \end{amatrix}
 \end{equation*}
 </div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-96"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
-<p id="p-1263"><span class="process-math">\(A=\begin{amatrix}[rr]7\amp 1\\ 5\amp 1  \end{amatrix}\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-97"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
-<p id="p-1264"><p id="p-1265"><span class="process-math">\(A=\begin{amatrix}[rrr]1\amp 1\amp 0\\ 1\amp 1\amp 1\\ 0\amp 1\amp 1 \end{amatrix}\)</span></p></p></article><article class="exercise exercise-like" id="exercise-98"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
-<p id="p-1266"><span class="process-math">\(A=\begin{amatrix}[rrr]1\amp 1\amp 1\\ 1\amp -1\amp 0\\ 1\amp 0\amp -1 \end{amatrix}\text{.}\)</span></p></article>
+</div></article><article class="exercise exercise-like" id="exercise-102"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
+<p id="p-1309"><span class="process-math">\(A=\begin{amatrix}[rr]7\amp 1\\ 5\amp 1  \end{amatrix}\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-103"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>
+<p id="p-1310"><p id="p-1311"><span class="process-math">\(A=\begin{amatrix}[rrr]1\amp 1\amp 0\\ 1\amp 1\amp 1\\ 0\amp 1\amp 1 \end{amatrix}\)</span></p></p></article><article class="exercise exercise-like" id="exercise-104"><h5 class="heading"><span class="codenumber">16<span class="period">.</span></span></h5>
+<p id="p-1312"><span class="process-math">\(A=\begin{amatrix}[rrr]1\amp 1\amp 1\\ 1\amp -1\amp 0\\ 1\amp 0\amp -1 \end{amatrix}\text{.}\)</span></p></article>
 </div>
 </div>
-<article class="exercise exercise-like" id="exercise-99"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<p id="p-1267">According to Statement (2) of the invertibility theorem, a matrix <span class="process-math">\(A\)</span> is invertible if and only if for all column vectors <span class="process-math">\(\boldb\)</span> the matrix equation <span class="process-math">\(A\boldx=\boldb\)</span> has a <em class="emphasis">unique</em> solution. Show that we can add the following, weaker-looking version of (2) to our list of equivalent statements: <blockquote class="blockquote" id="blockquote-1">(2') The matrix equation <span class="process-math">\(A\boldx=\boldb\)</span> has <em class="emphasis">a</em> solution for any column vector <span class="process-math">\(\boldb\text{.}\)</span>
+<article class="exercise exercise-like" id="exercise-105"><h4 class="heading"><span class="codenumber">17<span class="period">.</span></span></h4>
+<p id="p-1313">According to Statement (2) of the invertibility theorem, a matrix <span class="process-math">\(A\)</span> is invertible if and only if for all column vectors <span class="process-math">\(\boldb\)</span> the matrix equation <span class="process-math">\(A\boldx=\boldb\)</span> has a <em class="emphasis">unique</em> solution. Show that we can add the following, weaker-looking version of (2) to our list of equivalent statements: <blockquote class="blockquote" id="blockquote-1">(2') The matrix equation <span class="process-math">\(A\boldx=\boldb\)</span> has <em class="emphasis">a</em> solution for any column vector <span class="process-math">\(\boldb\text{.}\)</span>
 </blockquote></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like">
-<p id="p-1268">Try to logically weave Statement (2') into our original list of equivalent statements by (a) finding a statement from our original list that implies (2'), and (b) find a statement in our original list that is implied by (2').</p>
-<p id="p-1269">You may make use of <a href="" class="xref" data-knowl="./knowl/cor_left-right_inverse.html" title="Corollary 2.4.13: Left-inverse if and only if right-inverse">Corollary 2.4.13</a> in your argument.</p>
+<p id="p-1314">Try to logically weave Statement (2') into our original list of equivalent statements by (a) finding a statement from our original list that implies (2'), and (b) find a statement in our original list that is implied by (2').</p>
+<p id="p-1315">You may make use of <a href="" class="xref" data-knowl="./knowl/cor_left-right_inverse.html" title="Corollary 2.4.13: Left-inverse if and only if right-inverse">Corollary 2.4.13</a> in your argument.</p>
 </div></div>
 </div></article><article class="exercise exercise-like" id="ex_row_equiv_props"><h4 class="heading">
-<span class="codenumber">12<span class="period">.</span></span><span class="space"> </span><span class="title">Properties of row equivalence.</span>
+<span class="codenumber">18<span class="period">.</span></span><span class="space"> </span><span class="title">Properties of row equivalence.</span>
 </h4>
-<p id="p-1270">Let <span class="process-math">\(A\sim B\)</span> denote that matrix <span class="process-math">\(A\)</span> is row equivalent to <span class="process-math">\(B\text{.}\)</span> Use <a href="" class="xref" data-knowl="./knowl/cor_row_equivalence_invertibility.html" title="Corollary 2.4.15: Row equivalence and invertible matrices">Corollary 2.4.15</a> to show that the relation <span class="process-math">\(A\sim B\)</span> is reflexive, symmetric, and transitive, as described in <a href="" class="xref" data-knowl="./knowl/rm_row_equivalence_props.html" title="Remark 2.4.16: Properties of row equivalence">Remark 2.4.16</a>.</p></article><article class="exercise exercise-like" id="exercise-101"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
-<p id="p-1271">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(m\times n\)</span> matrix, and let <span class="process-math">\(Q\)</span> be an invertible <span class="process-math">\(m\times m\)</span> matrix.</p>
-<p id="p-1272">Show that the two matrix equations</p>
+<p id="p-1316">Let <span class="process-math">\(A\sim B\)</span> denote that matrix <span class="process-math">\(A\)</span> is row equivalent to <span class="process-math">\(B\text{.}\)</span> Use <a href="" class="xref" data-knowl="./knowl/cor_row_equivalence_invertibility.html" title="Corollary 2.4.15: Row equivalence and invertible matrices">Corollary 2.4.15</a> to show that the relation <span class="process-math">\(A\sim B\)</span> is reflexive, symmetric, and transitive, as described in <a href="" class="xref" data-knowl="./knowl/rm_row_equivalence_props.html" title="Remark 2.4.16: Properties of row equivalence">Remark 2.4.16</a> .</p></article><article class="exercise exercise-like" id="exercise-107"><h4 class="heading"><span class="codenumber">19<span class="period">.</span></span></h4>
+<p id="p-1317">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(m\times n\)</span> matrix, and let <span class="process-math">\(Q\)</span> be an invertible <span class="process-math">\(m\times m\)</span> matrix.</p>
+<p id="p-1318">Show that the two matrix equations</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-80">
 \begin{align*}
 A\underset{n\times 1}{\boldx} \amp=\underset{m\times 1}{\boldzero} \\
@@ -1064,30 +1267,29 @@ A\underset{n\times 1}{\boldx} \amp=\underset{m\times 1}{\boldzero} \\
 \begin{equation*}
 A\boldx=\boldzero \iff (QA)\boldx=\boldzero\text{.}
 \end{equation*}
-</div></article><article class="exercise exercise-like" id="exercise-102"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
-<p id="p-1273">Suppose <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are row equivalent square matrices. Prove: <span class="process-math">\(A\)</span> is invertible if and only if <span class="process-math">\(B\)</span> is invertible.</p></article><article class="exercise exercise-like" id="exercise-103"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
-<p id="p-1274">Use the provided information to determine whether the given square matrix <span class="process-math">\(A\)</span> is invertible. Justify your answer using the inveribility theorem or one of its corollaries.</p>
+</div></article><article class="exercise exercise-like" id="exercise-108"><h4 class="heading"><span class="codenumber">20<span class="period">.</span></span></h4>
+<p id="p-1319">Suppose <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are row equivalent square matrices. Prove: <span class="process-math">\(A\)</span> is invertible if and only if <span class="process-math">\(B\)</span> is invertible.</p></article><article class="exercise exercise-like" id="exercise-109"><h4 class="heading"><span class="codenumber">21<span class="period">.</span></span></h4>
+<p id="p-1320">Use the provided information to determine whether the given square matrix <span class="process-math">\(A\)</span> is invertible. Justify your answer using the inveribility theorem or one of its corollaries.</p>
 <article class="task exercise-like" id="task-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-1275">There are column vectors <span class="process-math">\(\boldx_1\ne \boldx_2\)</span> such that <span class="process-math">\(A\boldx_1=A\boldx_2\text{.}\)</span></p></article><article class="task exercise-like" id="task-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-1276"><span class="process-math">\(A^2\)</span> is invertible.</p></article><article class="task exercise-like" id="task-3"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-1277"><span class="process-math">\(A^r=\boldzero\)</span> for some <span class="process-math">\(r\geq 1\text{.}\)</span></p></article><article class="task exercise-like" id="task-4"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<p id="p-1278">The sum of the columns of <span class="process-math">\(A\)</span> is equal to the zero column vector.</p></article></article><article class="exercise exercise-like" id="exercise-104"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>
-<p id="p-1279">Answer true or false. If true, provide a proof; if false, exhibit an explicit counterexample.</p>
+<p id="p-1321">There are column vectors <span class="process-math">\(\boldx_1\ne \boldx_2\)</span> such that <span class="process-math">\(A\boldx_1=A\boldx_2\text{.}\)</span></p></article><article class="task exercise-like" id="task-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1322"><span class="process-math">\(A^2\)</span> is invertible.</p></article><article class="task exercise-like" id="task-3"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1323"><span class="process-math">\(A^r=\boldzero\)</span> for some <span class="process-math">\(r\geq 1\text{.}\)</span></p></article><article class="task exercise-like" id="task-4"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1324">The sum of the columns of <span class="process-math">\(A\)</span> is equal to the zero column vector.</p></article></article><article class="exercise exercise-like" id="exercise-110"><h4 class="heading"><span class="codenumber">22<span class="period">.</span></span></h4>
+<p id="p-1325">Answer true or false. If true, provide a proof; if false, exhibit an explicit counterexample.</p>
 <article class="task exercise-like" id="task-5"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-1280">The product of two <span class="process-math">\(n\times n\)</span> elementary matrices is elementary.</p></article><article class="task exercise-like" id="task-6"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-1281">The product of two <span class="process-math">\(n\times n\)</span> elementary matrices is invertible.</p></article><article class="task exercise-like" id="task-7"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-1282">The sum of two invertible <span class="process-math">\(n\times n\)</span> matrices is invertible.</p></article><article class="task exercise-like" id="task-8"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<p id="p-1283">If <span class="process-math">\(A\)</span> is a singular <span class="process-math">\(n\times n\)</span> matrix, then the linear system <span class="process-math">\(A\boldx=\boldzero\)</span> has infinitely many solutions.</p></article><article class="task exercise-like" id="task-9"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<p id="p-1284">If <span class="process-math">\(B\)</span> is obtained from the invertible matrix <span class="process-math">\(A\)</span> by replacing its second row with the sum of its first and second rows, then <span class="process-math">\(B\)</span> is invertible.</p></article><article class="task exercise-like" id="task-10"><h5 class="heading"><span class="codenumber">(f)</span></h5>
-<p id="p-1285">If <span class="process-math">\(A\)</span> is square matrix, and <span class="process-math">\(\boldb\)</span> is a column vector such that the matrix equation <span class="process-math">\(A\boldx=\boldb\)</span> has a unique solution, then <span class="process-math">\(A\)</span> is invertible.</p></article><article class="task exercise-like" id="task-11"><h5 class="heading"><span class="codenumber">(g)</span></h5>
-<p id="p-1286">If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are row equivalent, then the matrix equations <span class="process-math">\(Ax=\boldzero\)</span> and <span class="process-math">\(Bx=\boldzero\)</span> have the same solution set.</p></article><article class="task exercise-like" id="task-12"><h5 class="heading"><span class="codenumber">(h)</span></h5>
-<p id="p-1287">If <span class="process-math">\(A\)</span> or <span class="process-math">\(B\)</span> is singular, then <span class="process-math">\(AB\)</span> is singular.</p></article><div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-35" id="solution-35"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-35"><div class="solution solution-like"><ol class="lower-alpha"><li id="li-327">
-<p id="p-1288">False. The matrices</p>
+<p id="p-1326">The product of two <span class="process-math">\(n\times n\)</span> elementary matrices is elementary.</p></article><article class="task exercise-like" id="task-6"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1327">The product of two <span class="process-math">\(n\times n\)</span> elementary matrices is invertible.</p></article><article class="task exercise-like" id="task-7"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1328">The sum of two invertible <span class="process-math">\(n\times n\)</span> matrices is invertible.</p></article><article class="task exercise-like" id="task-8"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1329">If <span class="process-math">\(A\)</span> is a singular <span class="process-math">\(n\times n\)</span> matrix, then the linear system <span class="process-math">\(A\boldx=\boldzero\)</span> has infinitely many solutions.</p></article><article class="task exercise-like" id="task-9"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-1330">If <span class="process-math">\(B\)</span> is obtained from the invertible matrix <span class="process-math">\(A\)</span> by replacing its second row with the sum of its first and second rows, then <span class="process-math">\(B\)</span> is invertible.</p></article><article class="task exercise-like" id="task-10"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<p id="p-1331">If <span class="process-math">\(A\)</span> is square matrix, and <span class="process-math">\(\boldb\)</span> is a column vector such that the matrix equation <span class="process-math">\(A\boldx=\boldb\)</span> has a unique solution, then <span class="process-math">\(A\)</span> is invertible.</p></article><article class="task exercise-like" id="task-11"><h5 class="heading"><span class="codenumber">(g)</span></h5>
+<p id="p-1332">If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are row equivalent, then the matrix equations <span class="process-math">\(Ax=\boldzero\)</span> and <span class="process-math">\(Bx=\boldzero\)</span> have the same solution set.</p></article><article class="task exercise-like" id="task-12"><h5 class="heading"><span class="codenumber">(h)</span></h5>
+<p id="p-1333">If <span class="process-math">\(A\)</span> or <span class="process-math">\(B\)</span> is singular, then <span class="process-math">\(AB\)</span> is singular.</p></article><div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-36" id="solution-36"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-36"><div class="solution solution-like"><ol class="lower-alpha"><li id="li-335">
+<p id="p-1334">False. The matrices</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-E_1=\begin{amatrix}[rr]1\amp 2\\ 0\amp 1  \end{amatrix},
-E_2=\begin{amatrix}[rr]1\amp 0\\ 3\amp 1  \end{amatrix}
+E_1=\begin{amatrix}[rr]1\amp 2\\ 0\amp 1  \end{amatrix}, E_2=\begin{amatrix}[rr]1\amp 0\\ 3\amp 1  \end{amatrix}
 \end{equation*}
 </div>
 <p class="continuation">are both elementary, but</p>

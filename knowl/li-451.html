@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-07T19:56:46+05:30       *-->
+<!--*       on 2022-09-07T20:18:41+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -17,15 +17,14 @@
 <article class="li"><h5 class="heading">
 <span class="type">Item</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
 </h5>
-<p>We have</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_nullspace_inverseimage.html ./knowl/eq_nullspace_injective.html">
+<p>Linearity is an easy consequence of transpose properties. For any <span class="process-math">\(A_1, A_2\in M_{nn}\)</span> and <span class="process-math">\(c_1,c_2\in \R\text{,}\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_transform_transpose.html">
 \begin{align*}
-T(\boldv)=T(\boldv') \amp \iff T(\boldv')-T(\boldv)=\boldzero\\
-\amp \iff T(\boldv'-\boldv)=\boldzero \amp (T \text{ is linear})\\
-\amp \iff \boldu=\boldv'-\boldv\in\NS T \amp (\text{def. } \NS T)\\
-\amp \iff \boldv'=\boldv+\boldu \text{ for some } \boldu\in\NS T \text{.}
+S(c_1A_1+c_2A_2)  \amp= (c_1A_1+c_2A_2)^T-(c_1A_1+c_2A_2)  \\
+\amp = c_1A_1^T+c_2A_2^T-c_1A_1-c_2A_2\amp (\knowl{./knowl/eg_transform_transpose.html}{\text{3.2.19}}) \\
+\amp =c_1(A_1^T-A_1)+c_2(A_2^T-A_2)\\
+\amp =c_1S(A_1)+c_2S(A_2)\text{.}
 \end{align*}
-</div>
-<p class="continuation">Equation <a href="" class="xref" data-knowl="./knowl/eq_nullspace_inverseimage.html" title="Equation 3.4.3">(3.4.3)</a> follows directly from <a href="" class="xref" data-knowl="./knowl/eq_nullspace_injective.html" title="Equation 3.4.2">(3.4.2)</a> by observing that if <span class="process-math">\(T(\boldv)=\boldw\text{,}\)</span> then <span class="process-math">\(T(\boldv')=\boldw\)</span> if and only if <span class="process-math">\(T(\boldv)=T(\boldv')\text{.}\)</span></p></article><span class="incontext"><a href="s_nullspace_image.html#li-451" class="internal">in-context</a></span>
+</div></article><span class="incontext"><a href="s_nullspace_image.html#li-451" class="internal">in-context</a></span>
 </body>
 </html>

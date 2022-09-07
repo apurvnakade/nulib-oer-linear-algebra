@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-07T19:56:50+05:30       *-->
+<!--*       on 2022-09-07T20:18:45+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,29 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>If <span class="process-math">\(X\)</span> is finite, then its cardinality is the number <span class="process-math">\(n\)</span> of distinct elements it contains, written <span class="process-math">\(\val{X}=n\text{.}\)</span></p>
-<span class="incontext"><a href="s_dimension.html#p-2060" class="internal">in-context</a></span>
+<p>We have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+A \amp = \begin{amatrix}[ccc]\vert\amp \vert\amp \vert\\
+T((1,0,0))\amp T((0,1,0))\amp T((0,0,1)) \\
+\vert\amp \vert\amp vert  \end{amatrix} \\
+\amp =
+\begin{amatrix}[rrr]
+1 \amp 1 \amp 1 \\ 2\amp 3 \amp -4 \end{amatrix} \text{.}
+\end{align*}
+</div>
+<p class="continuation">Let <span class="process-math">\(\boldx=(-2,3,4)\text{.}\)</span> Since <span class="process-math">\(A\)</span> provides a “matrix formula” for <span class="process-math">\(T\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+T(\boldx) \amp = A\boldx \\
+\amp =
+\begin{amatrix}[rrr]
+1 \amp 1 \amp 1 \\ 2\amp 3 \amp -4 \end{amatrix}
+\colvec{-2\\ 3\\ 4}\\
+\amp = \colvec{5\\ -9} \text{.}
+\end{align*}
+</div>
+<p class="continuation">Thus <span class="process-math">\(T((-2,3,4))=(5,-9)\text{,}\)</span> as you can confirm.</p>
+<span class="incontext"><a href="s_basis.html#p-2060" class="internal">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-07T19:57:09+05:30       *-->
+<!--*       on 2022-09-07T20:19:04+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,14 +15,27 @@
 </head>
 <body class="ignore-math">
 <article class="li"><h5 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span><span class="space"> </span><span class="title">Conjugation commutes with powers.</span>
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span>
 </h5>
-<p>For all <span class="process-math">\(A\in M_{nn}\)</span> and integers <span class="process-math">\(k\geq 0\text{,}\)</span> we have</p>
+<p>Assume <span class="process-math">\(A\)</span> is diagonalizable and let <span class="process-math">\(B'=(\boldv_1, \boldv_2, \dots, \boldv_n)\)</span> be an eigenbasis of <span class="process-math">\(A\)</span> satisfying <span class="process-math">\(A\boldv_i=\lambda_i\boldv_i\)</span> for all <span class="process-math">\(1\leq i\leq n\text{.}\)</span> (We do not assume the <span class="process-math">\(\lambda_i\)</span> are distinct here.) Letting</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-(P^{-1}AP)^k=P^{-1}A^kP\text{.}
+P=\begin{amatrix}[rrrr]\vert\amp \vert\amp \amp \vert \\
+\boldv_1\amp \boldv_2\amp \cdots\amp \boldv_n \\
+\vert\amp \vert\amp \amp \vert
+\end{amatrix},
+D=\begin{amatrix}[rrrr]
+\lambda_1\amp 0\amp \dots \amp 0\\
+0\amp \lambda_2\amp \dots \amp 0 \\
+\vdots \amp  \amp \amp \vdots  \\
+0\amp 0 \amp \dots \amp \lambda_n \end{amatrix}\text{,}
 \end{equation*}
 </div>
-<p class="continuation">If <span class="process-math">\(A\)</span> is invertible, this equality holds for <em class="emphasis">all</em> integers <span class="process-math">\(n\text{.}\)</span></p></article><span class="incontext"><a href="s_diagonalization.html#li-1008" class="internal">in-context</a></span>
+<p class="continuation">we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation}
+D=P^{-1}AP\text{.}\tag{5.5.7}
+\end{equation}
+</div></article><span class="incontext"><a href="s_diagonalization.html#li-1008" class="internal">in-context</a></span>
 </body>
 </html>

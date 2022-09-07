@@ -1958,6 +1958,259 @@ The matrix <m>\displaystyle A = \begin{bmatrix} 1 \amp  1 \\ c \amp  c^2 \end{bm
     <server-data sourceFilePath="Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/3.3.59.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
     <pg source="Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/3.3.59.pg"/>
   </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-42" ww-id="webwork-42">
+    <static seed="42" source="Contrib/MountAllison/1-3_Matrices_and_Matrix_Operations/true_false.pg">
+      <statement><p>Determine which of the following statements are true and which are false.</p>
+<p><ol>
+<li>
+<p>If <m>\displaystyle A</m> and <m>\displaystyle B</m> are square matrices of the same size, then <m>\displaystyle (AB)^T = A^TB^T</m>.</p>
+</li>
+<li>
+<p>If <m>\displaystyle A</m> and <m>\displaystyle B</m> are matrices with sizes such that <m>\displaystyle AB</m> is square, then <m>\displaystyle BA</m> exists.</p>
+</li>
+<li>
+<p>The matrices <m>\displaystyle A^TA</m> and <m>\displaystyle AA^T</m> are always square, regardless of the size of <m>\displaystyle A</m>.</p>
+</li>
+<li>
+<p>If <m>\displaystyle A</m> and <m>\displaystyle B</m> are square matrices of the same size then <m>\displaystyle (A+B)^2 = A^2 + 2AB + B^2</m>.</p>
+</li>
+<li>
+<p>The matrices <m>\displaystyle A^TA</m> and <m>\displaystyle AA^T</m> are always defined, regardless of the size of <m>\displaystyle A</m>.</p>
+</li>
+</ol></p>
+</statement>
+    </static>
+    <server-data sourceFilePath="Contrib/MountAllison/1-3_Matrices_and_Matrix_Operations/true_false.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Contrib/MountAllison/1-3_Matrices_and_Matrix_Operations/true_false.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-43" ww-id="webwork-43">
+    <static seed="43" source="Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/3.4.67.pg">
+      <statement><p>True or false: Suppose that <m>E_1</m> and <m>E_2</m> are two elementary matrices. Then <m>E_1E_2 = E_2E_1</m><var form="popup" name="AnSwEr0001">
+<li>
+<p>.</p>
+</li>
+<li>
+<p>True</p>
+</li>
+<li>
+<p>False</p>
+</li>
+</var></p>
+</statement>
+      <answer>
+        <p>
+          <m>\text{False}</m>
+        </p>
+      </answer>
+      <solution><p><alert>SOLUTION:</alert> 
+False. If 
+<me>E_1 = \left[\begin{array}{ccc}
+0 \amp 1 \amp 0\cr
+1 \amp 0 \amp 0\cr
+0 \amp 0 \amp 1
+\end{array}\right] \quad \mbox{and} \quad E_2 = \left[\begin{array}{ccc}
+1 \amp 0 \amp 0\cr
+0 \amp 0 \amp 1\cr
+0 \amp 1 \amp 0
+\end{array}\right],</me>
+then
+<me>E_1 E_2 = \left[\begin{array}{ccc}
+0 \amp 1 \amp 0\cr
+1 \amp 0 \amp 0\cr
+0 \amp 0 \amp 1
+\end{array}\right] \left[\begin{array}{ccc}
+1 \amp 0 \amp 0\cr
+0 \amp 0 \amp 1\cr
+0 \amp 1 \amp 0
+\end{array}\right] = \left[\begin{array}{ccc}
+0 \amp 0 \amp 1\cr
+1 \amp 0 \amp 0\cr
+0 \amp 1 \amp 0
+\end{array}\right],</me>
+but
+<me>E_2 E_1 = \left[\begin{array}{ccc}
+1 \amp 0 \amp 0\cr
+0 \amp 0 \amp 1\cr
+0 \amp 1 \amp 0
+\end{array}\right] \left[\begin{array}{ccc}
+0 \amp 1 \amp 0\cr
+1 \amp 0 \amp 0\cr
+0 \amp 0 \amp 1
+\end{array}\right] = \left[\begin{array}{ccc}
+0 \amp 1 \amp 0\cr
+0 \amp 0 \amp 1\cr
+1 \amp 0 \amp 0
+\end{array}\right] \neq E_1 E_2.</me></p>
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/3.4.67.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/3.4.67.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-44" ww-id="webwork-44">
+    <static seed="44" source="Library/Utah/Business_Algebra/set11_Inequalities_and_Linear_Programming/p08.pg">
+      <statement><p>Let</p>
+<p><me>A=\left(\begin{array}{ccc} 
+            1 \amp   8 \amp   0 \cr
+	    1 \amp   8 \amp  8 \cr
+	    1 \amp  -2 \amp  9
+	   \end{array}\right)</me>
+Then</p>
+<p><me>A^{-1}=\left(\begin{array}{ccc} 
+            a_{11} \amp  a_{12} \amp  a_{13} \cr
+	    a_{21} \amp  a_{22} \amp  a_{23} \cr 
+	    a_{31} \amp  a_{32} \amp  a_{33}
+	    \end{array}\right)</me></p>
+<p>where 
+<m>a_{11}=</m> <fillin name="AnSwEr0001" characters="5"/>,
+<m>a_{12}=</m> <fillin name="AnSwEr0002" characters="5"/>,
+<m>a_{13}=</m> <fillin name="AnSwEr0003" characters="5"/>,
+<m>a_{21}=</m> <fillin name="AnSwEr0004" characters="5"/>,
+<m>a_{22}=</m> <fillin name="AnSwEr0005" characters="5"/>,
+<m>a_{23}=</m> <fillin name="AnSwEr0006" characters="5"/>,
+<m>a_{31}=</m> <fillin name="AnSwEr0007" characters="5"/>,
+<m>a_{32}=</m> <fillin name="AnSwEr0008" characters="5"/>,
+<m>a_{33}=</m> <fillin name="AnSwEr0009" characters="5"/>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>1.1</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-0.9</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0.8</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-0.0125</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0.1125</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-0.1</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-0.125</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0.125</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="Library/Utah/Business_Algebra/set11_Inequalities_and_Linear_Programming/p08.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Utah/Business_Algebra/set11_Inequalities_and_Linear_Programming/p08.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-45" ww-id="webwork-45">
+    <static seed="45" source="Library/Utah/Business_Algebra/set11_Inequalities_and_Linear_Programming/p09.pg">
+      <statement><p>Let</p>
+<p><me>A=\left(\begin{array}{cc} 
+            5 \amp  -3 \cr
+	    4 \amp  4
+	   \end{array}\right)</me></p>
+<p>Find <m>A^{-1}</m> and use it to solve <me>AX=B</me> where</p>
+<p><me>B=\left(\begin{array}{c} 
+            3 \cr
+	    3
+	   \end{array}\right)</me></p>
+<p><me>X=\left(\begin{array}{c} 
+            x_{1} \cr
+	    x_{2} 
+	    \end{array}\right)</me></p>
+<p>where <m>x_{1}=</m> <fillin name="AnSwEr0001" characters="5"/> and <m>x_{2}=</m> <fillin name="AnSwEr0002" characters="5"/>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>0.65625</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>0.09375</m>
+        </p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="Library/Utah/Business_Algebra/set11_Inequalities_and_Linear_Programming/p09.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Utah/Business_Algebra/set11_Inequalities_and_Linear_Programming/p09.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-46" ww-id="webwork-46">
+    <static seed="46" source="Library/Rochester/setAlgebra35SystemMatrices/sw7_5_19.pg">
+      <statement><p>Solve the system of equations 
+<me>\begin{array}{l}
+        5x+3y = -29 \\
+        3x+2y = -18 \\
+\end{array}</me>
+by converting to a matrix equation and using
+the inverse of the coefficient matrix.</p>
+<p><m>x=</m> <fillin name="AnSwEr0001" characters="25"/></p>
+<p><m>y=</m> <fillin name="AnSwEr0002" characters="25"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>-4</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-3</m>
+        </p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="Library/Rochester/setAlgebra35SystemMatrices/sw7_5_19.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Rochester/setAlgebra35SystemMatrices/sw7_5_19.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-47" ww-id="webwork-47">
+    <static seed="47" source="Library/Rochester/setAlgebra35SystemMatrices/sw7_5_23.pg">
+      <statement><p>Solve the system of equations 
+<me>\begin{array}{r}
+        2 x  -    4 y + z = 5 \\
+        -x + y  -z= 0 \\
+        x   -    2 y = 3 \\
+\end{array}</me>
+by converting to a matrix equation and
+using the inverse of the coefficient matrix.</p>
+<p><m>x=</m> <fillin name="AnSwEr0001" characters="15"/></p>
+<p><m>y=</m> <fillin name="AnSwEr0002" characters="15"/></p>
+<p><m>z=</m> <fillin name="AnSwEr0003" characters="15"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>-1</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-2</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>-1</m>
+        </p>
+      </answer>
+    </static>
+    <server-data sourceFilePath="Library/Rochester/setAlgebra35SystemMatrices/sw7_5_23.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Rochester/setAlgebra35SystemMatrices/sw7_5_23.pg"/>
+  </webwork-reps>
   <webwork-reps version="2" xml:id="extracted-webwork-5" ww-id="webwork-5">
     <static seed="5" source="Library/LoyolaChicago/Precalc/Chap8Sec2/Q08.pg">
       <statement><p>Consider the functions

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-07T19:56:43+05:30       *-->
+<!--*       on 2022-09-07T20:18:37+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,16 +15,18 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Let</p>
+<p>Given an <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(A\text{,}\)</span> we have</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-A = \begin{bmatrix}-1\amp 1\amp 2\\ 3\amp 0\amp -5\\ 1\amp 7\amp 2 \end{bmatrix}
-\end{equation*}
+\begin{equation}
+A\,(\adj A)=(\adj A)\, A=(\det A)I\text{.}\tag{2.5.7}
+\end{equation}
 </div>
-<ol class="lower-alpha">
-<li><p>Compute <span class="process-math">\(\det(A)\)</span> by expanding along the second row.</p></li>
-<li><p>Compute <span class="process-math">\(\det(A)\)</span> by expanding along the third column.</p></li>
-</ol>
+<p class="continuation">As a consequence, if <span class="process-math">\(\det A\ne 0\text{,}\)</span> then <span class="process-math">\(A\)</span> is invertible and</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation}
+A^{-1}=\frac{1}{\det A}\, \adj A\text{.}\tag{2.5.8}
+\end{equation}
+</div>
 <span class="incontext"><a href="s_det.html#p-1391" class="internal">in-context</a></span>
 </body>
 </html>

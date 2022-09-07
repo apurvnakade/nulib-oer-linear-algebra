@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-07T19:57:12+05:30       *-->
+<!--*       on 2022-09-07T20:19:07+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,16 +16,29 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.6.15.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.6.13.1</span><span class="period">.</span>
 </h4>
-<p>By <a href="" class="xref" data-knowl="./knowl/th_spectral.html" title="Theorem 5.6.8: Spectral theorem for self-adjoint operators">Theorem 5.6.8</a> it suffices to show that <span class="process-math">\(T\)</span> is orthogonally diagonalizable. According to <a href="" class="xref" data-knowl="./knowl/ex_orthoproj_props.html" title="Exercise 4.3.6.12">Exercise 4.3.6.12</a> we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_spectral.html ./knowl/ex_orthoproj_props.html">
+<p>First we factor <span class="process-math">\(p(x)\text{.}\)</span> Looking at the constant term we see that the only possible integer roots of <span class="process-math">\(p(x)\)</span> are <span class="process-math">\(\pm 1\text{.}\)</span> It is easily verified that <span class="process-math">\(p(1)=0\text{,}\)</span> and  polynomial division yields the factorization <span class="process-math">\(p(x)=(x-1)(x^2+2x+1)\text{.}\)</span>  Further factorization of <span class="process-math">\(x^2+2x+1\)</span> gives us  <span class="process-math">\(p(x)=(x-1)(x+1)^2\text{.}\)</span></p>
+<p>Next we compute <em class="emphasis">orthonormal</em> bases of the eigenspaces <span class="process-math">\(W_1\)</span> and <span class="process-math">\(W_{-1}\text{,}\)</span> yielding</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
-\boldv\in W \amp \iff T(\boldv)=\boldv\\
-\boldv\in W^\perp \amp \iff T(\boldv)=\boldzero\text{.}
+B_1\amp=\left(\frac{1}{\sqrt{3}}(1,1,1)\right) \amp B_{2}\amp =\left(\frac{1}{\sqrt{2}}(1,-1,0), \frac{1}{\sqrt{6}}(1,1,-2)\right)\text{.}
 \end{align*}
 </div>
-<p class="continuation">Equivalently, <span class="process-math">\(W=W_1\)</span> and <span class="process-math">\(W^\perp=W_0\)</span> are the 1- and 0-eigenspaces of <span class="process-math">\(T\text{,}\)</span> respectively. Since <span class="process-math">\(\dim W+\dim W^\perp=\dim V\)</span> we conclude that <span class="process-math">\(T\)</span> is diagonalizable. Since clearly <span class="process-math">\(W\)</span> and <span class="process-math">\(W^\perp\)</span> are orthogonal, we conclude that <span class="process-math">\(T\)</span> is in fact othogonally diagonalizable, hence self-adjoint.</p>
+<p class="continuation">Assembling these bases elements into the orthogonal matrix</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+Q=\begin{amatrix}[rrr]1/\sqrt{3}\amp 1/\sqrt{2}\amp 1/\sqrt{6}\\
+1/\sqrt{3}\amp -1/\sqrt{2}\amp 1/\sqrt{6}\\
+1/\sqrt{3}\amp 0\amp -2/\sqrt{6}\end{amatrix}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">we conclude that <span class="process-math">\(D=Q^{-1}AQ=Q^TAQ\text{,}\)</span> where</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+D=\begin{amatrix}[rrr]1\amp 0\amp 0\\ 0\amp -1\amp 0\\ 0\amp 0\amp -1  \end{amatrix}\text{.}
+\end{equation*}
+</div>
 </div>
 <span class="incontext"><a href="s_spectral_theorem.html#solution-110" class="internal">in-context</a></span>
 </body>

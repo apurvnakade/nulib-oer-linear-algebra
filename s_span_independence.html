@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-07T19:56:21+05:30       *-->
+<!--*       on 2022-09-07T20:18:15+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -397,12 +397,12 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="s_span_independence"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.5</span> <span class="title">Span and linear independence</span>
 </h2>
-<section class="introduction" id="introduction-48"><p id="p-1815">There are many situations in mathematics where we want to describe an infinite set in a concise manner. We saw this at work already in <a href="s_solving.html" class="internal" title="Section 1.3: Solving linear systems">Section 1.3</a>, where infinite sets of solutions to linear systems were neatly described with parametric expressions.</p>
-<p id="p-1816">A similar issue arises when describing vector spaces and their subspaces. As we know, any vector space is either the zero space or infinite (<a href="" class="xref" data-knowl="./knowl/ex_vs_zero_or_infinite.html" title="Exercise 3.1.4.11">Exercise 3.1.4.11</a>). If we happen to be dealing with a subspace of <span class="process-math">\(\R^n\text{,}\)</span> then there is the possibility of giving a parametric description; but how do we proceed when working in one of our more exotic vector spaces like <span class="process-math">\(C^1(\R)\text{?}\)</span></p>
-<p id="p-1817">As we will see in <a href="s_basis.html" class="internal" title="Section 3.6: Bases">Section 3.6</a> the relevant linear algebraic tool for this purpose is the concept of a <em class="emphasis">basis</em>. Loosely speaking, a basis for a vector space <span class="process-math">\(V\)</span> is a set of vectors that is large enough to <em class="emphasis">generate</em> the entire space, and small enough to contain <em class="emphasis">no redundancies</em>. What exactly we mean by “generate” is captured by the rigorous notion of <em class="emphasis">span</em>; and what we mean by “no redundancies” is captured by <em class="emphasis">linear independence</em>.</p></section><section class="subsection" id="subsection-50"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-48"><p id="p-1861">There are many situations in mathematics where we want to describe an infinite set in a concise manner. We saw this at work already in <a href="s_solving.html" class="internal" title="Section 1.3: Solving linear systems">Section 1.3</a>, where infinite sets of solutions to linear systems were neatly described with parametric expressions.</p>
+<p id="p-1862">A similar issue arises when describing vector spaces and their subspaces. As we know, any vector space is either the zero space or infinite (<a href="" class="xref" data-knowl="./knowl/ex_vs_zero_or_infinite.html" title="Exercise 3.1.4.11">Exercise 3.1.4.11</a>). If we happen to be dealing with a subspace of <span class="process-math">\(\R^n\text{,}\)</span> then there is the possibility of giving a parametric description; but how do we proceed when working in one of our more exotic vector spaces like <span class="process-math">\(C^1(\R)\text{?}\)</span></p>
+<p id="p-1863">As we will see in <a href="s_basis.html" class="internal" title="Section 3.6: Bases">Section 3.6</a> the relevant linear algebraic tool for this purpose is the concept of a <em class="emphasis">basis</em>. Loosely speaking, a basis for a vector space <span class="process-math">\(V\)</span> is a set of vectors that is large enough to <em class="emphasis">generate</em> the entire space, and small enough to contain <em class="emphasis">no redundancies</em>. What exactly we mean by “generate” is captured by the rigorous notion of <em class="emphasis">span</em>; and what we mean by “no redundancies” is captured by <em class="emphasis">linear independence</em>.</p></section><section class="subsection" id="subsection-50"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.5.1</span> <span class="title">Span</span>
 </h3>
-<p id="p-1818">Recall that a linear combination in a vector space <span class="process-math">\(V\)</span> is a vector of the form</p>
+<p id="p-1864">Recall that a linear combination in a vector space <span class="process-math">\(V\)</span> is a vector of the form</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \boldv=c_1\boldv_1+c_2\boldv_2\cdots +c_n\boldv_n\text{,}
@@ -412,11 +412,11 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 <article class="definition definition-like" id="d_span"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Span.</span>
 </h4>
-<p id="p-1819">Let <span class="process-math">\(V\)</span> be a vector space, and let <span class="process-math">\(S\subseteq V\)</span> be any subset of <span class="process-math">\(V\text{.}\)</span> The <dfn class="terminology">span of <span class="process-math">\(S\)</span></dfn>, denoted <span class="process-math">\(\Span S\text{,}\)</span> is the subset of <span class="process-math">\(V\)</span> defined as follows:</p>
+<p id="p-1865">Let <span class="process-math">\(V\)</span> be a vector space, and let <span class="process-math">\(S\subseteq V\)</span> be any subset of <span class="process-math">\(V\text{.}\)</span> The <dfn class="terminology">span of <span class="process-math">\(S\)</span></dfn>, denoted <span class="process-math">\(\Span S\text{,}\)</span> is the subset of <span class="process-math">\(V\)</span> defined as follows:</p>
 <ul class="disc">
-<li id="li-458"><p id="p-1820">If <span class="process-math">\(S=\emptyset\text{,}\)</span> then <span class="process-math">\(\Span S=\{\boldzero_V\}\text{.}\)</span></p></li>
-<li id="li-459">
-<p id="p-1821">Otherwise we define <span class="process-math">\(\Span S\)</span> to be the set of all linear combinations of elements of <span class="process-math">\(S\text{:}\)</span> i.e.,</p>
+<li id="li-466"><p id="p-1866">If <span class="process-math">\(S=\emptyset\text{,}\)</span> then <span class="process-math">\(\Span S=\{\boldzero_V\}\text{.}\)</span></p></li>
+<li id="li-467">
+<p id="p-1867">Otherwise we define <span class="process-math">\(\Span S\)</span> to be the set of all linear combinations of elements of <span class="process-math">\(S\text{:}\)</span> i.e.,</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \Span S=\{\boldv\in V\colon \boldv=c_1\boldv_1+c_2\boldv_2\cdots +c_n\boldv_n \text{ for some } \boldv_i\in S \text{ and } c_i\in \R\}\text{.}
@@ -426,34 +426,34 @@ a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}\amp b_{m}
 </ul></article><article class="remark remark-like" id="rm_span"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.5.2</span><span class="period">.</span>
 </h4>
-<p id="p-1822">Let <span class="process-math">\(S\)</span> be a subset of <span class="process-math">\(V\text{.}\)</span> Some simple observations:</p>
+<p id="p-1868">Let <span class="process-math">\(S\)</span> be a subset of <span class="process-math">\(V\text{.}\)</span> Some simple observations:</p>
 <ol class="decimal">
-<li id="li-460"><p id="p-1823">The zero vector is always an element of <span class="process-math">\(\Span S\text{.}\)</span>  Indeed, if <span class="process-math">\(S=\emptyset\text{,}\)</span> then <span class="process-math">\(\Span S=\{\boldzero\}\)</span> by definition. Otherwise, given any <span class="process-math">\(\boldv\in S\text{,}\)</span> the linear combination <span class="process-math">\(0\boldv=\boldzero\)</span> is an element of <span class="process-math">\(\Span S\text{.}\)</span></p></li>
-<li id="li-461"><p id="p-1824">We have <span class="process-math">\(S\subseteq \Span S\text{:}\)</span> i.e., <span class="process-math">\(\Span S\)</span> includes <span class="process-math">\(S\)</span> itself. Indeed, given any <span class="process-math">\(\boldv\in S\text{,}\)</span> the linear combination <span class="process-math">\(1\boldv=\boldv\)</span> is an element of <span class="process-math">\(\Span S\text{.}\)</span></p></li>
-<li id="li-462">
-<p id="p-1825">If <span class="process-math">\(S=\{\boldv\}\)</span> contains exactly one element, then <span class="process-math">\(\Span S=\{c\boldv\colon c\in \R\}\)</span> is simply the set of all scalar multiples of <span class="process-math">\(\boldv\text{.}\)</span></p>
-<p id="p-1826">If <span class="process-math">\(\boldv\ne \boldzero\text{,}\)</span> then we know that this set is infinite (<a href="" class="xref" data-knowl="./knowl/ex_vs_zero_or_infinite.html" title="Exercise 3.1.4.11">Exercise 3.1.4.11</a>). Thus even when <span class="process-math">\(S\)</span> is <em class="emphasis">finite</em>, <span class="process-math">\(\Span S\)</span> will be <em class="emphasis">infinite</em>, as long as <span class="process-math">\(S\)</span> contains nonzero vectors.</p>
+<li id="li-468"><p id="p-1869">The zero vector is always an element of <span class="process-math">\(\Span S\text{.}\)</span>  Indeed, if <span class="process-math">\(S=\emptyset\text{,}\)</span> then <span class="process-math">\(\Span S=\{\boldzero\}\)</span> by definition. Otherwise, given any <span class="process-math">\(\boldv\in S\text{,}\)</span> the linear combination <span class="process-math">\(0\boldv=\boldzero\)</span> is an element of <span class="process-math">\(\Span S\text{.}\)</span></p></li>
+<li id="li-469"><p id="p-1870">We have <span class="process-math">\(S\subseteq \Span S\text{:}\)</span> i.e., <span class="process-math">\(\Span S\)</span> includes <span class="process-math">\(S\)</span> itself. Indeed, given any <span class="process-math">\(\boldv\in S\text{,}\)</span> the linear combination <span class="process-math">\(1\boldv=\boldv\)</span> is an element of <span class="process-math">\(\Span S\text{.}\)</span></p></li>
+<li id="li-470">
+<p id="p-1871">If <span class="process-math">\(S=\{\boldv\}\)</span> contains exactly one element, then <span class="process-math">\(\Span S=\{c\boldv\colon c\in \R\}\)</span> is simply the set of all scalar multiples of <span class="process-math">\(\boldv\text{.}\)</span></p>
+<p id="p-1872">If <span class="process-math">\(\boldv\ne \boldzero\text{,}\)</span> then we know that this set is infinite (<a href="" class="xref" data-knowl="./knowl/ex_vs_zero_or_infinite.html" title="Exercise 3.1.4.11">Exercise 3.1.4.11</a>). Thus even when <span class="process-math">\(S\)</span> is <em class="emphasis">finite</em>, <span class="process-math">\(\Span S\)</span> will be <em class="emphasis">infinite</em>, as long as <span class="process-math">\(S\)</span> contains nonzero vectors.</p>
 </li>
 </ol></article><article class="example example-like" id="eg_span_2space"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Examples in <span class="process-math">\(\R^2\)</span>.</span>
 </h4>
-<p id="p-1827">Let <span class="process-math">\(V=\R^2\text{.}\)</span> For each <span class="process-math">\(S\text{,}\)</span> identify <span class="process-math">\(\Span S\)</span> as a familiar geometric object.</p>
+<p id="p-1873">Let <span class="process-math">\(V=\R^2\text{.}\)</span> For each <span class="process-math">\(S\text{,}\)</span> identify <span class="process-math">\(\Span S\)</span> as a familiar geometric object.</p>
 <ol class="decimal">
-<li id="li-463"><p id="p-1828"><span class="process-math">\(S=\{ \}\text{.}\)</span></p></li>
-<li id="li-464"><p id="p-1829"><span class="process-math">\(\displaystyle S=\{(0,0)\}\)</span></p></li>
-<li id="li-465"><p id="p-1830"><span class="process-math">\(S=\{\boldv\}\text{,}\)</span> <span class="process-math">\(\boldv=(a,b)\ne (0,0)\)</span></p></li>
-<li id="li-466"><p id="p-1831"><span class="process-math">\(\displaystyle S=\{ (1,0), (0,1)\}\)</span></p></li>
-<li id="li-467"><p id="p-1832"><span class="process-math">\(\displaystyle S=\{ (1,1), (2,2)\}\)</span></p></li>
-<li id="li-468"><p id="p-1833"><span class="process-math">\(\displaystyle S=\{(1,1),(1,2)\}\)</span></p></li>
-<li id="li-469"><p id="p-1834"><span class="process-math">\(\displaystyle S=\R^2\)</span></p></li>
+<li id="li-471"><p id="p-1874"><span class="process-math">\(S=\{ \}\text{.}\)</span></p></li>
+<li id="li-472"><p id="p-1875"><span class="process-math">\(\displaystyle S=\{(0,0)\}\)</span></p></li>
+<li id="li-473"><p id="p-1876"><span class="process-math">\(S=\{\boldv\}\text{,}\)</span> <span class="process-math">\(\boldv=(a,b)\ne (0,0)\)</span></p></li>
+<li id="li-474"><p id="p-1877"><span class="process-math">\(\displaystyle S=\{ (1,0), (0,1)\}\)</span></p></li>
+<li id="li-475"><p id="p-1878"><span class="process-math">\(\displaystyle S=\{ (1,1), (2,2)\}\)</span></p></li>
+<li id="li-476"><p id="p-1879"><span class="process-math">\(\displaystyle S=\{(1,1),(1,2)\}\)</span></p></li>
+<li id="li-477"><p id="p-1880"><span class="process-math">\(\displaystyle S=\R^2\)</span></p></li>
 </ol>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-50" id="solution-50"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-50"><div class="solution solution-like"><ol id="p-1835" class="decimal">
-<li id="li-470"><p id="p-1836"><span class="process-math">\(\Span S=\{\boldzero\}\text{,}\)</span> the set containing just the origin, by definition.</p></li>
-<li id="li-471"><p id="p-1837"><span class="process-math">\(\Span S\)</span> is the set of all scalar multiples of <span class="process-math">\((0,0)\text{.}\)</span> Thus <span class="process-math">\(\Span S=\{\boldzero\}\text{.}\)</span></p></li>
-<li id="li-472"><p id="p-1838"><span class="process-math">\(\Span S\)</span> is the set of all scalar multiples of the nonzero vector <span class="process-math">\((a,b)\text{.}\)</span> Geometrically, this is the line that passes through the the origin and the point <span class="process-math">\((a,b)\text{.}\)</span></p></li>
-<li id="li-473">
-<p id="p-1839">By definition</p>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-51" id="solution-51"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-51"><div class="solution solution-like"><ol id="p-1881" class="decimal">
+<li id="li-478"><p id="p-1882"><span class="process-math">\(\Span S=\{\boldzero\}\text{,}\)</span> the set containing just the origin, by definition.</p></li>
+<li id="li-479"><p id="p-1883"><span class="process-math">\(\Span S\)</span> is the set of all scalar multiples of <span class="process-math">\((0,0)\text{.}\)</span> Thus <span class="process-math">\(\Span S=\{\boldzero\}\text{.}\)</span></p></li>
+<li id="li-480"><p id="p-1884"><span class="process-math">\(\Span S\)</span> is the set of all scalar multiples of the nonzero vector <span class="process-math">\((a,b)\text{.}\)</span> Geometrically, this is the line that passes through the the origin and the point <span class="process-math">\((a,b)\text{.}\)</span></p></li>
+<li id="li-481">
+<p id="p-1885">By definition</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 S=\{a(1,0)+b(0,1)\colon a,b\in \R\}=\{(a,b)\colon a,b\in\R\}\text{.}
@@ -461,8 +461,8 @@ S=\{a(1,0)+b(0,1)\colon a,b\in \R\}=\{(a,b)\colon a,b\in\R\}\text{.}
 </div>
 <p class="continuation">Thus <span class="process-math">\(S=\R^2\text{,}\)</span> the entire <span class="process-math">\(xy\)</span>-plane.</p>
 </li>
-<li id="li-474">
-<p id="p-1840">By definition</p>
+<li id="li-482">
+<p id="p-1886">By definition</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 S=\{a(1,1)+b(2,2)\colon a,b\in \R\}=\{(a+2b,a+2b)\colon a,b\in\R\}\text{.}
@@ -476,8 +476,8 @@ S=\Span\{(1,1), (2,2)\}=\Span \{(1,1)\}\text{,}
 </div>
 <p class="continuation">and thus that the vector <span class="process-math">\((2,2)\)</span> is in some sense redundant.</p>
 </li>
-<li id="li-475">
-<p id="p-1841">By definition</p>
+<li id="li-483">
+<p id="p-1887">By definition</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 S=\{a(1,1)+b(1,2)\colon a,b\in \R\}=\{(a+b,a+2b)\colon a,b\in\R\}\text{.}
@@ -506,26 +506,26 @@ a\amp =2c-d \amp b\amp =d-c\text{,}
 </div>
 <p class="continuation">This proves <span class="process-math">\(\Span S=\R^2\text{,}\)</span> as claimed.</p>
 </li>
-<li id="li-476"><p id="p-1842">By <a href="" class="xref" data-knowl="./knowl/rm_span.html" title="Remark 3.5.2">Remark 3.5.2</a>, we have <span class="process-math">\(S\subseteq \Span S\text{.}\)</span> Thus <span class="process-math">\(\R^2\subseteq \Span \R^2\text{.}\)</span> Since <span class="process-math">\(\Span \R^2\subseteq \R^2\)</span> by definition, we conclude that <span class="process-math">\(\Span S=\R^2\text{.}\)</span></p></li>
+<li id="li-484"><p id="p-1888">By <a href="" class="xref" data-knowl="./knowl/rm_span.html" title="Remark 3.5.2">Remark 3.5.2</a>, we have <span class="process-math">\(S\subseteq \Span S\text{.}\)</span> Thus <span class="process-math">\(\R^2\subseteq \Span \R^2\text{.}\)</span> Since <span class="process-math">\(\Span \R^2\subseteq \R^2\)</span> by definition, we conclude that <span class="process-math">\(\Span S=\R^2\text{.}\)</span></p></li>
 </ol></div></div>
 </div></article><section class="paragraphs" id="ss_vid_eg_span"><h4 class="heading"><span class="title">Video example: computing span.</span></h4>
 <figure class="figure figure-like" id="fig_vid_span"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="vid_span" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/WN_5qI2r2ks?&amp;modestbranding=1&amp;rel=0"></iframe></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.4<span class="period">.</span></span><span class="space"> </span>Video: computing span</figcaption></figure></section><p id="p-1843">You may have noticed that each span computation in the previous example produced a subspace of <span class="process-math">\(\R^2\text{.}\)</span> This is no accident!</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.4<span class="period">.</span></span><span class="space"> </span>Video: computing span</figcaption></figure></section><p id="p-1889">You may have noticed that each span computation in the previous example produced a subspace of <span class="process-math">\(\R^2\text{.}\)</span> This is no accident!</p>
 <article class="theorem theorem-like" id="th_span"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.5.5</span><span class="period">.</span><span class="space"> </span><span class="title">Spans are subspaces.</span>
 </h4>
-<p id="p-1844">Let <span class="process-math">\(S\)</span> be a subset of the vector space <span class="process-math">\(V\text{.}\)</span></p>
+<p id="p-1890">Let <span class="process-math">\(S\)</span> be a subset of the vector space <span class="process-math">\(V\text{.}\)</span></p>
 <ol class="decimal">
-<li id="li-477"><p id="p-1845">The set <span class="process-math">\(\Span S\)</span> is a subspace of <span class="process-math">\(V\text{.}\)</span></p></li>
-<li id="li-478"><p id="p-1846">If <span class="process-math">\(W\)</span> is any subspace containing <span class="process-math">\(S\text{,}\)</span> then <span class="process-math">\(\Span S\subseteq W\text{.}\)</span></p></li>
+<li id="li-485"><p id="p-1891">The set <span class="process-math">\(\Span S\)</span> is a subspace of <span class="process-math">\(V\text{.}\)</span></p></li>
+<li id="li-486"><p id="p-1892">If <span class="process-math">\(W\)</span> is any subspace containing <span class="process-math">\(S\text{,}\)</span> then <span class="process-math">\(\Span S\subseteq W\text{.}\)</span></p></li>
 </ol>
-<p class="continuation">Taken together, (1) and (2) imply that <span class="process-math">\(\Span S\)</span> is the <em class="emphasis">smallest subspace of <span class="process-math">\(V\)</span> containing <span class="process-math">\(S\)</span></em>.</p></article><article class="hiddenproof" id="proof-53"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-53"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-53"><article class="hiddenproof"><p id="p-1847">We prove each statement separately.</p>
+<p class="continuation">Taken together, (1) and (2) imply that <span class="process-math">\(\Span S\)</span> is the <em class="emphasis">smallest subspace of <span class="process-math">\(V\)</span> containing <span class="process-math">\(S\)</span></em>.</p></article><article class="hiddenproof" id="proof-53"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-53"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-53"><article class="hiddenproof"><p id="p-1893">We prove each statement separately.</p>
 <article class="case" id="case-83"><h5 class="heading">Statement (1).</h5>
-<p id="p-1848">To show <span class="process-math">\(\Span S\)</span> is a subspace, we use the two-step technique.</p>
+<p id="p-1894">To show <span class="process-math">\(\Span S\)</span> is a subspace, we use the two-step technique.</p>
 <ol class="decimal">
-<li id="li-479"><p id="p-1849">By <a href="" class="xref" data-knowl="./knowl/rm_span.html" title="Remark 3.5.2">Remark 3.5.2</a> we know that <span class="process-math">\(\boldzero\in \Span S \text{.}\)</span></p></li>
-<li id="li-480">
-<p id="p-1850">Suppose <span class="process-math">\(\boldv, \boldw\in S\text{.}\)</span> By definition we have</p>
+<li id="li-487"><p id="p-1895">By <a href="" class="xref" data-knowl="./knowl/rm_span.html" title="Remark 3.5.2">Remark 3.5.2</a> we know that <span class="process-math">\(\boldzero\in \Span S \text{.}\)</span></p></li>
+<li id="li-488">
+<p id="p-1896">Suppose <span class="process-math">\(\boldv, \boldw\in S\text{.}\)</span> By definition we have</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-141">
 \begin{align*}
 \boldv \amp =c_1\boldv_1+c_2\boldv_2+\cdots +c_r\boldv_r \amp \boldw \amp = c_{r+1}\boldv_{r+1}+c_{r+2}\boldv_{r+2}+\cdots +c_{r+s}\boldv_{r+s}
@@ -540,30 +540,30 @@ c\boldv+d\boldw=cc_1\boldv_1+cc_2\boldv_2+\cdots +cc_r\boldv_r+dc_{r+1}\boldv_{r
 <p class="continuation">which is clearly a linear combination of elements of <span class="process-math">\(S\text{.}\)</span> Thus <span class="process-math">\(c\boldv+d\boldw\in \Span S\text{,}\)</span> as desired.</p>
 </li>
 </ol></article><article class="case" id="case-84"><h5 class="heading">Statement (2).</h5>
-<p id="p-1851">Let <span class="process-math">\(W\subseteq V\)</span> be a subspace that contains all elements of <span class="process-math">\(S\text{.}\)</span> Since <span class="process-math">\(W\)</span> is closed under arbitrary linear combinations, it must contain any linear combination of elements of <span class="process-math">\(S\text{,}\)</span> and thus <span class="process-math">\(\Span S\subseteq W\text{.}\)</span></p></article></article></div>
-<p id="p-1852">The results of <a href="" class="xref" data-knowl="./knowl/th_span.html" title="Theorem 3.5.5: Spans are subspaces">Theorem 3.5.5</a> motivate the following additional terminology.</p>
+<p id="p-1897">Let <span class="process-math">\(W\subseteq V\)</span> be a subspace that contains all elements of <span class="process-math">\(S\text{.}\)</span> Since <span class="process-math">\(W\)</span> is closed under arbitrary linear combinations, it must contain any linear combination of elements of <span class="process-math">\(S\text{,}\)</span> and thus <span class="process-math">\(\Span S\subseteq W\text{.}\)</span></p></article></article></div>
+<p id="p-1898">The results of <a href="" class="xref" data-knowl="./knowl/th_span.html" title="Theorem 3.5.5: Spans are subspaces">Theorem 3.5.5</a> motivate the following additional terminology.</p>
 <article class="definition definition-like" id="d_spanning_set"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.5.6</span><span class="period">.</span><span class="space"> </span><span class="title">Spanning set.</span>
 </h4>
-<p id="p-1853">Let <span class="process-math">\(S\)</span>  be a subset of the vector space <span class="process-math">\(V\text{.}\)</span> We call <span class="process-math">\(W=\Span S\)</span> the subspace of <span class="process-math">\(V\)</span> <dfn class="terminology">generated by S</dfn>, and we call <span class="process-math">\(S\)</span> a <dfn class="terminology">spanning set</dfn> for <span class="process-math">\(W\text{.}\)</span></p></article><article class="remark remark-like" id="rm_spanning_sets"><h4 class="heading">
+<p id="p-1899">Let <span class="process-math">\(S\)</span>  be a subset of the vector space <span class="process-math">\(V\text{.}\)</span> We call <span class="process-math">\(W=\Span S\)</span> the subspace of <span class="process-math">\(V\)</span> <dfn class="terminology">generated by S</dfn>, and we call <span class="process-math">\(S\)</span> a <dfn class="terminology">spanning set</dfn> for <span class="process-math">\(W\text{.}\)</span></p></article><article class="remark remark-like" id="rm_spanning_sets"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.5.7</span><span class="period">.</span><span class="space"> </span><span class="title">Some standard spanning sets.</span>
 </h4>
-<p id="p-1854">For most of the vector spaces we've met a natural spanning set springs to mind. We will refer to these loosely as <em class="emphasis">standard</em> spanning sets. Some examples:</p>
+<p id="p-1900">For most of the vector spaces we've met a natural spanning set springs to mind. We will refer to these loosely as <em class="emphasis">standard</em> spanning sets. Some examples:</p>
 <ul class="disc">
-<li id="li-481">
-<span class="heading"><span class="title">Zero space.</span></span><p id="p-1855">Let <span class="process-math">\(V=\{\boldzero\}\text{.}\)</span> By definition the empty set <span class="process-math">\(S=\emptyset=\{ \}\)</span> is a spanning set of <span class="process-math">\(V\text{.}\)</span></p>
+<li id="li-489">
+<span class="heading"><span class="title">Zero space.</span></span><p id="p-1901">Let <span class="process-math">\(V=\{\boldzero\}\text{.}\)</span> By definition the empty set <span class="process-math">\(S=\emptyset=\{ \}\)</span> is a spanning set of <span class="process-math">\(V\text{.}\)</span></p>
 </li>
-<li id="li-482">
-<span class="heading"><span class="title">Tuples.</span></span><p id="p-1856">Let <span class="process-math">\(V=\R^n\text{.}\)</span> For <span class="process-math">\(1\leq i\leq n\text{,}\)</span> define <span class="process-math">\(\bolde_i\)</span> to be the <span class="process-math">\(n\)</span>-tuple with a one in the <span class="process-math">\(i\)</span>-th entry, and zeros elsewhere. Then <span class="process-math">\(S=\{\bolde_1, \bolde_2,\dots, \bolde_n\}\)</span> is a spanning set for <span class="process-math">\(\R^n\text{.}\)</span></p>
+<li id="li-490">
+<span class="heading"><span class="title">Tuples.</span></span><p id="p-1902">Let <span class="process-math">\(V=\R^n\text{.}\)</span> For <span class="process-math">\(1\leq i\leq n\text{,}\)</span> define <span class="process-math">\(\bolde_i\)</span> to be the <span class="process-math">\(n\)</span>-tuple with a one in the <span class="process-math">\(i\)</span>-th entry, and zeros elsewhere. Then <span class="process-math">\(S=\{\bolde_1, \bolde_2,\dots, \bolde_n\}\)</span> is a spanning set for <span class="process-math">\(\R^n\text{.}\)</span></p>
 </li>
-<li id="li-483">
-<span class="heading"><span class="title">Matrices.</span></span><p id="p-1857">Let <span class="process-math">\(V=M_{mn}\text{.}\)</span> For each <span class="process-math">\((i,j)\)</span> with <span class="process-math">\(1\leq i\leq m\)</span> and <span class="process-math">\(1\leq j\leq n\text{,}\)</span> define <span class="process-math">\(E_{ij}\)</span> to be the <span class="process-math">\(m\times n\)</span> matrix with a one in the <span class="process-math">\(ij\)</span>-th entry, and zeros elsewhere. Then <span class="process-math">\(S=\{E_{ij}\colon 1\leq i\leq m, 1\leq j\leq n\}\)</span> is a spanning set for <span class="process-math">\(M_{mn}\text{.}\)</span></p>
+<li id="li-491">
+<span class="heading"><span class="title">Matrices.</span></span><p id="p-1903">Let <span class="process-math">\(V=M_{mn}\text{.}\)</span> For each <span class="process-math">\((i,j)\)</span> with <span class="process-math">\(1\leq i\leq m\)</span> and <span class="process-math">\(1\leq j\leq n\text{,}\)</span> define <span class="process-math">\(E_{ij}\)</span> to be the <span class="process-math">\(m\times n\)</span> matrix with a one in the <span class="process-math">\(ij\)</span>-th entry, and zeros elsewhere. Then <span class="process-math">\(S=\{E_{ij}\colon 1\leq i\leq m, 1\leq j\leq n\}\)</span> is a spanning set for <span class="process-math">\(M_{mn}\text{.}\)</span></p>
 </li>
-<li id="li-484">
-<span class="heading"><span class="title">Polynomials of bounded degree.</span></span><p id="p-1858">Let <span class="process-math">\(V=P_n\text{.}\)</span> The set <span class="process-math">\(S=\{x^n, x^{n-1}, \dots, x, 1\}\)</span> clearly spans <span class="process-math">\(P_n\text{.}\)</span> This is just another way of saying that the <em class="emphasis">monomials</em> of degree at most <span class="process-math">\(n\)</span> generate the polynomials of degree at most <span class="process-math">\(n\text{.}\)</span></p>
+<li id="li-492">
+<span class="heading"><span class="title">Polynomials of bounded degree.</span></span><p id="p-1904">Let <span class="process-math">\(V=P_n\text{.}\)</span> The set <span class="process-math">\(S=\{x^n, x^{n-1}, \dots, x, 1\}\)</span> clearly spans <span class="process-math">\(P_n\text{.}\)</span> This is just another way of saying that the <em class="emphasis">monomials</em> of degree at most <span class="process-math">\(n\)</span> generate the polynomials of degree at most <span class="process-math">\(n\text{.}\)</span></p>
 </li>
-<li id="li-485">
-<span class="heading"><span class="title">Polynomials.</span></span><p id="p-1859">Let <span class="process-math">\(V=P\text{,}\)</span> the space of <em class="emphasis">all</em> polynomials. In a similar vein, the set</p>
+<li id="li-493">
+<span class="heading"><span class="title">Polynomials.</span></span><p id="p-1905">Let <span class="process-math">\(V=P\text{,}\)</span> the space of <em class="emphasis">all</em> polynomials. In a similar vein, the set</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 S=\{1, x, x^2, \dots\}=\{x^i\colon i\geq 0\} 
@@ -572,15 +572,15 @@ S=\{1, x, x^2, \dots\}=\{x^i\colon i\geq 0\}
 <p class="continuation">of <em class="emphasis">all</em> monomials is a spanning set for <span class="process-math">\(P\text{.}\)</span></p>
 </li>
 </ul>
-<p class="continuation">Note the glaring difference between the first three examples, and the last: our standard spanning set for <span class="process-math">\(P\)</span> is <em class="emphasis">infinite</em>, whereas the previous examples are all finite spanning sets. You suspect, no doubt, that there is no finite spanning set for <span class="process-math">\(P\text{.}\)</span> We will be able to prove this shortly.</p></article><p id="p-1860">It is important to observe that spanning sets for vector spaces are not unique. Far from it! In general, for any nonzero vector space there are infinitely many choices of spanning sets.</p>
+<p class="continuation">Note the glaring difference between the first three examples, and the last: our standard spanning set for <span class="process-math">\(P\)</span> is <em class="emphasis">infinite</em>, whereas the previous examples are all finite spanning sets. You suspect, no doubt, that there is no finite spanning set for <span class="process-math">\(P\text{.}\)</span> We will be able to prove this shortly.</p></article><p id="p-1906">It is important to observe that spanning sets for vector spaces are not unique. Far from it! In general, for any nonzero vector space there are infinitely many choices of spanning sets.</p>
 <article class="example example-like" id="example-49"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.8</span><span class="period">.</span><span class="space"> </span><span class="title">Spanning sets are not unique.</span>
 </h4>
-<p id="p-1861">For each <span class="process-math">\(V\)</span> and <span class="process-math">\(S\)</span> below, verify that <span class="process-math">\(S\)</span> is a spanning set for <span class="process-math">\(V\text{.}\)</span></p>
+<p id="p-1907">For each <span class="process-math">\(V\)</span> and <span class="process-math">\(S\)</span> below, verify that <span class="process-math">\(S\)</span> is a spanning set for <span class="process-math">\(V\text{.}\)</span></p>
 <ol class="decimal">
-<li id="li-486"><p id="p-1862"><span class="process-math">\(V=\R^2\text{,}\)</span> <span class="process-math">\(S=\{(1,1), (1,2)\}\)</span></p></li>
-<li id="li-487">
-<p id="p-1863"><span class="process-math">\(V=M_{22}\text{,}\)</span> <span class="process-math">\(S=\{A_1, A_2, A_3, A_4\}\text{,}\)</span></p>
+<li id="li-494"><p id="p-1908"><span class="process-math">\(V=\R^2\text{,}\)</span> <span class="process-math">\(S=\{(1,1), (1,2)\}\)</span></p></li>
+<li id="li-495">
+<p id="p-1909"><span class="process-math">\(V=M_{22}\text{,}\)</span> <span class="process-math">\(S=\{A_1, A_2, A_3, A_4\}\text{,}\)</span></p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 A_1=\begin{amatrix}[rr]1\amp 1\\ 1\amp 1  \end{amatrix},
@@ -590,13 +590,13 @@ A_4=\begin{amatrix}[rr]1\amp 1\\ -1\amp -1  \end{amatrix}\text{.}
 \end{equation*}
 </div>
 </li>
-<li id="li-488"><p id="p-1864"><span class="process-math">\(V=P_2\text{,}\)</span> <span class="process-math">\(S=\{x^2+x+1, x^2-x, x-1\}\)</span></p></li>
+<li id="li-496"><p id="p-1910"><span class="process-math">\(V=P_2\text{,}\)</span> <span class="process-math">\(S=\{x^2+x+1, x^2-x, x-1\}\)</span></p></li>
 </ol>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-51" id="solution-51"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-51"><div class="solution solution-like"><ol id="p-1865" class="decimal">
-<li id="li-489"><p id="p-1866">This was shown in <a href="" class="xref" data-knowl="./knowl/eg_span_2space.html" title="Example 3.5.3: Examples in \R^2">Example 3.5.3</a></p></li>
-<li id="li-490">
-<p id="p-1867">We must show, given any <span class="process-math">\(A=\begin{amatrix}[rr]a\amp b\\ c\amp d  \end{amatrix}\text{,}\)</span> we can find <span class="process-math">\(c_1, c_2, c_3, c_4\in \R\)</span> such that</p>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-52" id="solution-52"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-52"><div class="solution solution-like"><ol id="p-1911" class="decimal">
+<li id="li-497"><p id="p-1912">This was shown in <a href="" class="xref" data-knowl="./knowl/eg_span_2space.html" title="Example 3.5.3: Examples in \R^2">Example 3.5.3</a></p></li>
+<li id="li-498">
+<p id="p-1913">We must show, given any <span class="process-math">\(A=\begin{amatrix}[rr]a\amp b\\ c\amp d  \end{amatrix}\text{,}\)</span> we can find <span class="process-math">\(c_1, c_2, c_3, c_4\in \R\)</span> such that</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 c_1A_1+c_2A_2+c_3A_3+c_4A_4=\begin{amatrix}[rr]a\amp b\\ c\amp d  \end{amatrix}\text{,}
@@ -635,8 +635,8 @@ c_1+c_3-c_4\amp c_1-c_3-c_4  \end{amatrix}
 </div>
 <p class="continuation">Since the last column will never contain a leading one, we conclude that the system is consistent for any choice of <span class="process-math">\(a,b,c,d\text{,}\)</span> and thus that <span class="process-math">\(\Span S=M_{22}\text{,}\)</span> as claimed.</p>
 </li>
-<li id="li-491">
-<p id="p-1868">We must show that given any <span class="process-math">\(p(x)=ax^2+bx+c\)</span> we can find <span class="process-math">\(c_1,c_2,c_3\)</span> such that</p>
+<li id="li-499">
+<p id="p-1914">We must show that given any <span class="process-math">\(p(x)=ax^2+bx+c\)</span> we can find <span class="process-math">\(c_1,c_2,c_3\)</span> such that</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/rm_polynomial_equality.html">
 \begin{equation*}
 c_1(x^2+x+1)+c_2(x^2-1)+c_3(x-1)=ax^2+bx+c\text{,}
@@ -664,11 +664,11 @@ c_1 \amp -\amp c_2 \amp - \amp c_3 \amp = \amp c
 </div></article></section><section class="subsection" id="ss_linear_independence"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.5.2</span> <span class="title">Linear independence</span>
 </h3>
-<p id="p-1869">As it turns out, the notion of <em class="emphasis">linear independence</em> defined below is precisely what we need to guarantee that a given spanning set has no “redundancies”.</p>
+<p id="p-1915">As it turns out, the notion of <em class="emphasis">linear independence</em> defined below is precisely what we need to guarantee that a given spanning set has no “redundancies”.</p>
 <article class="definition definition-like" id="d_linear_independence"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.5.9</span><span class="period">.</span><span class="space"> </span><span class="title">Linear independence (for finite subsets).</span>
 </h4>
-<p id="p-1870">Let <span class="process-math">\(V\)</span> be a vector space, let <span class="process-math">\(S\)</span> be a finite subset, and let <span class="process-math">\(\boldv_1, \boldv_2, \dots, \boldv_n\)</span> the distinct elements of <span class="process-math">\(S\text{:}\)</span> i.e., <span class="process-math">\(\boldv_i\ne \boldv_j\)</span> for all <span class="process-math">\(i\ne j\text{.}\)</span>  We say <span class="process-math">\(S\)</span> is <dfn class="terminology">linearly independent</dfn> if the following condition holds:</p>
+<p id="p-1916">Let <span class="process-math">\(V\)</span> be a vector space, let <span class="process-math">\(S\)</span> be a finite subset, and let <span class="process-math">\(\boldv_1, \boldv_2, \dots, \boldv_n\)</span> the distinct elements of <span class="process-math">\(S\text{:}\)</span> i.e., <span class="process-math">\(\boldv_i\ne \boldv_j\)</span> for all <span class="process-math">\(i\ne j\text{.}\)</span>  We say <span class="process-math">\(S\)</span> is <dfn class="terminology">linearly independent</dfn> if the following condition holds:</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \text{if } c_1\boldv_1+c_2\boldv_2+\cdots +c_n\boldv_n=\boldzero \text{ for some } c_i\in \R , \text{ then } c_i=0 \text{ for all } i\text{.}
@@ -683,10 +683,10 @@ c_1\boldv_1+c_2\boldv_2+\cdots +c_n\boldv_n=\boldzero\text{.}
 <p class="continuation">We call a linear combination <span class="process-math">\(c_1\boldv_1+c_2\boldv_2+\cdots c_n\boldv_n\)</span>  <dfn class="terminology">trivial</dfn> if <span class="process-math">\(c_i=0\)</span> for all <span class="process-math">\(i\text{,}\)</span> and <dfn class="terminology">nontrivial</dfn> if <span class="process-math">\(c_i\ne 0\)</span> for some <span class="process-math">\(i\text{.}\)</span> Using this terminology, a set <span class="process-math">\(S\)</span> is linearly independent if the only linear combination of distinct elements of <span class="process-math">\(S\)</span> yielding the zero vector is the trivial one.</p></article><article class="remark remark-like" id="rm_linear_independence"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.5.10</span><span class="period">.</span>
 </h4>
-<p id="p-1871">The definition of linear independence is quite a mouthful! Some clarifying remarks:</p>
+<p id="p-1917">The definition of linear independence is quite a mouthful! Some clarifying remarks:</p>
 <ol class="decimal">
-<li id="li-492">
-<p id="p-1872">To prove a set <span class="process-math">\(S=\{\boldv_1, \boldv_2, \dots, \boldv_n\}\)</span> of <span class="process-math">\(n\)</span> distinct vectors is linearly independent, we must prove an <em class="emphasis">implication</em>:</p>
+<li id="li-500">
+<p id="p-1918">To prove a set <span class="process-math">\(S=\{\boldv_1, \boldv_2, \dots, \boldv_n\}\)</span> of <span class="process-math">\(n\)</span> distinct vectors is linearly independent, we must prove an <em class="emphasis">implication</em>:</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 c_1\boldv_1+c_2\boldv_2+\cdots +c_n\boldv_n=\boldzero \implies c_1=c_2=\dots=c_n=0\text{.}
@@ -694,32 +694,32 @@ c_1\boldv_1+c_2\boldv_2+\cdots +c_n\boldv_n=\boldzero \implies c_1=c_2=\dots=c_n
 </div>
 <p class="continuation">More often than not you will do so in the direct manner: i.e., assume you have a linear combination equal to the zero vector, then show that all coefficients must be zero.</p>
 </li>
-<li id="li-493"><p id="p-1873">By the same token, to show <span class="process-math">\(S\)</span> is linearly dependent, we must produce a <em class="emphasis">nontrivial</em> linear combination of distinct elements equal to the zero vector.</p></li>
-<li id="li-494">
-<p id="p-1874">It is easy to see that <span class="process-math">\(S\)</span> is linearly dependent if and only if some element of <span class="process-math">\(S\)</span> can be written as a linear combination of other elements of <span class="process-math">\(S\text{:}\)</span> just take the nontrivial linear combination yielding the zero vector, and solve for the vector in this combination with the nonzero coefficient.</p>
-<p id="p-1875">This makes precise what it means for a spanning set <span class="process-math">\(S\)</span> to have redundancies or not.  If <span class="process-math">\(S\)</span> is linearly dependent, then one of its vectors can be written as a linear combination of the others, and thus can be “thrown out” when computing <span class="process-math">\(\Span S\text{,}\)</span> the set of all linear combinations of <span class="process-math">\(S\text{.}\)</span> Conversely, if <span class="process-math">\(S\)</span> is linearly independent, then no element of <span class="process-math">\(S\)</span> can be written as a linear combination of the others; throwing any element out would thus result in <span class="process-math">\(\Span S\)</span> being strictly smaller.</p>
+<li id="li-501"><p id="p-1919">By the same token, to show <span class="process-math">\(S\)</span> is linearly dependent, we must produce a <em class="emphasis">nontrivial</em> linear combination of distinct elements equal to the zero vector.</p></li>
+<li id="li-502">
+<p id="p-1920">It is easy to see that <span class="process-math">\(S\)</span> is linearly dependent if and only if some element of <span class="process-math">\(S\)</span> can be written as a linear combination of other elements of <span class="process-math">\(S\text{:}\)</span> just take the nontrivial linear combination yielding the zero vector, and solve for the vector in this combination with the nonzero coefficient.</p>
+<p id="p-1921">This makes precise what it means for a spanning set <span class="process-math">\(S\)</span> to have redundancies or not.  If <span class="process-math">\(S\)</span> is linearly dependent, then one of its vectors can be written as a linear combination of the others, and thus can be “thrown out” when computing <span class="process-math">\(\Span S\text{,}\)</span> the set of all linear combinations of <span class="process-math">\(S\text{.}\)</span> Conversely, if <span class="process-math">\(S\)</span> is linearly independent, then no element of <span class="process-math">\(S\)</span> can be written as a linear combination of the others; throwing any element out would thus result in <span class="process-math">\(\Span S\)</span> being strictly smaller.</p>
 </li>
 </ol></article><article class="example example-like" id="eg_independence_basic_examples"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.11</span><span class="period">.</span><span class="space"> </span><span class="title">Elementary examples.</span>
 </h4>
-<p id="p-1876">Let <span class="process-math">\(V\)</span> be a vector space, and let <span class="process-math">\(S\)</span> be a subset.</p>
+<p id="p-1922">Let <span class="process-math">\(V\)</span> be a vector space, and let <span class="process-math">\(S\)</span> be a subset.</p>
 <ol class="decimal">
-<li id="li-495"><p id="p-1877">If <span class="process-math">\(\boldzero\in S\text{,}\)</span> then <span class="process-math">\(S\)</span> is linearly dependent: indeed, we have the nontrivial linear combination <span class="process-math">\(1\boldzero=\boldzero\text{.}\)</span></p></li>
-<li id="li-496">
-<p id="p-1878">If <span class="process-math">\(S=\{\boldv\}\text{,}\)</span> then <span class="process-math">\(S\)</span> is linearly independent if and only if <span class="process-math">\(\boldv\ne \boldzero\text{.}\)</span> The previous comment shows why <span class="process-math">\(\boldv\ne \boldzero\)</span> is a necessary condition. Let's see why it is sufficient.</p>
-<p id="p-1879">Suppose <span class="process-math">\(\boldv\ne\boldzero\text{,}\)</span> and suppose we have <span class="process-math">\(c\boldv=\boldzero\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/th_vectorspace_props.html" title="Theorem 3.1.13: Basic vector space properties">Theorem 3.1.13</a> we have <span class="process-math">\(c=0\)</span> or <span class="process-math">\(\boldv=\boldzero\)</span> (<a href="" class="xref" data-knowl="./knowl/th_vectorspace_props.html" title="Theorem 3.1.13: Basic vector space properties">Theorem 3.1.13</a>). Since <span class="process-math">\(\boldv\ne 0\text{,}\)</span> we conclude <span class="process-math">\(c=0\text{.}\)</span> This shows that the only linear combination of <span class="process-math">\(S\)</span> yielding <span class="process-math">\(\boldzero\)</span> is the trivial one.</p>
+<li id="li-503"><p id="p-1923">If <span class="process-math">\(\boldzero\in S\text{,}\)</span> then <span class="process-math">\(S\)</span> is linearly dependent: indeed, we have the nontrivial linear combination <span class="process-math">\(1\boldzero=\boldzero\text{.}\)</span></p></li>
+<li id="li-504">
+<p id="p-1924">If <span class="process-math">\(S=\{\boldv\}\text{,}\)</span> then <span class="process-math">\(S\)</span> is linearly independent if and only if <span class="process-math">\(\boldv\ne \boldzero\text{.}\)</span> The previous comment shows why <span class="process-math">\(\boldv\ne \boldzero\)</span> is a necessary condition. Let's see why it is sufficient.</p>
+<p id="p-1925">Suppose <span class="process-math">\(\boldv\ne\boldzero\text{,}\)</span> and suppose we have <span class="process-math">\(c\boldv=\boldzero\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/th_vectorspace_props.html" title="Theorem 3.1.13: Basic vector space properties">Theorem 3.1.13</a> we have <span class="process-math">\(c=0\)</span> or <span class="process-math">\(\boldv=\boldzero\)</span> (<a href="" class="xref" data-knowl="./knowl/th_vectorspace_props.html" title="Theorem 3.1.13: Basic vector space properties">Theorem 3.1.13</a>). Since <span class="process-math">\(\boldv\ne 0\text{,}\)</span> we conclude <span class="process-math">\(c=0\text{.}\)</span> This shows that the only linear combination of <span class="process-math">\(S\)</span> yielding <span class="process-math">\(\boldzero\)</span> is the trivial one.</p>
 </li>
-<li id="li-497">
-<p id="p-1880">Suppose <span class="process-math">\(S=\{\boldv, \boldw\}\text{,}\)</span> where <span class="process-math">\(\boldv\ne\boldw\text{.}\)</span> From the last remark, it follows that <span class="process-math">\(S\)</span> is linearly independent if and only if one of its elements is a scalar multiple of the other.</p>
-<p id="p-1881">This makes it very easy to decide whether a two-element set is linearly independent. Note however, that the same observation does not apply to larger sets: e.g., <span class="process-math">\(S=\{(1,1),(1,0), (0,1)\}\)</span> can be shown to be linearly dependent, and yet no element of <span class="process-math">\(S\)</span> is a scalar multiple of any other element.</p>
+<li id="li-505">
+<p id="p-1926">Suppose <span class="process-math">\(S=\{\boldv, \boldw\}\text{,}\)</span> where <span class="process-math">\(\boldv\ne\boldw\text{.}\)</span> From the last remark, it follows that <span class="process-math">\(S\)</span> is linearly independent if and only if one of its elements is a scalar multiple of the other.</p>
+<p id="p-1927">This makes it very easy to decide whether a two-element set is linearly independent. Note however, that the same observation does not apply to larger sets: e.g., <span class="process-math">\(S=\{(1,1),(1,0), (0,1)\}\)</span> can be shown to be linearly dependent, and yet no element of <span class="process-math">\(S\)</span> is a scalar multiple of any other element.</p>
 </li>
-</ol></article><p id="p-1882">Deciding whether a subset <span class="process-math">\(S\)</span> of a vector space <span class="process-math">\(V\)</span> is linearly independent usually boils down to a question about the solutions to a certain system of linear equations. The procedure below outlines the steps necessary to extract the relevant linear system and draw the relevant conclusions.</p>
+</ol></article><p id="p-1928">Deciding whether a subset <span class="process-math">\(S\)</span> of a vector space <span class="process-math">\(V\)</span> is linearly independent usually boils down to a question about the solutions to a certain system of linear equations. The procedure below outlines the steps necessary to extract the relevant linear system and draw the relevant conclusions.</p>
 <article class="algorithm theorem-like" id="proc_linear_independence"><h4 class="heading">
 <span class="type">Procedure</span><span class="space"> </span><span class="codenumber">3.5.12</span><span class="period">.</span><span class="space"> </span><span class="title">Investigating linear independence.</span>
 </h4>
 <ol class="decimal">
-<li id="li-498">
-<p id="p-1883">Write out the general <em class="emphasis">vector equation</em></p>
+<li id="li-506">
+<p id="p-1929">Write out the general <em class="emphasis">vector equation</em></p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 c_1\boldv_1+c_2\boldv_2+\cdots +c_n\boldv_n=\boldzero
@@ -727,18 +727,18 @@ c_1\boldv_1+c_2\boldv_2+\cdots +c_n\boldv_n=\boldzero
 </div>
 <p class="continuation">where the <span class="process-math">\(\boldv_i\)</span> are arbitrary elements of the given set <span class="process-math">\(S\text{.}\)</span></p>
 </li>
-<li id="li-499"><p id="p-1884">Translate this vector equation into a <em class="emphasis">homogeneous linear system</em> in the unknowns <span class="process-math">\(c_1,c_2,\dots, c_n \text{,}\)</span> using the definition of equality for your vector space.</p></li>
-<li id="li-500"><p id="p-1885">Decide, using Gaussian elimination, whether this system has any nonzero (i.e., nontrivial) solutions.</p></li>
-</ol></article><p id="p-1886">This is a fitting point to recall our <a href="" class="xref" data-knowl="./knowl/princ_GE.html" title="Mantra 1.2.7: Gaussian elimination mantra">Gaussian elimination mantra</a>. As you can see, even as we move into more and more abstract realms of linear algebra (linear independence, span, etc.), Gaussian elimination remains our most important tool.</p>
+<li id="li-507"><p id="p-1930">Translate this vector equation into a <em class="emphasis">homogeneous linear system</em> in the unknowns <span class="process-math">\(c_1,c_2,\dots, c_n \text{,}\)</span> using the definition of equality for your vector space.</p></li>
+<li id="li-508"><p id="p-1931">Decide, using Gaussian elimination, whether this system has any nonzero (i.e., nontrivial) solutions.</p></li>
+</ol></article><p id="p-1932">This is a fitting point to recall our <a href="" class="xref" data-knowl="./knowl/princ_GE.html" title="Mantra 1.2.7: Gaussian elimination mantra">Gaussian elimination mantra</a>. As you can see, even as we move into more and more abstract realms of linear algebra (linear independence, span, etc.), Gaussian elimination remains our most important tool.</p>
 <article class="example example-like" id="ex_linear_independence"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.13</span><span class="period">.</span><span class="space"> </span><span class="title">Linear independence.</span>
 </h4>
-<p id="p-1887">For each subset <span class="process-math">\(S\)</span> of the given vector space <span class="process-math">\(V\text{,}\)</span> decide whether <span class="process-math">\(S\)</span> is linearly independent.</p>
+<p id="p-1933">For each subset <span class="process-math">\(S\)</span> of the given vector space <span class="process-math">\(V\text{,}\)</span> decide whether <span class="process-math">\(S\)</span> is linearly independent.</p>
 <ol class="decimal">
-<li id="li-501"><p id="p-1888"><span class="process-math">\(V=\R^3\text{,}\)</span> <span class="process-math">\(S=\{(1,1,2),(1,0,1), (-2,1,-1)\}\)</span></p></li>
-<li id="li-502"><p id="p-1889"><span class="process-math">\(V=P_2\text{,}\)</span> <span class="process-math">\(S=\{x^2+x-2, 2x^2+1, x^2-x\}\)</span></p></li>
-<li id="li-503">
-<p id="p-1890"><span class="process-math">\(V=M_{22}\text{,}\)</span> <span class="process-math">\(S=\{A_1, A_2, A_3, A_4\}\text{,}\)</span> where</p>
+<li id="li-509"><p id="p-1934"><span class="process-math">\(V=\R^3\text{,}\)</span> <span class="process-math">\(S=\{(1,1,2),(1,0,1), (-2,1,-1)\}\)</span></p></li>
+<li id="li-510"><p id="p-1935"><span class="process-math">\(V=P_2\text{,}\)</span> <span class="process-math">\(S=\{x^2+x-2, 2x^2+1, x^2-x\}\)</span></p></li>
+<li id="li-511">
+<p id="p-1936"><span class="process-math">\(V=M_{22}\text{,}\)</span> <span class="process-math">\(S=\{A_1, A_2, A_3, A_4\}\text{,}\)</span> where</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 A_1=\begin{bmatrix}3\amp 1\\ 2\amp -3 \end{bmatrix} , A_2= \begin{bmatrix}0\amp 4\\ 2\amp 0 \end{bmatrix} , A_3=\begin{bmatrix}-2\amp -2\\ -2\amp 2 \end{bmatrix}\text{.}
@@ -747,9 +747,9 @@ A_1=\begin{bmatrix}3\amp 1\\ 2\amp -3 \end{bmatrix} , A_2= \begin{bmatrix}0\amp 
 </li>
 </ol>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-52" id="solution-52"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-52"><div class="solution solution-like"><ol class="decimal">
-<li id="li-504">
-<p id="p-1891">We have</p>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-53" id="solution-53"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-53"><div class="solution solution-like"><ol class="decimal">
+<li id="li-512">
+<p id="p-1937">We have</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 a(1,1,2)+b(1,0,1)+c(-2,1,-1)=(0,0,0)
@@ -773,8 +773,8 @@ a \amp \amp \amp +\amp c\amp =0\\
 </div>
 <p class="continuation">Since there is a nontrivial linear combination of elements of <span class="process-math">\(S\)</span> yielding the zero vector, we conclude <span class="process-math">\(S\)</span> is linearly dependent.</p>
 </li>
-<li id="li-505">
-<p id="p-1892">Recall that the zero vector of <span class="process-math">\(P_2\)</span> is the zero polynomial <span class="process-math">\(\boldzero=0x^2+0x+0\text{.}\)</span> We have</p>
+<li id="li-513">
+<p id="p-1938">Recall that the zero vector of <span class="process-math">\(P_2\)</span> is the zero polynomial <span class="process-math">\(\boldzero=0x^2+0x+0\text{.}\)</span> We have</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/rm_polynomial_equality.html" id="md-142">
 \begin{align*}
 a(x^2+x-2)+b(2x^2+1)+c(x^2-x)=\boldzero \amp \iff
@@ -787,8 +787,8 @@ a(x^2+x-2)+b(2x^2+1)+c(x^2-x)=\boldzero \amp \iff
 </div>
 <p class="continuation">Gaussian elimination shows that <span class="process-math">\((a,b,c)=(0,0,0)\)</span> is the unique solution to this last system. We conclude that <span class="process-math">\(S\)</span> is linearly independent.</p>
 </li>
-<li id="li-506">
-<p id="p-1893">We have</p>
+<li id="li-514">
+<p id="p-1939">We have</p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-143">
 \begin{align*}
 a\begin{bmatrix}3\amp 1\\ 2\amp -3 \end{bmatrix} +b\begin{bmatrix}0\amp 4\\ 2\amp 0 \end{bmatrix} +c\begin{bmatrix}-2\amp -2\\ -2\amp 2 \end{bmatrix}= \begin{bmatrix}0\amp 0\\0\amp 0 \end{bmatrix}
@@ -801,28 +801,28 @@ a\begin{bmatrix}3\amp 1\\ 2\amp -3 \end{bmatrix} +b\begin{bmatrix}0\amp 4\\ 2\am
 <p class="continuation">Row reduction reveals that this last linear system has a free variable, and hence that there are infinitely many solutions to this system: e.g., <span class="process-math">\((a,b,c)=(2,1,3)\text{.}\)</span> We conclude that <span class="process-math">\(S\)</span> is linearly dependent.</p>
 </li>
 </ol></div></div>
-</div></article><p id="p-1894">So far we have only defined linead independence for <em class="emphasis">finite</em> subsets of a vector space. The notion is easily extended to arbitrary (potentially infinite) subsets.</p>
+</div></article><p id="p-1940">So far we have only defined linead independence for <em class="emphasis">finite</em> subsets of a vector space. The notion is easily extended to arbitrary (potentially infinite) subsets.</p>
 <article class="definition definition-like" id="d_linear_independence_arbitrary"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.5.14</span><span class="period">.</span><span class="space"> </span><span class="title">Linear independence (for arbitrary subsets).</span>
 </h4>
-<p id="p-1895">Let <span class="process-math">\(V\)</span> be a vector space. A subset <span class="process-math">\(S\subseteq V\)</span> is linearly independent if and only if every finite subset of <span class="process-math">\(S\)</span> is lineary independent in the sense of <a href="" class="xref" data-knowl="./knowl/d_linear_independence.html" title="Definition 3.5.9: Linear independence (for finite subsets)">Definition 3.5.9</a>.</p></article><article class="remark remark-like" id="rm_linear_independence_arbitrary"><h4 class="heading">
+<p id="p-1941">Let <span class="process-math">\(V\)</span> be a vector space. A subset <span class="process-math">\(S\subseteq V\)</span> is linearly independent if and only if every finite subset of <span class="process-math">\(S\)</span> is lineary independent in the sense of <a href="" class="xref" data-knowl="./knowl/d_linear_independence.html" title="Definition 3.5.9: Linear independence (for finite subsets)">Definition 3.5.9</a>.</p></article><article class="remark remark-like" id="rm_linear_independence_arbitrary"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.5.15</span><span class="period">.</span>
 </h4>
-<p id="p-1896">A subtle question arises here: namely, whether our definition of linear indepencence for arbitrary sets is consistent with our definition for finite ones. In other words, given a set <span class="process-math">\(S=\{\boldv_1, \boldv_2, \dots, \boldv_n\}\)</span> of <span class="process-math">\(n\)</span> distinct vectors, is it true that <span class="process-math">\(S\)</span> is linearly independent (in the sense of <a href="" class="xref" data-knowl="./knowl/d_linear_independence.html" title="Definition 3.5.9: Linear independence (for finite subsets)">3.5.9</a>) if and only if every subset <span class="process-math">\(\{\boldv_{i_1}, \boldv_{i_2}, \dots, \boldv_{i_k}\}\)</span> is linearly independent (in the sense of <a href="" class="xref" data-knowl="./knowl/d_linear_independence.html" title="Definition 3.5.9: Linear independence (for finite subsets)">3.5.9</a>)? The answer of course is yes. One direction is easy: since <span class="process-math">\(S\)</span> is a subset of itself, clearly if every subset is linearly independent, then <span class="process-math">\(S\)</span> is linearly independent. The other direction is left as an exercise (<a href="" class="xref" data-knowl="./knowl/ex_linear_independence_arbitrary.html" title="Exercise 3.5.4.11">Exercise 3.5.4.11</a>).</p></article></section><section class="subsection" id="ss_linear_independence_functionspace"><h3 class="heading hide-type">
+<p id="p-1942">A subtle question arises here: namely, whether our definition of linear indepencence for arbitrary sets is consistent with our definition for finite ones. In other words, given a set <span class="process-math">\(S=\{\boldv_1, \boldv_2, \dots, \boldv_n\}\)</span> of <span class="process-math">\(n\)</span> distinct vectors, is it true that <span class="process-math">\(S\)</span> is linearly independent (in the sense of <a href="" class="xref" data-knowl="./knowl/d_linear_independence.html" title="Definition 3.5.9: Linear independence (for finite subsets)">3.5.9</a>) if and only if every subset <span class="process-math">\(\{\boldv_{i_1}, \boldv_{i_2}, \dots, \boldv_{i_k}\}\)</span> is linearly independent (in the sense of <a href="" class="xref" data-knowl="./knowl/d_linear_independence.html" title="Definition 3.5.9: Linear independence (for finite subsets)">3.5.9</a>)? The answer of course is yes. One direction is easy: since <span class="process-math">\(S\)</span> is a subset of itself, clearly if every subset is linearly independent, then <span class="process-math">\(S\)</span> is linearly independent. The other direction is left as an exercise (<a href="" class="xref" data-knowl="./knowl/ex_linear_independence_arbitrary.html" title="Exercise 3.5.4.11">Exercise 3.5.4.11</a>).</p></article></section><section class="subsection" id="ss_linear_independence_functionspace"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.5.3</span> <span class="title">Linear independence in function spaces</span>
 </h3>
-<p id="p-1897">In each part of <a href="" class="xref" data-knowl="./knowl/ex_linear_independence.html" title="Example 3.5.13: Linear independence">Example 3.5.13</a> it was easy to derive a relevant linear system as the notion of equality in these spaces amounts to checking a <em class="emphasis">finite</em> number of numeric equalities: e.g., between the entries of two triples, the coefficients of two polynomials, or the entries of two <span class="process-math">\(2\times 2\)</span> matrices.</p>
-<p id="p-1898">Things are slightly more complicated when working in function spaces on an interval <span class="process-math">\(X\)</span> (e.g. <span class="process-math">\(C(X), C^\infty(X)\text{,}\)</span> etc.), since by definition functions <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are equal if and only if <span class="process-math">\(f(x)=g(x)\)</span> for all <span class="process-math">\(x\in X\text{.}\)</span> Thus, in principle verifying two functions are equal amounts to showing <em class="emphasis">infinitely many</em> equalities hold: one for each <span class="process-math">\(x\in X\text{.}\)</span> Despite this added complexity, we can still investigate linear independence of functions with certain linear systems, as described in the procedure below.</p>
+<p id="p-1943">In each part of <a href="" class="xref" data-knowl="./knowl/ex_linear_independence.html" title="Example 3.5.13: Linear independence">Example 3.5.13</a> it was easy to derive a relevant linear system as the notion of equality in these spaces amounts to checking a <em class="emphasis">finite</em> number of numeric equalities: e.g., between the entries of two triples, the coefficients of two polynomials, or the entries of two <span class="process-math">\(2\times 2\)</span> matrices.</p>
+<p id="p-1944">Things are slightly more complicated when working in function spaces on an interval <span class="process-math">\(X\)</span> (e.g. <span class="process-math">\(C(X), C^\infty(X)\text{,}\)</span> etc.), since by definition functions <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are equal if and only if <span class="process-math">\(f(x)=g(x)\)</span> for all <span class="process-math">\(x\in X\text{.}\)</span> Thus, in principle verifying two functions are equal amounts to showing <em class="emphasis">infinitely many</em> equalities hold: one for each <span class="process-math">\(x\in X\text{.}\)</span> Despite this added complexity, we can still investigate linear independence of functions with certain linear systems, as described in the procedure below.</p>
 <article class="algorithm theorem-like" id="proc_linear_independence_functions"><h4 class="heading">
 <span class="type">Procedure</span><span class="space"> </span><span class="codenumber">3.5.16</span><span class="period">.</span><span class="space"> </span><span class="title">Investigating linear independence of functions.</span>
 </h4>
-<p id="p-1899">Let <span class="process-math">\(X\subseteq \R\text{,}\)</span> let <span class="process-math">\(V=F(X,\R)\text{,}\)</span> and let  <span class="process-math">\(S=\{f_1,f_2,\dots, f_n\}\)</span> be a set of <span class="process-math">\(n\)</span> distinct elements of <span class="process-math">\(V\text{.}\)</span></p>
+<p id="p-1945">Let <span class="process-math">\(X\subseteq \R\text{,}\)</span> let <span class="process-math">\(V=F(X,\R)\text{,}\)</span> and let  <span class="process-math">\(S=\{f_1,f_2,\dots, f_n\}\)</span> be a set of <span class="process-math">\(n\)</span> distinct elements of <span class="process-math">\(V\text{.}\)</span></p>
 <ul class="disc">
-<li id="li-507">
-<p id="p-1900">If you believe <span class="process-math">\(S\)</span> is linearly independent:</p>
+<li id="li-515">
+<p id="p-1946">If you believe <span class="process-math">\(S\)</span> is linearly independent:</p>
 <ul class="circle">
-<li id="li-508">
-<p id="p-1901">Write out the <em class="emphasis">function equation</em></p>
+<li id="li-516">
+<p id="p-1947">Write out the <em class="emphasis">function equation</em></p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 c_1f+c_2f_2+\cdots +c_nf_n=\boldzero\text{.}
@@ -836,37 +836,37 @@ c_1f(x)+c_2f_2(x)+\cdots +c_nf(x)_n=0\tag{3.5.1}
 </div>
 <p class="continuation">for <em class="emphasis">all</em>  <span class="process-math">\(x\in X\text{.}\)</span></p>
 </li>
-<li id="li-509">
-<p id="p-1902">Since <a href="" class="xref" data-knowl="./knowl/eq_function_equality.html" title="Equation 3.5.1">(3.5.1)</a> is true for all <span class="process-math">\(x\in X\text{,}\)</span> we can produce a homogeneous system of linear equations in the unknowns <span class="process-math">\(c_j\)</span> by picking elements <span class="process-math">\(x_1,x_2,\dots \)</span> of <span class="process-math">\(X\text{,}\)</span> and <em class="emphasis">evaluating</em>  <a href="" class="xref" data-knowl="./knowl/eq_function_equality.html" title="Equation 3.5.1">(3.5.1)</a> at <span class="process-math">\(x_i\text{.}\)</span> The <span class="process-math">\(i\)</span>-th equation of the resulting system is thus</p>
+<li id="li-517">
+<p id="p-1948">Since <a href="" class="xref" data-knowl="./knowl/eq_function_equality.html" title="Equation 3.5.1">(3.5.1)</a> is true for all <span class="process-math">\(x\in X\text{,}\)</span> we can produce a homogeneous system of linear equations in the unknowns <span class="process-math">\(c_j\)</span> by picking elements <span class="process-math">\(x_1,x_2,\dots \)</span> of <span class="process-math">\(X\text{,}\)</span> and <em class="emphasis">evaluating</em>  <a href="" class="xref" data-knowl="./knowl/eq_function_equality.html" title="Equation 3.5.1">(3.5.1)</a> at <span class="process-math">\(x_i\text{.}\)</span> The <span class="process-math">\(i\)</span>-th equation of the resulting system is thus</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_function_equality.html ./knowl/eq_function_equality.html">
 \begin{equation*}
 f_1(x_i)c_1+f_2(x_i)c_2+\cdots +f_n(x_i)c_n=0\text{.}
 \end{equation*}
 </div>
 </li>
-<li id="li-510"><p id="p-1903">If you can find elements <span class="process-math">\(x_1, x_2, \dots, x_t\in X\)</span> so that the resulting homogeneous system in the unknowns <span class="process-math">\(c_j\)</span> has the unique solution <span class="process-math">\(c_1=c_2=\dots=c_n=0\text{,}\)</span> then we conclude that <span class="process-math">\(S\)</span> is linearly independent.</p></li>
+<li id="li-518"><p id="p-1949">If you can find elements <span class="process-math">\(x_1, x_2, \dots, x_t\in X\)</span> so that the resulting homogeneous system in the unknowns <span class="process-math">\(c_j\)</span> has the unique solution <span class="process-math">\(c_1=c_2=\dots=c_n=0\text{,}\)</span> then we conclude that <span class="process-math">\(S\)</span> is linearly independent.</p></li>
 </ul>
 </li>
-<li id="li-511">
-<p id="p-1904">If you believe <span class="process-math">\(S\)</span> is linearly dependent:</p>
-<ul class="circle"><li id="li-512"><p id="p-1905">A nontrivial linear combination of the <span class="process-math">\(f_i\)</span> equal to the zero function amounts to a function identity. Either cite a well-known function identity involving the <span class="process-math">\(f_i\text{,}\)</span> or else prove an identity of your own.</p></li></ul>
+<li id="li-519">
+<p id="p-1950">If you believe <span class="process-math">\(S\)</span> is linearly dependent:</p>
+<ul class="circle"><li id="li-520"><p id="p-1951">A nontrivial linear combination of the <span class="process-math">\(f_i\)</span> equal to the zero function amounts to a function identity. Either cite a well-known function identity involving the <span class="process-math">\(f_i\text{,}\)</span> or else prove an identity of your own.</p></li></ul>
 </li>
 </ul></article><article class="remark remark-like" id="rm_linear_independence_functions"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.5.17</span><span class="period">.</span>
 </h4>
-<p id="p-1906">When using <a href="" class="xref" data-knowl="./knowl/proc_linear_independence_functions.html" title="Procedure 3.5.16: Investigating linear independence of functions">Procedure 3.5.16</a> to show <span class="process-math">\(S=\{f_1, f_2, \dots, f_n\}\)</span> is linearly independent, you want to produce enough linear equations to <em class="emphasis">force</em> the unknowns <span class="process-math">\(c_i\)</span> to all be equal to 0. Note that since you you have <span class="process-math">\(n\)</span> unknowns, you need at <em class="emphasis">at least</em> <span class="process-math">\(n\)</span> equations, and so must pick at least <span class="process-math">\(n\)</span> elements <span class="process-math">\(x_i\in X\text{.}\)</span> Do so judiciously in order to (a) force the <span class="process-math">\(c_i\)</span> to all be equal to 0, and (b) make the necessary computations palatable.</p></article><p id="p-1907">We illustrate <a href="" class="xref" data-knowl="./knowl/proc_linear_independence_functions.html" title="Procedure 3.5.16: Investigating linear independence of functions">Procedure 3.5.16</a> in the following example.</p>
+<p id="p-1952">When using <a href="" class="xref" data-knowl="./knowl/proc_linear_independence_functions.html" title="Procedure 3.5.16: Investigating linear independence of functions">Procedure 3.5.16</a> to show <span class="process-math">\(S=\{f_1, f_2, \dots, f_n\}\)</span> is linearly independent, you want to produce enough linear equations to <em class="emphasis">force</em> the unknowns <span class="process-math">\(c_i\)</span> to all be equal to 0. Note that since you you have <span class="process-math">\(n\)</span> unknowns, you need at <em class="emphasis">at least</em> <span class="process-math">\(n\)</span> equations, and so must pick at least <span class="process-math">\(n\)</span> elements <span class="process-math">\(x_i\in X\text{.}\)</span> Do so judiciously in order to (a) force the <span class="process-math">\(c_i\)</span> to all be equal to 0, and (b) make the necessary computations palatable.</p></article><p id="p-1953">We illustrate <a href="" class="xref" data-knowl="./knowl/proc_linear_independence_functions.html" title="Procedure 3.5.16: Investigating linear independence of functions">Procedure 3.5.16</a> in the following example.</p>
 <article class="example example-like" id="example-52"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.18</span><span class="period">.</span><span class="space"> </span><span class="title">Linear independence of functions.</span>
 </h4>
-<p id="p-1908">Let <span class="process-math">\(V=F((-2\pi, 2\pi), \R)\text{.}\)</span> Determine whether the given subset <span class="process-math">\(S\)</span> is linearly independent.</p>
+<p id="p-1954">Let <span class="process-math">\(V=F((-2\pi, 2\pi), \R)\text{.}\)</span> Determine whether the given subset <span class="process-math">\(S\)</span> is linearly independent.</p>
 <ol class="decimal">
-<li id="li-513"><p id="p-1909"><span class="process-math">\(\displaystyle S=\{f(x)=x, g(x)=\cos x, h(x)=\sin x\}\)</span></p></li>
-<li id="li-514"><p id="p-1910"><span class="process-math">\(S=\{f(x)=1, g(x)=\cos 2x, g(x)=\cos^2 x\}\text{.}\)</span></p></li>
+<li id="li-521"><p id="p-1955"><span class="process-math">\(\displaystyle S=\{f(x)=x, g(x)=\cos x, h(x)=\sin x\}\)</span></p></li>
+<li id="li-522"><p id="p-1956"><span class="process-math">\(S=\{f(x)=1, g(x)=\cos 2x, g(x)=\cos^2 x\}\text{.}\)</span></p></li>
 </ol>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-53" id="solution-53"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-53"><div class="solution solution-like"><ol class="decimal">
-<li id="li-515">
-<p id="p-1911">We claim <span class="process-math">\(S\)</span> is linearly independent. If</p>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-54" id="solution-54"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-54"><div class="solution solution-like"><ol class="decimal">
+<li id="li-523">
+<p id="p-1957">We claim <span class="process-math">\(S\)</span> is linearly independent. If</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 c_1f+c_2g+c_3h=\boldzero\text{,}
@@ -900,8 +900,8 @@ x=\pi \colon \amp  \amp \pi c_1\amp - \amp c_2 \amp \amp  \amp= \amp 0
 </div>
 <p class="continuation">This system can be now be solved essentially by inspection: the first equation implies <span class="process-math">\(c_2=0\text{;}\)</span> setting <span class="process-math">\(c_2=0\text{,}\)</span> in the third equation, we conclude <span class="process-math">\(c_1=0\text{;}\)</span> the second equation now implies <span class="process-math">\(c_3=0\text{.}\)</span> We conclude that <span class="process-math">\(c_1=c_2=c_3=0\text{.}\)</span> Thus the only linear combination of <span class="process-math">\(f, g, h\)</span> yielding the zero function is the trivial one, showing that <span class="process-math">\(S\)</span> is linearly independent.</p>
 </li>
-<li id="li-516">
-<p id="p-1912">We claim <span class="process-math">\(S\)</span> is linearly dependent. As discussed in <a href="" class="xref" data-knowl="./knowl/proc_linear_independence_functions.html" title="Procedure 3.5.16: Investigating linear independence of functions">Procedure 3.5.16</a>, to prove this we have to produce an identity involving these functions. The double-angle formula from trigonometry tells us that</p>
+<li id="li-524">
+<p id="p-1958">We claim <span class="process-math">\(S\)</span> is linearly dependent. As discussed in <a href="" class="xref" data-knowl="./knowl/proc_linear_independence_functions.html" title="Procedure 3.5.16: Investigating linear independence of functions">Procedure 3.5.16</a>, to prove this we have to produce an identity involving these functions. The double-angle formula from trigonometry tells us that</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/proc_linear_independence_functions.html">
 \begin{equation*}
 \cos 2x=\cos^2 x-\sin^2x=2\cos^2x+1
@@ -929,98 +929,98 @@ f-g+2h=\boldzero\text{.}
 </h3>
 <div class="exercisegroup" id="exercisegroup-21">
 <h4 class="heading"><span class="title">Exercise Group.</span></h4>
-<div class="introduction" id="introduction-49"><p id="p-1913">A subset <span class="process-math">\(S\)</span> of a vector space is given in each exercise below. Determine whether the given elements are elements of <span class="process-math">\(\Span S\text{.}\)</span> Justify your answer by either providing a linear combination of <span class="process-math">\(S\)</span> yielding the given element, or else showing that no such linear combination exists.</p></div>
+<div class="introduction" id="introduction-49"><p id="p-1959">A subset <span class="process-math">\(S\)</span> of a vector space is given in each exercise below. Determine whether the given elements are elements of <span class="process-math">\(\Span S\text{.}\)</span> Justify your answer by either providing a linear combination of <span class="process-math">\(S\)</span> yielding the given element, or else showing that no such linear combination exists.</p></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-185"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<p id="p-1914"><span class="process-math">\(V=\R^3\text{,}\)</span> <span class="process-math">\(S=\{(1,0,1),(1,1,1), (1,2,1) \}\)</span></p>
+<article class="exercise exercise-like" id="exercise-191"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<p id="p-1960"><span class="process-math">\(V=\R^3\text{,}\)</span> <span class="process-math">\(S=\{(1,0,1),(1,1,1), (1,2,1) \}\)</span></p>
 <ol class="lower-alpha">
-<li id="li-517"><p id="p-1915"><span class="process-math">\(\displaystyle \boldv=(0,0,0)\)</span></p></li>
-<li id="li-518"><p id="p-1916"><span class="process-math">\(\displaystyle \boldw=(1,2,1)\)</span></p></li>
-<li id="li-519"><p id="p-1917"><span class="process-math">\(\displaystyle \boldu=(7,1,0)\)</span></p></li>
-</ol></article><article class="exercise exercise-like" id="exercise-186"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<p id="p-1918"><span class="process-math">\(V=M_{22}\text{,}\)</span> <span class="process-math">\(S=\{A, B, C\}\text{,}\)</span> where</p>
+<li id="li-525"><p id="p-1961"><span class="process-math">\(\displaystyle \boldv=(0,0,0)\)</span></p></li>
+<li id="li-526"><p id="p-1962"><span class="process-math">\(\displaystyle \boldw=(1,2,1)\)</span></p></li>
+<li id="li-527"><p id="p-1963"><span class="process-math">\(\displaystyle \boldu=(7,1,0)\)</span></p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-192"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<p id="p-1964"><span class="process-math">\(V=M_{22}\text{,}\)</span> <span class="process-math">\(S=\{A, B, C\}\text{,}\)</span> where</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 A = \begin{bmatrix}4\amp 0\\ -2\amp -2 \end{bmatrix} \hspace{5pt}, B = \begin{bmatrix}1\amp -1\\ 2\amp 3 \end{bmatrix} \hspace{5pt}, C= \begin{bmatrix}0\amp 2\\ 1\amp 4 \end{bmatrix}\text{.}
 \end{equation*}
 </div>
 <ol class="lower-alpha">
-<li id="li-520"><p id="p-1919"><span class="process-math">\(\displaystyle A_1=\begin{bmatrix}6\amp -8\\ -1\amp -8 \end{bmatrix}\)</span></p></li>
-<li id="li-521"><p id="p-1920"><span class="process-math">\(\displaystyle A_2=\begin{bmatrix}-1\amp 5\\ 7\amp 1 \end{bmatrix}\)</span></p></li>
-</ol></article><article class="exercise exercise-like" id="exercise-187"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<p id="p-1921"><span class="process-math">\(V=C(\R)\text{,}\)</span> <span class="process-math">\(S=\{f_1(x)=\cos^2 x, f_2(x)=\sin^2 x\}\)</span></p>
+<li id="li-528"><p id="p-1965"><span class="process-math">\(\displaystyle A_1=\begin{bmatrix}6\amp -8\\ -1\amp -8 \end{bmatrix}\)</span></p></li>
+<li id="li-529"><p id="p-1966"><span class="process-math">\(\displaystyle A_2=\begin{bmatrix}-1\amp 5\\ 7\amp 1 \end{bmatrix}\)</span></p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-193"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<p id="p-1967"><span class="process-math">\(V=C(\R)\text{,}\)</span> <span class="process-math">\(S=\{f_1(x)=\cos^2 x, f_2(x)=\sin^2 x\}\)</span></p>
 <ol class="lower-alpha">
-<li id="li-522"><p id="p-1922"><span class="process-math">\(\displaystyle f(x)=x\)</span></p></li>
-<li id="li-523"><p id="p-1923"><span class="process-math">\(\displaystyle g(x)=\cos 2x\)</span></p></li>
-<li id="li-524"><p id="p-1924"><span class="process-math">\(\displaystyle h(x)=\sin x\)</span></p></li>
+<li id="li-530"><p id="p-1968"><span class="process-math">\(\displaystyle f(x)=x\)</span></p></li>
+<li id="li-531"><p id="p-1969"><span class="process-math">\(\displaystyle g(x)=\cos 2x\)</span></p></li>
+<li id="li-532"><p id="p-1970"><span class="process-math">\(\displaystyle h(x)=\sin x\)</span></p></li>
 </ol></article>
 </div>
 </div>
-<article class="exercise exercise-like" id="exercise-188"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<p id="p-1925">Determine whether <span class="process-math">\(S\)</span> is a spanning set of <span class="process-math">\(V\text{.}\)</span></p>
+<article class="exercise exercise-like" id="exercise-194"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<p id="p-1971">Determine whether <span class="process-math">\(S\)</span> is a spanning set of <span class="process-math">\(V\text{.}\)</span></p>
 <ol class="lower-alpha">
-<li id="li-525"><p id="p-1926"><span class="process-math">\(V=\R^3\text{,}\)</span> <span class="process-math">\(S=\{(1,-1,1),(0,1,-2), (1,0,1)\} \)</span></p></li>
-<li id="li-526"><p id="p-1927"><span class="process-math">\(V=\R^3\text{,}\)</span> <span class="process-math">\(S=\{(1,-1,1), (0,1,-2), (-3,2,-1)\}\)</span></p></li>
-<li id="li-527"><p id="p-1928"><span class="process-math">\(V=P_2\text{,}\)</span> <span class="process-math">\(S=\{ x^2-1, x^2+1, x^2+2x \}\)</span></p></li>
-<li id="li-528"><p id="p-1929"><span class="process-math">\(V=\R_{&gt;0}\)</span> (see <a href="" class="xref" data-knowl="./knowl/ex_vs_positivereals.html" title="Definition 3.1.10: Vector space of positive real numbers">Definition 3.1.10</a>), <span class="process-math">\(S=\{3\}\)</span></p></li>
+<li id="li-533"><p id="p-1972"><span class="process-math">\(V=\R^3\text{,}\)</span> <span class="process-math">\(S=\{(1,-1,1),(0,1,-2), (1,0,1)\} \)</span></p></li>
+<li id="li-534"><p id="p-1973"><span class="process-math">\(V=\R^3\text{,}\)</span> <span class="process-math">\(S=\{(1,-1,1), (0,1,-2), (-3,2,-1)\}\)</span></p></li>
+<li id="li-535"><p id="p-1974"><span class="process-math">\(V=P_2\text{,}\)</span> <span class="process-math">\(S=\{ x^2-1, x^2+1, x^2+2x \}\)</span></p></li>
+<li id="li-536"><p id="p-1975"><span class="process-math">\(V=\R_{&gt;0}\)</span> (see <a href="" class="xref" data-knowl="./knowl/ex_vs_positivereals.html" title="Definition 3.1.10: Vector space of positive real numbers">Definition 3.1.10</a>), <span class="process-math">\(S=\{3\}\)</span></p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-22">
 <h4 class="heading"><span class="title">Exercise Group.</span></h4>
-<div class="introduction" id="introduction-50"><p id="p-1930">In each exercise, determine whether the given subset <span class="process-math">\(S\)</span> of the vector space <span class="process-math">\(V\)</span> is linearly independent. Justify your answer.</p></div>
+<div class="introduction" id="introduction-50"><p id="p-1976">In each exercise, determine whether the given subset <span class="process-math">\(S\)</span> of the vector space <span class="process-math">\(V\)</span> is linearly independent. Justify your answer.</p></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-189"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<p id="p-1931"><span class="process-math">\(V=\R^4\text{,}\)</span> <span class="process-math">\(S=\{(3,8,7,-3), (1,5,3,-1), (2,-1,2,6), (4,2,6,4)\}\)</span></p></article><article class="exercise exercise-like" id="exercise-190"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<p id="p-1932"><span class="process-math">\(V=P_2\text{,}\)</span> <span class="process-math">\(S=\{2x^2-x-1, x^2-2x+1, x^2+x+1 \}\)</span></p></article><article class="exercise exercise-like" id="exercise-191"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<p id="p-1933"><span class="process-math">\(V=C([0,1])\text{,}\)</span> <span class="process-math">\(S=\{f(x)=x, g(x)=2\val{x} \}\)</span></p></article><article class="exercise exercise-like" id="exercise-192"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
-<p id="p-1934"><span class="process-math">\(V=C([-1,1])\text{,}\)</span> <span class="process-math">\(S=\{f(x)=x, g(x)=2\val{x} \}\)</span></p></article>
+<article class="exercise exercise-like" id="exercise-195"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<p id="p-1977"><span class="process-math">\(V=\R^4\text{,}\)</span> <span class="process-math">\(S=\{(3,8,7,-3), (1,5,3,-1), (2,-1,2,6), (4,2,6,4)\}\)</span></p></article><article class="exercise exercise-like" id="exercise-196"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<p id="p-1978"><span class="process-math">\(V=P_2\text{,}\)</span> <span class="process-math">\(S=\{2x^2-x-1, x^2-2x+1, x^2+x+1 \}\)</span></p></article><article class="exercise exercise-like" id="exercise-197"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<p id="p-1979"><span class="process-math">\(V=C([0,1])\text{,}\)</span> <span class="process-math">\(S=\{f(x)=x, g(x)=2\val{x} \}\)</span></p></article><article class="exercise exercise-like" id="exercise-198"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<p id="p-1980"><span class="process-math">\(V=C([-1,1])\text{,}\)</span> <span class="process-math">\(S=\{f(x)=x, g(x)=2\val{x} \}\)</span></p></article>
 </div>
 </div>
-<article class="exercise exercise-like" id="exercise-193"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<p id="p-1935">Let <span class="process-math">\(V=M_{22}\)</span> and let <span class="process-math">\(S=\{ A_1, A_2, A_3\}\text{,}\)</span> where</p>
+<article class="exercise exercise-like" id="exercise-199"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<p id="p-1981">Let <span class="process-math">\(V=M_{22}\)</span> and let <span class="process-math">\(S=\{ A_1, A_2, A_3\}\text{,}\)</span> where</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 A_1=\begin{bmatrix}1\amp 0\\ 1\amp c \end{bmatrix},  A_2=\begin{bmatrix}-1\amp 0\\ c\amp 1 \end{bmatrix},  A_3=\begin{bmatrix}2\amp 0\\ 1\amp 3 \end{bmatrix}\text{.}
 \end{equation*}
 </div>
-<p class="continuation">Determine all values <span class="process-math">\(c\in \R\)</span> for which <span class="process-math">\(S\)</span> is linearly independent.</p></article><article class="exercise exercise-like" id="exercise-194"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<p id="p-1936">Let <span class="process-math">\(V=M_{22}\text{,}\)</span> and define <span class="process-math">\(A_1=\begin{bmatrix}1\amp 1\\1\amp 1 \end{bmatrix}\text{,}\)</span> <span class="process-math">\(A_2=\begin{bmatrix}0\amp 1\\1\amp 0 \end{bmatrix}\text{,}\)</span> <span class="process-math">\(A_3=\begin{bmatrix}1\amp 1\\ 1\amp 0 \end{bmatrix}\text{.}\)</span></p>
+<p class="continuation">Determine all values <span class="process-math">\(c\in \R\)</span> for which <span class="process-math">\(S\)</span> is linearly independent.</p></article><article class="exercise exercise-like" id="exercise-200"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<p id="p-1982">Let <span class="process-math">\(V=M_{22}\text{,}\)</span> and define <span class="process-math">\(A_1=\begin{bmatrix}1\amp 1\\1\amp 1 \end{bmatrix}\text{,}\)</span> <span class="process-math">\(A_2=\begin{bmatrix}0\amp 1\\1\amp 0 \end{bmatrix}\text{,}\)</span> <span class="process-math">\(A_3=\begin{bmatrix}1\amp 1\\ 1\amp 0 \end{bmatrix}\text{.}\)</span></p>
 <ol class="lower-alpha">
-<li id="li-529"><p id="p-1937">Compute <span class="process-math">\(W=\Span(\{A_1,A_2,A_3\})\text{,}\)</span> identifying it as a certain <em class="emphasis">familiar</em> set of matrices.</p></li>
-<li id="li-530"><p id="p-1938">Decide whether <span class="process-math">\(S=\{A_1,A_2,A_3\}\)</span> is independent.</p></li>
+<li id="li-537"><p id="p-1983">Compute <span class="process-math">\(W=\Span(\{A_1,A_2,A_3\})\text{,}\)</span> identifying it as a certain <em class="emphasis">familiar</em> set of matrices.</p></li>
+<li id="li-538"><p id="p-1984">Decide whether <span class="process-math">\(S=\{A_1,A_2,A_3\}\)</span> is independent.</p></li>
 </ol></article><article class="exercise exercise-like" id="ex_linear_independence_arbitrary"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<p id="p-1939">Let <span class="process-math">\(V\)</span> be a vector space, and let <span class="process-math">\(S=\{\boldv_1, \boldv_2, \dots, \boldv_n\}\)</span> be a subset of distinct vectors. Assume <span class="process-math">\(S\)</span> is linearly independent. Show that any subset <span class="process-math">\(T\subseteq S\)</span> is linearly independent.</p>
+<p id="p-1985">Let <span class="process-math">\(V\)</span> be a vector space, and let <span class="process-math">\(S=\{\boldv_1, \boldv_2, \dots, \boldv_n\}\)</span> be a subset of distinct vectors. Assume <span class="process-math">\(S\)</span> is linearly independent. Show that any subset <span class="process-math">\(T\subseteq S\)</span> is linearly independent.</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-11" id="hint-11"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><p id="p-1940">The empty set <span class="process-math">\(T=\{\, \}\)</span> is trivially linearly independent. Let <span class="process-math">\(T=\{\boldv_{i_1}, \boldv_{i_2}, \dots, \boldv_{i_k}\}\)</span> represent an arbitrary nonempty set of distinct elements of <span class="process-math">\(S\text{.}\)</span> You can show <span class="process-math">\(T\)</span> is linearly independent by <em class="emphasis">extending</em> linear combinations of the elements of <span class="process-math">\(T\)</span> to a linear combination of the elements of <span class="process-math">\(S\)</span> in a certain way.</p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-11" id="hint-11"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><p id="p-1986">The empty set <span class="process-math">\(T=\{\, \}\)</span> is trivially linearly independent. Let <span class="process-math">\(T=\{\boldv_{i_1}, \boldv_{i_2}, \dots, \boldv_{i_k}\}\)</span> represent an arbitrary nonempty set of distinct elements of <span class="process-math">\(S\text{.}\)</span> You can show <span class="process-math">\(T\)</span> is linearly independent by <em class="emphasis">extending</em> linear combinations of the elements of <span class="process-math">\(T\)</span> to a linear combination of the elements of <span class="process-math">\(S\)</span> in a certain way.</p></div></div>
 </div></article><article class="exercise exercise-like" id="ex_span_independence_inveribility"><h4 class="heading">
 <span class="codenumber">12<span class="period">.</span></span><span class="space"> </span><span class="title">Span, independence, and invertibility.</span>
 </h4>
-<p id="p-1941">In this exercise we identify elements of <span class="process-math">\(V=\R^n\)</span> with <span class="process-math">\(n\times 1\)</span> column vectors.</p>
-<p id="p-1942">Let <span class="process-math">\(S=\{\boldv_1,\boldv_2,\dots, \boldv_n\}\)</span> be a subset of <span class="process-math">\(\R^n\text{,}\)</span> and let <span class="process-math">\(A\)</span> be the <span class="process-math">\(n\times n\)</span> matrix whose <span class="process-math">\(j\)</span>-th column is <span class="process-math">\(\boldv_j\text{:}\)</span> i.e.,</p>
+<p id="p-1987">In this exercise we identify elements of <span class="process-math">\(V=\R^n\)</span> with <span class="process-math">\(n\times 1\)</span> column vectors.</p>
+<p id="p-1988">Let <span class="process-math">\(S=\{\boldv_1,\boldv_2,\dots, \boldv_n\}\)</span> be a subset of <span class="process-math">\(\R^n\text{,}\)</span> and let <span class="process-math">\(A\)</span> be the <span class="process-math">\(n\times n\)</span> matrix whose <span class="process-math">\(j\)</span>-th column is <span class="process-math">\(\boldv_j\text{:}\)</span> i.e.,</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 A=\begin{bmatrix}\vert \amp \vert \amp \cdots \amp \vert\\ \boldv_1\amp \boldv_2\amp  \amp \boldv_n\\ \vert \amp \vert \amp \cdots \amp \vert \end{bmatrix}\text{.}
 \end{equation*}
 </div>
 <ol class="lower-alpha">
-<li id="li-531"><p id="p-1943">Prove: <span class="process-math">\(\Span S=\R^n\)</span> if and only if <span class="process-math">\(A\)</span> is invertible.</p></li>
-<li id="li-532"><p id="p-1944">Prove: <span class="process-math">\(S\)</span> is linearly independent if and only if <span class="process-math">\(A\)</span> is invertible.</p></li>
+<li id="li-539"><p id="p-1989">Prove: <span class="process-math">\(\Span S=\R^n\)</span> if and only if <span class="process-math">\(A\)</span> is invertible.</p></li>
+<li id="li-540"><p id="p-1990">Prove: <span class="process-math">\(S\)</span> is linearly independent if and only if <span class="process-math">\(A\)</span> is invertible.</p></li>
 </ol>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-12" id="hint-12"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-12"><div class="hint solution-like"><p id="p-1945">Use the column method (<a href="" class="xref" data-knowl="./knowl/th_column_method.html" title="Theorem 2.1.19: Column method of matrix multiplication">Theorem 2.1.19</a>) and the invertibility theorem (<a href="" class="xref" data-knowl="./knowl/th_invertibility_expanded.html" title="Theorem 2.5.27: Invertibility theorem (extended cut)">Theorem 2.5.27</a>)</p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-12" id="hint-12"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-12"><div class="hint solution-like"><p id="p-1991">Use the column method (<a href="" class="xref" data-knowl="./knowl/th_column_method.html" title="Theorem 2.1.19: Column method of matrix multiplication">Theorem 2.1.19</a>) and the invertibility theorem (<a href="" class="xref" data-knowl="./knowl/th_invertibility_expanded.html" title="Theorem 2.5.27: Invertibility theorem (extended cut)">Theorem 2.5.27</a>)</p></div></div>
 </div></article><article class="exercise exercise-like" id="ex_span_independence_transform"><h4 class="heading">
 <span class="codenumber">13<span class="period">.</span></span><span class="space"> </span><span class="title">Linear transformations, span, and independence.</span>
 </h4>
-<p id="p-1946">Suppose <span class="process-math">\(T\colon V\rightarrow W\)</span> is a linear transformation.   Let <span class="process-math">\(S=\{\boldv_1,\boldv_2,\dots ,\boldv_r\}\)</span> be a subset of <span class="process-math">\(V\text{,}\)</span> and let <span class="process-math">\(S'\)</span> be the image of <span class="process-math">\(S\)</span> under <span class="process-math">\(T\text{:}\)</span> i.e.,</p>
+<p id="p-1992">Suppose <span class="process-math">\(T\colon V\rightarrow W\)</span> is a linear transformation.   Let <span class="process-math">\(S=\{\boldv_1,\boldv_2,\dots ,\boldv_r\}\)</span> be a subset of <span class="process-math">\(V\text{,}\)</span> and let <span class="process-math">\(S'\)</span> be the image of <span class="process-math">\(S\)</span> under <span class="process-math">\(T\text{:}\)</span> i.e.,</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 S'=T(S)=\{T(\boldv_1), T(\boldv_2),\dots, T(\boldv_r)\}\text{.}
 \end{equation*}
 </div>
 <p class="continuation">Assume <span class="process-math">\(\boldv_i\ne \boldv_j\)</span> and <span class="process-math">\(T(\boldv_i)\ne T(\boldv_j)\)</span> for all <span class="process-math">\(i\ne j\text{.}\)</span></p>
-<p id="p-1947">Answer true or false: if true, provide a proof; if false, provide an explicit counterexample. Note: for a complete counterexample you need to specify <span class="process-math">\(T\colon V\rightarrow W\text{,}\)</span> and <span class="process-math">\(S\text{.}\)</span></p>
+<p id="p-1993">Answer true or false: if true, provide a proof; if false, provide an explicit counterexample. Note: for a complete counterexample you need to specify <span class="process-math">\(T\colon V\rightarrow W\text{,}\)</span> and <span class="process-math">\(S\text{.}\)</span></p>
 <ol class="lower-alpha">
-<li id="li-533"><p id="p-1948">If <span class="process-math">\(S\)</span> is linearly independent, then <span class="process-math">\(S'\)</span> is linearly independent.</p></li>
-<li id="li-534"><p id="p-1949">If <span class="process-math">\(S'\)</span> is linearly independent, then <span class="process-math">\(S\)</span> is linearly independent.</p></li>
-<li id="li-535"><p id="p-1950">If <span class="process-math">\(S\)</span> is a spanning set for <span class="process-math">\(V\text{,}\)</span> then <span class="process-math">\(S'\)</span> is a spanning set for <span class="process-math">\(\im T\text{.}\)</span></p></li>
+<li id="li-541"><p id="p-1994">If <span class="process-math">\(S\)</span> is linearly independent, then <span class="process-math">\(S'\)</span> is linearly independent.</p></li>
+<li id="li-542"><p id="p-1995">If <span class="process-math">\(S'\)</span> is linearly independent, then <span class="process-math">\(S\)</span> is linearly independent.</p></li>
+<li id="li-543"><p id="p-1996">If <span class="process-math">\(S\)</span> is a spanning set for <span class="process-math">\(V\text{,}\)</span> then <span class="process-math">\(S'\)</span> is a spanning set for <span class="process-math">\(\im T\text{.}\)</span></p></li>
 </ol></article></section></section></div></main>
 </div>
 </body>

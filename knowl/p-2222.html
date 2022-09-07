@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-07T19:56:53+05:30       *-->
+<!--*       on 2022-09-07T20:18:47+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,17 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>In this exercise we will show that for any <span class="process-math">\((a,b,c,d)\in \R^4\text{,}\)</span> there is a polynomial <span class="process-math">\(p(x)\in P_3\)</span> satisfying</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-p(-1)=a, p(0)=b, p(1)=c, p(2)=d\text{.}
-\end{equation*}
+<p>Next, by <a href="" class="xref" data-knowl="./knowl/th_fundspaces_matrixtransform.html" title="Theorem 3.8.6: Null space and image as fundamental spaces">Theorem 3.8.6</a> we have <span class="process-math">\(\NS A=\NS T_A\text{,}\)</span> <span class="process-math">\(\CS A=\im T_A\)</span> and <span class="process-math">\(\NS B=\NS T_B\text{,}\)</span> <span class="process-math">\(\CS B=\im T_B\text{.}\)</span> It follows that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_fundspaces_matrixtransform.html ./knowl/th_rank-nullity.html ./knowl/th_rank-nullity.html ./knowl/th_row_method.html">
+\begin{align*}
+\dim \CS A \amp=\dim\im T_A \\
+\amp=n-\dim\NS A \amp (\knowl{./knowl/th_rank-nullity.html}{\text{Theorem 3.8.2}}) \\
+\amp=n-\dim NS B \amp (\NS A=\NS B)\\
+\amp =\dim\im T_B \amp ( \knowl{./knowl/th_rank-nullity.html}{\text{Theorem 3.8.2}}\\
+\amp =\dim \CS B\text{.}
+\end{align*}
 </div>
-<p class="continuation">In other words given any list of values <span class="process-math">\(a, b, c, d\text{,}\)</span> we can find a polynomial that evaluates to these values at the inputs <span class="process-math">\(x=-1, 0, 1, 2\text{.}\)</span></p>
+<p class="continuation">Lastly, we turn to the row spaces. We will show that each row of <span class="process-math">\(B\)</span> is an element of <span class="process-math">\(\RS A\text{,}\)</span> from whence it follows that <span class="process-math">\(\RS B\subseteq \RS A\text{.}\)</span> Let <span class="process-math">\(\boldr_i\)</span> be the <span class="process-math">\(i\)</span>-th row of <span class="process-math">\(B\text{,}\)</span> and let <span class="process-math">\(\boldq_i\)</span> be the <span class="process-math">\(i\)</span>-th column of <span class="process-math">\(Q\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/th_row_method.html" title="Theorem 2.1.21: Row method of matrix multiplication">Theorem 2.1.21</a>, we have <span class="process-math">\(\boldr_i=\boldq_i A\text{,}\)</span> and furthermore, <span class="process-math">\(\boldq_i A\)</span> is the linear combination of the rows of <span class="process-math">\(A\)</span> whose coefficients come from the entries of <span class="process-math">\(\boldq_i\text{.}\)</span> Thus <span class="process-math">\(\boldr_i\in\RS A\text{,}\)</span> as desired.</p>
 <span class="incontext"><a href="s_rank_nullity.html#p-2222" class="internal">in-context</a></span>
 </body>
 </html>

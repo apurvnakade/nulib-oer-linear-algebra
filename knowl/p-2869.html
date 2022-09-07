@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-07T19:57:04+05:30       *-->
+<!--*       on 2022-09-07T20:18:59+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,26 +14,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<p>A particularly agreeable situation arises when the basis <span class="process-math">\(B=(\boldv_1, \boldv_2, \dots, \boldv_n)\)</span> satisfies</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_matrixrep_formula.html">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>Lastly the commutativity of the base of the tent is a consequence of <a href="" class="xref" data-knowl="./knowl/th_change_of_basis_transformations.html" title="Theorem 5.3.20: Change of basis for transformations">Theorem 5.3.20</a>:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_change_of_basis_transformations.html">
 \begin{equation*}
-T(\boldv_i)=c_i\boldv_i, c_i\in \R
+[T]_{B'}=\underset{B\rightarrow B'}{P}[T]_B\underset{B'\rightarrow B}{P},
 \end{equation*}
 </div>
-<p class="continuation">for all <span class="process-math">\(1\leq i\leq n\text{.}\)</span> Using recipe <a href="" class="xref" data-knowl="./knowl/eq_matrixrep_formula.html" title="Equation 5.2.1">(5.2.1)</a> we in this case that the corresponding matrix representation</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_matrixrep_formula.html">
+<p class="continuation">or equivalently,</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_change_of_basis_transformations.html">
 \begin{equation*}
-[T]_B=\begin{bmatrix}
-c_1 \amp 0\amp \dots \amp \amp 0\\
-0   \amp c_2\amp 0\amp \dots \amp 0\\
-0\amp 0\amp \ddots \amp \amp 0\\
-\vdots  \amp \amp \amp \amp \vdots \\
-0\amp 0\amp \dots \amp 0\amp c_n
-\end{bmatrix}
+A'=P^{-1}AP\text{.}
 \end{equation*}
 </div>
-<p class="continuation">is diagonal! Diagonal matrices are about as simple as they come: they wear all of their properties (rank, nullity, invertibility, etc.) on their sleeve.  If we hope to find a diagonal matrix representation of <span class="process-math">\(T\text{,}\)</span> then we should seek nonzero vectors <span class="process-math">\(\boldv\)</span> satisfying <span class="process-math">\(T(\boldv)=c\boldv\)</span> for some <span class="process-math">\(c\in \R\text{:}\)</span> these are called <em class="emphasis">eigenvectors</em> of <span class="process-math">\(T\text{.}\)</span></p>
-<span class="incontext"><a href="s_eigenvectors.html#p-2869" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_changeofbasis.html#p-2869" class="internal">in-context</a></span>
 </body>
 </html>

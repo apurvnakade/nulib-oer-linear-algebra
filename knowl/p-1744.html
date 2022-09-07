@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-07T19:56:46+05:30       *-->
+<!--*       on 2022-09-07T20:18:41+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,14 +14,13 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>This first example illustrates that in the special case of a matrix transformation <span class="process-math">\(T_A\colon \R^n\rightarrow \R^m\text{,}\)</span> where <span class="process-math">\(A\)</span> is an <span class="process-math">\(m\times n\)</span> matrix, we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\NS T_A=\{\boldx\in \R^n\colon T_A(\boldx)=\boldzero\}=\{\boldx\in \R^n\colon A\boldx=\boldzero\}\text{.}
-\end{equation*}
-</div>
-<p class="continuation">In other words, the null space of a matrix transformation <span class="process-math">\(T_A\)</span> is just the set of solutions to the matrix equation <span class="process-math">\(A\boldx=\boldzero\text{.}\)</span> The situation arises frequently enough that it deserves its own notation.</p>
-<span class="incontext"><a href="s_nullspace_image.html#p-1744" class="internal">in-context</a></span>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>The proof amounts to the following observations:</p>
+<ul class="disc">
+<li><p>The zero function <span class="process-math">\(0_X\colon X\rightarrow \R\)</span> is an element of all of these sets: i.e. the zero function is continuous, <span class="process-math">\(C^n\text{,}\)</span> <span class="process-math">\(C^\infty\text{,}\)</span> a polynomial, etc..</p></li>
+<li><p>If <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> both satisfy one of these properties (continuous, <span class="process-math">\(C^n\text{,}\)</span> <span class="process-math">\(C^\infty\text{,}\)</span> polynomial, etc.), then so does <span class="process-math">\(cf+dg\)</span> for any <span class="process-math">\(c,d\in \R\text{.}\)</span></p></li>
+</ul>
+<p class="continuation">The second, “closed under linear combinations” observation is easily seen for <span class="process-math">\(P(X)\)</span> and <span class="process-math">\(P_n(X)\)</span> (i.e., the sum of two polynomials of degree at most <span class="process-math">\(n\)</span> is clearly a polynomial of degree at most <span class="process-math">\(n\)</span>); for the other spaces, this is a result of calculus properties to the effect that adding and scaling functions preserves continuity and differentiability.</p>
+<span class="incontext"><a href="s_subspace.html#p-1744" class="internal">in-context</a></span>
 </body>
 </html>

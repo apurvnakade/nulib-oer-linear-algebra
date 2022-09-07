@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-07T19:57:03+05:30       *-->
+<!--*       on 2022-09-07T20:18:58+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,26 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<p><a href="" class="xref" data-knowl="./knowl/proc_standard_matrix_via_change_of_basis.html" title="Procedure 5.3.23: Computing the standard matrix using change of basis">Procedure 5.3.23</a> is a powerful technique for computing matrix formulas for many interesting geometric linear transformations of <span class="process-math">\(\R^n\text{:}\)</span> e.g., rotations, reflections, and orthogonal projections. Often the very definition of such transformations will suggest a more convenient nonstandard basis <span class="process-math">\(B'\text{:}\)</span> one that reflects the geometry involved. The next example illustrates this nicely.</p>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>It turns out that <span class="process-math">\(\underset{B\rightarrow B'}{P}=(\underset{B'\rightarrow B}{P})^{-1}\)</span> is not so difficult to compute in this case since the columns <span class="process-math">\(\boldc_j\)</span> of <span class="process-math">\(\underset{B'\rightarrow B}{P}\)</span> satisfy</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_dotproduct_method.html">
+\begin{equation*}
+\boldc_i\cdot\boldc_j=\begin{cases} 4\amp \text{if } i=j\\ 0\amp \text{if } i\ne j
+\end{cases}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">From this observation and <a href="" class="xref" data-knowl="./knowl/th_dotproduct_method.html" title="Theorem 4.1.9: Dot product and matrix multiplication">Theorem 4.1.9</a> it is easy to see that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_dotproduct_method.html">
+\begin{equation*}
+\underset{B\rightarrow B'}{P}=(\underset{B'\rightarrow B}{P})^{-1}=\frac{1}{4}
+\begin{amatrix}[rrrr]
+1\amp 1\amp 1\amp 1\\
+1\amp -1\amp 1\amp -1\\
+1\amp 1\amp -1\amp -1\\
+-1\amp -1\amp 1\amp -1
+\end{amatrix}\text{.}
+\end{equation*}
+</div>
 <span class="incontext"><a href="s_changeofbasis.html#p-2811" class="internal">in-context</a></span>
 </body>
 </html>
