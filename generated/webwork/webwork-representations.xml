@@ -1818,6 +1818,55 @@ B=\left(\begin{array}{cc}
     <server-data sourceFilePath="Library/Utah/Business_Algebra/set10_Matrices/p24.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
     <pg source="Library/Utah/Business_Algebra/set10_Matrices/p24.pg"/>
   </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-38" ww-id="webwork-38">
+    <static seed="38" source="Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/3.3.48.pg">
+      <statement><p>If <m>A</m> and <m>B</m> are invertible <m>n\times n</m> matrices,
+then the inverse of <m>A+B</m> is <m>A^{-1}+B^{-1}</m>.<var form="popup" name="AnSwEr0001">
+<li>
+</li>
+<li>
+<p>True</p>
+</li>
+<li>
+<p>False</p>
+</li>
+</var></p>
+</statement>
+      <answer>
+        <p>
+          <m>\text{False}</m>
+        </p>
+      </answer>
+      <solution><p><alert>SOLUTION:</alert> 
+False. For example, let <m>A = I_n</m>, and <m>B = -I_n</m>, then <m>A+B = 0_n</m>, which is not invertible.</p>
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/3.3.48.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/3.3.48.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-39" ww-id="webwork-39">
+    <static seed="39" source="Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/3.3.54.pg">
+      <statement><p>Solve for the matrix <m>X</m> if <m>AX(D+B X)^{-1} = C</m>. Assume that all matrices are <m>n\times n</m> and invertible as needed.</p>
+<p><m>X =</m><fillin name="AnSwEr0001" characters="10"/></p>
+</statement>
+      <answer>
+        <p>
+          <m>\left(A-CB\right)^{-1}CD</m>
+        </p>
+      </answer>
+      <solution><p><alert>SOLUTION:</alert> 
+Note that
+<me>\begin{align*}
+AX(D+BX)^{-1} = C \amp \Rightarrow AX = C(D+BX) = CD + CBX \\
+\amp \Rightarrow  AX - CBX = CD\\
+\amp \Rightarrow (A-CB)X = CD \\
+\amp \Rightarrow X = (A-CB)^{-1} CD.
+\end{align*}</me></p>
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/3.3.54.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/3.3.54.pg"/>
+  </webwork-reps>
   <webwork-reps version="2" xml:id="extracted-webwork-4" ww-id="webwork-4">
     <static seed="4" source="Library/SUNYSB/oneToOneOnto1.pg">
       <statement><p>For each of the following functions, 
@@ -1851,6 +1900,63 @@ B=\left(\begin{array}{cc}
     </static>
     <server-data sourceFilePath="Library/SUNYSB/oneToOneOnto1.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
     <pg source="Library/SUNYSB/oneToOneOnto1.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-40" ww-id="webwork-40">
+    <static seed="40" source="Library/Rochester/setLinearAlgebra4InverseMatrix/ur_Ch2_1_4.pg">
+      <statement><p>Are the following matrices invertible?</p>
+<p><ol>
+<li>
+<p><m>\left[\begin{array}{cc}
+9 \amp -4\cr
+0 \amp 0
+\end{array}\right]</m></p>
+</li>
+<li>
+<p><m>\left[\begin{array}{cc}
+-9 \amp -4\cr
+9 \amp 4
+\end{array}\right]</m></p>
+</li>
+<li>
+<p><m>\left[\begin{array}{cc}
+-1 \amp 3\cr
+5 \amp 2
+\end{array}\right]</m></p>
+</li>
+<li>
+<p><m>\left[\begin{array}{cc}
+-1 \amp -3\cr
+-1 \amp -4
+\end{array}\right]</m></p>
+</li>
+</ol></p>
+</statement>
+    </static>
+    <server-data sourceFilePath="Library/Rochester/setLinearAlgebra4InverseMatrix/ur_Ch2_1_4.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/Rochester/setLinearAlgebra4InverseMatrix/ur_Ch2_1_4.pg"/>
+  </webwork-reps>
+  <webwork-reps version="2" xml:id="extracted-webwork-41" ww-id="webwork-41">
+    <static seed="41" source="Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/3.3.59.pg">
+      <statement><p>For what values of <m>c</m> will
+<m>\displaystyle A = \begin{bmatrix} 1 \amp  1 \\ c \amp  c^2 \end{bmatrix}</m> be invertible?</p>
+<p>For all <m>c</m> such that <m>c\neq</m> <fillin name="AnSwEr0001" characters="6"/> and <m>c\neq</m> <fillin name="AnSwEr0002" characters="6"/>.</p>
+</statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+      <answer>
+        <p>
+          <m>1</m>
+        </p>
+      </answer>
+      <solution><p><alert>SOLUTION:</alert> 
+The matrix <m>\displaystyle A = \begin{bmatrix} 1 \amp  1 \\ c \amp  c^2 \end{bmatrix}</m> is invertible provided the columns of <m>A</m> are linearly independent, which will be the case if <m>c \neq c^2</m>. Thus, we require that <m>c\neq 0</m> and <m>c \neq 1</m>.</p>
+</solution>
+    </static>
+    <server-data sourceFilePath="Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/3.3.59.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <pg source="Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/3.3.59.pg"/>
   </webwork-reps>
   <webwork-reps version="2" xml:id="extracted-webwork-5" ww-id="webwork-5">
     <static seed="5" source="Library/LoyolaChicago/Precalc/Chap8Sec2/Q08.pg">

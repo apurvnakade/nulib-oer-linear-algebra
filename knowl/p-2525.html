@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-06T16:43:32+05:30       *-->
+<!--*       on 2022-09-07T19:56:58+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,20 +14,27 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>In statistics we often wish to approximate a scatter plot of points <span class="process-math">\(P_i=(X_i, Y_i)\text{,}\)</span> <span class="process-math">\(1\leq i\leq m\text{,}\)</span> with a line <span class="process-math">\(\ell\colon y=mx+b\)</span> that “best fits” the data. “Finding” this line amounts to finding the appropriate slope <span class="process-math">\(m\)</span> and <span class="process-math">\(y\)</span>-intercept <span class="process-math">\(b\text{:}\)</span> i.e., in this setup, the points <span class="process-math">\(P_i=(X_i, Y_i)\)</span> are given, and <span class="process-math">\(m\)</span> and <span class="process-math">\(b\)</span> are the unknowns we wish to find. For the line to perfectly fit the data, we would want</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>Any line in <span class="process-math">\(\R^3\)</span> passing through the origin can be described as <span class="process-math">\(\ell=\Span\{\boldv\}\text{,}\)</span> for some <span class="process-math">\(\boldv=(a,b,c)\ne 0\text{.}\)</span> The set <span class="process-math">\(\{(a,b,c)\}\)</span> is trivially an orthogonal basis of <span class="process-math">\(\ell\text{.}\)</span> Using <a href="" class="xref" data-knowl="./knowl/eq_ortho_proj_formula.html" title="Equation 4.3.2">(4.3.2)</a>, we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_ortho_proj_formula.html">
 \begin{equation*}
-Y_i=mX_i+b \text{ for all } 1\leq i\leq m\text{.}
+\proj{\boldx}{\ell}=\frac{\boldx\cdot \boldv}{\boldv\cdot\boldv}\boldv=\frac{ax+by+cz}{a^2+b^2+c^2}(a,b,c)\text{.}
 \end{equation*}
 </div>
-<p class="continuation">In other words <span class="process-math">\((m,b)\)</span> would be a solution to the matrix equation <span class="process-math">\(A\boldx=\boldy\text{,}\)</span> where</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<p class="continuation">It follows that <span class="process-math">\(\operatorname{proj}_\ell=T_A\text{,}\)</span> where</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_ortho_proj_formula.html">
 \begin{equation*}
-\boldx=\begin{bmatrix}m \\ b\end{bmatrix},A=\begin{bmatrix} X_1\amp 1\\ X_2\amp 1\\ \vdots \amp \vdots \\ X_m\amp 1  \end{bmatrix},  \boldy=\begin{bmatrix} Y_1\\ Y_2\\ \vdots \\ Y_m\end{bmatrix}\text{.}
+A=\begin{bmatrix}
+\vert \amp \vert \amp \vert \\
+\proj{(1,0,0)}{\ell}\amp \proj{(0,1,0)}{\ell}\amp \proj{(0,0,1)}{\ell} \\
+\vert \amp \vert \amp \vert
+\end{bmatrix}=\frac{1}{a^2+b^2+c}\begin{bmatrix}
+a^2\amp ab\amp ac\\
+ab\amp b^2\amp bc\\
+ac\amp bc\amp c^2
+\end{bmatrix}\text{.}
 \end{equation*}
 </div>
-<p class="continuation">Of course in most situations the provided points do not lie on a line, and thus there is no solution <span class="process-math">\(\boldx\)</span> to the given matrix equation <span class="process-math">\(A\boldx=\boldy\text{.}\)</span> When this is the case we can use the theory of orthogonal projection to find what is called a <em class="emphasis">least-squares</em> solution, which we now describe in detail.</p>
 <span class="incontext"><a href="s_orthogonal_projection.html#p-2525" class="internal">in-context</a></span>
 </body>
 </html>

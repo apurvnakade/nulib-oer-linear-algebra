@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-06T16:43:32+05:30       *-->
+<!--*       on 2022-09-07T19:56:57+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,31 +15,22 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Any plane <span class="process-math">\(W\subseteq\R^3\)</span> passing through the origin can be described as <span class="process-math">\(W=\{(x,y,z)\in \R^3\colon ax+by+cz=0\}\text{.}\)</span> Equivalently, <span class="process-math">\(W\)</span> is the set of all <span class="process-math">\(\boldx\in \R^3\)</span> satisfying <span class="process-math">\(\boldx\cdot (a,b,c)=0\text{:}\)</span> i.e., <span class="process-math">\(W=\ell^\perp\text{,}\)</span> where <span class="process-math">\(\ell=\Span\{(a,b,c)\text{.}\)</span> Consider the orthogonal decomposition with respect to <span class="process-math">\(\ell\text{:}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_projection_line.html">
+<p>According to <a href="" class="xref" data-knowl="./knowl/rm_ortho_proj_formula.html" title="Remark 4.3.10: Orthogonal projection formula">Remark 4.3.10</a> our first step is to produce an orthogonal basis of <span class="process-math">\(W\text{.}\)</span> We do so by inspection. Since <span class="process-math">\(\dim W=2\text{,}\)</span> we simply need to find two solutions to <span class="process-math">\(x+y+z=0\)</span> that are orthogonal to one another: e.g., <span class="process-math">\(\boldw_1=(1,-1,0)\)</span> and <span class="process-math">\(\boldw_2=(1,1,-2)\text{.}\)</span> Thus we choose <span class="process-math">\(B=\{ (1,-1,0), (1,1,-2)\}\)</span> as our orthogonal basis, and our computations become a matter of applying <a href="" class="xref" data-knowl="./knowl/eq_ortho_proj_formula.html" title="Equation 4.3.2">(4.3.2)</a>, which in this case becomes</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/rm_ortho_proj_formula.html ./knowl/eq_ortho_proj_formula.html ./knowl/ex_orthoproj_props.html">
 \begin{equation*}
-\boldx=\proj{\boldx}{\ell}+(\boldx-\proj{\boldx}{\ell})\text{.}
+\proj{\boldv}{W}=\frac{\boldv\cdot\boldw_1}{\boldw_1\cdot \boldw_1}\boldw_1+\frac{\boldv\cdot\boldw_2}{\boldw_2\cdot \boldw_2}\boldw_2=
+\frac{\boldv\cdot\boldw_1}{2}\boldw_1+\frac{\boldv\cdot\boldw_2}{6}\boldw_2\text{.}
 \end{equation*}
 </div>
-<p class="continuation">Since <span class="process-math">\(\boldx-\proj{\boldx}{\ell}\in \ell^\perp=W\)</span> and <span class="process-math">\(\proj{\boldx}{\ell}\in \ell=W^\perp\text{,}\)</span> we see that this is also an orthogonal decomposition with respect to <span class="process-math">\(W\text{!}\)</span> Using the matrix formula for <span class="process-math">\(\operatorname{proj}_\ell\)</span> from <a href="" class="xref" data-knowl="./knowl/eg_projection_line.html" title="Example 4.3.15: Projection onto a line \ell\subseteq \R^3">Example 4.3.15</a>, we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_projection_line.html">
+<p class="continuation">Now compute:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/rm_ortho_proj_formula.html ./knowl/eq_ortho_proj_formula.html ./knowl/ex_orthoproj_props.html">
 \begin{align*}
-\proj{\boldx}{W} \amp =\boldx-\proj{\boldx}{\ell} \\
-\amp = I\boldx -  A\boldx\amp \left(A=\frac{1}{a^2+b^2+c}\begin{bmatrix}
-a^2\amp ab\amp ac\\
-ab\amp b^2\amp bc\\
-ac\amp bc\amp c^2
-\end{bmatrix}\right)\\
-\amp = (I-A)\boldx\\
-\amp = \frac{1}{a^2+b^2+c^2}\begin{bmatrix}b^2+c^2\amp -ab\amp -ac\\ -ab\amp a^2+c^2\amp -bc\\ -ac\amp -bc\amp a^2+b^2 \end{bmatrix}\text{.}
+\proj{(3,-2,2)}{W} \amp =\frac{5}{2}(1,-1,0)+\frac{-3}{6}(1,1,-2)=(2,-3,1)\\
+\proj{(2,1,-3)}{W} \amp =\frac{1}{2}(1,-1,0)+\frac{9}{6}(1,1,-2)=(2,1,-3)\\
+\proj{(-7,-7,-7)}{W} \amp =\frac{0}{2}(1,-1,0)+\frac{0}{6}(1,1,-2)=(0,0,0)\text{.}
 \end{align*}
 </div>
-<p class="continuation">We conclude that <span class="process-math">\(\operatorname{proj}_W=T_B\text{,}\)</span> where</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_projection_line.html">
-\begin{equation*}
-B=\frac{1}{a^2+b^2+c^2}\begin{bmatrix}b^2+c^2\amp -ab\amp -ac\\ -ab\amp a^2+c^2\amp -bc\\ -ac\amp -bc\amp a^2+b^2 \end{bmatrix}\text{.}
-\end{equation*}
-</div>
+<p class="continuation">The last two computations might give you pause. Why do we have <span class="process-math">\(\proj{(2,1,-3)}{W}=(2,1,-3)\)</span> and <span class="process-math">\(\proj{(-7,7-7,-7)}{W}=(0,0,0)\text{?}\)</span> The answer is that <span class="process-math">\((2,1,-3)\)</span> is already an element of <span class="process-math">\(W\text{,}\)</span> so it stands to reason that its projection is itself; and <span class="process-math">\((-7,-7,-7)\)</span> is already orthogonal to <span class="process-math">\(W\)</span> (it is a scalar multiple of <span class="process-math">\((1,1,1)\)</span>), so it stands to reason that its projection is equal to <span class="process-math">\(\boldzero\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/ex_orthoproj_props.html" title="Exercise 4.3.6.12">Exercise 4.3.6.12</a> for a rigorous proof of these claims.</p>
 <span class="incontext"><a href="s_orthogonal_projection.html#p-2513" class="internal">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-06T16:43:43+05:30       *-->
+<!--*       on 2022-09-07T19:57:06+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,50 +16,38 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.5.16.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.4.21.1</span><span class="period">.</span>
 </h4>
-<p>We saw in <a href="" class="xref" data-knowl="./knowl/eg_eigenvector_systematic_transposition.html" title="Example 5.4.24: Transposition (again)">Example 5.4.24</a> that</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_eigenvector_systematic_transposition.html">
-\begin{equation*}
-[S]_B=\begin{bmatrix}
-1\amp 0\amp 0\amp 0\\
-0\amp 0\amp 1\amp 0\\
-0\amp 1\amp 0\amp 0\\
-0\amp 0\amp 0\amp 1
-\end{bmatrix}\text{,}
-\end{equation*}
+<p>First compute</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+p(t) \amp = \det (tI-A)\\
+\amp = \det \begin{amatrix}[rrr]t-2\amp 1\amp 1\\ 1\amp t-2\amp 1\\ 1\amp 1\amp t-2 \end{amatrix} \\
+\amp = t^3-6t^2+9t\\
+\amp = t(t^2-6t+9)\\
+\amp = t(t-3)^2\text{.}
+\end{align*}
 </div>
-<p class="continuation">where <span class="process-math">\(B=(E_{11}, E_{12}, E_{21}, E_{22})\)</span> is the standard ordered basis of <span class="process-math">\(M_{22}\text{.}\)</span> Furthermore, we saw that <span class="process-math">\(1\)</span> and <span class="process-math">\(-1\)</span> are the distinct eigenvalues of <span class="process-math">\(A=[S]_B\text{,}\)</span> and that</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_eigenvector_systematic_transposition.html">
-\begin{equation*}
-S_1=\{(1,0,0,0), (0,1,1,0), (0,0,0,1)\}, S_{-1}=\Span\{(0,1,-1,0)\}
-\end{equation*}
+<p class="continuation">We see that the eigenvalues of <span class="process-math">\(A\)</span> are <span class="process-math">\(\lambda=0\)</span> and <span class="process-math">\(\lambda=3\text{.}\)</span> Now compute bases for their corresponding eigenspaces.</p>
+<article class="case"><h5 class="heading">Basis of <span class="process-math">\(W_0\)</span>.</h5>
+<p>We have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+W_0 \amp = \NS(0I-A)\\
+\amp = \NS \begin{amatrix}[rrr]-2\amp 1\amp 1\\ 1\amp -2\amp 1\\ 1\amp 1\amp -2 \end{amatrix}  \\
+\amp = \Span\{(1,1,1)\text{.}
+\end{align*}
 </div>
-<p class="continuation">are bases of <span class="process-math">\(W_1\)</span> and <span class="process-math">\(W_{-1}\text{,}\)</span> respectively. It follows that <span class="process-math">\(\dim W_1+\dim W_{-1}=3+1=4\text{,}\)</span> that <span class="process-math">\(A\)</span> is diagonalizable, and that</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_eigenvector_systematic_transposition.html">
-\begin{equation*}
-B'=((1,0,0,0), (0,1,1,0), (0,0,0,1), (0,1,-1,0))
-\end{equation*}
+<p class="continuation">(We have skipped the Gaussian elimination steps involved in computing a basis for <span class="process-math">\(\NS(-A)\text{.}\)</span>)</p></article><article class="case"><h5 class="heading">Basis of <span class="process-math">\(W_3\)</span>.</h5>
+<p>We have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+W_3 \amp = \NS(3I-A)\\
+\amp= \NS \begin{amatrix}[rrr]1\amp 1\amp 1\\ 1\amp 1\amp 1\\ 1\amp 1\amp 1 \end{amatrix} \\
+\amp = \Span\{ (1,-1,0),(1,0,-1)\}\text{.}
+\end{align*}
+</div></article> We conclude that the <span class="process-math">\(0\)</span>-eigenvectors of <span class="process-math">\(A\)</span> are the nonzero scalar multiples of <span class="process-math">\((1,1,1)\text{,}\)</span> and that the <span class="process-math">\(3\)</span>-eigenvectors are all nonzero vectors of the form <span class="process-math">\(\boldx=c_1(1,-1,0)+c_2(1,0,-1)\text{.}\)</span>
 </div>
-<p class="continuation">is an eigenbasis of <span class="process-math">\(A\text{.}\)</span> We conclude that <span class="process-math">\(S\)</span> is diagonalizable, and we lift <span class="process-math">\(B'\)</span> via <span class="process-math">\([\phantom{v}]_B\)</span> to the eigenbasis</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_eigenvector_systematic_transposition.html">
-\begin{equation*}
-B''=\left\{
-\begin{amatrix}[rr]1\amp 0\\ 0\amp 0  \end{amatrix},
-\begin{amatrix}[rr]0\amp 1\\ 1\amp 0  \end{amatrix},
-\begin{amatrix}[rr]0\amp 0\\ 0\amp 1  \end{amatrix},
-\begin{amatrix}[rr]0\amp 1\\ -1\amp 0  \end{amatrix}
-\right\}
-\end{equation*}
-</div>
-<p class="continuation">of <span class="process-math">\(S\text{.}\)</span> Lastly, we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg_eigenvector_systematic_transposition.html">
-\begin{equation*}
-[S]_{B''}=
-\begin{amatrix}[rrrr]1\amp 0\amp 0\amp 0\\ 0\amp 1\amp 0\amp 0\\ 0\amp 0\amp 1\amp 0\\ 0\amp 0\amp 0\amp -1  \end{amatrix}\text{.}
-\end{equation*}
-</div>
-</div>
-<span class="incontext"><a href="s_diagonalization.html#solution-100" class="internal">in-context</a></span>
+<span class="incontext"><a href="s_eigenvectors.html#solution-100" class="internal">in-context</a></span>
 </body>
 </html>

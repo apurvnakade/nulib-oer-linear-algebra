@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-06T16:43:35+05:30       *-->
+<!--*       on 2022-09-07T19:57:00+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>The diagram being commutative here means that starting with an element <span class="process-math">\(\boldv\in V\)</span> in the top left of the diagram, whether we travel to the bottom right of the diagram either by first applying <span class="process-math">\(T\)</span> and then applying <span class="process-math">\([\hspace{5pt}]_{B'}\)</span> (“go right, then down”), or else by first applying <span class="process-math">\([\hspace{5pt}]_B\)</span> and then applying <span class="process-math">\([T]_B^{B'}\)</span> (“go down, then right”), we get the same result! (The bottom map should technically be labeled <span class="process-math">\(T_A\text{,}\)</span> where <span class="process-math">\(A=[T]_B^{B'}\text{,}\)</span> but this would detract from the elegance of the diagram.)</p>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>We have <span class="process-math">\(B=(x^3, x^2, x, 1)\)</span> and <span class="process-math">\(B'=(x^2, x, 1)\text{.}\)</span> Denote by <span class="process-math">\(\boldc_j\)</span> the <span class="process-math">\(j\)</span>-th column of <span class="process-math">\(A\text{.}\)</span> We use <a href="" class="xref" data-knowl="./knowl/eq_matrixrep_formula.html" title="Equation 5.2.1">(5.2.1)</a> to compute:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_matrixrep_formula.html">
+\begin{align*}
+\boldc_1\amp =[T(x^3)]_{B'}=[3x^2]_{B'}=\begin{bmatrix} 3\\
+0\\
+0 \end{bmatrix} \amp \boldc_2\amp =[T(x^2)]_{B'}=[2x]_{B'}=\begin{bmatrix} 0\\
+2\\
+0 \end{bmatrix}\\
+\boldc_3\amp =[T(x)]_{B'}=[1]_{B'}=\begin{bmatrix} 0\\
+0\\
+1 \end{bmatrix} \amp \boldc_4\amp =[T(1)]_{B'}=[0]_{B'}=\begin{bmatrix} 0\\
+0\\
+0 \end{bmatrix}\text{.}
+\end{align*}
+</div>
+<p class="continuation">Thus <span class="process-math">\(A=\begin{bmatrix}3\amp 0\amp 0\amp 0\\ 0\amp 2\amp 0\amp 0\\ 0\amp 0\amp 1\amp 0 \end{bmatrix}\text{.}\)</span></p>
 <span class="incontext"><a href="s_matrixreps.html#p-2666" class="internal">in-context</a></span>
 </body>
 </html>

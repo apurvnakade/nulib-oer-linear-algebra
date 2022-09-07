@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-06T16:43:33+05:30       *-->
+<!--*       on 2022-09-07T19:56:58+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,32 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>By <a href="" class="xref" data-knowl="./knowl/cor_orthonormal_existence.html" title="Corollary 4.2.10: Existence of orthonormal bases">Corollary 4.2.10</a> there is an orthogonal basis <span class="process-math">\(B=\{\boldv_1,\dots ,\boldv_r\}\)</span> of <span class="process-math">\(W\text{,}\)</span> and furthermore, we can extend <span class="process-math">\(B\)</span> to an orthogonal basis <span class="process-math">\(B'=\{\boldv_1,\boldv_2, \dots, \boldv_r, \boldu_1,\dots , \boldu_{n-r}\}\)</span> of all of <span class="process-math">\(V\text{.}\)</span> Show the <span class="process-math">\(\boldu_i\)</span> form a basis for <span class="process-math">\(W^\perp\text{.}\)</span></p>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>The least-squares method applies to any matrix equation</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_fundspaces_matrixtransform.html ./knowl/eq_least-squares_orig.html ./knowl/eq_least-squares_new.html ./knowl/eq_least-squares_orig.html">
+\begin{equation}
+\underset{m\times n}{A}\, \underset{n\times 1}{\boldx}=\underset{m\times 1}{\boldy}\text{,}\tag{4.3.5}
+\end{equation}
+</div>
+<p class="continuation">where <span class="process-math">\(A\)</span> and <span class="process-math">\(\boldy\)</span> are given, and <span class="process-math">\(\boldx\)</span> is treated as an unknown vector. Recall that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_fundspaces_matrixtransform.html ./knowl/eq_least-squares_orig.html ./knowl/eq_least-squares_new.html ./knowl/eq_least-squares_orig.html">
+\begin{align*}
+A\boldx=\boldy \text{ has a solution } \amp\iff \boldy\in \CS A \amp (\knowl{./knowl/th_fundspaces_matrixtransform.html}{\text{Theorem 3.8.6}}) \text{.}
+\end{align*}
+</div>
+<p class="continuation">When <span class="process-math">\(\boldy\notin \CS A\text{,}\)</span> and hence <a href="" class="xref" data-knowl="./knowl/eq_least-squares_orig.html" title="Equation 4.3.5">(4.3.5)</a> does not have a solution, the least-squares method proceeds by replacing <span class="process-math">\(\boldy\)</span> with the element of <span class="process-math">\(W=\CS A\)</span> closest to it: that is, with its <em class="emphasis">orthogonal projection</em> onto <span class="process-math">\(W\text{.}\)</span>  Let <span class="process-math">\(\hat{\boldy}=\proj{\boldy}{W}\text{,}\)</span> where orthogonal projection is taken with respect to the dot product on <span class="process-math">\(\R^m\text{,}\)</span> and consider the adjusted matrix equation</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_fundspaces_matrixtransform.html ./knowl/eq_least-squares_orig.html ./knowl/eq_least-squares_new.html ./knowl/eq_least-squares_orig.html">
+\begin{equation}
+A\boldx=\hat{\boldy}\text{.}\tag{4.3.6}
+\end{equation}
+</div>
+<p class="continuation">By definition of <span class="process-math">\(\operatorname{proj}_W\text{,}\)</span>  we have <span class="process-math">\(\hat{\boldy}\in W=\CS A\text{,}\)</span> and thus there is a solution <span class="process-math">\(\hat{\boldx}\)</span> to <a href="" class="xref" data-knowl="./knowl/eq_least-squares_new.html" title="Equation 4.3.6">(4.3.6)</a>. We call <span class="process-math">\(\hat{\boldx}\)</span> a <dfn class="terminology">least-squares</dfn> solution to <a href="" class="xref" data-knowl="./knowl/eq_least-squares_orig.html" title="Equation 4.3.5">(4.3.5)</a>. Observe that <span class="process-math">\(\hat{\boldx}\)</span> does <em class="emphasis">not</em> necessarily satisfy <span class="process-math">\(A\hat{\boldx}=\boldy\text{;}\)</span> rather, it satisfies <span class="process-math">\(A\hat{\boldx}=\hat{\boldy}\text{.}\)</span> What makes this a “least-squares” solution is that <span class="process-math">\(A\hat{\boldx}=\hat{\boldy}\)</span> is the element of <span class="process-math">\(W=\CS A\)</span> closest to <span class="process-math">\(\boldy\text{.}\)</span> With respect to the dot product, this means that a least-squares solution <span class="process-math">\(\hat{\boldx}\)</span> minimizes the quantity</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_fundspaces_matrixtransform.html ./knowl/eq_least-squares_orig.html ./knowl/eq_least-squares_new.html ./knowl/eq_least-squares_orig.html">
+\begin{equation*}
+\norm{\boldy-A\boldx}=\sqrt{(y_1-y_1')^2+(y_2-y_2')^2+\cdots +(y_n-y_n')^2}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">among all <span class="process-math">\(\boldx\in \R^n\text{.}\)</span></p>
 <span class="incontext"><a href="s_orthogonal_projection.html#p-2546" class="internal">in-context</a></span>
 </body>
 </html>

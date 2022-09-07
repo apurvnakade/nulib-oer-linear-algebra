@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-06T16:43:17+05:30       *-->
+<!--*       on 2022-09-07T19:56:44+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,15 +15,16 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Fix an angle <span class="process-math">\(0\leq \alpha\leq \pi\text{.}\)</span> The reflection <span class="process-math">\(r_\alpha\colon \R^2\rightarrow\R^2\)</span> is a linear transformation. In fact we have <span class="process-math">\(r_{\alpha}=T_A\text{,}\)</span> where</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-A=\begin{amatrix}[rr]
-\cos 2\alpha\amp\sin 2\alpha \\
-\sin 2\alpha \amp -\cos 2\alpha
-\end{amatrix}\text{.}
-\end{equation*}
+<p>We use the one-step technique. For any <span class="process-math">\(c,d\in \R\)</span> and <span class="process-math">\(\boldx_1, \boldx_2\in \R^n\text{,}\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/th_matrix_alg_props.html ./knowl/th_matrix_alg_props.html">
+\begin{align*}
+T_A(c\boldx_1+d\boldx_2) \amp =A(c\boldx_1+d\boldx_2)\\
+\amp =A(c\boldx_1)+A(d\boldx_2) \amp (\knowl{./knowl/th_matrix_alg_props.html}{\text{Theorem 2.2.1}}) \\
+\amp =cA\boldx_1+dA\boldx_2 \amp (\knowl{./knowl/th_matrix_alg_props.html}{\text{Theorem 2.2.1}})\\
+\amp =cT_A(\boldx_1)+dT_A(\boldx_2)\text{.}
+\end{align*}
 </div>
+<p class="continuation">This proves <span class="process-math">\(T_A\)</span> is a linear transformation.</p>
 <span class="incontext"><a href="s_transformation.html#p-1570" class="internal">in-context</a></span>
 </body>
 </html>

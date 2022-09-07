@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-06T16:43:46+05:30       *-->
+<!--*       on 2022-09-07T19:57:11+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,26 +15,7 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Next we compute <em class="emphasis">orthonormal</em> bases of the eigenspaces <span class="process-math">\(W_1\)</span> and <span class="process-math">\(W_{-1}\text{,}\)</span> yielding</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-B_1\amp=\left(\frac{1}{\sqrt{3}}(1,1,1)\right) \amp B_{2}\amp =\left(\frac{1}{\sqrt{2}}(1,-1,0), \frac{1}{\sqrt{6}}(1,1,-2)\right)\text{.}
-\end{align*}
-</div>
-<p class="continuation">Assembling these bases elements into the orthogonal matrix</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-Q=\begin{amatrix}[rrr]1/\sqrt{3}\amp 1/\sqrt{2}\amp 1/\sqrt{6}\\
-1/\sqrt{3}\amp -1/\sqrt{2}\amp 1/\sqrt{6}\\
-1/\sqrt{3}\amp 0\amp -2/\sqrt{6}\end{amatrix}\text{,}
-\end{equation*}
-</div>
-<p class="continuation">we conclude that <span class="process-math">\(D=Q^{-1}AQ=Q^TAQ\text{,}\)</span> where</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-D=\begin{amatrix}[rrr]1\amp 0\amp 0\\ 0\amp -1\amp 0\\ 0\amp 0\amp -1  \end{amatrix}\text{.}
-\end{equation*}
-</div>
+<p>Let <span class="process-math">\(\lambda_1, \lambda_2, \dots, \lambda_r\)</span> be the distinct eigenvalues of <span class="process-math">\(T\text{.}\)</span> Since <span class="process-math">\(T\)</span> is assumed to be diagonalizable, following <a href="" class="xref" data-knowl="./knowl/proc_diagonalize.html" title="Procedure 5.5.14: Deciding whether a linear transformation is diagonalizable">Procedure 5.5.14</a> we can create an eigenbasis <span class="process-math">\(B\)</span> by picking bases <span class="process-math">\(B_i\)</span> of each eigenspace <span class="process-math">\(W_{\lambda_i}\)</span> and combining them. We can always choose these bases so that each <span class="process-math">\(B_i\)</span> is orthogonal. When we do so, the assembled <span class="process-math">\(B\)</span> will be orthogonal as a whole. Indeed given any two elements <span class="process-math">\(\boldv, \boldv'\)</span> of <span class="process-math">\(B\text{,}\)</span> if both vectors are elements of <span class="process-math">\(B_i\)</span> for some <span class="process-math">\(i\text{,}\)</span> then they are orthogonal <em class="emphasis">by design</em>; furthermore, if <span class="process-math">\(\boldv\)</span> is an element of basis <span class="process-math">\(B_i\)</span> and <span class="process-math">\(\boldv'\)</span> is an element of basis <span class="process-math">\(B_j\)</span> with <span class="process-math">\(i\ne j\text{,}\)</span> then they are eigenvectors with distinct eigenvalues, and hence orthogonal <em class="emphasis">by assumption</em>!</p>
 <span class="incontext"><a href="s_spectral_theorem.html#p-3172" class="internal">in-context</a></span>
 </body>
 </html>

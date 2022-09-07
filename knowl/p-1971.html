@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-06T16:43:22+05:30       *-->
+<!--*       on 2022-09-07T19:56:49+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,35 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>In fact, our Gaussian elimination analysis tells us exactly how <span class="process-math">\(S\)</span> fails to be a basis. Since the last column of <span class="process-math">\(U\)</span> does not have a leading one, the corresponding system is always consistent: i.e., there is always at least one solution <span class="process-math">\(\boldx=(c_1,c_2,c_3,c_4)\)</span> to <a href="" class="xref" data-knowl="./knowl/eq_basis_onestep_R3.html" title="Equation 3.6.1">(3.6.1)</a> for each <span class="process-math">\((a,b,c)\in \R^3\text{.}\)</span> This tells us that <span class="process-math">\(S\)</span> is a spanning set of <span class="process-math">\(\R^3\text{.}\)</span> On the other hand, the existence of the free variable tells us that for <span class="process-math">\((a,b,c)=(0,0,0)=\boldzero\text{,}\)</span> we will have infinitely many choices <span class="process-math">\(c_1,c_2,c_3,c_4\)</span> satisfying</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_basis_onestep_R3.html">
+<p>To show <span class="process-math">\(B\)</span> spans <span class="process-math">\(P_2\)</span> we must show that for any <span class="process-math">\(dx^2+ex+f\in P_2\)</span> we can find <span class="process-math">\(a,b,c\in\R\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-c_1\boldv_1+c_2\boldv_2+c_3\boldv_3+c_4\boldv_4=\boldzero\text{.}
+a(x^2+x+1)+b(x^2-x)+c(x^2-1)=dx^2+ex+f\text{,}
 \end{equation*}
 </div>
-<p class="continuation">This shows that <span class="process-math">\(S\)</span> is <em class="emphasis">not</em> linearly independent.</p>
+<p class="continuation">or</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(a+b+c)x^2+(a-b)x+(a-1)=dx^2+ex+f\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Equating coefficients yields the system of equations</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{linsys}{3}
+a\amp +\amp b\amp +\amp c\amp = d\\
+a\amp -\amp b\amp \amp \amp =e\\
+a\amp  \amp  \amp -\amp c\amp =f
+\end{linsys}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">which corresponds to the matrix equation</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\underset{A}{\begin{amatrix}[rrr]1\amp 1\amp 1\\ 1\amp -1\amp 0\\ 1\amp 0\amp -1\end{amatrix}}\underset{\boldx}{\begin{bmatrix} a\\ b\\ c\end{bmatrix}}=\underset{\boldy}{\begin{bmatrix} d\\ e\\ f\end{bmatrix}}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">An easy computation shows <span class="process-math">\(\det A=3\text{,}\)</span> and thus that <span class="process-math">\(A\)</span> is invertible. We conclude that the system can be solved for <span class="process-math">\((a,b,c)\)</span> (set <span class="process-math">\(\boldx=A^{-1}\boldy\)</span>), and thus that <span class="process-math">\(B\)</span> spans <span class="process-math">\(P_2\text{.}\)</span></p>
 <span class="incontext"><a href="s_basis.html#p-1971" class="internal">in-context</a></span>
 </body>
 </html>

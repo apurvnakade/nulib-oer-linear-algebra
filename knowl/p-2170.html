@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-06T16:43:26+05:30       *-->
+<!--*       on 2022-09-07T19:56:52+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,24 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>We have <span class="process-math">\(\NS A=\NS U\text{.}\)</span> Compute a parametric description of the solutions to the linear system <span class="process-math">\(U\boldx=\boldzero\)</span> following <a href="" class="xref" data-knowl="./knowl/proc_solveSystem.html" title="Procedure 1.3.5: Solving linear systems">Procedure 1.3.5</a>. If the free variables are <span class="process-math">\(t_1, t_2, \dots, t_k \text{,}\)</span> a basis <span class="process-math">\(B=\{\boldv_1, \boldv_2, \dots, \boldv_k\}\)</span> of <span class="process-math">\(\NS A\)</span> is obtained by letting <span class="process-math">\(\boldv_i\)</span> be the solution corresponding to the choice <span class="process-math">\(t_i=1\)</span> and <span class="process-math">\(t_j=0\)</span> for <span class="process-math">\(j\ne i\text{.}\)</span></p>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>How do the fundamental spaces of a matrix <span class="process-math">\(A\)</span> relate to its associated matrix transformation <span class="process-math">\(T_A\text{?}\)</span> It is easy to see that <span class="process-math">\(\NS T_A=\NS A\text{,}\)</span> and indeed we made this connection in <a href="s_nullspace_image.html" class="internal" title="Section 3.4: Null space and image">Section 3.4</a>. What about <span class="process-math">\(\im T_A\text{?}\)</span> We claim that <span class="process-math">\(\im T_A=\CS A\text{.}\)</span> To see why, let <span class="process-math">\(\boldc_1, \boldc_2,\dots, \boldc_n\)</span> be the columns of <span class="process-math">\(A\)</span> and consider the following chain of equivalences:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/s_nullspace_image.html ./knowl/th_column_method.html">
+\begin{align*}
+\boldy\in \im T_A \amp\iff \boldy=T_A(\boldx) \text{ for some } \boldx\in \mathbb{R}^n \\
+\amp\iff  \boldy=A \boldx \text{ for some } \boldx=(x_1,x_2,\dots, x_n)\in \mathbb{R}^n
+\amp (\text{definition of } T_A) \\
+\amp \iff \boldy=x_1\boldc_1+x_2\boldc_2+\cdots +x_n\boldc_n \text{ for some } x_i\in \mathbb{\R} \amp (\knowl{./knowl/th_column_method.html}{\text{Theorem 2.1.19}})\\
+\amp \iff \boldy\in\CS A\text{.}
+\end{align*}
+</div>
+<p class="continuation">We now highlight three equivalent statments in this chain</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/s_nullspace_image.html ./knowl/th_column_method.html">
+\begin{equation*}
+\boldy\in\CS A \iff \boldy=A \boldx \text{ for some } \boldx\in \R^n \iff \boldy\in \im\CS A\text{.}
+\end{equation*}
+</div>
+<p class="continuation">The first equivalence tells us that <span class="process-math">\(\CS A\)</span> is the set of <span class="process-math">\(\boldy\in \R^m\)</span> for which the matrix equation <span class="process-math">\(A\boldx=\boldy\)</span> is consistent. The second equivalence tells us that <span class="process-math">\(\CS A=\im T_A\text{.}\)</span> In sum, we have proven the following result.</p>
 <span class="incontext"><a href="s_rank_nullity.html#p-2170" class="internal">in-context</a></span>
 </body>
 </html>

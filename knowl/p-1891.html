@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-06T16:43:21+05:30       *-->
+<!--*       on 2022-09-07T19:56:48+05:30       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,39 +15,29 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>We claim <span class="process-math">\(S\)</span> is linearly independent. If</p>
+<p>We have</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-c_1f+c_2g+c_3h=\boldzero\text{,}
+a(1,1,2)+b(1,0,1)+c(-2,1,-1)=(0,0,0)
 \end{equation*}
 </div>
-<p class="continuation">then</p>
+<p class="continuation">if and only if</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-c_1x+c_2\cos x+c_3\sin x=0\text{,}
-\end{equation*}
-</div>
-<p class="continuation">for all <span class="process-math">\(x\in (-2\pi, 2\pi)\text{.}\)</span> In particular, the equality is true when evaluated at <span class="process-math">\(x=0, \pi/2, \pi\text{,}\)</span> yielding the following linear system:</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\begin{linsys}{4}
-x=0 \colon \amp \amp 0c_1\amp +\amp \cos(0)c_2\amp +\amp \sin(0) c_3\amp= \amp 0\\
-x=\pi/2 \colon \amp \amp (\pi/2)c_1\amp +\amp \cos(\pi/2)c_2\amp +\amp \sin(\pi/2)c_3 \amp = \amp 0\\
-x=\pi \colon \amp  \amp \pi c_1\amp +\amp \cos(\pi)c_2\amp +\amp \sin(\pi)c_3 \amp= \amp 0
-\end{linsys}\text{,}
-\end{equation*}
-</div>
-<p class="continuation">or</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\begin{linsys}{4}
-x=0 \colon  \amp \amp \amp \amp c_2\amp \amp \amp = \amp 0\\
-x=\pi/2 \colon \amp  \amp (\pi/2)c_1\amp +\amp \amp +\amp c_3 \amp = \amp 0\\
-x=\pi \colon \amp  \amp \pi c_1\amp - \amp c_2 \amp \amp  \amp= \amp 0
+\begin{linsys}{3}
+a \amp +\amp b\amp -\amp 2c\amp =0\\
+a \amp \amp \amp +\amp c\amp =0\\
+2a \amp +\amp b\amp -\amp c\amp =0\\
 \end{linsys}\text{.}
 \end{equation*}
 </div>
-<p class="continuation">This system can be now be solved essentially by inspection: the first equation implies <span class="process-math">\(c_2=0\text{;}\)</span> setting <span class="process-math">\(c_2=0\text{,}\)</span> in the third equation, we conclude <span class="process-math">\(c_1=0\text{;}\)</span> the second equation now implies <span class="process-math">\(c_3=0\text{.}\)</span> We conclude that <span class="process-math">\(c_1=c_2=c_3=0\text{.}\)</span> Thus the only linear combination of <span class="process-math">\(f, g, h\)</span> yielding the zero function is the trivial one, showing that <span class="process-math">\(S\)</span> is linearly independent.</p>
+<p class="continuation">After a little Gaussian elimination we see that <span class="process-math">\((a,b,c)=(1,-3,-1)\)</span> is a nonzero solution to this system, and thus that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(1,1,2)-3(1,0,1)-(-2,1,-1)=(0,0,0)
+\end{equation*}
+</div>
+<p class="continuation">Since there is a nontrivial linear combination of elements of <span class="process-math">\(S\)</span> yielding the zero vector, we conclude <span class="process-math">\(S\)</span> is linearly dependent.</p>
 <span class="incontext"><a href="s_span_independence.html#p-1891" class="internal">in-context</a></span>
 </body>
 </html>
